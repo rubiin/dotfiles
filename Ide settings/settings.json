@@ -1,0 +1,113 @@
+{  
+    "css.lint.important": "warning",
+    "scss.lint.important": "warning",
+    "git.enableSmartCommit": true,
+    "workbench.editor.enablePreview": false,
+    "git.autofetch": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.rendererType": "dom",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.fontWeight": "400",
+    "git.confirmSync": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13.5,
+    "editor.lineHeight": 20,
+    "editor.letterSpacing": 0.5,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.preferences.quoteStyle": "single",
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "go.autocompleteUnimportedPackages": true,
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "file",
+    "go.vetOnSave": "package",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.vetFlags": [],
+    "go.testOnSave": false,
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.formatTool": "goreturns",
+    "go.formatFlags": [],
+    "go.inferGopath": true,
+    "go.gocodeAutoBuild": true,
+    "go.useLanguageServer": true,
+    "go.testFlags": [
+        "-v"
+    ],
+    "go.lintTool": "revive",
+    "go.lintFlags": [
+        "-config=~/revive.toml"
+    ],
+    "emmet.excludeLanguages": [
+        "markdown"
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "nest",
+    "html.validate.scripts": true,
+    "html.validate.styles": true,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "javascript.validate.enable": false,
+    "debug.javascript.autoAttachFilter": "disabled",
+    "debug.javascript.unmapMissingSources": true,
+    "material-icon-theme.files.associations": {
+        "*.ts": "typescript",
+        "*.controller.ts": "nest-controller",
+        "*.guard.ts": "angular-guard",
+        "*.module.ts": "nest-module",
+        "*.decorator.ts": "nest-module",
+        "*.middleware.ts": "nest-middleware",
+        "*.validator.ts": "todo",
+        "*.entity.ts": "database",
+        "*.eta": "ejs"
+    },
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.showReleaseNotes": false,
+    "update.mode": "none",
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "settingsSync.ignoredExtensions": [],
+    "material-icon-theme.folders.associations": {
+        "firebase-admin": "firebase",
+        "twilio": "messages",
+        "winston": "log",
+        "minio": "aws",
+        "seeds": "dump",
+        "mailer": "mail",
+        "entities": "database",
+        "migrations": "dump",
+        "bin": "scripts"
+    },
+    "settingsSync.keybindingsPerPlatform": false,
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.folders.color": "#0288d1",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.minimap.enabled": false,
+    "kite.showWelcomeNotificationOnStartup": false
+}

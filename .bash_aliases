@@ -3,7 +3,6 @@ alias myzsh='source ~/.zshrc'
 alias fixvlc='mkdir ~/.cache/vlc'
 alias vmc='git diff --name-only --diff-filter=U'
 alias updatef='sudo apt-fast update -y;sudo apt-fast upgrade -y;brew update && brew upgrade;'
-alias code='codium'
 alias kb="kubectl"
 
 
