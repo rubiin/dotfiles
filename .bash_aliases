@@ -4,7 +4,13 @@ alias fixvlc='mkdir ~/.cache/vlc'
 alias vmc='git diff --name-only --diff-filter=U'
 alias updatef='sudo apt-fast update -y;sudo apt-fast upgrade -y;brew update && brew upgrade;'
 alias kb="kubectl"
+alias husky_init="npx husky install && npx husky add .husky/pre-commit "npx lint-staged""
 
+
+# Redis
+alias flush-redis="redis-cli FLUSHALL"
+# List all files colorized in long format
+alias l="ls -laF"
 
 nest_generate_all(){
   nest g mo $1
