@@ -1,3 +1,3 @@
 #!/bin/bash
-npm i -g @vue/cli nsecure @nestjs/cli ngrok yarn typescript ts-node ndb eslint prettier npm npm-check-updates npkill release-it pnpm types-installer
+npm i -g @vue/cli @nestjs/cli ngrok yarn typescript ts-node eslint prettier npm npm-check-updates npkill release-it pnpm types-installer create-react-app npm-check
 
