@@ -9,7 +9,7 @@ Magical objects that make certain computers extremely use-able for me.
 * Alacritty
 * Neovim with lunarvim(https://www.lunarvim.org)
 * Vim
-* Kitty
+* Wezterm
 * Zsh with Ohmyzsh (https://ohmyz.sh/#install)
 * Plasma Kde5
 
