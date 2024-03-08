@@ -27,7 +27,6 @@ end
 config.line_height = 1.1
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrains Mono Nerd Font", weight = "Medium" },
-	"nonicons",
 })
 config.font_size = 10.5
 
