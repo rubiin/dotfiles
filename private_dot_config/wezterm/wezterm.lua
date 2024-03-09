@@ -56,8 +56,11 @@ config.window_padding = {
 	bottom = 0,
 }
 
+config.disable_default_key_bindings = true
+
+
 config.color_scheme = "Catppuccin Mocha"
 config.freetype_load_target = "HorizontalLcd"
-
+config.debug_key_events = true
 -- and finally, return the configuration to wezterm
 return config
