@@ -56,17 +56,30 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- Disable these keys as they hinder with cbyu on neovim
+-- disable wezterm mappings are they are troublesome with neovim
+config.disable_default_key_bindings = true
+
+-- core keymaps that are general
 config.keys = {
 	{
-		key = "Tab",
+		key = "c",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.DisableDefaultAssignment,
+		action = wezterm.action.CopyTo("Clipboard"),
 	},
 	{
-		key = "Tab",
-		mods = "CTRL",
-		action = wezterm.action.DisableDefaultAssignment,
+		key = "v",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.PasteFrom("Clipboard"),
+	},
+	{
+		key = "+",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.IncreaseFontSize,
+	},
+	{
+		key = "-",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DecreaseFontSize,
 	},
 }
 
