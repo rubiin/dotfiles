@@ -56,8 +56,19 @@ config.window_padding = {
 	bottom = 0,
 }
 
-config.disable_default_key_bindings = true
-
+-- Disable these keys as they hinder with cbyu on neovim
+config.keys = {
+	{
+		key = "Tab",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		key = "Tab",
+		mods = "CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+}
 
 config.color_scheme = "Catppuccin Mocha"
 config.freetype_load_target = "HorizontalLcd"
