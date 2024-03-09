@@ -12,7 +12,7 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
-ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi plank-git chezmoi wezterm
+ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
 
 ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji gnu-free-fonts ttf-joypixels ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
