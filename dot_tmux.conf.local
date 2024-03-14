@@ -384,8 +384,8 @@ set -g mouse on
 # set -gu prefix2
 unbind C-a
 unbind C-b
-set-option -g prefix C-e
-bind-key C-e send-prefix
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
