@@ -16,6 +16,7 @@ alias docker-compose="dc"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
+alias gg="gitui -t mocha.ron"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
 alias myzsh='source ~/.zshrc'
