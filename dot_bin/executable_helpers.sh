@@ -1,5 +1,11 @@
 #!/bin/sh
 
+## Author  : Rubin Bhandari (rubiin)
+## Mail    : roobin.bhandari@gmail.com
+## Github  : @rubiin
+## Twitter : @RubinCodes
+
+
 # Function to ask yes/no question with a default value
 ask_yes_no_default() {
     local prompt="$1 (Y/n)"

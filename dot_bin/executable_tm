@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+## Author  : Rubin Bhandari (rubiin)
+## Mail    : roobin.bhandari@gmail.com
+## Github  : @rubiin
+## Twitter : @RubinCodes
+
+
 # abort if we're already inside a TMUX session
 [ "$TMUX" == "" ] || exit 0
 
