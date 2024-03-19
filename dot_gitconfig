@@ -15,22 +15,22 @@
 [init]
 	defaultBranch = master
 [core]
-  # End of lines conversion
+	# End of lines conversion
 	autocrlf = false
-  # Editor is vi of coursea
-  editor = nvim --clean
-  # Include your global excludefile
-  excludefile = ~/.gitignore_global
+	# Editor is vi of coursea
+	editor = nvim --clean
+	# Include your global excludefile
+	excludefile = ~/.gitignore_global
 
-# Don't paginate output by default
-  pager = delta
-  # Speed up the status command
-  untrackedCache = true
-  # Don't consider trailing space change as a cause for merge conflicts
-  whitespace=trailing-space,cr-at-eol,tabwidth=4
+	# Don't paginate output by default
+	pager = delta
+	# Speed up the status command
+	untrackedCache = true
+	# Don't consider trailing space change as a cause for merge conflicts
+ 	whitespace=trailing-space,cr-at-eol,tabwidth=4
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [rerere]
 	enabled = true
@@ -68,39 +68,39 @@
 	newHighlight = green bold 22
 
 [branch]
-  sort = -committerdate
+	sort = -committerdate
 
 [delta]
-    features = decorations
-    line-numbers = true
-    navigate = true
+	features = decorations
+	line-numbers = true
+	navigate = true
 
 
 [delta "decorations"]
-      minus-style = red bold
-      minus-emph-style = red bold 52
-      zero-style = normal
-      plus-style = green bold
-      plus-emph-style = green bold 22
-      hunk-header-style = bold syntax
-      hunk-header-decoration-style= bold magenta box
-      file-style = bold yellow
-      file-decoration-style = bold yellow ul ol
-      commit-style = bold yellow
+	minus-style = red bold
+	minus-emph-style = red bold 52
+	zero-style = normal
+	plus-style = green bold
+	plus-emph-style = green bold 22
+	hunk-header-style = bold syntax
+	hunk-header-decoration-style= bold magenta box
+	file-style = bold yellow
+	file-decoration-style = bold yellow ul ol
+	commit-style = bold yellow
 
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
 
 [diff]
-    colorMoved = default
+	colorMoved = default
 
 [grep]
-  # Consider most regexes to be ERE
-  extendedRegexp = true
+	# Consider most regexes to be ERE
+	extendedRegexp = true
 
 [help]
-  # Replace the mistyped command in 0.1 seconds. 20 means two seconds
-   autocorrect = 1
+	# Replace the mistyped command in 0.1 seconds. 20 means two seconds
+	autocorrect = 1
 
 
 
@@ -115,31 +115,31 @@
 	rlf =  format:%C(auto)%h%C(reset) %C(bold yellow)(%C(magenta)%gd%C(bold yellow))%C(reset)%C(auto)%d%C(reset)   %C(italic 239)[P: %p] [T: %t]%C(reset)%n%C(white)Author:%C(reset)   %aN %C(241)<%aE>%C(reset)%n          %C(italic blue)%ad%C(reset) %C(italic cyan)(%ar)%C(reset)%n%C(white)Commit:%C(reset)   %cN %C(241)<%cE>%C(reset)   %C(italic 239)[GPG: %G?% GK]%C(reset)%n          %C(italic blue)%cd%C(reset) %C(italic cyan)(%cr)%C(reset)%n%C(white)Reflog:%C(reset)   %gN %C(241)<%gE>%C(reset)%n          %C(italic)%gs%C(reset)%w(0,4,4)%n%n%C(bold)%s%C(reset)%n%n%-b%n%n%-N%n
 
 [alias]
-		ec = "!f() { [ -f \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf ] && . \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf; git --git-dir=\"$dotfiles_dir\" config --global --edit; }; f"
-		ecl = config --edit
+	ec = "!f() { [ -f \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf ] && . \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf; git --git-dir=\"$dotfiles_dir\" config --global --edit; }; f"
+	ecl = config --edit
 
 
-    # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
-    # and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
-   	fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
+        # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
+	# and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
+        fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
 
 	# GitFlow shortcuts
 		fid = flow init -d
    	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
   	fff = !git flow feature finish -F $(git fcb)
    	ffp = !git flow feature publish $(git fcb)
-    fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
-    fbf = !git flow bugfix finish -F $(git fcb)
-    fbp = !git flow bugfix publish $(git fcb)
+        fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
+        fbf = !git flow bugfix finish -F $(git fcb)
+        fbp = !git flow bugfix publish $(git fcb)
 
 
-    fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
-    fhf = "!git fetch --tags; git pull $(git config --get gitflow.origin || echo origin) master; git flow hotfix finish -F $(git fcb)"
-    fhp = !git flow hotfix publish $(git fcb)
+        fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
+        fhf = "!git fetch --tags; git pull $(git config --get gitflow.origin || echo origin) master; git flow hotfix finish -F $(git fcb)"
+        fhp = !git flow hotfix publish $(git fcb)
 
-    frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
-    frf = !git flow release finish -F $(git fcb)
-    frp = !git flow release publish $(git fcb)
+        frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
+        frf = !git flow release finish -F $(git fcb)
+        frp = !git flow release publish $(git fcb)
 
 
 	# log, current branch
@@ -177,7 +177,7 @@
 	# stash
 	ss = stash                        # stash changes
   	sa = stash apply                  # apply stash (restore changes)
-  	sd = stash drop                   # drop stashes (destory changes)
+  	sd = stash drop                   # drop stashes (destroy changes)
 	ssa = stash -u                    # include untracked files
 
 	# list stashes
