@@ -1,0 +1,14 @@
+#!/bin/bash
+# Originially stolen from: https://git.io/vi07z
+
+while :
+do
+    # Outputting like that reduces blinking
+    status_output=$(git -c "color.status=always" status --short --branch)
+    log_output=$(git --no-pager log --color=always --abbrev-commit --date=relative --pretty=live $@)
+    clear
+    echo "$status_output"
+    echo ""
+    echo "$log_output"
+    sleep 2
+done
