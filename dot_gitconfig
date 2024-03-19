@@ -205,7 +205,6 @@
 	# status
 	s = status
 	si = status --ignored
-	sa = status --ignored --untracked-files
 
 	# git-extras
   	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
