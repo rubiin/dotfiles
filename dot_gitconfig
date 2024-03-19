@@ -118,20 +118,18 @@
 	ec = "!f() { [ -f \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf ] && . \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf; git --git-dir=\"$dotfiles_dir\" config --global --edit; }; f"
 	ecl = config --edit
 
-
         # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
 	# and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
         fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
 
 	# GitFlow shortcuts
-		fid = flow init -d
+	fid = flow init -d
    	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
   	fff = !git flow feature finish -F $(git fcb)
    	ffp = !git flow feature publish $(git fcb)
         fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
         fbf = !git flow bugfix finish -F $(git fcb)
         fbp = !git flow bugfix publish $(git fcb)
-
 
         fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
         fhf = "!git fetch --tags; git pull $(git config --get gitflow.origin || echo origin) master; git flow hotfix finish -F $(git fcb)"
@@ -141,6 +139,9 @@
         frf = !git flow release finish -F $(git fcb)
         frp = !git flow release publish $(git fcb)
 
+        #cleaning up local branches after merging them
+        forget="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+        forgetlist="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
 
 	# log, current branch
 	l  = log --pretty=lc --graph
@@ -150,7 +151,6 @@
 	ld = log --pretty=lf --graph --cc --stat
 	lp = log --pretty=lf --graph --cc --patch
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
-
 
 	# log, all branches+tags on all remotes
 	la  = log --pretty=lc --graph                                       --all
@@ -181,7 +181,6 @@
 	ssa = stash -u                    # include untracked files
 
 	# list stashes
-
 	sl  = stash list --pretty=rlc
 	slo = stash list --pretty=rlo
 	slf = stash list --pretty=rlf
@@ -209,10 +208,10 @@
 	sa = status --ignored --untracked-files
 
 	# git-extras
-  	cleanup = !ruby "$HOME/.bin/git-extras/git-extras/git-cleanup.rb"
-    	sign-release = !sh "$HOME/.bin/git-extras/git-extras/git-sign-release.sh"
-   	setup = !zsh "$HOME/.bin/git-extras/git-extras/git-setup.sh"
-   	wth = !zsh "$HOME/.bin/git-extras/git-extras/git-what-the-hell-just-happened.sh"
+  	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
+    	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release.sh"
+   	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
+   	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened.sh"
 
 	# index
 	a = add
@@ -366,7 +365,6 @@
 
 	# create/extend gitignore file
 	gitignore = gitignore
-
 
 	# git git ...
 	git = "!git"
