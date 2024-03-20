@@ -14,6 +14,7 @@
 
 [init]
 	defaultBranch = master
+
 [core]
 	# End of lines conversion
 	autocrlf = false
@@ -21,7 +22,6 @@
 	editor = nvim --clean
 	# Include your global excludefile
 	excludefile = ~/.gitignore_global
-
 	# Don't paginate output by default
 	pager = delta
 	# Speed up the status command
@@ -75,7 +75,6 @@
 	line-numbers = true
 	navigate = true
 
-
 [delta "decorations"]
 	minus-style = red bold
 	minus-emph-style = red bold 52
@@ -102,8 +101,6 @@
 	# Replace the mistyped command in 0.1 seconds. 20 means two seconds
 	autocorrect = 1
 
-
-
 [pretty]
 	lo  = tformat:%C(auto)%h%C(reset)%C(auto)%d%C(reset) %s %C(italic blue)%ad%C(reset) %C(241)%aN%C(reset)
 	lc  =  format:%C(auto)%h%C(reset) %C(white)-%C(reset) %C(italic blue)%ad%C(reset) %C(italic cyan)(%ar)%C(reset)%C(auto)%d%C(reset)%n %C(white)⤷%C(reset) %s %C(241)- %aN <%aE>%C(reset)%n
@@ -115,14 +112,59 @@
 	rlf =  format:%C(auto)%h%C(reset) %C(bold yellow)(%C(magenta)%gd%C(bold yellow))%C(reset)%C(auto)%d%C(reset)   %C(italic 239)[P: %p] [T: %t]%C(reset)%n%C(white)Author:%C(reset)   %aN %C(241)<%aE>%C(reset)%n          %C(italic blue)%ad%C(reset) %C(italic cyan)(%ar)%C(reset)%n%C(white)Commit:%C(reset)   %cN %C(241)<%cE>%C(reset)   %C(italic 239)[GPG: %G?% GK]%C(reset)%n          %C(italic blue)%cd%C(reset) %C(italic cyan)(%cr)%C(reset)%n%C(white)Reflog:%C(reset)   %gN %C(241)<%gE>%C(reset)%n          %C(italic)%gs%C(reset)%w(0,4,4)%n%n%C(bold)%s%C(reset)%n%n%-b%n%n%-N%n
 
 [alias]
-	ec = "!f() { [ -f \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf ] && . \"${XDG_CONFIG_HOME:-$HOME/.config}\"/dotfiles.conf; git --git-dir=\"$dotfiles_dir\" config --global --edit; }; f"
-	ecl = config --edit
+	# index
+	a = add
+	aa = add --all
+	au = add --update
+	ai = add --interactive
+	ap = add --patch
+	an = add --intent-to-add
+	u = reset HEAD --
+	up = reset --patch HEAD --
 
+	# branch
+	b = branch
+	bc = branch --contains
+	bd = branch --delete --force
+	bl = branch -vv
+	br = branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	bla = branch --all -vv
+
+	# commit
+	c = commit
+	ca = commit --amend
+	cm= commit -m
+	cn = commit --no-verify
+	cc = commit -c
+	cf = commit --fixup
+	cs = commit --squash
+	can = commit --amend --no-edit
+
+	# checkout
+	co = checkout
+	com = checkout master --
+	cod = checkout develop --
+	cob = checkout -b
+
+	# cherry-pick
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+        cpq = cherry-pick --quit
+
+	# diff
+	d = diff -c
+	db = "!f() { git diff --name-only --diff-filter=d | xargs bat --diff; }; f"
+	ds = diff --find-renames --stat --cc -c
+	dc = diff --cached -c
+	dl = diff --cached -c HEAD~
+	du = diff --cached -c @{u}
+	dr = "!f() { git diff -c ${1:-HEAD}~..${1:-HEAD}; }; f"
+
+        # GitFlow shortcuts
         # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
 	# and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
         fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
-
-	# GitFlow shortcuts
 	fid = flow init -d
    	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
   	fff = !git flow feature finish -F $(git fcb)
@@ -168,6 +210,24 @@
 	lgd = log --pretty=lf --graph --cc --stat                           --branches=* --tags=* --remotes=origin --remotes=upstream
 	lgp = log --pretty=lf --graph --cc --patch                          --branches=* --tags=* --remotes=origin --remotes=upstream
 
+	# merge
+	m = merge
+	ma = merge --abort
+	mc = merge --continue
+	mff = merge --ff-only
+	mnc = "!f() { git merge --no-commit --no-ff \"$@\"; EC=$?; git merge --abort; exit $EC; }; f"
+
+	# Shorthand for mergetool
+    	mt = mergetool
+    	
+	# network (out)
+	pu = push
+	puf = push --force-with-lease
+	puff = push --force
+	pun = push --no-verify
+	punf = push --no-verify --force-with-lease
+	punff = push --no-verify --force
+	
 	# reflog
 	rl  = reflog --pretty=rlc
 	rlo = reflog --pretty=rlo
@@ -193,15 +253,6 @@
 	desc = describe --abbrev=0
 	descl = describe --long
 
-	# diff
-	d = diff -c
-	db = "!f() { git diff --name-only --diff-filter=d | xargs bat --diff; }; f"
-	ds = diff --find-renames --stat --cc -c
-	dc = diff --cached -c
-	dl = diff --cached -c HEAD~
-	du = diff --cached -c @{u}
-	dr = "!f() { git diff -c ${1:-HEAD}~..${1:-HEAD}; }; f"
-
 	# status
 	s = status
 	si = status --ignored
@@ -212,41 +263,7 @@
    	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
    	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened.sh"
 
-	# index
-	a = add
-	aa = add --all
-	au = add --update
-	ai = add --interactive
-	ap = add --patch
-	an = add --intent-to-add
-	u = reset HEAD --
-	up = reset --patch HEAD --
-
-	# commit
-	c = commit
-	ca = commit --amend
-	cm= commit -m
-	cn = commit --no-verify
-	cc = commit -c
-	cf = commit --fixup
-	cs = commit --squash
-	can = commit --amend --no-edit
-
-	# checkout
-	co = checkout
-	com = checkout master --
-	cod = checkout develop --
-	cob = checkout -b
-
-	# branch
-	b = branch
-	bc = branch --contains
-	bd = branch --delete --force
-	bl = branch -vv
-	br = branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-	bla = branch --all -vv
-
-	# tag
+        # tag
 	t = tag
 	tc = tag --contains
 	td = tag --delete
@@ -260,25 +277,6 @@
 	fa = fetch --all --tags
 	ffa = fetch --all --force --prune --tags
 	pfa = "!f() { git remote | xargs -I@ -P0 git fetch --tags \"$@\" @; }; f"
-
-	# network (out)
-	pu = push
-	puf = push --force-with-lease
-	puff = push --force
-	pun = push --no-verify
-	punf = push --no-verify --force-with-lease
-	punff = push --no-verify --force
-
-	# submodule
-	sub = submodule
-	subu = submodule update --init --recursive
-
-	# merge
-	m = merge
-	ma = merge --abort
-	mc = merge --continue
-	mff = merge --ff-only
-	mnc = "!f() { git merge --no-commit --no-ff \"$@\"; EC=$?; git merge --abort; exit $EC; }; f"
 
 	# rebase
 	r = rebase
@@ -295,12 +293,6 @@
 	rim = rebase --interactive master
 	rid = rebase --interactive develop
 
-	# cherry-pick
-	cp = cherry-pick
-	cpa = cherry-pick --abort
-	cpc = cherry-pick --continue
-	cpq = cherry-pick --quit
-
 	# revert
 	rv = revert
 	rva = revert --abort
@@ -312,9 +304,10 @@
 	re = reset
 	res = reset --soft
 	reh = reset --hard
-
-	# Shorthand for mergetool
-    	mt = mergetool
+	
+	# submodule
+	sub = submodule
+	subu = submodule update --init --recursive
 
 	# w-commands
 	which = branch --all --contains
@@ -373,12 +366,16 @@
 
 [status]
 	hints = false
+
 [gpg]
 	program = /usr/bin/gpg2
+
 [commit]
-	gpgsign = false
+        gpgsign = false
+
 [fetch]
 	prune = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
