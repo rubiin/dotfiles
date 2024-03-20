@@ -1,5 +1,4 @@
 alias ari="aria2c"
-alias lzg="lazygit"
 alias ari="aria2c"
 alias b="bun"
 alias clr="clear"
@@ -16,11 +15,10 @@ alias docker-compose="dc"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
-alias gg="gitui -t mocha.ron"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
+alias lzg="lazygit"
 alias myzsh='source ~/.zshrc'
-alias most-used="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
 alias nord="nordvpn"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
@@ -83,14 +81,6 @@ alias tls="t ls"
 alias tn="t new -t"
 alias tmux_end="pkill -f tmux"
 
-corepack_enable() {
-	corepack enable
-	corepack prepare npm@latest --activate
-	corepack prepare pnpm@latest --activate
-	corepack prepare yarn@latest --activate
-
-}
-
 ## npm aliases
 alias ni="npm install"
 alias nrs="npm run start -s --"
@@ -151,16 +141,15 @@ alias yayskip='yay -S --mflags --skipinteg'
 
 alias git-rre-delete="rm -rf .git/rr-cache"
 
-# Lists the ten most used commands.
-alias history-stats="history 0 | awk '{print \$2}' | stats | head"
+# most used commands
+alias most-used="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
 
 # Checks whether connection is up.
 alias net="ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'"
 
 alias asdf-all="asdf plugin-list | xargs -I{} sh -c 'echo {}; asdf list {}'"
 
-## docker
-
+#docker
 alias pg-docker-start="docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"
 
 # Get latest container ID
@@ -291,30 +280,6 @@ zsh-fix-history() {
 
 alias yarn_audit_fix="npm_config_yes=true npx yarn-audit-fix"
 
-# Count code lines in some directory.
-# $ loc py js css
-# # => Lines of code for .py: 3781
-# # => Lines of code for .js: 3354
-# # => Lines of code for .css: 2970
-# # => Total lines of code: 10105
-function loc() {
-	local total
-	local firstletter
-	local ext
-	local lines
-	total=0
-	for ext in $@; do
-		firstletter=$(echo $ext | cut -c1-1)
-		if [[ firstletter != "." ]]; then
-			ext=".$ext"
-		fi
-		lines=$(find-exec "*$ext" cat | wc -l)
-		lines=${lines// /}
-		total=$(($total + $lines))
-		echo "Lines of code for ${fg[blue]}$ext${reset_color}: ${fg[green]}$lines${reset_color}"
-	done
-	echo "${fg[blue]}Total${reset_color} lines of code: ${fg[green]}$total${reset_color}"
-}
 
 function calcram() {
 	local sum
@@ -376,7 +341,6 @@ function git-deploy() {
 	git checkout main
 	git pull
 	git merge -X theirs stage
-
 }
 
 # $ size dir1 file2.js
@@ -397,5 +361,4 @@ function reinstall-nvim() {
 	rm -rf ~/.local/share/nvim
 	git clone git@github.com:rubiin/init.lua .config/nvim
 	nvim
-
 }
