@@ -180,7 +180,7 @@
         frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
         frf = !git flow release finish -F $(git fcb)
         frp = !git flow release publish $(git fcb)
-
+ 
         #cleaning up local branches after merging them
         forget="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
         forgetlist="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
@@ -219,7 +219,7 @@
 
 	# Shorthand for mergetool
     	mt = mergetool
-    	
+
 	# network (out)
 	pu = push
 	puf = push --force-with-lease
@@ -227,7 +227,7 @@
 	pun = push --no-verify
 	punf = push --no-verify --force-with-lease
 	punff = push --no-verify --force
-	
+
 	# reflog
 	rl  = reflog --pretty=rlc
 	rlo = reflog --pretty=rlo
@@ -257,7 +257,11 @@
 	s = status
 	si = status --ignored
 
-	# git-extras
+
+        # show what I did today
+        day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
+        
+        # git-extras
   	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
     	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release.sh"
    	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
@@ -304,7 +308,7 @@
 	re = reset
 	res = reset --soft
 	reh = reset --hard
-	
+
 	# submodule
 	sub = submodule
 	subu = submodule update --init --recursive
