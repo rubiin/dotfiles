@@ -13,7 +13,6 @@ export BROWSER="vivaldi"
 export EDITOR="nvim"
 export TERM="wezterm"
 
-
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -33,17 +32,6 @@ fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
 	PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-if [ -d /usr/local/go/bin/ ]; then
-	export GOPATH=~/go
-	export GOBIN="$GOPATH/bin"
-	export PATH="/usr/local/go/bin:$GOBIN:$PATH"
-elif [ -d ~/.go/bin/ ]; then
-	export GOPATH="$HOME/.gopath"
-	export GOROOT="$HOME/.go"
-	export GOBIN="$GOPATH/bin"
-	export PATH="$GOPATH/bin:$PATH"
 fi
 
 export PNPM_HOME="$HOME/.local/share/pnpm"
