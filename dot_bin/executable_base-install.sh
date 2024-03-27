@@ -69,7 +69,7 @@ ask_yes_no_default "Do you want to install nerd fonts?" 0 && yay -S ttf-firacode
 
 sudo fc-cache -vf
 
-ask_yes_no_default "Do you want to install oh-my-tmux?" 0 && git clone https://github.com/gpakosz/.tmux
+ask_yes_no_default "Do you want to install oh-my-tmux?" 0 && rm -rf ~/.tmux && git clone https://github.com/gpakosz/.tmux ~/.tmux
 
 ask_yes_no_default "Do you want to install pnpm?" 0 && curl -fsSL https://get.pnpm.io/install.sh | sh -
 
@@ -97,14 +97,16 @@ ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop wor
 
 ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 && \
     sudo pacman -S zsh && \
+    rm -rf ~/.oh-my-zsh && \
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
     git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache && \
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
     git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open && \
     git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate && \
-    git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+
 
 ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && \
+    rm -rf ~/.asdf && \
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0 && \
     source ~/.zshrc && \
     asdf update && \
@@ -121,4 +123,5 @@ ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 &
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
+chsh -s $(which zsh)
 
