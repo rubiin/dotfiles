@@ -1,8 +1,57 @@
 #!/bin/sh
 
-source helpers.sh
+
+# Function to ask yes/no question with a default value
+ask_yes_no_default() {
+    local prompt="$1 (Y/n)"
+    local default="${2:-}"
+
+    read -p "$prompt: " -n 1 answer
+    echo
+
+    case "$answer" in
+        [Yy]* ) return 0;;
+        [Nn]* ) return 1;;
+        * ) return "${default:-0}";;
+    esac
+}
+
+# Function to parse the .tool-versions file
+parse_tools_version() {
+    # Define the file path
+    local file="$HOME/.tool-versions"
+
+    # Check if the file exists
+    if [ -f "$file" ]; then
+        # Declare an associative array
+        declare -A versions
+
+        # Read each line of the file
+        while IFS= read -r line; do
+            # Extract tool and version
+            local tool=$(echo "$line" | awk '{print $1}')
+            local version=$(echo "$line" | awk '{print $2}')
+
+            # Add tool and version to the associative array
+            versions["$tool"]="$version"
+        done < "$file"
+
+        # Return the associative array
+        echo "${versions[@]}"
+    else
+        echo "File $file not found."
+        return 1
+    fi
+}
+
 
 tool_versions=$(parse_tools_version)
+
+yay -S rate-mirrors && export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
 
 ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com && \
     sudo pacman-key --lsign-key 3056513887B78AEB && \
@@ -12,7 +61,7 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
-ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
+ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi wezterm neovim
 
 ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji gnu-free-fonts ttf-joypixels ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
@@ -44,15 +93,15 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
     sudo groupadd docker && sudo usermod -aG docker $USER && \
     sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop words keybase words cloc gitflow-avh yt-dlp mongodb-compass zoxide wl-clipboard mkcert p7zip jq entr ripgrep lazydocker-bin stacer plasma-systemmonitor just github-cli postman-bin httpie  mpv ark jetbrains-toolbox tmux lsd thefuck taskwarrior-tui git-delta kcolorchooser grex fd sd tealdeer bat the_silver_searcher git-secrets fzf git-interactive-rebase-tool-bin mousepad nano mojave-gtk-theme-git adwaita-icon-theme capitaine-cursors gparted htop la-capitaine-icon-theme neovim rate-mirrors spectacle vlc youtube-dl gwenview ktorrent persepolis
+ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop words keybase words cloc gitflow-avh yt-dlp mongodb-compass zoxide wl-clipboard mkcert p7zip jq entr ripgrep lazydocker-bin stacer plasma-systemmonitor just github-cli postman-bin httpie  mpv ark jetbrains-toolbox tmux lsd thefuck taskwarrior-tui git-delta kcolorchooser grex fd sd tealdeer bat the_silver_searcher git-secrets fzf git-interactive-rebase-tool-bin mousepad nano mojave-gtk-theme-git adwaita-icon-theme capitaine-cursors gparted htop la-capitaine-icon-theme spectacle vlc youtube-dl gwenview ktorrent persepolis
 
 ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 && \
     sudo pacman -S zsh && \
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended && \
+    git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache && \
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
     git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open && \
     git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate && \
-    git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache && \
     git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 
 ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && \
@@ -72,3 +121,4 @@ ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 &
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
+
