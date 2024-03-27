@@ -6,10 +6,8 @@ Magical objects that make certain computers extremely use-able for me.
 
 # Things I use 
 * Tmux (https://github.com/gpakosz/.tmux)
-* Alacritty
-* Neovim with lunarvim(https://www.lunarvim.org)
-* Vim
-* Wezterm
+* Neovim with lazyvim(https://www.lazyvim.org)
+* Wezterm/Alacritty
 * Zsh with Ohmyzsh (https://ohmyz.sh/#install)
 * Plasma Kde5
 
