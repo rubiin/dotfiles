@@ -1,0 +1,10 @@
+# Github.com
+Host github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github
+
+  
+# Bitbucket
+Host bitbucket.org
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/takeo
