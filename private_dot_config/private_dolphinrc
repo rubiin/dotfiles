@@ -1,0 +1,41 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+OpenExternallyCalledFolderInNewTab=false
+RememberOpenedTabs=false
+ShowCopyMoveMenu=true
+Version=200
+ViewPropsTimestamp=2021,3,23,1,36,25.731
+
+[IconsMode]
+FontWeight=50
+PreviewSize=48
+
+[KPropertiesDialog]
+eDP1 Height 1368x768=544
+eDP1 Width 1368x768=438
+
+[MainWindow]
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAACcvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAABMAAACcgAAAF0BAAADAAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAACgEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAAEnwAAAnIAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP1 Height 1368x768=702
+eDP1 Width 1368x768=1368
+eDP1 Window-Maximized 1368x768=true
+eDP1 XPosition 1368x768=0
+eDP1 YPosition 1368x768=66
+
+[Open-with settings]
+CompletionMode=1
+History=mou
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,pothumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs
+
+[SettingsDialog]
+eDP1 Height 1368x768=440
+eDP1 Width 1368x768=589

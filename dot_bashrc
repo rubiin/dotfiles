@@ -4,28 +4,6 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-export HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
-
-
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-
-
-source $HOME/.bash_aliases
-source $HOME/.asdf/asdf.sh
-eval $(thefuck --alias)
-eval "$(zoxide init bash)"
-
-
-[ -f ~/.inshellisense/key-bindings.bash ] && source ~/.inshellisense/key-bindings.bash
