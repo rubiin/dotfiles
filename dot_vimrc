@@ -1,0 +1,12 @@
+syntax on
+set number
+colorscheme industry
+set autoindent
+set tabstop=4
+set nocompatible " not compatible with vi
+set autoread " detect when a file is changed
+
+set showmatch " show matching braces
+
+" make backspace behave in a sane manner
+set backspace=indent,eol,start

@@ -1,7 +1,0 @@
-
-# use the env file of zshenv
-
-
-if [ -f $HOME/.zshenv ]; then
-      source $HOME/.zshenv
-fi
