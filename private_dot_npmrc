@@ -1,0 +1,11 @@
+auto-install-peers=true
+fetch-retries=4
+fetch-retry-maxtimeout=600000
+fetch-retry-mintimeout=100000
+prefer-offline=false
+init-author-name=Rubin Bhandari
+init-author-email=roobin.bhandari@gmail.com
+init-license=MIT
+init-version=1.0.0
+strict-ssl=false
+prefix=~/.npm

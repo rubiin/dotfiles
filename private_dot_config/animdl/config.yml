@@ -1,0 +1,10 @@
+default_provider: gogoanime
+quality_string: 720/worst 
+players:
+    mpv:
+        executable: mpv
+        opts: []
+fzf:
+    executable: fzf
+    opts: []
+    state: false
