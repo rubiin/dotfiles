@@ -92,6 +92,8 @@ for plugin in "${!versions[@]}"; do
   asdf global "$plugin" "${versions[$plugin]}"
 done
 
+sudo systemctl enable bluetooth.service
+sudo systemctl restart bluetooth.service
 
 ask_yes_no_default "Do you want to install LunarVim?" 0 && \
     LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh) && \
