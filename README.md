@@ -15,6 +15,9 @@ Magical objects that make certain computers extremely use-able for me.
  ```bash
   	sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
 ```
+To use chezmoi:
+chezmoi -- init --apply rubiin
+
 
 
 To backup plasma config, install kde5 plasma and then install latte sapcer and `konsave`(https://pypi.org/project/Konsave/) which is a python package and restore the tar file 
