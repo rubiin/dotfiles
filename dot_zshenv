@@ -12,6 +12,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export BROWSER="vivaldi"
 export EDITOR="nvim"
 export TERM="wezterm"
+export TERMINAL="wezterm"
+
 
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -33,12 +35,6 @@ fi
 if [ -d "$HOME/.cargo/bin" ]; then
 	PATH="$HOME/.cargo/bin:$PATH"
 fi
-
-export PNPM_HOME="$HOME/.local/share/pnpm"
-
-export PATH="$PATH:$PNPM_HOME/.local/bin"
-export TERMINAL=alacritty
-export EDITOR=NOT_LAZY=1 nvim
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
