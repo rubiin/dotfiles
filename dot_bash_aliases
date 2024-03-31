@@ -126,6 +126,17 @@ alias asdf_install_version="asdf install"
 alias asdf_list_version="asdf list"
 alias asdf_global_version_set="asdf global"
 
+git-standup() {
+	AUTHOR=${AUTHOR:="$(git config user.name)"}
+
+	since=yesterday
+	if [[ $(date +%u) == 1 ]]; then
+		since="2 days ago"
+	fi
+
+	git log --all --since "$since" --oneline --author="$AUTHOR"
+}
+
 alias yayskip='yay -S --mflags --skipinteg'
 
 alias git-rre-delete="rm -rf .git/rr-cache"
@@ -196,6 +207,16 @@ fo() {
 	fi
 }
 
+git-standup() {
+	AUTHOR=${AUTHOR:="$(git config user.name)"}
+
+	since=yesterday
+	if [[ $(date +%u) == 1 ]]; then
+		since="2 days ago"
+	fi
+
+	git log --all --since "$since" --oneline --author="$AUTHOR"
+}
 
 gh-delete-runs() {
 	# Get the IDs of all failed runs
@@ -350,5 +371,10 @@ function reinstall-nvim() {
 	rm -rf ~/.config/nvim
 	rm -rf ~/.local/share/nvim
 	git clone git@github.com:rubiin/init.lua .config/nvim
+        if [[ ! -d "~/personal-vim-plugs" ]]; then
+          git clone git@github.com:rubiin/fortune.lua ~/personal-vim-plugs/
+          git clone git@github.com:rubiin/highlighturl.lua ~/personal-vim-plugs/
+          git clone git@github.com:rubiin/vimwordlist.lua ~/personal-vim-plugs/
+        fi
 	nvim
 }
