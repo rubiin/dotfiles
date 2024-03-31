@@ -15,35 +15,13 @@ ask_yes_no_default() {
     esac
 }
 
-# Function to parse the .tool-versions file
-parse_tools_version() {
-    # Define the file path
-    local file="$HOME/.tool-versions"
+declare -A versions=(
+  ["nodejs"]="20.10.0"
+  ["golang"]="1.21.5"
+  ["rust"]="1.74.1"
+  ["ruby"]="3.2.2"
+)
 
-    # Check if the file exists
-    if [ -f "$file" ]; then
-        # Declare an associative array
-        declare -A versions
-
-        # Read each line of the file
-        while IFS= read -r line; do
-            # Extract tool and version
-            local tool=$(echo "$line" | awk '{print $1}')
-            local version=$(echo "$line" | awk '{print $2}')
-
-            # Add tool and version to the associative array
-            versions["$tool"]="$version"
-        done < "$file"
-
-        # Return the associative array
-        echo "${versions[@]}"
-    else
-        echo "File $file not found."
-        return 1
-    fi
-}
-
-tool_versions=$(parse_tools_version)
 
 export TMPFILE="$(mktemp)"; \
     sudo true; \
@@ -103,15 +81,16 @@ tempfile=$(mktemp) \
   && tic -x -o ~/.terminfo $tempfile \
   && rm $tempfile
 
-ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && rm -rf ~/.asdf && \
+ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && sudo rm -rf ~/.asdf && \
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0 && \
     source ~/.zshrc && \
     asdf update && \
-    for plugin in "${!tool_versions[@]}"; do \
-        asdf plugin add "$plugin" && \
-        asdf install "$plugin" "${tool_versions[$plugin]}" && \
-        asdf global "$plugin" "${tool_versions[$plugin]}"; \
-    done
+for plugin in "${!versions[@]}"; do
+  asdf plugin add "$plugin"
+  asdf install "$plugin" "${versions[$plugin]}"
+  asdf global "$plugin" "${versions[$plugin]}"
+done
+
 
 ask_yes_no_default "Do you want to install LunarVim?" 0 && \
     LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh) && \
