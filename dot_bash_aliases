@@ -39,6 +39,7 @@ alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf
 alias vmc='git diff --name-only --diff-filter=U'
 alias zshconfig="nvim ~/.zshrc"
 alias yt="youtube-dl"
+alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
 
 # Redis
