@@ -33,6 +33,8 @@ config.font = wezterm.font_with_fallback({
 })
 config.font_size = 10
 
+config.enable_wayland = true
+
 config.inactive_pane_hsb = {
 	saturation = 0.8,
 	brightness = 0.7,
