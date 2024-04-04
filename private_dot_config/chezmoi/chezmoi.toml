@@ -1,0 +1,3 @@
+encryption = "age"
+[age]
+    passphrase = true 
