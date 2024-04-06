@@ -4,17 +4,21 @@ Magical objects that make certain computers extremely use-able for me.
 
 <img src="https://i.imgur.com/dWiAjUx.gif" height=250/>
 
-## Screenshot
+## Screenshots
 
 ![image](https://github.com/rubiin/dotfiles/assets/8222059/508f0694-06bf-4ee6-bc0a-c83a6136b5b9)
+
+![image](https://github.com/rubiin/dotfiles/assets/8222059/257e7add-4145-48a0-8199-3622a20763d2)
 
 
 # Things I use 
 * Tmux (https://github.com/gpakosz/.tmux)
 * Neovim with lazyvim(https://www.lazyvim.org)
-* Wezterm/Alacritty
+* Kitty/Alacritty
 * Zsh with Ohmyzsh (https://ohmyz.sh/#install)
 * Hyperland
+* Waybar
+* Rofi
 
 # Get started
  ```bash
