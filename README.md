@@ -4,7 +4,20 @@ My config files for various aspects of my (first rice!) set up with i3 on Linux.
 
 Arch users can directly run the install-packages.sh . For other distros, you can view the file and install the dependencies manaully. Also, if you want to get most of the repo, use the first theme as its weekly updated by me (Rubin)
 
-Includes two subtly different themes. The wallpapers are photos Vitoria took in Tokyo. Feel free to use them only on your own desktops, if you wish. :)
+# Things I use 
+* Tmux (https://github.com/gpakosz/.tmux)
+* Neovim with lazyvim(https://www.lazyvim.org)
+* Wezterm/Alacritty
+* Zsh with Ohmyzsh (https://ohmyz.sh/#install)
+* Plasma Kde5
+
+# Get started
+ ```bash
+  	sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
+```
+To use chezmoi:
+chezmoi -- init --apply rubiin
+
 
 
 
