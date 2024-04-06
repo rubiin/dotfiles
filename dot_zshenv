@@ -1,0 +1,48 @@
+#--------------------------------------------------------------#
+##          Environment Variables                             ##
+#--------------------------------------------------------------#
+
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
+export LANG="${LANG:-en_US.UTF-8}"
+
+# Path to your oh-my-zsh installation.
+
+export ZSH="$HOME/.oh-my-zsh"
+
+export BROWSER="vivaldi"
+export EDITOR="nvim"
+export TERM="wezterm"
+export TERMINAL="wezterm"
+
+
+# cleaning up home folder
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# npm path
+export PATH=~/.npm/bin:$PATH
+
+# custom executable path
+export PATH="$HOME/.bin:$PATH"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ]; then
+	PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "$HOME/.cargo/bin" ]; then
+	PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}"
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X'
+
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768'

@@ -5,17 +5,8 @@ alias kb="kubectl"
 alias mk="minikube"
 alias husky_init="npx husky install && npx husky add .husky/pre-commit "npx lint-staged""
 alias yt="youtube-dl"
-alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='export TMPFILE="$(mktemp)"; \
-	sudo true; \
-	rate-arch-mirrors --max-delay=21600 | tee -a $TMPFILE \
-	  && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
-	  && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
-	  && ua-drop-caches \
-	  && yay -Syyu --noconfirm && brew update && brew upgrade && asdf plugin update --all'
-
-alias uuid="uuidgen -r | xclip -selection clipboard"
-
+alias scripts="cat package.json | jq --color-output '.scripts'"
+alias ytd="yt-dlp"
 
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
@@ -139,3 +130,174 @@ fo() {
   fi
 }
 
+git-standup() {
+	AUTHOR=${AUTHOR:="$(git config user.name)"}
+
+	since=yesterday
+	if [[ $(date +%u) == 1 ]]; then
+		since="2 days ago"
+	fi
+
+	git log --all --since "$since" --oneline --author="$AUTHOR"
+}
+
+gh-delete-runs() {
+	# Get the IDs of all failed runs
+	ids=$(gh run list -s failure --limit=200 --json databaseId -q '.[].databaseId')
+
+	# Loop over the IDs and delete each run
+	for id in $ids; do
+		gh run delete $id
+	done
+}
+
+gi() {
+	curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ >.gitignore
+}
+
+git-branch-delete() {
+	git branch | grep $@ | xargs git branch -D
+}
+
+git-redate() {
+	GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date "$1"
+}
+
+git-fix-repo() {
+	find .git/objects -type f -empty -delete
+	git prune
+	git fetch --all --prune
+}
+
+sssh() {
+	# try to connect every 0.5 secs (modulo timeouts)
+	while true; do
+		command ssh "$@"
+		[ $? -ne 255 ] && break || sleep 0.5
+	done
+}
+
+git-branch-rename() {
+	git checkout $1
+	git branch -m $2
+	git push origin -u $2
+	git push origin --delete $1
+
+}
+
+code_update_extensions() {
+	for ext in $(code --list-extensions); do
+		code --install-extension "$ext" --force
+	done
+}
+
+ffmpeg-convert() {
+	for i in *.mp4; do
+		ffmpeg -n -i "$i" -vcodec libx264 -v warning -hide_banner -stats -crf 28 -preset faster -tune film "cc${i}"
+	done
+}
+
+convert-dir-vids() {
+	Green=$'\e[1;32m'
+	Blue=$'\e[1;34m'
+	echo "$Blue Started converting videos in dir"
+	for d in ./*/; do (echo "$Green Current directory: $d \n" && cd "$d" && ffmpeg_convert && rm $(ls -I "cc*")); done
+	echo "finished converting all videos in directory"
+}
+
+zsh-fix-history() {
+	cd ~
+	mv .zsh_history .zsh_history_old
+	strings .zsh_history_old >.zsh_history
+	fc -R .zsh_history
+}
+
+alias yarn_audit_fix="npm_config_yes=true npx yarn-audit-fix"
+
+
+function calcram() {
+	local sum
+	sum=0
+	for i in $(ps aux | grep -i "$1" | grep -v "grep" | awk '{print $6}'); do
+		sum=$(($i + $sum))
+	done
+	sum=$(echo "scale=2; $sum / 1024.0" | bc)
+	echo $sum
+}
+
+# Show how much RAM application uses.
+# $ ram safari
+# # => safari uses 154.69 MBs of RAM
+function ram() {
+	local sum
+	local app="$1"
+	if [ -z "$app" ]; then
+		echo "First argument - pattern to grep from processes"
+		return 0
+	fi
+
+	sum=$(calcram $app)
+	if [[ $sum != "0" ]]; then
+		echo "${fg[blue]}${app}${reset_color} uses ${fg[green]}${sum}${reset_color} MBs of RAM"
+	else
+		echo "No active processes matching pattern '${fg[blue]}${app}${reset_color}'"
+	fi
+}
+
+# Same, but tracks RAM usage in realtime. Will run until you stop it.
+# $ rams safari
+function rams() {
+	local sum
+	local app="$1"
+	if [ -z "$app" ]; then
+		echo "First argument - pattern to grep from processes"
+		return 0
+	fi
+
+	while true; do
+		sum=$(calcram $app)
+		if [[ $sum != "0" ]]; then
+			echo -en "${fg[blue]}${app}${reset_color} uses ${fg[green]}${sum}${reset_color} MBs of RAM\r"
+		else
+			echo -en "No active processes matching pattern '${fg[blue]}${app}${reset_color}'\r"
+		fi
+		sleep 1
+	done
+}
+
+function git-deploy() {
+	git pull
+	git push
+	git checkout stage
+	git pull
+	git merge -X theirs dev
+	git push
+	git checkout main
+	git pull
+	git merge -X theirs stage
+}
+
+# $ size dir1 file2.js
+function size() {
+	# du -scBM | sort -n
+	du -shck "$@" | sort -rn | awk '
+      function human(x) {
+          s="kMGTEPYZ";
+          while (x>=1000 && length(s)>1)
+              {x/=1024; s=substr(s,2)}
+          return int(x+0.5) substr(s,1,1)
+      }
+      {gsub(/^[0-9]+/, human($1)); print}'
+}
+
+function reinstall-nvim() {
+	rm -rf ~/.config/nvim
+	rm -rf ~/.local/share/nvim
+	git clone git@github.com:rubiin/init.lua .config/nvim
+        if [[ ! -d "~/personal-vim-plugs" ]]; then
+          git clone git@github.com:rubiin/fortune.lua ~/personal-vim-plugs/
+          git clone git@github.com:rubiin/highlighturl.lua ~/personal-vim-plugs/
+          git clone git@github.com:rubiin/vimwordlist.lua ~/personal-vim-plugs/
+        fi
+	nvim
+}
