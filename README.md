@@ -4,6 +4,11 @@ Magical objects that make certain computers extremely use-able for me.
 
 <img src="https://i.imgur.com/dWiAjUx.gif" height=250/>
 
+## Screenshot
+
+![image](https://github.com/rubiin/dotfiles/assets/8222059/508f0694-06bf-4ee6-bc0a-c83a6136b5b9)
+
+
 # Things I use 
 * Tmux (https://github.com/gpakosz/.tmux)
 * Neovim with lazyvim(https://www.lazyvim.org)
