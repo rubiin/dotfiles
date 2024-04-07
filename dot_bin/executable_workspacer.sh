@@ -8,6 +8,7 @@
 #Workspace 6: System Monitoring and Utilities 
 #Workspace 7: Misc 
 
+
 # Define the mappings of applications to their designated workspaces
 declare -A app_workspace_mapping=(
     ["kitty"]="1"
@@ -28,6 +29,13 @@ move_app_to_workspace() {
 }
 
 echo "Starting hyperlanding script..."
+
+if [ "$1" = "work" ]; then
+  # code to be executed if the condition is true
+  postman & disown
+  code & disown
+fi
+
 
 #start vivaldi
 kitty & disown
