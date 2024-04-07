@@ -59,6 +59,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 # Edit config files
 alias envim="nvim ~/.config/nvim"
 alias ezsh="nvim ~/.zshrc"
+alias ehypr="nvim ~/.config/hypr/"
 alias ecz="nvim ~/.local/share/chezmoi/"
 
 # IP addresses
