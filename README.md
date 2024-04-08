@@ -19,6 +19,7 @@ Magical objects that make certain computers extremely use-able for me.
 * Hyperland
 * Waybar
 * Rofi
+* Hypr tiling window manager
 
 # Get started
  ```bash
