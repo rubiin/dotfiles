@@ -57,7 +57,7 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
     sudo groupadd docker && sudo usermod -aG docker $USER && \
     sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop ktouch keybase cloc gitflow-cjs yt-dlp mongodb-compass zoxide wl-clipboard mkcert hyprshade jq entr ripgrep ranger eog lazygit pokemon-colorscripts-git lazydocker-bin stacer  just github-cli postman-bin httpie  mpv ark jetbrains-toolbox tmux lsd thefuck taskwarrior-tui git-delta kcolorchooser grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin mousepad gparted neovim rate-mirrors vlc ktorrent persepolis
+ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop ktouch keybase cloc gitflow-cjs yt-dlp mongodb-compass zoxide wl-clipboard mkcert hyprshade jq entr ripgrep ranger eog age obs-studio lazygit pokemon-colorscripts-git lazydocker-bin stacer  just github-cli postman-bin httpie  mpv ark jetbrains-toolbox tmux lsd thefuck taskwarrior-tui git-delta kcolorchooser grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin mousepad gparted neovim rate-mirrors vlc ktorrent persepolis
 
 ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 && \
     sudo pacman -S zsh && \
