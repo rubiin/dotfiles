@@ -26,8 +26,9 @@ Magical objects that make certain computers extremely use-able for me.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
 ```
 To use chezmoi:
+```
 chezmoi -- init --apply rubiin
-
+```
 
 
 Might want this https://www.cyberciti.biz/open-source/command-line-hacks/adding-spice-to-your-sudo-session-with-a-lecture-file-on-linux-or-unix/
