@@ -32,5 +32,5 @@ chezmoi -- init --apply rubiin
 
 Might want this https://www.cyberciti.biz/open-source/command-line-hacks/adding-spice-to-your-sudo-session-with-a-lecture-file-on-linux-or-unix/
 
-# If you use i3wm, check the branch i3m for my i3 rice
-# If you use kde, check the kde branch
+# If you use i3wm, check the branch [i3wm](https://github.com/rubiin/dotfiles/tree/i3) for my i3 rice
+# If you use kde, check the  [kde](https://github.com/rubiin/dotfiles/tree/kde) branch
