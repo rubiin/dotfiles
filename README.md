@@ -23,7 +23,7 @@ Magical objects that make certain computers extremely use-able for me.
 
 # Get started
  ```bash
-  	sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
 ```
 To use chezmoi:
 chezmoi -- init --apply rubiin
