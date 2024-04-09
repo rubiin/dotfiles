@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#Workspace 1: terminal workspace.
-#Workspace 2: browser workspace.
+#Workspace 1: browser workspace.
+#Workspace 2: terminal workspace.
 #Workspace 3: ide workspace.
 #Workspace 4: files workspace 
 #Workspace 5: Media and Entertainment Workspace
@@ -11,11 +11,11 @@
 
 # Define the mappings of applications to their designated workspaces
 declare -A app_workspace_mapping=(
-    ["kitty"]="1"
-    ["Alacritty"]="1"
-    ["Vivaldi-stable"]="2"
-    ["firefox"]="2"
-    ["chrome"]="2"
+    ["kitty"]="2"
+    ["Alacritty"]="2"
+    ["Vivaldi-stable"]="1"
+    ["firefox"]="1"
+    ["chrome"]="1"
     ["vlc"]="5"
     ["mpv"]="5"
     ["org.kde.dolphin"]="4"
