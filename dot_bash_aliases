@@ -8,6 +8,7 @@ alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune
 alias code="code-insiders"
 alias crap="fortune" # This will keep you sane when you're about to smash the keyboard again.
 alias cz="chezmoi"
+alias hyde="Hyde"
 alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
 alias du="du -h -c" # calculate disk usage for a folder
@@ -128,16 +129,6 @@ alias asdf_install_version="asdf install"
 alias asdf_list_version="asdf list"
 alias asdf_global_version_set="asdf global"
 
-git-standup() {
-	AUTHOR=${AUTHOR:="$(git config user.name)"}
-
-	since=yesterday
-	if [[ $(date +%u) == 1 ]]; then
-		since="2 days ago"
-	fi
-
-	git log --all --since "$since" --oneline --author="$AUTHOR"
-}
 
 alias yayskip='yay -S --mflags --skipinteg'
 
@@ -209,16 +200,6 @@ fo() {
 	fi
 }
 
-git-standup() {
-	AUTHOR=${AUTHOR:="$(git config user.name)"}
-
-	since=yesterday
-	if [[ $(date +%u) == 1 ]]; then
-		since="2 days ago"
-	fi
-
-	git log --all --since "$since" --oneline --author="$AUTHOR"
-}
 
 gh-delete-runs() {
 	# Get the IDs of all failed runs
@@ -246,6 +227,15 @@ git-fix-repo() {
 	find .git/objects -type f -empty -delete
 	git prune
 	git fetch --all --prune
+}
+
+power-save() {
+	if [[ $1 == "on" ]] 
+	then
+		Hyde power save -a -ba -b -o 
+	else 
+		Hyde power reset
+	fi 
 }
 
 sssh() {
@@ -290,8 +280,6 @@ zsh-fix-history() {
 	strings .zsh_history_old >.zsh_history
 	fc -R .zsh_history
 }
-
-alias yarn_audit_fix="npm_config_yes=true npx yarn-audit-fix"
 
 
 function calcram() {
