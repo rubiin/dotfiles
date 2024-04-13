@@ -99,7 +99,7 @@ sudo systemctl restart bluetooth.service
 ask_yes_no_default "Do you want to install LunarVim?" 0 && \
     LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh) && \
     yay -Rns kate okular
-ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && sudo pacman -S atuin
+ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
