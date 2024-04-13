@@ -70,8 +70,8 @@ ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?
 
 echo "Installing bat themes"
 mkdir -p "$(bat --config-dir)/themes"
-wget -P "$(bat --config-dir)/themes/" https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme
-wget -P "$(bat --config-dir)/themes/" https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-frappe.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
+wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
 bat cache --build
 
 echo "Setting alacritty"
