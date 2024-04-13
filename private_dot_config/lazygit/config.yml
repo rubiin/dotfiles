@@ -41,8 +41,8 @@ confirmOnQuit: false
 
 customCommands:
   - key: "C"
-    command: "git cz c"
-    description: "commit with commitizen"
+    command: "git cz"
+    description: "Commit with commitizen"
     context: "files"
-    loadingText: "opening commitizen commit tool"
+    loadingText: "Opening commitizen commit tool"
     subprocess: true
