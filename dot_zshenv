@@ -14,15 +14,25 @@ export EDITOR="nvim"
 export TERM="wezterm"
 export TERMINAL="wezterm"
 
-
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+
+# asdf paths
+export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/.asdfrc"
+export ASDF_DATA_DIR="$XDG_CONFIG_HOME/.asdf"
+
+export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'
+
 # npm path
-export PATH=~/.npm/bin:$PATH
+export PATH=$XDG_CONFIG_HOME/npm/bin:$PATH
+export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
+# ripgreprc
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
 
 # custom executable path
 export PATH="$HOME/.bin:$PATH"
