@@ -25,8 +25,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/.asdfrc"
 export ASDF_DATA_DIR="$XDG_CONFIG_HOME/.asdf"
 
-export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'
-
 # npm path
 export PATH=$XDG_CONFIG_HOME/npm/bin:$PATH
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
