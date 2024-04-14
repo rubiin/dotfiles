@@ -21,7 +21,7 @@
 	# Editor is vi of coursea
 	editor = nvim --clean
 	# Include your global excludefile
-	excludefile = ~/.gitignore_global
+	excludefile = .gitignore_global
 	# Don't paginate output by default
 	pager = delta
 	# Speed up the status command
