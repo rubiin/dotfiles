@@ -16,10 +16,11 @@ Magical objects that make certain computers extremely use-able for me.
 * Neovim with lazyvim(https://www.lazyvim.org)
 * Kitty/Alacritty
 * Zsh with Ohmyzsh (https://ohmyz.sh/#install)
-* Hyperland
+* Hyprland compositor
+* Hypr tiling window manager
 * Waybar
 * Rofi
-* Hypr tiling window manager
+
 
 # Get started
  ```bash
