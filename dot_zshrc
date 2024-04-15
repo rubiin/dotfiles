@@ -70,7 +70,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#50493e"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git autoupdate evalcache zsh-autosuggestions)
+plugins=( git autoupdate zsh-autosuggestions evalcache)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,6 +125,23 @@ fpath=($fpath "/home/devina/.zfunctions")
 
 [ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
 
+# zsh autocomplete
+_zoxide_zsh_tab_completion() {
+    (( $+compstate )) && compstate[insert]=menu
+    local keyword="${words:2}"
+    local completions=(${(@f)"$(zoxide query -l "$keyword")"})
+
+
+    if [[ ${#completions[@]} == 0 ]]; then
+        _files -/
+    else
+        compadd -U -V z "${(@)completions}"
+    fi
+}
+
+if [ "${+functions[compdef]}" -ne 0 ]; then
+    compdef _zoxide_zsh_tab_completion z 2> /dev/null
+fi
 
 # pnpm
 export PNPM_HOME="/home/devina/.local/share/pnpm"
