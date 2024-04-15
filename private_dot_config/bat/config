@@ -1,6 +1,6 @@
 
 # theme 
---theme="Catppuccin-mocha"
+--theme="Catppuccin Mocha"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"
