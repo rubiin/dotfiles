@@ -22,7 +22,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # npm path
-export PATH=~/.npm/bin:$PATH
+# export PATH=~/.npm/bin:$PATH
 
 # custom executable path
 export PATH="$HOME/.bin:$PATH"
