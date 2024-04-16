@@ -7,7 +7,6 @@ tsx
 yarn
 tree-sitter-cli
 types-installer
-@microsoft/inshellisense
 asdfui
 aicommits
 commitzen
@@ -16,7 +15,7 @@ nfdl
 autocannon
 vercel
 commitizen
-cz-emoji
+cz-conventional-changelog
 nx
 aaja
 json-server

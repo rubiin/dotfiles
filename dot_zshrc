@@ -122,9 +122,6 @@ _evalcache thefuck --alias
 _evalcache zoxide init zsh
 fpath=($fpath "/home/devina/.zfunctions")
 
-
-[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
-
 # zsh autocomplete
 _zoxide_zsh_tab_completion() {
     (( $+compstate )) && compstate[insert]=menu
