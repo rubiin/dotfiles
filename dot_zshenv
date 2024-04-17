@@ -24,6 +24,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # npm path
 # export PATH=~/.npm/bin:$PATH
 
+export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
 # custom executable path
 export PATH="$HOME/.bin:$PATH"
 
