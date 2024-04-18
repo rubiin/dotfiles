@@ -126,6 +126,8 @@ _evalcache zoxide init zsh
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
 
+export FZF_DEFAULT_COMMAND="rg --files"
+
 fpath=($fpath "/home/devina/.zfunctions")
 
 # zsh autocomplete
