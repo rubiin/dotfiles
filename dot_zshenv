@@ -53,3 +53,12 @@ export MANPAGER='less -X'
 export NODE_REPL_HISTORY=~/.node_history
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768'
+
+
+# pnpm
+export PNPM_HOME="/home/devina/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
