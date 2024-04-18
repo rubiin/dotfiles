@@ -40,6 +40,7 @@ if [ -d "$HOME/.cargo/bin" ]; then
 	PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# this sets env for golang
 . ~/.asdf/plugins/golang/set-env.zsh
 
 # Highlight section titles in manual pages.
