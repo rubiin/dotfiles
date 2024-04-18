@@ -1,3 +1,4 @@
+
 #--------------------------------------------------------------#
 ##          Environment Variables                             ##
 #--------------------------------------------------------------#
@@ -41,7 +42,7 @@ if [ -d "$HOME/.cargo/bin" ]; then
 fi
 
 # this sets env for golang
-. ~/.asdf/plugins/golang/set-env.zsh
+. $XDG_CONFIG_HOME/.asdf/plugins/golang/set-env.zsh
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
