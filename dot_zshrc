@@ -117,6 +117,10 @@ fi;
 setopt extended_glob
 _evalcache thefuck --alias
 _evalcache zoxide init zsh
+
+# Set up fzf key bindings and fuzzy completion
+_evalcache fzf --zsh
+
 fpath=($fpath "/home/devina/.zfunctions")
 
 # zsh autocomplete
