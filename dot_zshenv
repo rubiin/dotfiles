@@ -14,16 +14,18 @@ export EDITOR="nvim"
 export TERM="kitty"
 export TERMINAL="kitty"
 
-
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-
 export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/.asdfrc"
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
+export FZF_DEFAULT_OPTS="--height=50% --min-height=15 --reverse"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # custom executable path
 export PATH="$HOME/.bin:$PATH"
@@ -36,7 +38,6 @@ fi
 if [ -d "$HOME/.cargo/bin" ]; then
 	PATH="$HOME/.cargo/bin:$PATH"
 fi
-
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
