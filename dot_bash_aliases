@@ -34,7 +34,12 @@ alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/nvim && git pull'
 alias uuid="uuidgen -r | xclip -selection clipboard"
-alias vim="nvim"
+
+# prefer nvim over vim when present
+if type nvim >/dev/null 2>&1; then
+	alias vim='nvim'
+fi
+
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
@@ -129,7 +134,6 @@ alias asdf_install_version="asdf install"
 alias asdf_list_version="asdf list"
 alias asdf_global_version_set="asdf global"
 
-
 alias yayskip='yay -S --mflags --skipinteg'
 
 alias git-rre-delete="rm -rf .git/rr-cache"
@@ -200,7 +204,6 @@ fo() {
 	fi
 }
 
-
 gh-delete-runs() {
 	# Get the IDs of all failed runs
 	ids=$(gh run list -s failure --limit=200 --json databaseId -q '.[].databaseId')
@@ -230,12 +233,11 @@ git-fix-repo() {
 }
 
 power-save() {
-	if [[ $1 == "on" ]] 
-	then
-		Hyde power save -a -ba -b -o 
-	else 
+	if [[ $1 == "on" ]]; then
+		Hyde power save -a -ba -b -o
+	else
 		Hyde power reset
-	fi 
+	fi
 }
 
 sssh() {
@@ -280,7 +282,6 @@ zsh-fix-history() {
 	strings .zsh_history_old >.zsh_history
 	fc -R .zsh_history
 }
-
 
 function calcram() {
 	local sum
@@ -361,11 +362,11 @@ function reinstall-nvim() {
 	rm -rf ~/.config/nvim
 	rm -rf ~/.local/share/nvim
 	git clone git@github.com:rubiin/init.lua .config/nvim
-        if [[ ! -d personal-vim-plugs ]] then
-	  mkdir ~/personal-vim-plugs 
-          git clone git@github.com:rubiin/fortune.nvim.git ~/personal-vim-plugs/fortune.nvim
-          git clone git@github.com:rubiin/highlighturl.nvim.git ~/personal-vim-plugs/highlighturl.nvim
-          git clone git@github.com:rubiin/vimwordlist.nvim.git ~/personal-vim-plugs/vimwordlist.nvim
-        fi
+	if [[ ! -d personal-vim-plugs ]]; then
+		mkdir ~/personal-vim-plugs
+		git clone git@github.com:rubiin/fortune.nvim.git ~/personal-vim-plugs/fortune.nvim
+		git clone git@github.com:rubiin/highlighturl.nvim.git ~/personal-vim-plugs/highlighturl.nvim
+		git clone git@github.com:rubiin/vimwordlist.nvim.git ~/personal-vim-plugs/vimwordlist.nvim
+	fi
 	nvim
 }
