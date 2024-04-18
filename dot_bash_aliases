@@ -32,10 +32,10 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
 alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/nvim && git pull'
+alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/$EDITOR && git pull'
 alias uuid="uuidgen -r | xclip -selection clipboard"
 
-# prefer nvim over vim when present
+# prefer $EDITOR over vim when present
 if type nvim >/dev/null 2>&1; then
 	alias vim='nvim'
 fi
@@ -43,7 +43,7 @@ fi
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="$EDITOR ~/.zshrc"
 alias yt="youtube-dl"
 alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
@@ -96,10 +96,10 @@ alias cz-add-all="cz add \
 "
 
 # Edit config files
-alias envim="nvim ~/.config/nvim"
-alias ezsh="nvim ~/.zshrc"
-alias ehypr="nvim ~/.config/hypr/"
-alias ecz="nvim ~/.local/share/chezmoi/"
+alias envim="$EDITOR ~/.config/nvim"
+alias ezsh="$EDITOR ~/.zshrc"
+alias ehypr="$EDITOR ~/.config/hypr/"
+alias ecz="$EDITOR ~/.local/share/chezmoi/"
 
 # IP addresses
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
