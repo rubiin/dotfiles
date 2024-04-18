@@ -1,3 +1,4 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -79,7 +80,7 @@ unsetopt beep
 
 # all alias source should be done below
 source $HOME/.bash_aliases
-source "$HOME/.asdf/asdf.sh"
+source "$XDG_CONFIG_HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -90,7 +91,6 @@ if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 else
 	compinit -C;
 fi;
-
 
 # User configuration
 
