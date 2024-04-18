@@ -74,6 +74,8 @@ plugins=(autoupdate zsh-autosuggestions evalcache zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# No bell: Shut up Zsh
+unsetopt beep
 
 # all alias source should be done below
 source $HOME/.bash_aliases
