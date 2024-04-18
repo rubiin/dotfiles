@@ -38,6 +38,12 @@ if [ -d "$HOME/.cargo/bin" ]; then
 	PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+
+# go
+export GOPATH=$(asdf where golang)/packages
+export GOROOT=$(asdf where golang)/go
+export PATH="${PATH}:$(go env GOPATH)/bin"
+
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
 
