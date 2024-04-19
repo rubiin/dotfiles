@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -86,7 +87,7 @@ unsetopt beep
 
 # all alias source should be done below
 source $HOME/.bash_aliases
-source "$HOME/.asdf/asdf.sh"
+source "$XDG_CONFIG_HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
