@@ -115,11 +115,18 @@ alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | gr
 alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # ls
-alias ls='eza'
-alias l='eza -l'
-alias la='eza -a'
-alias lla='eza -la'
-alias lt='eza --tree'
+alias l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias lt='eza --icons=auto --tree'
+
+# Handy change dir shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
 alias cat="bat"
 
