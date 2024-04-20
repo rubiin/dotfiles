@@ -21,6 +21,7 @@ alias lzd="lazydocker"
 alias lzg="lazygit"
 alias myzsh='source ~/.zshrc'
 alias nord="nordvpn"
+alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
     sudo true; \
