@@ -1,5 +1,4 @@
 alias ari="aria2c"
-alias ari="aria2c"
 alias b="bun"
 alias clr="clear"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
@@ -22,13 +21,6 @@ alias lzg="lazygit"
 alias myzsh='source ~/.zshrc'
 alias nord="nordvpn"
 alias neofetch="fastfetch"
-
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-alias mkdir='mkdir -p'
-
-# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
-alias ssh='kitten ssh'
-
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
     sudo true; \
@@ -43,11 +35,6 @@ alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/$EDITOR && git pull'
 alias uuid="uuidgen -r | xclip -selection clipboard"
 
-# prefer $EDITOR over vim when present
-if type nvim >/dev/null 2>&1; then
-	alias vim='nvim'
-fi
-
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
@@ -55,6 +42,11 @@ alias zshconfig="$EDITOR ~/.zshrc"
 alias yt="youtube-dl"
 alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
+
+# prefer $EDITOR over vim when present
+if type nvim >/dev/null 2>&1; then
+	alias vim='nvim'
+fi
 
 # Redis
 alias start-redis="docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
@@ -69,7 +61,6 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
 
 alias cz-add-all="cz add \
   .bash_aliases \
@@ -120,6 +111,12 @@ alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree'
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
+# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
+alias ssh='kitten ssh'
 
 # Handy change dir shortcuts
 alias ..='cd ..'
