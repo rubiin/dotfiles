@@ -22,6 +22,13 @@ alias lzg="lazygit"
 alias myzsh='source ~/.zshrc'
 alias nord="nordvpn"
 alias neofetch="fastfetch"
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
+# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
+alias ssh='kitten ssh'
+
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
     sudo true; \
