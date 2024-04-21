@@ -31,7 +31,7 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
 alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/$EDITOR && git pull'
+alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/nvim && g ssa && git pull & g sa & cd'
 alias uuid="uuidgen -r | xclip -selection clipboard"
 
 alias ssh='TERM=xterm-256color ssh'
