@@ -1,5 +1,5 @@
 alias ari="aria2c"
-alias clr="clear"
+alias c="clear"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune"
@@ -37,23 +37,19 @@ alias uuid="uuidgen -r | xclip -selection clipboard"
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
-alias zshconfig="$EDITOR ~/.zshrc"
 alias yt="youtube-dl"
 alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
-
+alias yolo='git commit --allow-empty-message -m "" && git push origin master'
 # prefer $EDITOR over vim when present
 if type nvim >/dev/null 2>&1; then
 	alias vim='nvim'
 fi
+alias hg='history | grep'
 
-# Redis
-alias start-redis="docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
-alias flush-redis="redis-cli FLUSHALL"
-
-# Postgres
-alias start-postgres="docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:alpine"
-alias start-redis="docker run --name my-redis -p 6379:6379 -d redis:alpine"
+alias cp="cp -i" # confirm before overwriting something
+alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
+alias mv='mv -i' # confirm before overwriting something
 
 # Copy / paste
 alias pbcopy='xclip -selection clipboard'
@@ -189,7 +185,13 @@ alias most-used="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -
 # Checks whether connection is up.
 alias net="ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'"
 
-alias asdf-all="asdf plugin-list | xargs -I{} sh -c 'echo {}; asdf list {}'"
+# Redis
+alias start-redis="docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
+alias flush-redis="redis-cli FLUSHALL"
+
+# Postgres
+alias start-postgres="docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:alpine"
+
 
 #docker
 alias pg-docker-start="docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"
@@ -415,3 +417,9 @@ function reinstall-nvim() {
 	fi
 	nvim
 }
+
+# Query http://cheat.sh for help with a command
+cheat (){
+        curl cheat.sh/$1
+}
+
