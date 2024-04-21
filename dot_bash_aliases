@@ -47,6 +47,7 @@ if type nvim >/dev/null 2>&1; then
 fi
 alias hg='history | grep'
 
+alias wget="wget -c" #resume wget by default
 alias cp="cp -i" # confirm before overwriting something
 alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i' # confirm before overwriting something
