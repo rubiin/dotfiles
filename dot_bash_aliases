@@ -1,5 +1,4 @@
 alias ari="aria2c"
-alias b="bun"
 alias clr="clear"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
@@ -167,6 +166,7 @@ alias pid="pnpm i -D"
 alias pih="pnpm i --shamefully-hoist=true"
 
 # bun aliases
+alias b="bun"
 alias bi="bun install"
 alias br="bun run"
 
