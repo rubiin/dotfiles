@@ -130,7 +130,7 @@ _evalcache zoxide init zsh
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
 
-fpath=($fpath "/home/devina/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 
 # zsh autocomplete
 _zoxide_zsh_tab_completion() {
@@ -152,3 +152,4 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
