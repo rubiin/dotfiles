@@ -90,7 +90,7 @@ tempfile=$(mktemp) \
   && rm $tempfile
 
 ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && sudo rm -rf ~/.asdf && \
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0 && \
+    git clone https://github.com/asdf-vm/asdf.git ~/.config/.asdf --branch v0.14.0 && \
     source ~/.zshrc && \
     asdf update && \
 for plugin in "${!versions[@]}"; do
