@@ -11,8 +11,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # default apps
 export BROWSER="vivaldi"
 export EDITOR="nvim"
-export TERM="kitty"
-export TERMINAL="kitty"
 
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
