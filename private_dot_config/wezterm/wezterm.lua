@@ -45,7 +45,7 @@ config.scrollback_lines = 5000
 config.enable_scroll_bar = false
 
 -- general
-config.window_background_opacity = 0.98
+config.window_background_opacity = 0.88
 config.initial_rows = 41
 config.initial_cols = 160
 config.term = "wezterm"
@@ -55,15 +55,20 @@ config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = 2,
+	right = 2,
+	top = 2,
+	bottom = 2,
 }
 
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
-config.enable_wayland = true
+
+if os.getenv("XDG_CURRENT_DESKTOP") == "Hyprland" then
+	config.enable_wayland = false
+else
+	config.enable_wayland = true
+end
 
 -- core keymaps that are general
 config.keys = {
