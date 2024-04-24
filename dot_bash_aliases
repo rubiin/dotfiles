@@ -111,9 +111,6 @@ alias lt='eza --icons=auto --tree'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
-# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
-alias ssh='kitten ssh'
-
 # Handy change dir shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
