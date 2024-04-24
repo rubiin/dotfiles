@@ -84,10 +84,7 @@ echo "Setting alacritty"
 wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info &&  sudo tic -xe alacritty,alacritty-direct alacritty.info && rm alacritty.info
 
 echo "Setting wezterm"
-tempfile=$(mktemp) \
-  && curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo \
-  && tic -x -o ~/.terminfo $tempfile \
-  && rm $tempfile
+yay -S wezterm-terminfo-git
 
 ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && sudo rm -rf ~/.asdf && \
     git clone https://github.com/asdf-vm/asdf.git ~/.config/.asdf --branch v0.14.0 && \
