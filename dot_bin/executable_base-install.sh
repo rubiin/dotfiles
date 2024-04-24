@@ -22,7 +22,6 @@ declare -A versions=(
   ["ruby"]="3.2.2"
 )
 
-
 export TMPFILE="$(mktemp)"; \
     sudo true; \
     rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
@@ -52,9 +51,6 @@ ask_yes_no_default "Do you want to install nerd fonts?" 0 && yay -S ttf-firacode
 sudo fc-cache -vf
 
 ask_yes_no_default "Do you want to install oh-my-tmux?" 0 && git clone https://github.com/gpakosz/.tmux
-
-ask_yes_no_default "Do you want to install pnpm?" 0 && curl -fsSL https://get.pnpm.io/install.sh | sh -
-
 
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
