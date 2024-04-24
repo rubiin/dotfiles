@@ -55,10 +55,10 @@ config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 2,
-	right = 2,
-	top = 2,
-	bottom = 2,
+	left = 4,
+	right = 4,
+	top = 4,
+	bottom = 4,
 }
 
 -- disable wezterm mappings are they are troublesome with neovim
