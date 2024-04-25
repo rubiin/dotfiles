@@ -47,7 +47,7 @@ if type nvim >/dev/null 2>&1; then
 fi
 alias hg='history | grep'
 
-alias wget='wget -c --hsts-file="$XDG_DATA_HOME/wget-hsts' #resume wget by default
+alias wget='wget -c' #resume wget by default
 alias cp="cp -i" # confirm before overwriting something
 alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i' # confirm before overwriting something
@@ -110,6 +110,9 @@ alias lt='eza --icons=auto --tree'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
+
+# Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
+# alias ssh='kitten ssh'
 
 # Handy change dir shortcuts
 alias ..='cd ..'
