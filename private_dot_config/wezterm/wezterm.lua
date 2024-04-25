@@ -21,24 +21,7 @@ if wezterm.config_builder then
 end
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
-
-
-local theme_list = {
-	["Catppuccin Latte"] = "catppuccin-latte",
-	["Catppuccin Mocha"] = "Catppuccin Mocha",
-	["Decay Green"] = "",
-	["Edge Runner"] = "",
-	["Frosted Glass"] = "",
-	["Graphite Mono"] = "Grayscale (dark) (terminal.sexy)",
-	["Gruvbox Retro"] = "Gruvbox Material (Gogh)",
-	["Material Sakura"] = "Sakura (base16)",
-	["Nordic Blue"] = "nord",
-	["Rosé Pine"] = "rose-pine",
-	["Synth Wave"] = "synthwave",
-	["Tokyo Night"] = "tokyonight",
-}
 -- This is where you actually apply your config choices
-config.color_scheme = "Catppuccin Mocha"
 
 -- For example, changing the color scheme:
 -- config.color_scheme = 'Batman'
@@ -47,6 +30,7 @@ config.font = wezterm.font_with_fallback({
 	{ family = "MonoLisa Nerd Font", weight = "Regular" },
 	{ family = "DejaVuSansM Nerd Font", weight = "Regular" },
 })
+config.color_scheme = "Catppuccin Mocha"
 config.font_size = 10
 
 config.enable_wayland = true
