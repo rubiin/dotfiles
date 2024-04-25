@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Define an array of files and directories to add
+files=(
+    .bin
+    .aria2/
+    .curlrc
+    bspwm-dotfiles/
+    .gitconfig-takeo
+    .zsh_history
+    wallpapers/
+    cheatsheets/
+    .gitignore_global
+    .tool-versions
+    kde-plasma-config/
+    .bash_profile
+    .bashrc
+    .bash_aliases
+    .default-npm-packages
+    .default-golang-pkgs
+    .vimrc
+    .fonts.conf
+    .profile
+    .wgetrc
+    theme.config
+    .gitconfig
+    .tmux.conf
+    .tmux.conf.local
+    .config/konsave
+    .config/persepolis_download_manager
+    .config/autostart
+    .config/bauh
+    .config/kitty
+    .config/lvim
+    .config/plank
+    .config/mpv
+    .config/Mousepad
+    .config/animdl
+    .config/alacritty
+    .config/nvim
+)
+
+# Change to the home directory
+cd
+
+# Loop through the array and add each file or directory
+for item in "${files[@]}"; do
+    echo "adding $item"
+    cz add "$item"
+done
