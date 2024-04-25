@@ -22,7 +22,23 @@ end
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
+
+local theme_list = {
+	["Catppuccin Latte"] = "catppuccin-latte",
+	["Catppuccin Mocha"] = "Catppuccin Mocha",
+	["Decay Green"] = "",
+	["Edge Runner"] = "",
+	["Frosted Glass"] = "",
+	["Graphite Mono"] = "Grayscale (dark) (terminal.sexy)",
+	["Gruvbox Retro"] = "Gruvbox Material (Gogh)",
+	["Material Sakura"] = "Sakura (base16)",
+	["Nordic Blue"] = "nord",
+	["Rosé Pine"] = "rose-pine",
+	["Synth Wave"] = "synthwave",
+	["Tokyo Night"] = "tokyonight",
+}
 -- This is where you actually apply your config choices
+config.color_scheme = "Catppuccin Mocha"
 
 -- For example, changing the color scheme:
 -- config.color_scheme = 'Batman'
@@ -119,7 +135,6 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
-config.color_scheme = "Catppuccin Mocha"
 config.freetype_load_target = "HorizontalLcd"
 config.debug_key_events = true
 -- and finally, return the configuration to wezterm
