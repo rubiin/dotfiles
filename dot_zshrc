@@ -86,8 +86,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt beep
 
 # all alias source should be done below
-source $HOME/.bash_aliases
+source "$HOME/.bash_aliases"
 source "$XDG_CONFIG_HOME/.asdf/asdf.sh"
+source "$HOME/.local/share/bin/globalcontrol.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -149,6 +150,7 @@ _zoxide_zsh_tab_completion() {
 if [ "${+functions[compdef]}" -ne 0 ]; then
     compdef _zoxide_zsh_tab_completion z 2> /dev/null
 fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
