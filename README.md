@@ -14,7 +14,7 @@ Magical objects that make certain computers extremely use-able for me.
 # Things I use 
 * Tmux (https://github.com/gpakosz/.tmux)
 * Neovim with lazyvim(https://www.lazyvim.org)
-* Wezterm/Alacritty
+* Wezterm/Kitty
 * Zsh with Ohmyzsh (https://ohmyz.sh/#install)
 * Hyprland compositor
 * Hypr tiling window manager
