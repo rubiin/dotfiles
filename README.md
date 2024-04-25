@@ -28,7 +28,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot
 ```
 To use chezmoi:
 ```
-chezmoi -- init --apply rubiin
+chezmoi init --apply rubiin
 ```
 
 
