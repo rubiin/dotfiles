@@ -1,6 +1,7 @@
 [Added Associations]
 application/vnd.ms-publisher=org.xfce.mousepad.desktop;
 application/x-shellscript=org.xfce.mousepad.desktop;okularApplication_txt.desktop;nvim.desktop;vim.desktop;visual-studio-code-insiders.desktop;
+image/jpeg=org.gnome.eog.desktop;swappy.desktop;vivaldi-stable.desktop;org.kde.gwenview.desktop;
 inode/directory=org.kde.dolphin.desktop;
 text/css=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
 text/csv=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
@@ -27,6 +28,7 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 [Default Applications]
 application/vnd.ms-publisher=org.xfce.mousepad.desktop;
 application/x-shellscript=org.xfce.mousepad.desktop;
+image/jpeg=org.gnome.eog.desktop;
 inode/directory=org.kde.dolphin.desktop
 text/css=org.xfce.mousepad.desktop;
 text/csv=org.xfce.mousepad.desktop;

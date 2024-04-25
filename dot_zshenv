@@ -12,7 +12,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export BROWSER="vivaldi"
 export EDITOR="nvim"
 
-
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
