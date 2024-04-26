@@ -81,7 +81,6 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(evalcache autoupdate zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
 # No bell: Shut up Zsh
 unsetopt beep
 
@@ -100,6 +99,7 @@ else
 	compinit -C;
 fi;
 
+source /usr/share/hyde-cli/Hyde.zsh
 
 # User configuration
 
