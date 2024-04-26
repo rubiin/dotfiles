@@ -87,7 +87,6 @@ unsetopt beep
 # all alias source should be done below
 source "$HOME/.bash_aliases"
 source "$XDG_CONFIG_HOME/.asdf/asdf.sh"
-source "$HOME/.local/share/bin/globalcontrol.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
