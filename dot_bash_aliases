@@ -1,5 +1,6 @@
 alias ari="aria2c"
 alias c="clear"
+alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune"
