@@ -3,8 +3,6 @@
 
 # post install and configure everything
 
-echo "Downloading wallpapers"
-./wallpaper.sh
 
 echo "Installing python packages"
 ./python-install.sh
