@@ -47,8 +47,7 @@ if type nvim >/dev/null 2>&1; then
 	alias vim='nvim'
 fi
 alias hg='history | grep'
-
-alias wget='wget -c' #resume wget by default
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts" -c'
 alias cp="cp -i" # confirm before overwriting something
 alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i' # confirm before overwriting something
@@ -147,6 +146,7 @@ alias nioff="npm install --offline"
 alias nrm="npm run typeorm:run"
 
 ## yarn aliases
+
 alias y="yarn"
 alias yi="yarn install"
 alias ya="yarn add"
