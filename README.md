@@ -2,8 +2,7 @@
 
 Magical objects that make certain computers extremely use-able for me.
 
-<img src="https://i.imgur.com/dWiAjUx.gif" height=250/> <img src="https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/ArchLinux/ArchLinux.png" height=250/>
-
+<img src="https://i.imgur.com/dWiAjUx.gif" height=250/>
 
 ## Demo
 https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
