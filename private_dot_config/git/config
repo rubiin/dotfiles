@@ -142,8 +142,8 @@
 
 	# checkout
 	co = checkout
-	com = checkout master --
-	cod = checkout develop --
+	com = checkout master
+	cod = checkout dev
 	cob = checkout -b
 
 	# cherry-pick
