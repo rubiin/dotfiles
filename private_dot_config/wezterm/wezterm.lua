@@ -64,12 +64,6 @@ config.window_padding = {
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
 
-if os.getenv("XDG_CURRENT_DESKTOP") == "Hyprland" then
-	config.enable_wayland = false
-else
-	config.enable_wayland = true
-end
-
 -- core keymaps that are general
 config.keys = {
 	{
