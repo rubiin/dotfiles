@@ -63,6 +63,7 @@ config.window_padding = {
 
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
+config.enable_wayland = true
 
 -- core keymaps that are general
 config.keys = {
