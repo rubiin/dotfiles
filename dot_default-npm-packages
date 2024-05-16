@@ -9,7 +9,7 @@ tree-sitter-cli
 types-installer
 asdfui
 commitizen
-cz-emoji
+cz-conventional-changelog
 nfdl
 autocannon
 vercel
