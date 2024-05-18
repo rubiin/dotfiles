@@ -2,3 +2,4 @@ nodejs 20.13.1
 golang 1.22.3
 rust 1.78.0
 ruby 3.3.0
+neovim stable
