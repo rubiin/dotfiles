@@ -40,6 +40,50 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 
+-- URLs in Markdown files are not handled properly by default
+-- Source: https://github.com/wez/wezterm/issues/3803#issuecomment-1608954312
+config.hyperlink_rules = {
+	-- Matches: a URL in parens: (URL)
+	{
+		regex = "\\((\\w+://\\S+)\\)",
+		format = "$1",
+		highlight = 1,
+	},
+	-- Matches: a URL in brackets: [URL]
+	{
+		regex = "\\[(\\w+://\\S+)\\]",
+		format = "$1",
+		highlight = 1,
+	},
+	-- Matches: a URL in curly braces: {URL}
+	{
+		regex = "\\{(\\w+://\\S+)\\}",
+		format = "$1",
+		highlight = 1,
+	},
+	-- Matches: a URL in angle brackets: <URL>
+	{
+		regex = "<(\\w+://\\S+)>",
+		format = "$1",
+		highlight = 1,
+	},
+	-- Then handle URLs not wrapped in brackets
+	{
+		-- Before
+		--regex = '\\b\\w+://\\S+[)/a-zA-Z0-9-]+',
+		--format = '$0',
+		-- After
+		regex = "[^(]\\b(\\w+://\\S+[)/a-zA-Z0-9-]+)",
+		format = "$1",
+		highlight = 1,
+	},
+	-- implicit mailto link
+	{
+		regex = "\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b",
+		format = "mailto:$0",
+	},
+}
+
 -- scroll
 config.scrollback_lines = 5000
 config.enable_scroll_bar = false
