@@ -48,9 +48,9 @@ if type nvim >/dev/null 2>&1; then
 fi
 alias hg='history | grep'
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts" -c'
-alias cp="cp -i" # confirm before overwriting something
+alias cp="cp -i"                  # confirm before overwriting something
 alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
-alias mv='mv -i' # confirm before overwriting something
+alias mv='mv -i'                  # confirm before overwriting something
 
 # Copy / paste
 alias pbcopy='xclip -selection clipboard'
@@ -102,10 +102,10 @@ alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | gr
 alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # ls
-alias l='eza -lh  --icons=auto' # long list
-alias ls='eza -1   --icons=auto' # short list
+alias l='eza -lh  --icons=auto'                                        # long list
+alias ls='eza -1   --icons=auto'                                       # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
+alias ld='eza -lhD --icons=auto'                                       # long list dirs
 alias lt='eza --icons=auto --tree'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
@@ -193,7 +193,6 @@ alias flush-redis="redis-cli FLUSHALL"
 
 # Postgres
 alias start-postgres="docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:alpine"
-
 
 #docker
 alias pg-docker-start="docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"
@@ -332,6 +331,12 @@ zsh-fix-history() {
 	fc -R .zsh_history
 }
 
+if [ "$TERM" = "wezterm" ]; then
+	alias fastfetch='fastfetch --logo-type iterm --logo-height 18 --logo-width 34'
+else
+	alias fastfetch='fastfetch'
+fi
+
 function calcram() {
 	local sum
 	sum=0
@@ -421,7 +426,6 @@ function reinstall-nvim() {
 }
 
 # Query http://cheat.sh for help with a command
-cheat (){
-        curl cheat.sh/$1
+cheat() {
+	curl cheat.sh/$1
 }
-
