@@ -333,8 +333,6 @@ zsh-fix-history() {
 
 if [ "$TERM" = "wezterm" ]; then
 	alias fastfetch='fastfetch --logo-type iterm --logo-height 18 --logo-width 34'
-else
-	alias fastfetch='fastfetch'
 fi
 
 function calcram() {
