@@ -34,6 +34,12 @@ To use chezmoi:
 ```
 chezmoi init --apply rubiin
 ```
+Workflow:
+1. browser
+2. terminal
+3. code
+4. utility (postman/db)
+5. multimedia (vlc,mpv,dolphin)
 
 
 Might want this https://www.cyberciti.biz/open-source/command-line-hacks/adding-spice-to-your-sudo-session-with-a-lecture-file-on-linux-or-unix/
