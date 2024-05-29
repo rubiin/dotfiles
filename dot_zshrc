@@ -83,6 +83,7 @@ plugins=(evalcache autoupdate zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 # No bell: Shut up Zsh
 unsetopt beep
+setopt HIST_IGNORE_SPACE  
 
 # all alias source should be done below
 source "$HOME/.bash_aliases"
