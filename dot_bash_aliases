@@ -7,6 +7,7 @@ alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune
 alias code="code-insiders"
 alias crap="fortune" # This will keep you sane when you're about to smash the keyboard again.
 alias cz="chezmoi"
+alias curl='curl --progress-bar'
 alias hyde="Hyde"
 alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
@@ -19,6 +20,7 @@ alias grep='grep --color=auto'
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias myzsh='source ~/.zshrc'
+alias make='make --silent --warn-undefined-variables'
 alias nord="nordvpn"
 alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
@@ -34,13 +36,13 @@ alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/nvim && g ssa && git pull & g sa & cd'
 alias uuid="uuidgen -r | xclip -selection clipboard"
-
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
 alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
+alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
 alias yolo='git commit --allow-empty-message -m "" && git push origin master'
 # prefer $EDITOR over vim when present
 if type nvim >/dev/null 2>&1; then
@@ -280,13 +282,7 @@ git-fix-repo() {
 	git fetch --all --prune
 }
 
-power-save() {
-	if [[ $1 == "on" ]]; then
-		Hyde power save -a -ba -b -o
-	else
-		Hyde power reset
-	fi
-}
+
 
 sssh() {
 	# try to connect every 0.5 secs (modulo timeouts)
