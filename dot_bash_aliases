@@ -51,7 +51,7 @@ fi
 alias hg='history | grep'
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts" -c'
 alias cp="cp -i"                  # confirm before overwriting something
-alias grep='grep --color=auto -i' #enables case-insensitive text searching with colorized output.
+alias grep='grep --color=auto'    #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'                  # confirm before overwriting something
 
 # Copy / paste
