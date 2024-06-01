@@ -385,3 +385,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[column]
+	ui = auto
+[maintenance]
+	repo = /home/rubin/ultimate-nest
+	repo = /home/rubin/.config/nvim
+	repo = /home/rubin/.local/share/chezmoi
