@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# this is a modified version of chrisgeiger's script
+# this is a modified version of chrisgeiger's script without any dependencies and works on linux
 
 
 export GIT_OPTIONAL_LOCKS=0    # prevent unnecessary lock files
@@ -15,7 +15,9 @@ fi
 
 files_changed="$(git status --porcelain | wc -l | tr -d ' ')"
 device_name=$(uname -n)
-commit_msg="$device_name ($files_changed)"
+device_type=$(hostnamectl | grep -E "Chassis" | awk -F ":" '{print $2}')
+full_device_info="$device_name $device_type"
+commit_msg="$full_device_info ($files_changed)"
 
 if [[ $files_changed -gt 0 ]]; then
 	git add --all &&
