@@ -131,6 +131,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
 #### yeoman ####
 node_modules/
 bower_components/
@@ -138,6 +139,7 @@ bower_components/
 
 # build/
 dist/
+
 #### elixir ####
 /_build
 /cover
@@ -150,3 +152,18 @@ erl_crash.dump
 WakaTime.sublime-settings
 .vscode/tags
 .pyre
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# safety net to prevent sensitive data being accidentally moved
+*.kdb
+*.kdbx
+*.pfx
+*.key
+.*_history
+
+# conform.nvim
+.conform.*
