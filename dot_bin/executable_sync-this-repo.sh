@@ -4,9 +4,9 @@
 
 
 export GIT_OPTIONAL_LOCKS=0    # prevent unnecessary lock files
-cd "$(dirname "$1")" || exit 1 # go to location of this script, i.e. going into the git repo
-
-if [[ -d .git ]]; then
+cd "$1" || exit 1 # go to location of this script, i.e. going into the git repo
+pwd
+if [[ ! -d .git ]]; then
 	echo "Not a git repository"
 	exit 1
 fi
