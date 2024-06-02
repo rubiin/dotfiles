@@ -1,7 +1,6 @@
 [user]
 	email = roobin.bhandari@gmail.com
 	name = Rubin Bhandari
-	signingkey = 593CB7DB2B9D1C45
 
 [includeIf "gitdir/i:**/cit-be/"]
 	path = .gitconfig-takeo
@@ -28,6 +27,37 @@
 	untrackedCache = true
 	# Don't consider trailing space change as a cause for merge conflicts
  	whitespace=trailing-space,cr-at-eol,tabwidth=4
+
+[sequence]
+	editor = interactive-rebase-tool
+
+[status]
+	hints = false
+
+[branch]
+	sort = -committerdate ; sort by recency, not by name
+
+[tag]
+	sort = -committerdate
+
+[fetch]
+	prune = true ; automatically delete remote tracking branches that have been deleted
+
+[push]
+	autoSetupRemote = true ; create remote branch, if it doesn't exist
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[column]
+	ui = auto
+
+[maintenance]
+	repo = /home/rubin/ultimate-nest
+	repo = /home/rubin/.config/nvim
+	repo = /home/rubin/.local/share/chezmoi
 
 [interactive]
 	diffFilter = delta --color-only
@@ -66,9 +96,6 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
-
-[branch]
-	sort = -committerdate
 
 [delta]
 	features = decorations
@@ -365,23 +392,4 @@
 	# git git ...
 	git = "!git"
 
-[sequence]
-	editor = interactive-rebase-tool
 
-[status]
-	hints = false
-
-[fetch]
-	prune = true
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[column]
-	ui = auto
-[maintenance]
-	repo = /home/rubin/ultimate-nest
-	repo = /home/rubin/.config/nvim
-	repo = /home/rubin/.local/share/chezmoi
