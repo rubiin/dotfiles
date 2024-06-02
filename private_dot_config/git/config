@@ -371,12 +371,6 @@
 [status]
 	hints = false
 
-[gpg]
-	program = /usr/bin/gpg2
-
-[commit]
-        gpgsign = false
-
 [fetch]
 	prune = true
 
