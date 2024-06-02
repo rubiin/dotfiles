@@ -91,6 +91,7 @@ alias cz-add-all="cz add \
   .config/mpv \
   .config/persepolis_download_manager/persepolis.conf
 "
+alias update-submodules=""git submodule update --remote
 
 # Edit config files
 alias envim="$EDITOR ~/.config/nvim"
