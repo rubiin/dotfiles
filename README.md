@@ -4,43 +4,67 @@ Magical objects that make certain computers extremely use-able for me.
 
 <img src="https://i.imgur.com/dWiAjUx.gif" height=250/>
 
+
+<br>
+
+<br>
+
+<table align="right">
+  <tr>
+    <td align="center">
+      <sup>
+            <samp>
+                  If you like this setup, please drop  a star.<br>
+                  I really appreciate it.
+                  Thanks!
+            </samp>
+      </sup>
+    </td>
+  </tr>
+
+
+
+</table>
+
+### <samp>Setup Info</samp>
+| task              | name                   |
+| ----------------- | ---------------------- |
+| wm                | [hypr](https://github.com/hyprwm/Hypr)                                      |
+| terminal          | [wezterm](https://github.com/wez/wezterm)                                      |
+| shell             | [zsh](https://github.com/zsh-users/zsh)                                      |
+| bar               | [waybarw](https://github.com/Alexays/Waybar)                                      |
+| launcher          | [rofi](https://github.com/davatorium/rofi)                                      |
+| music player      | [mpd](https://www.musicpd.org/) & [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)          |
+| compositor        | [hyprland](https://github.com/hyprwm/Hyprland)                                  | 
+
+<br>
+
+
+<details close>
+    <summary><samp><b>more info</b></samp></summary>
+
+
+<br>
+
+* **Fonts?**
+    * as for fonts, the setup uses 4 fonts in total
+        - *MonoLisa* - main ui font
+        - *Nerd Icons* - for icons
+        - *𝘔𝘢𝘱𝘭𝘦𝘔𝘰𝘯𝘰 - alternate font
+        - *𝘑𝘦𝘵𝘉𝘳𝘢𝘪𝘯𝘴𝘔𝘰𝘯𝘰 𝘕𝘦𝘳𝘥 𝘍𝘰𝘯𝘵* - waybar,rofi
+<br>
+
+</details>
+
+
 ## Demo
 https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
-
-
-## Screenshots
-
-![image](https://github.com/rubiin/dotfiles/assets/8222059/508f0694-06bf-4ee6-bc0a-c83a6136b5b9)
-
-![image](https://github.com/rubiin/dotfiles/assets/8222059/257e7add-4145-48a0-8199-3622a20763d2)
-
-
-# Things I use 
-* Tmux (https://github.com/gpakosz/.tmux)
-* Neovim with lazyvim(https://www.lazyvim.org)
-* Wezterm/Kitty
-* Zsh with Ohmyzsh (https://ohmyz.sh/#install)
-* Hyprland compositor
-* Hypr tiling window manager
-* Waybar
-* Rofi
-
 
 # Get started
  ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_install-all.sh)"
-```
-To use chezmoi:
-```
 chezmoi init --apply rubiin
 ```
-Workflow:
-1. browser
-2. terminal
-3. code
-4. utility (postman/db)
-5. multimedia (vlc,mpv,dolphin)
-
 
 Might want this https://www.cyberciti.biz/open-source/command-line-hacks/adding-spice-to-your-sudo-session-with-a-lecture-file-on-linux-or-unix/
 

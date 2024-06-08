@@ -1,3 +1,0 @@
-[submodule "private_dot_config/nvim"]
-	path = private_dot_config/nvim
-	url = https://github.com/rubiin/init.lua
