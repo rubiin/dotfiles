@@ -1,6 +1,0 @@
-node        20.14.0       # comments are allowed
-ruby        3.3.0           # can be fuzzy version
-golang      1.22.3  # uses the latest 1.19.x version—needed in case "1.19" is an exact match
-rust        1.78.0 # exact version
-neovim      0.10.0 # exact version
-
