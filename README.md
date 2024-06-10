@@ -26,16 +26,32 @@ Magical objects that make certain computers extremely use-able for me.
 
 </table>
 
-### <samp>Setup Info</samp>
-| task              | name                   |
-| ----------------- | ---------------------- |
-| wm                | [hypr](https://github.com/hyprwm/Hypr)                                      |
-| terminal          | [wezterm](https://github.com/wez/wezterm)                                      |
-| shell             | [zsh](https://github.com/zsh-users/zsh)                                      |
-| bar               | [waybarw](https://github.com/Alexays/Waybar)                                      |
-| launcher          | [rofi](https://github.com/davatorium/rofi)                                      |
-| music player      | [mpd](https://www.musicpd.org/) & [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)          |
-| compositor        | [hyprland](https://github.com/hyprwm/Hyprland)                                  | 
+Here are some details about my setup:
+
+- **Window Manager**               : [hypr](https://github.com/hyprwm/Hypr)  
+- **Shell**                        : [zsh](https://github.com/zsh-users/zsh)
+  - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)                       : Minimalistic, powerful and extremely customizable Zsh prompt
+  - [ohmyzsh](https://github.com/zplug/zplug)                                                        : A next-generation plugin manager for zsh
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)                : Fish shell like syntax highlighting for Zsh.
+  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                        : Fish-like autosuggestions for zsh
+- **Terminal**                     : [kitty](https://github.com/kovidgoyal/kitty)
+  - [lazygit](https://github.com/jonas/tig)         : Text-mode interface for git
+  - [bat](https://github.com/sharkdp/bat)           : A cat(1) clone with wings
+  - [fzf](https://github.com/junegunn/fzf)          : A command-line fuzzy finder
+  - [eza](https://github.com/ogham/exa)             : A modern replacement for ‘ls’
+  - [btop](https://github.com/aristocratos/btop)    : A monitor of resources
+- **Bar**                          : [waybar](https://github.com/polybar/polybar) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
+  - Gruvbox theme (dark)
+  - Catppucin theme(dark)
+  - Nord theme (dark)
+  - TokyoNight theme (dark)
+- **Compositor**                   : [hyprland](https://github.com/hyprwm/Hyprland)   
+- **Notify Daemon**                : [dunst](https://wiki.archlinux.org/index.php/Dunst)
+- **Application Launcher**         : [rofi](https://github.com/davatorium/rofi)
+- **Music Player**                 : [mpd](https://www.musicpd.org/) & [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)   
+- **Editor**                       : [neovim](https://neovim.io/) -- check my configuration [here](https://github.com/rubiin/init.lua)
+- **File Manager**                 : [ranger](https://github.com/ranger/ranger) | [thunar](https://docs.xfce.org/xfce/thunar/start)
+- **CLI System Information**       : [fastfetch](https://github.com/dylanaraps/neofetch)
 
 <br>
 
