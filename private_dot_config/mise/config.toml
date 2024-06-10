@@ -26,7 +26,8 @@ experimental = false # enable experimental features such as shims
 [tools]
 usage = "latest"
 nodejs = "20.14.0"
-ruby = "3.3.0"
+ruby = "3.3.2"
 golang = "1.22.3"
 rust = "1.78.0"
 neovim = "0.10.0"
+go = "1.22.4"
