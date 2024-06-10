@@ -15,15 +15,6 @@ ask_yes_no_default() {
     esac
 }
 
-declare -A versions=(
-  ["nodejs"]="20.10.0"
-  ["golang"]="1.21.5"
-  ["rust"]="1.74.1"
-  ["neovim"]="stable"
-  ["ruby"]="3.2.2"
-)
-
-
 export TMPFILE="$(mktemp)"; \
     sudo true; \
     rate-mirrors --save=$TMPFILE arch --max-delay=43200 \
@@ -84,22 +75,12 @@ wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritt
 echo "Setting wezterm"
 yay -S wezterm-terminfo-git
 
-ask_yes_no_default "Do you want to add plugins for asdf ?" 0 && sudo rm -rf ~/.asdf && \
-    git clone https://github.com/asdf-vm/asdf.git ~/.config/.asdf --branch v0.14.0 && \
-    source ~/.zshrc && \
-    asdf update && \
-for plugin in "${!versions[@]}"; do
-  asdf plugin add "$plugin"
-  asdf install "$plugin" "${versions[$plugin]}"
-  asdf global "$plugin" "${versions[$plugin]}"
-done
-
 sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
-ask_yes_no_default "Do you want to install LunarVim?" 0 && \
-    LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh) && \
-    yay -Rns kate okular
+echo "Installing mise"
+curl https://mise.run | sh && mise install
+
 ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
 
