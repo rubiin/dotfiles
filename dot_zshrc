@@ -87,7 +87,6 @@ setopt HIST_IGNORE_SPACE
 
 # all alias source should be done below
 source "$HOME/.bash_aliases"
-source "$XDG_CONFIG_HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -151,9 +150,9 @@ if [ "${+functions[compdef]}" -ne 0 ]; then
     compdef _zoxide_zsh_tab_completion z 2> /dev/null
 fi
 
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
+eval "$(~/.local/bin/mise activate zsh)"
