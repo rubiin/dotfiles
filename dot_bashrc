@@ -23,9 +23,9 @@ export LC_ALL="en_US.UTF-8"
 
 
 source $HOME/.bash_aliases
-source $HOME/.asdf/asdf.sh
 eval $(thefuck --alias)
 eval "$(zoxide init bash)"
 
 
 [ -f ~/.inshellisense/key-bindings.bash ] && source ~/.inshellisense/key-bindings.bash
+eval "$(~/.local/bin/mise activate bash)"
