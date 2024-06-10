@@ -81,13 +81,11 @@ alias cz-add-all="cz add \
   .config/kitty \
   .config/wezterm \
   .config/.curlrc \
-  .config/.asdfrc \
+  .config/mise/ \
   .config/mimeapps.list \
   .config/lazygit \
   .config/neofetch \
   .config/dolphinrc \
-  .config/lvim \
-  .config/Mousepad/accels.scm \
   .config/mpv \
   .config/persepolis_download_manager/persepolis.conf
 "
