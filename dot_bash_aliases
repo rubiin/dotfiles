@@ -34,7 +34,7 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
 alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='yay -Syyu --noconfirm && taze -gwi && asdf update && asdf plugin update --all && omz update && code_update_extensions && cd ~/.config/nvim && g ssa && git pull & g sa & cd'
+alias update-all='yay -Syyu --noconfirm && taze -gwi && omz update && code_update_extensions && cd ~/.config/nvim && g ssa && git pull & g sa & cd'
 alias uuid="uuidgen -r | xclip -selection clipboard"
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
@@ -170,15 +170,6 @@ alias pih="pnpm i --shamefully-hoist=true"
 alias b="bun"
 alias bi="bun install"
 alias br="bun run"
-
-## asdf aliases
-alias asdf_update="asdf plugin update --all"
-alias asdf_plugins="asdf plugin list"
-alias asdf_add_plugin="asdf plugin add"
-alias asdf_remove_plugin="asdf plugin remove"
-alias asdf_install_version="asdf install"
-alias asdf_list_version="asdf list"
-alias asdf_global_version_set="asdf global"
 
 alias yayskip='yay -S --mflags --skipinteg'
 
