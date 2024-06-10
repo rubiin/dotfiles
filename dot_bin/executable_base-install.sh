@@ -2,8 +2,8 @@
 
 # Function to ask yes/no question with a default value
 ask_yes_no_default() {
-    local prompt="$1 (Y/n)"
-    local default="${2:-}"
+    prompt="$1 (Y/n)"
+    default="${2:-}"
 
     read -p "$prompt: " -n 1 answer
     echo
@@ -43,8 +43,7 @@ ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi c
 
 echo "Installing hyperdots"
 git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
-cd ~/Hyprdots/Scripts
-./install.sh
+sh ~Hyprdots/scripts/install.sh
 
 ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji fontforge gnu-free-fonts ttf-joypixels ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
@@ -60,7 +59,7 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
     sudo groupadd docker && sudo usermod -aG docker $USER && \
     sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop ktouch kooha mpd ncmpcpp scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep ranger eog age obsidian obs-studio lazygit pokemon-colorscripts-git lazydocker-bin  just github-cli postman-bin httpie  mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck taskwarrior-tui git-delta  grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin mousepad gparted vlc ktorrent persepolis
+ask_yes_no_default "Do you want to install other packages?" 0 && yay -S fortune-mod topgrade btop ktouch kooha scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep ranger eog age obsidian obs-studio lazygit pokemon-colorscripts-git lazydocker-bin  just github-cli postman-bin httpie  mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck taskwarrior-tui git-delta  grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin mousepad gparted vlc ktorrent persepolis
 
 ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 && \
     sudo pacman -S zsh && \
@@ -73,9 +72,6 @@ ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "Installing bat themes"
-mkdir -p "$(bat --config-dir)/themes"
-wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme
-wget -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
 bat cache --build
 
 echo "Setting alacritty"
