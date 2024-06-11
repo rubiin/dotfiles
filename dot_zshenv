@@ -32,7 +32,6 @@ export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
 
 # custom executable path
 export PATH="$HOME/.bin:$PATH"
-export TMUX_TPM_PATH="$HOME/.tmux/plugins/tpm"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
