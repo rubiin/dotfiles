@@ -16,7 +16,7 @@ pre_sudo = true
 
 # Disable specific steps - same options as the command line flag
 # disable = ["system", "emacs"]
-disable = ["vim","tmux","node","pnpm"]
+disable = ["vim","node","pnpm"]
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
 
