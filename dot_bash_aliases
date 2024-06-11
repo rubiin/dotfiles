@@ -39,7 +39,6 @@ alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
-alias scripts="cat package.json | jq --color-output '.scripts'"
 alias ytd="yt-dlp"
 alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
 alias yolo='git commit --allow-empty-message -m "" && git push origin master'
@@ -146,7 +145,6 @@ alias nioff="npm install --offline"
 alias nrm="npm run typeorm:run"
 
 ## yarn aliases
-
 alias y="yarn"
 alias yi="yarn install"
 alias ya="yarn add"
@@ -203,7 +201,7 @@ alias di="docker images"
 # Get container IP
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
-# Run deamonized container, e.g., $dkd base /bin/echo hello
+# Run daemonized container, e.g., $dkd base /bin/echo hello
 alias dkd="docker run -d -P"
 
 # Run interactive container, e.g., $dki base /bin/bash
