@@ -84,4 +84,7 @@ ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 &
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
+echo "creating XDG directories"
+xdg-user-dirs-update
+
 echo "Completed setup, run python and cargo installations manually"
