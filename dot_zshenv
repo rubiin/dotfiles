@@ -12,6 +12,10 @@ export ZSH="$HOME/.oh-my-zsh"
 export BROWSER="vivaldi"
 export EDITOR="nvim"
 export VISUAL='nvim'
+export READER="zathura"
+export CODEEDITOR="vscodium"
+export PAGER="less"
+export WM="hyprland"
 
 # npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
