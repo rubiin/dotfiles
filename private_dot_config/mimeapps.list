@@ -1,4 +1,5 @@
 [Added Associations]
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;vivaldi-stable.desktop;firefoxdeveloperedition.desktop;firefox.desktop;
 application/vnd.ms-publisher=org.xfce.mousepad.desktop;
 application/x-shellscript=org.xfce.mousepad.desktop;okularApplication_txt.desktop;nvim.desktop;vim.desktop;visual-studio-code-insiders.desktop;
 image/jpeg=org.gnome.eog.desktop;swappy.desktop;vivaldi-stable.desktop;org.kde.gwenview.desktop;
@@ -26,6 +27,7 @@ x-scheme-handler/postman=Postman.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 
 [Default Applications]
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
 application/vnd.ms-publisher=org.xfce.mousepad.desktop;
 application/x-shellscript=org.xfce.mousepad.desktop;
 image/jpeg=org.gnome.eog.desktop;
