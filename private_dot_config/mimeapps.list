@@ -1,14 +1,14 @@
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;vivaldi-stable.desktop;firefoxdeveloperedition.desktop;firefox.desktop;
-application/vnd.ms-publisher=org.xfce.mousepad.desktop;
-application/x-shellscript=org.xfce.mousepad.desktop;okularApplication_txt.desktop;nvim.desktop;vim.desktop;visual-studio-code-insiders.desktop;
+application/vnd.ms-publisher=org.lite_xl.lite_xl.desktop;
+application/x-shellscript=org.lite_xl.lite_xl.desktop;okularApplication_txt.desktop;nvim.desktop;vim.desktop;visual-studio-code-insiders.desktop;
 image/jpeg=org.gnome.eog.desktop;swappy.desktop;vivaldi-stable.desktop;org.kde.gwenview.desktop;
 inode/directory=org.kde.dolphin.desktop;
-text/css=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
-text/csv=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
-text/javascript=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
-text/markdown=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
-text/plain=org.xfce.mousepad.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
+text/css=org.lite_xl.lite_xl.desktop;visual-studio-code-insiders.desktop;vim.desktop;mousepad.desktop;
+text/csv=org.lite_xl.lite_xl.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
+text/javascript=org.lite_xl.lite_xl.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
+text/markdown=org.lite_xl.lite_xl.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
+text/plain=org.lite_xl.lite_xl.desktop;nvim.desktop;visual-studio-code-insiders.desktop;vim.desktop;
 video/mp2t=mpv.desktop;vlc.desktop;org.kde.haruna.desktop;
 video/mp4=vlc.desktop;mpv.desktop;
 video/mpeg=vlc.desktop;mpv.desktop;
@@ -28,16 +28,16 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
-application/vnd.ms-publisher=org.xfce.mousepad.desktop;
-application/x-shellscript=org.xfce.mousepad.desktop;
+application/vnd.ms-publisher=org.lite_xl.lite_xl.desktop;
+application/x-shellscript=org.lite_xl.lite_xl.desktop;
 image/jpeg=org.gnome.eog.desktop;
 inode/directory=org.kde.dolphin.desktop
-text/css=org.xfce.mousepad.desktop;
-text/csv=org.xfce.mousepad.desktop;
+text/css=org.lite_xl.lite_xl.desktop;
+text/csv=org.lite_xl.lite_xl.desktop;
 text/html=vivaldi-stable.desktop
-text/javascript=org.xfce.mousepad.desktop;
-text/markdown=org.xfce.mousepad.desktop;
-text/plain=org.xfce.mousepad.desktop;
+text/javascript=org.lite_xl.lite_xl.desktop;
+text/markdown=org.lite_xl.lite_xl.desktop;
+text/plain=org.lite_xl.lite_xl.desktop;
 video/mp2t=mpv.desktop;
 video/mp4=vlc.desktop;
 video/mpeg=vlc.desktop;
