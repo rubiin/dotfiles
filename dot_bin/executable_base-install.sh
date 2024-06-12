@@ -51,7 +51,7 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
     sudo groupadd docker && sudo usermod -aG docker $USER && \
     sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop ktouch kooha mpd ncmpcpp scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep ranger eog age obsidian obs-studio lazygit pokemon-colorscripts-git lazydocker-bin  just github-cli postman-bin httpie  mpv ark zathura zathura-pdf-poppler jetbrains-toolbox xdg-ninja tmux eza thefuck taskwarrior-tui git-delta  grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin lite-xl gparted vlc ktorrent persepolis
+ask_yes_no_default "Do you want to install other packages?" 0 && yay -S btop ktouch kooha mpd ncmpcpp scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep ranger eog age obsidian obs-studio lazygit pokemon-colorscripts-git lazydocker-bin  just github-cli postman-bin httpie  mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck taskwarrior-tui git-delta  grex fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin lite-xl gparted vlc ktorrent persepolis
 
 ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 && \
     sudo pacman -S zsh && \
@@ -70,6 +70,11 @@ bat cache --build
 
 echo "Setting alacritty"
 wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info &&  sudo tic -xe alacritty,alacritty-direct alacritty.info && rm alacritty.info
+
+echo "Setting ranger"
+ranger --copy-config=all
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
 
 echo "Setting wezterm"
 yay -S wezterm-terminfo-git
