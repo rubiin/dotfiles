@@ -50,7 +50,7 @@ Here are some details about my setup:
 - **Application Launcher**         : [rofi](https://github.com/davatorium/rofi)
 - **Music Player**                 : [mpd](https://www.musicpd.org/) & [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)   
 - **Editor**                       : [neovim](https://neovim.io/) -- check my configuration [here](https://github.com/rubiin/init.lua)
-- **File Manager**                 : [ranger](https://github.com/ranger/ranger) | [thunar](https://docs.xfce.org/xfce/thunar/start)
+- **File Manager**                 : [ranger](https://github.com/ranger/ranger) | [dolphin](https://apps.kde.org/dolphin/)
 - **CLI System Information**       : [fastfetch](https://github.com/dylanaraps/neofetch)
 
 <br>
