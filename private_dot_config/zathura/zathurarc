@@ -31,11 +31,13 @@ set default-fg                  "#001512"
 set recolor-lightcolor          "#282828"
 set recolor-darkcolor           "#ebdbb2"
 
+
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
-map <C-u> scroll half-up
-map <C-d> scroll half-down
+
+# zathura supports vim bindings by default
+# list of keybindings https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/
 map D toggle_page_mode
 map r reload
 map R rotate
