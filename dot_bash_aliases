@@ -12,11 +12,11 @@ alias hyde="Hyde"
 alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
 alias du="du -h -c" # calculate disk usage for a folder
-alias docker-compose="dc"
+alias dc="docker-com"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
-alias lxl="lite-xl"
+alias lx="lite-xl"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
 alias lzg="lazygit"
@@ -52,7 +52,7 @@ alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts" -c'
 alias cp="cp -i"                  # confirm before overwriting something
 alias grep='grep --color=auto'    #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'                  # confirm before overwriting something
-alias zth= "zathura"
+
 # Copy / paste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
