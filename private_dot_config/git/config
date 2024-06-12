@@ -347,6 +347,15 @@
 	whoami = "!echo $(git config --get user.name) '<'$(git config --get user.email)'>'"
 	watch = "!f() { watch -ctn 2 git \"${@:-l}\"; }; f"
 
+	# standup
+	standup = "!f() { \
+        AUTHOR=\"${AUTHOR:-$(git config user.name)}\"; \
+        since=\"yesterday\"; \
+        if [[ $(date +%u) == 1 ]]; then since=\"2 days ago\"; fi; \
+        git log --all --since \"$since\" --oneline --author=\"$AUTHOR\"; \
+	}; f"
+
+
 	# initialize repository in current directory
 	#    git this [<git-init-args>...]
 	this = "!f() { git init \"$@\" && git commit --message='Initialize' --allow-empty; }; f"
