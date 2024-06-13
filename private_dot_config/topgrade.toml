@@ -16,7 +16,7 @@ pre_sudo = true
 
 # Disable specific steps - same options as the command line flag
 # disable = ["system", "emacs"]
-disable = ["vim","node","pnpm"]
+disable = ["vim","node","yarn","pnpm"]
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
 
@@ -87,7 +87,7 @@ cleanup = true
 
 # Custom commands
 [commands]
-# "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+"Npm Global" = "taze -gwi"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
 
@@ -178,6 +178,3 @@ repos = [
 # Use sudo for updating the system-wide installation
 # use_sudo = true
 
-# containers = ["archlinux-latest"]
-[containers]
-# ignored_containers = ["ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest"]
