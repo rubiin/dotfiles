@@ -1,0 +1,4 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "https://github.com/rubiin/init.lua.git"
+    refreshPeriod = "168h"
