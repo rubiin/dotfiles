@@ -12,4 +12,4 @@ store-dir=${XDG_DATA_HOME}/pnpm-store
 cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 tmp=${XDG_RUNTIME_DIR}/npm
-
+prefix=${XDG_DATA_HOME}/npm
