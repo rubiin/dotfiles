@@ -8,7 +8,6 @@ alias code="code-insiders"
 alias crap="fortune" # This will keep you sane when you're about to smash the keyboard again.
 alias cz="chezmoi"
 alias curl='curl --progress-bar'
-alias hyde="Hyde"
 alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
 alias du="du -h -c" # calculate disk usage for a folder
@@ -264,28 +263,12 @@ git-redate() {
 	GIT_COMMITTER_DATE="$1" git commit --amend --no-edit --date "$1"
 }
 
-git-fix-repo() {
-	find .git/objects -type f -empty -delete
-	git prune
-	git fetch --all --prune
-}
-
-
-
 sssh() {
 	# try to connect every 0.5 secs (modulo timeouts)
 	while true; do
 		command ssh "$@"
 		[ $? -ne 255 ] && break || sleep 0.5
 	done
-}
-
-git-branch-rename() {
-	git checkout $1
-	git branch -m $2
-	git push origin -u $2
-	git push origin --delete $1
-
 }
 
 code_update_extensions() {
