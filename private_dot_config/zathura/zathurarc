@@ -36,6 +36,12 @@ set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
 
+# Enable main clipboard (can paste with `Ctrl-v`)
+set selection-clipboard clipboard
+
+# Show status line and vertical scroll bar
+set guioptions sv
+
 # zathura supports vim bindings by default
 # list of keybindings https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/
 map D toggle_page_mode
@@ -45,4 +51,4 @@ map K zoom in
 map J zoom out
 map i recolor
 set recolor                     true
-map p print
+map p prinit
