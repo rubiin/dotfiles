@@ -170,6 +170,7 @@
 	# checkout
         com = "!f() { git checkout master 2>/dev/null || git checkout main; }; f"
 	cod = checkout dev
+	co = checkout
 	cob = checkout -b
 
 	# cherry-pick
