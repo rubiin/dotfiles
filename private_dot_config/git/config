@@ -192,19 +192,21 @@
         # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
 	# and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
         fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
+
 	fid = flow init -d
-   	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
+   	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1; else echo 'Invalid name'; exit 1; fi; }; f"
   	fff = !git flow feature finish -F $(git fcb)
    	ffp = !git flow feature publish $(git fcb)
-        fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1 ${2:-dev}; else echo 'Invalid name'; exit 1; fi; }; f"
+
+        fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
         fbf = !git flow bugfix finish -F $(git fcb)
         fbp = !git flow bugfix publish $(git fcb)
 
-        fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
-        fhf = "!git fetch --tags; git pull $(git config --get gitflow.origin || echo origin) master; git flow hotfix finish -F $(git fcb)"
+        fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
+        fhf = !git flow hotfix finish -F $(git fcb)
         fhp = !git flow hotfix publish $(git fcb)
 
-        frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1 ${2:-master}; else echo 'Invalid name'; exit 1; fi; }; f"
+        frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1; else echo 'Invalid name'; exit 1; fi; }; f"
         frf = !git flow release finish -F $(git fcb)
         frp = !git flow release publish $(git fcb)
  
@@ -347,18 +349,7 @@
 	whoami = "!echo $(git config --get user.name) '<'$(git config --get user.email)'>'"
 	watch = "!f() { watch -ctn 2 git \"${@:-l}\"; }; f"
 
-	# standup
-	standup = "!f() { \
-        AUTHOR=\"${AUTHOR:-$(git config user.name)}\"; \
-        since=\"yesterday\"; \
-        if [[ $(date +%u) == 1 ]]; then since=\"2 days ago\"; fi; \
-        git log --all --since \"$since\" --oneline --author=\"$AUTHOR\"; \
-	}; f"
 
-
-	# initialize repository in current directory
-	#    git this [<git-init-args>...]
-	this = "!f() { git init \"$@\" && git commit --message='Initialize' --allow-empty; }; f"
 
 	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
  	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
@@ -389,8 +380,6 @@
 	#    git wipe [<commit>]
 	wipe = "!f() { git add --all && git commit --quiet --message='WIPE-SAVEPOINT' && git reset ${1:-HEAD~} --hard && git clean -fd; }; f"
 
-	# hard reset and clean (unrecoverable)
-	nuke = "!git reset --hard HEAD && git clean -fd"
 
 	# generate tags file
 	ctags = "!$HOME/.config/git/hooks/ctags"
