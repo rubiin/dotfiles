@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-git branch | fzf -m | xargs git branch -d
+git branch | fzf -m | xargs git branch -D
