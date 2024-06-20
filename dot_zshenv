@@ -35,12 +35,12 @@ export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
 # zsh files 
-export ZDOTDIR="$HOME/.config/zsh"
-export HISTFILE="$XDG_CONFIG_HOME"/zsh
-export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME"/.zsh-evalcache
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export HISTFILE="$XDG_CONFIG_HOME/zsh/.zsh_history"
+export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
 
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 
 # npm config
