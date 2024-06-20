@@ -38,6 +38,7 @@ alias update-all='yay -Syyu --noconfirm'
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
+alias vim="nvim"
 alias yt="youtube-dl"
 alias ytd="yt-dlp"
 alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
