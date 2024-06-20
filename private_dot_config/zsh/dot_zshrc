@@ -93,7 +93,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # all alias source should be done below
-source "$HOME/.bash_aliases"
+source "$XDG_CONFIG_HOME/.bash_aliases"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
