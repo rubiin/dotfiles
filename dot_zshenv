@@ -28,6 +28,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export ZDOTDIR="$HOME/.config/zsh"
 export HISTFILE="$XDG_CONFIG_HOME"/zsh
+export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME"/.zsh-evalcache
 
 # npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
