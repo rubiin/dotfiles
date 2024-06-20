@@ -10,3 +10,5 @@
 **/persepolis_tmp/**/*
 **/libraries/widget/*
 **/yankring_history*.txt
+**/.bash_history
+**/.zsh_history
