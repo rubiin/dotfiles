@@ -286,15 +286,14 @@
 	s = status
 	si = status --ignored
 
-
         # show what I did today
         day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
         
         # git-extras
   	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
-    	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release.sh"
+    	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release"
    	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
-   	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened.sh"
+   	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened"
 
         # tag
 	t = tag
@@ -349,8 +348,6 @@
 	whoami = "!echo $(git config --get user.name) '<'$(git config --get user.email)'>'"
 	watch = "!f() { watch -ctn 2 git \"${@:-l}\"; }; f"
 
-
-
 	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
  	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
@@ -379,7 +376,6 @@
 	# hard reset with commit before (use reflog to recover)
 	#    git wipe [<commit>]
 	wipe = "!f() { git add --all && git commit --quiet --message='WIPE-SAVEPOINT' && git reset ${1:-HEAD~} --hard && git clean -fd; }; f"
-
 
 	# generate tags file
 	ctags = "!$HOME/.config/git/hooks/ctags"
