@@ -78,21 +78,16 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(evalcache autoupdate zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(evalcache zsh-autosuggestions zsh-syntax-highlighting)
 
 # No bell: Shut up Zsh
 unsetopt beep
-HISTDUP=erase
-setopt appendhistory
-setopt HIST_IGNORE_SPACE  
-setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 source $ZSH/oh-my-zsh.sh
-
 
 
 # all alias source should be done below
