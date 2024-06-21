@@ -9,7 +9,6 @@ export LANG="${LANG:-en_US.UTF-8}"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-
 # default apps
 export BROWSER="vivaldi"
 export EDITOR="nvim"
@@ -44,8 +43,6 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
-# npm config
-export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 # fzf defaults
 export FZF_DEFAULT_OPTS="  \
@@ -55,6 +52,7 @@ export FZF_DEFAULT_OPTS="  \
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
 
 # custom executable path
@@ -66,11 +64,9 @@ if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/bin" ]; then
-	PATH="$HOME/.cargo/bin:$PATH"
-fi
-
+# cargo
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
 
@@ -78,9 +74,12 @@ export LESS_TERMCAP_md="${yellow}"
 export MANPAGER='less -X'
 
 # Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768'
+
+# npm config
+export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 # pnpm
 export PNPM_HOME="/home/devina/.local/share/pnpm"
