@@ -10,7 +10,7 @@ sort_reverse   = false
 sort_dir_first = true
 linemode       = "size"
 show_hidden    = true
-show_symlink   = false
+show_symlink   = true
 
 [preview]
 tab_size        = 2
@@ -25,7 +25,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 open = [
-	{ run = 'opener "$@"', block = true, desc = "Open" },
+	{ run = 'xdg-open "$@"', block = true, desc = "Open" },
 ]
 
 [open]
