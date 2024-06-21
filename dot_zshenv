@@ -44,6 +44,11 @@ export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 
+# mise stuffs
+export MISE_GO_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-go-packages"
+export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
+
+
 # fzf defaults
 export FZF_DEFAULT_OPTS="  \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
