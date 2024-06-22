@@ -1,3 +1,118 @@
+.DS_Store
+# .Trash/
+# .ansible/
+# .anydesk/
+# .ash_history
+# .aws/*.pem
+# .aws/cli/
+# .awsls/
+# .azuredatastudio/
+# .azuredatastudio/
+.bash_history
+.bun/
+# .bundle/
+# .bytebase/
+# .cabal/packages/
+# .cache/
+# .clasprc.json
+# .config/broot/launcher/
+# .config/cheat/cheatsheets/
+# .config/chezmoi/
+# .config/coc/
+# .config/htop/
+# .dbg_history
+# .degit/
+# .docker/
+# .dotenv-linter-latest-version
+# .ebcache/
+# .envrc
+# .fly/
+# .gem/ruby/
+# .gem/specs/
+# .gitignore
+.gnupg/*.gpg
+.gnupg/*.kbx
+# .gnupg_pre_2.1/
+# .gradle/
+# .graphite_user_config
+# .hex/
+# .irb_history
+# .kerl/
+# .kindle/
+# .lemminx/
+# .lesshst
+# .lima/
+.local/include
+.local/lib/
+.local/pipx/
+.local/share/
+.local/state/
+# .m2/
+# .macports/
+# .mcfly/
+# .mix/
+# .murex_history
+# .murex_modules/
+# .murex_preload
+# .murex_profile
+# .node_repl_history
+# .npm/
+# .oracle_jre_usage/
+# .pnpm-state.json
+# .pnpm-state/
+# .pnpm-store/
+# .prettierd
+# .proxyman-data/
+# .proxyman/
+# .pry.d/
+# .psql_history
+# .pulumi/
+# .python_history
+# .rdbg_history
+# .redhat/
+# .rediscli_history
+# .rubies/
+# .rustup/
+# .sdkman/
+# .solargraph/
+# .sqlite_history
+# .terraform.d/
+# .tig_history
+# .tlaplus/
+# .ts_node_repl_history
+.vim/session
+# .viminfo
+# .visidata/
+# .vscode/
+.wget-hsts
+.yarn/
+.yarnrc
+.zsh_history
+.zsh_sessions/
+# Applications/
+# ChezMoi.code-workspace
+# Desktop/
+# Documents/
+# Downloads/
+# Dropbox/
+# LICENCE.md
+# Movies/
+# Music/
+# Pictures/
+# Public/
+# README.md
+# Secrets/
+# Setup/
+# example-nvim.init.lua
+# fishfile.maybe
+# Justfile
+# justfile
+
+.gnupg
+.gnupg/**
+.inputrc
+.oh-my-zsh
+.oh-my-zsh/**
 **/autoload/
 **/autoload/**/*
 **/temp/
