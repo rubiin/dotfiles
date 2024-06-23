@@ -1,6 +1,7 @@
 [user]
 	email = roobin.bhandari@gmail.com
 	name = Rubin Bhandari
+	signingkey = /home/rubin/.ssh/github.pub
 
 [includeIf "gitdir/i:**/cit-be/"]
 	path = .gitconfig-takeo
