@@ -89,6 +89,7 @@ setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 setopt NO_HUP                    # don't kill background jobs when the shell exits
 
+setopt extended_glob
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt hist_save_no_dups
@@ -135,10 +136,8 @@ source /usr/share/hyde-cli/Hyde.zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-setopt extended_glob
 _evalcache thefuck --alias
 _evalcache zoxide init zsh --hook pwd
-
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
 
