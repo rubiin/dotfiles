@@ -385,3 +385,5 @@
 
 	# git git ...
 	git = "!git"
+[gpg]
+	format = ssh
