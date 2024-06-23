@@ -387,11 +387,11 @@ set -g mouse on
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-unbind C-a
-unbind C-b
+set -gu prefix2
 set-option -g prefix C-Space
 bind-key C-Space send-prefix
+unbind C-a
+unbind C-b
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
