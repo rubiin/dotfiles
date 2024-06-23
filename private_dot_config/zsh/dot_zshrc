@@ -80,12 +80,19 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(evalcache zsh-autosuggestions zsh-syntax-highlighting)
 
-# No bell: Shut up Zsh
-unsetopt beep
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
+HISTSIZE=10000
+SAVEHIST=10000
+setopt NO_BEEP                   # No bell: Shut up Zsh
+setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
+setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
+setopt SHARE_HISTORY             # share history between all sessions.
+setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
+setopt NO_HUP                    # don't kill background jobs when the shell exits
+
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt hist_save_no_dups
+
 
 source $ZSH/oh-my-zsh.sh
 
