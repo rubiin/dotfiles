@@ -146,6 +146,14 @@ fpath=($fpath "$HOME/.zfunctions")
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
 
+
+# create some folders if they don't exist
+[ -d ~/projects ] && rm -rf ~/projects/ && mkdir ~/projects/ || mkdir ~/projects
+[ -d ~/personal ] && rm -rf ~/personal/ && mkdir ~/personal/ || mkdir ~/personal
+[ -d ~/work ] && rm -rf ~/work/ && mkdir ~/work/ || mkdir ~/work
+
+
+
 # If a ~/.zshrc.local exists, source it
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 # If a ~/.localrc zshrc exists, source it
