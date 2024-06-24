@@ -441,6 +441,19 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'sainnhe/tmux-fzf'
 
+
+
+bind f display-popup -E "\
+     tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
+     sed '/^$/d' |\
+     fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
+     xargs tmux switch-client -t"
+
+once comfortable with above , you may switch to this plugin
+# set -g @plugin 'omerxx/tmux-sessionx'
+# set -g @sessionx-bind 'f'
+
+
 # move status line to top
 #set -g status-position top
 set -sg escape-time 0
@@ -449,11 +462,6 @@ unbind '"'  # split-window
 bind | split-window -h -c "#{pane_current_path}"
 bind _ split-window -v -c "#{pane_current_path}"
 bind-key Space set-window-option synchronize-panes
-# bind -n M-Left select-pane -L
-# bind -n M-Right select-pane -R
-# bind -n M-Up select-pane -U
-# bind -n M-Down select-pane -D
-
 
 # resize panes
 bind -r H resize-pane -L 5   # 5 px bigger to the left
