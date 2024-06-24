@@ -88,7 +88,7 @@ cleanup = true
 # Custom commands
 [commands]
 "Npm Global" = "taze -gwi"
-"Mise Plugins" = "mise plugins update"
+"Mise" = "mise self-update;mise plugins update"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
 
