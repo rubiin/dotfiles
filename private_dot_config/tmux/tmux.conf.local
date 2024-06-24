@@ -388,7 +388,7 @@ set -g mouse on
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
-set-option -g prefix C-Space
+set-option -g prefix C-q
 bind-key C-Space send-prefix
 unbind C-a
 unbind C-b
