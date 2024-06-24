@@ -3,7 +3,7 @@
 	name = Rubin Bhandari
 	signingkey = /home/rubin/.ssh/github.pub
 
-[includeIf "gitdir/i:**/cit-be/"]
+[includeIf "gitdir/i:**/takeo/"]
 	path = .gitconfig-takeo
 
 [credential]
