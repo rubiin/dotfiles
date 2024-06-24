@@ -152,7 +152,7 @@ fpath=($fpath "$HOME/.zfunctions")
 [ -d ~/personal ] && mkdir ~/personal/ || mkdir ~/personal
 [ -d ~/work ] && mkdir ~/work/ || mkdir ~/work
 
-
+source "$ZDOTDIR/completions/git-extras-completion.zsh"
 
 # If a ~/.zshrc.local exists, source it
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
