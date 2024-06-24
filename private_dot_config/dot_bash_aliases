@@ -93,8 +93,8 @@ alias ehypr="$EDITOR ~/.config/hypr/"
 alias edotfiles="$EDITOR ~/.local/share/chezmoi/"
 alias ewezterm="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
-
-
+alias ealias= "$EDITOR ~/.config/.bash_aliases"
+alias etmux="$EDITOR ~/.tmux.conf.local"
 
 # use nvim, but don't make me think about it
 if [[ -n "$(command -v nvim)" ]]; then
@@ -136,6 +136,7 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
 alias tmux_end="pkill -f tmux"
+
 
 ## npm aliases
 alias ni="npm install"
