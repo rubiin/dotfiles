@@ -391,11 +391,11 @@ function reinstall-nvim() {
 	rm -rf ~/.config/nvim
 	rm -rf ~/.local/share/nvim
 	git clone git@github.com:rubiin/init.lua .config/nvim
-	if [[ ! -d personal-vim-plugs ]]; then
-		mkdir ~/personal-vim-plugs
-		git clone git@github.com:rubiin/fortune.nvim.git ~/personal-vim-plugs/fortune.nvim
-		git clone git@github.com:rubiin/highlighturl.nvim.git ~/personal-vim-plugs/highlighturl.nvim
-		git clone git@github.com:rubiin/vimwordlist.nvim.git ~/personal-vim-plugs/vimwordlist.nvim
+	if [[ ! -d ~/personal/vim ]]; then
+		mkdir ~/personal/vim
+		git clone git@github.com:rubiin/fortune.nvim.git ~/personal/vim/fortune.nvim
+		git clone git@github.com:rubiin/highlighturl.nvim.git ~/personal/vim/highlighturl.nvim
+		git clone git@github.com:rubiin/vimwordlist.nvim.git ~/personal/vim/vimwordlist.nvim
 	fi
 	nvim
 }
