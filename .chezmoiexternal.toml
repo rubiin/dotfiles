@@ -6,15 +6,15 @@
     type = "git-repo"
     url = "https://github.com/tsubajashi/mpv-settings.git"
     refreshPeriod = "168h"
-["personal-vim-plugs/fortune.nvim"]
+["personal/vim/fortune.nvim"]
     type = "git-repo"
     url = "https://github.com/rubiin/fortune.nvim.git"
     refreshPeriod = "168h"
-["personal-vim-plugs/highlighturl.nvim"]
+["personal/vim/highlighturl.nvim"]
     type = "git-repo"
     url = "https://github.com/rubiin/highlighturl.nvim.git"
     refreshPeriod = "168h"
-["personal-vim-plugs/vimwordlist.nvim"]
+["personal/vim/vimwordlist.nvim"]
     type = "git-repo"
     url = "https://github.com/rubiin/vimwordlist.nvim.git"
     refreshPeriod = "168h"

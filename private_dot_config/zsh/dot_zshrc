@@ -148,9 +148,9 @@ fpath=($fpath "$HOME/.zfunctions")
 
 
 # create some folders if they don't exist
-[ -d ~/projects ] && rm -rf ~/projects/ && mkdir ~/projects/ || mkdir ~/projects
-[ -d ~/personal ] && rm -rf ~/personal/ && mkdir ~/personal/ || mkdir ~/personal
-[ -d ~/work ] && rm -rf ~/work/ && mkdir ~/work/ || mkdir ~/work
+[ -d ~/projects ]  && mkdir ~/projects/ || mkdir ~/projects
+[ -d ~/personal ] && mkdir ~/personal/ || mkdir ~/personal
+[ -d ~/work ] && mkdir ~/work/ || mkdir ~/work
 
 
 
