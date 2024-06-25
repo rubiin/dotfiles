@@ -1,18 +1,10 @@
 #!/bin/bash
 # Pick a preconfigured theme
-FONT=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" --header "Choose your programming font:" --height 6 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+FONT=$(fc-list : family | awk -F "," '{ if (NF>1) print $2 }' | sort | fzf)
 
-[ -z "$FONT" ] && exit 0
+echo "$FONT"
 
-if [ "$FONT" == "Cascadia Cove" ]; then
-	NERD_FONT="CaskaydiaMono Nerd Font"
-elif [ "$FONT" == "Maple Mono" ]; then
-	NERD_FONT="Maple Mono"
-elif [ "$FONT" == "Jetbrains Mono" ]; then
-	NERD_FONT="JetBrainsMono Nerd Font"
-elif [ "$FONT" == "Mononoki" ]; then
-	NERD_FONT="mononoki Nerd Font"
-fi
 
-echo "$NERD_FONT"
-# sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$NERD_FONT\"/g" ~/.config/Code/User/settings.json
+## change kitty font
+## change wezterm font
+## change vscode font
