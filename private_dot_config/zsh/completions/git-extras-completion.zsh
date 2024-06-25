@@ -102,6 +102,7 @@ zstyle ':completion:*:*:git:*' user-commands $existing_user_commands \
     coauthor:'add a co-author to the last commit' \
     branch-delete:'delete branches' \
     branch-rename:'rename a branch' \
+    branch-status:'get all branch statuses' \
     contrib:'show user contributions' \
     changelog:'generate a changelog report' \
     ignore:'view .gitignore patterns' \
