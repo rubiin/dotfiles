@@ -160,7 +160,7 @@ cleanup = true
 # Additional git repositories to pull
 repos = [
     "~/.config/nvim",
-    "~/.tmux",
+    "~/.config/tmux/oh-my-tmux/",
 ]
 
 # Don't pull the predefined git repos
