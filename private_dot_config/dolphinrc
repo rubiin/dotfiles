@@ -5,9 +5,13 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [General]
 ShowSelectionToggle=false
-ShowToolTips=true
+ShowStatusBar=false
 Version=202
 ViewPropsTimestamp=2023,4,26,16,58,48.324
+
+[IconsMode]
+MaximumTextLines=1
+PreviewSize=112
 
 [InformationPanel]
 dateFormat=ShortFormat
