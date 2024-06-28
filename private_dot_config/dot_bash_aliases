@@ -154,7 +154,7 @@ alias nioff="npm install --offline"
 alias nrm="npm run typeorm:run"
 
 ## yarn aliases
-alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+# alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias y="yarn"
 alias yi="yarn install"
 alias ya="yarn add"
