@@ -135,7 +135,7 @@ alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
-alias tmux_end="pkill -f tmux"
+alias tmux_kill="pkill -f tmux"
 
 
 ## npm aliases
@@ -220,14 +220,19 @@ alias dki="docker run -i -t -P"
 # Execute interactive container, e.g., $dex base /bin/bash
 alias dex="docker exec -i -t"
 
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+
+
+# FUNCTIONS 
+#───────────────────────────────────────────────────────────────────────────────
+
+
 # Stop all containers
 dstop() { docker stop $(docker ps -a -q); }
 
 # Remove all containers
 drm() { docker rm $(docker ps -a -q); }
-
-# Stop and Remove all containers
-alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Remove all images
 dri() { docker rmi $(docker images -q); }
@@ -241,16 +246,6 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/
 # Bash into running container
 dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
-## fzf aliases
-fo() {
-	IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
-	key=$(head -1 <<<"$out")
-	file=$(head -2 <<<"$out" | tail -1)
-	if [ -n "$file" ]; then
-		[ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
-	fi
-}
-
 gh-delete-runs() {
 	# Get the IDs of all failed runs
 	ids=$(gh run list -s failure --limit=200 --json databaseId -q '.[].databaseId')
@@ -263,10 +258,6 @@ gh-delete-runs() {
 
 gi() {
 	curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ >.gitignore
-}
-
-git-branch-delete() {
-	git branch | grep $@ | xargs git branch -D
 }
 
 git-redate() {
