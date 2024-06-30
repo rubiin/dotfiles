@@ -1,20 +1,12 @@
 #!/bin/sh
 
-#Workspace 1: browser workspace.
-#Workspace 2: terminal workspace.
-#Workspace 3: ide workspace.
-#Workspace 4: files workspace 
-#Workspace 5: Media and Entertainment Workspace
-#Workspace 6: System Monitoring and Utilities 
-#Workspace 7: Misc 
-
-
 # Define the mappings of applications to their designated workspaces
-declare -A app_workspace_mapping=(
-    ["org.wezfurlong.wezterm"]="2"
-    ["Vivaldi-stable"]="1"
-    ["org.kde.dolphin"]="5"
-)
+hyprctl dispatch exec [workspace 1  silent] Vivaldi-stable
+hyprctl dispatch exec [workspace 2  silent] org.wezfurlong.wezterm
+hyprctl dispatch exec [workspace 3  silent] code-insiders-url-handler
+hyprctl dispatch exec [workspace 4  silent] Postman
+hyprctl dispatch exec [workspace 4  silent] "MongoDB Compass"
+hyprctl dispatch exec [workspace 5  silent] org.kde.dolphin
 
 
-hyprctl dispatch exec [workspace  silent] kitty
+## add teams and other
