@@ -34,9 +34,12 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 # lazygit
 export LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml"
 
-# zsh files
+# zsh specific
 export HISTFILE="$XDG_CONFIG_HOME/zsh/.zsh_history"
 export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
+export HISTSIZE=10000
+export SAVEHIST=10000
+
 
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
