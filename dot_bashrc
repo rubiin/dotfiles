@@ -14,16 +14,16 @@ export HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+export HISTSIZE=10000
+export HISTFILESIZE=20000
 
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 
-source $XDG_CONFIG_HOME/.bash_aliases
-eval $(thefuck --alias)
+source "$XDG_CONFIG_HOME"/.bash_aliases"
+eval "$(thefuck --alias)"
 eval "$(zoxide init bash)"
 
 
