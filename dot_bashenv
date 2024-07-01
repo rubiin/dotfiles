@@ -2,6 +2,6 @@
 # use the env file of zshenv
 
 
-if [ -f $HOME/.zshenv ]; then
-      source $HOME/.zshenv
+if [ -f $HOME/.config/zsh/.zshenv ]; then
+      source $HOME/.config/zsh/.zshenv
 fi
