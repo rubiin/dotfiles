@@ -88,7 +88,6 @@ cleanup = true
 # Custom commands
 [commands]
 "Npm Global" = "taze -gwi"
-"Mise" = "mise self-update;mise plugins update"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
 
@@ -160,7 +159,7 @@ cleanup = true
 # Additional git repositories to pull
 repos = [
     "~/.config/nvim",
-    "~/.config/tmux/oh-my-tmux/",
+    "~/.tmux",
 ]
 
 # Don't pull the predefined git repos
