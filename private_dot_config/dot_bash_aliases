@@ -127,6 +127,8 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+alias ..g=' cd "$(git rev-parse --show-toplevel)"' # goto git root
+
 
 alias cat="bat"
 
@@ -152,6 +154,7 @@ alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
 alias nicache="npm install --prefer-offline"
 alias nioff="npm install --offline"
 alias nrm="npm run typeorm:run"
+
 
 ## yarn aliases
 # alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
