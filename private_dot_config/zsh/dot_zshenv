@@ -32,9 +32,8 @@ export XDG_MUSIC_DIR="$HOME/Music"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
-
-LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,theme.yml" lazygit
-
+#lazygit
+LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml" lazygit
 
 # zsh files
 export HISTFILE="$XDG_CONFIG_HOME/zsh/.zsh_history"
