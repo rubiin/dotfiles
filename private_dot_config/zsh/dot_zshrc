@@ -1,4 +1,9 @@
 
+# DOCS https://zsh.sourceforge.io/Doc/Release/Options.html
+# DOCS https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
+#───────────────────────────────────────────────────────────────────────────────
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -80,19 +85,20 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(evalcache zsh-autosuggestions zsh-syntax-highlighting)
 
-HISTSIZE=10000
-SAVEHIST=10000
 setopt NO_BEEP                   # No bell: Shut up Zsh
 setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
 setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
 setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 setopt NO_HUP                    # don't kill background jobs when the shell exits
+setopt HIST_NO_STORE      # ignore history command itself for the history
 
-setopt extended_glob
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-setopt hist_save_no_dups
+setopt EXTENDED_GLOB
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
+setopt AUTO_CD # pure directory = cd into it
 
 
 # array of files to source
