@@ -388,9 +388,10 @@ set -g mouse on
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
-bind-key C-Space send-prefix
 unbind C-a
 unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
@@ -442,17 +443,11 @@ set -g @plugin 'sainnhe/tmux-fzf'
 set -g history-limit 9999999
 
 
-bind f display-popup -E "\
+bind s display-popup -E "\
      tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
      sed '/^$/d' |\
      fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
      xargs tmux switch-client -t"
-
-
-bind-key "O" display-popup -E -w 40% "sesh connect \"$(
-	sesh list -i | gum filter --limit 1 --fuzzy --no-sort --placeholder 'Pick a sesh' --prompt='⚡'
-)\""
-
 
 # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
