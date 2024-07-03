@@ -114,8 +114,8 @@
 .oh-my-zsh
 .oh-my-zsh/**
 **/autoload/
-.config/tmux/oh-my-tmux/
-.config/tmux/plugins/
+.config/tmux
+!.config/tmux/tmux/local.conf
 **/autoload/**/*
 **/temp/
 **/temp/**/*
