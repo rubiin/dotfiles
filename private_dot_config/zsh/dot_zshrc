@@ -132,7 +132,8 @@ export KEYTIMEOUT=1
 
 # keybinds
 
-bindkey -s '^E' 'yazi\n'
+bindkey -s '^o' 'yazi\n'
+bindkey -s '^g' 'lazygit\n'
 
 
 
