@@ -115,6 +115,7 @@ for filename in "${CONFIG_FILES[@]}"; do
 done
 
 
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
@@ -122,19 +123,6 @@ if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 else
 	compinit -C;
 fi;
-
-_comp_options+=(globdots) # 
-
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-
-# keybinds
-
-bindkey -s '^o' 'yazi\n'
-bindkey -s '^g' 'lazygit\n'
-
 
 
 # User configuration
