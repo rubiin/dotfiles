@@ -11,13 +11,6 @@ name = "Code 💻"
 path = "~/personal"
 startup_command = "yazi"
 
-[[session]]
-name = "tmux config"
-path = "~/c/dotfiles/.config/tmux"
-# tmuxp = "~/c/dotfiles/.config/tmux/tmuxp-tmux.yml"
-# tmuxp = "/Users/joshmedeski/c/dotfiles/.config/tmux/tmuxp-tmux.yml"
-startup_command = "nvim tmux.conf"
-
 
 [[session]]
 name = "hammerspoon config"
@@ -51,9 +44,10 @@ startup_command = "nvim sesh.toml"
 [[session]]
 name = "bin"
 path = "~/.config/bin"
+startup_command = "nvim ."
 
 [[session]]
-name = "dotfiles"
+name = "tmux "
 path = "~/config/tmux"
 startup_command = "nvim tmux.local.conf"
 
