@@ -24,6 +24,11 @@ path = "~/personal"
 startup_command = "l"
 
 [[session]]
+name = "aliases"
+path = "~/.config"
+startup_command = "nvim .bash_aliases"
+
+[[session]]
 name = "tmux config"
 path = "~/.config/tmux"
 startup_command = "nvim tmux.conf"
@@ -42,7 +47,7 @@ name = "neovim config"
 path = "~/.config/nvim"
 
 [[session]]
-name = "zhh config"
+name = "zsh config"
 path = "~/.config/zsh"
 startup_command = "nvim .zshrc"
 
@@ -62,7 +67,7 @@ path = "~/.config/sesh"
 startup_command = "nvim sesh.toml"
 
 [[session]]
-name = "my custom binaries"
+name = ".bin"
 path = "~/.bin"
 
 [[session]]
