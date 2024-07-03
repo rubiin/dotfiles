@@ -1,0 +1,81 @@
+import = ["~/c/deyis-project/.sesh.toml"]
+
+[default_session]
+startup_command = "nvim +GoToFile"
+
+# TODO: potential feature ideas
+# [[session]]
+# name = "session"
+# path = "~/path/to/session"
+# startup_script = "~/git_repos/dotfiles/sesh/bin/spotify.sh"
+# detached = true # never attach to this session, just create it in the background
+# tmuxp = "~/.config/tmux/tmuxp/joshmedeski.com.yml"
+# tmuxinator = "~/.config/tmux/tmuxinator/joshmedeski.com.yml"
+
+
+[[session]]
+name = "Home 🏡"
+path = "~"
+startup_command = "l"
+
+[[session]]
+name = "Code 💻"
+path = "~/personal"
+startup_command = "l"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "nvim tmux.conf"
+
+[[session]]
+name = "gitmux config"
+path = "~tmux"
+startup_command = "nvim gitmux.conf"
+
+[[session]]
+name = "wezterm config"
+path = "~/.config/wezterm"
+
+[[session]]
+name = "neovim config"
+path = "~/.config/nvim"
+
+[[session]]
+name = "zhh config"
+path = "~/.config/zsh"
+startup_command = "nvim .zshrc"
+
+[[session]]
+name = "yazi config"
+path = "~/.config/yazi"
+startup_command = "nvim yazi.toml"
+
+[[session]]
+name = "wezterm config"
+path = "~wezterm"
+startup_command = "nvim wezterm.lua"
+
+[[session]]
+name = "sesh config"
+path = "~/.config/sesh"
+startup_command = "nvim sesh.toml"
+
+[[session]]
+name = "my custom binaries"
+path = "~/.bin"
+
+[[session]]
+name = "dotfiles"
+path = "~/c/dotfiles"
+startup_command = "lazygit"
+
+[[session]]
+name = "Downloads 📥"
+path = "~/Downloads"
+startup_command = "yazi"
+
+[[session]]
+name = "lazy plugins"
+path = "~/.local/share/nvim/lazy"
+startup_command = "sesh connect (ls | fzf --no-border --preview 'glow -s auto {}/README.md') && exit"
