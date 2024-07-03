@@ -449,6 +449,10 @@ bind s display-popup -E "\
      fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
      xargs tmux switch-client -t"
 
+bind-key "o" display-popup -E -w 40% "sesh connect \"$(
+	sesh list -i | gum filter --limit 1 --fuzzy --no-sort --placeholder 'Pick a sesh' --prompt='⚡'
+)\""
+
 # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
 # set -g @sessionx-bind 'f'
