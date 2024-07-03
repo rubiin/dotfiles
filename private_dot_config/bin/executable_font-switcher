@@ -1,0 +1,15 @@
+#!/bin/bash
+# Pick a preconfigured theme
+font_name=$(fc-list : family | awk -F "," '{ if (NF>1) print $2 }' | sort | fzf)
+
+echo "you selected $font_name"
+
+## change kitty font
+
+sed -i "s/font_family.*/font_family    '$font_name'/" ~/.config/kitty/kitty.conf
+
+## change wezterm font
+## change vscode font
+sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
+sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
+sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
