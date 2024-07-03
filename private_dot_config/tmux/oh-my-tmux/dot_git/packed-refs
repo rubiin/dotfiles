@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+eebdc02e19dee69adca855eceefd4a8445083175 refs/remotes/origin/gh-243
+7b7aa809822baf859662f2c933bbb9bc6b786f04 refs/remotes/origin/gh-295
+a0cf19634cbae500df47c093472f3fcff16fc7c8 refs/remotes/origin/gh-361
+0c6d5d1c648f816480bf538c1c5637421d914e29 refs/remotes/origin/gh-403
+7ca52f8864cb65042a79d6f6269dd83db7268392 refs/remotes/origin/gh-425
+948611ad5fe49b04feb9dae570bd6bf5fea30cc6 refs/remotes/origin/gh-479
+cf21e194ba4e6f11ae74e68258a176992c8640b4 refs/remotes/origin/gh-670
+cb438b237faeb993e89fa5e2470f6eaccdf367cd refs/remotes/origin/gh-724
+9cf49731cd785b76cf792046feed0e8275457918 refs/remotes/origin/master
+25daf139067bd5ba8ba07f4a17841bea44a6ad0d refs/remotes/origin/remote-clipboard
