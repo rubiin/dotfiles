@@ -94,7 +94,7 @@ alias edotfiles="$EDITOR ~/.local/share/chezmoi/"
 alias ewezterm="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
 alias ealias= "$EDITOR ~/.config/.bash_aliases"
-alias etmux="$EDITOR ~/.config/tmux/.tmux.conf.local"
+alias etmux="$EDITOR ~/.config/tmux/tmux.conf.local"
 
 # use nvim, but don't make me think about it
 if [[ -n "$(command -v nvim)" ]]; then
