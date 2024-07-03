@@ -129,6 +129,13 @@ _comp_options+=(globdots) #
 bindkey -v
 export KEYTIMEOUT=1
 
+
+# keybinds
+
+bindkey -s '^E' 'yazi\n'
+
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
