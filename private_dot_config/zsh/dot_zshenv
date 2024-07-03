@@ -68,7 +68,8 @@ export TERMINFO="$XDG_DATA_HOME"/terminfo
 export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
 
 # custom executable path
-export PATH="$XDG_CONFIG_HOME/bin:$XDG_CONFIG_HOME/bin/git-extras:$PATH"
+export PATH="$XDG_CONFIG_HOME/bin:$PATH"
+export PATH="$XDG_CONFIG_HOME/bin/git-extras:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
