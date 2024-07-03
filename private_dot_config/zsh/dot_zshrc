@@ -114,7 +114,7 @@ for filename in "${CONFIG_FILES[@]}"; do
 	source $filename
 done
 
-
+_comp_options+=(globdots)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
