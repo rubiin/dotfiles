@@ -115,7 +115,6 @@ for filename in "${CONFIG_FILES[@]}"; do
 done
 
 
-
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
@@ -123,6 +122,18 @@ if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 else
 	compinit -C;
 fi;
+
+_comp_options+=(globdots) # tab complete hidden files
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+
+# keybinds
+
+bindkey -s '^E' 'yazi\n'
+
 
 
 # User configuration
