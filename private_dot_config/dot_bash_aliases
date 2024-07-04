@@ -55,35 +55,6 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-alias cz-add-all="cz add \
-  .bash_aliases \
-  .zshrc \
-  .zshenv \
-  .bashenv \
-  .bashrc \
-  .tmux.conf.local \
-  .tool-versions \
-  sudoers.lecture \
-  .ssh/config \
-  .bin \
-  .local/share/fonts/ \
-  .config/alacritty/alacritty.toml \
-  .config/atuin/config.toml \
-  .config/bat/config \
-  .config/btop/ \
-  .config/git/ \
-  .config/npm \
-  .config/kitty \
-  .config/wezterm \
-  .config/.curlrc \
-  .config/mise/ \
-  .config/mimeapps.list \
-  .config/lazygit \
-  .config/neofetch \
-  .config/dolphinrc \
-  .config/mpv \
-  .config/persepolis_download_manager/persepolis.conf
-"
 alias update-submodules=""git submodule update --remote
 
 # Edit config files
