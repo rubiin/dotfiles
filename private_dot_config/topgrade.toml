@@ -154,12 +154,13 @@ cleanup = true
 
 [git]
 # How many repos to pull at max in parallel
-# max_concurrency = 5
+max_concurrency = 5
 
 # Additional git repositories to pull
 repos = [
     "~/.config/nvim",
     "~/.tmux",
+    "~/Documents/obsidian",
 ]
 
 # Don't pull the predefined git repos
