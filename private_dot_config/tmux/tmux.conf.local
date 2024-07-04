@@ -387,6 +387,7 @@ set -g mouse on
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
+set -gu prefix1
 unbind C-b
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
@@ -445,7 +446,7 @@ bind f display-popup -E "\
      fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
      xargs tmux switch-client -t"
 
-bind-key "b" run-shell "sesh connect \"$(
+bind-key "o" run-shell "sesh connect \"$(
 	sesh list -i | fzf-tmux -p 55%,60% \
 		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
 		--header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
