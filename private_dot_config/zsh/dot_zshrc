@@ -126,9 +126,9 @@ fi;
 _comp_options+=(globdots) # tab complete hidden files
 
 # vi mode
-bindkey -v
 export KEYTIMEOUT=1
-
+export VI_MODE_SET_CURSOR=true
+bindkey -v
 
 # keybinds
 
