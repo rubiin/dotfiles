@@ -2,7 +2,7 @@
 
 config=$XDG_CONFIG_HOME
 
-file_folder_list=("$config/tmux" "$config/zsh" "$config/.bash_aliases"  "$HOME/.bashenv" "$HOME/.bashrc"  "$config/mise" "$HOME/sudoers.lecture" "$config/.ssh/config" "$config/bin" "$HOME/.local/share/fonts" "$config/alacritty/alacritty.toml" "$config/atuin/config.toml" "$config/bat/config" "$config/btop" "$config/git" "$config/npm" "$config/kitty" "$config/wezterm" "$config/.curlrc" "$config/mimeapps.list" "$config/lazygit" "$config/neofetch" "$config/dolphinrc" "$config/mpv" "$config/persepolis_download_manager/persepolis.conf")
+file_folder_list=("$config/tmux" "$config/zsh" "$config/.bash_aliases"  "$HOME/.bashenv" "$HOME/.bashrc"  "$config/mise" "$HOME/sudoers.lecture" "$config/.ssh/config" "$config/bin" "$HOME/.local/share/fonts" "$config/alacritty/alacritty.toml" "$config/atuin/config.toml" "$config/bat/config" "$config/btop" "$config/git" "$config/npm" "$config/kitty" "$config/wezterm" "$config/.curlrc" "$config/mimeapps.list" "$config/lazygit" "$config/dolphinrc" "$config/persepolis_download_manager/persepolis.conf")
 
 
 ## now loop through the above array
