@@ -9,7 +9,7 @@ return {
   ["messages"] = {},
   ["position"] = 1,
   ["id"] = "17985",
-  ["last_update"] = 1720115376,
+  ["last_update"] = 1720115431,
   ["signals"] = {
     [1] = "core.tab_drag_received(file: string)",
     [2] = "core.tab_drag_start(file: string)",
