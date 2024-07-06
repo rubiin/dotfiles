@@ -115,6 +115,7 @@
 .oh-my-zsh/**
 **/autoload/
 .config/tmux/*
+.config/lite-xl/ipc/**
 !.config/tmux/tmux.conf.local
 **/autoload/**/*
 **/temp/
