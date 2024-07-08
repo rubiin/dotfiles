@@ -52,12 +52,12 @@ export MISE_GO_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-go-packages
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
 
 # fzf defaults
+export FZF_DEFAULT_COMMAND="rg --files"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="  \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 --height=50% --border --min-height=25 --pointer='→'"
-export FZF_DEFAULT_COMMAND="rg --files"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
@@ -90,6 +90,9 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
 
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768'
+
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
 
 # npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
