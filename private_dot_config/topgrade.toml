@@ -159,8 +159,8 @@ max_concurrency = 5
 # Additional git repositories to pull
 repos = [
     "~/.config/nvim",
-    "~/.tmux",
     "~/Documents/obsidian",
+    "~/.config/tmux/oh-my-tmux/",
 ]
 
 # Don't pull the predefined git repos
