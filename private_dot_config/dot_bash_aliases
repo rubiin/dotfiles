@@ -39,7 +39,7 @@ alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
-alias ytd="yt-dlp"
+alias ytd="yt-dlp --embed-metadata"
 alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
 alias yolo='git commit --allow-empty-message -m "" && git push origin master'
 
