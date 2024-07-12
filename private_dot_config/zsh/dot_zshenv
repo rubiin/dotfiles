@@ -77,13 +77,13 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # cargo
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X'
+export MANPAGER="less -X"
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
@@ -92,7 +92,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
 export NODE_REPL_HISTORY_SIZE='32768'
 
 # Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
+export NODE_REPL_MODE="sloppy"
 
 # npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
