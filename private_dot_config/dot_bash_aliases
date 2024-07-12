@@ -24,7 +24,6 @@ alias make='make --silent --warn-undefined-variables'
 alias nord="nordvpn"
 alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
-alias rickRoll="curl -s -L https://bit.ly/3zvELNz | bash"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
     sudo true; \
     rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
