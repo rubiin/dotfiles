@@ -59,6 +59,7 @@ alias update-submodules=""git submodule update --remote
 
 # Edit config files
 alias envim="$EDITOR ~/.config/nvim"
+alias ebin="$EDITOR ~/.config/bin"
 alias ezsh="$EDITOR $ZDOTDIR/.zshrc"
 alias ehypr="$EDITOR ~/.config/hypr/"
 alias edotfiles="$EDITOR ~/.local/share/chezmoi/"
