@@ -1,6 +1,7 @@
 #!/bin/bash
 
-hyprctl dispatch exec [workspace 5 silent] org.kde.dolphin
-hyprctl dispatch exec [workspace 4 silent] postman
-hyprctl dispatch exec [workspace 3 silent] code-url-handler
 hyprctl dispatch exec [workspace 1 silent] vivaldi-stable
+hyprctl dispatch exec [workspace 3 silent] code-url-handler
+hyprctl dispatch exec [workspace 4 silent] postman
+hyprctl dispatch exec [workspace 4 silent] mongodb-compass
+hyprctl dispatch exec [workspace 5 silent] org.kde.dolphin
