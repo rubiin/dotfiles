@@ -115,8 +115,6 @@
 .oh-my-zsh/**
 **/autoload/
 .config/tmux/*
-.config/hypr/**
-!.config/hypr/userprefs.conf
 .config/lite-xl/ipc/**
 !.config/tmux/tmux.conf.local
 **/autoload/**/*
