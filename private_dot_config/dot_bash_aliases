@@ -68,6 +68,10 @@ alias egit="$EDITOR ~/.config/git/"
 alias ealias= "$EDITOR ~/.config/.bash_aliases"
 alias etmux="$EDITOR ~/.config/tmux/tmux.conf.local"
 
+
+#  unmanages the file from chezmoi also deletes it
+alias czx="cz forget $1; rm -rf $1"
+
 # use nvim, but don't make me think about it
 if [[ -n "$(command -v nvim)" ]]; then
 	alias vim="nvim"
