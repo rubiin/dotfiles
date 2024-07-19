@@ -2,4 +2,4 @@
 
 # use this script to perform cleaaning or anything after applying updates
 
-echo "nothing to do "
+echo "chezmoi hook: nothing to do "
