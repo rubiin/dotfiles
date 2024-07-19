@@ -98,22 +98,11 @@
 	newNormal = green bold
 	newHighlight = green bold 22
 
-[delta]
-	features = decorations
-	line-numbers = true
-	navigate = true
+[include]
+	path = ~/delta-catppuccin.gitconfig
 
-[delta "decorations"]
-	minus-style = red bold
-	minus-emph-style = red bold 52
-	zero-style = normal
-	plus-style = green bold
-	plus-emph-style = green bold 22
-	hunk-header-style = bold syntax
-	hunk-header-decoration-style= bold magenta box
-	file-style = bold yellow
-	file-decoration-style = bold yellow ul ol
-	commit-style = bold yellow
+[delta]
+	features = catppuccin-mocha
 
 [merge]
 	conflictstyle = diff3
