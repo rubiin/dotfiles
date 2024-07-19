@@ -99,7 +99,7 @@
 	newHighlight = green bold 22
 
 [include]
-	path = ~/delta-catppuccin.gitconfig
+	path = /home/rubin/delta-catppuccin.gitconfig
 
 [delta]
 	features = catppuccin-mocha
