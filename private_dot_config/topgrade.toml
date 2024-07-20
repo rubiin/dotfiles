@@ -159,6 +159,7 @@ max_concurrency = 5
 # Additional git repositories to pull
 repos = [
     "~/.config/tmux/oh-my-tmux/",
+    "~/Hyprdots/",
     "~/Documents/obsidian",
     "~/.config/nvim",
 ]
