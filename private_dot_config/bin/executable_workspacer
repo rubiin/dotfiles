@@ -1,6 +1,6 @@
 #!/bin/bash
 
-clockin() {
+function clockin() {
   hyprctl dispatch exec [workspace 1 silent] vivaldi-stable
   hyprctl dispatch exec [workspace 3 silent] code-url-handler
   hyprctl dispatch exec [workspace 4 silent] postman
@@ -9,7 +9,7 @@ clockin() {
   hyprctl dispatch exec [workspace 7 silent] station
 }
 
-clockout() {
+function clockout() {
   killall station
   killall mongodb-compass
   killall postman
@@ -17,7 +17,7 @@ clockout() {
 }
 
 if [[ "$1" == "out" ]]; then
-  clouckout
+  clockout
 else
   clockin
 fi
