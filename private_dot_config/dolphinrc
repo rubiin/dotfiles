@@ -24,7 +24,6 @@ Places Icons Static Size=16
 2560x1080 screen: Window-Maximized=true
 
 [MainWindow]
-MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [MainWindow][Toolbar mainToolBar]
