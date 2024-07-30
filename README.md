@@ -31,7 +31,7 @@ Here are some details about my setup:
 - **Window Manager**               : [hypr](https://github.com/hyprwm/Hypr)  
 - **Shell**                        : [zsh](https://github.com/zsh-users/zsh)
   - [powerlevel10k-prompt](https://github.com/romkatv/powerlevel10k)                               : Minimalistic, powerful and extremely customizable Zsh prompt
-  - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh))                                                 : A next-generation framework for zsh
+  - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                : A next-generation framework for zsh
   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)                : Fish shell like syntax highlighting for Zsh.
   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                        : Fish-like autosuggestions for zsh
 - **Terminal**                     : [wezterm](https://github.com/wez/wezterm)
