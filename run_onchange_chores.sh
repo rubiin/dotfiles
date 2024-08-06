@@ -4,4 +4,4 @@
 
 
 bat cache --build
-echo "chezmoi hook: nothing to do "
+yay -S alacarte
