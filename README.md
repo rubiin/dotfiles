@@ -81,7 +81,33 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot
 chezmoi init --apply rubiin
 ```
 
-Might want this https://www.cyberciti.biz/open-source/command-line-hacks/adding-spice-to-your-sudo-session-with-a-lecture-file-on-linux-or-unix/
+## Disclaimer
+
+These dotfiles are provided as-is, without any warranty or guarantee of any kind. Use them at your own risk.
+
+### Important Points:
+1. **Backup Your Existing Configuration**: Before applying these dotfiles, ensure you have backed up your existing configuration files. This is crucial to prevent any loss of your custom settings. You can use tools like `cp` or `rsync` to create backups of your current configurations. Think of it like making a save point in a video game before facing the final boss. You don't want to lose all your progress!
+
+2. **Review Before Applying**: Carefully review the contents of these dotfiles to understand the changes they will make to your system. This includes checking scripts, configuration settings, and any software they might interact with. Make sure they meet your specific needs and don't interfere with your existing setup.
+
+3. **Compatibility**: These dotfiles are tailored to my personal development environment, which might include specific versions of operating systems, shells, and software packages. They might not be compatible with all systems or setups. Adjustments may be necessary to suit your particular environment. Ensure that dependencies are installed and compatible with your system.
+
+4. **Security**: Be mindful of potential security implications. Do not blindly trust any configuration files you find online, including these. Always inspect the content for any potentially harmful commands. Pay special attention to scripts that modify system settings, download files, or have root permissions.
+
+5. **Personal Preferences**: These configurations reflect my personal workflow and preferences, including shortcuts, themes, and extensions. Feel free to modify them to better suit your own workflow. You may want to change themes, key bindings, or other settings to match your own preferences.
+
+6. **System Performance**: Some configurations might affect system performance, especially if they include resource-intensive scripts or settings. Monitor your system after applying these dotfiles to ensure they do not negatively impact performance.
+
+7. **Updates and Maintenance**: These dotfiles may evolve over time. Keep an eye on updates to ensure compatibility with new software versions and to benefit from improvements. Regularly check for updates and changes that might be beneficial or necessary for your setup.. It's like keeping up with the latest memes – you don't want to be left out.
+
+8. **Community Contributions**: If you find these dotfiles useful and make improvements, consider contributing back to the repository. Sharing your modifications can help others in the community benefit from your enhancements.
+
+---
+
+By using these dotfiles, you acknowledge that you understand these points and accept the responsibility for any changes they make to your system. If you encounter issues or have questions, feel free to open an issue or reach out for support.
 
 # If you use i3wm, check the branch [i3wm](https://github.com/rubiin/dotfiles/tree/i3wm) for my i3 rice
 # If you use kde, check the  [kde](https://github.com/rubiin/dotfiles/tree/kde) branch
+
+
+
