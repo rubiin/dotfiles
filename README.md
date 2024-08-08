@@ -81,7 +81,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot
 chezmoi init --apply rubiin
 ```
 
-## Disclaimer
+## Disclaimer 📝
 
 These dotfiles are provided as-is, without any warranty or guarantee of any kind. Use them at your own risk.
 
