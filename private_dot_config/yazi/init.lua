@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-
+require("full-border"):setup()
 -- Show user and hostname in top bar
 function Header:host()
 	if ya.target_family() ~= "unix" then
