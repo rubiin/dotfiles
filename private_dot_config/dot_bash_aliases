@@ -118,42 +118,21 @@ alias tn="t new -t"
 alias tmux_kill="pkill -f tmux"
 
 ## npm aliases
+alias n="npm"
 alias ni="npm install"
-alias nrs="npm run start -s --"
-alias nrb="npm run build -s --"
-alias nrf="npm run format -s --"
-alias nrd="npm run start:dev -s --"
-alias nrt="npm run test -s --"
-alias nrtw="npm run test:watch -s --"
-alias nrv="npm run validate -s --"
-alias rmn="rm -rf node_modules"
-alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
-alias nicache="npm install --prefer-offline"
-alias nioff="npm install --offline"
-alias nrm="npm run typeorm:run"
+
 
 ## yarn aliases
 # alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias y="yarn"
-alias yi="yarn install"
-alias ya="yarn add"
-alias yr="yarn remove"
-alias yau="yarn audit"
-alias yrs="yarn run start"
-alias yrd="yarn run start:dev"
-alias yup="yarn upgrade"
 
 #pnpm aliases
 alias p="pnpm"
-alias pp="pnpm prune"
 alias pi="pnpm i"
-alias pid="pnpm i -D"
 alias pih="pnpm i --shamefully-hoist=true"
 
 # bun aliases
 alias b="bun"
-alias bi="bun install"
-alias br="bun run"
 
 alias yayskip='yay -S --mflags --skipinteg'
 
