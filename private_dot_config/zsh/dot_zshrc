@@ -130,7 +130,6 @@ export VI_MODE_SET_CURSOR=true
 bindkey -v
 # keybinds
 
-bindkey -s '^E' 'yazi\n'
 bindkey -s '^O' 'sesh_sessions\n'
 
 
