@@ -78,7 +78,8 @@ sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
 echo "Installing mise"
-curl https://mise.run | sh && mise install
+yay -S mise-bin;
+mise install
 
 ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
