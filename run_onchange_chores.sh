@@ -4,3 +4,4 @@
 
 
 bat cache --build
+Hyde reload &
