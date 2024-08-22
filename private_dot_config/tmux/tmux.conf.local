@@ -459,10 +459,6 @@ bind-key "o" run-shell "sesh connect \"$(
 		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
 )\""
 
-# cycle between sessions
- bind [ switch-client -n
- bind ] switch-client -p
-
 
 # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
@@ -492,6 +488,7 @@ bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
 bind Q confirm-before -p "kill-session #S? (y/n)" kill-session
 
 set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
 
 # -- custom variables ----------------------------------------------------------
 
