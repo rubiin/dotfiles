@@ -4,6 +4,3 @@
 
 
 bat cache --build
-mise implode
-yay -S mise-bin
-
