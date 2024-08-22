@@ -438,7 +438,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'sainnhe/tmux-fzf'
 set -g history-limit 9999999
-
+set-option -g status-position top
 
 bind f display-popup -E "\
      tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
