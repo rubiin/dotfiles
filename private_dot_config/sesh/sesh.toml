@@ -2,17 +2,17 @@
 startup_command = "nvim"
 
 [[session]]
-name = "Home 🏡"
+name = "home 🏡"
 path = "~"
 startup_command = "yazi"
 
 [[session]]
-name = "Work 💼"
+name = "work 💼"
 path = "~/work"
 startup_command = "yazi"
 
 [[session]]
-name = "Personal 🍕"
+name = "personal 🍕"
 path = "~/personal"
 startup_command = "yazi"
 
@@ -57,7 +57,7 @@ path = ".local/share/chezmoi"
 startup_command = "lazygit"
 
 [[session]]
-name = "Downloads 📥"
+name = "downloads 📥"
 path = "~/Downloads"
 startup_command = "yazi"
 
