@@ -268,8 +268,8 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" 👽 #S | 󱫥#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_left=" 👽 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}, %R , %d %b | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_8"
@@ -373,13 +373,60 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # -- user customizations -------------------------------------------------------
 
+set -sg escape-time 0
+unbind %    # split-window -h
+unbind '"'  # split-window
+bind | split-window -h -c "#{pane_current_path}"
+bind _ split-window -v -c "#{pane_current_path}"
+bind-key Space set-window-option synchronize-panes
+
+# resize panes
+bind -r H resize-pane -L 5   # 5 px bigger to the left
+bind -r J resize-pane -D 5   # 5 px bigger down
+bind -r K resize-pane -U 5   # 5 px bigger up
+bind -r L resize-pane -R 5   # 5 px bigger right
+
+
+# Kill pane/window/session shortcuts
+bind x kill-pane
+bind X kill-window
+bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
+bind Q confirm-before -p "kill-session #S? (y/n)" kill-session
+
+bind f display-popup -E "\
+     tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
+     sed '/^$/d' |\
+     fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
+     xargs tmux switch-client -t"
+
+bind-key "o" run-shell "sesh connect \"$(
+	sesh list -i | fzf-tmux -p 55%,60% \
+		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
+		--header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
+		--bind 'tab:down,btab:up' \
+		--bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
+		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -t)' \
+		--bind 'ctrl-g:change-prompt(  )+reload(sesh list -c)' \
+		--bind 'ctrl-x:change-prompt(󱁿  )+reload(sesh list -z)' \
+		--bind 'ctrl-f:change-prompt(  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
+		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
+)\""
+
+
 # this is the place to override or undo settings
 
 # increase history size
-set -g history-limit 10000
+set -g history-limit 999999
+
+# refresh 'status-left' and 'status-right' more often
+set -g status-interval 5
+set -g display 2000
 
 # start with mouse mode enabled
 set -g mouse on
+
+bind-key C-p previous-window
+bind-key C-n next-window
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -394,7 +441,7 @@ unbind C-b
 # bind c new-window -c '#{pane_current_path}' #!important
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -437,55 +484,10 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'sainnhe/tmux-fzf'
-set -g history-limit 9999999
-set-option -g status-position top
-
-bind f display-popup -E "\
-     tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
-     sed '/^$/d' |\
-     fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
-     xargs tmux switch-client -t"
-
-bind-key "o" run-shell "sesh connect \"$(
-	sesh list -i | fzf-tmux -p 55%,60% \
-		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
-		--header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
-		--bind 'tab:down,btab:up' \
-		--bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
-		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -t)' \
-		--bind 'ctrl-g:change-prompt(  )+reload(sesh list -c)' \
-		--bind 'ctrl-x:change-prompt(󱁿  )+reload(sesh list -z)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
-		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
-)\""
-
 
 # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
 # set -g @sessionx-bind 'f'
-
-
-# move status line to top
-#set -g status-position top
-set -sg escape-time 0
-unbind %    # split-window -h
-unbind '"'  # split-window
-bind | split-window -h -c "#{pane_current_path}"
-bind _ split-window -v -c "#{pane_current_path}"
-bind-key Space set-window-option synchronize-panes
-
-# resize panes
-bind -r H resize-pane -L 5   # 5 px bigger to the left
-bind -r J resize-pane -D 5   # 5 px bigger down
-bind -r K resize-pane -U 5   # 5 px bigger up
-bind -r L resize-pane -R 5   # 5 px bigger right
-
-
-# Kill pane/window/session shortcuts
-bind x kill-pane
-bind X kill-window
-bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
-bind Q confirm-before -p "kill-session #S? (y/n)" kill-session
 
 set -g @resurrect-capture-pane-contents 'on'
 set -g @continuum-restore 'on'
