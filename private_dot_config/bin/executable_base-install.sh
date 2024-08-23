@@ -37,7 +37,7 @@ git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts || exit
 ./install.sh
 
-ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji fontforge gnu-free-fonts ttf-joypixels ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
+ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji fontforge gnu-free-fonts ttf-joypixels typos ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
 ask_yes_no_default "Do you want to install nerd fonts?" 0 && yay -S ttf-firacode-nerd ttf-jetbrains-mono-nerd ttf-dejavu-nerd ttf-hack-nerd
 
@@ -63,7 +63,7 @@ ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?
 	git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache &&
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-echo "export ZDOTDIR=~/.config/zsh" > /etc/zsh/zshenv
+echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
 echo "Installing bat themes"
 bat cache --build
@@ -78,11 +78,13 @@ sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
 echo "Installing mise"
-yay -S mise-bin;
+yay -S mise-bin
 mise install
 
 ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
-ask_yes_no_default "Do you want to remove unused packages?" 0 && sudo pacman -Qtdq | sudo pacman -Rns -
+
+echo "Removing orphaned dependencies"
+sudo pacman -Qtdq | sudo pacman -Rns -
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
 echo "creating XDG directories"
