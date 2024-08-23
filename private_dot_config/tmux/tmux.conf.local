@@ -477,15 +477,15 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
-# # set -g @plugin 'tmux-plugins/tmux-resurrect'
-# set -g @plugin 'tmux-plugins/tmux-continuum'
-# set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'christoomey/vim-tmux-navigator'
 #
 # # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
 # set -g @sessionx-bind 'f'
 
-# set -g @continuum-restore 'on'
+set -g @continuum-restore 'on'
 # set -g @resurrect-capture-pane-contents 'on'
 #
 # -- custom variables ----------------------------------------------------------
