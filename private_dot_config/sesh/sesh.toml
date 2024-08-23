@@ -4,7 +4,6 @@ startup_command = "nvim"
 [[session]]
 name = "home 🏡"
 path = "~"
-startup_command = "yazi"
 
 [[session]]
 name = "work 💼"
