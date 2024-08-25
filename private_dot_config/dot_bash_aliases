@@ -1,5 +1,5 @@
 alias ari="aria2c"
-alias c="clear"
+alias clr="clear"
 alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
@@ -44,30 +44,33 @@ alias ytd="yt-dlp --embed-metadata --embed-subs"
 alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
 alias yolo='git commit --allow-empty-message -m "" && git push origin master'
 
-alias hg='history | grep'
+alias hg='history | fzf'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
 
 # Copy / paste
+# TODO: make this de independent so it works on both x and wayland
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-alias update-submodules=""git submodule update --remote
+# tmux alias 
+
 
 # Edit config files
-alias envim="$EDITOR ~/.config/nvim"
+alias evim="$EDITOR ~/.config/nvim"
 alias ebin="$EDITOR ~/.config/bin"
 alias ezsh="$EDITOR $ZDOTDIR/.zshrc"
 alias ehypr="$EDITOR ~/.config/hypr/"
-alias edotfiles="$EDITOR ~/.local/share/chezmoi/"
-alias ewezterm="$EDITOR ~/.config/wezterm/"
+alias edot="$EDITOR ~/.local/share/chezmoi/"
+alias ewez="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
-alias ealias= "$EDITOR ~/.config/.bash_aliases"
-alias etmux="$EDITOR ~/.config/tmux/tmux.conf.local"
+alias ealias="$EDITOR ~/.config/.bash_aliases"
+alias emux="$EDITOR ~/.config/tmux/tmux.conf.local"
+alias emise="$EDITOR ~/.config/mise/"
 
 #  unmanages the file from chezmoi also deletes it
 czx() {
@@ -116,12 +119,10 @@ alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
-alias tmux_kill="pkill -f tmux"
+alias tkill="pkill -f tmux"
 
 ## npm aliases
 alias n="npm"
-alias ni="npm install"
-
 
 ## yarn aliases
 # alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
