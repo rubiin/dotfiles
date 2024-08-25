@@ -3,7 +3,6 @@ serve
 neovim
 taze
 release-it
-tsx
 yarn
 tree-sitter-cli
 types-installer
@@ -17,4 +16,3 @@ json-server
 redis-cli
 @biomejs/biome
 pnpm
-@antfu/ni
