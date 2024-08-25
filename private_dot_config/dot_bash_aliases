@@ -15,6 +15,7 @@ alias dc="docker-com"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
+alias ms="mise"
 alias lx="lite-xl"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
