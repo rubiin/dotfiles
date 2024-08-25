@@ -124,6 +124,9 @@ alias tkill="pkill -f tmux"
 
 ## npm aliases
 alias n="npm"
+alias nrs="npm run start"
+alias nrd="npm run start:dev"
+alias nrr="npm run start:repl" #useful for nestjs repl mode
 
 ## yarn aliases
 # alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
@@ -148,14 +151,11 @@ alias most-used="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -
 alias net="ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'"
 
 # Redis
-alias start-redis="docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
+alias start-redis="docker rm -f some-redis;docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
 alias flush-redis="redis-cli FLUSHALL"
 
 # Postgres
-alias start-postgres="docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:alpine"
-
-#docker
-alias pg-docker-start="docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"
+alias start-postgres="docker rm -f some-postgres;docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"
 
 # Get latest container ID
 alias dl="docker ps -l -q"
