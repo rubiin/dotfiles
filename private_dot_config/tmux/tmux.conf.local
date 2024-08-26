@@ -373,45 +373,11 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # -- user customizations -------------------------------------------------------
 
-set -sg escape-time 0
-unbind %    # split-window -h
-unbind '"'  # split-window
-unbind -    # ohmytmux split vertical
-bind | split-window -h
-bind-key Space set-window-option synchronize-panes
-
-
-# Kill pane/window/session shortcuts
-bind x kill-pane
-bind X kill-window
-bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
-bind Q confirm-before -p "kill-session #S? (y/n)" kill-session
-
-bind f display-popup -E "\
-     tmux list-sessions -F '#{?session_attached,,#{session_name}}' |\
-     sed '/^$/d' |\
-     fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
-     xargs tmux switch-client -t"
-
-
-# this is the place to override or undo settings
-
 # increase history size
-set -g history-limit 999999
-
-# refresh 'status-left' and 'status-right' more often
-set -g status-interval 5
-set -g display 1500
+#set -g history-limit 10000
 
 # start with mouse mode enabled
-set -g mouse on
-
-# use prefix+<c-p> for previous window and prefix+<c-n> for next window
-bind-key C-p previous-window
-bind-key C-n next-window
-
-# Allow the arrow key to be used immediately after changing windows
-set-option -g repeat-time 0
+#set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -419,14 +385,20 @@ set-option -g repeat-time 0
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-set -gu prefix1
-unbind C-b
+# set -gu prefix2
+# unbind C-a
+# unbind C-b
+# set -g prefix C-a
+# bind C-a send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
 # move status line to top
-set -g status-position top
+#set -g status-position top
+
+source "~/.config/tmux/keybinds.conf"
+source "~/.config/tmux/options.conf"
 
 # -- tpm -----------------------------------------------------------------------
 
