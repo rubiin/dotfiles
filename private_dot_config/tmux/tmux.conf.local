@@ -269,7 +269,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" 👽 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}, %R , %d %b | #{username}#{root} "
+tmux_conf_theme_status_right="Online: #{online_status} #{prefix}#{mouse}#{pairing}#{synchronized}, %d %b %R | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_8"
@@ -393,18 +393,6 @@ bind f display-popup -E "\
      fzf --reverse --header jump-to-session --preview 'tmux capture-pane -pt {}'  |\
      xargs tmux switch-client -t"
 
-bind-key "o" run-shell "sesh connect \"$(
-	sesh list -i | fzf-tmux -p 55%,60% \
-		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
-		--header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
-		--bind 'tab:down,btab:up' \
-		--bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
-		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -t)' \
-		--bind 'ctrl-g:change-prompt(  )+reload(sesh list -c)' \
-		--bind 'ctrl-x:change-prompt(󱁿  )+reload(sesh list -z)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
-		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
-)\""
 
 
 # this is the place to override or undo settings
@@ -440,7 +428,6 @@ unbind C-b
 
 # move status line to top
 set -g status-position top
-
 
 # -- tpm -----------------------------------------------------------------------
 
@@ -480,12 +467,18 @@ tmux_conf_uninstall_plugins_on_reload=true
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
-#
+set -g @plugin 'tmux-plugins/tmux-online-status'    # Are we connected to the internet?!
+
+set -g @route_to_ping "google.com"   # Use a UK based site to ping
+set -g @online_icon "#[fg=$color_gray]"
+set -g @offline_icon "#[fg=$color_red]"
 # # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
 # set -g @sessionx-bind 'f'
+set -g @resurrect-save 'S'                          # Save the session
+set -g @resurrect-restore 'R'                       # Reload the session
+set -g @continuum-restore 'off'     
 
-set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 #
 # -- custom variables ----------------------------------------------------------
