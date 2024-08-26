@@ -397,8 +397,8 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # move status line to top
 #set -g status-position top
 
-source "~/.config/tmux/keybinds.conf"
-source "~/.config/tmux/options.conf"
+source "$XDG_CONFIG_HOME/tmux/conf/keybinds.conf"
+source "$XDG_CONFIG_HOME/tmux/conf/options.conf"
 
 # -- tpm -----------------------------------------------------------------------
 
