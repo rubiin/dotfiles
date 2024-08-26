@@ -269,7 +269,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" 👽 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right="#{online_status}  #{prefix}#{mouse}#{pairing}#{synchronized}, #[fg=yellow] %a %d/%m #[fg=green] %H:%M  | #{username}#{root} "
+tmux_conf_theme_status_right="#{online_status} #{prefix}#{mouse}#{pairing}#{synchronized}, #[fg=yellow] %a %d/%m #[fg=green] %H:%M  | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_8"
@@ -435,13 +435,21 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
-#set -g @plugin 'tmux-plugins/tmux-copycat'
-#set -g @plugin 'tmux-plugins/tmux-cpu'
-#set -g @plugin 'tmux-plugins/tmux-resurrect'
-#set -g @plugin 'tmux-plugins/tmux-continuum'
-#set -g @continuum-restore 'on'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-online-status'    # Are we connected to the internet?!
 
-source "$XDG_CONFIG_HOME/tmux/conf/plugins.conf" 
+# # once comfortable with above , you may switch to this plugin
+# set -g @plugin 'omerxx/tmux-sessionx'
+# set -g @sessionx-bind 'f'
+set -g @online_icon "ok"
+set -g @offline_icon "offline!"
+set -g @resurrect-save 'S'                          # Save the session
+set -g @resurrect-restore 'R'                       # Reload the session
+set -g @continuum-restore 'off'     
+set -g status-interval 5
+set -g @resurrect-capture-pane-contents 'on'
 
 # -- custom variables ----------------------------------------------------------
 
