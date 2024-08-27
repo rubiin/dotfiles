@@ -14,9 +14,7 @@ func GetSongName(ch chan string, wg *sync.WaitGroup) {
 		panic(err)
 	}
 
-	songName := string(response)
-
-	songName = strings.Trim(songName, " ") // trim spaces around
+	songName := strings.TrimSpace(string(response)) // trim spaces around
 	songName = songName[0:30]
 
 	ch <- songName
@@ -30,10 +28,8 @@ func GetPlayerStatus(ch chan string, wg *sync.WaitGroup) {
 		panic(err)
 	}
 
-	status := string(response)
-
-	status = strings.Trim(status, " ") // trim spaces around
-
+	status := strings.TrimSpace(string(response)) // trim spaces around
+	status = strings.Trim(status, "\n")
 	ch <- status
 	wg.Done()
 }
@@ -59,10 +55,9 @@ func main() {
 	close(songNameCh)
 	close(songStatusCh)
 
-	songName := strings.TrimSpace(<-songNameCh)
+	songName := <-songNameCh
 
-	songStatus := strings.Trim(<-songStatusCh, "\n")
-	songStatus = strings.TrimSpace(songStatus)
+	songStatus := <-songStatusCh
 
 	icon, exists := statusMap[songStatus]
 
