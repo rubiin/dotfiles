@@ -83,7 +83,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(evalcache zsh-autosuggestions zsh-syntax-highlighting)
 
 setopt NO_BEEP                   # No bell: Shut up Zsh
 setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
