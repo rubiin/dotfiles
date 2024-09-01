@@ -45,7 +45,6 @@
 .local/include
 .local/lib/
 .local/pipx/
-.local/share/
 .local/state/
 # .m2/
 # .macports/
