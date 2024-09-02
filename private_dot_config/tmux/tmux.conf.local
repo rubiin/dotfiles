@@ -439,7 +439,7 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'fcsonline/tmux-thumbs'
+set -g @plugin 'Morantron/tmux-fingers'
 # # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
 # set -g @sessionx-bind 'f'
