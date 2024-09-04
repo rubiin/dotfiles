@@ -6,8 +6,9 @@
 # for example, .nvmrc in the case of nodejs's nvm
 legacy_version_file = true # enabled by default (different than asdf)
 
-# configure `rtx install` to always keep the downloaded archive
-always_keep_download = false # deleted after install by default
+# configure `mise install` to always keep the downloaded archive
+always_keep_download = false        # deleted after install by default
+always_keep_install = false         # deleted on failure by default
 
 # configure how frequently (in minutes) to fetch updated plugin repository changes
 # this is updated whenever a new runtime is installed
@@ -16,7 +17,7 @@ plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
 
 verbose = false     # set to true to see full installation output, see `RTX_VERBOSE`
 asdf_compat = false # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
-jobs = 4            # number of plugins or runtimes to install in parallel. The default is `4`.
+jobs = 6           # number of plugins or runtimes to install in parallel. The default is `4`.
 raw = false         # set to true to directly pipe plugins to stdin/stdout/stderr
 
 experimental = false # enable experimental features such as shims
@@ -24,7 +25,6 @@ experimental = false # enable experimental features such as shims
 
 
 [tools]
-nodejs = "20.14.0"
 ruby = "3.3.4"
 rust = "1.80.1"
 neovim = "0.10.0"
