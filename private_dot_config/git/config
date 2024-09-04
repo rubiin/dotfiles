@@ -143,6 +143,7 @@
 	b = branch
 	bc = branch --contains
 	bd = branch --delete --force
+	bdi = !~/.config/bin/git-extras/git-branch-delete
 	bl = branch -vv
 	br = branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	bla = branch --all -vv
