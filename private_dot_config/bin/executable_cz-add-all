@@ -5,7 +5,6 @@ config=$XDG_CONFIG_HOME
 file_folder_list=("$config/tmux"
    "$config/.bash_aliases"
    "$HOME/.bashenv"
-   "$HOME/.bashenv"
    "$HOME/.bash_profile"
    "$HOME/sudoers.lecture"
    "$HOME/themes.gitconfig"
@@ -21,6 +20,7 @@ file_folder_list=("$config/tmux"
    "$config/topgrade.toml"
    "$config/mimeapps.list"
    "$config/hypr/userprefs.conf"
+   "$config/hypr/hyprshade.toml"
    "$config/persepolis_download_manager/persepolis.conf"
    "$config/electron-flags.conf"
    "$config/aria2/aria2.conf"
@@ -41,6 +41,7 @@ file_folder_list=("$config/tmux"
    "$config/lazygit"
    "$config/dolphinrc"
    "$config/zathura"
+   "$config/safeeyes/safeeyes.json"
 )
 
 ## now loop through the above array
