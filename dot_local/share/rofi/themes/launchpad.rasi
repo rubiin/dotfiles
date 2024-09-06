@@ -1,95 +1,186 @@
 
-* {
-    bg0:  #24242480;
-    bg1:  #363636;
-    bg2:  #f5f5f520;
-    bg3:  #f5f5f540;
-    bg4:  #0860f2E6;
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
 
-    fg0:  #f5f5f5;
-    fg1:  #f5f5f580;
 
-    background-color: transparent;
-    text-color:       @fg0;
-    padding:          0px;
-    margin:           0px;
+*{
     font:                        "JetBrainsMono Nerd Font 10";
+  
+    // catpuccin colors
+    background:     #1E1D2FFF;
+    background-alt: #282839FF;
+    foreground:     #D9E0EEFF;
+    selected:       #7AA2F7FF;
+    active:         #ABE9B3FF;
+    urgent:         #F28FADFF;
 }
 
+
+/*****----- Configuration -----*****/
 configuration {
- // set config options here
     modi:                       "drun";
     show-icons:                 true;
     display-drun:               "";
     drun-display-format:        "{name}";
 }
 
+/*****----- Global Properties -----*****/
+
+/*****----- Main Window -----*****/
 window {
-  fullscreen: true;
-  padding: 1em;
-  background-color: @bg0;
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  true;
+    width:                       1366px;
+    height:                      768px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    cursor:                      "default";
 }
 
+/*****----- Main Box -----*****/
 mainbox {
-  padding:  8px;
+    enabled:                     true;
+    spacing:                     100px;
+    margin:                      0px;
+    padding:                     100px 225px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
 }
 
+/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0% 40%;
+    margin:                      0% 28%;
     padding:                     10px;
-    border:                      0px solid;
-    border-radius:               10px;
-    border-color:                @bg3;
+    border:                      1px solid;
+    border-radius:               6px;
+    border-color:                white / 25%;
     background-color:            white / 5%;
-    text-color:                  @bg2;
-    children:                    ["icon-search", "prompt", "entry" ];
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
 }
 
 prompt {
-  enabled:  false;
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
 }
-
-icon-search {
-  expand:   false;
-  filename: "search";
-  vertical-align: 0.5;
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            transparent;
+    text-color:                  inherit;
 }
-
 entry {
-  placeholder:        "Search";
-  placeholder-color:  @bg2;
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
 }
 
+/*****----- Listview -----*****/
 listview {
-  margin:   48px calc( 50% - 560px );
-  spacing:  48px;
-  columns:  6;
-  fixed-columns: true;
+    enabled:                     true;
+    columns:                     7;
+    lines:                       4;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
 }
 
-element, element-text, element-icon {
-  cursor: pointer;
-}
-
+/*****----- Elements -----*****/
 element {
-  padding:      8px;
-  spacing:      4px;
-
-  orientation:    vertical;
-  border-radius:  16px;
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     35px 10px;
+    border:                      0px solid;
+    border-radius:               15px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
 }
-
-element selected {
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
     background-color:            white / 5%;
+    text-color:                  @foreground;
 }
-
 element-icon {
-  size: 4em;
-  horizontal-align: 0.5;
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        72px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
 }
 
-element-text {
-  horizontal-align: 0.5;
+/*****----- Message -----*****/
+error-message {
+    padding:                     100px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            black / 10%;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
 }
