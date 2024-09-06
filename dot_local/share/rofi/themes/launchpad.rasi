@@ -1,0 +1,95 @@
+
+* {
+    bg0:  #24242480;
+    bg1:  #363636;
+    bg2:  #f5f5f520;
+    bg3:  #f5f5f540;
+    bg4:  #0860f2E6;
+
+    fg0:  #f5f5f5;
+    fg1:  #f5f5f580;
+
+    background-color: transparent;
+    text-color:       @fg0;
+    padding:          0px;
+    margin:           0px;
+    font:                        "JetBrainsMono Nerd Font 10";
+}
+
+configuration {
+ // set config options here
+    modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+    drun-display-format:        "{name}";
+}
+
+window {
+  fullscreen: true;
+  padding: 1em;
+  background-color: @bg0;
+}
+
+mainbox {
+  padding:  8px;
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0% 40%;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @bg3;
+    background-color:            white / 5%;
+    text-color:                  @bg2;
+    children:                    ["icon-search", "prompt", "entry" ];
+}
+
+prompt {
+  enabled:  false;
+}
+
+icon-search {
+  expand:   false;
+  filename: "search";
+  vertical-align: 0.5;
+}
+
+entry {
+  placeholder:        "Search";
+  placeholder-color:  @bg2;
+}
+
+listview {
+  margin:   48px calc( 50% - 560px );
+  spacing:  48px;
+  columns:  6;
+  fixed-columns: true;
+}
+
+element, element-text, element-icon {
+  cursor: pointer;
+}
+
+element {
+  padding:      8px;
+  spacing:      4px;
+
+  orientation:    vertical;
+  border-radius:  16px;
+}
+
+element selected {
+    background-color:            white / 5%;
+}
+
+element-icon {
+  size: 4em;
+  horizontal-align: 0.5;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
