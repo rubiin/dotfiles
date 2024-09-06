@@ -1,3 +1,9 @@
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+#stop at page boundaries
+set smooth-scroll "true"
+
 set completion-group-bg         "#282828"
 set completion-group-fg         "#ebdbb2"
 set completion-bg               "#282828"
@@ -31,7 +37,6 @@ set default-fg                  "#001512"
 set recolor-lightcolor          "#282828"
 set recolor-darkcolor           "#ebdbb2"
 
-
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
@@ -52,3 +57,8 @@ map J zoom out
 map i recolor
 set recolor                     true
 map p prinit
+
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
