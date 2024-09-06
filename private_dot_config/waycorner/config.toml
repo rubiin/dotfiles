@@ -4,15 +4,15 @@
 
 # Command to run when cursor enters hotcorner.
 # `command` is an alias for `enter_command`.
-enter_command = [ "notify-send", "enter" ]
+enter_command = [ "rofi", "-show","drun","-theme","launchpad" ]
 # Command to run when cursor exits hotcorner.
-exit_command = [ "notify-send", "exit" ]
+exit_command = [ "notify-send", "rofi" ]
 
 # Locations of the hot corners.
 # Options:
 # - for corners: top_left, top_right, bottom_right, and bottom_left;
 # - for edges: top, bottom, right, left.
-locations = ["bottom_right", "bottom_left"]  # default
+locations = ["top_left"]  # default
 
 # Size of the hot corners in pixels, for edges the size means the width
 # for vertical edges, and height for horizontal edges. The other dimension
@@ -24,10 +24,10 @@ size = 10  # default
 margin = 20  # default
 
 # Timeout in milliseconds before command is triggered.
-timeout_ms = 250  # default
+timeout_ms = 100  # default
 
 # Hex color of the corner when previewed, supports transparency. (#AARRGGBB or #RRGGBB)
-# (Useful for debuging purposes when setting up several hot corners.)
+# (Useful for debugging purposes when setting up several hot corners.)
 
 # Optional output config to specify what output to use.
 [left.output]
