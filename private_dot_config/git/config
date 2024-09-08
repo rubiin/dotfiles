@@ -28,6 +28,13 @@
 	untrackedCache = true
 	# Don't consider trailing space change as a cause for merge conflicts
  	whitespace=trailing-space,cr-at-eol,tabwidth=4
+	packedGitLimit = 512m 
+	packedGitWindowSize = 512m 
+
+[pack] 
+	deltaCacheSize = 2047m 
+	packSizeLimit = 2047m 
+	windowMemory = 2047m
 
 [sequence]
 	editor = interactive-rebase-tool
@@ -380,3 +387,5 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[http]
+	postBuffer = 157286400
