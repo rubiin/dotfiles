@@ -1,5 +1,8 @@
 #! /bin/sh
 
+set -e
+set -u
+
 # installs cargo dependencies
 cargo install ttyper ripgrep stylua wl-gammarelay-rs cargo-update cargo-cache waycorner
 cargo install --git https://github.com/loichyan/nerdfix.git

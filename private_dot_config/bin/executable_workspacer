@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+set -e
+set -u
+
+
 function clockin() {
   hyprctl dispatch exec [workspace 1 silent] vivaldi-stable
   hyprctl dispatch exec [workspace 3 silent] code

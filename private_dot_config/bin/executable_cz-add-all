@@ -1,5 +1,9 @@
 #! /bin/bash
 
+
+set -e
+set -u
+
 config=$XDG_CONFIG_HOME
 
 file_folder_list=("$config/tmux"

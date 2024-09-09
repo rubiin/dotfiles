@@ -1,5 +1,8 @@
 #!/bin/sh
 
+set -e
+set -u
+
 # Function to ask yes/no question with a default value
 ask_yes_no_default() {
 	prompt="$1 (Y/n)"
