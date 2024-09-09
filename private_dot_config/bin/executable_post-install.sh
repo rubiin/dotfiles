@@ -1,5 +1,7 @@
 #!/usr/bin/env 
 
+set -e
+set -u
 
 # post install and configure everything
 

@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+set -u
 # Sets up python and installs python's dependencies
 yay -S python-pip python-pipx
 pipx ensurepath

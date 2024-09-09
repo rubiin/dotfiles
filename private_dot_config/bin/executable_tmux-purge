@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -u
+
 detached=`tmux ls | grep -E -v "attached" | awk '{gsub(/:/,"");print $1}'`
 
 for session in $detached; do
