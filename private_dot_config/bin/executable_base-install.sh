@@ -1,7 +1,8 @@
 #!/bin/sh
 
-set -e
-set -u
+set -uo pipefail
+trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
+IFS=$'\n\t'
 
 # Function to ask yes/no question with a default value
 ask_yes_no_default() {
