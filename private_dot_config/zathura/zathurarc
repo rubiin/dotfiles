@@ -1,3 +1,6 @@
+
+include catppuccin-mocha
+
 # Open document in fit-width mode by default
 set adjust-open "best-fit"
 
@@ -7,38 +10,6 @@ set pages-per-row 1
 #stop at page boundaries
 set smooth-scroll "true"
 
-set completion-group-bg         "#282828"
-set completion-group-fg         "#ebdbb2"
-set completion-bg               "#282828"
-set completion-fg               "#ebdbb2"
-set completion-highlight-bg     "#458588"
-set completion-highlight-fg     "#ebdbb2"
-
-set notification-error-bg       "#3c3836"
-set notification-error-fg       "#ebdbb2"
-set notification-warning-bg     "#3c3836"
-set notification-warning-fg     "#ebdbb2"
-set notification-bg             "#3c3836"
-set notification-fg             "#ebdbb2"
-
-set index-bg                    "#1d2021"
-set index-fg                    "#ebdbb2"
-set index-active-bg             "#282828"
-set index-active-fg             "#ebdbb2"
-
-set inputbar-bg                 "#3c3836"
-set inputbar-fg                 "#ebdbb2"
-
-set statusbar-bg                "#282828"
-set statusbar-fg                "#ebdbb2"
-
-set highlight-color             "#458588"
-set highlight-active-color      "#458588"
-
-set default-bg                  "#1d2021"
-set default-fg                  "#001512"
-set recolor-lightcolor          "#282828"
-set recolor-darkcolor           "#ebdbb2"
 
 set statusbar-h-padding 0
 set statusbar-v-padding 0
@@ -58,7 +29,7 @@ map R rotate
 map K zoom in
 map J zoom out
 map i recolor
-set recolor                     true
+set recolor true
 map p prinit
 
 
