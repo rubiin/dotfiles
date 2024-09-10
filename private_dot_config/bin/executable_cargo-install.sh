@@ -6,7 +6,7 @@ IFS=$'\n\t'
 
 
 # installs cargo dependencies
-cargo install ttyper ripgrep stylua cargo-update cargo-cache waycorner
+cargo install ttyper stylua cargo-update waycorner
 cargo install --git https://github.com/loichyan/nerdfix.git
 echo 'Cargo Setup Done with all its packages'
 
