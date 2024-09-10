@@ -1,6 +1,9 @@
 # Open document in fit-width mode by default
 set adjust-open "best-fit"
 
+# One page per row by default
+set pages-per-row 1
+
 #stop at page boundaries
 set smooth-scroll "true"
 
