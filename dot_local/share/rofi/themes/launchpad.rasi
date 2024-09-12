@@ -1,26 +1,10 @@
 
 /**
  *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Super launcher rofi
  **/
 
-
-*{
-    font:                        "JetBrainsMono Nerd Font 10";
-  
-    // catpuccin colors
-    background:     #1E1D2FFF;
-    background-alt: #282839FF;
-    foreground:     #D9E0EEFF;
-    selected:       #7AA2F7FF;
-    active:         #ABE9B3FF;
-    urgent:         #F28FADFF;
-}
-
+@theme "~/.config/rofi/theme.rasi"
 
 /*****----- Configuration -----*****/
 configuration {
@@ -48,7 +32,7 @@ window {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @select-fg;
     background-color:            black / 10%;
     cursor:                      "default";
 }
@@ -61,7 +45,7 @@ mainbox {
     padding:                     100px 225px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
-    border-color:                @selected;
+    border-color:                @select-fg;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -76,7 +60,7 @@ inputbar {
     border-radius:               6px;
     border-color:                white / 25%;
     background-color:            white / 5%;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -119,16 +103,16 @@ listview {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @select-fg;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
 }
 scrollbar {
     handle-width:                5px ;
-    handle-color:                @selected;
+    handle-color:                @select-fg;
     border-radius:               0px;
-    background-color:            @background-alt;
+    background-color:            @main-br;
 }
 
 /*****----- Elements -----*****/
@@ -139,19 +123,19 @@ element {
     padding:                     35px 10px;
     border:                      0px solid;
     border-radius:               15px;
-    border-color:                @selected;
+    border-color:                @select-fg;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
     orientation:                 vertical;
     cursor:                      pointer;
 }
 element normal.normal {
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
 }
 element selected.normal {
     background-color:            white / 5%;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
 }
 element-icon {
     background-color:            transparent;
@@ -173,13 +157,13 @@ error-message {
     padding:                     100px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @select-fg;
     background-color:            black / 10%;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
 }
 textbox {
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @main-fg;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
