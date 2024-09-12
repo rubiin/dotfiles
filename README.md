@@ -40,7 +40,7 @@ Here are some details about my setup:
   - [fzf](https://github.com/junegunn/fzf)          : A command-line fuzzy finder
   - [eza](https://github.com/ogham/exa)             : A modern replacement for ‘ls’
   - [btop](https://github.com/aristocratos/btop)    : A monitor of resources
-- **Bar**                          : [waybar](https://github.com/polybar/polybar) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
+- **Bar**                          : [waybar](https://github.com/Alexays/Waybar) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
   - Catppucin theme(dark)
   - Gruvbox theme (dark)
   - Nord theme (dark)
