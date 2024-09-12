@@ -75,6 +75,11 @@ ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
+
+echo "installing flatpaks"
+flatpak install flathub org.feichtmeier.Musicpod
+
+
 echo "Installing bat themes"
 bat cache --build
 
