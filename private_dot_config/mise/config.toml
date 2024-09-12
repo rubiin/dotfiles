@@ -25,9 +25,10 @@ experimental = false # enable experimental features such as shims
 
 
 [tools]
-ruby = "3.3.4"
 neovim = "0.10.0"
 node = "20.17.0"
 go = "latest"
 rust = "latest"
 bun = "latest"
+deno = "latest"
+ruby = "latest"
