@@ -2,6 +2,7 @@ alias ari="aria2c"
 alias clr="clear"
 alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
+alias cleancache='sudo pacman -Scc'
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune"
 alias code="code-insiders"
@@ -263,7 +264,7 @@ zsh-fix-history() {
 }
 
 if [ "$TERM" = "wezterm" ]; then
-	alias fastfetch='fastfetch --logo-type iterm --logo-height 18 --logo-width 34'
+	alias fastfetch='fastfetch --logo-type kitty-direct --logo-height 18 --logo-width 34'
 fi
 
 function calcram() {
