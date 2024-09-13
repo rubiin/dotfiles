@@ -20,15 +20,19 @@ asdf_compat = false # set to true to ensure .tool-versions will be compatible wi
 jobs = 6           # number of plugins or runtimes to install in parallel. The default is `4`.
 raw = false         # set to true to directly pipe plugins to stdin/stdout/stderr
 
-experimental = false # enable experimental features such as shims
+experimental = true # enable experimental features such as shims
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 
 [tools]
-neovim = "0.10.0"
+neovim = "latest"
 node = "20.17.0"
 go = "latest"
 rust = "latest"
 bun = "latest"
 deno = "latest"
 ruby = "latest"
+"cargo:ttyper" = "latest"
+"cargo:stylua" = "latest"
+"cargo:waycorner" = "latest"
+"cargo:cargo-update" = "latest"
