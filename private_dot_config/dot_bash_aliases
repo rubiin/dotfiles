@@ -46,7 +46,6 @@ alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE
 alias yolo='git commit --allow-empty-message -m "" && git push origin master'
 
 alias hg='history | fzf'
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
