@@ -33,6 +33,7 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 export LESSHISTFILE=/tmp/less-hist
 export TERMINFO="$XDG_DATA_HOME"/terminfo
 export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
+export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 
 # Wget
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
