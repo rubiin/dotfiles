@@ -10,8 +10,9 @@
 configuration {
     modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "";
+    display-drun:                " ";
     drun-display-format:        "{name}";
+    font:                        "JetBrainsMono Nerd Font 10";
 }
 
 /*****----- Global Properties -----*****/
