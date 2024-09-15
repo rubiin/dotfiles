@@ -41,11 +41,9 @@ git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts || exit
 ./install.sh
 
-
 echo "Setting hyprshade"
 hyprshade install
 systemctl --user enable --now hyprshade.timer
-
 
 ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji fontforge gnu-free-fonts ttf-joypixels typos ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
@@ -71,14 +69,13 @@ ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
 	git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open &&
 	git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache &&
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+		${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
-
 echo "installing flatpaks"
 flatpak install flathub org.feichtmeier.Musicpod
-
 
 echo "Installing bat themes"
 bat cache --build
