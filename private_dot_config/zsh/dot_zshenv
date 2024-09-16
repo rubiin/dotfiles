@@ -16,6 +16,7 @@ export READER="zathura"
 export CODEEDITOR="vscodium"
 export PAGER="less"
 export WM="hyprland"
+export MANPAGER="nvim +Man!"
 
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
