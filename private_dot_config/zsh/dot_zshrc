@@ -107,6 +107,7 @@ ZSH_CONFIG_FILES=(
 	"$XDG_CONFIG_HOME/.bash_aliases"
 	/usr/share/hyde-cli/Hyde.zsh
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
+	"$ZDOTDIR/insulter"
 )
 
 for filename in "${ZSH_CONFIG_FILES[@]}"; do
