@@ -1,106 +1,11 @@
-#--------------------------------------------------------------#
-##          Environment Variables                             ##
-#--------------------------------------------------------------#
+#
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-export LC_ALL="${LC_ALL:-en_US.UTF-8}"
-export LANG="${LANG:-en_US.UTF-8}"
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# default apps
-export BROWSER="vivaldi"
-export EDITOR="nvim"
-export VISUAL="code-insiders"
-export READER="zathura"
-export CODEEDITOR="vscodium"
-export PAGER="less"
-export WM="hyprland"
-export MANPAGER="nvim +Man!"
-
-# cleaning up home folder
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DESKTOP_DIR="$HOME/Desktop"
-export XDG_DOWNLOAD_DIR="$HOME/Downloads"
-export XDG_TEMPLATES_DIR="$HOME/Templates"
-export XDG_PUBLICSHARE_DIR="$HOME/Public"
-export XDG_DOCUMENTS_DIR="$HOME/Documents"
-export XDG_MUSIC_DIR="$HOME/Music"
-export XDG_PICTURES_DIR="$HOME/Pictures"
-export XDG_VIDEOS_DIR="$HOME/Videos"
-export LESSHISTFILE=/tmp/less-hist
-export TERMINFO="$XDG_DATA_HOME"/terminfo
-export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
-export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
-
-# Wget
-export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
-
-# lazygit
-export LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml"
-
-# zsh specific
-export HISTFILE="$XDG_CONFIG_HOME/zsh/.zsh_history"
-export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
-export HISTSIZE=10000
-export SAVEHIST=10000
-
-
-export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
-export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
-export GOPATH="$XDG_DATA_HOME/go"
-
-# mise stuffs
-export MISE_GO_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-go-packages"
-export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
-
-# fzf defaults
-export FZF_DEFAULT_COMMAND="rg --files"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS="  \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 --height=50% --border --min-height=25 --pointer='→'"
-
-# ripgrep
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
-
-export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins/tpm"
-
-export TERMINFO="$XDG_DATA_HOME"/terminfo
-export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
-
-# custom executable path
-export PATH="$XDG_CONFIG_HOME/bin:$PATH"
-export PATH="$XDG_CONFIG_HOME/bin/git-extras:$PATH"
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-	PATH="$HOME/.local/bin:$PATH"
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-
-# cargo
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}"
-
-# Don’t clear the screen after quitting a manual page.
-export MANPAGER="less -X"
-
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
-
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768'
-
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE="sloppy"
-
-# npm config
-export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
