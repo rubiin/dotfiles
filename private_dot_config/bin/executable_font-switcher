@@ -1,4 +1,10 @@
 #!/bin/bash
+
+#  Author: Rubin Bhandari <roobin.bhandari@gmail.com>
+#  Date: 2024-09-18
+#  GitHub: https://github.com/rubiin
+#  Twitter: https://twitter.com/RubinCodes
+
 # Pick a preconfigured theme
 font_name=$(fc-list : family | awk -F "," '{ if (NF>1) print $2 }' | sort | fzf)
 
@@ -10,6 +16,4 @@ sed -i "s/font_family.*/font_family    '$font_name'/" ~/.config/kitty/kitty.conf
 
 ## change wezterm font
 ## change vscode font
-sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
-sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
-sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.jso
+sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json

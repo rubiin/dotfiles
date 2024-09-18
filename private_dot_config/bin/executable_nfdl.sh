@@ -1,9 +1,11 @@
 #!/bin/bash
 
-## Author  : Rubin Bhandari (rubiin)
-## Mail    : roobin.bhandari@gmail.com
-## Github  : @rubiin
-## Twitter : @RubinCodes
+#  Author: Rubin Bhandari <roobin.bhandari@gmail.com>
+#  Date: 2024-09-18
+#  GitHub: https://github.com/rubiin
+#  Twitter: https://twitter.com/RubinCodes
+
+
 
 # Define the base URL for the Nerd Fonts releases
 BASE_NERD_FONTS_URL="https://github.com/ryanoasis/nerd-fonts/releases/download"
