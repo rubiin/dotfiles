@@ -28,7 +28,7 @@ Magical objects that make certain computers extremely use-able for me.
 
 Here are some details about my setup:
 
-- **Window Manager**               : [hypr](https://github.com/hyprwm/Hypr)  
+- **Window Manager**               : [hypr](https://github.com/hyprwm/Hypr)
 - **Shell**                        : [zsh](https://github.com/zsh-users/zsh)
   - [powerlevel10k-prompt](https://github.com/romkatv/powerlevel10k)                               : Minimalistic, powerful and extremely customizable Zsh prompt
   - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                : A next-generation framework for zsh
@@ -45,9 +45,9 @@ Here are some details about my setup:
   - Gruvbox theme (dark)
   - Nord theme (dark)
   - TokyoNight theme (dark)
-- **Compositor**                   : [hyprland](https://github.com/hyprwm/Hyprland)   
+- **Compositor**                   : [hyprland](https://github.com/hyprwm/Hyprland)
 - **Notify Daemon**                : [dunst](https://wiki.archlinux.org/index.php/Dunst)
-- **Application Launcher**         : [rofi](https://github.com/davatorium/rofi)  
+- **Application Launcher**         : [rofi](https://github.com/davatorium/rofi)
 - **Editor**                       : [neovim](https://neovim.io/) -- check my configuration [here](https://github.com/rubiin/init.lua)
 - **File Manager**                 : [yazi](https://github.com/sxyazi/yazi)
 - **CLI System Information**       : [fastfetch](https://github.com/fastfetch-cli/fastfetch)
@@ -70,6 +70,17 @@ Here are some details about my setup:
 <br>
 
 </details>
+
+
+## Current Workflow
+
+| W1  | W2                                                  | W3  | W4                                                  | W5                                           | W6                                                  | W7                                                                            | W8  | W9  |    |
+| --- | --------------------------------------------------- | --- | --------------------------------------------------- | -------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------- | --- | --- | ----- |
+| [Firefox](https://wiki.archlinux.org/title/firefox)| Terminal | Editors | Utilities | File Manager | Media players |--- |  [Steam](https://wiki.archlinux.org/title/steam)/[Lutris](https://lutris.net/) | --- |
+
+- **W`id`**: Workspace with corresponding ID.
+- **`---`**: Placeholder, any app can go here.
+- **`name`**: Application that opens automatically in its designated workspace.
 
 
 ## Demo
