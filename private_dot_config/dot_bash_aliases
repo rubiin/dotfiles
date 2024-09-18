@@ -69,13 +69,13 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 # Edit config files
 alias evim="$EDITOR ~/.config/nvim"
 alias ebin="$EDITOR ~/.config/bin"
-alias ezsh="$EDITOR $ZDOTDIR/.zshrc"
+alias ezsh="$EDITOR $ZDOTDIR"
 alias ehypr="$EDITOR ~/.config/hypr/"
 alias edot="$EDITOR ~/.local/share/chezmoi/"
 alias ewez="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
 alias ealias="$EDITOR ~/.config/.bash_aliases"
-alias emux="$EDITOR ~/.config/tmux/tmux.conf.local"
+alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
 
 #  unmanages the file from chezmoi also deletes it
