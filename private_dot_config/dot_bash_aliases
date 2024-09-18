@@ -264,7 +264,7 @@ zsh-fix-history() {
 }
 
 if [ "$TERM" = "wezterm" ]; then
-	alias fastfetch='fastfetch --logo-type kitty-direct --logo-height 18 --logo-width 34'
+	alias fastfetch='fastfetch --logo-type kitty --logo-height 18 --logo-width 34'
 fi
 
 function calcram() {
