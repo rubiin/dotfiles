@@ -161,7 +161,7 @@ repos = [
     "~/.config/tmux/oh-my-tmux",
     "~/work/cit-be/",
     "~/personal/typescript/v4",
-    "~/personal/typescript/ultimate-nest"
+    "~/personal/typescript/ultimate-nest",
     "~/Documents/obsidian",
     "~/.config/nvim",
 ]
