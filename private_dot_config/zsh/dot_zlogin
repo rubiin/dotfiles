@@ -50,6 +50,8 @@ export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 # lazygit
 export LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml"
 
+export GREP_OPTIONS="--color=auto"
+
 # zsh specific
 export HISTFILE="$XDG_CONFIG_HOME/zsh/.zsh_history"
 export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
