@@ -92,8 +92,9 @@ setopt PIPE_FAIL            # tracability: exit if pipeline failed
 setopt NO_BANG_HIST         # don't expand `!`
 setopt NO_BEEP              # No bell: Shut up Zsh
 setopt NO_HUP               # don't kill background jobs when the shell exits
-setopt AUTO_CD		    # pure directory = cd into it
-
+setopt AUTO_CD              # pure directory = cd into it
+setopt CD_SILENT
+setopt CHASE_LINKS # follow symlinks when they are cd target
 
 # HISTORY 
 setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
