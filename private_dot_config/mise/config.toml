@@ -25,7 +25,6 @@ experimental = true # enable experimental features such as shims
 
 
 [tools]
-neovim = "latest"
 node = "20.17.0"
 go = "latest"
 rust = "latest"
@@ -36,3 +35,4 @@ ruby = "latest"
 "cargo:stylua" = "latest"
 "cargo:waycorner" = "latest"
 "cargo:cargo-update" = "latest"
+neovim = "latest"
