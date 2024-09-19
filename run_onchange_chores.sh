@@ -6,3 +6,4 @@ mise install
 mise prune
 bat cache --build
 Hyde reload &
+notify-send "Chezmoi finished updatimg dotfiles"
