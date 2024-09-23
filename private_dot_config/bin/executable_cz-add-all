@@ -39,7 +39,6 @@ file_folder_list=(
    "$config/kitty"
    "$config/wezterm"
    "$config/sesh"
-   "$config/lite-xl"
    "$config/yazi"
    "$config/fastfetch"
    "$config/waycorner"
@@ -48,6 +47,7 @@ file_folder_list=(
    "$config/fastfetch"
    "$config/zathura"
    "$config/safeeyes/safeeyes.json"
+   "$config/lite-xl"
    "$config/tmux"
    "$config/zsh"
 )
