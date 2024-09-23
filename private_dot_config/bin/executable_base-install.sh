@@ -89,7 +89,10 @@ echo "Setting alacritty"
 wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info && sudo tic -xe alacritty,alacritty-direct alacritty.info && rm alacritty.info
 
 echo "Setting wezterm"
-yay -S wezterm-terminfo-git
+tempfile=$(mktemp) &&
+	curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo &&
+	tic -x -o ~/.terminfo $tempfile &&
+	rm $tempfile
 
 sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
