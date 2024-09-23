@@ -40,11 +40,16 @@ export XDG_MUSIC_DIR="$HOME/Music"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 export LESSHISTFILE=/tmp/less-hist
-export TERMINFO="$XDG_DATA_HOME"/terminfo
-export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
 export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 
-# Wget
+export TERMINFO="$XDG_DATA_HOME"/terminfo
+export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
+
+# custom executable path
+export PATH="$XDG_CONFIG_HOME/bin:$PATH"
+export PATH="$XDG_CONFIG_HOME/bin/git-extras:$PATH"
+
+# wget
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 
 # lazygit
@@ -80,14 +85,9 @@ export FZF_DEFAULT_OPTS="  \
 # ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
 
+# tmux
 export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins/tpm"
 
-export TERMINFO="$XDG_DATA_HOME"/terminfo
-export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
-
-# custom executable path
-export PATH="$XDG_CONFIG_HOME/bin:$PATH"
-export PATH="$XDG_CONFIG_HOME/bin/git-extras:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
