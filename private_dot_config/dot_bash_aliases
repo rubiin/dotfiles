@@ -2,7 +2,6 @@ alias ari="aria2c"
 alias clr="clear"
 alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
-alias cleancache='sudo pacman -Scc'
 alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune"
 alias code="code-insiders"
@@ -191,6 +190,14 @@ alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # FUNCTIONS
 #───────────────────────────────────────────────────────────────────────────────
+
+clearcache() {
+	yay -Sc --noconfirm
+	sudo pacman -Runs --noconfirm $(pacman -Qttdq)
+	paccache -rvk0
+	paccache -rvk0 ~/.cache/yay
+
+}
 
 # Stop all containers
 dstop() { docker stop $(docker ps -a -q); }
