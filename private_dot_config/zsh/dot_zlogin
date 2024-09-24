@@ -25,6 +25,7 @@ export CODEEDITOR="vscodium"
 export PAGER="less"
 export WM="hyprland"
 export MANPAGER="nvim +Man!"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 # cleaning up home folder
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -41,7 +42,6 @@ export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 export LESSHISTFILE=/tmp/less-hist
 export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
-
 export TERMINFO="$XDG_DATA_HOME"/terminfo
 export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
 
