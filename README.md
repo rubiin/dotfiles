@@ -74,14 +74,15 @@ Here are some details about my setup:
 
 ## Current Workflow
 
-| W1  | W2                                                  | W3  | W4                                                  | W5                                           | W6                                                  | W7                                                                            | W8  | W9  |    |
-| --- | --------------------------------------------------- | --- | --------------------------------------------------- | -------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------- | --- | --- | ----- |
-| [Firefox](https://wiki.archlinux.org/title/firefox)| Terminal | Editors | Utilities | File Manager | Media players |--- |  [Steam](https://wiki.archlinux.org/title/steam)/[Lutris](https://lutris.net/) | --- |
+| W1  | W2                                                  | W3  | W4                                                  | W5                                           | W6                                                  | W7                                                                            | W8 |
+| --- | --------------------------------------------------- | --- | --------------------------------------------------- | -------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------- | --- |
+| [Firefox](https://wiki.archlinux.org/title/firefox)| Terminal | Editors | Utilities (postman/db client) | File Manager | Media players |--- |  [Steam](https://wiki.archlinux.org/title/steam)/[Lutris](https://lutris.net/)  |
 
 - **W`id`**: Workspace with corresponding ID.
 - **`---`**: Placeholder, any app can go here.
 - **`name`**: Application that opens automatically in its designated workspace.
 
+|> Also I move random apps that I spawn to special workspace
 
 ## Demo
 https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
