@@ -190,6 +190,10 @@ alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # FUNCTIONS
 #───────────────────────────────────────────────────────────────────────────────
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
 
 clearcache() {
 	yay -Sc --noconfirm
