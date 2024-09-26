@@ -69,6 +69,7 @@ ask_yes_no_default "Do you want to install other packages?" 0 && yay -S alacarte
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
+sheldon lock --reinstall
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 

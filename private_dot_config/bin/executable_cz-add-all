@@ -18,6 +18,7 @@ file_folder_list=(
    "$config/waybar/config.ctl"
    "$config/yay"
    "$config/topgrade.toml"
+   "$config/sheldon"
    "$config/.ripgreprc"
    "$config/wgetrc"
    "$config/vivaldi-stable.conf"
