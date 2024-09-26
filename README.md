@@ -31,8 +31,8 @@ Here are some details about my setup:
 - **Window Manager**               : [hypr](https://github.com/hyprwm/Hypr)
 - **Shell**                        : [zsh](https://github.com/zsh-users/zsh)
   - [powerlevel10k-prompt](https://github.com/romkatv/powerlevel10k)                               : Minimalistic, powerful and extremely customizable Zsh prompt
-  - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)                                                : A next-generation framework for zsh
-  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)                : Fish shell like syntax highlighting for Zsh.
+  - [sheldon](https://sheldon.cli.rs)                                                              : Sheldon is a fast, configurable, command-line tool to manage your shell plugins.
+  - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)       : Fish shell like syntax highlighting for Zsh.
   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                        : Fish-like autosuggestions for zsh
 - **Terminal**                     : [wezterm](https://github.com/wez/wezterm)
   - [lazygit](https://github.com/jonas/tig)         : Text-mode interface for git
@@ -40,6 +40,7 @@ Here are some details about my setup:
   - [fzf](https://github.com/junegunn/fzf)          : A command-line fuzzy finder
   - [eza](https://github.com/ogham/exa)             : A modern replacement for ‘ls’
   - [btop](https://github.com/aristocratos/btop)    : A monitor of resources
+  - [atuin](https://atuin.sh)                       : Sync, search and backup shell history
 - **Bar**                          : [waybar](https://github.com/Alexays/Waybar) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
   - Catppucin theme(dark)
   - Gruvbox theme (dark)
