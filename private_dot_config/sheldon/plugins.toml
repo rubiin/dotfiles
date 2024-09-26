@@ -19,8 +19,10 @@ github = "romkatv/zsh-defer"
 [templates]
 defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
 
+
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
+apply = ["defer"]
 
 [plugins.evalcache]
 github = "mroth/evalcache"
@@ -30,6 +32,7 @@ github = "romkatv/powerlevel10k"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
 
 # For example:
 #
