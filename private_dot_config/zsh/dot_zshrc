@@ -83,8 +83,6 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(evalcache zsh-autosuggestions)
-
 # GENERAL
 setopt INTERACTIVE_COMMENTS # comments in interactive mode, useful for copypasting
 setopt GLOB_DOTS            # glob includes dotfiles
@@ -109,13 +107,11 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 # setopt HIST_SAVE_NO_DUPS
 
-
+eval "$(sheldon source)"
 
 # array of files to source
 ZSH_CONFIG_FILES=(
-	"$ZSH/oh-my-zsh.sh"
 	"$XDG_CONFIG_HOME/.bash_aliases"
-	/usr/share/hyde-cli/Hyde.zsh
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
 	"$ZDOTDIR/insulter"
 )
@@ -144,7 +140,6 @@ bindkey -v
 # keybinds
 
 bindkey -s '^O' 'sesh_sessions\n'
-
 
 
 # User configuration
