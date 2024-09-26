@@ -20,7 +20,7 @@ ZSH_CONFIG_FILES=(
 	"$ZDOTDIR/config/zsh_options.zsh"
 	"$XDG_CONFIG_HOME/.bash_aliases"
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
-	"$ZDOTDIR/insulter"
+	"$ZDOTDIR/config/insulter.zsh"
 )
 
 for filename in "${ZSH_CONFIG_FILES[@]}"; do
