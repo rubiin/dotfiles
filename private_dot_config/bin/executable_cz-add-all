@@ -7,7 +7,6 @@ set -u
 config=$XDG_CONFIG_HOME
 
 file_folder_list=(
-   "$config/.bash_aliases"
    "$HOME/.bashenv"
    "$HOME/.bash_profile"
    "$HOME/sudoers.lecture"
