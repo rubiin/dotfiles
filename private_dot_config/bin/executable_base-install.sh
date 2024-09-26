@@ -67,15 +67,8 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
 
 ask_yes_no_default "Do you want to install other packages?" 0 && yay -S alacarte btop baobab swayosd-git cargo-cache topgrade-bin station-bin safeeyes chafa ktouch distrobox podman bleachbit kooha k6-bin scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep yazi eog age obsidian obs-studio pokemon-colorscripts-git just github-cli postman-bin mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck git-delta fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin lite-xl gparted vlc ktorrent persepolis
 
-ask_yes_no_default "Do you want to install Zsh with Oh My Zsh and other plugins?" 0 &&
-	sudo pacman -S zsh &&
-	rm -rf ~/.oh-my-zsh &&
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended &&
-	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
-	git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open &&
-	git clone https://github.com/mroth/evalcache ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/evalcache &&
-	git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
-		${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+echo "Installing sheldon for managing zsh and other plugins?"
+sudo pacman -S sheldon
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
