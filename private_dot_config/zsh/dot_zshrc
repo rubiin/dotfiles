@@ -17,7 +17,7 @@ eval "$(sheldon source)"
 
 # array of files to source
 ZSH_CONFIG_FILES=(
-	"$ZDOTDIR/config/zsh_options.zsh"
+	"$ZDOTDIR/config/options.zsh"
 	"$ZDOTDIR/config/.bash_aliases"
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
 	"$ZDOTDIR/config/insulter.zsh"
