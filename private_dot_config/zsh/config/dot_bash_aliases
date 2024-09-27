@@ -73,7 +73,7 @@ alias ehypr="$EDITOR ~/.config/hypr/"
 alias edot="$EDITOR ~/.local/share/chezmoi/"
 alias ewez="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
-alias ealias="$EDITOR ~/.config/.bash_aliases"
+alias ealias="$EDITOR ~/.config/zsh/config/.bash_aliases"
 alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
 
