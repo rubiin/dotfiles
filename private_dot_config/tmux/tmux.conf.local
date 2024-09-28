@@ -435,12 +435,12 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
+set -g @plugin 'ofirgall/tmux-window-name'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
-set -g @plugin 'tmux-plugins/tmux-yank'
-set -g @plugin 'Morantron/tmux-fingers'
-
+# set -g @plugin 'tmux-plugins/tmux-yank'
+# set -g @plugin 'Morantron/tmux-fingers'
 
  # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
