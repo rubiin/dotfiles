@@ -23,7 +23,9 @@ for filename in $ZDOTDIR/config/*;do
     fi
 done
 
-# array of files to source
+
+
+# array of external files to source
 ZSH_CONFIG_FILES=(
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
 )
