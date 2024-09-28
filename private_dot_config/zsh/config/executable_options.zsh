@@ -13,23 +13,24 @@ setopt AUTO_CD              # pure directory = cd into it
 setopt CD_SILENT
 setopt CHASE_LINKS # follow symlinks when they are cd target
 
-# HISTORY 
-setopt EXTENDED_HISTORY          # write the history file in the ":start:elapsed;command" format.
-setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording entry.
-setopt SHARE_HISTORY             # share history between all sessions.
-setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
-setopt HIST_NO_STORE             # ignore history command itself for the history
-setopt HIST_IGNORE_SPACE         # cmds with leading space are not added to the history
-setopt INC_APPEND_HISTORY	 # write immediately to history file
+# HISTORY
+setopt EXTENDED_HISTORY     # write the history file in the ":start:elapsed;command" format.
+setopt HIST_REDUCE_BLANKS   # remove superfluous blanks before recording entry.
+setopt SHARE_HISTORY        # share history between all sessions.
+setopt HIST_IGNORE_ALL_DUPS # delete old recorded entry if new entry is a duplicate.
+setopt HIST_NO_STORE        # ignore history command itself for the history
+setopt HIST_IGNORE_SPACE    # cmds with leading space are not added to the history
+setopt INC_APPEND_HISTORY   # write immediately to history file
 setopt EXTENDED_GLOB
 setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 
-setopt multios              # enable redirect to multiple streams: echo >file1 >file2
-setopt long_list_jobs       # show long list format job notifications
-unsetopt menu_complete   # do not autoselect the first completion entry
-unsetopt flowcontrol
-setopt auto_menu         # show completion menu on successive tab press
-setopt complete_in_word
-setopt always_to_end
+# ohmyzsh compat
+setopt MULTIOS         # enable redirect to multiple streams: echo >file1 >file2
+setopt LONG_LIST_JOBS  # show long list format job notifications
+unsetopt MENU_COMPLETE # do not autoselect the first completion entry
+unsetopt FLOWCONTROL
+setopt AUTO_MENU # show completion menu on successive tab press
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
