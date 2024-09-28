@@ -21,6 +21,7 @@ ZSH_CONFIG_FILES=(
 	"$ZDOTDIR/completions/git-extras-completion.zsh"
 	"$ZDOTDIR/config/insulter.zsh"
 	"$ZDOTDIR/config/keybinds.zsh"
+	"$ZDOTDIR/config/completions.zsh"
 )
 
 for filename in "${ZSH_CONFIG_FILES[@]}"; do
@@ -33,10 +34,7 @@ done
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 
-# tells zsh to ignore case when completing commands or filenames.
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:*:*:*:*' menu select
+
 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
 	compinit;
