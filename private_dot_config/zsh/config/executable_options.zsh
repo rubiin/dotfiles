@@ -34,3 +34,12 @@ unsetopt FLOWCONTROL
 setopt AUTO_MENU # show completion menu on successive tab press
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
+
+# vi mode
+export KEYTIMEOUT=1
+export VI_MODE_SET_CURSOR=true
+bindkey -v
+
+# setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+# setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+# setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
