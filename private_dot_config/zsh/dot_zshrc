@@ -35,11 +35,6 @@ for filename in "${ZSH_CONFIG_FILES[@]}"; do
     fi
 done
 
-# vi mode
-export KEYTIMEOUT=1
-export VI_MODE_SET_CURSOR=true
-bindkey -v
-
 
 #source scripts with _evalcache
 _evalcache thefuck --alias
