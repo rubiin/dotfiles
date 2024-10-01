@@ -59,7 +59,8 @@ fpath=($fpath "$HOME/.zfunctions")
 
 
 #Display Pokemon
-pokeget random --hide-name
+pokego --no-title --random 1,3,6
+
 # pnpm
 export PNPM_HOME="/home/rubin/.local/share/pnpm"
 case ":$PATH:" in
