@@ -9,6 +9,11 @@ Host bitbucket.org
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/takeo
 
+# Aur
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur
+
 
 ## Now set defaults for all if not matched by any hosts ##
 Host *
