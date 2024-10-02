@@ -12,5 +12,6 @@ IFS=$'\n\t'
 
 # installs cargo dependencies
 cargo install --git https://github.com/loichyan/nerdfix.git
+cargo install --git https://github.com/adaszko/complgen.git
 echo 'Cargo Setup Done with all its packages'
 
