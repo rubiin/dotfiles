@@ -3,8 +3,6 @@
 What are dotfiles, you ask? They’re like the secret sauce that spices up your Unix-like environment, hiding in plain sight.These are the magical objects that make certain computers extremely use-able for me.
 Use them wisely, or you may accidentally summon the wrath of the Terminal Gods! ⚡️
 
-Warning: Installing these dotfiles may cause unexpected side effects, including but not limited to:
-
 **Warning:** Installing these dotfiles may cause unexpected side effects, including but not limited to:
 
 - **Spontaneous Joy**: You might catch yourself grinning at your terminal like it just shared a dad joke.
