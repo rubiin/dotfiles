@@ -5,7 +5,7 @@ Use them wisely, or you may accidentally summon the wrath of the Terminal Gods! 
 
 **Warning:** Installing these dotfiles may cause unexpected side effects, including but not limited to:
 
-- **Spontaneous Joy**: You might catch yourself grinning at your terminal like it just shared a dad joke.
+- **Spontaneous Joy**: You may find yourself smiling at your terminal like it just told you a really good joke.
 - **Productivity Overload**: Be prepared to finish tasks so quickly that your coworkers will think you’ve discovered time travel.
 - **Imposter Syndrome**: A sudden belief that you’re a coding guru, despite the fact that you still don’t know what `grep` does.
 - **Keyboard Shortcut Obsession**: You might start using shortcuts for everything—expect your friends to look at you like you’re casting spells.
