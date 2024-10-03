@@ -95,6 +95,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot
 chezmoi init --apply rubiin
 ```
 
+## FAQS
+- Why do you use Arch?
+* Because most software are readily available for arch through aur. There is 1 in a 10 chance that something you are not available on aur. Also Arch is minimal by default, allowing users to build their system from the ground up. You     install only what you need, leading to a more efficient setup. Arch teaches you how linux works like how neovim teaches you how an editor works.
+
+- Why use tiling window manager?
+Tiling wm setup makes it easy to navigate with keyboard shortcuts, reducing reliance on the mouse. Tiling WMs are often minimal and customizable, helping users focus on their tasks. They’re also lightweight, suitable for older computers, and great for multitasking, allowing easy access to multiple applications at once. Overall, they offer a more efficient and organized computing experience.
+
 ## Disclaimer 📝
 
 These dotfiles are provided as-is, without any warranty or guarantee of any kind. Use them at your own risk.
