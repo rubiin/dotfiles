@@ -88,6 +88,7 @@ cleanup = true
 # Custom commands
 [commands]
 "Npm Global" = "taze -gwi"
+"Zsh Plugins" = "sheldon lock --update"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 
 
