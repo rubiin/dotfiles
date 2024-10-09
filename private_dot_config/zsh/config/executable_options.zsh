@@ -9,9 +9,10 @@ setopt PIPE_FAIL            # tracability: exit if pipeline failed
 setopt NO_BANG_HIST         # don't expand `!`
 setopt NO_BEEP              # No bell: Shut up Zsh
 setopt NO_HUP               # don't kill background jobs when the shell exits
-setopt AUTO_CD              # pure directory = cd into it
 setopt CD_SILENT
 setopt CHASE_LINKS # follow symlinks when they are cd target
+setopt prompt_subst
+
 
 # HISTORY
 setopt EXTENDED_HISTORY     # write the history file in the ":start:elapsed;command" format.
@@ -40,6 +41,11 @@ export KEYTIMEOUT=1
 export VI_MODE_SET_CURSOR=true
 bindkey -v
 
-# setopt AUTO_PUSHD           # Push the current directory visited on the stack.
-# setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
-# setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt AUTO_CD              # pure directory = cd into it
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+set histexpiredupsfirst
+set histverify
+set login
+set pushdminus
