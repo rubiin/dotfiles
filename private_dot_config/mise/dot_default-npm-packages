@@ -11,6 +11,7 @@ commitizen
 cz-conventional-changelog
 nfdl
 autocannon
+sass
 aaja
 json-server
 redis-cli
