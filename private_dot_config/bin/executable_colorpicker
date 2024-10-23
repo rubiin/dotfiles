@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# get the value
+output=$(hyprpicker -n -a -f hex)
+
+# check if color ends with hexadecimal code
+if [[ $output =~ ^.*#([A-Fa-f0-9]{6})$ ]]; then
+    color=$(wl-paste)
+    image=/tmp/color.png
+    # generate preview
+    magick -size 48x48 xc:"$color" ${image}
+    # notify the color
+    notify-send -u low -i ${image} "$color" "Copied to clipboard."
+fi
