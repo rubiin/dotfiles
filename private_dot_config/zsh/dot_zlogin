@@ -105,7 +105,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
 
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768'
-
+export NODE_COMPILE_CACHE="$XDG_CACHE_HOME/node"
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE="sloppy"
 

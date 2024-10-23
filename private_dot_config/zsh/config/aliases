@@ -49,6 +49,7 @@ alias hg='history | fzf'
 alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
+alias reload-ags="pkill ags;ags&"
 
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
@@ -74,7 +75,7 @@ alias ehypr="$EDITOR ~/.config/hypr/"
 alias edot="$EDITOR ~/.local/share/chezmoi/"
 alias ewez="$EDITOR ~/.config/wezterm/"
 alias egit="$EDITOR ~/.config/git/"
-alias ealias="$EDITOR ~/.config/zsh/config/.bash_aliases"
+alias ealias="$EDITOR ~/.config/zsh/config/.aliases"
 alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
 
