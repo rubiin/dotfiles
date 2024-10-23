@@ -19,6 +19,7 @@ file_folder_list=(
    "$config/yay"
    "$config/topgrade.toml"
    "$config/sheldon"
+   "$config/hyprpanel"
    "$config/.ripgreprc"
    "$config/wgetrc"
    "$config/vivaldi-stable.conf"
