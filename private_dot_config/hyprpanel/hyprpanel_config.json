@@ -14,7 +14,7 @@
   "tear": false,
   "theme.osd.enable": true,
   "theme.bar.menus.menu.power.scaling": 90,
-  "theme.bar.dropdownGap": "2.9em",
+  "theme.bar.dropdownGap": "5.92em",
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.workspaces.icons.occupied": "",
