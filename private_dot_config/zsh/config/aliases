@@ -50,6 +50,7 @@ alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill ags;ags&"
+alias icat="kitten icat"
 
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
