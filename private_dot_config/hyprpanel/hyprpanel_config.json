@@ -1,7 +1,7 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
   "theme.font.name": "JetBrainsMono Nerd Font Ultra-Light",
-  "terminal": "wezterm",
+  "terminal": "$TERM",
   "theme.font.size": "1.05rem",
   "theme.bar.floating": false,
   "theme.bar.buttons.radius": "1em",
@@ -14,7 +14,7 @@
   "tear": false,
   "theme.osd.enable": true,
   "theme.bar.menus.menu.power.scaling": 90,
-  "theme.bar.dropdownGap": "5.92em",
+  "theme.bar.dropdownGap": "42px",
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.workspaces.icons.occupied": "",
@@ -47,7 +47,6 @@
         "media"
       ],
       "right": [
-        "updates",
         "volume",
         "network",
         "bluetooth",
@@ -87,7 +86,7 @@
   "bar.escape_to_close": true,
   "bar.notifications.show_total": false,
   "theme.bar.margin_top": "0.5em",
-  "bar.clock.format": "%H:%M %p",
+  "bar.clock.format": "%H:%M - %A %e",
   "bar.network.truncation_size": 7,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
@@ -105,7 +104,7 @@
   "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em",
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.2em",
   "theme.bar.menus.opacity": 100,
-  "theme.bar.opacity": 100,
+  "theme.bar.opacity": 60,
   "theme.bar.buttons.opacity": 100,
   "theme.notification.opacity": 100,
   "theme.osd.opacity": 100,
@@ -283,9 +282,16 @@
   "menus.dashboard.stats.enabled": true,
   "menus.dashboard.shortcuts.enabled": true,
   "notifications.clearDelay": 100,
-  "bar.battery.hideLabelWhenFull": false,
+  "bar.battery.hideLabelWhenFull": true,
   "bar.customModules.ram.icon": "󰘚",
   "bar.customModules.cpu.icon": "",
   "bar.network.showWifiInfo": true,
-  "theme.bar.menus.border.size": "0.13em"
+  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.switch.slider_radius": "2em",
+  "theme.bar.menus.switch.radius": "2em",
+  "theme.bar.menus.slider.slider_radius": "1rem",
+  "theme.bar.menus.slider.progress_radius": "1rem",
+  "menus.bluetooth.showBattery": true,
+  "bar.volume.raiseMaximumVolume": true,
+  "bar.media.format": "{artist} - {title}"
 }
