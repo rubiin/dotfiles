@@ -25,7 +25,7 @@
   "bar.media.show_active_only": true,
   "theme.osd.orientation": "horizontal",
   "theme.osd.location": "bottom",
-  "theme.osd.radius": "0.4em",
+  "theme.osd.radius": "1.5em",
   "theme.osd.muted_zero": false,
   "menus.clock.time.military": true,
   "theme.bar.menus.card_radius": "0.8em",
@@ -293,5 +293,6 @@
   "theme.bar.menus.slider.progress_radius": "1rem",
   "menus.bluetooth.showBattery": true,
   "bar.volume.raiseMaximumVolume": true,
-  "bar.media.format": "{artist} - {title}"
+  "bar.media.format": "{artist} - {title}",
+  "theme.osd.transition": "slide_left"
 }
