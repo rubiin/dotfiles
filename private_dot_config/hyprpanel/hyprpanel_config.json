@@ -152,10 +152,10 @@
   "bar.clock.icon": "",
   "bar.windowtitle.show_custom_title": true,
   "bar.windowtitle.show_icon": true,
-  "bar.windowtitle.truncation_size": 50,
+  "bar.windowtitle.truncation_size": 30,
   "bar.windowtitle.truncation": true,
   "notifications.displayedTotal": 10,
-  "theme.bar.menus.menu.notifications.height": "58em",
+  "theme.bar.menus.menu.notifications.height": "52em",
   "theme.bar.menus.menu.notifications.scrollbar.width": "0.35em",
   "theme.bar.menus.menu.notifications.scrollbar.radius": "0.2em",
   "theme.bar.menus.menu.notifications.pager.show": true,
@@ -270,7 +270,7 @@
   "bar.customModules.submap.enabledIcon": "󰌐",
   "theme.bar.buttons.modules.submap.enableBorder": false,
   "bar.customModules.submap.leftClick": "",
-  "bar.workspaces.ignored": "",
+  "bar.workspaces.ignored": "-99",
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.workspaces.smartHighlight": true,
   "bar.workspaces.showAllActive": true,
@@ -294,5 +294,7 @@
   "menus.bluetooth.showBattery": true,
   "bar.volume.raiseMaximumVolume": true,
   "bar.media.format": "{artist} - {title}",
-  "theme.osd.transition": "slide_left"
+  "theme.osd.transition": "slide_left",
+  "menus.volume.raiseMaximumVolume": true,
+  "notifications.showActionsOnHover": true
 }
