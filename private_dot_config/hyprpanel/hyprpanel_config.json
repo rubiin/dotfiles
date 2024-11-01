@@ -32,7 +32,7 @@
   "theme.bar.transparent": false,
   "theme.bar.buttons.monochrome": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
-  "menus.power.showLabel": true,
+  "menus.power.showLabel": false,
   "theme.notification.border_radius": "1.2em",
   "theme.bar.outer_spacing": "1.6em",
   "bar.layouts": {
@@ -207,7 +207,7 @@
   "menus.power.logout": "hyprctl dispatch exit",
   "menus.power.reboot": "systemctl reboot",
   "menus.power.shutdown": "systemctl poweroff",
-  "menus.power.confirmation": true,
+  "menus.power.confirmation": false,
   "bar.customModules.power.icon": "",
   "bar.customModules.netstat.pollingInterval": 2000,
   "bar.customModules.cpu.pollingInterval": 2000,
@@ -229,7 +229,7 @@
   "theme.bar.location": "top",
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.workspaceIconMap": {},
-  "theme.bar.buttons.workspaces.fontSize": "1.2em",
+  "theme.bar.buttons.workspaces.fontSize": "1.1em",
   "bar.workspaces.underlineType": "decoration",
   "menus.clock.weather.enabled": false,
   "menus.dashboard.directories.right.directory3.command": "bash -c \"dolphin $HOME/\"",
@@ -296,5 +296,6 @@
   "bar.media.format": "{artist} - {title}",
   "theme.osd.transition": "slide_left",
   "menus.volume.raiseMaximumVolume": true,
-  "notifications.showActionsOnHover": true
+  "notifications.showActionsOnHover": true,
+  "bar.launcher.autoDetectIcon": true
 }
