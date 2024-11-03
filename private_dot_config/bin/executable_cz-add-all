@@ -55,5 +55,5 @@ file_folder_list=(
 
 ## now loop through the above array
 for i in "${file_folder_list[@]}"; do
-   chezmoi add "$i"
+   chezmoi add "$i" --secrets ignore
 done
