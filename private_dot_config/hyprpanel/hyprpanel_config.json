@@ -36,7 +36,7 @@
   "theme.notification.border_radius": "1.2em",
   "theme.bar.outer_spacing": "1.6em",
   "bar.layouts": {
-    "*": {
+    "0": {
       "left": [
         "dashboard",
         "workspaces",
@@ -52,7 +52,36 @@
         "bluetooth",
         "battery",
         "systray",
-        "power",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
         "notifications"
       ]
     }
@@ -107,7 +136,7 @@
   "theme.bar.opacity": 60,
   "theme.bar.buttons.opacity": 100,
   "theme.notification.opacity": 100,
-  "theme.osd.opacity": 100,
+  "theme.osd.opacity": 90,
   "bar.battery.label": true,
   "theme.bar.buttons.windowtitle.spacing": "0.5em",
   "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
@@ -286,16 +315,18 @@
   "bar.customModules.ram.icon": "󰘚",
   "bar.customModules.cpu.icon": "",
   "bar.network.showWifiInfo": true,
-  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.border.size": "0.10em",
   "theme.bar.menus.switch.slider_radius": "2em",
   "theme.bar.menus.switch.radius": "2em",
   "theme.bar.menus.slider.slider_radius": "1rem",
   "theme.bar.menus.slider.progress_radius": "1rem",
   "menus.bluetooth.showBattery": true,
   "bar.volume.raiseMaximumVolume": true,
-  "bar.media.format": "{artist} - {title}",
-  "theme.osd.transition": "slide_left",
+  "bar.media.format": "{artist} {title}",
+  "theme.osd.transition": "slide_right",
   "menus.volume.raiseMaximumVolume": true,
   "notifications.showActionsOnHover": true,
-  "bar.launcher.autoDetectIcon": true
+  "bar.launcher.autoDetectIcon": true,
+  "menus.media.ignore": [],
+  "menus.media.noMediaText": "Not Playing"
 }
