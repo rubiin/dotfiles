@@ -322,11 +322,13 @@
   "theme.bar.menus.slider.progress_radius": "1rem",
   "menus.bluetooth.showBattery": true,
   "bar.volume.raiseMaximumVolume": true,
-  "bar.media.format": "{artist} {title}",
+  "bar.media.format": "{artist: - }{title}",
   "theme.osd.transition": "slide_right",
   "menus.volume.raiseMaximumVolume": true,
   "notifications.showActionsOnHover": true,
   "bar.launcher.autoDetectIcon": true,
   "menus.media.ignore": [],
-  "menus.media.noMediaText": "Not Playing"
+  "menus.media.noMediaText": "Not Playing",
+  "theme.bar.menus.popover.radius": "0.4em",
+  "theme.bar.menus.tooltip.radius": "0.6em"
 }
