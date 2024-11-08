@@ -330,5 +330,7 @@
   "menus.media.ignore": [],
   "menus.media.noMediaText": "Not Playing",
   "theme.bar.menus.popover.radius": "0.4em",
-  "theme.bar.menus.tooltip.radius": "0.6em"
+  "theme.bar.menus.tooltip.radius": "0.6em",
+  "menus.media.displayTime": true,
+  "menus.media.displayTimeTooltip": false
 }
