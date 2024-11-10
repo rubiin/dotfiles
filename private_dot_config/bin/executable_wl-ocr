@@ -1,0 +1,19 @@
+
+#!/bin/bash
+
+# Define variables for the commands
+grim=$(which grim)
+slurp=$(which slurp)
+tesseract=$(which tesseract)
+libnotify=$(which notify-send)
+wl_clipboard_bin=$(which wl-copy)
+wl_paste_bin=$(which wl-paste)
+
+
+# Capture a screenshot of the selected area and send it to tesseract for OCR
+$grim -g "$($slurp)" -t ppm - | $tesseract -l eng - - | $wl_clipboard_bin
+
+# Output the recognized text and display it in a notification
+recognized_text=$($wl_paste_bin)
+echo "$recognized_text"
+$libnotify "$recognized_text"
