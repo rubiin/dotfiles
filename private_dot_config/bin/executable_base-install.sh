@@ -71,7 +71,7 @@ sheldon lock --reinstall
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
 echo "installing flatpaks"
-flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler info.febvre.Komikku 
+flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler info.febvre.Komikku io.github.flattool.Warehouse io.gitlab.adhami3310.Impression
 
 echo "Installing bat themes"
 bat cache --build
