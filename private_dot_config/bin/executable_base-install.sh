@@ -46,9 +46,6 @@ git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
 cd ~/Hyprdots/Scripts || exit
 ./install.sh
 
-echo "Setting hyprshade"
-hyprshade install
-systemctl --user enable --now hyprshade.timer
 
 ask_yes_no_default "Do you want to install normal fonts?" 0 && yay -S noto-fonts-cjk noto-fonts-emoji fontforge gnu-free-fonts ttf-joypixels typos ttf-font-awesome ttf-hack ttf-ms-fonts ttf-twemoji-color ttf-bitstream-vera ttf-cm-unicode
 
@@ -65,7 +62,7 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
 	sudo groupadd docker && sudo usermod -aG docker $USER &&
 	sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && yay -S alacarte gvfs btop baobab swayosd-git cargo-cache topgrade-bin station-bin safeeyes chafa hyprsunset ktouch distrobox podman bleachbit kooha k6-bin scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert hyprshade jq clapper entr ripgrep yazi eog age obsidian obs-studio pokego-git just github-cli postman-bin mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck git-delta fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin lite-xl gparted vlc ktorrent persepolis
+ask_yes_no_default "Do you want to install other packages?" 0 && yay -S alacarte gvfs btop baobab swayosd-git cargo-cache topgrade-bin station-bin safeeyes chafa hyprsunset ktouch distrobox podman bleachbit kooha k6-bin scc asciiquarium fastfetch cava spotify gitflow-cjs yt-dlp mongodb-compass zoxide glow wl-clipboard mkcert jq clapper entr ripgrep yazi eog age obsidian obs-studio pokego-git just github-cli postman-bin mpv ark jetbrains-toolbox xdg-ninja tmux eza thefuck git-delta fd sd tealdeer bat git-secrets fzf git-interactive-rebase-tool-bin lite-xl gparted vlc ktorrent persepolis
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
