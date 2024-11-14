@@ -36,6 +36,8 @@ alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
 alias update-all='sudo pacman -Syu archlinux-keyring;yay -Syu --noconfirm'
+alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
+alias export-pacman="pacman -Qqe > ~/pacman.txt"
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
