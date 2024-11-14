@@ -35,7 +35,7 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
 alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='sudo pacman -Syyu archlinux-keyring;yay -Syyu --noconfirm'
+alias update-all='sudo pacman -Syu archlinux-keyring;yay -Syu --noconfirm'
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
 alias vmc='git diff --name-only --diff-filter=U'
