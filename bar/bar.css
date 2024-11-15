@@ -1,42 +1,13 @@
-/* we can use webcss variables, fabric compiles that to gtk css.
-   global variables can be stored in :vars */
-:vars {
-    --background: #150d16;
-    --foreground: #f5dbc4;
-    --color0: #150d16;
-    --color1: #72448D;
-    --color2: #9C5995;
-    --color3: #D5719F;
-    --color4: #9A62F3;
-    --color5: #E075DF;
-    --color6: #F98F9F;
-    --color7: #f5dbc4;
-    --color8: #ab9989;
-    --color9: #72448D;
-    --color10: #9C5995;
-    --color11: #D5719F;
-    --color12: #9A62F3;
-    --color13: #E075DF;
-    --color14: #F98F9F;
-    --color15: #f5dbc4;
-    --window-bg: alpha(var(--background), 0.6);
-    --module-bg: alpha(var(--background), 0.4);
-    --border-color: var(--color11);
-    --ws-active: var(--color9);
-    --ws-inactive: var(--color3);
-    --ws-empty: var(--color8);
-    --ws-hover: var(--color1);
-    --ws-urgent: var(--color12);
-}
+@import "theme.css";
 
 /* unset so we can style everything from the ground up. */
 * {
     all: unset;
     color: var(--foreground);
-    font-size: 16px;
-    font-family: "JetBrainsMono Nerd Font Ultra-Light", sans-serif;
+    font-size: 13px;
+    font-family: "JetBrainsMono Nerd Font";
     border-radius: 100px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 button {
@@ -54,6 +25,7 @@ button {
     padding: 6px;
     min-width: 0px;
     background-color: var(--module-bg);
+
 }
 
 #workspaces>button {
@@ -95,7 +67,7 @@ menu>menuitem>label,
 #date-time>label,
 #hyprland-language>label,
 #hyprland-window>label {
-    font-weight: 900;
+    font-weight: bold;
 }
 
 /* system tray */
