@@ -17,7 +17,7 @@ from fabric.utils import (
     get_relative_path,
 )
 
-from widgets.hyprsunset import HyprSunset
+from widgets.paneltoggle import CommandSwitcher
 
 AUDIO_WIDGET = True
 
@@ -112,7 +112,8 @@ class StatusBar(Window):
             tooltip_text="ram"
         )
 
-        self.hypr_sunset = HyprSunset()
+        self.hypr_sunset = CommandSwitcher("hyprsunset -t 2800k","")
+
         self.cpu_progress_bar = CircularProgressBar(
             name="cpu-progress-bar", pie=True, size=24,
             tooltip_text="cpu"
