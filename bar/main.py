@@ -31,6 +31,7 @@ if AUDIO_WIDGET is True:
 
 config = read_config()
 
+
 class VolumeWidget(Box):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -87,13 +88,12 @@ class StatusBar(Window):
             all_visible=False,
         )
         self.workspaces = Workspaces(
-    name="workspaces",
-    spacing=4,
-    buttons=[ WorkspaceButton(id = i, label = str(i)) for i in range(1, 11) ],
-    buttons_factory=lambda ws_id: WorkspaceButton(id = ws_id, label = str(ws_id))
-)
-        self.active_window = ActiveWindow(name="hyprland-window"
-                                          )
+            name="workspaces",
+            spacing=4,
+            buttons=[WorkspaceButton(id=i, label=str(i)) for i in range(1, 11)],
+            buttons_factory=lambda ws_id: WorkspaceButton(id=ws_id, label=str(ws_id)),
+        )
+        self.active_window = ActiveWindow(name="hyprland-window")
         self.language = Language(
             formatter=FormattedString(
                 "{replace_lang(language)}",
@@ -110,18 +110,28 @@ class StatusBar(Window):
         self.system_tray = SystemTray(name="system-tray", spacing=4)
 
         self.ram_progress_bar = CircularProgressBar(
-            name="ram-progress-bar", pie=True, size=24,
-            tooltip_text="ram"
+            name="ram-progress-bar", pie=True, size=24, tooltip_text="ram"
         )
 
-
         hypersunset_config = config["hyprsunset"]
+        hyperidle_config = config["hypridle"]
 
-        self.hypr_sunset = CommandSwitcher("hyprsunset -t 2800k",hypersunset_config["enabled_icon"],hypersunset_config["disabled_icon"])
+        self.hyprsunset = CommandSwitcher(
+            "hyprsunset -t 2800k",
+            hypersunset_config["enabled_icon"],
+            hypersunset_config["disabled_icon"],
+            hypersunset_config["enable_label"],
+            
+        )
+        self.hypridle = CommandSwitcher(
+            "hypridle",
+            hyperidle_config["enabled_icon"],
+            hyperidle_config["disabled_icon"],
+            hyperidle_config["enable_label"],
+        )
 
         self.cpu_progress_bar = CircularProgressBar(
-            name="cpu-progress-bar", pie=True, size=24,
-            tooltip_text="cpu"
+            name="cpu-progress-bar", pie=True, size=24, tooltip_text="cpu"
         )
         self.progress_bars_overlay = Overlay(
             child=self.ram_progress_bar,
@@ -148,7 +158,6 @@ class StatusBar(Window):
                 children=[
                     self.workspaces,
                     self.active_window,
-                    self.hypr_sunset
                 ],
             ),
             center_children=Box(
@@ -162,8 +171,10 @@ class StatusBar(Window):
                 spacing=4,
                 orientation="h",
                 children=[
+                    self.hypridle,
+                    self.hyprsunset,
                     self.status_container,
-                    self.system_tray
+                    self.system_tray,
                 ],
             ),
         )
