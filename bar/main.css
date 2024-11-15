@@ -8,7 +8,6 @@
     font-family: "JetBrainsMono Nerd Font";
     border-radius: 100px;
     font-weight: bold;
-    
 }
 
 button {
@@ -57,7 +56,10 @@ button {
 }
 
 
-label{
+menu>menuitem>label,
+#date-time>label,
+#hyprland-language>label,
+#hyprland-window>label {
     font-weight: bold;
 }
 
@@ -107,7 +109,7 @@ menu>menuitem:hover {
 
 
 #cpu-progress-bar {
-    border: solid 0px rgba(var(--color9), 0.8);
+    border: solid 0px alpha(var(--color9), 0.8);
 }
 
 #ram-progress-bar,
@@ -136,10 +138,11 @@ tooltip>* {
 
 #hyprland-language,
 #hyprland-window {
+    background-color: var(--main-bg);
     padding: 0px 8px;
 }
 
-#panel-button,
+
 #date-time,
 #backlight,
 #battery,
@@ -178,12 +181,3 @@ tooltip>* {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-#panel-button {
-        padding-left: 10px;
-        padding-right: 10px; 
-}
-
-
-
-  
