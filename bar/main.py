@@ -121,6 +121,7 @@ class StatusBar(Window):
             hypersunset_config["enabled_icon"],
             hypersunset_config["disabled_icon"],
             hypersunset_config["enable_label"],
+            hypersunset_config["enable_tooltip"],
             
         )
         self.hypridle = CommandSwitcher(
@@ -128,6 +129,7 @@ class StatusBar(Window):
             hyperidle_config["enabled_icon"],
             hyperidle_config["disabled_icon"],
             hyperidle_config["enable_label"],
+            hyperidle_config["enable_tooltip"],
         )
 
         self.cpu_progress_bar = CircularProgressBar(
