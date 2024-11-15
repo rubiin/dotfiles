@@ -1,6 +1,8 @@
 import psutil
 from fabric import Application
 from fabric.widgets.box import Box
+from fabric.widgets.button import Button
+from fabric.widgets.image import Image
 from fabric.widgets.label import Label
 from fabric.widgets.overlay import Overlay
 from fabric.widgets.eventbox import EventBox
@@ -83,13 +85,14 @@ class StatusBar(Window):
             all_visible=False,
         )
         self.workspaces = Workspaces(
-            name="workspaces",
-            spacing=4,
-            buttons_factory=lambda ws_id: WorkspaceButton(
-                id=ws_id, label=None
-            ),
-        )
-        self.active_window = ActiveWindow(name="hyprland-window")
+    name="workspaces",
+    spacing=4,
+    buttons=[ WorkspaceButton(id = i, label = str(i)) for i in range(1, 11) ],
+    buttons_factory=lambda ws_id: WorkspaceButton(id = ws_id, label = str(ws_id))
+)
+        self.active_window = ActiveWindow(name="hyprland-window"
+                                        formatter=
+                                          )
         self.language = Language(
             formatter=FormattedString(
                 "{replace_lang(language)}",
@@ -109,6 +112,13 @@ class StatusBar(Window):
             name="ram-progress-bar", pie=True, size=24,
             tooltip_text="ram"
         )
+
+        self.hypr_idle = Button(
+            name="hypr-idle",
+            image=Image(icon_name="window-close"),
+            tooltip_text="Exit",
+        )
+
         self.cpu_progress_bar = CircularProgressBar(
             name="cpu-progress-bar", pie=True, size=24,
             tooltip_text="cpu"
@@ -137,7 +147,8 @@ class StatusBar(Window):
                 orientation="h",
                 children=[
                     self.workspaces,
-                    self.active_window
+                    self.active_window,
+                    self.hypr_idle
                 ],
             ),
             center_children=Box(
@@ -152,8 +163,7 @@ class StatusBar(Window):
                 orientation="h",
                 children=[
                     self.status_container,
-                    self.system_tray,
-                    self.language,
+                    self.system_tray
                 ],
             ),
         )
