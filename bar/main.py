@@ -17,6 +17,7 @@ from fabric.utils import (
     get_relative_path,
 )
 
+from utils import read_config
 from widgets.paneltoggle import CommandSwitcher
 
 AUDIO_WIDGET = True
@@ -28,6 +29,7 @@ if AUDIO_WIDGET is True:
         print(e)
         AUDIO_WIDGET = False
 
+config = read_config()
 
 class VolumeWidget(Box):
     def __init__(self, **kwargs):
@@ -112,7 +114,10 @@ class StatusBar(Window):
             tooltip_text="ram"
         )
 
-        self.hypr_sunset = CommandSwitcher("hyprsunset -t 2800k","󱩌","󰛨")
+
+        hypersunset_config = config["hyprsunset"]
+
+        self.hypr_sunset = CommandSwitcher("hyprsunset -t 2800k",hypersunset_config["enabled_icon"],hypersunset_config["disabled_icon"])
 
         self.cpu_progress_bar = CircularProgressBar(
             name="cpu-progress-bar", pie=True, size=24,
