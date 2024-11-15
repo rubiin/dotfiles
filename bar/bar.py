@@ -19,6 +19,8 @@ from fabric.utils import (
     get_relative_path,
 )
 
+from widgets.hyprsunset import HyprSunset
+
 AUDIO_WIDGET = True
 
 if AUDIO_WIDGET is True:
@@ -91,7 +93,6 @@ class StatusBar(Window):
     buttons_factory=lambda ws_id: WorkspaceButton(id = ws_id, label = str(ws_id))
 )
         self.active_window = ActiveWindow(name="hyprland-window"
-                                        formatter=
                                           )
         self.language = Language(
             formatter=FormattedString(
@@ -113,12 +114,7 @@ class StatusBar(Window):
             tooltip_text="ram"
         )
 
-        self.hypr_idle = Button(
-            name="hypr-idle",
-            image=Image(icon_name="window-close"),
-            tooltip_text="Exit",
-        )
-
+        self.hypr_sunset = HyprSunset()
         self.cpu_progress_bar = CircularProgressBar(
             name="cpu-progress-bar", pie=True, size=24,
             tooltip_text="cpu"
@@ -148,7 +144,7 @@ class StatusBar(Window):
                 children=[
                     self.workspaces,
                     self.active_window,
-                    self.hypr_idle
+                    self.hypr_sunset
                 ],
             ),
             center_children=Box(
