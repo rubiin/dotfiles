@@ -1,0 +1,7 @@
+{
+  "hyprsunset": {
+    "enabled_icon": "󱩌",
+    "disabled_icon": "󰛨",
+    "enable_tooltip": true
+  }
+}
