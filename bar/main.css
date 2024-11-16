@@ -182,13 +182,15 @@ tooltip>* {
     padding-right: 30px;
 }
 
-#panel-button{
+#panel-button, #battery{
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#panel-button label{
+* > label{
 
-        margin-left: 10px;
+ margin-left: 10px;
     
 }
+
+ 

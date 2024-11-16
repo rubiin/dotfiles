@@ -18,6 +18,7 @@ from fabric.utils import (
 )
 
 from utils import read_config
+from widgets.battery import BatteryLabel
 from widgets.paneltoggle import CommandSwitcher
 
 AUDIO_WIDGET = True
@@ -151,6 +152,9 @@ class StatusBar(Window):
         )
         self.status_container.add(VolumeWidget()) if AUDIO_WIDGET is True else None
 
+
+        self.battery = BatteryLabel(name="battery")
+
         self.children = CenterBox(
             name="bar-inner",
             start_children=Box(
@@ -173,6 +177,7 @@ class StatusBar(Window):
                 spacing=4,
                 orientation="h",
                 children=[
+                    self.battery,
                     self.hypridle,
                     self.hyprsunset,
                     self.status_container,
