@@ -34,9 +34,6 @@ github = "romkatv/powerlevel10k"
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
 
-[plugins.direnv]
-github = "direnv/direnv"
-
 # For example:
 #
 # [plugins.base16]
