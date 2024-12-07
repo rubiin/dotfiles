@@ -10,8 +10,8 @@
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
 shell = "zsh"
-
 [plugins]
+
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
