@@ -35,7 +35,7 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
 alias today="npx aaja"
 alias tz="npx taze"
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
-alias update-all='sudo pacman -Syu --noconfirm archlinux-keyring;yay -Syu --noconfirm'
+alias update-all='sudo pacman -Syu --noconfirm archlinux-keyring;yay -Syu --noconfirm; flatpak update'
 alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
 alias export-pacman="pacman -Qqe > ~/pacman.txt"
 alias ssh='TERM=xterm-256color ssh'
