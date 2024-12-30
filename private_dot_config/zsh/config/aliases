@@ -279,9 +279,7 @@ zsh-fix-history() {
 	fc -R .zsh_history
 }
 
-if [ "$TERM" = "wezterm" ]; then
-	alias fastfetch='fastfetch --logo-type kitty'
-fi
+alias fastfetch='fastfetch --logo-type kitty'
 
 take() { mkdir -p "$1" && cd "$1"; }
 
