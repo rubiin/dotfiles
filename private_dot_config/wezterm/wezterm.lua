@@ -43,6 +43,7 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 
+config.max_fps = 120
 
 -- scroll
 config.scrollback_lines = 10000
