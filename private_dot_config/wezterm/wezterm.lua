@@ -37,7 +37,6 @@ config.font = wezterm.font_with_fallback({
 config.color_scheme = "Catppuccin Mocha"
 
 config.enable_wayland = true
-
 config.max_fps = 120
 
 -- scroll
@@ -45,9 +44,6 @@ config.enable_scroll_bar = false
 
 
 -- general
-config.window_background_opacity = 0.88
-config.initial_rows = 41
-config.initial_cols = 160
 config.term = "wezterm"
 config.check_for_updates = false -- I tend to disable this when downloading WezTerm from a package manager.
 -- tab bar and window
@@ -63,7 +59,6 @@ config.window_padding = {
 
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
-config.enable_wayland = true
 
 -- core keymaps that are general
 config.keys = {
