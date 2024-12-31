@@ -39,23 +39,25 @@ config.color_scheme = "Catppuccin Mocha"
 config.enable_wayland = true
 config.max_fps = 120
 
+
 -- scroll
 config.enable_scroll_bar = false
-
 
 -- general
 config.term = "wezterm"
 config.check_for_updates = false -- I tend to disable this when downloading WezTerm from a package manager.
+config.audible_bell = "Disabled"
+config.automatically_reload_config = false
+
+
 -- tab bar and window
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
-config.window_close_confirmation = "NeverPrompt"
-config.window_padding = {
-	left = 4,
-	right = 4,
-	top = 4,
-	bottom = 4,
-}
+config.window_decorations = "NONE"
+
+config.hide_mouse_cursor_when_typing = true
+config.use_ime = false
+
 
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
