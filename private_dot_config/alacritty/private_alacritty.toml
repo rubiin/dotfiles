@@ -1,13 +1,3 @@
-import = [
-  # uncomment the flavour you want below:
-  "~/.config/alacritty/themes/catppuccin_mocha.toml"
-  # "~/.config/alacritty/themes/catppuccin_macchiato.toml"
-  # "~/.config/alacritty/themes/catppuccin_frappe.toml"
-  # "~/.config/alacritty/themes/catppuccin_latte.toml"
-]
-
-live_config_reload = true
-working_directory = "None"
 
 [bell]
 animation = "EaseOutExpo"
@@ -29,13 +19,10 @@ persistent_logging = false
 print_events = false
 render_timer = false
 
-{{ if eq .chezmoi.username "devina" }}
-[font]
-size = 10
-{{ else }}
+
 [font]
 size = 11
-{{ end }}
+
 
 
 [font.glyph_offset]
@@ -388,3 +375,15 @@ mods = "Command"
 chars = "\u0002/"
 key = "F"
 mods = "Command"
+
+[general]
+
+live_config_reload = true
+working_directory = "None"
+import = [
+  # uncomment the flavour you want below:
+  "~/.config/alacritty/themes/catppuccin_mocha.toml"
+  # "~/.config/alacritty/themes/catppuccin_macchiato.toml"
+  # "~/.config/alacritty/themes/catppuccin_frappe.toml"
+  # "~/.config/alacritty/themes/catppuccin_latte.toml"
+]
