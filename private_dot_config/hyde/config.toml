@@ -1,0 +1,8 @@
+[volume]
+# volumecontrol.sh configuration
+notify = false # Useful for systems that have their own OSD
+steps = 5     # Number of steps to increase/decrease volume
+
+[brightness]
+# brightnesscontrol.sh configuration
+notify = false # Useful for systems that have their own OSD
