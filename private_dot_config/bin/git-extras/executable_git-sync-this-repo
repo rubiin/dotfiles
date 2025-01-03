@@ -21,7 +21,7 @@ commit_msg="$full_device_info ($files_changed)"
 
 if [[ $files_changed -gt 0 ]]; then
 	git add --all &&
-		git commit -m "$commit_msg" --author="🤖 automated<cron@job>" ||
+		git commit -m "$commit_msg" --author="🤖 automated<cron@job>" --no-verify ||
 		exit 1
 fi
 
