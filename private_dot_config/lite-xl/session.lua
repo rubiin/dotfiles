@@ -1,1 +1,1 @@
-return {recents={}, window={[1]=932,[2]=492,[3]=971,[4]=57,["n"]=4}, window_mode="normal", previous_find={[7]="002b36",[1]="font",[2]="2aa198",[3]="eee8d5",[4]="002b36e6",[5]="002b36ff",[6]="268bd2"}, previous_replace={}}
+return {recents={}, window={[1]=945,[2]=1060,[3]=0,[4]=0,["n"]=4}, window_mode="maximized", previous_find={[7]="002b36",[1]="font",[2]="2aa198",[3]="eee8d5",[4]="002b36e6",[5]="002b36ff",[6]="268bd2"}, previous_replace={}}
