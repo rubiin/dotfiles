@@ -1,0 +1,10 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "tear": false,
+  "theme.bar.floating": false,
+  "theme.bar.location": "top",
+  "bar.autoHide": "never",
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.transparent": false,
+  "theme.bar.buttons.style": "default"
+}
