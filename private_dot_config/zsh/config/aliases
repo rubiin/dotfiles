@@ -81,6 +81,7 @@ alias egit="$EDITOR ~/.config/git/"
 alias ealias="$EDITOR ~/.config/zsh/config/aliases"
 alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
+alias ruffs="ruff check --fix;ruff format"
 
 #  unmanages the file from chezmoi also deletes it
 czx() {
