@@ -6,3 +6,9 @@ steps = 5     # Number of steps to increase/decrease volume
 [brightness]
 # brightnesscontrol.sh configuration
 notify = false # Useful for systems that have their own OSD
+
+[battery.notify.threshold]
+full = 100
+critical = 10
+low = 20
+unplug = 80
