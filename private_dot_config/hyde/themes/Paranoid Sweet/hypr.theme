@@ -1,0 +1,36 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+exec = gsettings set org.gnome.desktop.interface icon-theme 'candy-icons'
+exec = gsettings set org.gnome.desktop.interface gtk-theme 'Sweet-Dark'
+exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec = Hyde cursor theme 'Sweet-cursors' size 20
+
+general {
+    gaps_in = 3
+    gaps_out = 8
+    border_size = 2
+    col.active_border = rgba(c74dedff) rgba(ed254eff) 45deg
+    col.inactive_border = rgba(00c1e4cc) rgba(7cb7ffcc) 45deg
+    layout = dwindle
+    resize_on_border = true
+}
+
+group {
+    col.border_active = rgba(c74dedff) rgba(ed254eff) 45deg
+    col.border_inactive = rgba(00c1e4cc) rgba(7cb7ffcc) 45deg
+    col.border_locked_active = rgba(c74dedff) rgba(ed254eff) 45deg
+    col.border_locked_inactive = rgba(00c1e4cc) rgba(7cb7ffcc) 45deg
+}
+
+decoration {
+    rounding = 10
+    drop_shadow = false
+
+    blur {
+        enabled = yes
+        size = 6
+        passes = 3
+        new_optimizations = on
+        ignore_opacity = on
+        xray = false
+    }
+}
