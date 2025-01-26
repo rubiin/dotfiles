@@ -11,7 +11,6 @@ ViewPropsTimestamp=2023,4,26,16,58,48.324
 
 [IconsMode]
 MaximumTextLines=1
-PreviewSize=112
 
 [InformationPanel]
 dateFormat=ShortFormat
@@ -39,4 +38,3 @@ Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvu
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
-
