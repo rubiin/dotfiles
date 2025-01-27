@@ -3,13 +3,10 @@ gitflow-cjs
 goreleaser-bin
 gray-git
 hyde-cli-git
-infisical-bin
-k6-bin
 lazydocker-bin
 matugen-bin
 megabasterd-bin
 mise-bin
-numi-bin
 persepolis-git
 pokego-bin
 python-fabric-git
