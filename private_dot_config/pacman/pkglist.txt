@@ -39,6 +39,7 @@ chezmoi
 cinnamon-desktop
 clapper
 cliphist
+clutter-gtk
 cmatrix
 code
 colord
@@ -88,7 +89,6 @@ fd
 ffmpegthumbnailer
 ffmpegthumbs
 file-roller
-firefox
 firefox-developer-edition
 firewalld
 flatpak
@@ -130,11 +130,13 @@ hwdetect
 hwinfo
 hypridle
 hyprland
-hyprland-qtutils-git
-hyprlang-git
+hyprland-qt-support
+hyprland-qtutils
+hyprlang
 hyprlock
 hyprpicker
 hyprsunset
+hyprutils
 hyprwayland-scanner
 inetutils
 inxi
@@ -191,6 +193,7 @@ mongodb-compass
 mongodb-tools
 mpv
 mtools
+mullvad-browser-bin
 nano
 nano-syntax-highlighting
 nbd
@@ -244,6 +247,7 @@ python-libtmux
 python-loguru
 python-packaging
 python-pipx
+python-pyjson5
 python-pyqt5
 python-ruff
 qt5-imageformats
@@ -265,6 +269,7 @@ rsync
 rtkit
 s-nail
 safeeyes
+satty
 scc
 sd
 sddm
@@ -281,7 +286,6 @@ st
 starship
 stylua
 sudo
-swappy
 swww
 sysfsutils
 systemd-sysvcompat
@@ -323,6 +327,7 @@ visual-studio-code-insiders
 vivaldi
 vivaldi-ffmpeg-codecs
 vpnc
+webrtc-audio-processing
 welcome
 wezterm-git
 wf-recorder
