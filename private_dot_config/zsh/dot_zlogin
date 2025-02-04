@@ -15,6 +15,7 @@ export LC_CTYPE="${LANG:-en_US.UTF-8}"
 # default apps
 export BROWSER="vivaldi"
 export EDITOR="nvim"
+export SUDO_EDITOR="$EDITOR"
 export VISUAL="code-insiders"
 export READER="zathura"
 export CODEEDITOR="code-insiders"
