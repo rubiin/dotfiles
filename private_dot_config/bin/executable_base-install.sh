@@ -59,6 +59,8 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
 ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm < ~/pacman.txt
 
 sudo fc-cache -vf
+ 
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh 
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
