@@ -2,10 +2,6 @@
     type = "git-repo"
     url = "https://github.com/rubiin/init.lua.git"
     refreshPeriod = "168h"
-[".config/mpv"]
-    type = "git-repo"
-    url = "https://github.com/tsubajashi/mpv-settings.git"
-    refreshPeriod = "168h"
 ["personal/vim/fortune.nvim"]
     type = "git-repo"
     url = "https://github.com/rubiin/fortune.nvim.git"
