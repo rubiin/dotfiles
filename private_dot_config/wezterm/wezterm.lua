@@ -36,9 +36,11 @@ config.font = wezterm.font_with_fallback({
 })
 config.color_scheme = "Catppuccin Mocha"
 
-config.enable_wayland = true
+-- config.enable_wayland = true
 config.max_fps = 120
-
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
+config.cursor_blink_rate = 0
 -- scroll
 config.enable_scroll_bar = false
 
