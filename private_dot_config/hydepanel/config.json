@@ -42,7 +42,6 @@
         "enabled_icon": "",
         "disabled_icon": "",
         "icon_size": "12px",
-        "interval": 2000,
         "label": true,
         "tooltip": true
     },
@@ -51,7 +50,6 @@
         "enabled_icon": "󱩌",
         "disabled_icon": "󰛨",
         "icon_size": "12px",
-        "interval": 2000,
         "label": true,
         "tooltip": true
     },
