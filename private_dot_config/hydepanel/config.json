@@ -27,7 +27,11 @@
         "icon": "",
         "icon_size": "12px",
         "label": true,
-        "tooltip": true
+        "tooltip": true,
+        "unit": "celsius",
+        "round": true,
+        "show_unit": true,
+        "sensor": "acpitz"
     },
     "date_time": {
         "format": "%b %d %H:%M",
@@ -68,7 +72,6 @@
     "layout": {
         "left_section": [
             "workspaces",
-            "language",
             "window_title"
         ],
         "middle_section": [
@@ -81,6 +84,28 @@
             "system_tray"
         ]
     },
+    "module_groups": [
+        {
+            "widgets": [
+                "updates",
+                "battery"
+            ],
+            "spacing": 4,
+            "style_classes": [
+                "bordered"
+            ]
+        },
+        {
+            "widgets": [
+                "cpu",
+                "quick_settings"
+            ],
+            "spacing": 0,
+            "style_classes": [
+                "compact"
+            ]
+        }
+    ],
     "memory": {
         "icon": "",
         "icon_size": "12px",
@@ -99,7 +124,7 @@
         "tooltip": true
     },
     "mpris": {
-        "truncation_size": 30,
+        "truncation_size": 200,
         "tooltip": true
     },
     "notification": {
@@ -108,7 +133,8 @@
         "ignored": [],
         "timeout": 5000,
         "play_sound": true,
-        "sound_file": "notification4"
+        "sound_file": "notification4",
+        "max_count": 5
     },
     "osd": {
         "enabled": true,
@@ -120,7 +146,7 @@
     "general": {
         "screen_corners": false,
         "check_updates": false,
-        "debug": false,
+        "debug": true,
         "layer": "top",
         "auto_hide": false,
         "bar_style": "default",
@@ -157,7 +183,23 @@
             "show_artist": true,
             "show_time": true,
             "show_time_tooltip": true
-        }
+        },
+        "shortcuts": [
+            {
+                "icon": "terminal-symbolic",
+                "label": "Terminal",
+                "command": "kitty",
+                "tooltip": "Open terminal",
+                "icon_size": 18
+            },
+            {
+                "icon": "firefox-symbolic",
+                "label": "Browser",
+                "command": "firefox",
+                "tooltip": "Launch Firefox",
+                "icon_size": 18
+            }
+        ]
     },
     "stop_watch": {
         "stopped_icon": "󱫞",
@@ -199,28 +241,6 @@
         "tooltip": true,
         "step_size": 5
     },
-    "module_groups": [
-        {
-            "widgets": [
-                "updates",
-                "battery"
-            ],
-            "spacing": 4,
-            "style_classes": [
-                "bordered"
-            ]
-        },
-        {
-            "widgets": [
-                "quick_settings",
-                "theme_switcher"
-            ],
-            "spacing": 0,
-            "style_classes": [
-                "compact"
-            ]
-        }
-    ],
     "weather": {
         "detect_location": true,
         "location": "kathmandu",
