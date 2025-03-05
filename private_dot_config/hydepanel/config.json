@@ -131,7 +131,7 @@
         "anchor": "top-right",
         "auto_dismiss": true,
         "ignored": [],
-        "timeout": 5000,
+        "timeout": 3000,
         "play_sound": true,
         "sound_file": "notification4",
         "max_count": 5
@@ -168,12 +168,12 @@
         "size": 20
     },
     "network_usage": {
-        "adapter_name": "wlan0",
         "icon_size": "14px",
         "upload_icon": "",
         "download_icon": "",
-        "disconnected_icon": "󰤩",
-        "tooltip": true
+        "tooltip": true,
+        "upload": true,
+        "download": false
     },
     "quick_settings": {
         "media": {
