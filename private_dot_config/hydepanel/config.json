@@ -257,11 +257,13 @@
     "workspaces": {
         "count": 8,
         "hide_unoccupied": true,
+        "default_label_format": "{id}",
         "ignored": [
             -99
         ],
         "reverse_scroll": false,
         "empty_scroll": false,
-        "icon_map": {}
+        "icon_map": {
+        }
     }
 }
