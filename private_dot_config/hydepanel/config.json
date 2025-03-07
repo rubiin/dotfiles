@@ -75,7 +75,8 @@
             "window_title"
         ],
         "middle_section": [
-            "date_time"
+            "date_time",
+            "ocr"
         ],
         "right_section": [
             "recorder",
@@ -123,6 +124,12 @@
         "label": false,
         "tooltip": true
     },
+    "ocr": {
+        "icon": "󰐳",
+        "icon_size": "14px",
+        "tooltip": true,
+        "label": true
+    },
     "mpris": {
         "truncation_size": 200,
         "tooltip": true
@@ -151,7 +158,8 @@
         "auto_hide": false,
         "bar_style": "default",
         "location": "top",
-        "widget_style": "default"
+        "widget_style": "default",
+        "corner_size": 20
     },
     "power": {
         "icon": "󰐥",
@@ -263,7 +271,6 @@
         ],
         "reverse_scroll": false,
         "empty_scroll": false,
-        "icon_map": {
-        }
+        "icon_map": {}
     }
 }
