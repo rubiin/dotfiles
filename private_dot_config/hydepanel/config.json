@@ -75,13 +75,12 @@
             "window_title"
         ],
         "middle_section": [
-            "date_time",
-            "ocr"
+            "date_time"
         ],
         "right_section": [
             "recorder",
-            "@group:0",
             "@group:1",
+            "@group:0",
             "system_tray"
         ]
     },
@@ -89,17 +88,18 @@
         {
             "widgets": [
                 "updates",
+                "ocr",
                 "battery"
             ],
             "spacing": 4,
             "style_classes": [
-                "bordered"
+                "compact"
             ]
         },
         {
             "widgets": [
-                "cpu",
-                "quick_settings"
+                "quick_settings",
+                "cpu"
             ],
             "spacing": 0,
             "style_classes": [
@@ -151,15 +151,22 @@
         "widget_style": "wave2"
     },
     "general": {
-        "screen_corners": false,
+        "screen_corners": {
+            "enabled": false,
+            "size": 20
+        },
+        "desktop_clock": {
+            "enabled": true,
+            "anchor": "center",
+            "date_format": "%A, %d %B %Y"
+        },
         "check_updates": false,
-        "debug": true,
         "layer": "top",
         "auto_hide": false,
+        "debug": true,
         "bar_style": "default",
         "location": "top",
-        "widget_style": "default",
-        "corner_size": 20
+        "widget_style": "default"
     },
     "power": {
         "icon": "󰐥",
