@@ -12,3 +12,8 @@ full = 100
 critical = 10
 low = 20
 unplug = 80
+
+[wallpaper]
+custom_paths = [
+    "$HOME/Pictures/Wallpapers",
+] # List of paths to search for wallpapers
