@@ -84,17 +84,19 @@ sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
 # Sets up python and installs python's dependencies
+echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
-
-echo "Installing mise"
-yay -S mise-bin
-mise install
 
 ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
+
+echo "Installing mise"
+yay -S mise-bin
+mise install
+
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
 echo "creating XDG directories"
