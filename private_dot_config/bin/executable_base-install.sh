@@ -83,6 +83,10 @@ tempfile=$(mktemp) && curl -o "$tempfile" https://raw.githubusercontent.com/wez/
 sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
+# Sets up python and installs python's dependencies
+yay -S python-pip python-pipx
+pipx ensurepath
+
 echo "Installing mise"
 yay -S mise-bin
 mise install
