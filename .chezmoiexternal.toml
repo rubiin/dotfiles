@@ -14,3 +14,7 @@
     type = "git-repo"
     url = "https://github.com/rubiin/vimwordlist.nvim.git"
     refreshPeriod = "168h"
+[".config/mpv"]
+    type = "git-repo"
+    url = "https://github.com/zydezu/mpvconfig.git"
+    refreshPeriod = "168h"
