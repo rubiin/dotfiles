@@ -3,4 +3,3 @@
 
 eval "$(mise activate zsh --shims)"
 
-eval "$(pip completion --zsh)"
