@@ -3,4 +3,3 @@
 #
 
 eval "$(mise activate bash --shims)"
-eval "$(pip completion --bash)"
