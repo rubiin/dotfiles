@@ -58,7 +58,7 @@ Here are some details about my setup:
   - [eza](https://github.com/ogham/exa)             : A modern replacement for ‘ls’
   - [btop](https://github.com/aristocratos/btop)    : A monitor of resources
   - [atuin](https://atuin.sh)                       : Sync, search and backup shell history
-- **Bar**                          : [hydepane;](https://github.com/rubiin/Hydepanel) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
+- **Bar**                          : [hydepanel](https://github.com/rubiin/HyDePanel) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
   - Catppucin theme(dark)
   - Gruvbox theme (dark)
   - Nord theme (dark)
