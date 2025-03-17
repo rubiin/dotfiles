@@ -18,3 +18,7 @@
     type = "git-repo"
     url = "https://github.com/zydezu/mpvconfig.git"
     refreshPeriod = "168h"
+[".config/hydepanel"]
+    type = "git-repo"
+    url = "https://github.com/rubiin/HyDePanel.git"
+    refreshPeriod = "168h"
