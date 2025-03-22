@@ -94,7 +94,7 @@ echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
 
 echo "Installing mise"
-yay -S mise-bin
+yay -S mise
 mise install
 
 
