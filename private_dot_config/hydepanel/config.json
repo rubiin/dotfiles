@@ -314,13 +314,12 @@
 			"buttons": {
 				"scaling": 100,
 				"opacity": 100,
+				"hover_opacity": 90,
+				"shadow_enabled": true,
 				"padding_x": "0",
 				"padding_y": "1.25em",
-				"border": {
-					"enabled": false,
-					"width": "1px",
-					"radius": "1em"
-				}
+				"margin_x": "0",
+				"margin_y": "1.25em"
 			},
 			"widgets": {
 				"cpu": {
