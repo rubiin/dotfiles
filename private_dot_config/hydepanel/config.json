@@ -259,7 +259,13 @@
 		"dock": {
 			"scaling": 100,
 			"opacity": 50,
-			"shadow_enabled": true,
+			"shadow": {
+				"enabled": false,
+				"offset": 0,
+				"blur": 0,
+				"spread": 0,
+				"opacity": 100
+			},
 			"padding_x": "8px",
 			"padding_y": "8px",
 			"margin_x": "8px",
@@ -273,7 +279,13 @@
 		"osd": {
 			"scaling": 100,
 			"opacity": 100,
-			"shadow_enabled": true,
+			"shadow": {
+				"enabled": false,
+				"offset": 0,
+				"blur": 0,
+				"spread": 0,
+				"opacity": 100
+			},
 			"padding_x": ".8em",
 			"padding_y": ".6em",
 			"margin_x": "0",
@@ -287,7 +299,13 @@
 		"notification": {
 			"scaling": 100,
 			"opacity": 100,
-			"shadow_enabled": true,
+			"shadow": {
+				"enabled": false,
+				"offset": 0,
+				"blur": 0,
+				"spread": 0,
+				"opacity": 100
+			},
 			"padding_x": ".9em",
 			"padding_y": ".9em",
 			"margin_x": "0",
@@ -301,7 +319,13 @@
 		"bar": {
 			"scaling": 100,
 			"opacity": 70,
-			"shadow_enabled": true,
+			"shadow": {
+				"enabled": false,
+				"offset": 0,
+				"blur": 0,
+				"spread": 0,
+				"opacity": 100
+			},
 			"padding_x": ".8em",
 			"padding_y": ".6em",
 			"margin_x": "0",
@@ -315,11 +339,17 @@
 				"scaling": 100,
 				"opacity": 100,
 				"hover_opacity": 90,
-				"shadow_enabled": true,
 				"padding_x": "0",
 				"padding_y": "1.25em",
 				"margin_x": "0",
-				"margin_y": "1.25em"
+				"margin_y": "1.25em",
+				"shadow": {
+					"enabled": false,
+					"offset": 0,
+					"blur": 0,
+					"spread": 0,
+					"opacity": 100
+				}
 			},
 			"widgets": {
 				"cpu": {
@@ -613,11 +643,17 @@
 				"popover": {
 					"scaling": 100,
 					"opacity": 100,
-					"shadow_enabled": true,
 					"margin_x": "0",
 					"margin_y": "1.25em",
 					"padding_x": "1em",
 					"padding_y": "1em",
+					"shadow": {
+						"enabled": false,
+						"offset": 0,
+						"blur": 0,
+						"spread": 0,
+						"opacity": 100
+					},
 					"border": {
 						"enabled": true,
 						"width": "1px",
@@ -628,11 +664,17 @@
 				"tooltip": {
 					"scaling": 100,
 					"opacity": 100,
-					"shadow_enabled": true,
 					"border": {
 						"enabled": false,
 						"width": "1px",
 						"radius": "1em"
+					},
+					"shadow": {
+						"enabled": false,
+						"offset": 0,
+						"blur": 0,
+						"spread": 0,
+						"opacity": 100
 					},
 					"font-weight": 700,
 					"padding_x": ".25em",
