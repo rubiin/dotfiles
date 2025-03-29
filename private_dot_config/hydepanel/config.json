@@ -140,8 +140,7 @@
 		"enabled": true,
 		"timeout": 2000,
 		"anchor": "bottom-center", // this is the position of the OSD, you can use top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
-		"show_percentage": true,
-		"widget_style": "wave2"
+		"show_percentage": true
 	},
 	"general": {
 		"screen_corners": {
@@ -171,8 +170,7 @@
 		"auto_hide": false,
 		"debug": true,
 		"bar_style": "default",
-		"location": "top",
-		"widget_style": "default"
+		"location": "top"
 	},
 	"power": {
 		"icon": "󰐥",
@@ -279,6 +277,7 @@
 		"osd": {
 			"scaling": 100,
 			"opacity": 100,
+			"widget_style": "default",
 			"shadow": {
 				"enabled": false,
 				"offset": 0,
@@ -319,6 +318,7 @@
 		"bar": {
 			"scaling": 100,
 			"opacity": 70,
+			"widget_style": "default",
 			"shadow": {
 				"enabled": false,
 				"offset": 0,
