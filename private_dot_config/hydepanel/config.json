@@ -292,7 +292,7 @@
 			"border": {
 				"enabled": false,
 				"width": "1px",
-				"radius": "10px"
+					"radius": "16px"
 			}
 		},
 		"notification": {
@@ -312,7 +312,7 @@
 			"border": {
 				"enabled": false,
 				"width": "1px",
-				"radius": "10px"
+					"radius": "16px"
 			}
 		},
 		"bar": {
@@ -333,7 +333,7 @@
 			"border": {
 				"enabled": true,
 				"width": "4px",
-				"radius": "10px"
+					"radius": "16px"
 			},
 			"buttons": {
 				"scaling": 100,
@@ -358,7 +358,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"memory": {
@@ -367,7 +367,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"storage": {
@@ -376,7 +376,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"network_usage": {
@@ -385,7 +385,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"battery": {
@@ -394,7 +394,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"bluetooth": {
@@ -403,7 +403,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"brightness": {
@@ -412,7 +412,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"cava": {
@@ -420,7 +420,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"click_counter": {
@@ -429,7 +429,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"datetime_menu": {
@@ -437,7 +437,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"desktop_clock": {
@@ -445,7 +445,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"hypr_idle": {
@@ -454,7 +454,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"hypr_picker": {
@@ -463,7 +463,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"hypr_sunset": {
@@ -472,16 +472,16 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
-				"keyboard_layout": {
-					"spacing": ".125em",
+				"keyboard": {
 					"icon_size": "14px",
+					"spacing": ".125em",
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"language": {
@@ -490,7 +490,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"microphone": {
@@ -499,7 +499,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"mpris": {
@@ -507,7 +507,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"ocr": {
@@ -516,7 +516,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"overview": {
@@ -524,16 +524,16 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
-				"power_button": {
+				"power": {
 					"spacing": ".125em",
 					"icon_size": "14px",
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"recorder": {
@@ -541,7 +541,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"stop_watch": {
@@ -550,7 +550,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"submap": {
@@ -559,7 +559,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"systray": {
@@ -567,7 +567,15 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+						"radius": "16px"
+					}
+				},
+				"quick_settings": {
+					"spacing": ".125em",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+							"radius": "16px"
 					}
 				},
 				"taskbar": {
@@ -575,7 +583,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"theme": {
@@ -584,7 +592,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"updates": {
@@ -593,7 +601,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"volume": {
@@ -602,7 +610,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"weather": {
@@ -611,7 +619,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"window_title": {
@@ -620,7 +628,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				},
 				"workspaces": {
@@ -628,7 +636,7 @@
 					"border": {
 						"enabled": false,
 						"width": "1px",
-						"radius": "10px"
+							"radius": "16px"
 					}
 				}
 			},
@@ -638,7 +646,7 @@
 				"border": {
 					"enabled": false,
 					"width": "1px",
-					"radius": "10px"
+						"radius": "16px"
 				},
 				"popover": {
 					"scaling": 100,
