@@ -42,9 +42,6 @@
 		"clock_format": "24h",
 		"uptime": true
 	},
-	"divider": {
-		"size": 2
-	},
 	"hypr_idle": {
 		"enabled_icon": "",
 		"disabled_icon": "",
@@ -193,9 +190,6 @@
 		"audio": true,
 		"icon_size": 16,
 		"tooltip": true
-	},
-	"spacing": {
-		"size": 20
 	},
 	"network_usage": {
 		"upload_icon": "",
@@ -356,6 +350,12 @@
 				}
 			},
 			"widgets": {
+				"divider": {
+					"size": " 2px"
+				},
+				"spacing": {
+					"size": " 20px"
+				},
 				"cpu": {
 					"spacing": ".125em",
 					"icon_size": "12px",
