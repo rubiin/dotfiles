@@ -72,7 +72,8 @@
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
-			"date_time"
+			"date_time",
+			"power"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
@@ -175,14 +176,16 @@
 	"power": {
 		"icon": "󰐥",
 		"tooltip": true,
-		"buttons": [
-			"suspend",
-			"hibernate",
-			"shutdown",
-			"reboot",
-			"logout",
-			"lock"
-		]
+		"items_per_row": 3,
+		"icon_size": 100,
+		"buttons": {
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"hibernate": "systemctl hibernate",
+			"suspend": "systemctl suspend",
+			"lock": "loginctl lock-session",
+			"logout": "loginctl terminate-user $USER",
+		},
 	},
 	"recorder": {
 		"path": "Videos/Screencasting",
@@ -634,9 +637,9 @@
 				"workspaces": {
 					"spacing": ".125em",
 					"pill": {
-						"height": "4em",
-						"width": "4em",
-						"active_width": "4em"
+						"height": ".125em",
+						"width": ".5em",
+						"active_width": "1em"
 					},
 					"border": {
 						"enabled": false,
