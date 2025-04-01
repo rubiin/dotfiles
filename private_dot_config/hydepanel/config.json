@@ -40,7 +40,8 @@
 		"notification": true,
 		"calendar": true,
 		"clock_format": "24h",
-		"uptime": true
+		"uptime": true,
+		"hover_reveal": true
 	},
 	"hypr_idle": {
 		"enabled_icon": "",
@@ -199,6 +200,7 @@
 		"download": false
 	},
 	"quick_settings": {
+		"hover_reveal": true,
 		"media": {
 			"ignore": [],
 			"truncation_size": 30,
