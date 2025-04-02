@@ -41,7 +41,7 @@
 		"calendar": true,
 		"clock_format": "24h",
 		"uptime": true,
-		"hover_reveal": true
+		"hover_reveal": false
 	},
 	"hypr_idle": {
 		"enabled_icon": "",
@@ -200,7 +200,7 @@
 		"download": false
 	},
 	"quick_settings": {
-		"hover_reveal": true,
+		"hover_reveal": false,
 		"media": {
 			"ignore": [],
 			"truncation_size": 30,
@@ -237,7 +237,9 @@
 	},
 	"system_tray": {
 		"icon_size": 16,
-		"ignored": []
+		"ignored": [], // do not show these icons in the system tray
+		"hidden": []
+
 	},
 	"task_bar": {
 		"icon_size": 22
@@ -568,7 +570,7 @@
 						"radius": "16px"
 					}
 				},
-				"systray": {
+				"system_tray": {
 					"spacing": ".125em",
 					"border": {
 						"enabled": false,
