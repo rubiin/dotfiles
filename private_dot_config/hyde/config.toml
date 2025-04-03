@@ -2,6 +2,8 @@
 # volumecontrol.sh configuration
 notify = false # Useful for systems that have their own OSD
 steps = 5     # Number of steps to increase/decrease volume
+boost = true # Enable volume boost
+boost_limit = 150 # Volume boost limit // Don't kill your ears/speakers
 
 [brightness]
 # brightnesscontrol.sh configuration
