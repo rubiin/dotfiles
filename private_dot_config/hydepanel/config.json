@@ -40,8 +40,7 @@
 		"notification": true,
 		"calendar": true,
 		"clock_format": "24h",
-		"uptime": true,
-		"hover_reveal": false
+		"uptime": true
 	},
 	"hypr_idle": {
 		"enabled_icon": "",
@@ -52,6 +51,8 @@
 	"hypr_sunset": {
 		"temperature": "2800k",
 		"enabled_icon": "󱩌",
+		"sunrise": "06:00",
+		"sunset": "18:00",
 		"disabled_icon": "󰛨",
 		"label": true,
 		"tooltip": true
@@ -95,8 +96,7 @@
 		},
 		{
 			"widgets": [
-				"quick_settings",
-				"cpu"
+				"quick_settings"
 			],
 			"spacing": 0,
 			"style_classes": [
@@ -128,6 +128,7 @@
 		"tooltip": true
 	},
 	"notification": {
+		"enabled": true,
 		"anchor": "top-right",
 		"auto_dismiss": true,
 		"ignored": [],
@@ -139,8 +140,9 @@
 	"osd": {
 		"enabled": true,
 		"timeout": 2000,
+		"icon_size": 28,
 		"anchor": "bottom-center", // this is the position of the OSD, you can use top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
-		"show_percentage": true
+		"percentage": true
 	},
 	"general": {
 		"screen_corners": {
@@ -200,7 +202,6 @@
 		"download": false
 	},
 	"quick_settings": {
-		"hover_reveal": false,
 		"media": {
 			"ignore": [],
 			"truncation_size": 30,
@@ -721,13 +722,13 @@
 		"step_size": 5
 	},
 	"weather": {
-		"location": "", // this is the location to show the weather, you can use city name or city id
+		"location": "", // this is the location to show the weather, you can use city name, latitude, longitude or zip code
 		"label": true,
 		"tooltip": true,
 		"interval": 3600000 // this is the interval in milliseconds to update the weather, 1 hour is 3600000 milliseconds
 	},
 	"window_title": {
-		"enable_icon": true, // this is to enable the icon in the window title widget
+		"icon": true, // this is to enable the icon in the window title widget
 		"truncation": true,
 		"truncation_size": 50,
 		"title_map": []
