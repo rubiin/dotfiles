@@ -96,7 +96,8 @@
 		},
 		{
 			"widgets": [
-				"quick_settings"
+				"quick_settings",
+				"cpu"
 			],
 			"spacing": 0,
 			"style_classes": [
@@ -730,7 +731,7 @@
 	"window_title": {
 		"icon": true, // this is to enable the icon in the window title widget
 		"truncation": true,
-		"truncation_size": 50,
+		"truncation_size": 30,
 		"title_map": []
 	},
 	"workspaces": {
