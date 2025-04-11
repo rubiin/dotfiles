@@ -53,8 +53,6 @@
 	"hypr_sunset": {
 		"temperature": "2800k",
 		"enabled_icon": "󱩌",
-		"sunrise": "06:00",
-		"sunset": "18:00",
 		"disabled_icon": "󰛨",
 		"label": true,
 		"tooltip": true
@@ -135,10 +133,12 @@
 		"auto_dismiss": true,
 		"ignored": [],
 		"timeout": 3000,
+		"transition_type": "slide-left",
+		"transition_duration": 350,
 		"play_sound": true,
 		"sound_file": "notification4",
 		"max_count": 200,
-		"display_actions_on_hover": true // this is to display the actions on hover
+		"display_actions_on_hover": false // this is to display the actions on hover
 	},
 	"osd": {
 		"enabled": true,
@@ -247,7 +247,9 @@
 		"hidden": []
 	},
 	"task_bar": {
-		"icon_size": 22
+		"icon_size": 22,
+		"ignored": [], // do not show these icons in the task bar
+		"tooltip": true
 	},
 	"theme": {
 		"name": "catpuccin-mocha",
@@ -360,7 +362,9 @@
 			},
 			"widgets": {
 				"divider": {
-					"size": " 2px"
+					"size": " 2px",
+					"margin_x": "0",
+					"margin_y": "1.25em"
 				},
 				"spacing": {
 					"size": " 20px"
@@ -591,7 +595,7 @@
 						"radius": "16px"
 					}
 				},
-				"taskbar": {
+				"task_bar": {
 					"spacing": ".125em",
 					"border": {
 						"enabled": false,
