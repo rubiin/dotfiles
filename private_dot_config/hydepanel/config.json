@@ -6,7 +6,12 @@
 		"label": true,
 		"tooltip": true,
 		"orientation": "vertical",
-		"icon_size": 14
+		"icon_size": 14,
+		"notifications": {
+			"low_threshold": 10,
+			"full_battery": false,
+			"low_battery": false
+		}
 	},
 	"bluetooth": {
 		"icon_size": 14,
@@ -26,13 +31,16 @@
 		"count": 0
 	},
 	"cpu": {
+		"show_icon": true,
 		"icon": "",
 		"label": true,
 		"tooltip": true,
 		"unit": "celsius",
 		"round": true,
 		"show_unit": true,
-		"sensor": "acpitz"
+		"sensor": "acpitz",
+		"graph": false,
+		"graph_length": 4
 	},
 	"date_time": {
 		"format": "%b %d %H:%M",
@@ -62,6 +70,11 @@
 		"label": true,
 		"tooltip": true
 	},
+	"window_count": {
+		"icon": "",
+		"label_format": "[{count}]",
+		"tooltip": true
+	},
 	"language": {
 		"truncation_size": 2, // this is the number of characters to show in the language widget
 		"tooltip": true,
@@ -69,7 +82,7 @@
 	},
 	"layout": {
 		"left_section": [
-			"workspaces",
+			"@group:0",
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
@@ -77,12 +90,22 @@
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
+			"@group:2",
 			"@group:1",
-			"@group:0",
 			"system_tray"
 		] // this is the right section of the panel
 	},
 	"module_groups": [ // module groups are used to group multiple modules together, you can create multiple groups and access as @group:0, @group:1, etc
+		{
+			"widgets": [
+				"workspaces",
+				"window_count"
+			],
+			"spacing": 1,
+			"style_classes": [
+				"compact"
+			]
+		},
 		{
 			"widgets": [
 				"updates",
@@ -105,9 +128,12 @@
 		}
 	],
 	"memory": {
+		"show_icon": true,
 		"icon": "",
 		"label": true,
-		"tooltip": true
+		"tooltip": true,
+		"graph": false,
+		"graph_length": 4
 	},
 	"submap": {
 		"icon": "󰌌",
@@ -174,7 +200,6 @@
 		"layer": "top",
 		"auto_hide": false,
 		"debug": true,
-		"bar_style": "default",
 		"location": "top"
 	},
 	"power": {
@@ -237,9 +262,12 @@
 		"running_icon": "󱫠"
 	},
 	"storage": {
+		"show_icon": true,
 		"icon": "󰋊",
 		"label": true,
-		"tooltip": true
+		"tooltip": true,
+		"graph": false,
+		"graph_length": 4
 	},
 	"system_tray": {
 		"icon_size": 16,
@@ -327,7 +355,10 @@
 		"bar": {
 			"scaling": 100,
 			"opacity": 70,
-			"widget_style": "default",
+			"style": {
+				"panel": "default",
+				"widget": "default"
+			},
 			"shadow": {
 				"enabled": false,
 				"offset": 0,
@@ -370,6 +401,15 @@
 					"size": " 20px"
 				},
 				"cpu": {
+					"spacing": ".125em",
+					"icon_size": "12px",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+						"radius": "16px"
+					}
+				},
+				"window_count": {
 					"spacing": ".125em",
 					"icon_size": "12px",
 					"border": {
