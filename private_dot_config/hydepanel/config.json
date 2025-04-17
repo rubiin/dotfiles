@@ -68,17 +68,20 @@
 	"keyboard": {
 		"icon": "󰌌",
 		"label": true,
-		"tooltip": true
+		"tooltip": true,
+		"show_icon": false
 	},
 	"window_count": {
 		"icon": "",
 		"label_format": "[{count}]",
-		"tooltip": true
+		"tooltip": true,
+		"show_icon": false
 	},
 	"language": {
 		"truncation_size": 2, // this is the number of characters to show in the language widget
 		"tooltip": true,
-		"icon": ""
+		"icon": "",
+		"show_icon": false
 	},
 	"layout": {
 		"left_section": [
@@ -138,7 +141,8 @@
 	"submap": {
 		"icon": "󰌌",
 		"label": true,
-		"tooltip": true
+		"tooltip": true,
+		"show_icon": false,
 	},
 	"microphone": {
 		"label": false,
@@ -207,6 +211,8 @@
 		"tooltip": true,
 		"items_per_row": 3,
 		"icon_size": 100,
+		"show_icon": true,
+		"label": false,
 		"buttons": {
 			"shutdown": "systemctl poweroff",
 			"reboot": "systemctl reboot",
@@ -758,16 +764,22 @@
 		"notify": false
 	},
 	"updates": {
-		"os": "arch",
+		"show_icon": true,
 		"icon": "󱧘",
+		"os": "arch",
 		"interval": 3600000,
-		"tooltip": true,
-		"label": true
+		"tooltip": true
 	},
 	"volume": {
 		"label": true,
 		"tooltip": true,
 		"step_size": 5
+	},
+	"hypr_picker": {
+		"icon": "",
+		"tooltip": true,
+		"label": false,
+		"show_icon": true
 	},
 	"weather": {
 		"location": "", // this is the location to show the weather, you can use city name, latitude, longitude or zip code
