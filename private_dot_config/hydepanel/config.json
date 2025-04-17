@@ -789,6 +789,7 @@
 	},
 	"window_title": {
 		"icon": true, // this is to enable the icon in the window title widget
+		"tooltip": true,
 		"truncation": true,
 		"truncation_size": 50,
 		"title_map": []
