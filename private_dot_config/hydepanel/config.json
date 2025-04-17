@@ -151,7 +151,8 @@
 	"ocr": {
 		"icon": "󰐳",
 		"tooltip": true,
-		"label": true
+		"label": false,
+		"show_icon": true
 	},
 	"mpris": {
 		"truncation_size": 200,
@@ -768,7 +769,11 @@
 		"icon": "󱧘",
 		"os": "arch",
 		"interval": 3600000,
-		"tooltip": true
+		"tooltip": true,
+		"label": true,
+		"flatpak": true,
+		"snap": false,
+		"brew": false
 	},
 	"volume": {
 		"label": true,
