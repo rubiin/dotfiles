@@ -237,32 +237,41 @@
 		"download": false
 	},
 	"quick_settings": {
+		"avatar": {
+			"image": "~/.face",
+			"name": "system",   // system means it will use the system user name, you can also use your own name
+			"distro_icon": true
+		},
 		"auto_hide": false,
 		"auto_hide_timeout": 2000,
 		"media": {
-			"ignore": [],
+			"enabled": true,
+			"ignore": ["vlc"],
 			"truncation_size": 30,
 			"show_album": true,
 			"show_artist": true,
 			"show_time": true,
 			"show_time_tooltip": true
 		},
-		"shortcuts": [
-			{
-				"icon": "terminal-symbolic",
-				"label": "Terminal",
-				"command": "kitty",
-				"tooltip": "Open terminal",
-				"icon_size": 18
-			},
-			{
-				"icon": "firefox-symbolic",
-				"label": "Browser",
-				"command": "firefox",
-				"tooltip": "Launch Firefox",
-				"icon_size": 18
-			}
-		]
+		"shortcuts": {
+			"enabled": true,
+			"items":[
+				{
+					"icon": "terminal-symbolic",
+					"label": "Terminal",
+					"command": "kitty",
+					"tooltip": "Open terminal",
+					"icon_size": 18
+				},
+				{
+					"icon": "firefox-symbolic",
+					"label": "Browser",
+					"command": "firefox",
+					"tooltip": "Launch Firefox",
+					"icon_size": 18
+				}
+			]
+		}
 	},
 	"stop_watch": {
 		"stopped_icon": "󱫞",
