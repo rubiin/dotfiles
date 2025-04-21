@@ -42,8 +42,8 @@ ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay 
 ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
 
 echo "Installing hyperdots"
-git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
-cd ~/Hyprdots/Scripts || exit
+git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE/
+cd ~/HyDE/Scripts || exit
 ./install.sh
 
 
