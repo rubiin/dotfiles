@@ -3,7 +3,6 @@ Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/github
 
-  
 # Bitbucket
 Host bitbucket.org
   PreferredAuthentications publickey
@@ -13,6 +12,12 @@ Host bitbucket.org
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
+
+Host "takeo-dev"
+   IdentityFile  ~/cit.pem
+   HostName ec2-18-214-214-20.compute-1.amazonaws.com
+   User ubuntu
+   Port 22
 
 
 ## Now set defaults for all if not matched by any hosts ##
