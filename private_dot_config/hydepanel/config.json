@@ -33,19 +33,21 @@
 	"cpu": {
 		"show_icon": true,
 		"icon": "",
-		"label": true,
+		"mode": "graph",
 		"tooltip": true,
 		"unit": "celsius",
 		"round": true,
 		"show_unit": true,
 		"sensor": "acpitz",
-		"graph": false,
 		"graph_length": 4
 	},
 	"date_time": {
 		"format": "%b %d %H:%M",
-		"notification_count": true,
-		"notification": true,
+		"notification": {
+			"enabled": true,
+			"count": true,
+			"hide_count_on_zero": true
+		},
 		"calendar": true,
 		"clock_format": "24h",
 		"uptime": true,
@@ -75,7 +77,8 @@
 		"icon": "",
 		"label_format": "[{count}]",
 		"tooltip": true,
-		"show_icon": false
+		"show_icon": false,
+		"hide_when_zero": true
 	},
 	"language": {
 		"truncation_size": 2, // this is the number of characters to show in the language widget
@@ -133,16 +136,15 @@
 	"memory": {
 		"show_icon": true,
 		"icon": "",
-		"label": true,
+		"mode": "progress",
 		"tooltip": true,
-		"graph": false,
 		"graph_length": 4
 	},
 	"submap": {
 		"icon": "󰌌",
 		"label": true,
 		"tooltip": true,
-		"show_icon": false,
+		"show_icon": false
 	},
 	"microphone": {
 		"label": false,
@@ -155,8 +157,17 @@
 		"show_icon": true
 	},
 	"mpris": {
-		"truncation_size": 200,
-		"tooltip": true
+		"truncation_size": 10,
+		"tooltip": false
+	},
+	"world_clock": {
+		"icon": "󱉊",
+		"show_icon": true,
+		"timezones": [
+			"America/New_York",
+			"Europe/London",
+			"Asia/Tokyo"
+		]
 	},
 	"notification": {
 		"enabled": true,
@@ -188,7 +199,7 @@
 			"icon_size": 30,
 			"anchor": "bottom-center",
 			"ignored_apps": [],
-			"layer": "top",
+			"layer": "bottom",
 			"pinned_apps": [
 				"vivaldi",
 				"wezterm",
@@ -199,7 +210,8 @@
 		"desktop_clock": {
 			"enabled": true,
 			"anchor": "bottom-right",
-			"date_format": "%A, %d %B %Y"
+			"date_format": "%A, %d %B %Y",
+			"layer": "bottom"
 		},
 		"check_updates": false,
 		"layer": "top",
@@ -237,16 +249,25 @@
 		"download": false
 	},
 	"quick_settings": {
-		"avatar": {
-			"image": "~/.face",
-			"name": "system",   // system means it will use the system user name, you can also use your own name
+		"user": {
+			"avatar": "~/.face",
+			"name": "system",
+			// system means it will use the system user name, you can also use your own name
 			"distro_icon": true
+		},
+		"controls": {
+			"sliders": [
+				"brightness",
+				"volume"
+			]
 		},
 		"auto_hide": false,
 		"auto_hide_timeout": 2000,
 		"media": {
 			"enabled": true,
-			"ignore": ["vlc"],
+			"ignore": [
+				"vlc"
+			],
 			"truncation_size": 30,
 			"show_album": true,
 			"show_artist": true,
@@ -255,7 +276,7 @@
 		},
 		"shortcuts": {
 			"enabled": true,
-			"items":[
+			"items": [
 				{
 					"icon": "terminal-symbolic",
 					"label": "Terminal",
@@ -280,9 +301,8 @@
 	"storage": {
 		"show_icon": true,
 		"icon": "󰋊",
-		"label": true,
+		"mode": "label",
 		"tooltip": true,
-		"graph": false,
 		"graph_length": 4
 	},
 	"system_tray": {
@@ -331,6 +351,10 @@
 			"scaling": 100,
 			"opacity": 100,
 			"widget_style": "default",
+			"sliders": {
+				"height": "0.5em",
+				"slider": false
+			},
 			"shadow": {
 				"enabled": false,
 				"offset": 0,
@@ -426,6 +450,15 @@
 					}
 				},
 				"window_count": {
+					"spacing": ".125em",
+					"icon_size": "12px",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+						"radius": "16px"
+					}
+				},
+				"world_clock": {
 					"spacing": ".125em",
 					"icon_size": "12px",
 					"border": {
@@ -645,6 +678,10 @@
 				},
 				"quick_settings": {
 					"spacing": ".125em",
+					"sliders": {
+						"height": "0.7em",
+						"slider": false
+					},
 					"border": {
 						"enabled": false,
 						"width": "1px",
