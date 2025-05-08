@@ -20,6 +20,7 @@ file_folder_list=(
    "$config/sheldon"
    "$config/yt-dlp"
    "$config/.ripgreprc"
+   "$config/ktorrentrc"
    "$config/wgetrc"
    "$config/vivaldi-stable.conf"
    "$config/.shellcheckrc"
