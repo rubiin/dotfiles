@@ -112,7 +112,6 @@ print_message() {
         "Wrong again, command warrior."
         "Don't you know anything?"
         "I'm not saying I can't handle it. I'm just saying I won't"
-        "That command is now being taught in a course titled "What Not to Bash"."
         "The terminal is taking the rest of the day off after that."
         "One small typo for man, one giant WTF for bash."
         "Not only did that fail, but it also hurt my feelings."
@@ -127,13 +126,14 @@ print_message() {
         "I could explain why that failed, but I want you to grow."
         "Somewhere, Linus Torvalds just facepalmed."
         "You've angered the sysadmin gods. Sacrifice a rubber chicken."
-        "I fed that to ChatGPT. It threw it back and said “No thanks.”
         "My circuits weep everytime you press Enter."
         "That command was so bad, I felt it in my fan speeds."
         "Your shell history will be used as evidence."
         "Achievement unlocked: Expert in Confusion."
         "Your keyboard might be haunted."
-        "Command not recognized. But hey, points for creativity.
+        "That command is now being taught in a course titled "What Not to Bash""
+        "Command not recognized. But hey, points for creatvity."
+        "I fed that to ChatGPT. It threw it back and said "No thanks.""
     )
 
     # If CMD_NOT_FOUND_MSGS array is populated use those messages instead of the defaults
