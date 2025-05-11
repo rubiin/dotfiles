@@ -59,8 +59,8 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
 ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm < ~/pacman.txt
 
 sudo fc-cache -vf
- 
-curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh 
+
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
@@ -101,5 +101,9 @@ mise install
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
 echo "creating XDG directories"
 xdg-user-dirs-update
+
+echo "Setting up pacman hooks"
+sudo mkdir -p /etc/pacman.d/hooks
+sudo cp ./hooks/* /etc/pacman.d/hooks/
 
 echo "Completed setup, run python and cargo installations manually"
