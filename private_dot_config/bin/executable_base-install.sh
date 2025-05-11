@@ -104,6 +104,6 @@ xdg-user-dirs-update
 
 echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
-sudo cp ./hooks/* /etc/pacman.d/hooks/
+sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
 echo "Completed setup, run python and cargo installations manually"
