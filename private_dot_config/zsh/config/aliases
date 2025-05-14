@@ -54,6 +54,7 @@ alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
 alias icat="kitten icat"
 
+
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 	alias pbcopy='xclip -selection clipboard'
@@ -200,6 +201,11 @@ alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do time $shell -i -c exit; done
+}
+
+show_memory(){
+  ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
+
 }
 
 clearcache() {
