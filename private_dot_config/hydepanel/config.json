@@ -93,6 +93,21 @@
 		"tooltip": true,
 		"graph_length": 4
 	},
+	"cliphist": {
+		"icon": "",
+		"label": false,
+		"tooltip": true
+	},
+	"kanban": {
+		"icon": "󱞁",
+		"label": false,
+		"tooltip": true
+	},
+	"emoji_picker": {
+		"icon": "",
+		"label": false,
+		"tooltip": true
+	},
 	"submap": {
 		"icon": "󰌌",
 		"label": true,
@@ -128,7 +143,8 @@
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
-			"date_time"
+			"date_time",
+			"weather"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
@@ -169,8 +185,13 @@
 			]
 		}
 	],
-
 	"modules": {
+		"app_launcher": {
+			"enabled": true,
+			"tooltip": true,
+			"icon_size": 30,
+			"ignored_apps": []
+		},
 		"notification": {
 			"enabled": true,
 			"anchor": "top-right",
@@ -215,12 +236,12 @@
 			"layer": "bottom"
 		}
 	},
-
 	"general": {
 		"check_updates": false,
 		"layer": "top",
 		"auto_hide": false,
 		"debug": true,
+		"monitor_styles": true,
 		"location": "top"
 	},
 	"power": {
@@ -390,69 +411,91 @@
 		"padding": "7pt",
 		"spacing": "12pt",
 		"border-width": "1px",
-		"dock": {
-			"scaling": 100,
-			"opacity": 50,
-			"shadow": {
-				"enabled": false,
-				"offset": 0,
-				"blur": 0,
-				"spread": 0,
-				"opacity": 100
+		"modules": {
+			"app_launcher": {
+				"scaling": 100,
+				"opacity": 50,
+				"shadow": {
+					"enabled": false,
+					"offset": 0,
+					"blur": 0,
+					"spread": 0,
+					"opacity": 100
+				},
+				"padding_x": "8px",
+				"padding_y": "8px",
+				"margin_x": "8px",
+				"margin_y": "8px",
+				"border": {
+					"enabled": false,
+					"width": "1px",
+					"radius": "1.5rem"
+				}
 			},
-			"padding_x": "8px",
-			"padding_y": "8px",
-			"margin_x": "8px",
-			"margin_y": "8px",
-			"border": {
-				"enabled": false,
-				"width": "1px",
-				"radius": "1.5rem"
-			}
-		},
-		"osd": {
-			"scaling": 100,
-			"opacity": 100,
-			"widget_style": "default",
-			"sliders": {
-				"height": "0.5em",
-				"slider": false
+			"dock": {
+				"scaling": 100,
+				"opacity": 50,
+				"shadow": {
+					"enabled": false,
+					"offset": 0,
+					"blur": 0,
+					"spread": 0,
+					"opacity": 100
+				},
+				"padding_x": "8px",
+				"padding_y": "8px",
+				"margin_x": "8px",
+				"margin_y": "8px",
+				"border": {
+					"enabled": false,
+					"width": "1px",
+					"radius": "1.5rem"
+				}
 			},
-			"shadow": {
-				"enabled": false,
-				"offset": 0,
-				"blur": 0,
-				"spread": 0,
-				"opacity": 100
+			"osd": {
+				"scaling": 100,
+				"opacity": 100,
+				"widget_style": "default",
+				"sliders": {
+					"height": "0.5em",
+					"slider": false
+				},
+				"shadow": {
+					"enabled": false,
+					"offset": 0,
+					"blur": 0,
+					"spread": 0,
+					"opacity": 100
+				},
+				"padding_x": ".8em",
+				"padding_y": ".6em",
+				"margin_x": "0",
+				"margin_y": "1.25em",
+				"border": {
+					"enabled": false,
+					"width": "1px",
+					"radius": "16px"
+				}
 			},
-			"padding_x": ".8em",
-			"padding_y": ".6em",
-			"margin_x": "0",
-			"margin_y": "1.25em",
-			"border": {
-				"enabled": false,
-				"width": "1px",
-				"radius": "16px"
-			}
-		},
-		"notification": {
-			"scaling": 100,
-			"opacity": 100,
-			"shadow": {
-				"enabled": false,
-				"offset": 0,
-				"blur": 0,
-				"spread": 0,
-				"opacity": 100
-			},
-			"padding_x": ".9em",
-			"padding_y": ".9em",
-			"margin_x": "0",
-			"margin_y": "1.25em",
-			"border": {
-				"enabled": false,
-				"width": "1px",
-				"radius": "16px"
+			"notification": {
+				"scaling": 100,
+				"opacity": 100,
+				"shadow": {
+					"enabled": false,
+					"offset": 0,
+					"blur": 0,
+					"spread": 0,
+					"opacity": 100
+				},
+				"padding_x": ".9em",
+				"padding_y": ".9em",
+				"margin_x": "0",
+				"margin_y": "1.25em",
+				"border": {
+					"enabled": false,
+					"width": "1px",
+					"radius": "16px"
+				}
 			}
 		},
 		"bar": {
@@ -504,6 +547,33 @@
 					"size": " 20px"
 				},
 				"cpu": {
+					"spacing": ".125em",
+					"icon_size": "12px",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+						"radius": "16px"
+					}
+				},
+				"cliphist": {
+					"spacing": ".125em",
+					"icon_size": "12px",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+						"radius": "16px"
+					}
+				},
+				"kanban": {
+					"spacing": ".125em",
+					"icon_size": "12px",
+					"border": {
+						"enabled": false,
+						"width": "1px",
+						"radius": "16px"
+					}
+				},
+				"emoji_picker": {
 					"spacing": ".125em",
 					"icon_size": "12px",
 					"border": {
