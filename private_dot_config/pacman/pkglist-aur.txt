@@ -1,13 +1,12 @@
+better-control-git
+fabric-cli-git
 git-interactive-rebase-tool-bin
 gitflow-cjs
 goreleaser-bin
 gray-git
-hyde-cli-git
 lazydocker-bin
 matugen-bin
 megabasterd-bin
-mise-bin
-persepolis-git
 pokego-bin
 python-fabric-git
 python-rlottie-python
@@ -16,4 +15,5 @@ station-bin
 topgrade-bin
 trash-cli-git
 ttf-cm-unicode
+ttf-joypixels
 xdg-ninja
