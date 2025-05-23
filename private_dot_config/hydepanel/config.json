@@ -143,8 +143,7 @@
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
-			"date_time",
-			"weather"
+			"date_time"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
@@ -243,6 +242,11 @@
 		"debug": true,
 		"monitor_styles": true,
 		"location": "top"
+	},
+	"overview": {
+		"icon": "󰡃",
+		"tooltip": true,
+		"label": false
 	},
 	"power": {
 		"icon": "󰐥",
@@ -760,6 +764,7 @@
 				},
 				"overview": {
 					"spacing": ".125em",
+					"icon_size": "14px",
 					"border": {
 						"enabled": false,
 						"width": "1px",
