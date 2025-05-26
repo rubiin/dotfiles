@@ -16,4 +16,5 @@ topgrade-bin
 trash-cli-git
 ttf-cm-unicode
 ttf-joypixels
+unimatrix-git
 xdg-ninja
