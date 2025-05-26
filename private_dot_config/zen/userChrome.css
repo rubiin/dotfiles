@@ -1,6 +1,20 @@
 
 
-tabbrowser-tab[pending="true"] {
+
+/* this is for making the unloaded tabs gray*/
+
+.tabbrowser-tab[pending="true"] {
     filter: grayscale(1);
     opacity: 0.5;
+}
+
+
+
+/* this is for making selected split not have border*/
+@-moz-document url-prefix("chrome:") {
+  #tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer.deck-selected {
+    outline: var(--zen-colors-border) !important;
+  }
+  
 }
