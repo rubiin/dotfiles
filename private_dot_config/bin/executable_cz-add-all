@@ -46,6 +46,7 @@ file_folder_list=(
    "$config/waycorner"
    "$config/lazygit"
    "$config/dolphinrc"
+   "$config/pacman"
    "$config/fastfetch"
    "$config/zathura"
    "$config/safeeyes/safeeyes.json"
