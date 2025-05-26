@@ -48,7 +48,6 @@ file_folder_list=(
    "$config/dolphinrc"
    "$config/pacman"
    "$config/zen"
-   "$config/matugen"
    "$config/fastfetch"
    "$config/zathura"
    "$config/safeeyes/safeeyes.json"
