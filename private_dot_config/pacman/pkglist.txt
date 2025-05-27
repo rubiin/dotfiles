@@ -87,6 +87,7 @@ fd
 ffmpegthumbnailer
 ffmpegthumbs
 file-roller
+firefox
 firefox-developer-edition
 firewalld
 flatpak
@@ -171,7 +172,6 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
-lite-xl
 logrotate
 lsb-release
 lsd
