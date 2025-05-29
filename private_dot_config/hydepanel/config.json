@@ -98,6 +98,12 @@
 		"label": false,
 		"tooltip": true
 	},
+	"radio_player": {
+		"icon": "",
+		"label": true,
+		"tooltip": true,
+		"max_visible_stations": 4 // this is the maximum number of stations to show in the radio player
+	},
 	"kanban": {
 		"icon": "󱞁",
 		"label": false,
@@ -143,7 +149,8 @@
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
-			"date_time"
+			"date_time",
+			"radio_player"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
