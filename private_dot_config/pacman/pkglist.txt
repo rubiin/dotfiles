@@ -87,7 +87,6 @@ fd
 ffmpegthumbnailer
 ffmpegthumbs
 file-roller
-firefox
 firefox-developer-edition
 firewalld
 flatpak
