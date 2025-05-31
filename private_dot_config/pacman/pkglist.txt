@@ -289,6 +289,7 @@ st
 starship
 stylua
 sudo
+sweeper
 swww
 sysfsutils
 systemd-sysvcompat
