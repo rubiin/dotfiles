@@ -11,6 +11,7 @@ pokego-bin
 python-fabric-git
 python-rlottie-python
 snixembed-git
+stacer-bin
 station-bin
 topgrade-bin
 trash-cli-git
