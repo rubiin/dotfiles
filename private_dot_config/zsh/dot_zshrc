@@ -3,14 +3,42 @@
 # DOCS https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
 #───────────────────────────────────────────────────────────────────────────────
 zmodload zsh/zprof
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+
+
+# Tries starship, then p10k then the normal prompt
+# Set XDG base directories if not already set
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+
+# Initialize Starship or fallback to Powerlevel10k
+if command -v starship &>/dev/null; then
+    # ===== START Initialize Starship prompt =====
+    eval "$(starship init zsh)"
+    export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
+    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+    # ===== END Initialize Starship prompt =====
+
+elif [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
+    # ===== START Powerlevel10k Instant Prompt =====
+    if [[ -r "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+        source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
+    fi
+    # ===== END Powerlevel10k Instant Prompt =====
+
+    # ===== START Initialize Powerlevel10k theme =====
+    export POWERLEVEL10K_TRANSIENT_PROMPT=same-dir
+    P10K_THEME="${P10K_THEME:-/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme}"
+    [[ -r "$P10K_THEME" ]] && source "$P10K_THEME"
+    [[ -f "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && source "${ZDOTDIR:-$HOME}/.p10k.zsh"
+    # ===== END Initialize Powerlevel10k theme =====
+
+else
+    # ===== START Fallback prompt (optional) =====
+    echo "⚠️  Neither Starship nor Powerlevel10k found. Using default Zsh prompt."
+    PROMPT='%n@%m:%~ %# '
+    # ===== END Fallback prompt =====
 fi
+
 
 eval "$(sheldon source)"
 
@@ -47,10 +75,6 @@ _evalcache mise activate zsh
 _evalcache atuin init zsh
 
 fpath=($fpath "$HOME/.zfunctions")
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh
-
 
 # create some folders if they don't exist
 [ -d ~/projects ]  && mkdir ~/projects/ || mkdir ~/projects
