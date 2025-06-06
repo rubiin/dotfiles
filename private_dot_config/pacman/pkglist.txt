@@ -171,6 +171,7 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+lite-xl
 logrotate
 lsb-release
 lsd
@@ -253,6 +254,7 @@ python-pipx
 python-pyjson5
 python-pyqt5
 python-pytomlpp
+python-qrcode
 qt5-imageformats
 qt5-quickcontrols
 qt5ct
@@ -281,6 +283,7 @@ slurp
 smartmontools
 sof-firmware
 sox
+speech-dispatcher
 spicetify-cli
 spotify
 spotube-bin
@@ -300,7 +303,6 @@ tesseract-data-ind
 texinfo
 the_silver_searcher
 thefuck
-thunderbird
 time
 tk
 tmux
