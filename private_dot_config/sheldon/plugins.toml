@@ -27,9 +27,6 @@ apply = ["defer"]
 [plugins.evalcache]
 github = "mroth/evalcache"
 
-[plugins.powerlevel10k]
-github = "romkatv/powerlevel10k"
-
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
