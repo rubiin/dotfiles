@@ -19,34 +19,57 @@
   
 }
 
-/**
-* Zen Mod: Tab rename fix
-* Better visibility of tab renaming by inverting the selected text colors.
-*/
+
+
 @-moz-document url-prefix("chrome:") {
-  #tab-label-input::selection {
-    background: var(--input-color) !important;
-    color: var(--input-bgcolor) !important;
-  }
-}
-
-
-/*Fixes the white outlines (or artifacts) on the rounded corners that can appear on some pages.*/ 
-.browserContainer, .browserStack {
-	clip-path: inset(0 round var(--zen-native-inner-radius));
-}
-
-
-/* add new tab */
-#urlbar[zen-newtab="true"] {
-  #identity-icon {
-    list-style-image: url("chrome://browser/skin/zen-icons/new-tab-image.svg") !important;
-    filter: opacity(0.5) !important;
-  }
-
-  &[open] #identity-icon-box::after {
-    content: "New Tab" !important;
-    filter: opacity(0.5) !important;
-    padding-left: 6px !important;
-  }
-}
+    /* Hide header, description, extension captions */
+    #unified-extensions-view box.panel-header,
+    #unified-extensions-description,
+    #unified-extensions-messages-container,
+    .unified-extensions-item-message-deck {
+      display: none !important;
+    }
+    /* Reduce the panel size and padding */
+    #unified-extensions-view {
+      width: var(--menu-panel-width) !important;
+    }
+    panelview .unified-extensions-item-action-button {
+      padding-inline: 10px !important;
+      padding-block: 0px !important;
+    }
+    #unified-extensions-manage-extensions {
+      padding-inline: 10px !important;
+    }
+    #unified-extensions-panel .unified-extensions-item {
+      margin-block: 2px !important;
+    }
+    #unified-extensions-view .unified-extensions-item-action-button:hover {
+      background-color: transparent !important;
+    }
+    #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
+    .unified-extensions-item-row-wrapper {
+      padding: 0 !important;
+    }
+    #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon {
+      opacity: 0 !important;
+      transition: 0.2s ease !important;
+    }
+    #unified-extensions-panel .unified-extensions-item:hover {
+      .unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon {
+        opacity: 0.85 !important;
+      }
+    }
+    #unified-extensions-view .unified-extensions-item-action-button .panel-no-padding .webextension-browser-action {
+      padding: 0 !important;
+    }
+    #unified-extensions-view .toolbar-menupopup :is(menu, menuitem), .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+      max-height: 3em !important;
+    }
+    #unified-extensions-view .subviewbutton-iconic {
+    & > .toolbarbutton-icon {
+      width: 1.2em !important;
+      height: 1.2em !important;
+      padding: 0.7em !important;
+      }
+    }
+ 
