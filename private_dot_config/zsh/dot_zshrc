@@ -11,14 +11,8 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 
 # Initialize Starship or fallback to Powerlevel10k
-if command -v starship &>/dev/null; then
-    # ===== START Initialize Starship prompt =====
-    eval "$(starship init zsh)"
-    export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
-    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
-    # ===== END Initialize Starship prompt =====
 
-elif [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
+if [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
     # ===== START Powerlevel10k Instant Prompt =====
     if [[ -r "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
         source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -31,6 +25,13 @@ elif [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
     [[ -r "$P10K_THEME" ]] && source "$P10K_THEME"
     [[ -f "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && source "${ZDOTDIR:-$HOME}/.p10k.zsh"
     # ===== END Initialize Powerlevel10k theme =====
+
+elif command -v starship &>/dev/null; then
+    # ===== START Initialize Starship prompt =====
+    eval "$(starship init zsh)"
+    export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
+    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+    # ===== END Initialize Starship prompt =====
 
 else
     # ===== START Fallback prompt (optional) =====

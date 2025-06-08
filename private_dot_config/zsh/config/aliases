@@ -34,6 +34,7 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
       && yay -Syyu --noconfirm && update-all'
 alias today="npx aaja"
 alias tz="npx taze"
+alias watch_hydepanel="watch -n 1 'ps aux --sort=-%mem | grep hydepanel | awk '\''NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'\'''"
 alias ua-drop-caches='sudo paccache -rk2; yay -Sc --aur --noconfirm'
 alias update-all='sudo pacman -Syu --noconfirm archlinux-keyring;yay -Syu --noconfirm; flatpak update -y; mise self-update;mise upgrade'
 alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
