@@ -113,6 +113,7 @@ gobject-introspection
 gparted
 gpm
 gptfdisk
+gpu-screen-recorder
 grex
 grim
 grimblast-git
@@ -133,6 +134,7 @@ hyprland-qtutils
 hyprlang
 hyprlock
 hyprpicker
+hyprshot
 hyprsunset
 hyprutils
 hyprwayland-scanner
@@ -254,7 +256,9 @@ python-pipx
 python-pyjson5
 python-pyqt5
 python-pytomlpp
+python-pywayland
 python-qrcode
+python-watchdog
 qt5-imageformats
 qt5-quickcontrols
 qt5ct
@@ -292,6 +296,7 @@ st
 starship
 stylua
 sudo
+swappy
 sweeper
 swww
 sysfsutils
@@ -316,6 +321,7 @@ ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
+ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-twemoji-git
 ttf-ubuntu-nerd
@@ -328,6 +334,7 @@ unzip
 upx
 usb_modeswitch
 usbutils
+uwsm
 vala
 valgrind
 vi
@@ -337,6 +344,7 @@ vivaldi
 vivaldi-ffmpeg-codecs
 vnstat
 vpnc
+vte3
 webrtc-audio-processing
 welcome
 wezterm-git
