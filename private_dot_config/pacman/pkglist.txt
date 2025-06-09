@@ -300,6 +300,7 @@ swappy
 sweeper
 swww
 sysfsutils
+sysprof
 systemd-sysvcompat
 taskwarrior-tui
 tealdeer
