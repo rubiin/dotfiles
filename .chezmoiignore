@@ -116,7 +116,7 @@
 .config/tmux/*
 .config/lite-xl/ipc/**
 !.config/tmux/tmux.conf.local
-!.config/tmux/conf
+!.config/tmux/config
 !.config/tmux/scripts
 **/autoload/**/*
 **/temp/
