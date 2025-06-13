@@ -34,6 +34,11 @@ startup_command = "nvim wezterm.lua"
 
 
 [[session]]
+name = "hydepanel config"
+path = "~/.config/hydepanel"
+startup_command = "sh init.sh -start"
+
+[[session]]
 name = "sesh config"
 path = "~/.config/sesh"
 startup_command = "nvim sesh.toml"
