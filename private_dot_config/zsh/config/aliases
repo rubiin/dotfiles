@@ -84,7 +84,7 @@ alias ealias="$EDITOR ~/.config/zsh/config/aliases"
 alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
 alias ruffs="ruff check --fix;ruff format"
-alias sendnotifications='for i in {1..5}; do notify-send "Notification $i" "This is notification number $i"; done'
+alias sendnotifications='for i in {1..40}; do notify-send "Notification $i" "This is notification number $i"; done'
 
 #  unmanages the file from chezmoi also deletes it
 czx() {
