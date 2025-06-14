@@ -1,4 +1,3 @@
-better-control-git
 cursor-bin
 fabric-cli-git
 git-interactive-rebase-tool-bin
