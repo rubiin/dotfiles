@@ -444,7 +444,7 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-yank'
-# set -g @plugin 'Morantron/tmux-fingers'
+set -g @plugin 'Morantron/tmux-fingers'
 
  # once comfortable with above , you may switch to this plugin
 # set -g @plugin 'omerxx/tmux-sessionx'
@@ -454,6 +454,9 @@ set -g @resurrect-save 'S'                          # Save the session
 set -g @resurrect-restore 'R'                       # Reload the session
 set -g @continuum-restore 'off'     
 set -g @resurrect-capture-pane-contents 'on'
+
+
+set -g @fingers-key \
 
 # -- custom variables ----------------------------------------------------------
 
