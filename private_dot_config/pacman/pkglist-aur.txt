@@ -1,4 +1,3 @@
-cursor-bin
 fabric-cli-git
 git-interactive-rebase-tool-bin
 gitflow-cjs
@@ -7,6 +6,7 @@ gray-git
 lazydocker-bin
 matugen-bin
 megabasterd-bin
+mongodb-compass-bin
 pokego-bin
 python-fabric-git
 python-rlottie-python
