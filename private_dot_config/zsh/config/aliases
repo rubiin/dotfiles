@@ -34,7 +34,6 @@ alias rate-and-update='export TMPFILE="$(mktemp)"; \
       && yay -Syyu --noconfirm && update-all'
 alias today="npx aaja"
 alias tz="npx taze"
-alias watch_hydepanel="watch -n 4 'ps aux --sort=-%mem | grep hydepanel | awk '\''NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'\'''"
 alias ua-drop-caches='sudo paccache -rk2; yay -Sc --aur --noconfirm'
 alias update-all='sudo pacman -Syu --noconfirm archlinux-keyring;yay -Syu --noconfirm; flatpak update -y; mise self-update;mise upgrade'
 alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
@@ -70,7 +69,7 @@ fi
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Edit config files
 alias evim="$EDITOR ~/.config/nvim"
@@ -207,6 +206,19 @@ timezsh() {
 show_memory(){
   ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
 
+}
+
+
+watch_process_mem() {
+  if [ -z "$1" ]; then
+    echo "Usage: watch_process_mem <process_name> [interval_seconds]"
+    return 1
+  fi
+
+  local process="$1"
+  local interval="${2:-4}"  # Default to 4 seconds if not provided
+
+  watch -n "$interval" "ps aux --sort=-%mem | grep -i --color=never \$process | grep -v grep | awk 'NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'"
 }
 
 clearcache() {
