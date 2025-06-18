@@ -9,11 +9,11 @@ megabasterd-bin
 mongodb-compass-bin
 pokego-bin
 python-fabric-git
+python-pygobject-stubs
 python-rlottie-python
 snixembed-git
 stacer-bin
 station-bin
-topgrade-bin
 trash-cli-git
 ttf-cm-unicode
 ttf-joypixels
