@@ -2,4 +2,4 @@
 # shell environment at all.
 
 eval "$(mise activate zsh --shims)"
-
+eval "$(mise activate zsh)"
