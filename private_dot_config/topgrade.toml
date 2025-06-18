@@ -16,7 +16,7 @@ pre_sudo = false
 
 # Disable specific steps - same options as the command line flag
 # disable = ["system", "emacs"]
-disable = ["vim","node","yarn","pnpm"]
+# disable = ["vim","node","yarn","pnpm"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -67,7 +67,23 @@ cleanup = true
 # bashit_branch = "stable"
 
 # Run specific steps - same options as the command line flag
-# only = ["system", "emacs"]
+only = [
+  "chezmoi",
+  "containers",
+  "distrobox",
+  "firmware",
+  "git_repos",
+  "flatpak",
+  "mise",
+  "self_update",
+  "sheldon",
+  "spicetify",
+  "stew",
+  "system",
+  "tldr",
+  "custom_commands"
+]
+
 
 # Whether to self update
 #
@@ -226,7 +242,7 @@ arguments = "--rebase --autostash"
 
 # wsl_update_use_web_download = true
 
-# The default for winget_install_silently is true, 
+# The default for winget_install_silently is true,
 # this example turns off silent install.
 # winget_install_silently = false
 
