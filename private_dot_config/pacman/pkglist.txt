@@ -270,6 +270,7 @@ rofi-wayland
 rp-pppoe
 rsync
 rtkit
+rustup
 s-nail
 safeeyes
 satty
