@@ -459,6 +459,8 @@ set -g @continuum-restore 'off'
 set -g @resurrect-capture-pane-contents 'on'
 
 set -g @thumbs-command 'echo -n {} | wl-copy'
+set -g @thumbs-unique enabled
+set -g @thumbs-reverse enabled
 
 
 # -- custom variables ----------------------------------------------------------
