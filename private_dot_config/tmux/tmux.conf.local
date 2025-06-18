@@ -461,7 +461,7 @@ set -g @resurrect-capture-pane-contents 'on'
 set -g @thumbs-command 'echo -n {} | wl-copy'
 set -g @thumbs-unique enabled
 set -g @thumbs-reverse enabled
-
+setenv -g TMUX_PLUGIN_MANAGER_PATH "$XDG_CONFIG_HOME/.tmux/plugins/"
 
 # -- custom variables ----------------------------------------------------------
 
