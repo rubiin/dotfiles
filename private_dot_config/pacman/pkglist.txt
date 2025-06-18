@@ -307,6 +307,7 @@ thefuck
 time
 tk
 tmux
+topgrade
 tree
 ttf-bitstream-vera
 ttf-dejavu
