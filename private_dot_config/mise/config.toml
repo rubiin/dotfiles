@@ -27,15 +27,15 @@ idiomatic_version_file_enable_tools = ["node"]
 gpg_verify = false
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
-
 [tools]
 go = "latest"
-rust = "latest"
+rust = { version = "latest", profile = "minimal" }
 bun = "latest"
 deno = "latest"
 ruby = "latest"
 usage = "latest"
 neovim = "latest"
+uv="latest"
 node = "22"
 "cargo:ttyper" = "latest"
 "cargo:stylua" = "latest"
