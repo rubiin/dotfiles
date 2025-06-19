@@ -72,7 +72,6 @@
 			"media": {
 				"enabled": true,
 				"ignore": [
-					"vlc"
 				],
 				"truncation_size": 30,
 				"show_album": true,
@@ -304,7 +303,8 @@
 			"window_title"
 		], // this is the left section of the panel
 		"middle_section": [
-			"date_time"
+			"date_time",
+			"weather"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
