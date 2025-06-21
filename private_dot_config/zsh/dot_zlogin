@@ -19,9 +19,10 @@ export SUDO_EDITOR="$EDITOR"
 export VISUAL="code-insiders"
 export READER="zathura"
 export CODEEDITOR="code-insiders"
-export PAGER="moar"
+export PAGER=nvimpager
+export MANPAGER=nvimpager
+
 export WM="hyprland"
-export MANPAGER="nvim +Man!"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export VIDEO="mpv"
 export IMAGE="eog"
