@@ -6,6 +6,7 @@ gray-git
 lazydocker-bin
 matugen-bin
 megabasterd-bin
+moar
 mongodb-compass-bin
 pokego-bin
 python-fabric-git

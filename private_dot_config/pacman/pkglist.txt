@@ -258,7 +258,6 @@ qt5-imageformats
 qt5-quickcontrols
 qt5ct
 qt6ct
-qutebrowser
 r8168-dkms
 rate-mirrors
 rebuild-detector
@@ -309,6 +308,7 @@ time
 tk
 tmux
 topgrade
+totem
 tree
 ttf-bitstream-vera
 ttf-dejavu
