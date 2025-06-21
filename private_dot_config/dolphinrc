@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_directorysizemode.upd:convert-directorysizecount-to-directorysizemode
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [General]
 ShowSelectionToggle=false
@@ -11,6 +11,7 @@ ViewPropsTimestamp=2023,4,26,16,58,48.324
 
 [IconsMode]
 MaximumTextLines=1
+PreviewSize=112
 
 [InformationPanel]
 dateFormat=ShortFormat
@@ -24,6 +25,7 @@ Places Icons Static Size=16
 
 [MainWindow]
 MenuBar=Disabled
+ToolBarsMovable=Disabled
 
 [MainWindow][Toolbar mainToolBar]
 IconSize=16
@@ -36,5 +38,5 @@ IconSize=16
 Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs
 
 [Toolbar mainToolBar]
-IconSize=16
 ToolButtonStyle=IconOnly
+
