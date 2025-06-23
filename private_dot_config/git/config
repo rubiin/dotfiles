@@ -47,6 +47,7 @@
 
 [tag]
 	sort = -committerdate
+	gpgSign = true
 
 [fetch]
 	prune = true ; automatically delete remote tracking branches that have been deleted
