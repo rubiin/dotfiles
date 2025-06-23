@@ -20,6 +20,10 @@ github = "romkatv/zsh-defer"
 defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
 
 
+# Powerlevel10k prompt
+[plugins.powerlevel10k]
+github = "romkatv/powerlevel10k"
+
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
