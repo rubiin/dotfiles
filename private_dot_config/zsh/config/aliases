@@ -92,6 +92,10 @@ czx() {
 	rm -rf "$1"
 }
 
+function which { # colorized & showing all
+	builtin which -a "$@" | bat --language=sh --wrap=character
+}
+
 # use nvim, but don't make me think about it
 if [[ -n "$(command -v nvim)" ]]; then
 	alias vim="nvim"
