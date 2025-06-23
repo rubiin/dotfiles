@@ -53,7 +53,13 @@ file_folder_list=(
    "$config/safeeyes/safeeyes.json"
    "$config/lite-xl"
    "$config/tmux"
-   "$config/zsh"
+   "$config/zsh/config"
+   "$config/zsh/.p10l.zsh"
+   "$config/zsh/.zlogin"
+   "$config/zsh/.zprofile"
+   "$config/zsh/.zfunctions"
+   "$config/zsh/.zshenv"
+   "$config/zsh/.zshrc"
 )
 
 ## now loop through the above array
