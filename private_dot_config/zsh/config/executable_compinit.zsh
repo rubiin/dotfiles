@@ -1,4 +1,4 @@
-# initialise completions with ZSH's compinit
+# initialize completions with ZSH's compinit
 autoload -Uz compinit
 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
