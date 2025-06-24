@@ -311,6 +311,7 @@ valgrind
 vi
 vim
 visual-studio-code-insiders
+vivaldi
 vnstat
 vpnc
 webrtc-audio-processing
