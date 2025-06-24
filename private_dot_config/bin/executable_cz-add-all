@@ -54,7 +54,7 @@ file_folder_list=(
    "$config/lite-xl"
    "$config/tmux"
    "$config/zsh/config"
-   "$config/zsh/.p10l.zsh"
+   "$config/zsh/.p10k.zsh"
    "$config/zsh/.zlogin"
    "$config/zsh/.zprofile"
    "$config/zsh/.zfunctions"
