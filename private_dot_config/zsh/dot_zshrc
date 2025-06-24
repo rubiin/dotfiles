@@ -1,7 +1,5 @@
 
-# DOCS https://zsh.sourceforge.io/Doc/Release/Options.html
-# DOCS https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
-#───────────────────────────────────────────────────────────────────────────────
+
 zmodload zsh/zprof
 
 # Initialize Starship or fallback to Powerlevel10k

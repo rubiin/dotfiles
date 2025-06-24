@@ -39,7 +39,7 @@ setopt ALWAYS_TO_END
 # vi mode
 export KEYTIMEOUT=1
 export VI_MODE_SET_CURSOR=true
-bindkey -v
+
 
 setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt AUTO_CD              # pure directory = cd into it
