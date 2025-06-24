@@ -4,12 +4,6 @@
 #───────────────────────────────────────────────────────────────────────────────
 zmodload zsh/zprof
 
-
-# Tries starship, then p10k then the normal prompt
-# Set XDG base directories if not already set
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
-
 # Initialize Starship or fallback to Powerlevel10k
 
 if [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
@@ -41,20 +35,14 @@ else
 fi
 
 
-eval "$(sheldon source)"
-
-
 # Source all files in the directory
-for filename in $ZDOTDIR/config/*;do
-  if [ -f "$filename" ]; then
-        # shellcheck disable=1090
-        source "$filename"
-    fi
+for file in "${ZDOTDIR}/config/"*; do
+  [[ -f $file ]] && source "$file"
 done
 
 # array of external files to source
 ZSH_CONFIG_FILES=(
-	"$ZDOTDIR/completions/git-extras-completion.zsh"
+	"$ZDOTDIR/config/completions/git-extras-completion.zsh"
 )
 
 for filename in "${ZSH_CONFIG_FILES[@]}"; do
@@ -68,28 +56,25 @@ done
 #source scripts with _evalcache
 _evalcache thefuck --alias
 _evalcache zoxide init zsh --hook pwd
+_evalcache sheldon source
+_evalcache hydectl completion zsh
+
 
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
 
+_evalcache mise activate zsh --shims
 _evalcache mise activate zsh
 _evalcache atuin init zsh
 
-fpath=($fpath "$HOME/.zfunctions")
+fpath=($fpath "$ZDOTDIR/.zfunctions")
 
 # create some folders if they don't exist
-[ -d ~/projects ]  && mkdir ~/projects/ || mkdir ~/projects
-[ -d ~/personal ] && mkdir ~/personal/ || mkdir ~/personal
-[ -d ~/work ] && mkdir ~/work/ || mkdir ~/work
+[ ! -d ~/projects ] && mkdir ~/projects
+[ ! -d ~/personal ] && mkdir ~/personal
+[ ! -d ~/work ] && mkdir ~/work
 
 
 #Display Pokemon
 pokego --no-title --random 1,3,6
 
-# pnpm
-export PNPM_HOME="/home/rubin/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
