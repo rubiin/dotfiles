@@ -34,40 +34,38 @@ else
     # ===== END Fallback prompt =====
 fi
 
-
-# Source all files in the directory
-for file in "${ZDOTDIR}/config/"*; do
-  [[ -f $file ]] && source "$file"
-done
-
-# array of external files to source
-ZSH_CONFIG_FILES=(
-	"$ZDOTDIR/config/completions/git-extras-completion.zsh"
+# Folders to load files from
+ZSH_SOURCE_DIRS=(
+  "$ZDOTDIR/completions"
+  "$ZDOTDIR/config"
+  "$ZDOTDIR/functions"
 )
 
-for filename in "${ZSH_CONFIG_FILES[@]}"; do
-  if [ -f "$filename" ]; then
-        # shellcheck disable=1090
-        source "$filename"
-    fi
+# Source all files in those folders (one level deep)
+for dir in "${ZSH_SOURCE_DIRS[@]}"; do
+  [[ -d "$dir" ]] || continue
+  for file in "$dir"/*; do
+    [[ -f "$file" ]] && source "$file"
+  done
 done
+
+
+# this cannot be evalcached, because it needs to be run after the prompt is set
+eval "$(sheldon source)"
 
 
 #source scripts with _evalcache
+_evalcache hydectl completion zsh
 _evalcache thefuck --alias
 _evalcache zoxide init zsh --hook pwd
-_evalcache sheldon source
-_evalcache hydectl completion zsh
-
 
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
 
-_evalcache mise activate zsh --shims
 _evalcache mise activate zsh
 _evalcache atuin init zsh
 
-fpath=($fpath "$ZDOTDIR/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 
 # create some folders if they don't exist
 [ ! -d ~/projects ] && mkdir ~/projects
@@ -78,3 +76,10 @@ fpath=($fpath "$ZDOTDIR/.zfunctions")
 #Display Pokemon
 pokego --no-title --random 1,3,6
 
+# pnpm
+export PNPM_HOME="/home/rubin/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
