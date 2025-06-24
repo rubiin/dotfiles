@@ -36,7 +36,7 @@ fi
 ZSH_SOURCE_DIRS=(
   "$ZDOTDIR/completions"
   "$ZDOTDIR/config"
-  "$ZDOTDIR/functions"
+  "$ZDOTDIR/zfunctions"
 )
 
 # Source all files in those folders (one level deep)
