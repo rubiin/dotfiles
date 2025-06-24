@@ -1,5 +1,9 @@
 # .zprofile is sourced on login shells and before .zshrc. Ideal for login-specific environment setup
 
+# DOCS https://zsh.sourceforge.io/Doc/Release/Options.html
+# DOCS https://zsh.sourceforge.io/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell
+#───────────────────────────────────────────────────────────────────────────────
+
 #--------------------------------------------------------------#
 ##          Environment Variables                             ##
 #--------------------------------------------------------------#
