@@ -99,14 +99,7 @@ alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
-# ls
-if command -v "eza" &>/dev/null; then
-	alias l='eza -lh  --icons=auto'                                        # long list
-	alias ls='eza -1   --icons=auto'                                       # short list
-	alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-	alias ld='eza -lhD --icons=auto'                                       # long list dirs
-	alias lt='eza --icons=auto --tree'
-fi
+
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
@@ -123,12 +116,6 @@ alias .5='cd ../../../../..'
 alias ..g=' cd "$(git rev-parse --show-toplevel)"' # goto git root
 
 
-
-if command -v "bat" &>/dev/null; then
-    alias -g -- -h='-h 2>&1 | bat --language=help --style=plain --paging=never --color always'
-    alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --paging=never --color always'
-    alias cat='bat --style=plain --paging=never --color always'
-fi
 
 # tmux
 alias t="tmux"
