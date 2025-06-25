@@ -49,4 +49,3 @@ set histexpiredupsfirst
 set histverify
 set login
 set pushdminus
-setopt no_global_rcs
