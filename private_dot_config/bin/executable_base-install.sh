@@ -46,21 +46,18 @@ git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE/
 cd ~/HyDE/Scripts || exit
 ./install.sh
 
-
-ask_yes_no_default "Do you want to install oh-my-tmux?" 0 && git clone https://github.com/gpakosz/.tmux.git ~/.config/tmux/oh-my-tmux &&
-	ln -s -f ~/.config/tmux/oh-my-tmux/.tmux.conf ~/.config/tmux/tmux.conf
-
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
 ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay -S docker docker-compose &&
 	sudo groupadd docker && sudo usermod -aG docker $USER &&
 	sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
-ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm < ~/pacman.txt
+ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pacman.txt
 
 sudo fc-cache -vf
 
-curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | shmkdir "$XDG_CONFIG_HOME/wakatime"
+mkdir "$XDG_CONFIG_HOME/wakatime"
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
@@ -96,7 +93,6 @@ sudo pacman -Qtdq | sudo pacman -Rns -
 echo "Installing mise"
 yay -S mise
 mise install
-
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
 echo "creating XDG directories"
