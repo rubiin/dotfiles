@@ -9,9 +9,9 @@ setopt PIPE_FAIL            # tracability: exit if pipeline failed
 setopt NO_BANG_HIST         # don't expand `!`
 setopt NO_BEEP              # No bell: Shut up Zsh
 setopt NO_HUP               # don't kill background jobs when the shell exits
-setopt CD_SILENT
-setopt CHASE_LINKS # follow symlinks when they are cd target
-setopt prompt_subst
+setopt CHASE_LINKS          # follow symlinks when they are cd target
+setopt CD_SILENT            # do not print the directory after `cd` command
+setopt prompt_subst         # allow prompt to be evaluated as a command
 
 
 # HISTORY
@@ -22,30 +22,29 @@ setopt HIST_NO_STORE        # ignore history command itself for the history
 setopt HIST_IGNORE_SPACE    # cmds with leading space are not added to the history
 setopt INC_APPEND_HISTORY   # write immediately to history file
 setopt HIST_IGNORE_ALL_DUPS # delete old recorded entry if new entry is a duplicate.
-setopt HIST_IGNORE_DUPS
-setopt EXTENDED_GLOB
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_DUPS     # skip saving a command if it’s the same as the previous one.
+setopt EXTENDED_GLOB        # enable advanced pattern matching in file name
+setopt HIST_FIND_NO_DUPS    # ignore duplicates during reverse (Ctrl-R) history search.
+setopt HIST_SAVE_NO_DUPS    # ignore duplicates when saving history.
 
 # ohmyzsh compat
-setopt MULTIOS         # enable redirect to multiple streams: echo >file1 >file2
-setopt LONG_LIST_JOBS  # show long list format job notifications
-unsetopt MENU_COMPLETE # do not autoselect the first completion entry
-unsetopt FLOWCONTROL
-setopt AUTO_MENU # show completion menu on successive tab press
-setopt COMPLETE_IN_WORD
-setopt ALWAYS_TO_END
+setopt MULTIOS              # enable redirect to multiple streams: echo >file1 >file2
+setopt LONG_LIST_JOBS       # show long list format job notifications
+unsetopt MENU_COMPLETE      # do not autoselect the first completion entry
+setopt AUTO_MENU            # show completion menu on successive tab press
+unsetopt FLOWCONTROL        # disable flow control (^S/^Q) in the terminal
+setopt COMPLETE_IN_WORD     # allows tab-completion in the middle of a word, not just at the end.
+setopt ALWAYS_TO_END        # always append to the end of the line when completing a command.
 
 # vi mode
 export KEYTIMEOUT=1
 export VI_MODE_SET_CURSOR=true
 
-
-setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt AUTO_PUSHD           # push the current directory visited on the stack.
 setopt AUTO_CD              # pure directory = cd into it
-setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
-setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-set histexpiredupsfirst
-set histverify
-set login
-set pushdminus
+setopt PUSHD_IGNORE_DUPS    # do not store duplicates in the stack.
+setopt PUSHD_SILENT         # do not print the directory stack after pushd or popd.
+setopt histexpiredupsfirst  # prefer deleting old duplicates before trimming other history
+setopt histverify           # edit a recalled history command before executing it
+setopt login                # make the shell act as a login shell
+setopt pushdminus           # use `-` with `pushd` to go back in directory stack (like `cd -`)
