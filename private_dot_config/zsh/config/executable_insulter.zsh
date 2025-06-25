@@ -163,7 +163,7 @@ function_exists() {
 # The idea below is to copy any existing handlers to another function
 # name and insert the message in front of the old handler in the
 # new handler. By default, neither bash or zsh has has a handler function
-# defined, so the default behaviour is replicated.
+# defined, so the default behavior is replicated.
 #
 # Also, ensure the handler is only copied once. If we do not ensure this
 # the handler would add itself recursively if this file happens to be
