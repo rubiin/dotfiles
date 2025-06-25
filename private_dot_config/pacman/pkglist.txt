@@ -18,6 +18,7 @@ base-devel
 bash-completion
 bat
 bauh
+bc
 bind
 blanket
 bluez
