@@ -45,16 +45,13 @@ alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
 alias ytmp3="yt-dlp -x --audio-format=mp3"
 alias ytd="yt-dlp --embed-metadata --embed-subs"
-alias q=' exit' # INFO leading space to ignore it in history due to `HIST_IGNORE_SPACE`
-alias myip="curl icanhazip.com"
+alias q=" exit" # INFO leading space to ignore it in history due to HIST_IGNORE_SPACE
 alias hg='history | fzf'
 alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
 alias icat="kitten icat"
-alias yolo='git'
-
 
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
@@ -95,10 +92,10 @@ if [[ -n "$(command -v nvim)" ]]; then
 fi
 
 # IP addresses
-alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="curl icanhazip.com"
+alias pubip="myip"
 alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
@@ -114,7 +111,6 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias ..g=' cd "$(git rev-parse --show-toplevel)"' # goto git root
-
 
 
 # tmux
