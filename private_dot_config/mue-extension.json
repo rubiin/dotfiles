@@ -1,0 +1,42 @@
+{
+  "tabs-opened": 16,
+  "modal": {
+    "opened-welcome": 1,
+    "opened-main": 9
+  },
+  "feature": {
+    "background-maximise": 1,
+    "background-unmaximise": 1
+  },
+  "setting": {
+    "widget-order": 9,
+    "searchengine-from-duckduckgo-to-google": 1,
+    "widgetstyle-from-new-to-legacy": 1,
+    "widgetstyle-from-legacy-to-new": 1,
+    "seconds-enabled": 1,
+    "timeformat-from-twelvehour-to-twentyfourhour": 1
+  },
+  "tab": {
+    "opened-weather": 2,
+    "opened-time": 2,
+    "opened-quote": 2,
+    "opened-date": 1,
+    "opened-message": 1,
+    "opened-navbar": 2,
+    "opened-search": 1,
+    "opened-greeting": 3,
+    "opened-appearance": 2,
+    "opened-advanced": 2,
+    "opened-quicklinks": 1,
+    "opened-stats": 1
+  },
+  "marketplace-item": {
+    "undefined-viewed": 8,
+    "100_movie_quotes-installed": 1,
+    "basic_vanilla-installed": 1
+  },
+  "marketplace": {
+    "install": 2,
+    "itempage-viewed": 1
+  }
+}
