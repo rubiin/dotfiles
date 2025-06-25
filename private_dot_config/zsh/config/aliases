@@ -85,7 +85,7 @@ alias emux="$EDITOR ~/.config/tmux/"
 alias emise="$EDITOR ~/.config/mise/"
 alias ruffs="ruff check --fix;ruff format"
 alias sendnotifications='for i in {1..40}; do notify-send "Notification $i" "This is notification number $i"; done'
-
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 # use nvim, but don't make me think about it
 if [[ -n "$(command -v nvim)" ]]; then
