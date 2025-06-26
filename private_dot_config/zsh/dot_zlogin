@@ -80,6 +80,8 @@ export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export GOPATH="$XDG_DATA_HOME/go"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 
 # custom executable path
 export PATH="$XDG_CONFIG_HOME/bin/git-extras:$XDG_CONFIG_HOME/bin:$PATH"
