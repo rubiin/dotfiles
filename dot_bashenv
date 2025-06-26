@@ -2,6 +2,6 @@
 # use the env file of zshenv
 
 
-if [ -f $HOME/.config/zsh/.zshenv ]; then
-      source $HOME/.config/zsh/.zshenv
+if [ -f ${ZDOTDIR:-$HOME}/.zprofile ]; then
+      source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
