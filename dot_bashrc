@@ -12,10 +12,38 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+PS1='[\u@\h \W]\$ '
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+export HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+
+source "$ZDOTDIR/config/aliases"
+
+
+
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+eval "$(~/.local/bin/mise activate bash)"
 
-#Display Pokemon
 pokego --no-title --random 1,3,6
 
 
