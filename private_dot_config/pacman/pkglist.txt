@@ -271,6 +271,7 @@ spotify
 spotube-bin
 sshs
 st
+starship
 stylua
 sudo
 swww
