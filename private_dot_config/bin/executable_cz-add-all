@@ -45,7 +45,7 @@ file_folder_list=(
    "$config/yazi"
    "$config/fastfetch"
    "$config/waycorner"
-   "$config/startship"
+   "$config/starship"
    "$config/libinput-gestures.conf"
    "$config/waycorner"
    "$config/lazygit"
