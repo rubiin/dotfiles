@@ -461,8 +461,6 @@ source-file "$XDG_CONFIG_HOME/tmux/config/keybinds.conf"
 source-file "$XDG_CONFIG_HOME/tmux/config/options.conf"
 
 
-
-
 # tmux.nvim
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?\.?(view|n?vim?x?|fzf|ssh|mosh?)(-wrapped)?(diff)?$'"
 
