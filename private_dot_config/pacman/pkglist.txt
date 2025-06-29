@@ -95,6 +95,7 @@ gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-disk-utility
 gnome-keyring
+gnome-system-monitor
 gnu-free-fonts
 gobject-introspection
 gparted
