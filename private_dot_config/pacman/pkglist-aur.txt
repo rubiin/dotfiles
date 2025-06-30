@@ -5,7 +5,6 @@ gray-git
 lazydocker-bin
 matugen-bin
 megabasterd-bin
-moar
 mongodb-compass-bin
 nvimpager
 pokego-bin
