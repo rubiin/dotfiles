@@ -33,7 +33,7 @@ else
 fi
 
 
-source "$ZDOTDIR/completions/git-extras-completions.zsh"
+source "$ZDOTDIR/completions/git-extras.zsh"
 
 # Folders to load files from
 ZSH_SOURCE_DIRS=(
