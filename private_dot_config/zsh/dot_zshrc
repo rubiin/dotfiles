@@ -32,9 +32,11 @@ else
     # ===== END Fallback prompt =====
 fi
 
+
+source "$ZDOTDIR/completions/git-extras-completions.zsh"
+
 # Folders to load files from
 ZSH_SOURCE_DIRS=(
-  "$ZDOTDIR/completions"
   "$ZDOTDIR/config"
   "$ZDOTDIR/zfunctions"
 )
@@ -65,7 +67,6 @@ _evalcache atuin init zsh
 [ ! -d ~/projects ] && mkdir ~/projects
 [ ! -d ~/personal ] && mkdir ~/personal
 [ ! -d ~/work ] && mkdir ~/work
-
 
 #Display Pokemon
 pokego --no-title --random 1,3,6
