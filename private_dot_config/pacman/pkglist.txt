@@ -57,6 +57,7 @@ dosfstools
 downgrade
 dracut
 duf
+dust
 e2fsprogs
 efibootmgr
 efitools
@@ -300,7 +301,6 @@ ttf-ms-fonts
 ttf-opensans
 ttf-twemoji-git
 ttf-ubuntu-nerd
-ttf-zed-mono-nerd
 typos
 udiskie
 unrar
