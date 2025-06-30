@@ -45,6 +45,8 @@
 			"path": "Pictures/Screenshots",
 			"icon_size": 16,
 			"tooltip": true,
+			"label": false,
+			"annotation": true,
 			"icon": "󰄀"
 		},
 		"network_usage": {
@@ -71,8 +73,7 @@
 			"auto_hide_timeout": 2000,
 			"media": {
 				"enabled": true,
-				"ignore": [
-				],
+				"ignore": [],
 				"truncation_size": 30,
 				"show_album": true,
 				"show_artist": true,
@@ -83,17 +84,31 @@
 				"enabled": true,
 				"items": [
 					{
-						"icon": "",
+						"icon": "",
 						"label": "Terminal",
 						"command": "kitty",
 						"tooltip": "Open terminal",
 						"icon_size": 18
 					},
 					{
-						"icon": "",
+						"icon": "",
 						"label": "Browser",
 						"command": "firefox",
 						"tooltip": "Launch Firefox",
+						"icon_size": 18
+					},
+					{
+						"icon": "",
+						"label": "Spotify",
+						"command": "spotify",
+						"tooltip": "Launch Spotify",
+						"icon_size": 18
+					},
+					{
+						"icon": "",
+						"label": "Code",
+						"command": "code",
+						"tooltip": "Launch Code",
 						"icon_size": 18
 					}
 				]
@@ -201,6 +216,13 @@
 			"sensor": "acpitz",
 			"graph_length": 4
 		},
+		"gpu": {
+			"show_icon": true,
+			"icon": "",
+			"tooltip": true,
+			"mode": "circular",
+			"graph_length": 4
+		},
 		"date_time": {
 			"format": "%b %d %H:%M",
 			"notification": {
@@ -304,7 +326,7 @@
 		], // this is the left section of the panel
 		"middle_section": [
 			"date_time",
-			"weather"
+			"screenshot"
 		], // this is the middle section of the panel
 		"right_section": [
 			"recorder",
@@ -353,7 +375,7 @@
 			"play_sound": true,
 			"sound_file": "notification4",
 			"display_actions_on_hover": false, // this is to display the actions on hover
-			"dismiss_on_hover": true // this is to dismiss the notification on hover
+			"dismiss_on_hover": false // this is to dismiss the notification on hover
 		},
 		"osd": {
 			"enabled": true,
@@ -395,5 +417,4 @@
 		"monitor_styles": true,
 		"location": "top"
 	}
-
 }
