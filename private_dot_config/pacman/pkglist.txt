@@ -188,10 +188,6 @@ network-manager-applet
 networkmanager
 nfs-utils
 nilfs-utils
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-noto-fonts-extra
 nss-mdns
 ntfs-3g
 ntp
