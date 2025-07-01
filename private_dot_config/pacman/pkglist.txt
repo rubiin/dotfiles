@@ -37,7 +37,6 @@ chezmoi
 cinnamon-desktop
 clapper
 cliphist
-clutter-gtk
 colord
 cryptsetup
 d-spy
@@ -178,8 +177,6 @@ mongodb-tools
 mousepad
 mpv
 mtools
-nano
-nano-syntax-highlighting
 nbd
 ndisc6
 net-tools
@@ -188,6 +185,7 @@ network-manager-applet
 networkmanager
 nfs-utils
 nilfs-utils
+noto-fonts
 nss-mdns
 ntfs-3g
 ntp
@@ -211,7 +209,6 @@ pkgfile
 playerctl
 plocate
 pngquant
-podman
 polkit-gnome
 poppler-glib
 postman-bin
@@ -286,7 +283,6 @@ tmux
 topgrade
 tree
 ttf-bitstream-vera
-ttf-dejavu
 ttf-dejavu-nerd
 ttf-firacode-nerd
 ttf-font-awesome
@@ -304,10 +300,8 @@ unzip
 upx
 usb_modeswitch
 usbutils
-uwsm
 vala
 valgrind
-vi
 vim
 visual-studio-code-insiders
 vivaldi
