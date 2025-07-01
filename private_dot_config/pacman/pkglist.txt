@@ -57,7 +57,6 @@ dosfstools
 downgrade
 dracut
 duf
-dust
 e2fsprogs
 efibootmgr
 efitools
@@ -146,6 +145,7 @@ ktorrent
 kvantum
 kvantum-qt5
 la-capitaine-icon-theme
+legcord
 less
 libdvdcss
 libgsf

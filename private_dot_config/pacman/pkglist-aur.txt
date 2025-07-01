@@ -1,3 +1,4 @@
+dissent-bin
 git-interactive-rebase-tool-bin
 gitflow-cjs
 goreleaser-bin
