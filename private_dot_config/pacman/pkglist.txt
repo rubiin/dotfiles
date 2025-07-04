@@ -149,7 +149,6 @@ less
 libdvdcss
 libgsf
 libgtop
-libgweather-4
 libinput-gestures
 libopenraw
 linux
@@ -318,7 +317,6 @@ wl-clipboard
 words
 wpa_supplicant
 wps-office
-wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
