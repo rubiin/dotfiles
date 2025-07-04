@@ -191,7 +191,6 @@ ntfs-3g
 ntp
 nwg-displays
 nwg-look
-obs-studio
 obsidian
 openconnect
 openvpn
@@ -265,7 +264,6 @@ spicetify-cli
 spotify
 spotube-bin
 sshs
-st
 starship
 stylua
 sudo
