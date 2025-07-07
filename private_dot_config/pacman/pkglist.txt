@@ -291,6 +291,7 @@ ttf-twemoji-git
 ttf-ubuntu-nerd
 typos
 udiskie
+uget
 unrar
 unzip
 upx
