@@ -37,7 +37,6 @@ chezmoi
 cinnamon-desktop
 clapper
 cliphist
-colord
 cryptsetup
 d-spy
 dart-sass
@@ -135,6 +134,7 @@ just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
+kget
 kimageformats5
 kinit
 kio-fuse
@@ -199,7 +199,6 @@ pamac
 pamixer
 pavucontrol
 perl
-persepolis
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
