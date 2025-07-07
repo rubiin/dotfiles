@@ -208,7 +208,7 @@
 		"cpu": {
 			"show_icon": true,
 			"icon": "",
-			"mode": "graph",
+			"mode": "label",
 			"tooltip": true,
 			"temperature_unit": "celsius",
 			"round": true,
@@ -220,7 +220,7 @@
 			"show_icon": true,
 			"icon": "",
 			"tooltip": true,
-			"mode": "circular",
+			"mode": "label",
 			"graph_length": 4
 		},
 		"date_time": {
@@ -270,7 +270,7 @@
 		"memory": {
 			"show_icon": true,
 			"icon": "",
-			"mode": "progress",
+			"mode": "label",
 			"tooltip": true,
 			"graph_length": 4
 		},
@@ -303,15 +303,17 @@
 			"icon": "󰐳",
 			"tooltip": true,
 			"label": false,
-			"show_icon": true
+			"show_icon": true,
+			"quiet": false
 		},
 		"mpris": {
 			"truncation_size": 10,
 			"tooltip": false
 		},
 		"world_clock": {
-			"icon": "󱉊",
+			"icon": "󰃰",
 			"show_icon": true,
+			"use_24hr": true, // this is to use 24 hour format, if false it will use 12 hour format
 			"timezones": [
 				"America/New_York",
 				"Europe/London",
@@ -374,6 +376,7 @@
 			"transition_duration": 350,
 			"play_sound": true,
 			"sound_file": "notification4",
+			"persist": true, // this is to persist the notification
 			"display_actions_on_hover": false, // this is to display the actions on hover
 			"dismiss_on_hover": false // this is to dismiss the notification on hover
 		},
@@ -413,7 +416,7 @@
 		"check_updates": false,
 		"layer": "top",
 		"auto_hide": false,
-		"debug": true,
+		"debug": false,
 		"monitor_styles": true,
 		"location": "top"
 	}
