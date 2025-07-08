@@ -35,10 +35,6 @@
 	deltaCacheSize = 2047m 
 	packSizeLimit = 2047m 
 	windowMemory = 2047m
-
-[sequence]
-	editor = interactive-rebase-tool
-
 [status]
 	hints = false
 
@@ -390,3 +386,5 @@
 	gpgsign = true
 [http]
 	postBuffer = 157286400
+[sequence]
+	editor = interactive-rebase-tool
