@@ -1,4 +1,4 @@
-git-interactive-rebase-tool-bin
+git-interactive-rebase-tool
 gitflow-cjs
 goreleaser-bin
 gray-git
