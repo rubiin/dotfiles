@@ -7,7 +7,6 @@ matugen-bin
 megabasterd-bin
 mongodb-compass-bin
 nvimpager
-persepolis-git
 pokego-bin
 python-fabric-git
 python-pygobject-stubs
