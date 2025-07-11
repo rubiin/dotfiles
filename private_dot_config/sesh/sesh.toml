@@ -34,8 +34,8 @@ startup_command = "nvim wezterm.lua"
 
 
 [[session]]
-name = "hydepanel config"
-path = "~/.config/hydepanel"
+name = "tsumiki config"
+path = "~/.config/tsumiki"
 startup_command = "sh init.sh -start"
 
 [[session]]
