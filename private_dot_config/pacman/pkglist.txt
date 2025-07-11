@@ -304,6 +304,8 @@ valgrind
 vim
 visual-studio-code-insiders
 vivaldi
+vlc
+vlc-plugins-all
 vnstat
 vpnc
 webrtc-audio-processing
