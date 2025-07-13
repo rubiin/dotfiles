@@ -270,7 +270,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" 👽 #S | #{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
+tmux_conf_theme_status_left=" 👽 #S | #{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,}"
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}, #[fg=yellow] %a %d/%m #[fg=green] %H:%M  | #{username}#{root} "
 
 # status left style
@@ -452,39 +452,11 @@ set -g @resurrect-restore 'R'                       # Reload the session
 set -g @continuum-restore 'off'     
 set -g @resurrect-capture-pane-contents 'on'
 
-
 set -g @jump-key 'S'
-
 
 # source your configs
 source-file "$XDG_CONFIG_HOME/tmux/config/keybinds.conf"
 source-file "$XDG_CONFIG_HOME/tmux/config/options.conf"
-
-
-# tmux.nvim
-is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?\.?(view|n?vim?x?|fzf|ssh|mosh?)(-wrapped)?(diff)?$'"
-
-bind-key -n 'M-H' if-shell "$is_vim" 'send-keys M-H' 'select-pane -L'
-bind-key -n 'M-J' if-shell "$is_vim" 'send-keys M-J' 'select-pane -D'
-bind-key -n 'M-K' if-shell "$is_vim" 'send-keys M-K' 'select-pane -U'
-bind-key -n 'M-L' if-shell "$is_vim" 'send-keys M-L' 'select-pane -R'
-
-bind-key -T copy-mode-vi 'M-H' select-pane -L
-bind-key -T copy-mode-vi 'M-J' select-pane -D
-bind-key -T copy-mode-vi 'M-K' select-pane -U
-bind-key -T copy-mode-vi 'M-L' select-pane -R
-
-bind -n 'C-Left' if-shell "$is_vim" 'send-keys C-Left' 'resize-pane -L 1'
-bind -n 'C-Down' if-shell "$is_vim" 'send-keys C-Down' 'resize-pane -D 1'
-bind -n 'C-Up' if-shell "$is_vim" 'send-keys C-Up' 'resize-pane -U 1'
-bind -n 'C-Right' if-shell "$is_vim" 'send-keys C-Right' 'resize-pane -R 1'
-
-bind-key -T copy-mode-vi C-Left resize-pane -L 1
-bind-key -T copy-mode-vi C-Down resize-pane -D 1
-bind-key -T copy-mode-vi C-Up resize-pane -U 1
-bind-key -T copy-mode-vi C-Right resize-pane -R 1
-
-
 
 # -- custom variables ----------------------------------------------------------
 
