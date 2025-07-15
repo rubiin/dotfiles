@@ -154,6 +154,7 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+lite-xl
 logrotate
 lsb-release
 lsscsi
@@ -305,7 +306,6 @@ vim
 visual-studio-code-insiders
 vivaldi
 vlc
-vlc-plugins-all
 vnstat
 vpnc
 webrtc-audio-processing
