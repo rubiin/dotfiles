@@ -95,6 +95,22 @@
 				"width": "1px",
 				"radius": "16px"
 			}
+		},
+		"desktop_clock": {
+			"spacing": ".125em",
+			"border": {
+				"enabled": false,
+				"width": "1px",
+				"radius": "16px"
+			}
+		},
+		"quotes": {
+			"spacing": ".125em",
+			"border": {
+				"enabled": false,
+				"width": "1px",
+				"radius": "16px"
+			}
 		}
 	},
 	"bar": {
@@ -280,14 +296,6 @@
 				}
 			},
 			"date_time": {
-				"spacing": ".125em",
-				"border": {
-					"enabled": false,
-					"width": "1px",
-					"radius": "16px"
-				}
-			},
-			"desktop_clock": {
 				"spacing": ".125em",
 				"border": {
 					"enabled": false,
