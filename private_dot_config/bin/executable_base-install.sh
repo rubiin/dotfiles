@@ -52,6 +52,16 @@ ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay 
 	sudo groupadd docker && sudo usermod -aG docker $USER &&
 	sudo systemctl enable docker.service && sudo systemctl enable containerd.service
 
+# Prevent Docker from preventing boot for network-online.target
+sudo mkdir -p /etc/systemd/system/docker.service.d
+sudo tee /etc/systemd/system/docker.service.d/no-block-boot.conf <<'EOF'
+[Unit]
+DefaultDependencies=no
+EOF
+
+sudo systemctl daemon-reload
+
+
 ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pacman.txt
 
 sudo fc-cache -vf
