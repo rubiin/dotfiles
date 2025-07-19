@@ -33,12 +33,13 @@ else
 fi
 
 
-source "$ZDOTDIR/completions/git-extras.zsh"
+source "$ZDOTDIR/completions"
 
 # Folders to load files from
 ZSH_SOURCE_DIRS=(
   "$ZDOTDIR/config"
   "$ZDOTDIR/zfunctions"
+  "$ZDOTDIR/zcompletions"
 )
 
 # Source all files in those folders (one level deep)
