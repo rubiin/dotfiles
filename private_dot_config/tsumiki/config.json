@@ -146,7 +146,7 @@
 			"os": "arch",
 			"auto_hide": false, // this is to auto hide the updates widget when there are no updates available
 			"interval": 3600,
-			"pad_zero": true, // this is to pad the number of updates with zero
+			"pad_zero": false, // this is to pad the number of updates with zero
 			"tooltip": true,
 			"label": true,
 			"flatpak": true,
