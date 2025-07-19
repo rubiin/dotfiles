@@ -306,7 +306,9 @@ vim
 visual-studio-code-insiders
 vivaldi
 vlc
+vlc-plugin-archive
 vlc-plugin-ffmpeg
+vlc-plugins-all
 vnstat
 vpnc
 webrtc-audio-processing
