@@ -33,8 +33,6 @@ else
 fi
 
 
-source "$ZDOTDIR/completions"
-
 # Folders to load files from
 ZSH_SOURCE_DIRS=(
   "$ZDOTDIR/config"
