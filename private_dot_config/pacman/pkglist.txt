@@ -175,6 +175,7 @@ mojave-gtk-theme-git
 mongodb-tools
 mousepad
 mpv
+mpv-mpris
 mtools
 nbd
 ndisc6
