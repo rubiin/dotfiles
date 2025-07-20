@@ -22,9 +22,12 @@ raw = false         # set to true to directly pipe plugins to stdin/stdout/stder
 
 experimental = true # enable experimental features such as shims
 idiomatic_version_file_enable_tools = ["node"]
+python.compile = false # always download precompiled binaries
+
 
 [settings.node]
 gpg_verify = false
+compile = false
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
