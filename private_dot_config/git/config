@@ -384,6 +384,7 @@
 	format = ssh
 [commit]
 	gpgsign = true
+	template = /home/rubin/.config/git/template
 [http]
 	postBuffer = 157286400
 [sequence]
