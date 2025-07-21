@@ -24,16 +24,6 @@
 		},
 		{
 			"source": "github",
-			"owner": "AndreasBackx",
-			"repo": "waycorner",
-			"tag": "0.2.3",
-			"asset": "waycorner",
-			"binary": "y",
-			"url": "https://api.github.com/repos/AndreasBackx/waycorner/releases/assets/157972602",
-			"binaryHash": "ca554f5aff2071296550d86220f0b5cab3e6c131e45f8ba58da90e6f22b18ca7"
-		},
-		{
-			"source": "github",
 			"owner": "max-niederman",
 			"repo": "ttyper",
 			"tag": "v1.6.0",
