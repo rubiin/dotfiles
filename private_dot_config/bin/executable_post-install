@@ -1,6 +1,0 @@
-#! /bin/sh
-
-
-stew search stylua
-stew search nerdfix
-stew search waycorner
