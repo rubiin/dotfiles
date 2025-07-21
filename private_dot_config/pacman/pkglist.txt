@@ -10,7 +10,6 @@ archlinux-keyring
 archlinux-xdg-menu
 aria2
 ark
-asciiquarium
 atuin
 b43-fwcutter
 base
@@ -121,6 +120,7 @@ hyprsunset
 hyprutils
 hyprwayland-scanner
 ibus
+imv
 inetutils
 inxi
 iptables-nft
@@ -214,7 +214,6 @@ postman-bin
 power-profiles-daemon
 ppp
 pptpclient
-pre-commit
 procs
 python-capng
 python-colorthief
@@ -266,7 +265,6 @@ spotify
 spotube-bin
 sshs
 starship
-stylua
 sudo
 swww
 sysfsutils
@@ -292,7 +290,6 @@ ttf-ms-fonts
 ttf-opensans
 ttf-twemoji-git
 ttf-ubuntu-nerd
-ttyper
 typos
 udiskie
 uget
