@@ -112,4 +112,4 @@ echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
-echo "Completed setup, run python and cargo installations manually"
+echo "Completed setup, run stew installs manually"
