@@ -104,6 +104,9 @@ echo "Installing mise"
 yay -S mise
 mise install
 
+echo "Install using stew"
+stew upgrade-all
+
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
 echo "creating XDG directories"
 xdg-user-dirs-update
@@ -112,4 +115,5 @@ echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
-echo "Completed setup, run stew installs manually"
+
+echo "Completed setup, run python"

@@ -1,0 +1,6 @@
+#! /bin/sh
+
+stew search ttyper
+stew search stylua
+stew search nerdfix
+stew search waycorner
