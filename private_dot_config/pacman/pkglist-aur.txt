@@ -3,6 +3,7 @@ gitflow-cjs
 goreleaser-bin
 gray-git
 lazydocker-bin
+lmstudio
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin

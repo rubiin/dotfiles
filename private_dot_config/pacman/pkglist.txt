@@ -306,6 +306,7 @@ vivaldi
 vlc
 vlc-plugin-ffmpeg
 vlc-plugin-gstreamer
+vlc-plugins-extra
 vnstat
 vpnc
 webrtc-audio-processing
