@@ -12,7 +12,6 @@ file_folder_list=(
    "$HOME/themes.gitconfig"
    "$HOME/.ssh/config"
    "$HOME/.czrc"
-   "$HOME/.local/share/stew/Stewfile.lock.json"
    "$config/.curlrc"
    "$config/waybar/config.ctl"
    "$config/yay"
