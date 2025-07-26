@@ -1,4 +1,0 @@
-"custom/cava": {
-	"exec": "$HOME/.config/bin/waybar_cava.sh",
-	"format": "{}"
-},
