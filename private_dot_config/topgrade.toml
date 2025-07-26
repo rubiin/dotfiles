@@ -68,6 +68,9 @@ cleanup = true
 
 # Run specific steps - same options as the command line flag
 only = [
+  "custom_commands",
+  "bun",
+  "deno",
   "chezmoi",
   "containers",
   "distrobox",
@@ -76,13 +79,14 @@ only = [
   "flatpak",
   "mise",
   "self_update",
+  "tmux",
   "sheldon",
   "spicetify",
+  "vscode",
+  "yazi",
   "stew",
   "system",
-  "tldr",
-  "custom_commands",
-  "bun"
+  "tldr"
 ]
 
 
