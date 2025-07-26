@@ -1,6 +1,5 @@
 git-interactive-rebase-tool
 gitflow-cjs
-goreleaser-bin
 gray-git
 lazydocker-bin
 lmstudio
