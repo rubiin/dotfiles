@@ -81,7 +81,8 @@ only = [
   "stew",
   "system",
   "tldr",
-  "custom_commands"
+  "custom_commands",
+  "bun"
 ]
 
 
