@@ -40,7 +40,9 @@
 			"path": "Videos/Screencasting",
 			"audio": true,
 			"icon_size": 16,
-			"tooltip": true
+			"tooltip": true,
+			"delayed": false, // this is to enable delayed recording, it will start recording after a delay of 5 seconds
+			"delayed_timeout": 5000
 		},
 		"screenshot": {
 			"path": "Pictures/Screenshots",
@@ -49,7 +51,9 @@
 			"label": false,
 			"annotation": true,
 			"capture_sound": true,
-			"icon": "󰄀"
+			"icon": "󰄀",
+			"delayed": false,
+			"delayed_timeout": 5000
 		},
 		"network_usage": {
 			"upload_icon": "",
@@ -130,7 +134,8 @@
 		"system_tray": {
 			"icon_size": 16,
 			"ignored": [], // do not show these icons in the system tray
-			"hidden": []
+			"hidden": [],
+			"hide_when_empty": false // set to true to hide the system tray when no items are present
 		},
 		"taskbar": {
 			"icon_size": 22,
@@ -153,6 +158,7 @@
 			"pad_zero": false, // this is to pad the number of updates with zero
 			"tooltip": true,
 			"label": true,
+			"terminal": "kitty", // this is the terminal to use when running the update command
 			"flatpak": true,
 			"snap": false,
 			"brew": false
