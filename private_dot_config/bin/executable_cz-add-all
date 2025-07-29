@@ -58,6 +58,7 @@ file_folder_list=(
    "$config/zsh/.p10k.zsh"
    "$config/zsh/.zlogin"
    "$config/zsh/.zcompletions"
+   "$config/zsh/.zfunctions"
    "$config/zsh/.zshenv"
    "$config/zsh/.zshrc"
 )
