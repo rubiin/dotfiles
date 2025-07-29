@@ -18,6 +18,12 @@ name = "neovim config"
 path = "~/.config/nvim"
 
 [[session]]
+name = "sesh config"
+path = "~/.config/sesh"
+startup_command = "nvim sesh.toml"
+preview_command = "bat --language=toml --style=snip --color=always ~/.config/sesh/sesh.toml"
+
+[[session]]
 name = "zsh config"
 path = "~/.config/zsh"
 startup_command = "nvim .zshrc"
