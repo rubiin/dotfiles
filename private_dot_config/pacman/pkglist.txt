@@ -282,7 +282,6 @@ tree
 ttf-bitstream-vera
 ttf-dejavu-nerd
 ttf-firacode-nerd
-ttf-font-awesome
 ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 ttf-liberation
@@ -319,6 +318,7 @@ whois
 wireless-regdb
 wireplumber
 wl-clipboard
+woff2-font-awesome
 words
 wpa_supplicant
 wps-office
