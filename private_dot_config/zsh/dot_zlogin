@@ -22,7 +22,7 @@ export READER="zathura"
 export CODEEDITOR="code-insiders"
 export PAGER=nvimpager
 export MANPAGER=nvimpager
-
+export TERMIAL="wezterm"
 export WM="hyprland"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export VIDEO="mpv"
