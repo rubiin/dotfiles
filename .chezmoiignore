@@ -106,7 +106,6 @@
 # fishfile.maybe
 # Justfile
 # justfile
-
 .gnupg
 .gnupg/**
 .inputrc
@@ -116,8 +115,6 @@
 .config/tmux/*
 .config/lite-xl/ipc/**
 !.config/tmux/tmux.conf.local
-!.config/tmux/config
-!.config/tmux/scripts
 **/autoload/**/*
 **/temp/
 **/temp/**/*
