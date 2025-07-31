@@ -12,6 +12,7 @@ cz-conventional-changelog
 nfdl
 autocannon
 sass
+gitpick
 aaja
 json-server
 redis-cli
