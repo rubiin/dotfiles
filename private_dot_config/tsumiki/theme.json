@@ -402,6 +402,15 @@
 					"radius": "16px"
 				}
 			},
+			"screenshot": {
+				"spacing": ".125em",
+				"icon_size": "14px",
+				"border": {
+					"enabled": false,
+					"width": "1px",
+					"radius": "16px"
+				}
+			},
 			"stopwatch": {
 				"spacing": ".125em",
 				"icon_size": "14px",
