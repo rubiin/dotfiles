@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=WebStorm 2025.1.2
+Exec="/home/rubin/.local/share/JetBrains/Toolbox/apps/webstorm/bin/webstorm" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/rubin/.local/share/JetBrains/Toolbox/apps/webstorm/bin/webstorm.svg
+Comment=A JavaScript and TypeScript IDE
+StartupWMClass=jetbrains-webstorm
+StartupNotify=true

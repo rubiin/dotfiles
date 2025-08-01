@@ -1,0 +1,9 @@
+[MIME Cache]
+application/x-zerosize=dev.zed.Zed.desktop;
+inode/directory=dolphin.desktop;
+text/plain=dev.zed.Zed.desktop;
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
+x-scheme-handler/mongodb=mongodb-compass.desktop;
+x-scheme-handler/mongodb+srv=mongodb-compass.desktop;
+x-scheme-handler/texts=texts.desktop;
+x-scheme-handler/zed=dev.zed.Zed.desktop;

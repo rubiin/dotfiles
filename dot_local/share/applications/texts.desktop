@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Texts
+Exec=sh -c '/tmp/.mount_textsJPvHFc/jack $1' sh %u
+Type=Application
+Comment=The ultimate messaging app
+Categories=Network;Chat;
+MimeType=x-scheme-handler/texts;
