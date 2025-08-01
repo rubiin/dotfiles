@@ -18,7 +18,8 @@
 		"overview": {
 			"icon": "󰡃",
 			"tooltip": true,
-			"label": false
+			"label": false,
+			"show_occupied": true
 		},
 		"power": {
 			"icon": "󰐥",
@@ -39,14 +40,12 @@
 		"recorder": {
 			"path": "Videos/Screencasting",
 			"audio": true,
-			"icon_size": 16,
 			"tooltip": true,
 			"delayed": false, // this is to enable delayed recording, it will start recording after a delay of 5 seconds
 			"delayed_timeout": 5000
 		},
 		"screenshot": {
 			"path": "Pictures/Screenshots",
-			"icon_size": 16,
 			"tooltip": true,
 			"label": false,
 			"annotation": true,
@@ -60,7 +59,11 @@
 			"download_icon": "",
 			"tooltip": true,
 			"upload": true,
-			"download": false
+			"download": true,
+			"upload_threshold": 100,
+			"download_threshold": 1024,
+			"kb_digits": 0,
+			"mb_digits": 2
 		},
 		"quick_settings": {
 			"user": {
@@ -153,12 +156,12 @@
 			"hover_reveal": true, // this is to display the updates on hover
 			"reveal_duration": 500, // this is the duration in milliseconds to reveal the updates
 			"os": "arch",
+			"terminal": "kitty", // terminal to use for updates: "kitty", "foot", "alacritty", "wezterm", etc.
 			"auto_hide": false, // this is to auto hide the updates widget when there are no updates available
 			"interval": 3600,
 			"pad_zero": false, // this is to pad the number of updates with zero
 			"tooltip": true,
 			"label": true,
-			"terminal": "kitty", // this is the terminal to use when running the update command
 			"flatpak": true,
 			"snap": false,
 			"brew": false
@@ -334,6 +337,29 @@
 				"Europe/London",
 				"Asia/Tokyo"
 			]
+		},
+		"custom_button_group": {
+			"buttons": [
+				{
+					"command": "firefox",
+					"icon": "󰈹",
+					"label_text": "Firefox",
+					"tooltip_text": "Open Firefox Browser",
+					"show_icon": true,
+					"label": false,
+					"tooltip": true
+				},
+				{
+					"command": "spotify",
+					"icon": "",
+					"label_text": "Spotify",
+					"tooltip_text": "Open Spotify",
+					"show_icon": true,
+					"label": false,
+					"tooltip": true
+				}
+			],
+			"spacing": 4
 		}
 	},
 	"layout": {
@@ -343,11 +369,11 @@
 		], // this is the left section of the panel
 		"middle_section": [
 			"date_time",
-			"cava"
+			"weather",
+			"overview"
 		], // this is the middle section of the panel
 		"right_section": [
-			"recorder",
-			"@group:1",
+			"@collapsible:0",
 			"@group:0",
 			"system_tray"
 		] // this is the right section of the panel
@@ -355,11 +381,11 @@
 	"widget_groups": [ // widget groups are used to group multiple modules together, you can create multiple groups and access as @group:0, @group:1, etc
 		{
 			"widgets": [
+				"quick_settings",
 				"updates",
-				"cliphist",
 				"battery"
 			],
-			"spacing": 4,
+			"spacing": 2,
 			"style_classes": [
 				"compact"
 			]
@@ -371,6 +397,23 @@
 			"spacing": 0,
 			"style_classes": [
 				"compact"
+			]
+		}
+	],
+	"collapsible_groups": [ // collapsible groups create popup menus with utility widgets, accessed as @collapsible:0, @collapsible:1, etc
+		{
+			"widgets": [
+				"cliphist",
+				"emoji_picker",
+				"ocr",
+				"screenshot",
+				"recorder"
+			],
+			"spacing": 4,
+			"icon": "󰒓", // icon for the collapsible group button
+			"tooltip": "Utility Tools", // tooltip for the collapsible group button
+			"style_classes": [
+				"utility-tools"
 			]
 		}
 	],
@@ -388,6 +431,7 @@
 			"auto_dismiss": true,
 			"ignored": [],
 			"timeout": 3000,
+			"max_actions": 3,
 			"transition_type": "slide-left",
 			"transition_duration": 350,
 			"play_sound": true,
