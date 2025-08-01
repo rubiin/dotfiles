@@ -61,7 +61,6 @@ endeavouros-branding
 endeavouros-keyring
 endeavouros-mirrorlist
 entr
-eog
 eos-apps-info
 eos-hooks
 eos-log-tool
@@ -83,7 +82,6 @@ firefox-developer-edition
 firewalld
 flatpak
 font-manager
-fontforge
 freetype2
 gestures
 git
@@ -134,7 +132,6 @@ just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
-kget
 kimageformats5
 kinit
 kio-fuse
@@ -217,18 +214,12 @@ ppp
 pptpclient
 procs
 python-capng
-python-colorthief
 python-gobject-docs
-python-ijson
-python-json5
 python-libtmux
 python-loguru
 python-packaging
 python-pipx
-python-pyjson5
 python-pyqt5
-python-pytomlpp
-python-qrcode
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
@@ -292,7 +283,6 @@ ttf-twemoji-git
 ttf-ubuntu-nerd
 typos
 udiskie
-uget
 unrar
 unzip
 upx
