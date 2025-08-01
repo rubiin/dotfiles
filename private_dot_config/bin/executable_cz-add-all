@@ -47,6 +47,7 @@ file_folder_list=(
    "$config/libinput-gestures.conf"
    "$config/lazygit"
    "$config/dolphinrc"
+   "$config/imv"
    "$config/pacman"
    "$config/zen"
    "$config/fastfetch"
