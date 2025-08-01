@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=dolphin
+MimeType=inode/directory;
+Name=dolphin
+NoDisplay=true
+Type=Application
