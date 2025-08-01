@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate 2025.1.2
+Exec="/home/rubin/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=/home/rubin/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea.svg
+Comment=The IDE for pro Java and Kotlin development
+StartupWMClass=jetbrains-idea
+StartupNotify=true
