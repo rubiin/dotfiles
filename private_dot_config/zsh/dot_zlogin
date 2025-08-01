@@ -8,12 +8,18 @@
 ##          Environment Variables                             ##
 #--------------------------------------------------------------#
 
-# sets English everywhere, fixes encoding issues
-export LC_ALL="${LC_ALL:-en_US.UTF-8}"
-export LANG="${LANG:-en_US.UTF-8}"
-export LC_CTYPE="${LANG:-en_US.UTF-8}"
+#█▓▒░ language
+export LC_COLLATE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LC_MONETARY=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
+export LC_TIME=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 
-# default apps
+#█▓▒░ default apps
 export BROWSER="vivaldi"
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
@@ -27,10 +33,9 @@ export WM="hyprland"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export VIDEO="mpv"
 export IMAGE="eog"
-
 export JUST_COMMAND_COLOR="blue"
 
-# cleaning up home folder
+#█▓▒░  cleaning up home folder
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
@@ -38,8 +43,7 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DESKTOP_DIR="${XDG_DESKTOP_DIR:-$HOME/Desktop}"
 export XDG_DATA_DIRS="${XDG_DATA_DIRS:-$XDG_DATA_HOME:/usr/local/share:/usr/share}"
 
-
-
+#█▓▒░  Directories
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_TEMPLATES_DIR="$HOME/Templates"
 export XDG_PUBLICSHARE_DIR="$HOME/Public"
@@ -50,16 +54,17 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 
 # XDG User Directories (fallback to xdg-user-dir command if available)
 if command -v xdg-user-dir >/dev/null 2>&1; then
-  XDG_DESKTOP_DIR="${XDG_DESKTOP_DIR:-$(xdg-user-dir DESKTOP)}"
-  XDG_DOWNLOAD_DIR="${XDG_DOWNLOAD_DIR:-$(xdg-user-dir DOWNLOAD)}"
-  XDG_TEMPLATES_DIR="${XDG_TEMPLATES_DIR:-$(xdg-user-dir TEMPLATES)}"
-  XDG_PUBLICSHARE_DIR="${XDG_PUBLICSHARE_DIR:-$(xdg-user-dir PUBLICSHARE)}"
-  XDG_DOCUMENTS_DIR="${XDG_DOCUMENTS_DIR:-$(xdg-user-dir DOCUMENTS)}"
-  XDG_MUSIC_DIR="${XDG_MUSIC_DIR:-$(xdg-user-dir MUSIC)}"
-  XDG_PICTURES_DIR="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}"
-  XDG_VIDEOS_DIR="${XDG_VIDEOS_DIR:-$(xdg-user-dir VIDEOS)}"
+	XDG_DESKTOP_DIR="${XDG_DESKTOP_DIR:-$(xdg-user-dir DESKTOP)}"
+	XDG_DOWNLOAD_DIR="${XDG_DOWNLOAD_DIR:-$(xdg-user-dir DOWNLOAD)}"
+	XDG_TEMPLATES_DIR="${XDG_TEMPLATES_DIR:-$(xdg-user-dir TEMPLATES)}"
+	XDG_PUBLICSHARE_DIR="${XDG_PUBLICSHARE_DIR:-$(xdg-user-dir PUBLICSHARE)}"
+	XDG_DOCUMENTS_DIR="${XDG_DOCUMENTS_DIR:-$(xdg-user-dir DOCUMENTS)}"
+	XDG_MUSIC_DIR="${XDG_MUSIC_DIR:-$(xdg-user-dir MUSIC)}"
+	XDG_PICTURES_DIR="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}"
+	XDG_VIDEOS_DIR="${XDG_VIDEOS_DIR:-$(xdg-user-dir VIDEOS)}"
 fi
 
+#█▓▒░ Apps config directory
 export LESSHISTFILE="${LESSHISTFILE:-/tmp/less-hist}"
 export TERMINFO="$XDG_DATA_HOME/terminfo"
 export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
@@ -82,30 +87,30 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export GOPATH="$XDG_DATA_HOME/go"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
+export GNUPGHOME="$XDG_DATA_HOME"/gpg
 
-# custom executable path
+##█▓▒░  custom executable path
 export PATH="$XDG_CONFIG_HOME/bin/git-extras:$XDG_CONFIG_HOME/bin:$PATH"
-
 
 # lazygit
 export LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml"
 
-# grep
+##█▓▒░  grep
 export GREP_OPTIONS="--color=auto"
 
-# zsh specific
+##█▓▒░  zsh specific
 export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
 
-## History file configuration
+##█▓▒░  History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$ZDOTDIR/.zsh_history"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
 [ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
 
-# mise stuffs
+##█▓▒░  mise stuffs
 export MISE_GO_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-go-packages"
 export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
 
-# fzf defaults
+##█▓▒░  fzf defaults
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="  \
@@ -113,10 +118,10 @@ export FZF_DEFAULT_OPTS="  \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 --height=50% --border --min-height=25 --pointer='→'"
 
-# ripgrep
+##█▓▒░  ripgrep
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
 
-# tmux
+##█▓▒░  tmux
 export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins/tpm"
 
 # set PATH so it includes user's private bin if it exists
@@ -139,13 +144,13 @@ export NODE_COMPILE_CACHE="$XDG_CACHE_HOME/node"
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE="sloppy"
 
-# npm config
+##█▓▒░  npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
-# pnpm
+##█▓▒░  pnpm
 export PNPM_HOME="/home/rubin/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
