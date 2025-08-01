@@ -1,3 +1,4 @@
+fabric-cli-git
 git-interactive-rebase-tool
 gitflow-cjs
 glace-git
@@ -9,9 +10,6 @@ megabasterd-bin
 mongodb-compass-bin
 nvimpager
 pokego-bin
-python-fabric-git
-python-pygobject-stubs
-python-rlottie-python
 snixembed-git
 stacer-bin
 station-bin
