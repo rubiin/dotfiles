@@ -105,6 +105,7 @@ gvfs
 haveged
 hwdetect
 hwinfo
+hyperfine
 hypridle
 hyprland
 hyprland-qt-support
@@ -152,6 +153,7 @@ linux-headers
 lite-xl
 logrotate
 lsb-release
+lsd
 lsscsi
 luajit
 lvm2
