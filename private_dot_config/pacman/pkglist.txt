@@ -153,7 +153,6 @@ linux-headers
 lite-xl
 logrotate
 lsb-release
-lsd
 lsscsi
 luajit
 lvm2
@@ -296,6 +295,7 @@ vlc-plugin-gstreamer
 vlc-plugins-extra
 vnstat
 vpnc
+waydroid
 webrtc-audio-processing
 welcome
 wezterm-git
