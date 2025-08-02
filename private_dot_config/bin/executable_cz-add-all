@@ -38,6 +38,7 @@ file_folder_list=(
    "$config/git"
    "$config/npm"
    "$config/kitty"
+   "$config/eza"
    "$config/wezterm"
    "$config/sesh"
    "$config/yazi"
