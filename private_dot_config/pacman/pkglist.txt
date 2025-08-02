@@ -77,7 +77,6 @@ fakeroot
 fastfetch
 fd
 ffmpegthumbnailer
-ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
@@ -89,7 +88,6 @@ git-delta
 github-cli
 gnome-bluetooth
 gnome-bluetooth-3.0
-gnome-disk-utility
 gnome-keyring
 gnu-free-fonts
 gobject-introspection
@@ -105,7 +103,6 @@ gst-plugins-bad
 gst-plugins-ugly
 gvfs
 haveged
-httpie
 hwdetect
 hwinfo
 hypridle
@@ -194,7 +191,6 @@ openconnect
 openvpn
 os-prober
 pacman-contrib
-pamac
 pamixer
 pavucontrol
 perl
@@ -216,7 +212,6 @@ procs
 python-capng
 python-gobject-docs
 python-libtmux
-python-loguru
 python-packaging
 python-pipx
 python-pyqt5
