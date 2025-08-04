@@ -454,13 +454,13 @@
 			"size": 20
 		},
 		"dock": {
-			"enabled": false,
+			"enabled": true,
 			"icon_size": 30,
 			"anchor": "bottom-center",
 			"ignored_apps": [],
 			"layer": "bottom",
 			"pinned_apps": [
-				"vivaldi",
+				"zen",
 				"wezterm",
 				"persepolis",
 				"code"
