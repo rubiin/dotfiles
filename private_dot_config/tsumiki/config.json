@@ -369,7 +369,8 @@
 		], // this is the left section of the panel
 		"middle_section": [
 			"date_time",
-			"weather"
+			"weather",
+			"taskbar"
 		], // this is the middle section of the panel
 		"right_section": [
 			"@collapsible:0",
@@ -421,7 +422,7 @@
 			"enabled": true,
 			"tooltip": true,
 			"icon_size": 30,
-			"ignored_apps": []
+			"ignored": []
 		},
 		"notification": {
 			"enabled": true,
@@ -457,8 +458,12 @@
 			"tooltip": false,
 			"icon_size": 40,
 			"anchor": "bottom-center",
-			"ignored_apps": [],
+			"ignored": [],
 			"layer": "top",
+			"preview_size": [
+				200,
+				130
+			], // this is the size of the preview, width and height in pixels
 			"pinned_apps": [
 				"zen",
 				"wezterm",
