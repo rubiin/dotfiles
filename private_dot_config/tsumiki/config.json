@@ -369,8 +369,7 @@
 		], // this is the left section of the panel
 		"middle_section": [
 			"date_time",
-			"weather",
-			"taskbar"
+			"weather"
 		], // this is the middle section of the panel
 		"right_section": [
 			"@collapsible:0",
@@ -442,8 +441,10 @@
 		},
 		"osd": {
 			"enabled": true,
-			"timeout": 2000,
+			"timeout": 3000,
 			"icon_size": 28,
+			"transition_type": "slide-up", // this is the transition type for the OSD, you can use slide-left, slide-right, fade-in, etc.
+			"transition_duration": 500, // this is the duration in milliseconds for the transition
 			"play_sound": true,
 			"orientation": "horizontal", // this is the orientation of the OSD, you can use vertical or horizontal
 			"anchor": "bottom-center", // this is the position of the OSD, you can use top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
@@ -460,16 +461,12 @@
 			"anchor": "bottom-center",
 			"ignored": [],
 			"layer": "top",
+			"preview_apps": true, // this is to enable the preview of apps in the dock
 			"preview_size": [
 				200,
 				130
-			], // this is the size of the preview, width and height in pixels
-			"pinned_apps": [
-				"zen",
-				"wezterm",
-				"persepolis",
-				"code"
-			]
+			] // this is the size of the preview, width and height in pixels
+
 		},
 		"desktop_clock": {
 			"enabled": false,
