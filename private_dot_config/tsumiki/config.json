@@ -448,7 +448,11 @@
 			"play_sound": true,
 			"orientation": "horizontal", // this is the orientation of the OSD, you can use vertical or horizontal
 			"anchor": "bottom-center", // this is the position of the OSD, you can use top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
-			"percentage": true
+			"percentage": true,
+			"osds": [
+				"brightness",
+				"volume"
+			]
 		},
 		"screen_corners": {
 			"enabled": false,
