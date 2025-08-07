@@ -14,6 +14,7 @@ file_folder_list=(
    "$config/.curlrc"
    "$config/yay"
    "$config/topgrade.toml"
+   "$config/cspell.json"
    "$config/atuin"
    "$config/.ripgreprc"
    "$config/ktorrentrc"
