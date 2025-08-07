@@ -135,6 +135,8 @@ alias p="pnpm"
 alias pi="pnpm i"
 alias pih="pnpm i --shamefully-hoist=true"
 
+alias js="just"
+
 # bun aliases
 alias b="bun"
 
