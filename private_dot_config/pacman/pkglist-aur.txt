@@ -3,12 +3,14 @@ git-interactive-rebase-tool
 gitflow-cjs
 glace-git
 gray-git
-lmstudio
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin
 nvimpager
 pokego-bin
+ps_mem
+python-fabric-git
+python-rlottie-python
 snixembed-git
 stacer-bin
 station-bin
