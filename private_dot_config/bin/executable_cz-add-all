@@ -24,6 +24,8 @@ file_folder_list=(
    "$config/.shellcheckrc"
    "$config/topgrade.toml"
    "$config/mimeapps.list"
+   "$config/tsumiki/config.json"
+   "$config/tsumiki/theme.json"
    "$config/hypr/userprefs.conf"
    "$config/hyde/config.toml"
    "$config/hypr/hyprland.conf"
