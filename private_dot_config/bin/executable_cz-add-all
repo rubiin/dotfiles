@@ -9,7 +9,6 @@ file_folder_list=(
    "$HOME/.bashenv"
    "$HOME/.bash_profile"
    "$HOME/sudoers.lecture"
-   "$HOME/themes.gitconfig"
    "$HOME/.ssh/config"
    "$HOME/.czrc"
    "$config/.curlrc"
