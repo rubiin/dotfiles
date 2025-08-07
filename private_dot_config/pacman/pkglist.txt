@@ -150,6 +150,7 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+lite-xl
 logrotate
 lsb-release
 lsscsi
@@ -246,7 +247,6 @@ safeeyes
 satty
 sd
 sddm
-sdl12-compat
 sg3_utils
 sheldon
 slurp
