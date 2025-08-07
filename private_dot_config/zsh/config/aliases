@@ -17,7 +17,7 @@ alias fixvlc='mkdir ~/.cache/vlc'
 alias fastfetch='fastfetch --logo-type kitty'
 alias g="git"
 alias ms="mise"
-alias lx="lite-xl"
+alias lx="flatpak run com.lite_xl.LiteXL"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
 alias lzg="lazygit"
