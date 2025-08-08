@@ -76,7 +76,7 @@ f2fs-tools
 fakeroot
 fastfetch
 fd
-ffmpegthumbnailer
+ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
@@ -150,7 +150,6 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
-lite-xl
 logrotate
 lsb-release
 lsscsi
