@@ -101,7 +101,7 @@ echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
 
 echo "Installing mise"
-yay -S mise
+curl https://mise.run | sh
 mise install
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
