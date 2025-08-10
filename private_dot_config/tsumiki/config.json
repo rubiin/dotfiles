@@ -66,6 +66,7 @@
 			"mb_digits": 2
 		},
 		"quick_settings": {
+			"hover_reveal": false,
 			"user": {
 				"avatar": "~/.face",
 				"name": "system",
@@ -128,11 +129,13 @@
 			"running_icon": "󱫠"
 		},
 		"storage": {
+			"path": "/",
 			"show_icon": true,
 			"icon": "󰋊",
 			"mode": "label",
 			"tooltip": true,
-			"graph_length": 4
+			"graph_length": 4,
+			"unit": "gb" // Default unit for storage
 		},
 		"system_tray": {
 			"icon_size": 16,
@@ -175,13 +178,15 @@
 			"icon": "",
 			"tooltip": true,
 			"label": false,
-			"show_icon": true
+			"show_icon": true,
+			"quiet": false
 		},
 		"weather": {
 			"location": "kathmandu", // this is the location to show the weather, you can use city name, latitude, longitude or zip code or leave it empty to use the default location
 			"label": true,
 			"tooltip": true,
 			"temperature_unit": "celsius",
+			"label_format": "{temperature} {condition}",
 			"wind_speed_unit": "kmh",
 			"hover_reveal": true,
 			"reveal_duration": 500,
@@ -207,7 +212,6 @@
 			"icon_map": {}
 		},
 		"bluetooth": {
-			"icon_size": 14,
 			"label": true,
 			"tooltip": true
 		},
@@ -238,20 +242,20 @@
 			"show_icon": true,
 			"icon": "",
 			"tooltip": true,
-			"mode": "label",
+			"mode": "circular",
 			"graph_length": 4
 		},
 		"date_time": {
 			"format": "%b %d %H:%M",
+			"calendar": true,
+			"clock_format": "24h",
+			"auto_hide": false,
+			"auto_hide_timeout": 2000,
 			"notification": {
 				"enabled": true,
 				"count": true,
 				"hide_count_on_zero": true
-			},
-			"calendar": true,
-			"clock_format": "24h",
-			"auto_hide": false,
-			"auto_hide_timeout": 2000
+			}
 		},
 		"hypridle": {
 			"enabled_icon": "",
@@ -290,7 +294,8 @@
 			"icon": "",
 			"mode": "label",
 			"tooltip": true,
-			"graph_length": 4
+			"graph_length": 4,
+			"unit": "gb" // Default unit for memory
 		},
 		"cliphist": {
 			"icon": "",
@@ -305,7 +310,9 @@
 		"emoji_picker": {
 			"icon": "",
 			"label": false,
-			"tooltip": true
+			"tooltip": true,
+			"per_row": 9,
+			"per_column": 4
 		},
 		"submap": {
 			"icon": "󰌌",
@@ -315,7 +322,8 @@
 		},
 		"microphone": {
 			"label": false,
-			"tooltip": true
+			"tooltip": true,
+			"show_icon": true
 		},
 		"ocr": {
 			"icon": "󰐳",
@@ -334,7 +342,6 @@
 			"use_24hr": true, // this is to use 24 hour format, if false it will use 12 hour format
 			"timezones": [
 				"America/New_York",
-				"Europe/London",
 				"Asia/Tokyo"
 			]
 		},
@@ -369,8 +376,7 @@
 		], // this is the left section of the panel
 		"middle_section": [
 			"date_time",
-			"weather",
-			"wallpaper"
+			"weather"
 		], // this is the middle section of the panel
 		"right_section": [
 			"@collapsible:0",
@@ -472,7 +478,6 @@
 				200,
 				130
 			] // this is the size of the preview, width and height in pixels
-
 		},
 		"desktop_clock": {
 			"enabled": false,
