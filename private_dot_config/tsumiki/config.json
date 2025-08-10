@@ -7,7 +7,6 @@
 			"hide_when_missing": true,
 			"label": true,
 			"tooltip": true,
-			"orientation": "vertical",
 			"icon_size": 14,
 			"notifications": {
 				"low_threshold": 10,
