@@ -18,6 +18,7 @@ alias fastfetch='fastfetch --logo-type kitty'
 alias g="git"
 alias ms="mise"
 alias lx="flatpak run com.lite_xl.LiteXL"
+alias typos-all="typos --hidden --ignore-vcs --exclude CHANGELOG.md --exclude dist/ --exclude .git/ --exclude assets"
 alias grep='grep --color=auto'
 alias lzd="lazydocker"
 alias lzg="lazygit"
