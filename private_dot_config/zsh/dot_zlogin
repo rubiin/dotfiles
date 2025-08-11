@@ -20,7 +20,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 #█▓▒░ default apps
-export BROWSER="vivaldi"
+export BROWSER="zen-browser"
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export VISUAL="code-insiders"
