@@ -29,11 +29,6 @@ rev = "e95c7b3"
 hash = "72dfb25e9d0c015365827431e28df322"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "e95c7b3"
-hash = "e1de3054c0d1a2d8dc6f007eadc0fa31"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
 rev = "e95c7b3"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
