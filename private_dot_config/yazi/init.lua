@@ -1,4 +1,4 @@
-require("git"):setup { order = 0 }
+require("git"):setup()
 
 require("full-border"):setup({
 	type = ui.Border.ROUNDED,
