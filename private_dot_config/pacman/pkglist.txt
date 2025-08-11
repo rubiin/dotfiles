@@ -290,6 +290,7 @@ unzip
 upx
 usb_modeswitch
 usbutils
+uwsm
 vala
 valgrind
 vim
