@@ -49,7 +49,7 @@
 			"tooltip": true,
 			"label": false,
 			"annotation": true,
-			"capture_sound": true,
+			"capture_sound": false,
 			"icon": "󰄀",
 			"delayed": false,
 			"delayed_timeout": 5000
