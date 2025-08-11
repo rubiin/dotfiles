@@ -1,8 +1,8 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"aurrpcurl": "https://aur.archlinux.org/rpc?",
-	"buildDir": "/home/rubin/.cache/yay",
-	"editor": "",
+	"buildDir": "$HOME/.cache/yay",
+	"editor": "vim",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
 	"makepkgconf": "",
