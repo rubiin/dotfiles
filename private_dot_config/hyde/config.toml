@@ -1,3 +1,5 @@
+"$schema" = "https://raw.githubusercontent.com/HyDE-Project/HyDE/refs/heads/master/Configs/.local/share/hyde/schema/config.toml.json"
+
 [volume]
 # volumecontrol.sh configuration
 notify = false # Useful for systems that have their own OSD
@@ -19,3 +21,8 @@ unplug = 80
 custom_paths = [
     "$HOME/Pictures/Wallpapers",
 ] # List of paths to search for wallpapers
+
+
+
+[hyprland]
+ menu_font="Comic Sans MS"
