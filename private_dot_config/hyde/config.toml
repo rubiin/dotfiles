@@ -25,4 +25,7 @@ custom_paths = [
 
 
 [hyprland]
- menu_font="Comic Sans MS"
+browser = "zen-browser"  # Browser.
+editor = "code"  # Editor.
+terminal = "wezterm"  # Terminal.
+quickapps = "wezterm"  # Quick apps.
