@@ -193,6 +193,7 @@ openvpn
 os-prober
 pacman-contrib
 pamixer
+paru
 pavucontrol
 perl
 persepolis
@@ -252,6 +253,7 @@ slurp
 smartmontools
 sof-firmware
 sox
+spdlog
 speech-dispatcher
 spicetify-cli
 spotify
