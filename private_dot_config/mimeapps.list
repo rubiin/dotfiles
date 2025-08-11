@@ -45,6 +45,7 @@ image/jpeg=imv.desktop
 image/png=imv.desktop
 inode/directory=org.kde.dolphin.desktop
 message/rfc822=userapp-Thunderbird-UBDPS2.desktop
+text/plain=org.lite_xl.lite_xl.desktop;
 text/css=org.lite_xl.lite_xl.desktop;
 text/csv=org.lite_xl.lite_xl.desktop;
 text/html=zen.desktop
