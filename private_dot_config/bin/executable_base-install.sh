@@ -81,6 +81,9 @@ flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io
 echo "Installing bat themes"
 bat cache --build
 
+echo "Installing yazi plugins"
+ya pkg upgrade
+
 echo "Setting alacritty"
 wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info && sudo tic -xe alacritty,alacritty-direct alacritty.info && rm alacritty.info
 
