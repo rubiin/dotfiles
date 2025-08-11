@@ -29,7 +29,6 @@ file_folder_list=(
    "$config/hypr/userprefs.conf"
    "$config/hyde/config.toml"
    "$config/hypr/hyprland.conf"
-   "$config/hypr/hyde.conf"
    "$config/persepolis_download_manager/persepolis.conf"
    "$config/electron-flags.conf"
    "$config/aria2/aria2.conf"
