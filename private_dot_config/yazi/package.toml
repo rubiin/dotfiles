@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "Rolv-Apneseth/starship"
-rev = "a63550b"
-hash = "c2021386289a0cbb3e152a052f67c177"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
 rev = "e95c7b3"
 hash = "1adc12c2b2b025411ab61eb8f0879574"
