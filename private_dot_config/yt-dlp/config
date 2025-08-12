@@ -1,3 +1,8 @@
+# vim: filetype=config
+# DOCS https://www.mankier.com/1/yt-dlp#Configuration
+#──────────────────────────────────────────────────────────────────────────────#
+
+
 # Save all videos here
 --paths $HOME/Videos/youtube-dl
 --output %(title)s.%(upload_date)s.%(vcodec)s.%(acodec)s.%(autonumber)02d.%(ext)s
@@ -7,11 +12,21 @@
 
 # Download all the available subtitles
 --all-subs
+
 # merge subtitles into video file
 --embed-subs
 
 # Embed metadata to the video file. Also adds chapters to file
 --embed-metadata
+
+# Embed thumbnail in the video as cover art
+--embed-thumbnail
+
+# Add chapter markers to the video file
+--embed-chapters
+
+# Display progress in console titlebar
+--console-title              
 
 # Do not overwrite existing output files
 --no-overwrites
@@ -24,5 +39,4 @@
 --concurrent-fragments 6
 
 --no-write-comments
---embed-thumbnail
 --geo-bypass 
