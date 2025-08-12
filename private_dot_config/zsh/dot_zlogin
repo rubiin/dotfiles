@@ -43,6 +43,11 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DESKTOP_DIR="${XDG_DESKTOP_DIR:-$HOME/Desktop}"
 export XDG_DATA_DIRS="${XDG_DATA_DIRS:-$XDG_DATA_HOME:/usr/local/share:/usr/share}"
 
+# HyDEs Compositor Configuration
+export HYPRLAND_CONFIG="${XDG_DATA_HOME:-$HOME/.local/share}/hypr/hyprland.conf"
+
+
+
 #█▓▒░  Directories
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_TEMPLATES_DIR="$HOME/Templates"
