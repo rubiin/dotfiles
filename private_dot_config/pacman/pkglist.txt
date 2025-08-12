@@ -29,7 +29,6 @@ cantarell-fonts
 capitaine-cursors
 cargo-cache
 cava
-chafa
 chaotic-keyring
 chaotic-mirrorlist
 chezmoi
