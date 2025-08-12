@@ -37,6 +37,7 @@ file_folder_list=(
    "$config/btop"
    "$config/git"
    "$config/npm"
+   "$config/yt-dlp"
    "$config/kitty"
    "$config/eza"
    "$config/wezterm"
