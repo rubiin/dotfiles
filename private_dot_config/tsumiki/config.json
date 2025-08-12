@@ -473,6 +473,7 @@
 			"show_when_no_windows": false, // this is to show the dock when there are no windows in the workspace
 			"ignored": [],
 			"layer": "top",
+			"hidden_workspace": true,
 			"preview_apps": true, // this is to enable the preview of apps in the dock
 			"preview_size": [
 				200,
