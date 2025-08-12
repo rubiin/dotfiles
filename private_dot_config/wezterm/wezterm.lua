@@ -41,6 +41,7 @@ config.max_fps = 120
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 0
+
 -- scroll
 config.enable_scroll_bar = false
 
@@ -61,6 +62,9 @@ config.use_ime = false
 
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
+
+
+config.use_dead_keys = true -- do not expect another key after `^~`
 
 -- core keymaps that are general
 config.keys = {
@@ -85,5 +89,6 @@ config.keys = {
 		action = wezterm.action.DecreaseFontSize,
 	},
 }
+
 
 return config
