@@ -1,16 +1,12 @@
-#!/usr/bin/env zsh
+# Loaded by every shell (login, interactive, scripts). Put essential environment variables here—keep it minimal.
 
-#! ██████╗░░█████╗░  ███╗░░██╗░█████╗░████████╗  ███████╗██████╗░██╗████████╗
-#! ██╔══██╗██╔══██╗  ████╗░██║██╔══██╗╚══██╔══╝  ██╔════╝██╔══██╗██║╚══██╔══╝
-#! ██║░░██║██║░░██║  ██╔██╗██║██║░░██║░░░██║░░░  █████╗░░██║░░██║██║░░░██║░░░
-#! ██║░░██║██║░░██║  ██║╚████║██║░░██║░░░██║░░░  ██╔══╝░░██║░░██║██║░░░██║░░░
-#! ██████╔╝╚█████╔╝  ██║░╚███║╚█████╔╝░░░██║░░░  ███████╗██████╔╝██║░░░██║░░░
-#! ╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░  ╚══════╝╚═════╝░╚═╝░░░╚═╝░░░
+# Ensure that a non-login, non-interactive shell has a defined environment.
 
-# Load all custom module files // Directories are ignored
-# As Directories are ignored, we can store a bunch of boilerplate script in a ``./conf.d/custom-directory``
-# then we can make an entry point script: `./conf.d/custom-directory.zsh`managing all the files in that directory
 
-for file in "${ZDOTDIR:-$HOME/.config/zsh}/conf.d/"*.zsh; do
-  [ -r "$file" ] && source "$file"
-done
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zlogin" ]]; then
+
+
+  source "${ZDOTDIR:-$HOME}/.zlogin"
+
+
+fi
