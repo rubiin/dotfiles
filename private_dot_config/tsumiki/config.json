@@ -472,6 +472,7 @@
 			"anchor": "bottom-center",
 			"show_when_no_windows": false, // this is to show the dock when there are no windows in the workspace
 			"ignored": [],
+			"hide_special_workspace_apps": false, // this is to hide the apps in the dock that are running in special workspaces like scratchpad
 			"layer": "top",
 			"hidden_workspace": true,
 			"preview_apps": true, // this is to enable the preview of apps in the dock
