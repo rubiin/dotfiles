@@ -151,7 +151,7 @@
 			"notify": false
 		},
 		"updates": {
-			 "show_icon": true,
+			"show_icon": true,
 			"available_icon": "󰏗",
 			"no_updates_icon": "󰏖",
 			"hover_reveal": true,
