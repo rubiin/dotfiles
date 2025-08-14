@@ -2,7 +2,6 @@
 	"$schema": "./tsumiki.schema.json",
 	"widgets": {
 		"battery": {
-			"full_battery_level": 100,
 			"hide_label_when_full": true,
 			"hide_when_missing": true,
 			"label": true,
@@ -41,14 +40,14 @@
 			"path": "Videos/Screencasting",
 			"audio": true,
 			"tooltip": true,
-			"delayed": false, // this is to enable delayed recording, it will start recording after a delay of 5 seconds
+			"delayed": false,
 			"delayed_timeout": 5000
 		},
 		"screenshot": {
 			"path": "Pictures/Screenshots",
 			"tooltip": true,
 			"label": false,
-			"annotation": true,
+			"annotation": false,
 			"capture_sound": false,
 			"icon": "󰄀",
 			"delayed": false,
@@ -70,7 +69,6 @@
 			"user": {
 				"avatar": "~/.face",
 				"name": "system",
-				// system means it will use the system user name, you can also use your own name
 				"distro_icon": true
 			},
 			"controls": {
@@ -135,17 +133,17 @@
 			"mode": "label",
 			"tooltip": true,
 			"graph_length": 4,
-			"unit": "gb" // Default unit for storage
+			"unit": "gb"
 		},
 		"system_tray": {
 			"icon_size": 16,
-			"ignored": [], // do not show these icons in the system tray
+			"ignored": [],
 			"hidden": [],
-			"hide_when_empty": false // set to true to hide the system tray when no items are present
+			"hide_when_empty": false
 		},
 		"taskbar": {
 			"icon_size": 22,
-			"ignored": [], // do not show these icons in the task bar
+			"ignored": [],
 			"tooltip": true
 		},
 		"theme_switcher": {
@@ -153,16 +151,16 @@
 			"notify": false
 		},
 		"updates": {
-			"show_icon": true,
+			 "show_icon": true,
 			"available_icon": "󰏗",
 			"no_updates_icon": "󰏖",
-			"hover_reveal": true, // this is to display the updates on hover
-			"reveal_duration": 500, // this is the duration in milliseconds to reveal the updates
+			"hover_reveal": true,
+			"reveal_duration": 500,
 			"os": "arch",
-			"terminal": "kitty", // terminal to use for updates: "kitty", "foot", "alacritty", "wezterm", etc.
-			"auto_hide": false, // this is to auto hide the updates widget when there are no updates available
+			"terminal": "kitty",
+			"auto_hide": false,
 			"interval": 3600,
-			"pad_zero": false, // this is to pad the number of updates with zero
+			"pad_zero": false,
 			"tooltip": true,
 			"label": true,
 			"flatpak": true,
@@ -182,7 +180,7 @@
 			"quiet": false
 		},
 		"weather": {
-			"location": "kathmandu", // this is the location to show the weather, you can use city name, latitude, longitude or zip code or leave it empty to use the default location
+			"location": "kathmandu",
 			"label": true,
 			"tooltip": true,
 			"temperature_unit": "celsius",
@@ -190,23 +188,23 @@
 			"wind_speed_unit": "kmh",
 			"hover_reveal": true,
 			"reveal_duration": 500,
-			"expanded": true, // this is to show the expanded weather widget
-			"interval": 3600 // this is the interval in seconds to update the weather, 1 hour is 3600 seconds,
+			"expanded": true,
+			"interval": 3600
 		},
 		"window_title": {
-			"icon": true, // this is to enable the icon in the window title widget
+			"icon": true,
 			"tooltip": true,
 			"truncation": true,
 			"truncation_size": 50,
 			"title_map": []
 		},
 		"workspaces": {
-			"count": 10, // this is the number of workspaces to show
+			"count": 10,
 			"hide_unoccupied": true,
 			"default_label_format": "{id}",
 			"ignored": [
 				-99
-			], // this is the list of workspaces to ignore, currently -99 is the scratchpad workspace
+			],
 			"reverse_scroll": false,
 			"empty_scroll": false,
 			"icon_map": {}
@@ -284,7 +282,7 @@
 			"hide_when_zero": true
 		},
 		"language": {
-			"truncation_size": 2, // this is the number of characters to show in the language widget
+			"truncation_size": 2,
 			"tooltip": true,
 			"icon": "",
 			"show_icon": false
@@ -295,7 +293,7 @@
 			"mode": "label",
 			"tooltip": true,
 			"graph_length": 4,
-			"unit": "gb" // Default unit for memory
+			"unit": "gb"
 		},
 		"cliphist": {
 			"icon": "",
@@ -339,7 +337,7 @@
 		"world_clock": {
 			"icon": "󰃰",
 			"show_icon": true,
-			"use_24hr": true, // this is to use 24 hour format, if false it will use 12 hour format
+			"use_24hr": true,
 			"timezones": [
 				"America/New_York",
 				"Asia/Tokyo"
@@ -373,18 +371,18 @@
 		"left_section": [
 			"workspaces",
 			"window_title"
-		], // this is the left section of the panel
+		],
 		"middle_section": [
 			"date_time",
 			"weather"
-		], // this is the middle section of the panel
+		],
 		"right_section": [
 			"@collapsible:0",
 			"@group:0",
 			"system_tray"
-		] // this is the right section of the panel
+		]
 	},
-	"widget_groups": [ // widget groups are used to group multiple modules together, you can create multiple groups and access as @group:0, @group:1, etc
+	"widget_groups": [
 		{
 			"widgets": [
 				"quick_settings",
@@ -406,7 +404,7 @@
 			]
 		}
 	],
-	"collapsible_groups": [ // collapsible groups create popup menus with utility widgets, accessed as @collapsible:0, @collapsible:1, etc
+	"collapsible_groups": [
 		{
 			"widgets": [
 				"cliphist",
@@ -416,23 +414,28 @@
 				"recorder"
 			],
 			"spacing": 4,
-			"icon": "󰒓", // icon for the collapsible group button
-			"tooltip": "Utility Tools", // tooltip for the collapsible group button
+			"icon": "󰒓",
+			"tooltip": "Utility Tools",
 			"style_classes": [
 				"utility-tools"
 			]
 		}
 	],
 	"modules": {
+		"bar": {
+			"layer": "background",
+			"auto_hide": false,
+			"location": "top"
+		},
 		"app_launcher": {
-			"enabled": true,
-			"tooltip": true,
+			"enabled": false,
+			"tooltip": false,
 			"icon_size": 30,
 			"ignored": []
 		},
 		"notification": {
 			"enabled": true,
-			"dnd_on_screencast": true, // this is to enable Do Not Disturb mode when screencasting
+			"dnd_on_screencast": true,
 			"anchor": "top-right",
 			"auto_dismiss": true,
 			"ignored": [],
@@ -441,20 +444,21 @@
 			"transition_type": "slide-left",
 			"transition_duration": 350,
 			"play_sound": true,
+			"per_app_limits": {},
 			"sound_file": "notification4",
-			"persist": true, // this is to persist the notification
-			"display_actions_on_hover": false, // this is to display the actions on hover
-			"dismiss_on_hover": false // this is to dismiss the notification on hover
+			"persist": true,
+			"display_actions_on_hover": false,
+			"dismiss_on_hover": false
 		},
 		"osd": {
 			"enabled": true,
 			"timeout": 3000,
 			"icon_size": 28,
-			"transition_type": "slide-up", // this is the transition type for the OSD, you can use slide-left, slide-right, fade-in, etc.
-			"transition_duration": 500, // this is the duration in milliseconds for the transition
-			"play_sound": true,
-			"orientation": "horizontal", // this is the orientation of the OSD, you can use vertical or horizontal
-			"anchor": "bottom-center", // this is the position of the OSD, you can use top-center, top-left, top-right, bottom-center, bottom-left, bottom-right
+			"transition_type": "slide-up",
+			"transition_duration": 500,
+			"play_sound": false,
+			"orientation": "horizontal",
+			"anchor": "bottom-center",
 			"percentage": true,
 			"osds": [
 				"brightness",
@@ -470,16 +474,15 @@
 			"tooltip": false,
 			"icon_size": 40,
 			"anchor": "bottom-center",
-			"show_when_no_windows": false, // this is to show the dock when there are no windows in the workspace
+			"show_when_no_windows": false,
 			"ignored": [],
-			"hide_special_workspace_apps": false, // this is to hide the apps in the dock that are running in special workspaces like scratchpad
+			"hide_special_workspace_apps": false,
 			"layer": "top",
-			"hidden_workspace": true,
-			"preview_apps": true, // this is to enable the preview of apps in the dock
+			"preview_apps": true,
 			"preview_size": [
 				200,
 				130
-			] // this is the size of the preview, width and height in pixels
+			]
 		},
 		"desktop_clock": {
 			"enabled": false,
@@ -492,15 +495,13 @@
 			"enabled": false,
 			"anchor": "bottom-right",
 			"layer": "bottom",
-			"update_interval": 600 // this is the interval in seconds to update the quotes, 1 hour is 3600 seconds
+			"update_interval": 600
 		}
 	},
 	"general": {
 		"check_updates": false,
-		"layer": "overlay",
-		"auto_hide": false,
 		"debug": false,
 		"monitor_styles": true,
-		"location": "top"
+		"auto_reload": true
 	}
 }
