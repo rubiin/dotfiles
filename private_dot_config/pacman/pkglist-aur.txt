@@ -1,4 +1,5 @@
 fabric-cli-git
+fabric-cli-git-debug
 git-interactive-rebase-tool
 gitflow-cjs
 glace-git

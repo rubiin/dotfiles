@@ -291,7 +291,6 @@ usb_modeswitch
 usbutils
 uwsm
 vala
-valgrind
 vim
 visual-studio-code-insiders
 vivaldi
@@ -299,7 +298,6 @@ vlc
 vlc-plugin-ffmpeg
 vlc-plugin-gstreamer
 vlc-plugins-extra
-vnstat
 vpnc
 waydroid
 webrtc-audio-processing
