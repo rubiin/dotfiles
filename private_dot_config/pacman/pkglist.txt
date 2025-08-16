@@ -290,7 +290,6 @@ upx
 usb_modeswitch
 usbutils
 uwsm
-vala
 vim
 visual-studio-code-insiders
 vivaldi
