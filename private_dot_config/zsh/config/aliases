@@ -45,7 +45,7 @@ alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf
 alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
 alias ytmp3="yt-dlp -x --audio-format=mp3"
-alias ytd="yt-dlp --embed-metadata --embed-subs"
+alias ytd="yt-dlp"
 alias q=" exit" # INFO leading space to ignore it in history due to HIST_IGNORE_SPACE
 alias hg='history | fzf'
 alias cp="cp -i"               # confirm before overwriting something
