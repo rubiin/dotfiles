@@ -240,6 +240,7 @@
     "pixbuf",
     "pkey",
     "pkgconfig",
+    "pkill",
     "Playerctl",
     "plist",
     "pnpm",
