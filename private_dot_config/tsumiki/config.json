@@ -473,7 +473,6 @@
 			"enabled": true,
 			"tooltip": false,
 			"icon_size": 40,
-			"anchor": "bottom-center",
 			"show_when_no_windows": false,
 			"ignored": [],
 			"hide_special_workspace_apps": false,
