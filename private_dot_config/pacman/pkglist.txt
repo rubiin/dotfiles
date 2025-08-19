@@ -202,10 +202,13 @@ pkgfile
 playerctl
 plocate
 pngquant
+pokego-git
+pokemon-colorscripts-git
 polkit-gnome
 poppler-glib
 postman-bin
 power-profiles-daemon
+powerpill
 ppp
 pptpclient
 procs

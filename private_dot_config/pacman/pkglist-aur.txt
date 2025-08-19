@@ -4,11 +4,12 @@ git-interactive-rebase-tool
 gitflow-cjs
 glace-git
 gray-git
+krabby-bin
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin
 nvimpager
-pokego-bin
+pokego-git-debug
 ps_mem
 python-fabric-git
 python-rlottie-python
