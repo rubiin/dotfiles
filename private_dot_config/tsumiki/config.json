@@ -316,7 +316,8 @@
 			"icon": "󰌌",
 			"label": true,
 			"tooltip": true,
-			"show_icon": false
+			"show_icon": false,
+			"hide_on_default": false
 		},
 		"microphone": {
 			"label": false,
