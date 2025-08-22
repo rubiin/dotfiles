@@ -1,5 +1,4 @@
 fabric-cli-git
-fabric-cli-git-debug
 git-interactive-rebase-tool
 gitflow-cjs
 glace-git
@@ -9,7 +8,7 @@ matugen-bin
 megabasterd-bin
 mongodb-compass-bin
 nvimpager
-pokego-git-debug
+pokego-bin
 ps_mem
 python-fabric-git
 python-rlottie-python
