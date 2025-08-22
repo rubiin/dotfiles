@@ -10,7 +10,6 @@ mongodb-compass-bin
 nvimpager
 pokego-bin
 ps_mem
-pyprland
 python-fabric-git
 python-rlottie-python
 snixembed-git

@@ -90,6 +90,7 @@ gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
+gnu-netcat
 gobject-introspection
 gparted
 gpm
@@ -252,6 +253,7 @@ sg3_utils
 sheldon
 slurp
 smartmontools
+socat
 sof-firmware
 sox
 spdlog
