@@ -29,6 +29,7 @@ cantarell-fonts
 capitaine-cursors
 cargo-cache
 cava
+chafa
 chaotic-keyring
 chaotic-mirrorlist
 chezmoi
@@ -202,7 +203,6 @@ pkgfile
 playerctl
 plocate
 pngquant
-pokego-git
 pokemon-colorscripts-git
 polkit-gnome
 poppler-glib
