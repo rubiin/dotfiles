@@ -192,6 +192,7 @@ openconnect
 openvpn
 os-prober
 pacman-contrib
+pamac
 pamixer
 pavucontrol
 perl
@@ -214,15 +215,12 @@ procs
 python-cairo
 python-capng
 python-gobject-docs
-python-ijson
 python-libtmux
 python-loguru
 python-packaging
 python-pip
 python-pipx
-python-pyjson5
 python-pyqt5
-python-pytomlpp
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
@@ -260,14 +258,12 @@ spicetify-cli
 spotify
 spotube-bin
 sshs
-starship
 sudo
 swww
 sysfsutils
 systemd-sysvcompat
 tealdeer
 tesseract
-tesseract-data-ind
 texinfo
 thefuck
 time
@@ -278,7 +274,6 @@ ttf-bitstream-vera
 ttf-dejavu-nerd
 ttf-firacode-nerd
 ttf-hack-nerd
-ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
 ttf-opensans
@@ -288,7 +283,6 @@ typos
 udiskie
 unrar
 unzip
-upx
 usb_modeswitch
 usbutils
 uwsm
