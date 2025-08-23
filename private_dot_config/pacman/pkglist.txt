@@ -192,7 +192,6 @@ openconnect
 openvpn
 os-prober
 pacman-contrib
-pamac
 pamixer
 pavucontrol
 perl
@@ -208,7 +207,6 @@ polkit-gnome
 poppler-glib
 postman-bin
 power-profiles-daemon
-powerpill
 ppp
 pptpclient
 procs
@@ -233,7 +231,6 @@ rate-mirrors
 rebuild-detector
 reflector
 reflector-simple
-resources
 ripgrep
 rofi-wayland
 rp-pppoe
@@ -291,6 +288,7 @@ visual-studio-code-insiders
 vivaldi
 vlc-git
 vpnc
+vulkan-radeon
 waydroid
 webrtc-audio-processing
 welcome
