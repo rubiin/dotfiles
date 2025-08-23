@@ -90,7 +90,6 @@ gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
-gnu-netcat
 gobject-introspection
 gparted
 gpm
@@ -189,6 +188,7 @@ ntp
 nwg-displays
 nwg-look
 obsidian
+openbsd-netcat
 openconnect
 openvpn
 os-prober
@@ -204,7 +204,6 @@ pkgfile
 playerctl
 plocate
 pngquant
-pokemon-colorscripts-git
 polkit-gnome
 poppler-glib
 postman-bin
@@ -275,7 +274,6 @@ thefuck
 time
 tk
 tmux
-topgrade
 tree
 ttf-bitstream-vera
 ttf-dejavu-nerd
@@ -298,10 +296,6 @@ uwsm
 vim
 visual-studio-code-insiders
 vivaldi
-vlc
-vlc-plugin-ffmpeg
-vlc-plugin-gstreamer
-vlc-plugins-extra
 vpnc
 waydroid
 webrtc-audio-processing
