@@ -1,5 +1,4 @@
 fabric-cli-git
-git-interactive-rebase-tool
 gitflow-cjs
 glace-git
 gray-git
