@@ -3,7 +3,6 @@ git-interactive-rebase-tool
 gitflow-cjs
 glace-git
 gray-git
-krabby-bin
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin
@@ -15,6 +14,7 @@ python-rlottie-python
 snixembed-git
 stacer-bin
 station-bin
+topgrade-bin
 trash-cli-git
 ttf-cm-unicode
 ttf-joypixels
