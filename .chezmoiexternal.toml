@@ -18,3 +18,4 @@
     type = "git-repo"
     url = "https://github.com/zydezu/mpvconfig.git"
     refreshPeriod = "168h"
+
