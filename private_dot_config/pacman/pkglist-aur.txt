@@ -6,6 +6,7 @@ matugen-bin
 megabasterd-bin
 mongodb-compass-bin
 nvimpager
+pay-respects-bin
 pokego-bin
 ps_mem
 snixembed-git
