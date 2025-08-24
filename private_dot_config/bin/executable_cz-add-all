@@ -33,7 +33,7 @@ file_folder_list=(
    "$config/aria2/aria2.conf"
    "$config/mise"
    "$config/bin"
-   "$config/bat"
+   "$config/bat/config"
    "$config/btop"
    "$config/git"
    "$config/npm"
