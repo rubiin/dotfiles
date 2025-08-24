@@ -287,9 +287,9 @@ uwsm
 vim
 visual-studio-code-insiders
 vivaldi
+vlc-git
 vpnc
 vulkan-radeon
-waydroid
 webrtc-audio-processing
 welcome
 wezterm-git
@@ -324,7 +324,6 @@ xsettingsd
 xz
 yay
 yazi
-youtube-dl-git
 yt-dlp
 zathura
 zathura-pdf-poppler
