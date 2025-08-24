@@ -7,21 +7,21 @@
 legacy_version_file = true # enabled by default (different than asdf)
 
 # configure `mise install` to always keep the downloaded archive
-always_keep_download = false        # deleted after install by default
-always_keep_install = false         # deleted on failure by default
+always_keep_download = false # deleted after install by default
+always_keep_install = false  # deleted on failure by default
 
 # configure how frequently (in minutes) to fetch updated plugin repository changes
 # this is updated whenever a new runtime is installed
 # (note: this isn't currently implemented but there are plans to add it: https://github.com/jdxcode/rtx/issues/128)
 plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
 
-verbose = false     # set to true to see full installation output, see `RTX_VERBOSE`
-asdf_compat = false # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
-jobs = 6           # number of plugins or runtimes to install in parallel. The default is `4`.
-raw = false         # set to true to directly pipe plugins to stdin/stdout/stderr
+verbose = false                                # set to true to see full installation output, see `RTX_VERBOSE`
+asdf_compat = false                            # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
+jobs = 6                                       # number of plugins or runtimes to install in parallel. The default is `4`.
+raw = false                                    # set to true to directly pipe plugins to stdin/stdout/stderr
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
-python.compile = false # always download precompiled binaries
+python.compile = false                         # always download precompiled binaries
 
 
 [settings.node]
@@ -36,7 +36,7 @@ bun = "latest"
 deno = "latest"
 ruby = "latest"
 usage = "latest"
-uv="latest"
+uv = "latest"
 node = "22"
 "cargo:cargo-update" = "latest"
 "cargo:https://github.com/santiagocezar/gengir" = "latest"
@@ -49,5 +49,6 @@ node = "22"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:adaszko/complgen" = "latest"
 "github:loichyan/nerdfix" = "latest"
+"github:sxyazi/yazi" = "latest"
 "github:max-niederman/ttyper" = "latest"
 "github:goreleaser/goreleaser" = "latest"
