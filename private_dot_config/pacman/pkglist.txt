@@ -135,7 +135,6 @@ kimageformats5
 kinit
 kio-fuse
 kitty
-komikku
 ktorrent
 kvantum
 kvantum-qt5
@@ -161,7 +160,6 @@ man-pages
 mdadm
 mesa
 mesa-utils
-meson
 mission-center
 mkcert
 mkinitcpio-nfs-utils
@@ -222,7 +220,6 @@ python-pipx
 python-pyqt5
 qt5-graphicaleffects
 qt5-imageformats
-qt5-virtualkeyboard
 qt5ct
 qt6ct
 r8168-dkms
@@ -259,9 +256,8 @@ swww
 sysfsutils
 systemd-sysvcompat
 tealdeer
-tesseract
+tesseract-data-eng
 texinfo
-thefuck
 time
 tk
 tmux
