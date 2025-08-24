@@ -53,6 +53,7 @@ alias grep='grep --color=auto' #enables case-insensitive text searching with col
 alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
 alias icat="kitten icat"
+alias f="$(pay-respects zsh)"
 
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
