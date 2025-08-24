@@ -115,6 +115,11 @@
 **/autoload/
 .config/tmux/*
 .config/lite-xl/ipc/**
+.var/app/com.lite_xl.LiteXL/config/lite-xl/ws
+.var/app/com.lite_xl.LiteXL/config/lite-xl/lpm
+.var/app/com.lite_xl.LiteXL/config/lite-xl/plugins
+.var/app/com.lite_xl.LiteXL/config/lite-xl/colors
+.var/app/com.lite_xl.LiteXL/config/lite-xl/libraries
 !.config/tmux/tmux.conf.local
 !.config/tmux/config
 **/autoload/**/*
