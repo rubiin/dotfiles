@@ -18,4 +18,11 @@
     type = "git-repo"
     url = "https://github.com/zydezu/mpvconfig.git"
     refreshPeriod = "168h"
+[".config/bat/themes"]
+    type = "archive"
+    url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
+    exact = true
+    stripComponents = 2
+    refreshPeriod = "168h"
+    include = ["*/themes/**"]
 
