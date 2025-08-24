@@ -85,6 +85,7 @@ freetype2
 gestures
 git
 git-delta
+git-interactive-rebase-tool-git
 github-cli
 gnome-bluetooth
 gnome-bluetooth-3.0
@@ -286,7 +287,6 @@ uwsm
 vim
 visual-studio-code-insiders
 vivaldi
-vlc-git
 vpnc
 vulkan-radeon
 waydroid
