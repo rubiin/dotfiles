@@ -222,8 +222,6 @@ python-pipx
 python-pyqt5
 qt5-graphicaleffects
 qt5-imageformats
-qt5-quickcontrols
-qt5-quickcontrols2
 qt5-virtualkeyboard
 qt5ct
 qt6ct
@@ -272,6 +270,7 @@ ttf-bitstream-vera
 ttf-dejavu-nerd
 ttf-firacode-nerd
 ttf-hack-nerd
+ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
 ttf-opensans
@@ -323,7 +322,7 @@ xorg-xrandr
 xsettingsd
 xz
 yay
-yazi
+yazi-git
 yt-dlp
 zathura
 zathura-pdf-poppler
