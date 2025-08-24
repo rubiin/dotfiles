@@ -26,14 +26,15 @@ export SUDO_EDITOR="$EDITOR"
 export VISUAL="code-insiders"
 export READER="zathura"
 export CODEEDITOR="code-insiders"
-export PAGER=nvimpager
-export MANPAGER=nvimpager
+export PAGER="nvimpager"
+export MANPAGER="nvimpager"
 export TERMIAL="wezterm"
 export WM="hyprland"
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export VIDEO="mpv"
-export IMAGE="eog"
+export IMAGE="imv"
 export JUST_COMMAND_COLOR="blue"
+
 
 #█▓▒░  cleaning up home folder
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
@@ -93,6 +94,7 @@ export GOPATH="$XDG_DATA_HOME/go"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 export GNUPGHOME="$XDG_DATA_HOME"/gpg
+export LITE_USERDIR="$XDG_CONFIG_HOME/lite-xl"
 
 ##█▓▒░  custom executable path
 export PATH="$XDG_CONFIG_HOME/bin/git-extras:$XDG_CONFIG_HOME/bin:$PATH"
