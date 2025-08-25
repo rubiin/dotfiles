@@ -37,7 +37,6 @@ cinnamon-desktop
 clapper
 cliphist
 cryptsetup
-curtail
 d-spy
 dart-sass
 device-mapper
