@@ -61,7 +61,6 @@ EOF
 
 sudo systemctl daemon-reload
 
-
 ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pacman.txt
 
 sudo fc-cache -vf
@@ -69,11 +68,11 @@ sudo fc-cache -vf
 curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | shmkdir "$XDG_CONFIG_HOME/wakatime"
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
+echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
+
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
 sheldon lock --reinstall
-
-echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
 
 echo "installing flatpaks"
 flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler io.github.flattool.Warehouse io.gitlab.adhami3310.Impression
@@ -90,6 +89,7 @@ wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritt
 echo "Setting wezterm"
 tempfile=$(mktemp) && curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo && tic -x -o "$TERMINFO" "$tempfile" && rm "$tempfile"
 
+echo "Enabling bluetooth service"
 sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
@@ -98,7 +98,7 @@ echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
-ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && /bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
+ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
@@ -108,15 +108,14 @@ curl https://mise.run | sh
 mise install
 
 ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
+
 echo "creating XDG directories"
 xdg-user-dirs-update
 
-echo -e "Installing Rust...\n"
-bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" -- -y
+ask_yes_no_default "Do you to install rust?" 0 && bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" -- -y
 
 echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
-
 
 echo "Completed setup, run python"
