@@ -76,6 +76,7 @@ f2fs-tools
 fakeroot
 fastfetch
 fd
+ffmpegthumbnailer
 ffmpegthumbs
 firefox-developer-edition
 firewalld
@@ -145,6 +146,7 @@ libgsf
 libgtop
 libinput-gestures
 libopenraw
+libqalculate
 linux
 linux-firmware
 linux-firmware-marvell
@@ -233,7 +235,6 @@ rofi-wayland
 rp-pppoe
 rsync
 rtkit
-rustup
 s-nail
 safeeyes
 satty
