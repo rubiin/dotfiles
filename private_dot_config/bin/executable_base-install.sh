@@ -111,6 +111,9 @@ ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi in
 echo "creating XDG directories"
 xdg-user-dirs-update
 
+echo -e "Installing Rust...\n"
+bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" -- -y
+
 echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
