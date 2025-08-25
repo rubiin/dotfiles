@@ -48,6 +48,7 @@ dmidecode
 dmraid
 dnsmasq
 docker
+docker-buildx
 docker-compose
 dolphin
 dosfstools
