@@ -10,6 +10,7 @@ nvimpager
 pay-respects-bin
 pokego-bin
 ps_mem
+redli-bin
 snixembed-git
 stacer-bin
 station-bin
