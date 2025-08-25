@@ -108,6 +108,9 @@ export GREP_OPTIONS="--color=auto"
 ##█▓▒░  zsh specific
 export ZSH_EVALCACHE_DIR="$XDG_CACHE_HOME/.zsh-evalcache"
 
+##█▓▒░  zsh-you-should-use
+export YSU_MESSAGE_POSITION="after"
+
 ##█▓▒░  History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$ZDOTDIR/.zsh_history"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
