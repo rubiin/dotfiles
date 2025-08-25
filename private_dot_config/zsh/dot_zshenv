@@ -6,3 +6,5 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 
 fi
 
+. "/home/rubin/.local/share/mise/installs/rust/1.89.0/env"
+. "/home/rubin/.local/share/cargo/env"
