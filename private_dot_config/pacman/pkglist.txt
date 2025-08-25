@@ -37,6 +37,7 @@ cinnamon-desktop
 clapper
 cliphist
 cryptsetup
+curtail
 d-spy
 dart-sass
 device-mapper
@@ -132,7 +133,6 @@ kcalc
 kde-cli-tools
 kernel-install-for-dracut
 kimageformats5
-kinit
 kio-fuse
 kitty
 ktorrent
@@ -220,6 +220,8 @@ python-pipx
 python-pyqt5
 qt5-graphicaleffects
 qt5-imageformats
+qt5-quickcontrols
+qt5-quickcontrols2
 qt5ct
 qt6ct
 r8168-dkms

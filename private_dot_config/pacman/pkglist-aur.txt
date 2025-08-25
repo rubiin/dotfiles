@@ -2,6 +2,7 @@ fabric-cli-git
 gitflow-cjs
 glace-git
 gray-git
+kinit
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin
