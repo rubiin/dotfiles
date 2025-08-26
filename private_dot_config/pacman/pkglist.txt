@@ -254,6 +254,7 @@ spicetify-cli
 spotify
 spotube-bin
 sshs
+st
 sudo
 swww
 sysfsutils
@@ -285,7 +286,7 @@ uwsm
 vim
 visual-studio-code-insiders
 vivaldi
-vlc-git
+vlc
 vpnc
 vulkan-radeon
 webrtc-audio-processing
