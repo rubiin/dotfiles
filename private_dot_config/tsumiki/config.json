@@ -249,7 +249,7 @@
 			"clock_format": "24h",
 			"auto_hide": false,
 			"auto_hide_timeout": 2000,
-			"hover_reveal": true,
+			"hover_reveal": false,
 			"reveal_duration": 500,
 			"notification": {
 				"enabled": true,
