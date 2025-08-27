@@ -86,10 +86,13 @@ alias sendnotifications='for i in {1..40}; do notify-send "Notification $i" "Thi
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
 # use nvim, but don't make me think about it
-if [[ -n "$(command -v nvim)" ]]; then
-	alias vim="nvim"
-	# shortcut to open vim and immediately update vim-plug and all installed plugins
-	alias vimu="nvim --headless \"+Lazy! sync\" +qa"
+
+if [[ -n "$(command -v nvim)" && -z "$(command -v vim)" ]]; then
+    # Alias vim to nvim for convenience
+    alias vim="nvim"
+    
+    # Shortcut to open nvim headless and sync all plugins using Lazy.nvim
+    alias vimu='nvim --headless "+Lazy! sync" +qa'
 fi
 
 # IP addresses
