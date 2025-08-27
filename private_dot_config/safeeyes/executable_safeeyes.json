@@ -11,7 +11,7 @@
         }
     ],
     "meta": {
-        "config_version": "6.0.3"
+        "config_version": "6.0.4"
     },
     "persist_state": false,
     "plugins": [
@@ -36,9 +36,10 @@
             "id": "audiblealert",
             "settings": {
                 "post_break_alert": true,
-                "pre_break_alert": true
+                "pre_break_alert": true,
+                "volume": 100
             },
-            "version": "0.0.3"
+            "version": "0.0.4"
         },
         {
             "enabled": true,
@@ -109,9 +110,9 @@
         }
     ],
     "postpone_duration": 5,
+    "postpone_unit": "minutes",
     "pre_break_warning_time": 10,
     "random_order": true,
-    "rpc_port": 7200,
     "short_break_duration": 20,
     "short_break_interval": 20,
     "short_breaks": [
@@ -140,6 +141,5 @@
     "shortcut_disable_time": 2,
     "shortcut_postpone": 65,
     "shortcut_skip": 9,
-    "strict_break": false,
-    "use_rpc_server": true
+    "strict_break": false
 }
