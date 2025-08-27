@@ -115,11 +115,11 @@
 **/autoload/
 .config/tmux/*
 .config/lite-xl/ipc/**
-.var/app/com.lite_xl.LiteXL/config/lite-xl/ws
-.var/app/com.lite_xl.LiteXL/config/lite-xl/lpm
-.var/app/com.lite_xl.LiteXL/config/lite-xl/plugins
-.var/app/com.lite_xl.LiteXL/config/lite-xl/colors
-.var/app/com.lite_xl.LiteXL/config/lite-xl/libraries
+.var/app/com.lite_xl.LiteXL/config/lite-xl/
+.var/app/com.lite_xl.LiteXL/config/lite-xl/**
+.var/app/com.lite_xl.LiteXL/config/lite-xl/**/*
+!.var/app/com.lite_xl.LiteXL/config/lite-xl/user_settings.lua
+!.var/app/com.lite_xl.LiteXL/config/lite-xl/init.lua
 !.config/tmux/tmux.conf.local
 !.config/tmux/config
 **/autoload/**/*
