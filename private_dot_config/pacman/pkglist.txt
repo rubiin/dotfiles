@@ -84,6 +84,7 @@ firefox-developer-edition
 firewalld
 flatpak
 font-manager
+foot
 freetype2
 gestures
 git
@@ -276,6 +277,7 @@ ttf-liberation
 ttf-ms-fonts
 ttf-opensans
 ttf-twemoji-git
+ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 typos
 udiskie
