@@ -115,11 +115,6 @@
 **/autoload/
 .config/tmux/*
 .config/lite-xl/ipc/**
-.var/app/com.lite_xl.LiteXL/config/lite-xl/
-.var/app/com.lite_xl.LiteXL/config/lite-xl/**
-.var/app/com.lite_xl.LiteXL/config/lite-xl/**/*
-!.var/app/com.lite_xl.LiteXL/config/lite-xl/user_settings.lua
-!.var/app/com.lite_xl.LiteXL/config/lite-xl/init.lua
 !.config/tmux/tmux.conf.local
 !.config/tmux/config
 **/autoload/**/*
