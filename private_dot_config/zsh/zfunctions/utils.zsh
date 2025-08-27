@@ -1,12 +1,12 @@
 # organize handy reusable functions to keep your .zshrc clean and modular.
 #─────────────────────────────────────────────────────────────────────────
 prepend_path() {
-	[[ ! -d "$1" ]] && return
+  [[ ! -d "$1" ]] && return
 
-	path=(
-		$1
-		$path
-	)
+  path=(
+      $1
+      $path
+  )
 }
 
 # unmanages the file from chezmoi also deletes it
@@ -16,6 +16,15 @@ czx() {
 	rm -rf "$1"
 }
 
+
+fastfetch() {
+    if [ "$TERM" = "foot" ]; then
+        command fastfetch --logo-type sixel
+    else
+        command fastfetch --logo-type kitty
+    fi
+}
+
 # Show the path of a command, colorized and showing all matches
 function which {
 	builtin which -a "$@" | bat --language=sh --wrap=character
@@ -23,19 +32,19 @@ function which {
 
 # Show the path of a command, colorized and showing all matches
 timezsh() {
-	shell=${1-$SHELL}
-	for i in $(seq 1 10); do time $shell -i -c exit; done
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do time $shell -i -c exit; done
 }
 
-show_memory() {
-	ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
+show_memory(){
+  ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
 
 }
 
 watch_mem_usage() {
-	local process_name="$1"
-	local interval="${2:-4}" # Default to 4 seconds if not provided
-	watch -n "$interval" "ps aux --sort=-%mem | grep -w \"$process_name\" | grep -v grep | awk 'NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'"
+    local process_name="$1"
+    local interval="${2:-4}" # Default to 4 seconds if not provided
+    watch -n "$interval" "ps aux --sort=-%mem | grep -w \"$process_name\" | grep -v grep | awk 'NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'"
 }
 
 clearcache() {
@@ -81,29 +90,11 @@ zsh-fix-history() {
 	fc -R .zsh_history
 }
 
+
 take() {
-	mkdir -p "$1" && cd "$1"
-}
+		mkdir -p "$1" && cd "$1";
+	 }
 
-aur-setup() {
-	if [[ -z "$1" ]]; then
-		echo "Usage: aur-setup <pkgbase>"
-		return 1
-	fi
-
-	local pkgbase="$1"
-
-	# Clone the AUR repo (if it doesn't exist, it will be empty)
-	git -c init.defaultBranch=master clone "ssh://aur@aur.archlinux.org/${pkgbase}.git" || return 1
-
-	cd "$pkgbase" || return 1
-
-	echo "Cloned AUR repo for '$pkgbase'."
-	echo "Next steps:"
-	echo "1. Add PKGBUILD and .SRCINFO files."
-	echo "2. git add . && git commit -m 'Initial commit'"
-	echo "3. git push origin master"
-}
 
 # Calculate RAM usage of a process by its name.
 function calcram() {
