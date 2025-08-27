@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="1000"
+   width="1000"
+   version="1.1"
+   id="svg21"
+   sodipodi:docname="vala.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview21"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.28173828"
+     inkscape:cx="299.92374"
+     inkscape:cy="385.10918"
+     inkscape:window-width="1459"
+     inkscape:window-height="1008"
+     inkscape:window-x="546"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21" />
+  <defs
+     id="defs15">
+    <radialGradient
+       id="a"
+       gradientUnits="userSpaceOnUse"
+       cy="43.5"
+       cx="4.993"
+       gradientTransform="matrix(2.0038,0,0,1.4,27.988,-17.4)"
+       r="2.5">
+      <stop
+         stop-color="#181818"
+         offset="0"
+         id="stop1" />
+      <stop
+         stop-color="#181818"
+         stop-opacity="0"
+         offset="1"
+         id="stop2" />
+    </radialGradient>
+    <radialGradient
+       id="b"
+       gradientUnits="userSpaceOnUse"
+       cy="43.5"
+       cx="4.993"
+       gradientTransform="matrix(2.0038,0,0,1.4,-20.012,-104.4)"
+       r="2.5">
+      <stop
+         stop-color="#181818"
+         offset="0"
+         id="stop3" />
+      <stop
+         stop-color="#181818"
+         stop-opacity="0"
+         offset="1"
+         id="stop4" />
+    </radialGradient>
+    <linearGradient
+       id="c"
+       y2="39.999001"
+       gradientUnits="userSpaceOnUse"
+       x2="25.058001"
+       y1="47.028"
+       x1="25.058001">
+      <stop
+         stop-color="#181818"
+         stop-opacity="0"
+         offset="0"
+         id="stop5" />
+      <stop
+         stop-color="#181818"
+         offset=".5"
+         id="stop6" />
+      <stop
+         stop-color="#181818"
+         stop-opacity="0"
+         offset="1"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       id="e"
+       y2="43"
+       gradientUnits="userSpaceOnUse"
+       x2="24"
+       gradientTransform="matrix(1.4324,0,0,1.4363,-2.378,-2.47)"
+       y1="5"
+       x1="24">
+      <stop
+         stop-color="#fff"
+         offset="0"
+         id="stop8" />
+      <stop
+         stop-color="#fff"
+         stop-opacity=".235"
+         offset=".063"
+         id="stop9" />
+      <stop
+         stop-color="#fff"
+         stop-opacity=".157"
+         offset=".951"
+         id="stop10" />
+      <stop
+         stop-color="#fff"
+         stop-opacity=".392"
+         offset="1"
+         id="stop11" />
+    </linearGradient>
+    <radialGradient
+       id="d"
+       fx="6.1999998"
+       gradientUnits="userSpaceOnUse"
+       cy="9.9569998"
+       cx="6.73"
+       gradientTransform="matrix(0,13.394,-16.444,0,196.9,-114.89)"
+       r="12.672">
+      <stop
+         stop-color="#bd94e7"
+         offset="0"
+         id="stop12" />
+      <stop
+         stop-color="#7b6ca3"
+         offset=".262"
+         id="stop13" />
+      <stop
+         stop-color="#574a76"
+         offset=".705"
+         id="stop14" />
+      <stop
+         stop-color="#3f3654"
+         offset="1"
+         id="stop15" />
+    </radialGradient>
+  </defs>
+  <path
+     d="M 398.27682,966.52967 378.24231,116.65472 q -87.49315,32.79623 -136.67378,102.64258 -48.6317,69.87378 -48.6317,173.75135 0,23.68463 2.44255,38.88891 3.0189,14.57304 6.06525,23.68463 3.04635,8.5078 5.48888,13.36549 3.01892,4.85768 3.01892,8.5078 -32.19244,0 -57.08464,-6.06523 -24.91963,-6.69647 -41.93525,-20.66574 -16.411829,-13.94182 -25.523423,-37.05013 -8.507802,-23.05341 -8.507802,-57.08462 0,-41.30404 17.591952,-81.4005 18.223173,-40.06903 49.208043,-75.93904 31.58866,-35.81511 73.52392,-66.19622 42.53903,-30.3811 90.51207,-52.254395 48.57684,-22.477074 100.83123,-34.607559 52.85819,-12.789152 105.11259,-12.789152 13.96926,0 25.52341,0.603773 12.13049,0.603774 24.26097,1.81134 L 574.41586,801.28612 836.23675,39.480689 h 86.86194 L 577.4622,966.55711 H 398.24938 Z"
+     fill="#fff"
+     id="path21"
+     style="fill:#000000;fill-opacity:1;stroke-width:27.4445" />
+</svg>
