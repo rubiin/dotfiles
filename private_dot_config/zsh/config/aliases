@@ -14,7 +14,6 @@ alias du="du -h" # calculate disk usage for a folder
 alias dc="docker-com"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
-alias fastfetch='fastfetch --logo-type kitty'
 alias g="git"
 alias ms="mise"
 alias lx="flatpak run com.lite_xl.LiteXL"
