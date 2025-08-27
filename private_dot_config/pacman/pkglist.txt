@@ -18,6 +18,7 @@ bash-completion
 bat
 bauh
 bc
+bdf-unifont
 bind
 blanket
 bluez
@@ -287,6 +288,8 @@ vim
 visual-studio-code-insiders
 vivaldi
 vlc
+vlc-plugin-ffmpeg
+vlc-plugins-extra
 vpnc
 vulkan-radeon
 webrtc-audio-processing
