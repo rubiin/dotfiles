@@ -37,6 +37,7 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 	echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf &&
 	echo -e '[visual-studio-code-insiders]\nServer = https://nihaals.github.io/visual-studio-code-insiders-arch/\nSigLevel = PackageOptional' | sudo tee -a /etc/pacman.conf
 
+
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
 ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
