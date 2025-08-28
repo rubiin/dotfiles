@@ -3,6 +3,7 @@ gitflow-cjs
 glace-git
 gray-git
 kinit
+krabby-bin
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin

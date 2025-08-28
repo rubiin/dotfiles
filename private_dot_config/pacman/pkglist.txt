@@ -207,6 +207,7 @@ pkgfile
 playerctl
 plocate
 pngquant
+pokemon-colorscripts-git
 polkit-gnome
 poppler-glib
 postman-bin
@@ -287,6 +288,7 @@ unzip
 usb_modeswitch
 usbutils
 uwsm
+vhs
 vim
 visual-studio-code-insiders
 vivaldi
