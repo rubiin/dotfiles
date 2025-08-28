@@ -87,6 +87,7 @@ font-manager
 foot
 freetype2
 gestures
+ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
