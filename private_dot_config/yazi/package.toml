@@ -38,6 +38,11 @@ use = "AnirudhG07/plugins-yazi:copy-file-contents"
 rev = "71545f4"
 hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+rev = "d7588f6"
+hash = "a8050052e59f3952abe0b3e27a5843de"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "9cd2ac4"
