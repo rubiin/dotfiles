@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+	<alias>
+		<family>serif</family>
+		<prefer>
+      <family>Noto Serif</family>
+      <family>DejaVu Serif</family>
+      <family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+			<family>FontAwesome</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+      <family>MonoLisa Nerd Font</family>
+      <family>DejaVu Sans Nerd Font</family>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+			<family>FontAwesome</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans</family>
+		<prefer>
+			<family>DejaVuSansM Nerd Font</family>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+			<family>FontAwesome</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>monospace</family>
+		<prefer>
+			<family>DejaVu Sans Mono Nerd Font</family>
+			<family>Noto Sans Mono</family>
+		</prefer>
+	</alias>
+</fontconfig>
