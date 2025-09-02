@@ -34,7 +34,7 @@ file_folder_list=(
    "$config/mise"
    "$config/bin"
    "$config/bat/config"
-   "$config/btop"
+   "$config/btop/btop.conf"
    "$config/git/config"
    "$config/git/template"
    "$config/git/.gitignore_global"
