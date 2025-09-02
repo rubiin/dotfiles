@@ -15,7 +15,7 @@ file_folder_list=(
    "$config/yay"
    "$config/topgrade.toml"
    "$config/cspell.json"
-   "$config/atuin"
+   "$config/atuin/config.toml"
    "$config/.ripgreprc"
    "$config/ktorrentrc"
    "$config/wgetrc"
