@@ -23,6 +23,6 @@
     url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
     exact = true
     stripComponents = 2
-    refreshPeriod = "168h"
+    refreshPeriod = "1s"
     include = ["*/themes/**"]
 
