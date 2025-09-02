@@ -8,6 +8,8 @@
 ## windows: %USERPROFILE%/.local/share/atuin/key
 # key_path = "~/.key"
 
+[theme]
+name = "catppuccin-mocha-blue"
 ## where to store your auth session token, default is your system data directory
 ## linux/mac: ~/.local/share/atuin/session
 ## windows: %USERPROFILE%/.local/share/atuin/session
