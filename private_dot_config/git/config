@@ -63,6 +63,7 @@
 	repo = /home/rubin/ultimate-nest
 	repo = /home/rubin/.config/nvim
 	repo = /home/rubin/.local/share/chezmoi
+	repo = /home/rubin/.config/tsumiki
 
 [interactive]
 	diffFilter = delta --color-only
@@ -103,7 +104,7 @@
 	newHighlight = green bold 22
 
 [include]
-	path = ~/delta-catppuccin.gitconfig
+	path = ./delta-catppuccin.gitconfig
 
 [delta]
 	features = catppuccin-mocha
