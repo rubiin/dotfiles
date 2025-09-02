@@ -39,13 +39,6 @@
     stripComponents = 2
     refreshPeriod = "168h"
     include = ["*/themes/**"]
-[".config/atuin/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/atuin/archive/master.tar.gz"
-    exact = true
-    stripComponents = 2
-    refreshPeriod = "168h"
-    include = ["*/themes/**"]
 [".config/git/catppuccin.gitconfig"]
     type = "file"
     url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
