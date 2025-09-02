@@ -23,9 +23,6 @@
     url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
     exact = true
     stripComponents = 2
-    refreshPeriod = "1s"
+    refreshPeriod = "168h"
     include = ["*/themes/**"]
-[".config/git"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
-    refreshPeriod = "1s"
+
