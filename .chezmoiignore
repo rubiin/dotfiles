@@ -113,10 +113,6 @@
 .oh-my-zsh
 .oh-my-zsh/**
 **/autoload/
-.config/tmux/*
-.config/lite-xl/ipc/**
-!.config/tmux/tmux.conf.local
-!.config/tmux/config
 **/autoload/**/*
 **/temp/
 **/temp/**/*
