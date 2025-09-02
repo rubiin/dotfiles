@@ -53,7 +53,7 @@ file_folder_list=(
    "$config/waycorner"
    "$config/starship"
    "$config/libinput-gestures.conf"
-   "$config/lazygit/config.yml"
+   "$config/lazygit"
    "$config/dolphinrc"
    "$config/imv"
    "$config/pacman"
