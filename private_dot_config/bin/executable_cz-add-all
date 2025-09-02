@@ -37,6 +37,7 @@ file_folder_list=(
    "$config/btop"
    "$config/git/config"
    "$config/git/template"
+   "$config/git/.gitignore_global"
    "$config/npm"
    "$config/yt-dlp"
    "$config/kitty"
