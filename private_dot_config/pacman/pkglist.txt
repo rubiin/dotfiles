@@ -199,6 +199,7 @@ pacman-contrib
 pamixer
 pavucontrol
 perl
+persepolis
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
