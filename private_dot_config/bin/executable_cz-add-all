@@ -59,7 +59,7 @@ file_folder_list=(
    "$config/pacman"
    "$config/zen"
    "$config/fastfetch"
-   "$config/zathura"
+   "$config/zathura/zathurarc"
    "$config/safeeyes/safeeyes.json"
    "$config/lite-xl"
    "$config/tmux"
