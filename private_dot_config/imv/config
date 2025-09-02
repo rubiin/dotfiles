@@ -1,7 +1,10 @@
 # Default config for imv
 
 [options]
-
+# catpuccin mocha colors
+background=1e1e2e
+overlay_text_color=cdd6f4
+overlay_background_color=11111b
 # Suppress built-in key bindings, and specify them explicitly in this
 # config file.
 suppress_default_binds = true
