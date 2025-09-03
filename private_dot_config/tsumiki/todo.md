@@ -16,3 +16,5 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 
 
 https://github.com/caelestia-dots/shell/issues/555
+
+https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
