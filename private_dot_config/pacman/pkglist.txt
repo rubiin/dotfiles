@@ -91,6 +91,7 @@ ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
+git-lfs
 github-cli
 gnome-bluetooth
 gnome-bluetooth-3.0
