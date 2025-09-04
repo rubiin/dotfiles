@@ -10,7 +10,7 @@ local style = require "core.style"
 ------------------------------ Themes ----------------------------------------
 
 -- light theme:
--- core.reload_module("colors.summer")
+core.reload_module("colors.vscode-dark")
 
 --------------------------- Key bindings -------------------------------------
 
@@ -61,14 +61,14 @@ local style = require "core.style"
 ---------------------------- Miscellaneous -------------------------------------
 
 -- modify list of files to ignore when indexing the project:
--- config.ignore_files = {
---   -- folders
---   "^%.svn/",        "^%.git/",   "^%.hg/",        "^CVS/", "^%.Trash/", "^%.Trash%-.*/",
---   "^node_modules/", "^%.cache/", "^__pycache__/",
---   -- files
---   "%.pyc$",         "%.pyo$",       "%.exe$",        "%.dll$",   "%.obj$", "%.o$",
---   "%.a$",           "%.lib$",       "%.so$",         "%.dylib$", "%.ncb$", "%.sdf$",
---   "%.suo$",         "%.pdb$",       "%.idb$",        "%.class$", "%.psd$", "%.db$",
---   "^desktop%.ini$", "^%.DS_Store$", "^%.directory$",
--- }
+config.ignore_files = {
+  -- folders
+  "^%.svn/",        "^%.git/",   "^%.hg/",        "^CVS/", "^%.Trash/", "^%.Trash%-.*/",
+  "^node_modules/", "^%.cache/", "^__pycache__/",
+  -- files
+  "%.pyc$",         "%.pyo$",       "%.exe$",        "%.dll$",   "%.obj$", "%.o$",
+  "%.a$",           "%.lib$",       "%.so$",         "%.dylib$", "%.ncb$", "%.sdf$",
+  "%.suo$",         "%.pdb$",       "%.idb$",        "%.class$", "%.psd$", "%.db$",
+  "^desktop%.ini$", "^%.DS_Store$", "^%.directory$",
+}
 
