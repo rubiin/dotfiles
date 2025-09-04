@@ -1,5 +1,50 @@
 return {
   ["config"] = {
+    ["code_font"] = {
+      ["fonts"] = {
+        [1] = {
+          ["name"] = "MonoLisa Nerd Font Regular",
+          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf"
+        },
+        [2] = {
+          ["name"] = "JetBrains Mono Regular",
+          ["path"] = "/usr/share/lite-xl/fonts/JetBrainsMono-Regular.ttf"
+        }
+      },
+      ["options"] = {
+        ["antialiasing"] = "subpixel",
+        ["bold"] = false,
+        ["hinting"] = "slight",
+        ["italic"] = false,
+        ["size"] = 15,
+        ["smoothing"] = false,
+        ["strikethrough"] = false,
+        ["underline"] = false
+      }
+    },
+    ["disable_blink"] = false,
+    ["font"] = {
+      ["fonts"] = {
+        [1] = {
+          ["name"] = "MonoLisa Nerd Font Regular",
+          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf"
+        },
+        [2] = {
+          ["name"] = "Fira Sans Regular",
+          ["path"] = "/usr/share/lite-xl/fonts/FiraSans-Regular.ttf"
+        }
+      },
+      ["options"] = {
+        ["antialiasing"] = "subpixel",
+        ["bold"] = false,
+        ["hinting"] = "slight",
+        ["italic"] = false,
+        ["size"] = 14,
+        ["smoothing"] = false,
+        ["strikethrough"] = false,
+        ["underline"] = false
+      }
+    },
     ["plugins"] = {
       ["code_plus"] = {
         ["fixme"] = {
@@ -55,6 +100,9 @@ return {
         ["todo_mode"] = "tag",
         ["todo_scope"] = "focused"
       }
+    },
+    ["statusbar"] = {
+      ["enabled"] = true
     }
   }
 }
