@@ -1,1 +1,0 @@
-return { path = "/home/rubin/Downloads", documents = {["views"]={[1]={["scroll"]={["y"]=0,["x"]=0,["to"]={["y"]=0,["x"]=0}},["module"]="core.emptyview",["active"]=true,["type"]="view"}},["active_view"]=1,["type"]="leaf"}, directories = {} }
