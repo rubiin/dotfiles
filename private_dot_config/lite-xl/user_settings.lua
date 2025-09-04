@@ -1,43 +1,60 @@
 return {
   ["config"] = {
-    ["always_show_tabs"] = true,
-    ["borderless"] = false,
-    ["code_font"] = {
-      ["fonts"] = {
-        [1] = {
-          ["name"] = "MonoLisa Nerd Font Regular",
-          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf"
+    ["plugins"] = {
+      ["code_plus"] = {
+        ["fixme"] = {
+          [1] = 239,
+          [2] = 99,
+          [3] = 133,
+          [4] = 255
+        },
+        ["todo"] = {
+          [1] = 85,
+          [2] = 146,
+          [3] = 207,
+          [4] = 255
         }
       },
-      ["options"] = {
-        ["antialiasing"] = "subpixel",
-        ["bold"] = false,
-        ["hinting"] = "slight",
-        ["italic"] = false,
-        ["size"] = 14,
-        ["smoothing"] = false,
-        ["strikethrough"] = false,
-        ["underline"] = false
-      }
-    },
-    ["font"] = {
-      ["fonts"] = {
-        [1] = {
-          ["name"] = "MonoLisa Nerd Font Regular",
-          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf"
+      ["gitblame"] = {
+        ["text_color"] = {
+          [1] = 183,
+          [2] = 183,
+          [3] = 183,
+          [4] = 255
         }
       },
-      ["options"] = {
-        ["antialiasing"] = "subpixel",
-        ["bold"] = false,
-        ["hinting"] = "slight",
-        ["italic"] = false,
-        ["size"] = 14,
-        ["smoothing"] = false,
-        ["strikethrough"] = false,
-        ["underline"] = false
+      ["minimap"] = {
+        ["caret_color"] = {
+          [1] = 147,
+          [2] = 221,
+          [3] = 250,
+          [4] = 255
+        },
+        ["selection_color"] = {
+          [1] = 82,
+          [2] = 82,
+          [3] = 87,
+          [4] = 255
+        }
+      },
+      ["terminal"] = {
+        ["background"] = {
+          [1] = 46,
+          [2] = 46,
+          [3] = 50,
+          [4] = 255
+        },
+        ["text"] = {
+          [1] = 225,
+          [2] = 225,
+          [3] = 230,
+          [4] = 255
+        }
+      },
+      ["todotreeview"] = {
+        ["todo_mode"] = "tag",
+        ["todo_scope"] = "focused"
       }
-    },
-    ["force_scrollbar_status"] = false
+    }
   }
 }
