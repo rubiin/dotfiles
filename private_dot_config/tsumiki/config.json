@@ -384,8 +384,7 @@
 		],
 		"middle_section": [
 			"date_time",
-			"weather",
-			"overview"
+			"weather"
 		],
 		"right_section": [
 			"@collapsible:0",
