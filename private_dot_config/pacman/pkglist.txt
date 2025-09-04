@@ -156,6 +156,7 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+lite-xl
 logrotate
 lsb-release
 lsscsi
