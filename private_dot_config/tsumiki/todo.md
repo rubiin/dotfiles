@@ -3,6 +3,9 @@
 todo: fix notification overflow issue
 
 
+todo: fix the widget style on widget settings
+
+
 todo: vertical dock support
 
 
@@ -18,3 +21,6 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 https://github.com/caelestia-dots/shell/issues/555
 
 https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
+https://github.com/ezerinz/epik-shell
+
+https://github.com/S4NKALP/Modus/blob/new/modules/dock/components/applications.py
