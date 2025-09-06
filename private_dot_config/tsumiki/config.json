@@ -378,7 +378,6 @@
 	},
 	"layout": {
 		"left_section": [
-			"app_launcher_button",
 			"workspaces",
 			"window_title"
 		],
