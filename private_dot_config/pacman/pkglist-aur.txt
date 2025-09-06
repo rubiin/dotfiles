@@ -3,7 +3,6 @@ gitflow-cjs
 glace-git
 gray-git
 kinit
-krabby-bin
 matugen-bin
 megabasterd-bin
 mongodb-compass-bin
@@ -11,7 +10,6 @@ nvimpager
 pay-respects-bin
 pokego-bin
 ps_mem
-redli-bin
 snixembed-git
 stacer-bin
 station-bin
