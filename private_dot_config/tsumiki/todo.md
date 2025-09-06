@@ -7,6 +7,8 @@ todo: fix the widget style on widget settings
 
 feat: drag on dock
 
+feat: group multiple instances of same app on dock
+
 todo: vertical dock support
 
 
@@ -17,6 +19,8 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/833
 https://github.com/Jas-SinghFSU/HyprPanel/issues/805
 https://github.com/Jas-SinghFSU/HyprPanel/issues/614
 https://github.com/Jas-SinghFSU/HyprPanel/issues/515
+
+
 
 
 https://github.com/caelestia-dots/shell/issues/555
