@@ -380,8 +380,7 @@
 		"left_section": [
 			"app_launcher_button",
 			"workspaces",
-			"window_title",
-			"window_count"
+			"window_title"
 		],
 		"middle_section": [
 			"date_time",
