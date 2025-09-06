@@ -24,3 +24,6 @@ https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
 https://github.com/ezerinz/epik-shell
 
 https://github.com/S4NKALP/Modus/blob/new/modules/dock/components/applications.py
+
+
+drag on dock, indicator for open apps
