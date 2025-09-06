@@ -18,7 +18,6 @@ bash-completion
 bat
 bauh
 bc
-bdf-unifont
 bind
 blanket
 bluez
@@ -87,7 +86,6 @@ font-manager
 foot
 freetype2
 gestures
-ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
@@ -125,7 +123,6 @@ hyprutils
 hyprwayland-scanner
 ibus
 imv
-inetutils
 inxi
 iptables-nft
 iwd
@@ -167,6 +164,7 @@ man-pages
 mdadm
 mesa
 mesa-utils
+meson
 mission-center
 mkcert
 mkinitcpio-nfs-utils
@@ -191,6 +189,7 @@ nss-mdns
 ntfs-3g
 ntp
 nwg-displays
+nwg-dock-hyprland
 nwg-look
 obsidian
 openbsd-netcat
@@ -206,10 +205,10 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 pkgfile
+plank
 playerctl
 plocate
 pngquant
-pokemon-colorscripts-git
 polkit-gnome
 poppler-glib
 postman-bin
@@ -238,7 +237,7 @@ rebuild-detector
 reflector
 reflector-simple
 ripgrep
-rofi-wayland
+rofi
 rp-pppoe
 rsync
 rtkit
@@ -260,7 +259,6 @@ spicetify-cli
 spotify
 spotube-bin
 sshs
-st
 sudo
 swww
 sysfsutils
