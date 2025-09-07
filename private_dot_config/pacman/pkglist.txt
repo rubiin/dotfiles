@@ -188,6 +188,7 @@ nss-mdns
 ntfs-3g
 ntp
 nwg-displays
+nwg-dock-hyprland
 nwg-look
 obsidian
 openbsd-netcat
