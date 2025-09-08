@@ -20,6 +20,8 @@ bauh
 bc
 bind
 blanket
+blueberry
+blueman
 bluez
 bluez-utils
 brightnessctl
