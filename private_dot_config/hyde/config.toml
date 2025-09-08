@@ -31,3 +31,4 @@ quickapps = "wezterm"    # Quick apps.
 
 [hyprland.start]
 bar = ''
+apptray_bluetooth = ''
