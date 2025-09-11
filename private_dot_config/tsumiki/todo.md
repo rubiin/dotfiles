@@ -39,3 +39,8 @@ https://github.com/ezerinz/epik-shell
 https://github.com/S4NKALP/Modus/blob/new/modules/dock/components/applications.py
 
 
+https://github.com/AMNatty/wleave
+
+https://github.com/xZepyx/HyprZepyx
+
+TODO: keybinds on powermenu
