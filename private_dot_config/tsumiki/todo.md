@@ -44,3 +44,5 @@ https://github.com/AMNatty/wleave
 https://github.com/xZepyx/HyprZepyx
 
 TODO: keybinds on powermenu
+
+TODO: unknown issue on windowtitle on startup
