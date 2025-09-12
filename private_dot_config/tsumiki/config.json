@@ -19,11 +19,10 @@
 				"charging": false
 			}
 		},
-		"overview": {
+		"overview_button": {
 			"icon": "󰡃",
 			"tooltip": true,
-			"label": false,
-			"show_occupied": true
+			"label": false
 		},
 		"power": {
 			"icon": "󰐥",
@@ -383,8 +382,7 @@
 		],
 		"middle_section": [
 			"date_time",
-			"weather",
-			"overview"
+			"weather"
 		],
 		"right_section": [
 			"@collapsible:0",
@@ -439,7 +437,7 @@
 			"location": "top"
 		},
 		"app_launcher": {
-			"enabled": false,
+			"enabled": true,
 			"tooltip": false,
 			"icon_size": 40,
 			"ignored": [],
@@ -449,6 +447,13 @@
 			"layout": "list",
 			"grid_columns": 3
 		},
+		"overview": {
+			"enabled": false,
+			"layer": "top",
+			"anchor": "center",
+			"transition_type": "crossfade",
+			"transition_duration": 350
+		},
 		"notification": {
 			"enabled": true,
 			"dnd_on_screencast": true,
@@ -457,13 +462,12 @@
 			"ignored": [],
 			"timeout": 3000,
 			"max_actions": 3,
-			"transition_type": "slide-left",
-			"transition_duration": 350,
 			"play_sound": true,
 			"per_app_limits": {},
 			"sound_file": "notification4",
+			"transition_type": "slide-left",
+			"transition_duration": 350,
 			"persist": true,
-			"display_actions_on_hover": false,
 			"dismiss_on_hover": false
 		},
 		"osd": {
@@ -488,6 +492,7 @@
 		"dock": {
 			"enabled": true,
 			"tooltip": false,
+			"behavior": "intellihide",
 			"icon_size": 40,
 			"preview_apps": true,
 			"preview_size": [
@@ -496,6 +501,7 @@
 			],
 			"show_when_no_windows": false,
 			"ignored": [],
+			"always_show_focused": true,
 			"hide_special_workspace_apps": false,
 			"layer": "top"
 		},
