@@ -19,7 +19,6 @@ bat
 bauh
 bc
 bind
-blanket
 bluez
 bluez-utils
 brightnessctl
@@ -82,14 +81,10 @@ ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
-font-manager
-foot
 freetype2
-gestures
 git
 git-delta
 git-interactive-rebase-tool-git
-git-lfs
 github-cli
 gnome-bluetooth
 gnome-bluetooth-3.0
@@ -134,7 +129,6 @@ just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
-kimageformats5
 kio-fuse
 kitty
 ktorrent
@@ -170,7 +164,6 @@ mkinitcpio-nfs-utils
 modemmanager
 mojave-gtk-theme-git
 mongodb-tools
-mousepad
 mpv
 mpv-mpris
 mtools
@@ -289,8 +282,17 @@ vim
 visual-studio-code-insiders
 vivaldi
 vlc
+vlc-plugin-ass
+vlc-plugin-bluray
+vlc-plugin-dvd
 vlc-plugin-ffmpeg
-vlc-plugins-extra
+vlc-plugin-matroska
+vlc-plugin-mpeg2
+vlc-plugin-soxr
+vlc-plugin-srt
+vlc-plugin-svg
+vlc-plugin-x264
+vlc-plugin-x265
 vpnc
 vulkan-radeon
 webrtc-audio-processing
