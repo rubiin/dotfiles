@@ -1,7 +1,4 @@
 
-
-todo: fix notification overflow issue
-
 todo: fix the widget style on widget settings
 
 feat: drag on dock
