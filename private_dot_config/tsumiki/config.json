@@ -201,7 +201,8 @@
 			"tooltip": true,
 			"truncation": true,
 			"truncation_size": 50,
-			"title_map": []
+			"title_map": [],
+			"fallback": "class"
 		},
 		"workspaces": {
 			"count": 10,
@@ -506,7 +507,7 @@
 			"layer": "top"
 		},
 		"desktop_clock": {
-			"enabled": false,
+			"enabled": true,
 			"anchor": "bottom-right",
 			"date_format": "%A, %d %B %Y",
 			"layer": "bottom",
@@ -517,6 +518,11 @@
 			"anchor": "bottom-right",
 			"layer": "bottom",
 			"update_interval": 600
+		},
+		"activate_linux": {
+			"enabled": false,
+			"anchor": "bottom-right",
+			"layer": "bottom"
 		}
 	},
 	"general": {
