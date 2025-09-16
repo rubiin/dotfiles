@@ -158,6 +158,7 @@ man-pages
 mdadm
 mesa
 mesa-utils
+meson
 mission-center
 mkcert
 mkinitcpio-nfs-utils
@@ -175,6 +176,7 @@ network-manager-applet
 networkmanager
 nfs-utils
 nilfs-utils
+ninja
 noto-fonts
 noto-fonts-emoji
 nss-mdns
