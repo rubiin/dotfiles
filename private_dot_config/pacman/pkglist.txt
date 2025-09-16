@@ -249,7 +249,6 @@ speech-dispatcher
 spicetify-cli
 spotify
 spotube-bin
-sshs
 sudo
 swww
 sysfsutils
