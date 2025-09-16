@@ -34,6 +34,7 @@ https://github.com/ezerinz/epik-shell
 
 https://github.com/S4NKALP/Modus/blob/new/modules/dock/components/applications.py
 
+https://github.com/AhmedSaadi0/NibrasShell
 
 https://github.com/AMNatty/wleave
 
