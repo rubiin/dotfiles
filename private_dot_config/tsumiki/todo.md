@@ -42,4 +42,6 @@ https://github.com/xZepyx/HyprZepyx
 
 TODO: keybinds on powermenu
 
-TODO: unknown issue on windowtitle on startup
+TODO: add 		"delay_cmd": 3000, to power btn
+
+TODO: invalidate weather cache on location change
