@@ -185,7 +185,7 @@
 			"quiet": false
 		},
 		"weather": {
-			"location": "kathmandu",
+			"location": "mumbai",
 			"label": true,
 			"tooltip": true,
 			"temperature_unit": "celsius",
