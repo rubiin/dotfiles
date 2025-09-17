@@ -2,7 +2,6 @@ fabric-cli-git
 gitflow-cjs
 glace-git
 gray-git
-kinit
 lazyssh-bin
 matugen-bin
 megabasterd-bin
