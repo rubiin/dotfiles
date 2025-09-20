@@ -1,37 +1,37 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "d7588f6"
-hash = "1adc12c2b2b025411ab61eb8f0879574"
+rev = "d1c8baa"
+hash = "8ad3e90b079190b4905f24a44f4ca06b"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "d7588f6"
-hash = "47865a70cade14a0b9b6bc6a54f16bdb"
+rev = "d1c8baa"
+hash = "82376c3381ae915fd799d40f4dd4c6cd"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "d7588f6"
+rev = "d1c8baa"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "d7588f6"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "d1c8baa"
+hash = "3cce60031b27cbce80b50f68ca319c0a"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mactag"
-rev = "d7588f6"
-hash = "72dfb25e9d0c015365827431e28df322"
+rev = "d1c8baa"
+hash = "326eb39db39c855a1d564b777b810f05"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "d7588f6"
+rev = "d1c8baa"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "d7588f6"
-hash = "cc8da55f1deda45ee3787cc97b58ffc9"
+rev = "d1c8baa"
+hash = "4ee57085277d616acfa0ef1fef37dc00"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
@@ -40,15 +40,15 @@ hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
-rev = "d7588f6"
-hash = "a8050052e59f3952abe0b3e27a5843de"
+rev = "d1c8baa"
+hash = "75fd60b2df7115e0a6ca31a6a804d320"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "9cd2ac4"
-hash = "f54b45bdd33f607ddde47f0afad96142"
+rev = "4296a38"
+hash = "a48ba8510a1d61483767c042269f3171"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-latte"
-rev = "9cd2ac4"
-hash = "e03f3cc1dc61e84a501134784ca4ba57"
+rev = "4296a38"
+hash = "a8deb97014b2ed809c5b7bdf60e7050b"
