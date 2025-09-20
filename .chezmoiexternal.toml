@@ -63,3 +63,7 @@
     type = "file"
     url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
     refreshPeriod = "168h"
+[".config/mpv/scripts/subit.lua"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
+    refreshPeriod = "168h"
