@@ -39,4 +39,11 @@
     type = "file"
     url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
     refreshPeriod = "168h"
-
+[".config/scripts/sponsorblock_minimal.lua"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/sponsorblock_minimal.lua"
+    refreshPeriod = "168h"
+[".config/scripts/thumbfast.lua"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/thumbfast.lua"
+    refreshPeriod = "168h"
