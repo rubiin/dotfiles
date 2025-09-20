@@ -55,7 +55,11 @@
     type = "file"
     url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
     refreshPeriod = "168h"
-[".config/mpv/scripts/material-design-icons.ttf"]
+[".config/mpv/fonts/material-design-icons.ttf"]
     type = "file"
     url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/material-design-icons.ttf"
+    refreshPeriod = "168h"
+[".config/mpv/scripts/SmartCopyPaste.lua"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
     refreshPeriod = "168h"
