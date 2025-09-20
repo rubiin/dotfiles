@@ -1,10 +1,7 @@
 # Loaded by every shell (login, interactive, scripts). Put essential environment variables here—keep it minimal.
 
-if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+if [[ ("$SHLVL" -eq 1 && ! -o LOGIN) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 
   source "${ZDOTDIR:-$HOME}/.zprofile"
 
 fi
-
-. "/home/rubin/.local/share/mise/installs/rust/1.89.0/env"
-. "/home/rubin/.local/share/cargo/env"
