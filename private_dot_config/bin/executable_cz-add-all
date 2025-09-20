@@ -20,7 +20,6 @@ file_folder_list=(
    "$config/mpv/input.conf"
    "$config/mpv/mpv.conf"
    "$config/mpv/scripts/autoloop.lua"
-   "$config/mpv/scripts/updatechecker.lua"
    "$config/mpv/scripts/misc.lua"
    "$config/mpv/script-opts"
    "$config/ktorrentrc"
