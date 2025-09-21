@@ -45,3 +45,9 @@ TODO: keybinds on powermenu
 TODO: add 		"delay_cmd": 3000, to power btn
 
 TODO: invalidate weather cache on location change
+
+
+bug: slider scale color for amplified and muted volume same as osd
+
+
+bug: fix wwifi ap client disconnect button
