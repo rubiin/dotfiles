@@ -51,3 +51,5 @@ bug: slider scale color for amplified and muted volume same as osd
 
 
 bug: fix wwifi ap client disconnect button
+
+TODO: expand notifications if content way too long
