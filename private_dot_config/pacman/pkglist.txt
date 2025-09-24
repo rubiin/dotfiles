@@ -336,4 +336,5 @@ zathura-pdf-poppler
 zeal
 zen-browser-bin
 zoxide
+zram-generator
 zsh
