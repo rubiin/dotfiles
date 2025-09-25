@@ -279,7 +279,6 @@ usb_modeswitch
 usbutils
 uwsm
 vhs
-vim
 visual-studio-code-insiders
 vivaldi
 vlc
@@ -336,5 +335,4 @@ zathura-pdf-poppler
 zeal
 zen-browser-bin
 zoxide
-zram-generator
 zsh
