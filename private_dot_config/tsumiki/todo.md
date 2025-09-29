@@ -9,6 +9,7 @@ todo: vertical dock support
 
 todo: cache pixbuf images for notifications
 
+todo: add a delayed function
 
 https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
 https://github.com/Jas-SinghFSU/HyprPanel/issues/859
