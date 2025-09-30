@@ -3,6 +3,8 @@ todo: fix the widget style on widget settings
 
 feat: drag on dock
 
+feat: bubble styled workspace
+
 feat: group multiple instances of same app on dock
 
 todo: vertical dock support
