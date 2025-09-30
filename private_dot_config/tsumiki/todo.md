@@ -7,9 +7,11 @@ feat: group multiple instances of same app on dock
 
 todo: vertical dock support
 
+feat: custom mdoules
+
 todo: cache pixbuf images for notifications
 
-todo: add a delayed function
+todo: add a delayed function call
 
 https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
 https://github.com/Jas-SinghFSU/HyprPanel/issues/859
