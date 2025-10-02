@@ -25,6 +25,8 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 
 
 
+Throttle frequent signals: If you're connecting to things like "changed" or "motion-notify-event", debounce or rate-limit them.
+
 foor epik-shell
   box-shadow:
     0 0 0 $bar-border-width $bar-border-color,
