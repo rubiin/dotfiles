@@ -24,6 +24,8 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/614
 https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 
 
+https://github.com/hyprland-community/awesome-hyprland
+
 
 Throttle frequent signals: If you're connecting to things like "changed" or "motion-notify-event", debounce or rate-limit them.
 
