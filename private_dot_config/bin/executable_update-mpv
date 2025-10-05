@@ -1,0 +1,40 @@
+#!/bin/sh
+
+
+
+# Base config dir
+BASE="$HOME/.config/mpv"
+
+# Ensure directories exist
+mkdir -p "$BASE/scripts" "$BASE/fonts"
+
+# List of files and URLs (path|url)
+files=(
+  "$BASE/scripts/sponsorblock_minimal.lua|https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/sponsorblock_minimal.lua"
+  "$BASE/scripts/thumbfast.lua|https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
+  "$BASE/scripts/modernz.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
+  "$BASE/fonts/fluent-system-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
+  "$BASE/fonts/material-design-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/material-design-icons.ttf"
+  "$BASE/scripts/SmartCopyPaste.lua|https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
+  "$BASE/scripts/subit.lua|https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
+  "$BASE/scripts/vlccrop.lua|https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
+  "$BASE/scripts/pause_indicator_lite.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.lua"
+  "$BASE/scripts/autoload.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoload.lua"
+  "$BASE/scripts/autoindent.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoindent.lua"
+  "$BASE/scripts/evafast.lua|https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
+)
+
+# Export function for xargs
+download_file() {
+  local file="$1"
+  local url="$2"
+  echo "⬇️ Downloading $file"
+  wget -q --show-progress -O "$file" "$url"
+}
+export -f download_file
+
+# Run downloads in parallel (4 at a time)
+printf "%s\n" "${files[@]}" | \
+  xargs -n1 -P4 bash -c 'download_file "${0%%|*}" "${0##*|}"'
+
+echo "✅ All files downloaded into $BASE"
