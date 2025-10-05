@@ -101,6 +101,7 @@ gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
+gtk3-demos
 gvfs
 haveged
 hwdetect
