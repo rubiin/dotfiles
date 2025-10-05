@@ -1,73 +1,77 @@
 [".config/nvim"]
-    type = "git-repo"
-    url = "https://github.com/rubiin/init.lua.git"
-    refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/rubiin/init.lua.git"
+refreshPeriod = "168h"
 ["personal/vim/fortune.nvim"]
-    type = "git-repo"
-    url = "https://github.com/rubiin/fortune.nvim.git"
-    refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/rubiin/fortune.nvim.git"
+refreshPeriod = "168h"
 ["personal/vim/highlighturl.nvim"]
-    type = "git-repo"
-    url = "https://github.com/rubiin/highlighturl.nvim.git"
-    refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/rubiin/highlighturl.nvim.git"
+refreshPeriod = "168h"
 ["personal/vim/vimwordlist.nvim"]
-    type = "git-repo"
-    url = "https://github.com/rubiin/vimwordlist.nvim.git"
-    refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/rubiin/vimwordlist.nvim.git"
+refreshPeriod = "168h"
 [".config/bat/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
-    exact = true
-    stripComponents = 2
-    refreshPeriod = "168h"
-    include = ["*/themes/**"]
+type = "archive"
+url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
+exact = true
+stripComponents = 2
+refreshPeriod = "168h"
+include = ["*/themes/**"]
 [".config/zathura/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/zathura/archive/master.tar.gz"
-    exact = true
-    stripComponents = 2
-    refreshPeriod = "168h"
-    include = ["*/themes/**"]
+type = "archive"
+url = "https://github.com/catppuccin/zathura/archive/master.tar.gz"
+exact = true
+stripComponents = 2
+refreshPeriod = "168h"
+include = ["*/themes/**"]
 [".config/btop/themes"]
-    type = "archive"
-    url = "https://github.com/catppuccin/btop/archive/master.tar.gz"
-    exact = true
-    stripComponents = 2
-    refreshPeriod = "168h"
-    include = ["*/themes/**"]
+type = "archive"
+url = "https://github.com/catppuccin/btop/archive/master.tar.gz"
+exact = true
+stripComponents = 2
+refreshPeriod = "168h"
+include = ["*/themes/**"]
 [".config/git/catppuccin.gitconfig"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
+refreshPeriod = "168h"
 [".config/mpv/scripts/sponsorblock_minimal.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/sponsorblock_minimal.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/sponsorblock_minimal.lua"
+refreshPeriod = "168h"
 [".config/mpv/scripts/thumbfast.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
+refreshPeriod = "168h"
 [".config/mpv/scripts/modernz.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
+refreshPeriod = "168h"
 [".config/mpv/fonts/fluent-system-icons.ttf"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
+refreshPeriod = "168h"
 [".config/mpv/fonts/material-design-icons.ttf"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/material-design-icons.ttf"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/material-design-icons.ttf"
+refreshPeriod = "168h"
 [".config/mpv/scripts/SmartCopyPaste.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
+refreshPeriod = "168h"
 [".config/mpv/scripts/subit.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
+refreshPeriod = "168h"
 [".config/mpv/scripts/vlccrop.lua"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
-    refreshPeriod = "168h"
+type = "file"
+url = "https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
+refreshPeriod = "168h"
+[".config/mpv/scripts/pause_indicator_lite.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.lua"
+refreshPeriod = "168h"
