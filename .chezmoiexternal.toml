@@ -75,3 +75,16 @@ refreshPeriod = "168h"
 type = "file"
 url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.lua"
 refreshPeriod = "168h"
+[".config/mpv/scripts/autoload.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoload.lua"
+refreshPeriod = "168h"
+[".config/mpv/scripts/autoindent.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoindent.lua"
+refreshPeriod = "168h"
+[".config/mpv/scripts/evafast.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
+refreshPeriod = "168h"
+
