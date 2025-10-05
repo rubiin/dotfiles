@@ -20,7 +20,7 @@ files=(
   "$BASE/scripts/vlccrop.lua|https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
   "$BASE/scripts/pause_indicator_lite.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.lua"
   "$BASE/scripts/autoload.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoload.lua"
-  "$BASE/scripts/autoindent.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoindent.lua"
+  "$BASE/scripts/autoindent.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autodeint.lua"
   "$BASE/scripts/evafast.lua|https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
 )
 
