@@ -119,4 +119,9 @@ echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
+
+echo "Setting ssh"
+mkdir -p ~/.ssh/control
+chmod 700 ~/.ssh/control
+
 echo "Completed setup, run python"
