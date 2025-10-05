@@ -30,6 +30,7 @@ Host *
 	# quicker connection times.
 	ControlMaster auto
 	ControlPersist 1800
+	ControlPath ~/.ssh/control/%r@%h:%p
 
 	# also this stuff
 	Compression yes
