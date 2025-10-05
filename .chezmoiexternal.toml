@@ -67,3 +67,7 @@
     type = "file"
     url = "https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
     refreshPeriod = "168h"
+[".config/mpv/scripts/vlccrop.lua"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
+    refreshPeriod = "168h"
