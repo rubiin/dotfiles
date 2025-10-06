@@ -91,6 +91,7 @@ gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
 gobject-introspection
+google-chrome
 gparted
 gpm
 gptfdisk
