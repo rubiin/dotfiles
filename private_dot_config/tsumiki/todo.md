@@ -36,6 +36,8 @@ foor epik-shell
       color.adjust($bar-shadow-color, $alpha: calc($bar-shadow-opacity - 1));
 
 
+   f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
+
 https://github.com/caelestia-dots/shell/issues/555
 
 https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
