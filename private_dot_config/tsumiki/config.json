@@ -32,6 +32,8 @@
 			"show_icon": true,
 			"label": false,
 			"confirm": true,
+			"delayed": false,
+			"delayed_timeout": 1000,
 			"buttons": {
 				"shutdown": "systemctl poweroff",
 				"reboot": "systemctl reboot",
