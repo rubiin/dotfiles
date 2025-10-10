@@ -193,6 +193,7 @@ openvpn
 os-prober
 pacman-contrib
 pamixer
+partitionmanager
 pavucontrol
 perl
 persepolis
