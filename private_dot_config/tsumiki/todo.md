@@ -67,3 +67,6 @@ TODO: expand notifications if content way too long
 
 INSPIRATIONS:
 https://github.com/MalpenZibo/ashell
+
+
+TODO: highlight popop window with shadow
