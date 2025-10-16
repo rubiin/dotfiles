@@ -22,8 +22,11 @@ Host "takeo-dev"
 
 ## Now set defaults for all if not matched by any hosts ##
 Host *
-  # Always use SSH2.
+	# Always use SSH2.
 	Protocol 2
+
+	# Enable post-quantum-safe + modern classical key exchange
+	KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256
 
 	# Use a shared channel for all sessions to the same host,
 	# instead of always opening a new one. This leads to much
