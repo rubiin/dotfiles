@@ -5,7 +5,6 @@ gui:
   branchColors:
     "production": "red"
   showIcons: true
-
 git:
   paging:
     colorArg: always
@@ -16,11 +15,10 @@ notARepository: "quit"
 update:
   method: "never" # brew keeps it up to date
 confirmOnQuit: false
-
 customCommands:
   - key: "C"
     command: "git cz"
     description: "Commit with commitizen"
     context: "files"
     loadingText: "Opening commitizen commit tool"
-    subprocess: true
+    output: terminal
