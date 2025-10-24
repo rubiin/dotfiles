@@ -40,7 +40,8 @@ All scripts are in the `scripts/` directory. Place them in your mpv `scripts/` f
 
 - **modernz.lua**: Modern, customizable OSC (on-screen controller) with themes and advanced features. [ModernZ](https://github.com/Samillion/ModernZ)
 - **thumbfast.lua**: High-performance on-the-fly thumbnail generator for seeking previews. [thumbfast](https://github.com/po5/thumbfast)
-- **pause_indicator_lite.lua**: Shows a pause/play indicator overlay when playback is paused. [pause-indicator-lite](https://github.com/Samillion/ModernZ/tree/main/extras/pause-indicator-lite)
+- **pause_indicator.lua**: Shows a pause/play indicator overlay when playback is paused.
+- **confirm_resume.lua**: Shows a confirmation prompt for resuming playback.
 - **sponsorblock_minimal.lua**: Skips sponsored segments in YouTube videos using SponsorBlock API. [SponsorBlock](https://github.com/ajayyy/SponsorBlock)
 - **SmartCopyPaste.lua**: Copy/paste media URLs and playback positions with smart keybinds. [SmartCopyPaste](https://github.com/Eisa01/mpv-scripts)
 - **autoloop.lua**: Automatically loops short files and manages save position for longer ones. [autoloop](https://github.com/zydezu/mpvconfig)
@@ -56,7 +57,7 @@ Script options are in the `script-opts/` directory. Edit these files to customiz
 
 - **modernz.conf**: Options for ModernZ OSC (language, theme, behavior, etc.)
 - **thumbfast.conf**: Options for thumbnail generation (timeout, tone mapping, etc.)
-- **pause_indicator_lite.conf**: Options for pause/play indicator (icon, color, keybind, etc.)
+- **confirm_resume.conf**: Options for confirmation prompt (text, wait interval, etc.)
 - **evafast.conf**: Options for seeking and playback speed adjustments.
 
 ---
