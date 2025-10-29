@@ -5,6 +5,7 @@ gray-git
 lazyssh-bin
 matugen-bin
 megabasterd-bin
+mojave-gtk-theme
 mongodb-compass-bin
 nvimpager
 pay-respects-bin
