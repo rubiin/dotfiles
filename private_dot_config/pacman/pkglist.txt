@@ -164,7 +164,6 @@ mission-center
 mkcert
 mkinitcpio-nfs-utils
 modemmanager
-mojave-gtk-theme-git
 mongodb-tools
 mpv
 mpv-mpris
