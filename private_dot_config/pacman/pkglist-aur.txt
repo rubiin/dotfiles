@@ -1,8 +1,8 @@
 fabric-cli-git
 gitflow-cjs
 glace-git
-gray-git
 lazyssh-bin
+libinput-gestures
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme
