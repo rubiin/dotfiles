@@ -539,8 +539,8 @@
 				"opacity": 100,
 				"margin_x": "0",
 				"margin_y": "1.25em",
-				"padding_x": "1em",
-				"padding_y": "1em",
+				"padding_x": "0.5em",
+				"padding_y": "0.5em",
 				"shadow": {
 					"enabled": true,
 					"offset": 0,
@@ -549,7 +549,7 @@
 					"opacity": 100
 				},
 				"border": {
-					"enabled": true,
+					"enabled": false,
 					"width": "1px",
 					"radius": "1.5em"
 				},
