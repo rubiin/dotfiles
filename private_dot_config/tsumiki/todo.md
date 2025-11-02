@@ -24,6 +24,8 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/614
 https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 
 
+
+
 https://github.com/hyprland-community/awesome-hyprland
 
 
@@ -42,6 +44,11 @@ https://github.com/caelestia-dots/shell/issues/555
 
 https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
 https://github.com/ezerinz/epik-shell
+
+https://github.com/muhchaudhary/fabric-nix
+
+https://github.com/amansxcalibur/zenith
+
 
 https://github.com/S4NKALP/Modus/blob/new/modules/dock/components/applications.py
 
