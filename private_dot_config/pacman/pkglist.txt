@@ -138,6 +138,7 @@ kvantum-qt5
 la-capitaine-icon-theme
 legcord
 less
+libastal-network-git
 libdvdcss
 libgsf
 libgtop
@@ -183,7 +184,6 @@ nss-mdns
 ntfs-3g
 ntp
 nwg-displays
-nwg-dock-hyprland
 nwg-look
 obsidian
 openbsd-netcat
