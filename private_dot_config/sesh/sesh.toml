@@ -1,4 +1,12 @@
 
+sort_order = [
+    "tmuxinator", # show first
+    "tmux",
+    "config",
+    "zoxide", # show last
+]
+
+
 [[session]]
 name = "home 🏡"
 path = "~"
@@ -32,11 +40,13 @@ startup_command = "nvim .zshrc"
 name = "yazi config"
 path = "~/.config/yazi"
 startup_command = "nvim yazi.toml"
+preview_command = "bat --color=always ~/.config/yazi/yazi.toml"
 
 [[session]]
 name = "wezterm config"
 path = "~/.config/wezterm"
 startup_command = "nvim wezterm.lua"
+preview_command = "bat --color=always ~/.config/wezterm/wezterm.lua"
 
 
 [[session]]
@@ -44,10 +54,6 @@ name = "tsumiki config"
 path = "~/.config/tsumiki"
 startup_command = "sh init.sh -start"
 
-[[session]]
-name = "sesh config"
-path = "~/.config/sesh"
-startup_command = "nvim sesh.toml"
 
 [[session]]
 name = "bin 💻"
@@ -58,6 +64,7 @@ startup_command = "nvim ."
 name = "tmux "
 path = "~/.config/tmux"
 startup_command = "nvim tmux.conf.local"
+preview_command = "bat --color=always ~/.config/tmux/tmux.conf.local"
 
 [[session]]
 name = "dotfiles"
