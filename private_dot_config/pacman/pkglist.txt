@@ -141,6 +141,7 @@ less
 libdvdcss
 libgsf
 libgtop
+libinput-gestures
 libopenraw
 libqalculate
 linux
