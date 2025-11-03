@@ -138,7 +138,6 @@ kvantum-qt5
 la-capitaine-icon-theme
 legcord
 less
-libastal-network-git
 libdvdcss
 libgsf
 libgtop
