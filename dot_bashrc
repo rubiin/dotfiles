@@ -1,4 +1,3 @@
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -10,7 +9,6 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 elif [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
-
 
 #
 # ~/.bashrc
@@ -31,23 +29,13 @@ shopt -s histappend
 export HISTSIZE=10000
 export HISTFILESIZE=20000
 
-
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-
 source "$ZDOTDIR/config/aliases"
-
-
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(~/.local/bin/mise activate bash)"
 
 pokego --no-title --random 1,3,6
-
-
-
-
-. "/home/rubin/.local/share/mise/installs/rust/1.89.0/env"
-. "/home/rubin/.local/share/cargo/env"
