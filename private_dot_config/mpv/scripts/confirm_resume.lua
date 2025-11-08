@@ -24,6 +24,8 @@ local o = {
 -- Load user options
 options.read_options(o)
 
+print("Confirm Resume Script Loaded", o.auto_resume)
+
 -- =======================
 -- Variables
 -- =======================
@@ -130,7 +132,7 @@ local function prompt_resume(path, pos)
 
   resume_pending = { path = path, pos = pos }
   mp.osd_message(string.format(o.resume_text, math.floor(pos)), o.wait_interval)
-  mp.add_timeout(o.wait_interval, function()
+  mp.add_timeout(o.wait_interval * 60, function()
     if resume_pending then
       mp.osd_message("▶ Starting from beginning")
       resume_pending = nil
