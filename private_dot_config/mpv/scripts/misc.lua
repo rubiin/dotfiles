@@ -19,17 +19,17 @@ mp.register_event("seek", function()
 end)
 
 
--- 🕓 Auto-skip intros shorter than 60 seconds (if chapters exist)
-mp.register_event("file-loaded", function()
-    local chapters = mp.get_property_native("chapter-list")
-    if chapters and #chapters > 0 then
-        local first = chapters[1]
-        if first.time < 60 then
-            mp.commandv("seek", first.time + 10, "absolute", "exact")
-            mp.osd_message("Skipped intro to " .. first.time + 10 .. "s")
-        end
-    end
-end)
+-- -- 🕓 Auto-skip intros shorter than 60 seconds (if chapters exist)
+-- mp.register_event("file-loaded", function()
+--     local chapters = mp.get_property_native("chapter-list")
+--     if chapters and #chapters > 0 then
+--         local first = chapters[1]
+--         if first.time < 60 then
+--             mp.commandv("seek", first.time + 10, "absolute", "exact")
+--             mp.osd_message("Skipped intro to " .. first.time + 10 .. "s")
+--         end
+--     end
+-- end)
 
 
 -- 🧠 8. Auto-load subtitles in same folder
