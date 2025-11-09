@@ -109,6 +109,7 @@ hwinfo
 hyperfine
 hypridle
 hyprland
+hyprland-guiutils
 hyprland-qt-support
 hyprlang
 hyprlock
