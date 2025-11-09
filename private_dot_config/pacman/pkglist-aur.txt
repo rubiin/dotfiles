@@ -1,7 +1,6 @@
 fabric-cli-git
 gitflow-cjs
 glace-git
-hyprland-qtutils
 lazyssh-bin
 matugen-bin
 megabasterd-bin
