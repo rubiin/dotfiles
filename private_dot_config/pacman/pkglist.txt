@@ -295,6 +295,7 @@ vlc-plugin-x264
 vlc-plugin-x265
 vpnc
 vulkan-radeon
+wakatime
 webrtc-audio-processing
 welcome
 wezterm-git
