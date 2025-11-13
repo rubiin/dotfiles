@@ -59,7 +59,6 @@ _evalcache pay-respects zsh --alias --nocnf
 
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
-_evalcache mise activate zsh
 _evalcache atuin init zsh
 
 # create some folders if they don't exist
