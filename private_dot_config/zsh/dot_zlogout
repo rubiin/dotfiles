@@ -1,0 +1,5 @@
+
+#Sourced on logout of login shells.Use it for cleanup tasks—like resetting terminal settings, killing background jobs, or saving history.
+
+
+atuin sync # Sync Atuin history with the server on logout
