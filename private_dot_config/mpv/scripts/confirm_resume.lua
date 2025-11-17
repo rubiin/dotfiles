@@ -10,6 +10,12 @@ Supports:
 local utils = require("mp.utils")
 local options = require("mp.options")
 
+local function is_image()
+  local v = mp.get_property_native("current-tracks/video")
+  return v and v.image == true
+end
+
+
 -- =======================
 -- Default Options
 -- =======================
@@ -24,7 +30,10 @@ local o = {
 -- Load user options
 options.read_options(o)
 
-print("Confirm Resume Script Loaded", o.auto_resume)
+if is_image() then
+  return -- disable script entirely for images
+end
+
 
 -- =======================
 -- Variables
