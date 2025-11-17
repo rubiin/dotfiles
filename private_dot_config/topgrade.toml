@@ -138,6 +138,10 @@ only = [
 # self_update = true
 
 
+[chezmoi]
+exclude_encrypted = true
+
+
 [brew]
 # For the BrewCask step
 # If `Repo Cask Upgrade` exists, then use the `-a` option.
