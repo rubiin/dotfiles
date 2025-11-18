@@ -1,3 +1,3 @@
-store-dir=.config/.pnpm-store
+store-dir=~/.config/.pnpm-store
 tmp=/run/user/1000/npm
 auto-install-peers=true
