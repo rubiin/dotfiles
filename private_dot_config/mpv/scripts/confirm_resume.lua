@@ -31,7 +31,7 @@ options.read_options(o)
 -- Variables
 -- =======================
 -- Use MPV data directory for runtime files
-data_dir = os.getenv("XDG_DATA_HOME") or os.getenv("HOME") .. "/.local/share"
+local data_dir = os.getenv("XDG_DATA_HOME") or os.getenv("HOME") .. "/.local/share"
 data_dir = data_dir .. "/mpv"
 local resume_file = data_dir .. "/resume.json"
 local resume_data = {}
