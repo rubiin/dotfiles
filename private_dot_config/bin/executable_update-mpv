@@ -21,7 +21,6 @@ files=(
   "$BASE/scripts/autoload.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoload.lua"
   "$BASE/scripts/autoindent.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autodeint.lua"
   "$BASE/scripts/evafast.lua|https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
-  "$BASE/scripts/ontop-playback.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/ontop-playback.lua"
 )
 
 # Export function for xargs
