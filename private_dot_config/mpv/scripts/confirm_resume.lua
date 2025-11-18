@@ -10,17 +10,12 @@ Supports:
 local utils = require("mp.utils")
 local options = require("mp.options")
 
-local function is_image()
-  local v = mp.get_property_native("current-tracks/video")
-  return v and v.image == true
-end
-
 
 -- =======================
 -- Default Options
 -- =======================
 local o = {
-  resume_text = "⏪ Resume at %ds? (Y/N) ❓",
+  resume_text = "⏪ Resume at %ds? (Y/N) ?",
   wait_interval = 5,
   max_entries = 200,
   auto_resume = false,   -- automatically resume without asking
@@ -30,9 +25,6 @@ local o = {
 -- Load user options
 options.read_options(o)
 
-if is_image() then
-  return -- disable script entirely for images
-end
 
 
 -- =======================
