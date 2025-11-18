@@ -118,7 +118,6 @@ hyprsunset
 hyprutils
 hyprwayland-scanner
 ibus
-imv
 inxi
 iptables-nft
 iwd
