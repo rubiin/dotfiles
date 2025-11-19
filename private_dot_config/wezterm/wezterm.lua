@@ -34,6 +34,7 @@ config.font = wezterm.font_with_fallback({
   { family = "MonoLisa Nerd Font", weight = "Regular" },
   { family = "DejaVuSansM Nerd Font", weight = "Regular" },
   "Noto Color Emoji",
+  { family = "Symbols Nerd Font Mono", scale = 0.75 },
 })
 config.color_scheme = "Catppuccin Mocha"
 
