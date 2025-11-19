@@ -17,7 +17,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+  config = wezterm.config_builder()
 end
 
 require("links").setup(config)
@@ -31,8 +31,9 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.line_height = 1.1
 config.font_size = 10
 config.font = wezterm.font_with_fallback({
-	{ family = "MonoLisa Nerd Font", weight = "Regular" },
-	{ family = "DejaVuSansM Nerd Font", weight = "Regular" },
+  { family = "MonoLisa Nerd Font", weight = "Regular" },
+  { family = "DejaVuSansM Nerd Font", weight = "Regular" },
+  "Noto Color Emoji",
 })
 config.color_scheme = "Catppuccin Mocha"
 
@@ -63,32 +64,30 @@ config.use_ime = false
 -- disable wezterm mappings are they are troublesome with neovim
 config.disable_default_key_bindings = true
 
-
 config.use_dead_keys = true -- do not expect another key after `^~`
 
 -- core keymaps that are general
 config.keys = {
-	{
-		key = "c",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.CopyTo("Clipboard"),
-	},
-	{
-		key = "v",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.PasteFrom("Clipboard"),
-	},
-	{
-		key = "+",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.IncreaseFontSize,
-	},
-	{
-		key = "-",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.DecreaseFontSize,
-	},
+  {
+    key = "c",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.CopyTo("Clipboard"),
+  },
+  {
+    key = "v",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.PasteFrom("Clipboard"),
+  },
+  {
+    key = "+",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.IncreaseFontSize,
+  },
+  {
+    key = "-",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.DecreaseFontSize,
+  },
 }
-
 
 return config
