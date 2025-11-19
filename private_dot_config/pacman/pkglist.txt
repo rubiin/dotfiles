@@ -193,7 +193,6 @@ pamixer
 partitionmanager
 pavucontrol
 perl
-persepolis
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
