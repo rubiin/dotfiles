@@ -3,6 +3,8 @@ todo: fix the widget style on widget settings
 
 feat: drag on dock
 
+FIX: use pyvips instead of PIL for image thumbnails
+
 feat: bubble styled workspace
 
 feat: group multiple instances of same app on dock
