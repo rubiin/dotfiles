@@ -1,7 +1,6 @@
 fabric-cli-git
 gitflow-cjs
 glace-git
-lazyssh-bin
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme
@@ -14,7 +13,6 @@ ps_mem
 snixembed-git
 stacer-bin
 station-bin
-topgrade-bin
 ttf-cm-unicode
 ttf-joypixels
 xdg-ninja
