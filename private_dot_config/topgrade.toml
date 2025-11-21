@@ -83,6 +83,7 @@ only = [
   "sheldon",
   "spicetify",
   "vscode",
+  "vscode_insiders",
   "yazi",
   "stew",
   "system",
@@ -141,7 +142,7 @@ only = [
 [chezmoi]
 exclude_encrypted = true
 
-[mise]
+# [mise]
 # Upgrades to the latest version available, bumping the version in mise.toml
 # (default: false)
 # bump = false
@@ -318,7 +319,11 @@ arguments = "--rebase --autostash"
 # use_root = false
 
 # containers = ["archlinux-latest"]
+
 [containers]
+# Run 'docker system prune' to clean up unused containers, networks, and build cache
+# (default: false)
+system_prune = true
 # Specify the containers to ignore while updating (Wildcard supported)
 # ignored_containers = ["ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest", "docker.io*"]
 # Specify the runtime to use for containers (default: "docker", allowed values: "docker", "podman")
