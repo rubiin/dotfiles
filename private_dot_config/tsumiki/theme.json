@@ -517,7 +517,12 @@
 				"pill": {
 					"height": ".125em",
 					"width": ".5em",
-					"active_width": "1em"
+					"active_width": "1em",
+					"border": {
+						"enabled": true,
+						"width": "2px",
+						"radius": "16px"
+					}
 				},
 				"border": {
 					"enabled": false,
