@@ -68,6 +68,7 @@ cleanup = true
 
 # Run specific steps - same options as the command line flag
 only = [
+  "node",
   "pipx",
   "custom_commands",
   "bun",
@@ -119,7 +120,6 @@ only = [
 [commands]
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
-"Npm Global" = "taze -gwi"
 
 
 [python]
