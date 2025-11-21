@@ -141,6 +141,18 @@ only = [
 [chezmoi]
 exclude_encrypted = true
 
+[mise]
+# Upgrades to the latest version available, bumping the version in mise.toml
+# (default: false)
+# bump = false
+
+# Number of jobs to run in parallel
+# (default: 4)
+# jobs = 4
+
+# Run interactively
+# (default: false)
+# interactive = false
 
 [brew]
 # For the BrewCask step
