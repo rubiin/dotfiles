@@ -68,6 +68,7 @@ cleanup = true
 
 # Run specific steps - same options as the command line flag
 only = [
+  "pipx",
   "custom_commands",
   "bun",
   "deno",
