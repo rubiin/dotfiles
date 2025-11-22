@@ -1,5 +1,8 @@
 # ~/dotfiles
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10cfe6e5-5d9a-41cd-8ac4-c1b0f1c17286" />
+
+
 What are dotfiles, you ask? They’re like the secret sauce that spices up your Unix-like environment, hiding in plain sight.These are the magical objects that make certain computers extremely use-able for me.
 Use them wisely, or you may accidentally summon the wrath of the Terminal Gods! ⚡️
 
