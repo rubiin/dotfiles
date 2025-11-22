@@ -97,7 +97,7 @@ Here are some details about my setup:
 
 | W1  | W2                                                  | W3  | W4                                                  | W5                                           | W6                                                  | W7                                                                            | W8 |
 | --- | --------------------------------------------------- | --- | --------------------------------------------------- | -------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------- | --- |
-| [Firefox](https://wiki.archlinux.org/title/firefox)| Terminal | Editors | Utilities (postman/db client) | File Manager | Media players |--- |  [Steam](https://wiki.archlinux.org/title/steam)/[Lutris](https://lutris.net/)  |
+| [Zen](https://wiki.archlinux.org/title/firefox)| Terminal | Editors | Utilities (postman/db client) | File Manager | Media players |--- |  [Steam](https://wiki.archlinux.org/title/steam)/[Lutris](https://lutris.net/)  |
 
 - **W`id`**: Workspace with corresponding ID.
 - **`---`**: Placeholder, any app can go here.
