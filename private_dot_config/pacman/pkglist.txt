@@ -271,6 +271,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 typos
 udiskie
+uget
 unrar
 unzip
 usb_modeswitch
@@ -293,7 +294,6 @@ vlc-plugin-x264
 vlc-plugin-x265
 vpnc
 vulkan-radeon
-wakatime
 webrtc-audio-processing
 welcome
 wezterm-git
