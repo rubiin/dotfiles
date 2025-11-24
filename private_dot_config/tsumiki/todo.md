@@ -4,6 +4,7 @@ todo: fix the widget style on widget settings
 feat: drag on dock
 
 FIX: use pyvips instead of PIL for image thumbnails
+f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
@@ -11,7 +12,7 @@ feat: group multiple instances of same app on dock
 
 todo: vertical dock support
 
-feat: custom mdoules
+feat: custom modules
 
 todo: cache pixbuf images for notifications
 
@@ -37,8 +38,6 @@ foor epik-shell
     $bar-shadow-offset $bar-shadow-blur $bar-shadow-spread
       color.adjust($bar-shadow-color, $alpha: calc($bar-shadow-opacity - 1));
 
-
-   f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 https://github.com/caelestia-dots/shell/issues/555
 
