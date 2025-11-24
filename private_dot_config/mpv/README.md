@@ -2,6 +2,7 @@
 
 This repository contains a curated set of configuration files and user scripts for [mpv](https://mpv.io/), enhancing its usability, automation, and visual experience.
 
+
 ---
 
 ### Table of Contents
@@ -45,7 +46,8 @@ All scripts are in the `scripts/` directory. Place them in your mpv `scripts/` f
 - **sponsorblock_minimal.lua**: Skips sponsored segments in YouTube videos using SponsorBlock API. [SponsorBlock](https://github.com/ajayyy/SponsorBlock)
 - **SmartCopyPaste.lua**: Copy/paste media URLs and playback positions with smart keybinds. [SmartCopyPaste](https://github.com/Eisa01/mpv-scripts)
 - **autoloop.lua**: Automatically loops short files and manages save position for longer ones. [autoloop](https://github.com/zydezu/mpvconfig)
-- **misc.lua**: Displays current position and duration on seek, VLC-style.
+- **misc.lua**: Simple scripts that are way small for their own file
+- **vlccompat.lua**: Things to make mpv somewhat vlc like
 - **subit.lua**: Download subtitles using [subliminal](https://github.com/Diaoul/subliminal) (Python required).
 - **vlccrop.lua**: Cycle through common aspect ratios with 'c', like VLC. [vlccrop](https://github.com/kism/mpvscripts)
 
