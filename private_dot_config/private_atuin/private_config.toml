@@ -10,6 +10,7 @@
 
 [theme]
 name = "catppuccin-mocha-muave"
+
 ## where to store your auth session token, default is your system data directory
 ## linux/mac: ~/.local/share/atuin/session
 ## windows: %USERPROFILE%/.local/share/atuin/session
@@ -36,11 +37,11 @@ auto_sync = true
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
 ## set it to 0 to sync after every command
-sync_frequency = "30m"
+sync_frequency = "20m"
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
-# search_mode = "fuzzy"
+search_mode = "fuzzy"
 
 ## which filter mode to use
 ## possible values: global, host, session, directory
@@ -66,7 +67,7 @@ sync_frequency = "30m"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
-# inline_height = 0
+inline_height = 20
 
 ## Invert the UI - put the search bar at the top , Default to `false`
 # invert = false
@@ -137,7 +138,7 @@ sync_frequency = "30m"
 
 ## Defaults to true. If enabled, upon hitting enter Atuin will immediately execute the command. Press tab to return to the shell and edit.
 # This applies for new installs. Old installs will keep the old behaviour unless configured otherwise.
-enter_accept = true
+enter_accept = false
 
 ## Defaults to "emacs".  This specifies the keymap on the startup of `atuin
 ## search`.  If this is set to "auto", the startup keymap mode in the Atuin
