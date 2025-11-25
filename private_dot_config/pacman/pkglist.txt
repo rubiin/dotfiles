@@ -277,6 +277,7 @@ unzip
 usb_modeswitch
 usbutils
 uwsm
+ventoy-bin
 vhs
 visual-studio-code-insiders
 vivaldi
