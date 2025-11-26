@@ -83,6 +83,7 @@ firefox-developer-edition
 firewalld
 flatpak
 freetype2
+ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
