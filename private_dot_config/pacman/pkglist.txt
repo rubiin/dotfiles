@@ -35,6 +35,7 @@ chezmoi
 cinnamon-desktop
 clapper
 cliphist
+cmake
 cryptsetup
 d-spy
 dart-sass
