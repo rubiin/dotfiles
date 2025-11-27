@@ -18,6 +18,10 @@ todo: cache pixbuf images for notifications
 
 todo: add a delayed function call
 
+todo: prvacy module
+https://github.com/Alexays/Waybar/issues/2705
+
+
 https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
 https://github.com/Jas-SinghFSU/HyprPanel/issues/859
 https://github.com/Jas-SinghFSU/HyprPanel/issues/770
@@ -65,7 +69,7 @@ TODO: invalidate weather cache on location change
 bug: slider scale color for amplified and muted volume same as osd
 
 
-bug: fix wwifi ap client disconnect button
+bug: fix wifi ap client disconnect button
 
 
 TODO: expand notifications if content way too long
