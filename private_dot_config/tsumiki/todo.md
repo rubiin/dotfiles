@@ -1,7 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-feat: drag on dock
 
 FIX: use pyvips instead of PIL for image thumbnails
 f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
@@ -14,9 +13,24 @@ todo: vertical dock support
 
 feat: custom modules
 
-todo: cache pixbuf images for notifications
+(To verify): cache pixbuf images for notifications
 
-todo: add a delayed function call
+(To verify): feat: drag on dock for active applications
+
+(To verify): add a delayed function call
+
+(To verify) bug: slider scale color for amplified and muted volume same as osd
+
+(To verify) : expand notifications if content way too long
+
+bug: fix wifi ap client disconnect button
+
+
+
+TODO: keybinds on powermenu
+
+TODO: invalidate weather cache on location change
+
 
 todo: privacy module
 https://github.com/Alexays/Waybar/issues/2705
@@ -61,18 +75,8 @@ https://github.com/AMNatty/wleave
 
 https://github.com/xZepyx/HyprZepyx
 
-TODO: keybinds on powermenu
-
-TODO: invalidate weather cache on location change
 
 
-bug: slider scale color for amplified and muted volume same as osd
-
-
-bug: fix wifi ap client disconnect button
-
-
-TODO: expand notifications if content way too long
 
 
     def toggle_flight_mode(self, *_):
