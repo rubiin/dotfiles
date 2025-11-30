@@ -496,6 +496,7 @@
 			"behavior": "intellihide",
 			"icon_size": 40,
 			"preview_apps": true,
+			"group_apps": true,
 			"preview_size": [
 				200,
 				130
