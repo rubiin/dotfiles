@@ -18,7 +18,7 @@ todo: cache pixbuf images for notifications
 
 todo: add a delayed function call
 
-todo: prvacy module
+todo: privacy module
 https://github.com/Alexays/Waybar/issues/2705
 
 
