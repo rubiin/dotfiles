@@ -316,18 +316,18 @@
 			"tooltip": true
 		},
 		"keybinds": {
-					"icon": "󰌌",
-					"label": false,
-					"tooltip": true,
-					"show_icon": true,
-					"width": 800,
-					"height": 500,
-					"hide_empty_descriptions": true,
-					"anchor": "center",
-					"transition_type": "crossfade",
-					"transition_duration": 300,
-					"title": "Keybinds"
-				},
+			"icon": "󰌌",
+			"label": false,
+			"tooltip": true,
+			"show_icon": true,
+			"width": 800,
+			"height": 500,
+			"hide_empty_descriptions": true,
+			"anchor": "center",
+			"transition_type": "crossfade",
+			"transition_duration": 300,
+			"title": "Keybinds"
+		},
 		"emoji_picker": {
 			"icon": "",
 			"label": false,
@@ -389,7 +389,17 @@
 				}
 			],
 			"spacing": 4
-		}
+		},
+		"custom_module": [
+			{
+				"exec": "pamixer --get-volume",
+				"format": "󰕾 {}%",
+				"interval": 1,
+				"on_scroll_up": "pamixer -i 5",
+				"on_scroll_down": "pamixer -d 5",
+				"exec_on_event": true
+			}
+		]
 	},
 	"layout": {
 		"left_section": [
@@ -398,7 +408,7 @@
 		],
 		"middle_section": [
 			"date_time",
-			"weather"
+			"@custom_module:0"
 		],
 		"right_section": [
 			"@collapsible:0",
