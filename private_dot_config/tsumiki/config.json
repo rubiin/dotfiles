@@ -315,6 +315,19 @@
 			"label": false,
 			"tooltip": true
 		},
+		"keybinds": {
+					"icon": "󰌌",
+					"label": false,
+					"tooltip": true,
+					"show_icon": true,
+					"width": 800,
+					"height": 500,
+					"hide_empty_descriptions": true,
+					"anchor": "center",
+					"transition_type": "crossfade",
+					"transition_duration": 300,
+					"title": "Keybinds"
+				},
 		"emoji_picker": {
 			"icon": "",
 			"label": false,
@@ -459,6 +472,8 @@
 			"enabled": true,
 			"dnd_on_screencast": true,
 			"anchor": "top-right",
+			"max_lines": 4,
+			"max_expanded_lines": 20,
 			"auto_dismiss": true,
 			"ignored": [],
 			"timeout": 3000,
@@ -492,6 +507,7 @@
 		},
 		"dock": {
 			"enabled": true,
+			"orientation": "horizontal",
 			"tooltip": false,
 			"behavior": "intellihide",
 			"icon_size": 40,
