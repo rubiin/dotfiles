@@ -390,7 +390,7 @@
 			],
 			"spacing": 4
 		},
-		"custom_module": [
+		"custom_widget": [
 			{
 				"exec": "pamixer --get-volume",
 				"format": "󰕾 {}%",
@@ -408,7 +408,7 @@
 		],
 		"middle_section": [
 			"date_time",
-			"@custom_module:0"
+			"weather"
 		],
 		"right_section": [
 			"@collapsible:0",
