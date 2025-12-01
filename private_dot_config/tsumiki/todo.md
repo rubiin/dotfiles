@@ -7,7 +7,10 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 feat: bubble styled workspace
 
 
-feat: custom modules
+feat: group notifications appwise
+
+
+(To verify): custom modules
 
 
 (To verify): add a delayed function call
