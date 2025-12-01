@@ -6,22 +6,17 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
-feat: group multiple instances of same app on dock
-
-todo: vertical dock support
 
 feat: custom modules
 
 
 (To verify): add a delayed function call
+(To verify): keybinds on powermenu
 
 
 
 bug: fix wifi ap client disconnect button
 
-
-
-TODO: keybinds on powermenu
 
 TODO: invalidate weather cache on location change
 
@@ -43,12 +38,6 @@ https://github.com/hyprland-community/awesome-hyprland
 
 
 Throttle frequent signals: If you're connecting to things like "changed" or "motion-notify-event", debounce or rate-limit them.
-
-foor epik-shell
-  box-shadow:
-    0 0 0 $bar-border-width $bar-border-color,
-    $bar-shadow-offset $bar-shadow-blur $bar-shadow-spread
-      color.adjust($bar-shadow-color, $alpha: calc($bar-shadow-opacity - 1));
 
 
 https://github.com/caelestia-dots/shell/issues/555
