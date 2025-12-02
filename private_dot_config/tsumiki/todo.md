@@ -6,11 +6,10 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
+feat: replace notification when it has replace_id
 
 feat: group notifications appwise
 
-
-(To verify): custom modules
 
 
 (To verify): add a delayed function call
