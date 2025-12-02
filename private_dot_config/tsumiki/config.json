@@ -390,7 +390,7 @@
 			],
 			"spacing": 4
 		},
-		"custom_widget": [
+		"custom_module": [
 			{
 				"exec": "pamixer --get-volume",
 				"format": "󰕾 {}%",
@@ -478,6 +478,13 @@
 			"transition_type": "crossfade",
 			"transition_duration": 350
 		},
+		"cheatsheet": {
+			"enabled": true,
+			"layer": "top",
+			"anchor": "center",
+			"transition_type": "crossfade",
+			"transition_duration": 350
+		},
 		"notification": {
 			"enabled": true,
 			"dnd_on_screencast": true,
@@ -523,6 +530,7 @@
 			"icon_size": 40,
 			"preview_apps": true,
 			"group_apps": true,
+			"truncation_size": 20,
 			"preview_size": [
 				200,
 				130
