@@ -10,7 +10,7 @@ feat: replace notification when it has replace_id
 
 feat: group notifications appwise
 
-
+[Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
 (To verify): add a delayed function call
 (To verify): keybinds on powermenu
@@ -33,7 +33,6 @@ https://github.com/Jas-SinghFSU/HyprPanel/issues/770
 https://github.com/Jas-SinghFSU/HyprPanel/issues/833
 https://github.com/Jas-SinghFSU/HyprPanel/issues/805
 https://github.com/Jas-SinghFSU/HyprPanel/issues/614
-https://github.com/Jas-SinghFSU/HyprPanel/issues/515
 
 
 https://github.com/hyprland-community/awesome-hyprland
@@ -42,7 +41,7 @@ https://github.com/hyprland-community/awesome-hyprland
 Throttle frequent signals: If you're connecting to things like "changed" or "motion-notify-event", debounce or rate-limit them.
 
 
-https://github.com/caelestia-dots/shell/issues/555
+https://github.com/caelestia-dots/shell
 
 https://github.com/dianaw353/Lunur-Shell/blob/main/utils/gen_keybinds.py
 
@@ -60,6 +59,7 @@ https://github.com/AMNatty/wleave
 
 https://github.com/xZepyx/HyprZepyx
 
+https://github.com/Neurarian/matshell
 
 
 
