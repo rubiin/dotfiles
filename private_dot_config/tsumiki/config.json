@@ -560,7 +560,7 @@
 	"general": {
 		"check_updates": false,
 		"debug": false,
-		"monitor_styles": false,
+		"monitor_styles": true,
 		"auto_reload": true,
 		"multi_monitor": false
 	}
