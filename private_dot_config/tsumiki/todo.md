@@ -15,11 +15,14 @@ feat: group notifications appwise
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
 
+FIX: brightness slider not working on quick settings
 
 (To verify): add a delayed function call
 (To verify): keybinds on powermenu
 
 todo: add a cli
+
+fix: recorder not workinh
 
 bug: fix wifi ap client disconnect button
 
