@@ -6,7 +6,6 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
-feat: create settings UI for tsumiki
 
 feat: replace notification when it has replace_id
 
@@ -17,14 +16,14 @@ feat: group notifications appwise
 
 mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
 
-FIX: brightness slider not working on quick settings
+
 
 (To verify): add a delayed function call
 (To verify): keybinds on powermenu
 
 todo: add a cli
 
-fix: recorder not workinh
+fix: recorder not working with audio
 
 bug: fix wifi ap client disconnect button
 
