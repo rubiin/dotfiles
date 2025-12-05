@@ -6,20 +6,20 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
+feat: create settings UI for tsumiki
+
 feat: replace notification when it has replace_id
 
 feat: group notifications appwise
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
+
+
 (To verify): add a delayed function call
 (To verify): keybinds on powermenu
 
 todo: add a cli
-
-feat: closing animation for notifications
-
-
 
 bug: fix wifi ap client disconnect button
 
