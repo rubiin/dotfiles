@@ -15,6 +15,8 @@ feat: group notifications appwise
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
 
+mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
+
 FIX: brightness slider not working on quick settings
 
 (To verify): add a delayed function call
