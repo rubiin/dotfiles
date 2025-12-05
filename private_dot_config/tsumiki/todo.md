@@ -17,6 +17,8 @@ feat: group notifications appwise
 
 todo: add a cli
 
+feat: closing animation for notifications
+
 
 
 bug: fix wifi ap client disconnect button
@@ -63,7 +65,7 @@ https://github.com/xZepyx/HyprZepyx
 
 https://github.com/Neurarian/matshell
 
-
+https://github.com/tr1xem/flux
 
 
     def toggle_flight_mode(self, *_):
