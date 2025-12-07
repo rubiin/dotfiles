@@ -27,6 +27,7 @@ fix: recorder not working with audio
 
 bug: fix wifi ap client disconnect button
 
+TODO: add popover animation
 
 TODO: invalidate weather cache on location change
 
