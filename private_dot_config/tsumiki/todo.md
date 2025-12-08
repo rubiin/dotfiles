@@ -23,7 +23,6 @@ mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/sma
 
 todo: add a cli
 
-fix: recorder not working with audio
 
 bug: fix wifi ap client disconnect button
 
