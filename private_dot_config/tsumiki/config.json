@@ -197,7 +197,8 @@
 			"hover_reveal": true,
 			"reveal_duration": 500,
 			"expanded": true,
-			"interval": 3600
+			"interval": 3600,
+			"provider": "open-meteo"
 		},
 		"window_title": {
 			"icon": true,
