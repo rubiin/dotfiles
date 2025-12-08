@@ -6,6 +6,7 @@ f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
+TODO: add weather in the panel
 
 feat: replace notification when it has replace_id
 
@@ -27,8 +28,6 @@ todo: add a cli
 bug: fix wifi ap client disconnect button
 
 TODO: add popover animation
-
-TODO: invalidate weather cache on location change
 
 
 todo: privacy module
