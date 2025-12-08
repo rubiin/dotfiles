@@ -137,7 +137,6 @@ ktorrent
 kvantum
 kvantum-qt5
 la-capitaine-icon-theme
-legcord
 less
 libdvdcss
 libgsf
@@ -273,7 +272,6 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 typos
 udiskie
-uget
 unrar
 unzip
 usb_modeswitch
