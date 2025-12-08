@@ -10,6 +10,7 @@
 
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local gpus = wezterm.gui.enumerate_gpus()
 
 -- This table will hold the configuration.
 local config = {}
@@ -37,15 +38,25 @@ config.font = wezterm.font_with_fallback({
   { family = "Symbols Nerd Font Mono", scale = 0.75 },
 })
 config.color_scheme = "Catppuccin Mocha"
+config.warn_about_missing_glyphs = false
 
--- config.enable_wayland = true
+-- fps and cursor
+config.enable_wayland = true
 config.max_fps = 120
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 0
+config.animation_fps = 1
+config.cursor_blink_rate = 0
 
 -- scroll
 config.enable_scroll_bar = false
+
+-- gpu stuff
+-- https://github.com/wez/wezterm/issues/2756
+config.webgpu_preferred_adapter = gpus[1]
+config.front_end = "WebGpu"
+config.prefer_egl = true
 
 -- general
 config.term = "wezterm"
