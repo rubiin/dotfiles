@@ -12,6 +12,8 @@
 local wezterm = require("wezterm")
 local gpus = wezterm.gui.enumerate_gpus()
 
+require("links").setup(config)
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -20,8 +22,6 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-
-require("links").setup(config)
 
 -- Use the defaults as a base
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
