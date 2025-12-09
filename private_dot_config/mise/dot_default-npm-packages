@@ -15,6 +15,6 @@ sass
 gitpick
 aaja
 json-server
-redis-cli
 @biomejs/biome
 pnpm
+oxlint
