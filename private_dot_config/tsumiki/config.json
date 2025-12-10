@@ -519,7 +519,7 @@
         },
         "app_launcher": {
             "enabled": true,
-            "tooltip": false,
+            "tooltip": true,
             "icon_size": 40,
             "ignored": [],
             "anchor": "center",
