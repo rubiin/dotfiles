@@ -106,6 +106,7 @@ gst-plugins-ugly
 gtk3-demos
 gvfs
 haveged
+helium-browser-bin
 hwdetect
 hwinfo
 hyperfine
@@ -194,6 +195,7 @@ pamixer
 partitionmanager
 pavucontrol
 perl
+persepolis
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
