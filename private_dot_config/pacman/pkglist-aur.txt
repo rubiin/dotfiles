@@ -7,7 +7,6 @@ mojave-gtk-theme
 mongodb-compass-bin
 nvimpager
 pay-respects-bin
-persepolis-git
 pokego-bin
 ps_mem
 snixembed-git
