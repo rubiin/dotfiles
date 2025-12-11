@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
-export GIT_OPTIONAL_LOCKS=0      # prevent unnecessary lock files
-cd "$(dirname "$0")" || return 1 # go to location of this script, i.e., the git root
+
+# this is a modified version of chrisgeiger's script without any dependencies and works on linux
+
+export GIT_OPTIONAL_LOCKS=0 # prevent unnecessary lock files
+
 #───────────────────────────────────────────────────────────────────────────────
 
 # if no changes, just pull & push
@@ -30,7 +33,8 @@ while [[ ${#common} -gt 60 ]]; do
 	[[ "$common" != *"/"* && ${#common} -gt 60 ]] && common="${common:0:59}…" # shorten files with long names
 done
 
-device_name=$(scutil --get ComputerName | cut -d" " -f3-)
+device_name=$(uname -n)
+commit_msg="$full_device_info ($files_changed)"
 if [[ -z "$common" ]]; then
 	commit_msg="$device_name ($change_count files)"
 else
