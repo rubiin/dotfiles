@@ -24,7 +24,7 @@ custom_paths = [
 
 
 [hyprland]
-browser = "zen-browser"  # Browser.
+browser = "vivaldi"  # Browser.
 editor = "code-insiders" # Editor.
 terminal = "wezterm"     # Terminal.
 quickapps = "wezterm"    # Quick apps.
