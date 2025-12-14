@@ -1,6 +1,5 @@
 fabric-cli-git
 gitflow-cjs
-glace-git
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme

@@ -77,7 +77,6 @@ f2fs-tools
 fakeroot
 fastfetch
 fd
-ffmpegthumbnailer
 ffmpegthumbs
 firefox-developer-edition
 firewalld
@@ -88,7 +87,6 @@ git
 git-delta
 git-interactive-rebase-tool-git
 github-cli
-gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
@@ -101,12 +99,10 @@ grim
 grimblast-git
 gst-libav
 gst-plugin-pipewire
-gst-plugins-bad
 gst-plugins-ugly
 gtk3-demos
 gvfs
 haveged
-helium-browser-bin
 hwdetect
 hwinfo
 hyperfine
@@ -121,6 +117,7 @@ hyprsunset
 hyprutils
 hyprwayland-scanner
 ibus
+imagemagick
 inxi
 iptables-nft
 iwd
@@ -183,7 +180,6 @@ noto-fonts-emoji
 nss-mdns
 ntfs-3g
 ntp
-nwg-displays
 nwg-look
 obsidian
 openbsd-netcat
@@ -219,6 +215,7 @@ python-packaging
 python-pip
 python-pipx
 python-pyqt5
+qrencode
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
@@ -279,7 +276,6 @@ unzip
 usb_modeswitch
 usbutils
 uwsm
-ventoy-bin
 vhs
 visual-studio-code-insiders
 vivaldi
@@ -297,7 +293,6 @@ vlc-plugin-x264
 vlc-plugin-x265
 vpnc
 vulkan-radeon
-webrtc-audio-processing
 welcome
 wezterm-git
 wf-recorder
