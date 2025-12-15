@@ -99,7 +99,9 @@ grim
 grimblast-git
 gst-libav
 gst-plugin-pipewire
+gst-plugins-bad
 gst-plugins-ugly
+gtk-layer-shell
 gtk3-demos
 gvfs
 haveged
