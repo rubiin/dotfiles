@@ -81,7 +81,6 @@ ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
-flowblade
 freetype2
 ghostty
 git
@@ -240,7 +239,6 @@ sd
 sddm
 sg3_utils
 sheldon
-shotcut
 slurp
 smartmontools
 socat
