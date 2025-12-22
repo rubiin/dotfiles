@@ -444,7 +444,7 @@ scaling = 100
 
         [bar.widgets.workspaces.pill]
         active_width = '1em'
-        height = '.125em'
+        height = '1px'
         width = '.5em'
 
             [bar.widgets.workspaces.pill.border]
@@ -472,7 +472,7 @@ contrast = 0
 enabled = true
 mode = 'dark'
 scheme = 'scheme-tonal-spot'
-wallpaper = '~/2.jpg'
+wallpaper = '~/wallpapers/wallpapers/yellow-kyoto.jpg'
 
 [modules.activate_linux]
 spacing = '.125em'
