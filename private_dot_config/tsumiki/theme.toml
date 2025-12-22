@@ -444,7 +444,7 @@ scaling = 100
 
         [bar.widgets.workspaces.pill]
         active_width = '1em'
-        height = '1px'
+        height = '.125em'
         width = '.5em'
 
             [bar.widgets.workspaces.pill.border]
