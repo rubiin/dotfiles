@@ -295,6 +295,7 @@ vlc-plugin-x264
 vlc-plugin-x265
 vpnc
 vulkan-radeon
+waydroid
 welcome
 wezterm-git
 wf-recorder
