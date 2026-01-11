@@ -135,18 +135,21 @@ function get_ranges_from_chapters()
 	local have_sponsorblock_chapters = false
 
 	for i, chapter in ipairs(chapters) do
-		category = category_names[string.match(chapter.title, "%[SponsorBlock%]:%s(.+)")]
+		local categories_string = string.match(chapter.title, "%[SponsorBlock%]:%s(.+)")
 
-		if category then
+		if categories_string then
 			have_sponsorblock_chapters = true
-		end
 
-		if skipped_categories[category] then
-			local to = duration
-			if i < #chapters then
-				to = chapters[i+1].time
+			for category_name in string.gmatch(categories_string, "([^,]+),?%s?") do
+				local category = category_names[category_name]
+				if skipped_categories[category] then
+					local to = duration
+					if i < #chapters then
+						to = chapters[i+1].time
+					end
+					table.insert(ranges, {["segment"] = {chapter.time, to}, ["category"] = category})
+				end
 			end
-			table.insert(ranges, {["segment"] = {chapter.time, to}, ["category"] = category})
 		end
 	end
 
