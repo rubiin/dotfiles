@@ -9,6 +9,21 @@ Supports:
 
 local utils = require("mp.utils")
 local options = require("mp.options")
+local msg = require("mp.msg")
+
+local function get_extension(path)
+  return path:match("%.([^%.]+)$") or "nomatch"
+end
+
+local function contains(tbl, value)
+  for _, v in ipairs(tbl) do
+    if v == value then
+      return true
+    end
+  end
+  return false
+end
+
 
 
 -- =======================
@@ -18,9 +33,16 @@ local o = {
   resume_text = "⏪ Resume at %ds? (Y/N) ?",
   wait_interval = 5,
   max_entries = 200,
-  auto_resume = false,   -- automatically resume without asking
-  save_interval = 3      -- seconds to debounce saving
+  auto_resume = false, -- automatically resume without asking
+  save_interval = 3    -- seconds to debounce saving
 }
+
+local EXTENSIONS_IMAGES_DEFAULT = {
+  'avif', 'bmp', 'gif', 'j2k', 'jp2', 'jpeg', 'jpg', 'jxl', 'png',
+  'svg', 'tga', 'tif', 'tiff', 'webp'
+}
+
+
 
 -- Load user options
 options.read_options(o)
@@ -168,6 +190,15 @@ mp.add_forced_key_binding("N", "resume-no-upper", skip_resume)
 -- File loaded event
 ----------------------------------------------------------------------
 mp.register_event("file-loaded", function()
+  local path = mp.get_property("path", "")
+  local dir, filename = utils.split_path(path)
+  local this_ext = get_extension(filename)
+
+  if contains(EXTENSIONS_IMAGES_DEFAULT, this_ext:lower()) then
+    -- Skip resume for images
+    return
+  end
+
   load_resume()
   local path = mp.get_property("path")
   if path and not path:match("^https?://") and resume_data[path] then
