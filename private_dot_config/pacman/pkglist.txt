@@ -11,6 +11,7 @@ archlinux-xdg-menu
 aria2
 ark
 atuin
+audacity
 b43-fwcutter
 base
 base-devel
