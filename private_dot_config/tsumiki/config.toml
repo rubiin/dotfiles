@@ -524,7 +524,7 @@ layer = "bottom"
 interval = 600
 
 [modules.activate_linux]
-enabled = true
+enabled = false
 anchor = "bottom-right"
 layer = "bottom"
 
