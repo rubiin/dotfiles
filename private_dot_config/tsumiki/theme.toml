@@ -469,10 +469,10 @@ weight = 600
 
 [matugen]
 contrast = 0
-enabled = false
+enabled = true
 mode = 'dark'
 scheme = 'scheme-tonal-spot'
-wallpaper = '~/wallpapers/wallpapers/yellow-kyoto.jpg'
+wallpaper = '~/2.jpg'
 
 [modules.activate_linux]
 spacing = '.125em'
