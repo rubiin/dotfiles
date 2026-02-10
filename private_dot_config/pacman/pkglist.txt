@@ -304,8 +304,6 @@ wf-recorder
 wget
 which
 whois
-wine
-winetricks
 wireless-regdb
 wireplumber
 wl-clipboard
