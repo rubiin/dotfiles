@@ -59,7 +59,6 @@ file_folder_list=(
    "$config/dolphinrc"
    "$config/imv"
    "$config/pacman"
-   "$config/zen"
    "$config/fastfetch"
    "$config/zathura/zathurarc"
    "$config/safeeyes/safeeyes.json"
