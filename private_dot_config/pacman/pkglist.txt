@@ -7,7 +7,6 @@ alsa-plugins
 alsa-utils
 amd-ucode
 archlinux-keyring
-archlinux-xdg-menu
 aria2
 ark
 atuin
