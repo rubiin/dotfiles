@@ -1,5 +1,6 @@
 fabric-cli-git
 gitflow-cjs
+jetbrains-toolbox
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme

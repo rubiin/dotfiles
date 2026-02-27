@@ -7,6 +7,7 @@ alsa-plugins
 alsa-utils
 amd-ucode
 archlinux-keyring
+archlinux-xdg-menu
 aria2
 ark
 atuin
@@ -123,7 +124,6 @@ imagemagick
 inxi
 iptables-nft
 iwd
-jetbrains-toolbox
 jfsutils
 jp2a
 jq
