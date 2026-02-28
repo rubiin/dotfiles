@@ -35,7 +35,6 @@ rust = { version = "latest", profile = "minimal" }
 bun = "latest"
 deno = "latest"
 ruby = "latest"
-usage = "latest"
 uv = "latest"
 node = "24"
 "cargo:cargo-update" = "latest"
