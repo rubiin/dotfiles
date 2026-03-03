@@ -410,7 +410,6 @@ exec_on_event = true
 left_section = ["workspaces", "window_title"]
 middle_section = ["date_time", "weather"]
 right_section = [
-  "settings",
   "@collapsible:0",
   "@group:0",
   "system_tray",
