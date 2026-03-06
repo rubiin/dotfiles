@@ -11,6 +11,7 @@ mkdir -p "$BASE/scripts" "$BASE/fonts"
 # List of files and URLs (path|url)
 files=(
   "$BASE/scripts/sponsorblock_minimal.lua|https://raw.githubusercontent.com/Samillion/mpv-conf/refs/heads/master/scripts/sponsorblock_minimal.lua"
+  "$BASE/scripts/pip_lite.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pip-lite/pip_lite.lua"
   "$BASE/scripts/thumbfast.lua|https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
   "$BASE/scripts/modernz.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
   "$BASE/fonts/fluent-system-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
