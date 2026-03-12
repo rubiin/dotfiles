@@ -1,4 +1,5 @@
 alias ari="aria2c"
+alias ariadwn="aria2c -x 16"
 alias clr="clear"
 alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
