@@ -273,6 +273,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 typos
 udiskie
+uget
 unrar
 unzip
 usb_modeswitch
