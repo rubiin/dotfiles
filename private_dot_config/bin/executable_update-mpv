@@ -14,14 +14,14 @@ files=(
   "$BASE/scripts/pip_lite.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pip-lite/pip_lite.lua"
   "$BASE/scripts/thumbfast.lua|https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
   "$BASE/scripts/modernz.lua|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
-  "$BASE/fonts/fluent-system-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
-  "$BASE/fonts/material-design-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/material-design-icons.ttf"
+  "$BASE/modernz-icons.ttf|https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/fluent-system-icons.ttf"
   "$BASE/scripts/SmartCopyPaste.lua|https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.lua"
   "$BASE/scripts/subit.lua|https://raw.githubusercontent.com/wiiaboo/mpv-scripts/refs/heads/master/subit.lua"
   "$BASE/scripts/vlccrop.lua|https://raw.githubusercontent.com/kism/mpvscripts/refs/heads/main/scripts/vlccrop.lua"
   "$BASE/scripts/autoload.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autoload.lua"
   "$BASE/scripts/autoindent.lua|https://raw.githubusercontent.com/mpv-player/mpv/refs/heads/master/TOOLS/lua/autodeint.lua"
   "$BASE/scripts/evafast.lua|https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
+  "$BASE/scripts/pause_indicator_lite.lua|https://github.com/Samillion/ModernZ/raw/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.lua"
 )
 
 # Export function for xargs
