@@ -493,7 +493,7 @@ enabled = false
 size = 20
 
 [modules.dock]
-enabled = true
+enabled = false
 ignored_apps = []
 icon_size = 40
 behavior = "intellihide"
