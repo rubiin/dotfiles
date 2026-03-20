@@ -1,0 +1,32 @@
+{
+  "LOG": true,
+  "LOG_LEVEL": "info",
+  "HOST": "127.0.0.1",
+  "PORT": 3456,
+  "API_TIMEOUT_MS": 600000,
+  "Providers": [
+    {
+      "name": "openrouter",
+      "api_base_url": "https://openrouter.ai/api/v1",
+      "api_key": "$OPENROUTER_API_KEY",
+      "models": [
+        "qwen/qwen-coder-32b-vision",
+        "google/gemini-2.0-flash-exp:free",
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "qwen/qwen3-14b:free"
+      ],
+      "transformer": {
+        "use": [
+          "openrouter"
+        ]
+      }
+    }
+  ],
+  "Router": {
+    "default": "openrouter,qwen/qwen-coder-32b-vision",
+    "background": "openrouter,qwen/qwen-coder-32b-vision",
+    "think": "openrouter,meta-llama/llama-3.3-70b-instruct:free",
+    "longContext": "openrouter,qwen/qwen-coder-32b-vision",
+    "longContextThreshold": 60000
+  }
+}
