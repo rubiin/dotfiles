@@ -32,7 +32,6 @@ else
     # ===== END Fallback prompt =====
 fi
 
-
 # Folders to load files from
 ZSH_SOURCE_DIRS=(
   "$ZDOTDIR/config"
