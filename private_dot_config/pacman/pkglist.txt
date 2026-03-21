@@ -185,6 +185,7 @@ ntp
 nwg-look
 obsidian
 openbsd-netcat
+opencode
 openconnect
 openvpn
 os-prober
