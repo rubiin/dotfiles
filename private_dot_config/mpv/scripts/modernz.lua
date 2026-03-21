@@ -750,13 +750,13 @@ local function get_time_codes_width()
     local rt_sec = state.tc_left_rem and mp.get_property_number("playtime-remaining", 0) or mp.get_property_number("playback-time", 0)
 
     local function time_fmt(s)
-        local has_h = (s >= 3600) or user_opts.time_format ~= "dynamic"
-        return (has_h and "88:88:88" or "88:88") .. (state.tc_ms and ".888" or "")
+        local has_h = (s >= 3600) or user_opts.time_format == "fixed"
+        local base = has_h and (s >= 36000 and "88" or "8") .. ":88:88" or (s >= 600 and "88" or "8") .. ":88"
+        return base .. (state.tc_ms and ".888" or "")
     end
 
     local prefix = state.tc_left_rem and (user_opts.unicodeminus and UNICODE_MINUS or "-") or ""
     local w = estimate_text_width(prefix .. time_fmt(rt_sec) .. " / " .. time_fmt(dur), osc_styles.time)
-
     return w ~= 0 and w or 120 + (state.tc_ms and 40 or 0)
 end
 
@@ -2001,8 +2001,8 @@ layouts["modern"] = function ()
     new_element("seekbarbg", "box")
     lo = add_layout("seekbarbg")
     local seekbar_bg_h = 4
-    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 50, h = seekbar_bg_h}
-    lo.layer = 13
+    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 30, h = seekbar_bg_h}
+    lo.layer = 15
     lo.style = osc_styles.seekbar_bg
     lo.box.radius = user_opts.slider_rounded_corners and 2 or 0
     lo.alpha[1] = 128
@@ -2010,7 +2010,7 @@ layouts["modern"] = function ()
 
     lo = add_layout("seekbar")
     local seekbar_h = 18
-    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 50, h = seekbar_h}
+    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 30, h = seekbar_h}
     lo.layer = 51
     lo.style = osc_styles.seekbar_fg
     lo.slider.gap = (seekbar_h - seekbar_bg_h) / 2.0
@@ -2126,7 +2126,7 @@ layouts["modern"] = function ()
         lo.visible = (osc_param.playresx >= 1150 - outeroffset) and user_opts.volume_control
         lo = add_layout("volumebarbg")
         lo.geometry = {x = start_x, y = refY - 35, an = 4, w = 55, h = 4}
-        lo.layer = 13
+        lo.layer = 15
         lo.alpha[1] = 128
         lo.style = user_opts.volumebar_match_seek_color and osc_styles.seekbar_bg or osc_styles.volumebar_bg
         lo.box.radius = user_opts.slider_rounded_corners and 2 or 0
@@ -2227,8 +2227,8 @@ layouts["modern-compact"] = function ()
     new_element("seekbarbg", "box")
     lo = add_layout("seekbarbg")
     local seekbar_bg_h = 4
-    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 45, h = seekbar_bg_h}
-    lo.layer = 13
+    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 30, h = seekbar_bg_h}
+    lo.layer = 15
     lo.style = osc_styles.seekbar_bg
     lo.box.radius = user_opts.slider_rounded_corners and 2 or 0
     lo.alpha[1] = 152
@@ -2236,7 +2236,7 @@ layouts["modern-compact"] = function ()
 
     lo = add_layout("seekbar")
     local seekbar_h = 18
-    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 45, h = seekbar_h}
+    lo.geometry = {x = refX, y = refY - 72, an = 5, w = osc_geo.w - 30, h = seekbar_h}
     lo.layer = 51
     lo.style = osc_styles.seekbar_fg
     lo.slider.gap = (seekbar_h - seekbar_bg_h) / 2.0
@@ -2276,7 +2276,7 @@ layouts["modern-compact"] = function ()
     lo.style = osc_styles.time
 
     -- Left side buttons
-    local start_x = 50
+    local start_x = 37
 
     lo = add_layout("play_pause")
     lo.geometry = {x = start_x, y = refY - 35, an = 5, w = 24, h = 24}
@@ -2326,7 +2326,7 @@ layouts["modern-compact"] = function ()
         if elements.volumebar.visible then
             lo = add_layout("volumebarbg")
             lo.geometry = {x = start_x, y = refY - 35, an = 4, w = 55, h = 4}
-            lo.layer = 13
+            lo.layer = 15
             lo.alpha[1] = 128
             lo.style = user_opts.volumebar_match_seek_color and osc_styles.seekbar_bg or osc_styles.volumebar_bg
             lo.box.radius = user_opts.slider_rounded_corners and 2 or 0
@@ -2342,12 +2342,12 @@ layouts["modern-compact"] = function ()
     end
 
     -- Right side buttons
-    local end_x = osc_geo.w - 50
-    local function compact_right_side_button(name, vis_cond, style)
+    local end_x = osc_geo.w - 37
+    local function compact_right_side_button(name, vis_cond, style, w)
         elements[name].visible = vis_cond
         if vis_cond then
             lo = add_layout(name)
-            lo.geometry = {x = end_x, y = refY - 35, an = 5, w = 24, h = 24}
+            lo.geometry = {x = end_x, y = refY - 35, an = 5, w = (w or 24), h = 24}
             lo.style = style or osc_styles.control_2
             end_x = end_x - 55
         end
@@ -2359,7 +2359,7 @@ layouts["modern-compact"] = function ()
     compact_right_side_button("audio_track", user_opts.audio_tracks_button and state.audio_track_count > 0 and osc_geo.w >= 750)
     compact_right_side_button("playlist", user_opts.playlist_button and osc_geo.w >= 550)
     compact_right_side_button("download", state.is_URL and user_opts.download_button and osc_geo.w >= 450)
-    compact_right_side_button("speed", user_opts.speed_button and osc_geo.w >= 300, osc_styles.speed)
+    compact_right_side_button("speed", user_opts.speed_button and osc_geo.w >= 300, osc_styles.speed, 42)
 
     elements.cache_info.visible = user_opts.cache_info and osc_geo.w >= 500
     if elements.cache_info.visible then
@@ -2437,7 +2437,7 @@ layouts["modern-image"] = function ()
         lo.visible = osc_param.playresx >= 400 and user_opts.zoom_control
         lo = add_layout("zoom_control_bg")
         lo.geometry = {x = 145 - (playlist_button and 0 or 25) - (track_nextprev_buttons and 0 or 70), y = refY - 30, an = 4, w = 80, h = 4}
-        lo.layer = 13
+        lo.layer = 15
         lo.alpha[1] = 128
         lo.style = osc_styles.volumebar_bg
         lo.box.radius = user_opts.slider_rounded_corners and 2 or 0
@@ -2533,15 +2533,15 @@ local function format_time(seconds)
     if state.tc_ms then
         local ms = math.floor((seconds % 1) * 1000)
         if show_hours then
-            return string.format("%02d:%02d:%02d.%03d", hours, minutes, secs, ms)
+            return string.format("%d:%02d:%02d.%03d", hours, minutes, secs, ms)
         else
-            return string.format("%02d:%02d.%03d", minutes, secs, ms)
+            return string.format("%d:%02d.%03d", minutes, secs, ms)
         end
     else
         if show_hours then
-            return string.format("%02d:%02d:%02d", hours, minutes, secs)
+            return string.format("%d:%02d:%02d", hours, minutes, secs)
         else
-            return string.format("%02d:%02d", minutes, secs)
+            return string.format("%d:%02d", minutes, secs)
         end
     end
 end
