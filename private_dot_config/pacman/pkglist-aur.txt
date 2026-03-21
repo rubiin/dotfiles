@@ -1,4 +1,3 @@
-antigravity
 claude-code
 fabric-cli-git
 gitflow-cjs
