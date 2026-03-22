@@ -26,7 +26,7 @@ ask_yes_no_default() {
 
 ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors 
 
-chezmoi init --apply rubiin --exclude=encrypted
+chezmoi init --apply rubiin
 
 export TMPFILE="$(mktemp)"
 sudo true
@@ -65,8 +65,8 @@ echo "Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
 
-ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pacman.txt
-
+ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pkglist-pacman.txt
+ask_yes_no_default "Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/pkglist-aur.txt
 
 sudo fc-cache -vf
 
@@ -111,7 +111,7 @@ echo "Installing mise"
 curl https://mise.run | sh
 mise install
 
-ask_yes_no_default "Do you want to apply chezmoi configuration?" 0 && chezmoi init --apply rubiin
+ask_yes_no_default "Do you want to reapply chezmoi configuration (recommended)?" 0 && chezmoi apply
 
 echo "creating XDG directories"
 xdg-user-dirs-update
