@@ -3,7 +3,7 @@ return {
     ["code_font"] = {
       ["fonts"] = {
         [1] = {
-          ["name"] = "MonoLisa Regular",
+          ["name"] = "MonoLisa",
           ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
         },
         [2] = {
