@@ -99,7 +99,6 @@ echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
-ask_yes_no_default "Do you want to add and sync command history with atuin?" 0 && bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)"
 
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
