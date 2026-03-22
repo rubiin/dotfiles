@@ -9,6 +9,9 @@ refreshPeriod = "168h"
 ["personal/vim/highlighturl.nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/highlighturl.nvim.git"
+["personal/vim/goodies.nvim"]
+type = "git-repo"
+url = "https://github.com/rubiin/goodies.nvim.git"
 refreshPeriod = "168h"
 ["personal/vim/vimwordlist.nvim"]
 type = "git-repo"
