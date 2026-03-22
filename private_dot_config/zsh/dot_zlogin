@@ -157,7 +157,7 @@ export NODE_REPL_MODE="sloppy"
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 ##█▓▒░  pnpm
-export PNPM_HOME="/home/rubin/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
