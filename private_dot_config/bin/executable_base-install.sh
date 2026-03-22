@@ -24,8 +24,9 @@ ask_yes_no_default() {
 	esac
 }
 
-echo "Installing rate mirrors"
-yay -S rate-mirrors
+ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors 
+
+chezmoi init --apply rubiin --exclude=encrypted
 
 export TMPFILE="$(mktemp)"
 sudo true
@@ -43,7 +44,6 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
-ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
 
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
@@ -60,7 +60,13 @@ EOF
 
 sudo systemctl daemon-reload
 
+
+echo "Setting ssh"
+mkdir -p ~/.ssh/control
+chmod 700 ~/.ssh/control
+
 ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pacman.txt
+
 
 sudo fc-cache -vf
 
@@ -117,8 +123,6 @@ sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
 
-echo "Setting ssh"
-mkdir -p ~/.ssh/control
-chmod 700 ~/.ssh/control
+
 
 echo "Completed setup, run python"
