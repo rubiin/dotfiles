@@ -24,6 +24,9 @@ ask_yes_no_default() {
 	esac
 }
 
+echo "Installing rate mirrors"
+yay -S rate-mirrors
+
 export TMPFILE="$(mktemp)"
 sudo true
 rate-mirrors --save=$TMPFILE arch --max-delay=43200 &&
@@ -41,11 +44,6 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
 ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm
-
-echo "Installing hyperdots"
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE/
-cd ~/HyDE/Scripts || exit
-./install.sh
 
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
@@ -66,7 +64,7 @@ ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S
 
 sudo fc-cache -vf
 
-curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | shmkdir "$XDG_CONFIG_HOME/wakatime"
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh 
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
