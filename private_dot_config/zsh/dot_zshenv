@@ -5,3 +5,4 @@ if [[ ("$SHLVL" -eq 1 && ! -o LOGIN) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; the
   source "${ZDOTDIR:-$HOME}/.zprofile"
 
 fi
+. "/home/devina/.local/share/cargo/env"
