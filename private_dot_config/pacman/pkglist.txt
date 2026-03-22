@@ -115,13 +115,10 @@ kcalc
 kde-cli-tools
 kernel-install-for-dracut
 kimageformats
-kio-admin
 kio-fuse
 kitty
-ktorrent
 kvantum
 kvantum-qt5
-kwayland-integration
 less
 libappindicator
 libdvdcss
