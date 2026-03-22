@@ -1,7 +1,7 @@
 [user]
 	email = roobin.bhandari@gmail.com
 	name = Rubin Bhandari
-	signingkey = /home/rubin/.ssh/github.pub
+	signingkey = /home/devina/.ssh/github
 
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig
