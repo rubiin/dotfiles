@@ -32,7 +32,7 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.line_height = 1.1
 config.font_size = 10
 config.font = wezterm.font_with_fallback({
-  { family = "MonoLisa Nerd Font", weight = "Regular" },
+  { family = "MonoLisa Regular", weight = "Regular" },
   { family = "DejaVuSansM Nerd Font", weight = "Regular" },
   "Noto Color Emoji",
   { family = "Symbols Nerd Font Mono", scale = 0.75 },
