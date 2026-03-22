@@ -3,6 +3,3 @@
 #
 
 eval "$(mise activate bash --shims)"
-. "/home/rubin/.local/share/mise/installs/rust/1.89.0/env"
-. "/home/rubin/.local/share/cargo/env"
-. "/home/devina/.local/share/cargo/env"
