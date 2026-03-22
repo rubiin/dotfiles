@@ -1,12 +1,13 @@
+claude-code
 fabric-cli-git
 gitflow-cjs
+glace-git
 jetbrains-toolbox
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme
 mongodb-compass-bin
 nvimpager
-pay-respects-bin
 pokego-bin
 ps_mem
 snixembed-git
