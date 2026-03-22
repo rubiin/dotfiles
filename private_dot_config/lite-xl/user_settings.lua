@@ -4,7 +4,7 @@ return {
       ["fonts"] = {
         [1] = {
           ["name"] = "MonoLisa Regular",
-          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
+          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
         },
         [2] = {
           ["name"] = "JetBrains Mono Regular",
@@ -26,8 +26,8 @@ return {
     ["font"] = {
       ["fonts"] = {
         [1] = {
-          ["name"] = "MonoLisa Nerd Font Regular",
-          ["path"] = "/home/rubin/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf",
+          ["name"] = "MonoLisa Regular",
+          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
         },
         [2] = {
           ["name"] = "Fira Sans Regular",
