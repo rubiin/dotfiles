@@ -12,7 +12,6 @@ pokego-bin
 ps_mem
 snixembed-git
 stacer-bin
-station-bin
 stylua-bin
 ttf-cm-unicode
 ttf-joypixels

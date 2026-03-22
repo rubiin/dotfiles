@@ -81,7 +81,6 @@ git
 git-delta
 git-interactive-rebase-tool-git
 github-cli
-glances
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
@@ -117,6 +116,7 @@ kernel-install-for-dracut
 kimageformats
 kio-fuse
 kitty
+ktorrent
 kvantum
 kvantum-qt5
 less
