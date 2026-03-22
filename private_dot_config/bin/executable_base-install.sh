@@ -24,7 +24,7 @@ ask_yes_no_default() {
 	esac
 }
 
-ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors 
+ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors
 
 chezmoi init --apply rubiin
 
@@ -41,9 +41,7 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 	echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf &&
 	echo -e '[visual-studio-code-insiders]\nServer = https://nihaals.github.io/visual-studio-code-insiders-arch/\nSigLevel = PackageOptional' | sudo tee -a /etc/pacman.conf
 
-
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
-
 
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
@@ -60,7 +58,6 @@ EOF
 
 sudo systemctl daemon-reload
 
-
 echo "Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
@@ -70,7 +67,7 @@ ask_yes_no_default "Do you want to install other AUR packages?" 0 && xargs yay -
 
 sudo fc-cache -vf
 
-curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh 
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
 echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
@@ -80,8 +77,7 @@ sudo pacman -S sheldon
 sheldon lock --reinstall
 
 echo "installing flatpaks"
-flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler io.github.flattool.Warehouse io.gitlab.adhami3310.Impression
-
+flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler io.github.flattool.Warehouse
 echo "Installing bat themes"
 bat cache --build
 
@@ -103,7 +99,6 @@ echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
-
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
 
@@ -121,8 +116,5 @@ ask_yes_no_default "Do you to install rust?" 0 && bash -c "$(curl --proto '=http
 echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
-
-
-
 
 echo "Completed setup, run python"
