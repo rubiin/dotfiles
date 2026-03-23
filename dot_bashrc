@@ -39,3 +39,4 @@ eval "$(zoxide init bash)"
 eval "$(~/.local/bin/mise activate bash)"
 
 pokego --no-title --random 1,3,6
+. "/home/devina/.local/share/cargo/env"
