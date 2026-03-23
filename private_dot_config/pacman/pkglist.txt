@@ -73,6 +73,7 @@ ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
+fontforge
 freetype2
 fwupd
 ghostty
