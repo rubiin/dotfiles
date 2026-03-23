@@ -28,7 +28,10 @@ browser = "vivaldi"  # Browser.
 editor = "code-insiders" # Editor.
 terminal = "wezterm"     # Terminal.
 quickapps = "wezterm"    # Quick apps.
+explorer = "dolphin"
+
 
 [hyprland-start]
 bar = ''
 apptray_bluetooth = ''
+
