@@ -111,8 +111,7 @@ https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a
 
 # Get started
  ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/master/dot_bin/executable_base-install.sh)"
-chezmoi init --apply rubiin
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/rubiin/dotfiles/refs/heads/master/private_dot_config/bin/executable_base-install.sh)"
 ```
 
 ## FAQS
