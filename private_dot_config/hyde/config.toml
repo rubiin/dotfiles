@@ -29,6 +29,6 @@ editor = "code-insiders" # Editor.
 terminal = "wezterm"     # Terminal.
 quickapps = "wezterm"    # Quick apps.
 
-[hyprland.start]
+[hyprland-start]
 bar = ''
 apptray_bluetooth = ''
