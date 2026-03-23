@@ -17,7 +17,6 @@ bash-completion
 bat
 bauh
 bind
-blueman
 bluez
 bluez-utils
 breeze-gtk
@@ -246,6 +245,11 @@ usbutils
 uwsm
 visual-studio-code-insiders
 vivaldi
+vlc-plugin-aom
+vlc-plugin-ass
+vlc-plugin-ffmpeg
+vlc-plugin-x264
+vlc-plugin-x265
 vpnc
 welcome
 wezterm-git
