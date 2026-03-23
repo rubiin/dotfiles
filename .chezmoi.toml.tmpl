@@ -1,0 +1,34 @@
+{{ $choices := list "personal" "work" -}}
+{{ $mode := promptChoiceOnce . "private" "What is your data mode" $choices -}}
+{{ $email := promptStringOnce . "email" "What is your email address" "roobin.bhandari@gmail.com" -}}
+{{ $name := promptStringOnce . "name" "What is your name or nickname" "roobin" -}}
+
+encryption = "age"
+[age]
+    passphrase = true
+
+[gpg]
+args = ["--quiet"]
+
+[git]
+autocommit = true
+autoPush = true
+
+[edit]
+command = "nvim"
+
+[merge]
+command = "nvim"
+args = ["-d", "{{`{{ .Destination }}`}}", "{{`{{ .Source }}", "{{ .Target }}`}}"]
+
+[diff]
+pager = "delta --side-by-side"
+#command = "delta"
+#pager = "delta"
+#args = ["{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[data]
+mode = "{{ $mode }}"
+email = "{{ $email }}"
+name = "{{ $name }}"
+
