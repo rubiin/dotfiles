@@ -80,7 +80,6 @@ local user_opts = {
     window_title = "${media-title}",       -- same as title but for window_top_bar
     window_title_font_size = 26,           -- window title font size
     window_controls = true,                -- show window controls (close, minimize, maximize) in borderless/fullscreen
-    windowcontrols_fullscreen = true,      -- show window controls in fullscreen
 
     -- Subtitle and OSD display settings
     sub_margins = true,                    -- raise subtitles above the OSC when shown
@@ -191,9 +190,9 @@ local user_opts = {
     automatickeyframemode = true,          -- automatically set keyframes for the seekbar based on video length
     automatickeyframelimit = 600,          -- videos longer than this (in seconds) will have keyframes on the seekbar
 
-    persistentprogress = false,            -- always show a small progress line at the bottom of the screen
-    persistentprogressheight = 17,         -- height of the persistent progress bar
-    persistentbuffer = false,              -- show buffer status on web videos in the persistent progress line
+    persistent_progress = false,           -- always show a small progress line at the bottom of the screen
+    persistent_progress_height = 17,       -- height of the persistent progress bar
+    persistent_buffer = false,             -- show cached buffer status in the persistent progress line
 
     -- Miscellaneous settings
     visibility = "auto",                   -- only used at init to set visibility_mode(...)
@@ -213,7 +212,7 @@ local user_opts = {
     hide_volume_bar_trigger = 1150,        -- hide volume bar trigger window width
     notitle_osc_h_offset = 25,             -- osc height offset if title above seekbar is disabled
     nochapter_osc_h_offset = 10,           -- osc height offset if chapter title is disabled or doesn't exist
-    seek_hover_tooltip_h_offset = 0,       -- seek hover timecodes tooltip height position offset
+    seek_hover_tooltip_h_offset = 5,       -- seek hover timecodes tooltip height position offset
     osc_height = 132,                      -- osc height without offsets
 
     -- Mouse commands
@@ -485,6 +484,7 @@ local thumbfast = {
     available = false
 }
 
+local platform = mp.get_property("platform")
 local tick_delay = 1 / 60
 local window_control_box_width = 150
 local is_december = os.date("*t").month == 12
@@ -518,6 +518,7 @@ local function set_osc_styles()
         time = "{\\blur0\\bord0\\1c&H" .. osc_color_convert(user_opts.time_color) .. "&\\3c&H0&\\fs" .. user_opts.time_font_size .. "\\fn" .. user_opts.font .. "}",
         cache = "{\\blur0\\bord0\\1c&H" .. osc_color_convert(user_opts.cache_info_color) .. "&\\3c&H0&\\fs" .. user_opts.cache_info_font_size .. "\\fn" .. user_opts.font .. "}",
         tooltip = "{\\blur1\\bord0.5\\1c&HFFFFFF&\\3c&H0&\\fs" .. user_opts.tooltip_font_size .. "\\fn" .. user_opts.font .. "}",
+        tooltip_seek = "{\\blur0\\bord0\\1c&H" .. osc_color_convert(user_opts.osc_color) .. "&}",
         speed = "{\\blur0\\bord0\\1c&H" .. osc_color_convert(user_opts.side_buttons_color) .. "&\\3c&H0&\\fs" .. user_opts.speed_font_size .. "\\fn" .. user_opts.font .. "}",
         volumebar_bg = "{\\blur0\\bord0\\1c&H999999&}",
         volumebar_fg = "{\\blur1\\bord1\\1c&H" .. osc_color_convert(user_opts.side_buttons_color) .. "&}",
@@ -589,7 +590,8 @@ local state = {
     touchingprogressbar = false,            -- if the mouse is touching the progress bar
     playtime_hour_force_init = false,       -- used to force request_init() once
     playing_and_seeking = false,
-    persistent_progress_toggle = user_opts.persistentprogress,
+    persistent_seekbar_element = nil,
+    persistent_progress_toggle = user_opts.persistent_progress,
     user_subpos = mp.get_property_number("sub-pos") or 100,
     osc_adjusted_subpos = nil,
     downloaded_once = false,
@@ -659,8 +661,9 @@ local function set_time_styles(timecurrent_changed, timems_changed)
 end
 
 local function observe_cached(property, callback)
+    local key = property:gsub("-", "_")
     mp.observe_property(property, "native", function (_, value)
-        state[property:gsub("-", "_")] = value
+        state[key] = value
         callback()
     end)
 end
@@ -1083,10 +1086,7 @@ end
 local function window_controls_enabled()
     local val = user_opts.window_top_bar
     if val == "auto" then
-        if state.fullscreen then
-            return user_opts.windowcontrols_fullscreen
-        end
-        return not state.border or not state.title_bar
+        return not state.border or not state.title_bar or (state.fullscreen and platform ~= "darwin")
     else
         return val ~= "no"
     end
@@ -1414,7 +1414,7 @@ local function render_elements(master_ass, osc_vis, wc_vis)
         end
 
         if element.type == "slider" then
-            if element.name ~= "persistentseekbar" then
+            if element.name ~= "persistent_seekbar" then
                 local slider_lo = element.layout.slider
                 local elem_geo = element.layout.geometry
                 local s_min = element.slider.min.value
@@ -1458,6 +1458,9 @@ local function render_elements(master_ass, osc_vis, wc_vis)
                         local r_w, r_h = get_virt_scale_factor()
 
                         local tooltip_width = estimate_text_width(tooltiplabel, slider_lo.tooltip_style)
+                        local tooltip_fs = user_opts.tooltip_font_size
+                        local pad_h, pad_v = 2, 3 -- horizontal and vertical padding for seekbar tooltip box
+                        local tooltip_radius = (tooltip_fs + 2 * pad_v) / 2 -- seekbar tooltips; pill shape radius
 
                         local chapter_text = nil
                         local chapter_width = 0
@@ -1492,7 +1495,15 @@ local function render_elements(master_ass, osc_vis, wc_vis)
 
                         if thumbfast.disabled then
                             if chapter_text and osd_w and r_w > 0 then
-                                local titleY = ty - (user_opts.time_font_size * 1.3)
+                                local titleY = ty - tooltip_fs - 2 * pad_v - 5
+                                elem_ass:new_event()
+                                elem_ass:append("{\\rDefault\\alpha&H80&}")
+                                elem_ass:pos(tx - chapter_width / 2 - pad_h, titleY - tooltip_fs - pad_v)
+                                elem_ass:an(7)
+                                elem_ass:append(osc_styles.tooltip_seek)
+                                elem_ass:draw_start()
+                                elem_ass:round_rect_cw(0, 0, chapter_width + 2 * pad_h, tooltip_fs + 2 * pad_v, tooltip_radius)
+                                elem_ass:draw_stop()
                                 elem_ass:new_event()
                                 elem_ass:pos(tx, titleY)
                                 elem_ass:an(2)
@@ -1508,7 +1519,7 @@ local function render_elements(master_ass, osc_vis, wc_vis)
                                 if hover_dur then hover_sec = hover_dur * sliderpos / 100 end
                                 local thumbPad = user_opts.thumbnail_border
                                 local thumbMarginX = 18 / r_w
-                                local thumbMarginY = user_opts.time_font_size + thumbPad + 2 / r_h
+                                local thumbMarginY = user_opts.tooltip_font_size + thumbPad + 5 + 2 / r_h
 
                                 local thumbX = math.min(osd_w - thumbfast.width - thumbMarginX, math.max(thumbMarginX, tx / r_w - thumbfast.width / 2))
                                 local thumbY = (ty - thumbMarginY) / r_h - thumbfast.height
@@ -1539,14 +1550,35 @@ local function render_elements(master_ass, osc_vis, wc_vis)
 
                                 an = 2
                                 if chapter_text then
+                                    local chapterY = thumbY * r_h - thumbPad * r_h - pad_v - 5
                                     elem_ass:new_event()
-                                    elem_ass:pos(tx, thumbY * r_h - user_opts.time_font_size / 2)
+                                    elem_ass:append("{\\rDefault\\alpha&H80&}")
+                                    elem_ass:pos(tx - chapter_width / 2 - pad_h, chapterY - tooltip_fs - pad_v)
+                                    elem_ass:an(7)
+                                    elem_ass:append(osc_styles.tooltip_seek)
+                                    elem_ass:draw_start()
+                                    elem_ass:round_rect_cw(0, 0, chapter_width + 2 * pad_h, tooltip_fs + 2 * pad_v, tooltip_radius)
+                                    elem_ass:draw_stop()
+                                    elem_ass:new_event()
+                                    elem_ass:pos(tx, chapterY)
                                     elem_ass:an(an)
                                     elem_ass:append(slider_lo.tooltip_style)
                                     ass_append_alpha(elem_ass, slider_lo.alpha, 0)
                                     elem_ass:append(chapter_text)
                                 end
                             end
+                        end
+
+                        -- tooltip label background box
+                        if element.name == "seekbar" then
+                            elem_ass:new_event()
+                            elem_ass:append("{\\rDefault\\alpha&H80&}")
+                            elem_ass:pos(tx - tooltip_width / 2 - pad_h, ty - tooltip_fs - pad_v)
+                            elem_ass:an(7)
+                            elem_ass:append(osc_styles.tooltip_seek)
+                            elem_ass:draw_start()
+                            elem_ass:round_rect_cw(0, 0, tooltip_width + 2 * pad_h, tooltip_fs + 2 * pad_v, tooltip_radius)
+                            elem_ass:draw_stop()
                         end
 
                         -- tooltip label
@@ -1662,30 +1694,27 @@ local function render_elements(master_ass, osc_vis, wc_vis)
     for n = 1, #elements do render_element(n) end
 end
 
-local function render_persistentprogressbar(master_ass)
-    for n=1, #elements do
-        local element = elements[n]
-        if element.name == "persistentseekbar" then
-            local style_ass = assdraw.ass_new()
-            style_ass:merge(element.style_ass)
-            if state.animation or not state.osc_visible then
-                ass_append_alpha(style_ass, element.layout.alpha, 0, true)
+local function render_persistent_progress(master_ass)
+    local element = state.persistent_seekbar_element
+    if not element then return end
+    local style_ass = assdraw.ass_new()
+    style_ass:merge(element.style_ass)
+    if state.animation or not state.osc_visible then
+        ass_append_alpha(style_ass, element.layout.alpha, 0, true)
 
-                local elem_ass = assdraw.ass_new()
-                elem_ass:merge(style_ass)
-                elem_ass:merge(element.static_ass)
+        local elem_ass = assdraw.ass_new()
+        elem_ass:merge(style_ass)
+        elem_ass:merge(element.static_ass)
 
-                -- draw pos marker
-                draw_seekbar_progress(element, elem_ass)
+        -- draw pos marker
+        draw_seekbar_progress(element, elem_ass)
 
-                if user_opts.persistentbuffer then
-                    draw_seekbar_ranges(element, elem_ass, nil, nil)
-                end
-
-                elem_ass:draw_stop()
-                master_ass:merge(elem_ass)
-            end
+        if user_opts.persistent_buffer then
+            draw_seekbar_ranges(element, elem_ass, nil, nil)
         end
+
+        elem_ass:draw_stop()
+        master_ass:merge(elem_ass)
     end
 end
 
@@ -2017,9 +2046,9 @@ layouts["modern"] = function ()
     lo.slider.radius = user_opts.slider_rounded_corners and 2 or 0
     lo.slider.tooltip_an = 2
 
-    if user_opts.persistentprogress or state.persistent_progress_toggle then
-        lo = add_layout("persistentseekbar")
-        lo.geometry = {x = refX, y = refY, an = 5, w = osc_geo.w, h = user_opts.persistentprogressheight}
+    if user_opts.persistent_progress or state.persistent_progress_toggle then
+        lo = add_layout("persistent_seekbar")
+        lo.geometry = {x = refX, y = refY, an = 5, w = osc_geo.w, h = user_opts.persistent_progress_height}
         lo.style = osc_styles.seekbar_fg
         lo.slider.gap = (seekbar_h - seekbar_bg_h) / 2.0
         lo.slider.tooltip_an = 0
@@ -2243,9 +2272,9 @@ layouts["modern-compact"] = function ()
     lo.slider.radius = user_opts.slider_rounded_corners and 2 or 0
     lo.slider.tooltip_an = 2
 
-    if user_opts.persistentprogress or state.persistent_progress_toggle then
-        lo = add_layout("persistentseekbar")
-        lo.geometry = {x = refX, y = refY, an = 5, w = osc_geo.w, h = user_opts.persistentprogressheight}
+    if user_opts.persistent_progress or state.persistent_progress_toggle then
+        lo = add_layout("persistent_seekbar")
+        lo.geometry = {x = refX, y = refY, an = 5, w = osc_geo.w, h = user_opts.persistent_progress_height}
         lo.style = osc_styles.seekbar_fg
         lo.slider.gap = (seekbar_h - seekbar_bg_h) / 2.0
         lo.slider.tooltip_an = 0
@@ -3146,7 +3175,7 @@ local function osc_init()
     ne.eventresponder["wheel_down_press"] = function () mp.commandv("seek", -10) end
 
     --persistent seekbar
-    ne = new_element("persistentseekbar", "slider")
+    ne = new_element("persistent_seekbar", "slider")
     ne.enabled = mp.get_property("percent-pos") ~= nil
     ne.slider.markerF = function () return {} end
     ne.slider.posF = function ()
@@ -3155,7 +3184,7 @@ local function osc_init()
     end
     ne.slider.tooltipF = function() return "" end
     ne.slider.seekRangesF = function()
-        if user_opts.persistentbuffer then
+        if user_opts.persistent_buffer then
             return build_cache_seek_ranges()
         end
         return nil
@@ -3207,8 +3236,12 @@ local function osc_init()
         window_controls()
     end
 
+    -- cache persistent seekbar element
+    state.persistent_seekbar_element = elements["persistent_seekbar"]
+
     --do something with the elements
     prepare_elements()
+
     update_margins()
 end
 
@@ -3550,8 +3583,8 @@ local function render()
         render_elements(ass, state.osc_visible, wc_vis)
     end
 
-    if user_opts.persistentprogress or state.persistent_progress_toggle then
-        render_persistentprogressbar(ass)
+    if user_opts.persistent_progress or state.persistent_progress_toggle then
+        render_persistent_progress(ass)
     end
 
     -- submit
@@ -3917,8 +3950,8 @@ mp.register_script_message("osc-hide", function()
 end)
 mp.add_key_binding(nil, "visibility", function() visibility_mode("cycle") end)
 mp.add_key_binding(nil, "progress-toggle", function()
-    user_opts.persistentprogress = not user_opts.persistentprogress
-    state.persistent_progress_toggle = user_opts.persistentprogress
+    user_opts.persistent_progress = not user_opts.persistent_progress
+    state.persistent_progress_toggle = user_opts.persistent_progress
     request_init()
 end)
 mp.register_script_message("osc-idlescreen", idlescreen_visibility)
