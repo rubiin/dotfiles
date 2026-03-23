@@ -2,7 +2,7 @@ include themes/catppuccin-mocha
 
 # Open document in fit-width mode by default
 set adjust-open "best-fit"
-set font "MonoLisa"
+set font "MonoLisa Nerd Font"
 
 # One page per row by default
 set pages-per-row 1
