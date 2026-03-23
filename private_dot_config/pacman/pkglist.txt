@@ -136,7 +136,6 @@ lvm2
 man-db
 man-pages
 mdadm
-meld
 memtest86+-efi
 mesa
 mesa-utils
