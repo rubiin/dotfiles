@@ -73,7 +73,6 @@ ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
-fontforge
 freetype2
 fwupd
 ghostty
@@ -143,8 +142,6 @@ mission-center
 mkinitcpio-nfs-utils
 modemmanager
 mtools
-nano
-nano-syntax-highlighting
 nbd
 ndisc6
 neovim
@@ -166,7 +163,6 @@ ntp
 nvtop
 nwg-displays
 nwg-look
-obsidian
 openconnect
 openvpn
 os-prober
@@ -183,7 +179,6 @@ playerctl
 plocate
 polkit-gnome
 poppler-glib
-postman-bin
 power-profiles-daemon
 ppp
 pptpclient
