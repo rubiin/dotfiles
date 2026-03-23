@@ -1,5 +1,4 @@
 7zip
-age
 alacritty
 alsa-firmware
 alsa-plugins
@@ -245,11 +244,6 @@ usbutils
 uwsm
 visual-studio-code-insiders
 vivaldi
-vlc-plugin-aom
-vlc-plugin-ass
-vlc-plugin-ffmpeg
-vlc-plugin-x264
-vlc-plugin-x265
 vpnc
 welcome
 wezterm-git
