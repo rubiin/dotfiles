@@ -3,8 +3,8 @@ return {
     ["code_font"] = {
       ["fonts"] = {
         [1] = {
-          ["name"] = "MonoLisa",
-          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
+          ["name"] = "MonoLisa Nerd Font",
+          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf",
         },
         [2] = {
           ["name"] = "JetBrains Mono Regular",
@@ -27,7 +27,7 @@ return {
       ["fonts"] = {
         [1] = {
           ["name"] = "MonoLisa Regular",
-          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisa-Regular.ttf",
+          ["path"] = "/home/devina/.local/share/fonts/MonoLisa/MonoLisaNerdFont-Regular.ttf",
         },
         [2] = {
           ["name"] = "Fira Sans Regular",
