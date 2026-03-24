@@ -17,6 +17,13 @@ critical = 10
 low = 20
 unplug = 80
 
+
+
+[screenshot]
+annotation_enabled = true
+annotation_tool = "satty"
+
+
 [wallpaper]
 custom_paths = [
     "$HOME/Pictures/Wallpapers",
