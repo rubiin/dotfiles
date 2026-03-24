@@ -1,7 +1,11 @@
+
+# My neovim configuration and plugins, as well as some themes for other applications and some gitconfig snippets.
 [".config/nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/init.lua.git"
 refreshPeriod = "168h"
+
+# My neovim plugins, which are all git repositories. I keep them here so that I can easily update them and use them in multiple machines.
 ["personal/vim/fortune.nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/fortune.nvim.git"
@@ -17,6 +21,8 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/rubiin/vimwordlist.nvim.git"
 refreshPeriod = "168h"
+
+# Some themes for other applications, which are all archives.
 [".config/bat/themes"]
 type = "archive"
 url = "https://github.com/catppuccin/bat/archive/master.tar.gz"
@@ -41,4 +47,23 @@ include = ["*/themes/**"]
 [".config/git/catppuccin.gitconfig"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
+refreshPeriod = "168h"
+
+
+# Typescript libraries that I maintain, which are all git repositories.
+["personal/typescript/nestjs-cloudinary"]
+type = "git-repo"
+url = "https://github.com/NestCrafts/nestjs-cloudinary.git"
+refreshPeriod = "168h"
+["personal/typescript/nestjs-minio"]
+type = "git-repo"
+url = "https://github.com/NestCrafts/nestjs-minio.git"
+refreshPeriod = "168h"
+["personal/typescript/nestjs-pgpromise"]
+type = "git-repo"
+url = "https://github.com/NestCrafts/nestjs-pgpromise.git"
+refreshPeriod = "168h"
+["personal/typescript/nestjs-easyconfig"]
+type = "git-repo"
+url = "https://github.com/NestCrafts/nestjs-easyconfig.git"
 refreshPeriod = "168h"
