@@ -48,7 +48,6 @@
 .local/state/
 .config/yazi/flavors/
 .config/yazi/plugins/
-.config/git/catppuccin.gitconfig
 # .m2/
 # .macports/
 # .mcfly/
