@@ -87,7 +87,7 @@ state=AAAA/wAAAAAAAAABAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAEAQEAAQAAAAAAAA
 
 [downloads]
 dhtSupport=true
-lastSaveDir=/home/devina/
+lastSaveDir=/home/devina/Downloads/
 networkInterface=All interfaces
 saveDir=/home/devina/Downloads/
 tempDir=/home/devina/.local/share/ktorrent/
