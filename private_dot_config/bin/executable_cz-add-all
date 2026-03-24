@@ -8,6 +8,7 @@ config=$XDG_CONFIG_HOME
 file_folder_list=(
    "$HOME/.bashenv"
    "$HOME/.bash_profile"
+   "$HOME/.bashrc"
    "$HOME/sudoers.lecture"
    "$HOME/.ssh/config"
    "$HOME/.czrc"
