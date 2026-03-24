@@ -46,6 +46,8 @@
 .local/lib/
 .local/pipx/
 .local/state/
+.config/yazi/flavors/
+.config/yazi/plugins/
 # .m2/
 # .macports/
 # .mcfly/
