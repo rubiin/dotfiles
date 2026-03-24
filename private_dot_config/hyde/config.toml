@@ -8,8 +8,9 @@ boost = true      # Enable volume boost
 boost_limit = 150 # Volume boost limit // Don't kill your ears/speakers
 
 [brightness]
-# brightnesscontrol.sh configuration
 notify = false # Useful for systems that have their own OSD
+steps = 5
+
 
 [battery.notify.threshold]
 full = 100
@@ -18,11 +19,18 @@ low = 20
 unplug = 80
 
 
+[battery.notify]
+timer = 120
+notify = 1140
+interval = 5
+dock = true
+
+[battery.notify.execute]
+critical = "systemctl suspend"
 
 [screenshot]
 annotation_enabled = true
 annotation_tool = "satty"
-
 
 [wallpaper]
 custom_paths = [
