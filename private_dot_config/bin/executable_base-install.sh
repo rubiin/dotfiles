@@ -106,6 +106,9 @@ echo "Installing mise"
 curl https://mise.run | sh
 mise install
 
+echo "Setting tmux"
+curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(date +%s)" | bash
+
 ask_yes_no_default "Do you want to reapply chezmoi configuration (recommended)?" 0 && chezmoi apply
 
 echo "creating XDG directories"
