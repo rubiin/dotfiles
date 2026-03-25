@@ -66,6 +66,7 @@ eos-rankmirrors
 ethtool
 ex-vi-compat
 exfatprogs
+eza
 f2fs-tools
 fakeroot
 fastfetch
