@@ -99,6 +99,11 @@ echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
+
+echo "setting gpg"
+mkdir -p ~/.local/share/gpg
+chmod 700 ~/.local/share/gpg
+
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
 
