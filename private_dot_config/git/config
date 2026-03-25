@@ -11,9 +11,11 @@
 
 [pull]
 	rebase = true
+	prune = true
 
 [init]
 	defaultBranch = master
+	hooksPath = ~/.config/git/hooks
 
 [core]
 	# End of lines conversion
@@ -41,6 +43,8 @@
 
 [branch]
 	sort = -committerdate ; sort by recency, not by name
+	autosetupmerge = true
+
 
 [tag]
 	sort = -committerdate
@@ -51,6 +55,25 @@
 
 [push]
 	autoSetupRemote = true ; create remote branch, if it doesn't exist
+  default = simple
+	followTags = true
+
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+	template = ~/.config/git/template
+
+[http]
+	postBuffer = 157286400
+
+[sequence]
+	editor = interactive-rebase-tool
+
+[protocol]
+    version = 2
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -111,7 +134,8 @@
 	features = catppuccin-mocha
 
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+	tool = vimdiff
 
 [diff]
 	colorMoved = default
@@ -384,25 +408,3 @@
 
 	# git git ...
 	git = "!git"
-
-[gpg]
-	format = ssh
-
-[commit]
-	gpgsign = true
-	template = ~/.config/git/template
-
-[http]
-	postBuffer = 157286400
-
-[sequence]
-	editor = interactive-rebase-tool
-
-[protocol]
-    version = 2
-
-[push]
-  autoSetupRemote = true
-
-[branch]
-	autosetupmerge = true
