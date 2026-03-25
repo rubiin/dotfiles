@@ -1,7 +1,7 @@
 [user]
 	email = roobin.bhandari@gmail.com
 	name = Rubin Bhandari
-	signingkey = /home/devina/.ssh/github
+	signingkey = ~/.ssh/github
 
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig
@@ -17,7 +17,7 @@
 
 [core]
 	# End of lines conversion
-	autocrlf = false
+	autocrlf = input
 	# Editor is vi of coursea
 	editor = nvim --clean
 	# Include your global excludefile
@@ -28,13 +28,14 @@
 	untrackedCache = true
 	# Don't consider trailing space change as a cause for merge conflicts
  	whitespace=trailing-space,cr-at-eol,tabwidth=4
-	packedGitLimit = 512m 
-	packedGitWindowSize = 512m 
+	packedGitLimit = 512m
+	packedGitWindowSize = 512m
 
-[pack] 
-	deltaCacheSize = 2047m 
-	packSizeLimit = 2047m 
+[pack]
+	deltaCacheSize = 2047m
+	packSizeLimit = 2047m
 	windowMemory = 2047m
+
 [status]
 	hints = false
 
@@ -207,7 +208,7 @@
         frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1; else echo 'Invalid name'; exit 1; fi; }; f"
         frf = !git flow release finish -F $(git fcb)
         frp = !git flow release publish $(git fcb)
- 
+
         #cleaning up local branches after merging them
         forget="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
         forgetlist="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
@@ -286,7 +287,7 @@
 
         # show what I did today
         day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
-        
+
         # git-extras
   	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
     	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release"
@@ -383,13 +384,25 @@
 
 	# git git ...
 	git = "!git"
-	
+
 [gpg]
 	format = ssh
+
 [commit]
 	gpgsign = true
 	template = ~/.config/git/template
+
 [http]
 	postBuffer = 157286400
+
 [sequence]
 	editor = interactive-rebase-tool
+
+[protocol]
+    version = 2
+
+[push]
+  autoSetupRemote = true
+
+[branch]
+	autosetupmerge = true
