@@ -111,6 +111,7 @@ iptables-nft
 iwd
 jfsutils
 jq
+just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
@@ -247,6 +248,8 @@ usbutils
 uwsm
 visual-studio-code-insiders
 vivaldi
+vlc
+vlc-plugins-all
 vpnc
 welcome
 wezterm-git
