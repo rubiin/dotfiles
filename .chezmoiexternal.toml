@@ -139,10 +139,6 @@ refreshPeriod = "168h"
 
 
 
-[".config/zsh/zcompletions/_golang"]
-type = "file"
-url = "https://raw.githubusercontent.com/zsh-users/zsh-completions/refs/heads/master/src/_golang"
-refreshPeriod = "168h"
 
 [".config/zsh/zcompletions/_node"]
 type = "file"

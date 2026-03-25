@@ -17,7 +17,6 @@ npm completion >"$ZSH_COMPLETIONS_DIR/_npm"
 just --zsh-completion >"$ZSH_COMPLETIONS_DIR/_just"
 gh completion -s zsh >"$ZSH_COMPLETIONS_DIR/_gh"
 docker completion zsh >"$ZSH_COMPLETIONS_DIR/_docker"
-docker completion zsh >"$ZSH_COMPLETIONS_DIR/_docker"
 bat --completion zsh > "$ZSH_COMPLETIONS_DIR/_bat"
 
 notify-send "Chezmoi finished updating dotfiles"
