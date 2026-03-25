@@ -54,7 +54,6 @@ efitools
 endeavouros-branding
 endeavouros-keyring
 endeavouros-mirrorlist
-entr
 eos-apps-info
 eos-hooks
 eos-log-tool
