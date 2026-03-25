@@ -118,6 +118,8 @@
 [grep]
 	# Consider most regexes to be ERE
 	extendedRegexp = true
+[index]
+        threads = true
 
 [help]
 	# Replace the mistyped command in 0.1 seconds. 20 means two seconds
