@@ -10,6 +10,7 @@ aria2
 ark
 atuin
 audacity
+awww
 b43-fwcutter
 base
 base-devel
