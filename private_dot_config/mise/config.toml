@@ -1,3 +1,4 @@
+
 [settings]
 # whether to prompt to install plugins and runtimes if they're not already installed
 # missing_runtime_behavior = 'autoinstall' # other options: 'ignore', 'warn', 'prompt', 'autoinstall'
@@ -22,10 +23,10 @@ raw = false                                    # set to true to directly pipe pl
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
 python.compile = false                         # always download precompiled binaries
-
+color_theme ="catppuccin"
 
 [settings.node]
-gpg_verify = false
+gpg_verify = true
 compile = false
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
@@ -38,6 +39,8 @@ ruby = "latest"
 uv = "latest"
 node = "24"
 usage = "latest"
+prek = "latest"
+claude = "latest"
 "cargo:cargo-update" = "latest"
 "cargo:momoisay" = "latest"
 "pipx:ruff" = "latest"
@@ -46,6 +49,7 @@ usage = "latest"
 "pipx:instaloader" = "latest"
 "pipx:konsave" = "latest"
 "pipx:notebook" = "latest"
+"pipx:git-revise" = "latest"
 "github:adaszko/complgen" = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:max-niederman/ttyper" = "latest"
@@ -53,6 +57,3 @@ usage = "latest"
 "github:boyter/scc" = "latest"
 "aqua:IBM-Cloud/redli" = "latest"
 "aqua:iffse/pay-respects" = "latest"
-prek = "latest"
-claude = "latest"
-"pipx:git-revise" = "latest"
