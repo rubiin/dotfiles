@@ -68,4 +68,5 @@ eza = "latest"
 "pipx:git-revise" = "latest"
 just = "latest"
 watchexec = "latest"
+zoxide = "latest"
 
