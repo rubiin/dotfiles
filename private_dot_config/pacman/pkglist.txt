@@ -218,13 +218,13 @@ spotify
 spotube-bin
 starship
 sudo
-swww
 sysfsutils
 systemd-sysvcompat
 tealdeer
 tesseract
 tesseract-data-eng
 texinfo
+tree
 ttf-bitstream-vera
 ttf-dejavu
 ttf-dejavu-nerd
