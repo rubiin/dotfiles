@@ -17,6 +17,8 @@ czx() {
 }
 
 
+unalias fastfetch 2>/dev/null
+
 fastfetch() {
     if [ "$TERM" = "foot" ]; then
         command fastfetch --logo-type sixel
