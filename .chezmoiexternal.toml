@@ -138,19 +138,7 @@ url = "https://github.com/Samillion/ModernZ/raw/refs/heads/main/extras/pause-ind
 refreshPeriod = "168h"
 
 
-
-
-[".config/zsh/zcompletions/_node"]
-type = "file"
-url = "https://raw.githubusercontent.com/zsh-users/zsh-completions/refs/heads/master/src/_node"
-refreshPeriod = "168h"
-
 [".config/zsh/zcompletions/_git-extras"]
 type = "file"
 url = "https://raw.githubusercontent.com/tj/git-extras/c06fad59d203c1d1e7fdbdebfd5751fb535eb3d9/etc/git-extras-completion.zsh"
-refreshPeriod = "168h"
-
-[".config/zsh/zcompletions/_pre-commit"]
-type = "file"
-url = "https://raw.githubusercontent.com/zsh-users/zsh-completions/refs/heads/master/src/_pre-commit"
 refreshPeriod = "168h"
