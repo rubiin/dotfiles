@@ -1,5 +1,4 @@
 7zip
-age
 alacritty
 alsa-firmware
 alsa-plugins
@@ -8,7 +7,6 @@ amd-ucode
 archlinux-keyring
 aria2
 ark
-atuin
 audacity
 awww
 b43-fwcutter
@@ -66,7 +64,6 @@ eos-rankmirrors
 ethtool
 ex-vi-compat
 exfatprogs
-eza
 f2fs-tools
 fakeroot
 fastfetch
@@ -81,7 +78,6 @@ ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
-github-cli
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
@@ -111,7 +107,6 @@ iptables-nft
 iwd
 jfsutils
 jq
-just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
