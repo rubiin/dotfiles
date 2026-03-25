@@ -52,7 +52,6 @@ file_folder_list=(
    "$config/npm"
    "$config/yt-dlp"
    "$config/kitty"
-   "$config/eza"
    "$config/wezterm"
    "$config/sesh"
    "$config/yazi"
