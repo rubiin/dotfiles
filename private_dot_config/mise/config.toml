@@ -59,4 +59,5 @@ dive = "latest"
 "github:boyter/scc" = "latest"
 "aqua:IBM-Cloud/redli" = "latest"
 "aqua:iffse/pay-respects" = "latest"
+tmux = "latest"
 
