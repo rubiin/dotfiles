@@ -13,6 +13,7 @@ ps_mem
 snixembed-git
 stacer-bin
 stylua-bin
+swww
 ttf-cm-unicode
 ttf-joypixels
 xdg-ninja
