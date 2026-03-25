@@ -1,4 +1,5 @@
 7zip
+age
 alacritty
 alsa-firmware
 alsa-plugins
@@ -7,6 +8,7 @@ amd-ucode
 archlinux-keyring
 aria2
 ark
+atuin
 audacity
 awww
 b43-fwcutter
@@ -37,6 +39,7 @@ dart-sass
 device-mapper
 dialog
 diffutils
+dive
 dmidecode
 dmraid
 dnsmasq
@@ -63,6 +66,7 @@ eos-rankmirrors
 ethtool
 ex-vi-compat
 exfatprogs
+eza
 f2fs-tools
 fakeroot
 fastfetch
@@ -77,6 +81,7 @@ ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
+github-cli
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
@@ -106,6 +111,7 @@ iptables-nft
 iwd
 jfsutils
 jq
+just
 kcalc
 kde-cli-tools
 kernel-install-for-dracut
@@ -115,6 +121,8 @@ kitty
 ktorrent
 kvantum
 kvantum-qt5
+lazydocker
+lazygit
 less
 libappindicator
 libdvdcss
@@ -221,6 +229,8 @@ tealdeer
 tesseract
 tesseract-data-eng
 texinfo
+tmux
+topgrade
 tree
 ttf-bitstream-vera
 ttf-dejavu
@@ -245,6 +255,7 @@ vivaldi
 vlc
 vlc-plugins-all
 vpnc
+watchexec
 welcome
 wezterm-git
 wf-recorder
