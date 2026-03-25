@@ -1,4 +1,4 @@
-# : << EOF
+# : << 'EOF'
 # Oh my tmux!
 # 💛🩷💙🖤❤️🤍
 # https://github.com/gpakosz/.tmux
@@ -122,7 +122,6 @@ tmux_conf_theme_colour_17="#e4e4e4"   # white
 #tmux_conf_theme_colour_15="colour0"
 #tmux_conf_theme_colour_16="colour1"
 #tmux_conf_theme_colour_17="colour15"
-
 
 # window style
 tmux_conf_theme_window_fg="default"
@@ -328,28 +327,34 @@ tmux_conf_battery_bar_length="auto"
 #   - gradient (default)
 #   - heat
 #   - "colour_full_fg,colour_empty_fg,colour_bg"
+#   - gradient(colour_fg_1,colour_fg_2,...,colour_fg_n)
 tmux_conf_battery_bar_palette="gradient"
 #tmux_conf_battery_bar_palette="#d70000,#e4e4e4,#000000"   # red, white, black
+#tmux_conf_battery_bar_palette="gradient(#00afff,#47a2ff,#7c91ff,#ac7afb,#d65be2,#e163df,#eb6cdd,#f475db,#ec9ff1,#eac3fe,#efe2ff,#ffffff)"
 
 # battery hbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - "colour_low,colour_half,colour_full"
+#   - gradient(colour_fg_1,colour_fg_2,...,colour_fg_n)
 tmux_conf_battery_hbar_palette="gradient"
 #tmux_conf_battery_hbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
+#tmux_conf_battery_hbar_palette="gradient(#00afff,#47a2ff,#7c91ff,#ac7afb,#d65be2,#e163df,#eb6cdd,#f475db,#ec9ff1,#eac3fe,#efe2ff,#ffffff)"
 
 # battery vbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - "colour_low,colour_half,colour_full"
+#   - gradient(colour_fg_1,colour_fg_2,...,colour_fg_n)
 tmux_conf_battery_vbar_palette="gradient"
 #tmux_conf_battery_vbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
+#tmux_conf_battery_vbar_palette="gradient(#00afff,#47a2ff,#7c91ff,#ac7afb,#d65be2,#e163df,#eb6cdd,#f475db,#ec9ff1,#eac3fe,#efe2ff,#ffffff)"
 
 # symbols used to indicate whether battery is charging or discharging
-#tmux_conf_battery_status_charging="↑"       # U+2191
-#tmux_conf_battery_status_discharging="↓"    # U+2193
-tmux_conf_battery_status_charging="🔌"     # U+1F50C
-tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+tmux_conf_battery_status_charging="↑"       # U+2191
+tmux_conf_battery_status_discharging="↓"    # U+2193
+#tmux_conf_battery_status_charging="🔌"     # U+1F50C
+#tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
@@ -397,6 +402,9 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # if you don't want Oh my tmux! to alter a binding or a setting, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
+
+# display a message after toggling mouse support
+bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
 
 # move status line to top
 #set -g status-position top
