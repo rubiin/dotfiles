@@ -18,14 +18,15 @@ plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
 
 verbose = false                                # set to true to see full installation output, see `RTX_VERBOSE`
 asdf_compat = false                            # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
-jobs = 6                                       # number of plugins or runtimes to install in parallel. The default is `4`.
+jobs = 8                                       # number of plugins or runtimes to install in parallel. The default is `8`.
 raw = false                                    # set to true to directly pipe plugins to stdin/stdout/stderr
 experimental = true
 idiomatic_version_file_enable_tools = ["node", "python", "pnpm", "npm", "bun", "deno", "go", "yarn"]
 python.compile = false                         # always download precompiled binaries
 color_theme ="catppuccin"
-pipx_uvx = true
+pipx.uvx = true
 gpg_verify =true
+npm.package_manager = "pnpm"
 
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
