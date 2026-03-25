@@ -76,6 +76,7 @@ file_folder_list=(
    "$config/zsh/.zlogin"
    "$config/zsh/zcompletions/_npm"
    "$config/zsh/zcompletions/_just"
+   "$config/zsh/zcompletions/_gh"
    "$config/zsh/zfunctions"
    "$config/zsh/.zshenv"
    "$config/zsh/.zshrc"
