@@ -1,4 +1,3 @@
-claude-code
 fabric-cli-git
 gitflow-cjs
 glace-git
