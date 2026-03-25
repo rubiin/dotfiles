@@ -21,13 +21,12 @@ asdf_compat = false                            # set to true to ensure .tool-ver
 jobs = 6                                       # number of plugins or runtimes to install in parallel. The default is `4`.
 raw = false                                    # set to true to directly pipe plugins to stdin/stdout/stderr
 experimental = true
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "python", "pnpm", "npm", "bun", "deno", "go", "yarn"]
 python.compile = false                         # always download precompiled binaries
 color_theme ="catppuccin"
+pipx_uvx = true
+gpg_verify =true
 
-[settings.node]
-gpg_verify = true
-compile = false
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
