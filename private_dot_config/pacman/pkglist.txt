@@ -1,5 +1,4 @@
 7zip
-age
 alacritty
 alsa-firmware
 alsa-plugins
