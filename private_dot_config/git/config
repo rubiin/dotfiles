@@ -65,6 +65,7 @@
 [commit]
 	gpgsign = true
 	template = ~/.config/git/template
+	verbose = true           # Include diff comment in commit message template
 
 [http]
 	postBuffer = 157286400
@@ -93,7 +94,8 @@
 	diffFilter = delta --color-only
 
 [rerere]
-	enabled = true
+	enabled = true           # Record and reuse conflict resolutions
+	autoupdate = true        # Apply stored conflict resolutions automatically
 
 [color]
 	branch = auto
