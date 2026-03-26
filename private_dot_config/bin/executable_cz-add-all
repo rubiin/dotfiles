@@ -29,7 +29,6 @@ file_folder_list=(
    "$config/mpv/scripts/vlccompat.lua"
    "$config/mpv/scripts/misc.lua"
    "$config/mpv/scripts/confirm_resume.lua"
-   "$config/ktorrentrc"
    "$config/wgetrc"
    "$config/vivaldi-stable.conf"
    "$config/spotify-flags.conf"
