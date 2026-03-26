@@ -104,6 +104,7 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
+hyprpolkitagent
 hyprsunset
 inetutils
 inxi
