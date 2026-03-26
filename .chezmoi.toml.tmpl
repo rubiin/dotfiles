@@ -15,12 +15,7 @@ args = ["--quiet"]
 [git]
 autocommit = true
 autoPush = true
-commitMessageTemplate = """
-chore(dotfiles): apply changes
-
-host: {{ .chezmoi.hostname }}
-time: {{ now | date "2006-01-02 15:04:05" }}
-"""
+commitMessageTemplate = "chore(dotfiles): update on {{ .chezmoi.hostname }} at {{ now | date \"2006-01-02 15:04\" }}"
 
 [edit]
 command = "nvim"
