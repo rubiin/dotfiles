@@ -5,6 +5,7 @@
 
 encryption = "age"
 progress = true
+
 [age]
     passphrase = true
 
@@ -14,6 +15,12 @@ args = ["--quiet"]
 [git]
 autocommit = true
 autoPush = true
+commitMessageTemplate = """
+chore(dotfiles): apply changes
+
+host: {{ .chezmoi.hostname }}
+time: {{ now | date "2006-01-02 15:04:05" }}
+"""
 
 [edit]
 command = "nvim"
@@ -27,6 +34,9 @@ pager = "delta --side-by-side"
 #command = "delta"
 #pager = "delta"
 #args = ["{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[template]
+options = ["missingkey=error"]
 
 [data]
 mode = "{{ $mode }}"
