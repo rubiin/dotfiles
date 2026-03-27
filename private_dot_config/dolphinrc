@@ -4,8 +4,8 @@ MenuBar=Disabled
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [General]
+ShowFullPath=true
 ShowSelectionToggle=false
-ShowStatusBar=false
 Version=202
 ViewPropsTimestamp=2023,4,26,16,58,48.324
 
@@ -33,7 +33,8 @@ ToolButtonStyle=IconOnly
 IconSize=16
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
 
 [Toolbar mainToolBar]
+IconSize=16
 ToolButtonStyle=IconOnly
