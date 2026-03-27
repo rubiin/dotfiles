@@ -238,8 +238,8 @@
         frp = !git flow release publish $(git fcb)
 
         #cleaning up local branches after merging them
-        forget="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
-        forgetlist="!git fetch -p && git branch -vv | awk '/: gone]/{print $1}'"
+	forget = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+	forgetlist = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}'#
 
 	# log, current branch
 	l  = log --pretty=lc --graph
@@ -412,3 +412,4 @@
 
 	# git git ...
 	git = "!git"
+
