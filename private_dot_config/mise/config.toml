@@ -41,6 +41,7 @@ node = "24"
 usage = "latest"
 prek = "latest"
 claude = "latest"
+"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "cargo:cargo-update" = "latest"
 "cargo:momoisay" = "latest"
 "pipx:ruff" = "latest"
