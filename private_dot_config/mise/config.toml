@@ -1,5 +1,6 @@
 
 [settings]
+lockfile = true
 # whether to prompt to install plugins and runtimes if they're not already installed
 # missing_runtime_behavior = 'autoinstall' # other options: 'ignore', 'warn', 'prompt', 'autoinstall'
 
