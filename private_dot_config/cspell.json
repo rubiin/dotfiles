@@ -370,5 +370,15 @@
     "zoxide"
   ],
   "language": "en",
-  "flagWords": []
+  "flagWords": [],
+  "dictionaries": [
+    "en_US",
+    "misc",
+    "companies",
+    "softwareTerms",
+    "python",
+    "fonts",
+    "filetypes",
+    "bash",
+  ],
 }
