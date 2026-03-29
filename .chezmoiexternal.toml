@@ -76,6 +76,13 @@ url = "https://github.com/NestCrafts/nestjs-easyconfig.git"
 refreshPeriod = "168h"
 
 
+# txt dictionaries
+[".config/dictionaries"]
+type="file"
+url="https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
+refreshPeriod="16h"
+
+
 # Some mpv scripts that I use, which are all files.
 [".config/mpv/scripts/sponsorblock_minimal.lua"]
 type = "file"
