@@ -1,0 +1,3 @@
+# example cliphist config
+max-items 1000
+max-dedupe-search 200
