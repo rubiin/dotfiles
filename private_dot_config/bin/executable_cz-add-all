@@ -51,7 +51,7 @@ file_folder_list=(
    "$config/git"
    "$config/npm"
    "$config/yt-dlp"
-   "$config/kitty"
+   "$config/kitty/kitty.conf"
    "$config/wezterm"
    "$config/sesh"
    "$config/yazi"
