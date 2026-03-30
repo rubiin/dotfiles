@@ -183,7 +183,6 @@ pipewire-pulse
 pkgfile
 playerctl
 plocate
-polkit-gnome
 poppler-glib
 power-profiles-daemon
 ppp
