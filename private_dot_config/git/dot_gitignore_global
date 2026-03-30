@@ -167,3 +167,7 @@ WakaTime.sublime-settings
 
 # conform.nvim
 .conform.*
+
+**/.claude/settings.local.json
+
+**/CLAUDE.local.md
