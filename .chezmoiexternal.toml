@@ -48,7 +48,10 @@ include = ["*/themes/**"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
 refreshPeriod = "168h"
-
+[".config/kitty/theme.conf"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/kitty/refs/heads/main/themes/mocha.conf"
+refreshPeriod = "168h"
 [".config/eza/theme.yml"]
 type = "file"
 url = "https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/catppuccin-mocha.yml"
