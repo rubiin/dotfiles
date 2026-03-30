@@ -24,7 +24,7 @@ Host "takeo-dev"
 Host *
 	# Always use SSH2.
 	Protocol 2
-
+	SendEnv LANG LC_*
 
 	# Use a shared channel for all sessions to the same host,
 	# instead of always opening a new one. This leads to much
@@ -38,3 +38,4 @@ Host *
 	TCPKeepAlive yes
 	ServerAliveInterval 20
 	ServerAliveCountMax 10
+	ConnectTimeout 20
