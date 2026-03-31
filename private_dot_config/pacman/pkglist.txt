@@ -104,7 +104,6 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
-hyprpolkitagent
 hyprsunset
 inetutils
 inxi
@@ -174,6 +173,7 @@ openvpn
 os-prober
 pacman-contrib
 pamixer
+pantheon-files
 pavucontrol
 perl
 persepolis
