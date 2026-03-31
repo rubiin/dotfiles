@@ -9,13 +9,13 @@ bat cache --build
 CONFIG_DIR="${HOME}/.config"
 ZSH_COMPLETIONS_DIR="$CONFIG_DIR/zsh/zcompletions"
 
-
 echo "Generating Zsh completions in $ZSH_COMPLETIONS_DIR..."
 npm completion >"$ZSH_COMPLETIONS_DIR/_npm"
 just --completions zsh >"$ZSH_COMPLETIONS_DIR/_just"
 gh completion -s zsh >"$ZSH_COMPLETIONS_DIR/_gh"
 docker completion zsh >"$ZSH_COMPLETIONS_DIR/_docker"
 mise completion zsh >"$ZSH_COMPLETIONS_DIR/_mise"
+hydectl completion zsh >"$ZSH_COMPLETIONS_DIR/_hydectl"
 
 hydectl reload &
 
