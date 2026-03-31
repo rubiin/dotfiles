@@ -52,6 +52,7 @@ https://github.com/hyprland-community/awesome-hyprland
 
 Throttle frequent signals: If you're connecting to things like "changed" or "motion-notify-event", debounce or rate-limit them.
 
+https://github.com/ilyamiro/nixos-configuration
 
 https://github.com/caelestia-dots/shell
 
