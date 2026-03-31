@@ -47,6 +47,10 @@ for dir in "${ZSH_SOURCE_DIRS[@]}"; do
   done
 done
 
+# Run automatically in interactive shells
+if [[ $- == *i* ]]; then
+  gh-token
+fi
 
 # this cannot be evalcached, because it needs to be run after the prompt is set
 eval "$(sheldon source)"
