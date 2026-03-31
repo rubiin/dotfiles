@@ -45,9 +45,17 @@ ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay 
 
 ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
-ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay -S docker docker-compose &&
-	sudo groupadd docker && sudo usermod -aG docker $USER &&
-	sudo systemctl enable docker.service && sudo systemctl enable containerd.service
+ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay -s docker docker-compose &&
+	sudo groupadd -f docker &&
+	sudo usermod -aG docker $USER &&
+	sudo systemctl enable --now docker.service &&
+	sudo systemctl enable --now containerd.service &&
+	echo
+echo "✅ Docker installed successfully."
+echo "⚠️  You must log out and log back in (or run 'newgrp docker')"
+echo "   for Docker permissions to take effect."
+echo
+echo "👉 Test with: docker run hello-world"
 
 # Prevent Docker from preventing boot for network-online.target
 sudo mkdir -p /etc/systemd/system/docker.service.d
@@ -99,7 +107,6 @@ echo "Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
-
 echo "setting gpg"
 mkdir -p ~/.local/share/gpg
 chmod 700 ~/.local/share/gpg
@@ -118,8 +125,6 @@ ask_yes_no_default "Do you want to reapply chezmoi configuration (recommended)?"
 
 echo "creating XDG directories"
 xdg-user-dirs-update
-
-ask_yes_no_default "Do you to install rust?" 0 && bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" -- -y
 
 echo "Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
