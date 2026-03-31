@@ -1,12 +1,35 @@
 # organize handy reusable functions to keep your .zshrc clean and modular.
 #─────────────────────────────────────────────────────────────────────────
 prepend_path() {
-  [[ ! -d "$1" ]] && return
+	[[ ! -d "$1" ]] && return
 
-  path=(
-      $1
-      $path
-  )
+	path=(
+		$1
+		$path
+	)
+}
+
+gh-token() {
+	# Capture status output and exit code
+	local auth_status
+	auth_status=$(gh auth status 2>&1)
+	local status_code=$?
+
+	if [ $status_code -eq 0 ]; then
+		local token
+		token=$(gh auth token)
+
+		export GH_TOKEN="$token"
+		export GITHUB_TOKEN="$token"
+		export GHORG_GITHUB_TOKEN="$token"
+		export HOMEBREW_GITHUB_API_TOKEN="$token"
+	elif [[ "$auth_status" == *"SAML"* ]]; then
+		echo " GitHub SAML session expired. Run 'gh auth refresh'"
+		return 1
+	else
+		echo " GitHub not authenticated. Run 'gh auth login'"
+		return 1
+	fi
 }
 
 # unmanages the file from chezmoi also deletes it
@@ -16,15 +39,14 @@ czx() {
 	rm -rf "$1"
 }
 
-
 unalias fastfetch 2>/dev/null
 
 fastfetch() {
-    if [ "$TERM" = "foot" ]; then
-        command fastfetch --logo-type sixel
-    else
-        command fastfetch --logo-type kitty
-    fi
+	if [ "$TERM" = "foot" ]; then
+		command fastfetch --logo-type sixel
+	else
+		command fastfetch --logo-type kitty
+	fi
 }
 
 # Show the path of a command, colorized and showing all matches
@@ -34,19 +56,19 @@ function which {
 
 # Show the path of a command, colorized and showing all matches
 timezsh() {
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do time $shell -i -c exit; done
+	shell=${1-$SHELL}
+	for i in $(seq 1 10); do time $shell -i -c exit; done
 }
 
-show_memory(){
-  ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
+show_memory() {
+	ps aux --sort=-%mem | grep $1 | awk 'NR==1 || $4 > 0 {printf "%.1f MB\t%s\n", $6/1024, $11}' | head
 
 }
 
 watch_mem_usage() {
-    local process_name="$1"
-    local interval="${2:-4}" # Default to 4 seconds if not provided
-    watch -n "$interval" "ps aux --sort=-%mem | grep -w \"$process_name\" | grep -v grep | awk 'NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'"
+	local process_name="$1"
+	local interval="${2:-4}" # Default to 4 seconds if not provided
+	watch -n "$interval" "ps aux --sort=-%mem | grep -w \"$process_name\" | grep -v grep | awk 'NR==1 || \$4 > 0 {printf \"%.1f MB\t%s\n\", \$6/1024, \$11}'"
 }
 
 clearcache() {
@@ -92,11 +114,9 @@ zsh-fix-history() {
 	fc -R .zsh_history
 }
 
-
 take() {
-		mkdir -p "$1" && cd "$1";
-	 }
-
+	mkdir -p "$1" && cd "$1"
+}
 
 # Calculate RAM usage of a process by its name.
 function calcram() {
@@ -180,4 +200,3 @@ function reinstall-nvim() {
 cheat() {
 	curl cheat.sh/"$1"
 }
-
