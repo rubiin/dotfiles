@@ -79,6 +79,7 @@ file_folder_list=(
    "$config/zsh/zcompletions/_gh"
    "$config/zsh/zcompletions/_docker"
    "$config/zsh/zcompletions/_mise"
+   "$config/zsh/zcompletions/_hydectl"
    "$config/zsh/zfunctions"
    "$config/zsh/.zshenv"
    "$config/zsh/.zshrc"
