@@ -452,6 +452,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'Morantron/tmux-fingers'
 set -g @plugin 'schasse/tmux-jump'
 
+# options for plugins 
 set -g @resurrect-save 'S'                          # Save the session
 set -g @resurrect-restore 'R'                       # Reload the session
 set -g @continuum-restore 'off'
