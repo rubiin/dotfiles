@@ -15,7 +15,7 @@
 --no-ignore
 
 # Exclude directories.
---glob=!{.git,.svn,node_modules,tealdeer,Trash,vendor,temp,dist}
+--glob=!{.git,.svn,node_modules,tealdeer,Trash,vendor,temp,dist,coverage,build}
 
 # Exclude file types.
 --glob=!*.{lock}
@@ -34,11 +34,11 @@
 --sort=path
 
 # Configure color settings and styles.
---colors=path:bg:0x3b,0x3b,0x3b
---colors=path:fg:white
---colors=line:fg:0xf2,0xc2,0x60
---colors=match:bg:0x2b,0x83,0xa6
---colors=match:fg:0xff,0xff,0xff
+--colors=path:bg:0x1e,0x1e,0x2e      # base
+--colors=path:fg:0xcdd6f4            # text
+--colors=line:fg:0xf9e2af            # yellow
+--colors=match:bg:0x89,0xb4,0xfa     # blue
+--colors=match:fg:0x1e,0x1e,0x2e     # base
 --colors=match:style:nobold
 
 
