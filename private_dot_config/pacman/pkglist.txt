@@ -219,7 +219,6 @@ sheldon
 slurp
 smartmontools
 sof-firmware
-spicetify-cli
 spotify
 spotube-bin
 starship
