@@ -15,7 +15,6 @@ file_folder_list=(
    "$HOME/sudoers.lecture"
 
    "$config/.curlrc"
-   "$config/.ripgreprc"
    "$config/.shellcheckrc"
 
    "$config/aria2/aria2.conf"
