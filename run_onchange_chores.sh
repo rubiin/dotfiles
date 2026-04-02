@@ -1,21 +1,27 @@
 #!/bin/sh
 
-# use this script to perform cleaning or anything after applying updates
 
-mise install && mise prune -y
-bat cache --build
-
-# Set your completions folder
+# Ensure directory exists
 CONFIG_DIR="${HOME}/.config"
 ZSH_COMPLETIONS_DIR="$CONFIG_DIR/zsh/zcompletions"
+mkdir -p "$ZSH_COMPLETIONS_DIR"
+
+echo "Running chezmoi post tasks in parallel..."
+
+parallel ::: \
+  "mise install" \
+  "mise prune -y" \
+  "bat cache --build"
 
 echo "Generating Zsh completions in $ZSH_COMPLETIONS_DIR..."
-npm completion >"$ZSH_COMPLETIONS_DIR/_npm"
-just --completions zsh >"$ZSH_COMPLETIONS_DIR/_just"
-gh completion -s zsh >"$ZSH_COMPLETIONS_DIR/_gh"
-docker completion zsh >"$ZSH_COMPLETIONS_DIR/_docker"
-mise completion zsh >"$ZSH_COMPLETIONS_DIR/_mise"
-hydectl completion zsh >"$ZSH_COMPLETIONS_DIR/_hydectl"
+
+parallel ::: \
+  "npm completion > $ZSH_COMPLETIONS_DIR/_npm" \
+  "just --completions zsh > $ZSH_COMPLETIONS_DIR/_just" \
+  "gh completion -s zsh > $ZSH_COMPLETIONS_DIR/_gh" \
+  "docker completion zsh > $ZSH_COMPLETIONS_DIR/_docker" \
+  "mise completion zsh > $ZSH_COMPLETIONS_DIR/_mise" \
+  "hydectl completion zsh > $ZSH_COMPLETIONS_DIR/_hydectl"
 
 hydectl reload &
 
