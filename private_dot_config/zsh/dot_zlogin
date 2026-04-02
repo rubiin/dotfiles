@@ -129,7 +129,7 @@ export FZF_DEFAULT_OPTS=" \
 --height=50% --border --min-height=25 --pointer='→'"
 
 ##█▓▒░  ripgrep
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
 ##█▓▒░  tmux
 export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins/tpm"
