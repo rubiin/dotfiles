@@ -69,6 +69,7 @@ file_folder_list=(
    "$config/pacman"
    "$config/persepolis_download_manager/persepolis.conf"
 
+   "$config/ripgrep"
    "$config/safeeyes/safeeyes.json"
    "$config/sesh"
    "$config/spotify-flags.conf"
