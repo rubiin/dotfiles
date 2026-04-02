@@ -134,6 +134,9 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 ##█▓▒░  tmux
 export TMUX_PLUGIN_MANAGER_PATH="$XDG_CONFIG_HOME/tmux/plugins/tpm"
 
+# https://cli.github.com/manual/gh_help_environment
+export GH_NO_UPDATE_NOTIFIER=1
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
@@ -155,6 +158,7 @@ export NODE_REPL_HISTORY_SIZE='32768'
 export NODE_COMPILE_CACHE="$XDG_CACHE_HOME/node"
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE="sloppy"
+
 
 ##█▓▒░  npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
