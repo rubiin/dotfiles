@@ -32,6 +32,13 @@ gh-token() {
 	fi
 }
 
+# colorized & paginated tree, $1 = level
+function tree {
+	local level=${1:-3}
+	eza --tree --level="$level" --no-quotes --color=always
+}
+
+
 # unmanages the file from chezmoi also deletes it
 czx() {
 	echo "$1"
