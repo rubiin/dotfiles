@@ -93,7 +93,7 @@ alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 if [[ -n "$(command -v nvim)" && -z "$(command -v vim)" ]]; then
     # Alias vim to nvim for convenience
     alias vim="nvim"
-    
+
     # Shortcut to open nvim headless and sync all plugins using Lazy.nvim
     alias vimu='nvim --headless "+Lazy! sync" +qa'
 fi
@@ -155,6 +155,9 @@ alias js="just"
 
 # bun aliases
 alias b="bun"
+
+# python aliases
+alias freeze="pip freeze > requirements.txt && bat requirements.txt"
 
 alias yayskip='yay -S --mflags --skipinteg'
 
