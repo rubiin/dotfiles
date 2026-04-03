@@ -231,7 +231,6 @@ tesseract-data-eng
 texinfo
 tmux
 topgrade
-tree
 ttf-bitstream-vera
 ttf-dejavu
 ttf-dejavu-nerd
