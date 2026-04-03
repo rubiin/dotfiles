@@ -75,6 +75,9 @@ file_folder_list=(
    "$config/spotify-flags.conf"
    "$config/starship"
 
+   "$config/TODO.md"
+
+
    "$config/tmux/config"
    "$config/tmux/tmux.conf.local"
    "$config/topgrade.toml"
