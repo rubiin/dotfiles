@@ -132,6 +132,7 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+linux-lts
 lite-xl
 logrotate
 lsb-release
@@ -179,6 +180,7 @@ perl
 persepolis
 pipewire-alsa
 pipewire-jack
+pipewire-libcamera
 pipewire-pulse
 pkgfile
 playerctl
