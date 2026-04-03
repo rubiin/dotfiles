@@ -143,10 +143,16 @@
 
 [diff]
 	colorMoved = default
+  tool = nvim_difftool
+
+[difftool "nvim_difftool"]
+  cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
+
 
 [grep]
 	# Consider most regexes to be ERE
 	extendedRegexp = true
+
 [index]
         threads = true
 
