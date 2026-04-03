@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # Ensure directory exists
 CONFIG_DIR="${HOME}/.config"
 ZSH_COMPLETIONS_DIR="$CONFIG_DIR/zsh/zcompletions"
@@ -21,6 +20,7 @@ parallel ::: \
   "gh completion -s zsh > $ZSH_COMPLETIONS_DIR/_gh" \
   "docker completion zsh > $ZSH_COMPLETIONS_DIR/_docker" \
   "mise completion zsh > $ZSH_COMPLETIONS_DIR/_mise" \
+  "delta completion zsh > $ZSH_COMPLETIONS_DIR/_delta" \
   "hydectl completion zsh > $ZSH_COMPLETIONS_DIR/_hydectl"
 
 hydectl reload &
