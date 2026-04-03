@@ -31,7 +31,7 @@ file_folder_list=(
    "$config/electron-flags.conf"
 
    "$config/fastfetch"
-   "$config/fastfetch"
+   "$config/fontconfig"
 
    "$config/git"
 
