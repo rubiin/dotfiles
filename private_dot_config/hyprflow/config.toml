@@ -1,0 +1,17 @@
+[general]
+default_session = "latest"
+restore_delay_ms = 500
+window_detect_timeout_ms = 5000
+autosave_retain = 5
+
+[filters]
+ignore_classes = ["waybar", "wofi", "mako", "polkit", "nm-applet", "xdg-desktop-portal"]
+
+[apps.kitty]
+binary = "kitty"
+capture_cwd = true
+capture_last_command = true
+hint_template = "# Last: {last_command}\n# Dir: {cwd}"
+
+[apps.brave-browser]
+binary = "brave"
