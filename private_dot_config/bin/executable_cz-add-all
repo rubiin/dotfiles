@@ -32,7 +32,6 @@ file_folder_list=(
 
    "$config/dolphinrc"
    "$config/electron-flags.conf"
-   "$config/eza"
 
    "$config/fastfetch"
    "$config/foot"
