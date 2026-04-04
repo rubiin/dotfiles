@@ -1,0 +1,143 @@
+:root {
+  /* Catppuccin Mocha 🟣 Palette (dark theme) */
+  --crust: #11111b;
+  /* darkest background */
+  --mantle: #181825;
+  /* darker background */
+  --base: #1e1e2e;
+  /* main background */
+  --surface0: #313244;
+  /* card/panel surfaces */
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --overlay2: #9399b2;
+  --subtext0: #a6adc8;
+  /* muted text */
+  --subtext1: #bac2de;
+  /* secondary text */
+  --text: #cdd6f4;
+  /* primary text */
+
+  /* accents (highlights) */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+
+  /* map your semantic roles */
+  --foreground: var(--text);
+  --background: var(--base);
+  --accent: var(--blue);
+  --muted: var(--overlay1);
+  --card-bg: var(--surface0);
+  --text-dark: var(--mantle);
+  --accent-hover: var(--sapphire);
+  --selected-tab: var(--blue);
+}
+
+* {
+  all: unset;
+  font-family: "JetBrains Mono NF", monospace;
+  color: var(--foreground);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.window {
+  background-color: rgba(30, 30, 46, 0.95);
+  /* --base with alpha */
+  border: 2px solid var(--accent);
+  margin: 4px;
+  padding: 18px;
+}
+
+tabs {
+  padding: 0.5rem 1rem;
+}
+
+tabs>tab {
+  margin-right: 1rem;
+}
+
+.tab-label {
+  color: var(--foreground);
+  transition: all 0.2s ease;
+}
+
+tabs>tab:checked>.tab-label,
+tabs>tab:active>.tab-label {
+  text-decoration: underline currentColor;
+  color: var(--selected-tab);
+}
+
+tabs>tab:focus>.tab-label {
+  color: var(--foreground);
+}
+
+.page {
+  padding: 1rem;
+}
+
+.image-label {
+  font-size: 12px;
+  padding: 0.25rem;
+}
+
+flowboxchild>.card,
+button>.card {
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-color: var(--background);
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  padding: 5px;
+}
+
+flowboxchild:hover>.card,
+button:hover>.card,
+flowboxchild:active>.card,
+flowboxchild:selected>.card,
+button:active>.card,
+button:selected>.card,
+button:focus>.card {
+  border: 2px solid var(--accent);
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.region-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.region-button>label {
+  color: var(--text-dark);
+}
+
+.region-button:not(:disabled):hover,
+.region-button:not(:disabled):focus {
+  background-color: var(--accent-hover);
+  color: var(--text-dark);
+}
+
+.region-button:disabled {
+  background-color: var(--muted);
+  color: var(--background);
+}
