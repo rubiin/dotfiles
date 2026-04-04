@@ -1,7 +1,7 @@
 fabric-cli-git
-fancontrol-gui
 gitflow-cjs
 glace-git
+hyprland-preview-share-picker-git
 jetbrains-toolbox
 matugen-bin
 megabasterd-bin
