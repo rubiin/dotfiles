@@ -16,28 +16,41 @@ file_folder_list=(
 
    "$config/.curlrc"
    "$config/.shellcheckrc"
+   "$config/.stylua.toml"
 
    "$config/aria2/aria2.conf"
    "$config/atuin"
 
+   "$config/bauh"
    "$config/bat/config"
    "$config/bin"
    "$config/btop/btop.conf"
 
+   "$config/cliphist"
    "$config/code-flags.conf"
    "$config/cspell.json"
 
    "$config/dolphinrc"
    "$config/electron-flags.conf"
+   "$config/eza"
 
    "$config/fastfetch"
+   "$config/foot"
    "$config/fontconfig"
 
    "$config/git"
+   "$config/gh"
+   "$config/gnupg"
+   "$config/ghostty"
+   "$config/gpg"
 
    "$config/hyde/config.toml"
    "$config/hypr/hyprsunset.conf"
    "$config/hypr/userprefs.conf"
+   "$config/hypr/xdph.conf"
+   "$config/hyprland-preview-share-picker"
+   "$config/hyprflow"
+
 
    "$config/imv"
 
@@ -52,6 +65,7 @@ file_folder_list=(
 
    "$config/mimeapps.list"
    "$config/mise"
+   "$config/menus"
 
    "$config/mpv/README.md"
    "$config/mpv/input.conf"
@@ -68,10 +82,12 @@ file_folder_list=(
 
    "$config/pacman"
    "$config/persepolis_download_manager/persepolis.conf"
+   "$config/procs"
 
    "$config/ripgrep"
    "$config/safeeyes/safeeyes.json"
    "$config/sesh"
+   "$config/sheldon"
    "$config/spotify-flags.conf"
    "$config/starship"
 
@@ -81,7 +97,6 @@ file_folder_list=(
    "$config/tmux/config"
    "$config/tmux/tmux.conf.local"
    "$config/topgrade.toml"
-   "$config/topgrade.toml"
    "$config/tsumiki/config.toml"
    "$config/tsumiki/theme.toml"
 
@@ -90,6 +105,7 @@ file_folder_list=(
    "$config/waycorner"
    "$config/wgetrc"
    "$config/wezterm"
+   "$config/xdg-terminals.list"
 
    "$config/yay"
    "$config/yazi"
