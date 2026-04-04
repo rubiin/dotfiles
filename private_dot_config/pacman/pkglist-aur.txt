@@ -1,4 +1,5 @@
 fabric-cli-git
+fancontrol-gui
 gitflow-cjs
 glace-git
 jetbrains-toolbox
