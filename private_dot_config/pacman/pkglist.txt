@@ -242,7 +242,6 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
 ttf-opensans
-ttf-twemoji-git
 ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 udiskie
@@ -286,7 +285,6 @@ xorg-xrandr
 xsettingsd
 xz
 yay
-yazi-git
 yt-dlp
 zathura
 zathura-pdf-poppler
