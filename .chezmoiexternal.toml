@@ -59,7 +59,6 @@ refreshPeriod = "168h"
 
 
 
-
 # Typescript libraries that I maintain, which are all git repositories.
 ["personal/typescript/nestjs-cloudinary"]
 type = "git-repo"
@@ -83,7 +82,7 @@ refreshPeriod = "168h"
 [".config/dictionaries"]
 type="file"
 url="https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
-refreshPeriod="16h"
+refreshPeriod="168h"
 
 
 # Some mpv scripts that I use, which are all files.
