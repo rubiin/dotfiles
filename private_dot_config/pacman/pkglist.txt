@@ -82,6 +82,7 @@ git
 git-delta
 git-interactive-rebase-tool-git
 github-cli
+gitlogue
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
@@ -150,7 +151,6 @@ modemmanager
 mtools
 nbd
 ndisc6
-neovim
 net-tools
 netctl
 network-manager-applet
