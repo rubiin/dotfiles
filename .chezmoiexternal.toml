@@ -79,7 +79,7 @@ refreshPeriod = "168h"
 
 
 # txt dictionaries
-[".config/dictionaries"]
+[".config/dictionaries/words.txt"]
 type="file"
 url="https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
 refreshPeriod="168h"
