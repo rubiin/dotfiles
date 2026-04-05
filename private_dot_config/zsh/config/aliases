@@ -56,6 +56,7 @@ alias update-nvim="nvim --headless "+Lazy! sync" +qa && cd .config/nvim && git s
 alias icat="kitten icat"
 alias f="$(pay-respects zsh)"
 alias yz="yazi"
+alias gp="gitpick"
 
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
