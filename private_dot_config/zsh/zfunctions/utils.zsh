@@ -9,6 +9,12 @@ prepend_path() {
 	)
 }
 
+# create some folders if they don't exist
+create_dir_if_not_exists() {
+  [ ! -d "$1" ] && mkdir -p "$1"
+}
+
+# set up git token for CLI tools
 gh-token() {
 	# Capture status output and exit code
 	local auth_status
@@ -45,6 +51,7 @@ czx() {
 	cz forget "$1"
 	rm -rf "$1"
 }
+
 
 unalias fastfetch 2>/dev/null
 
@@ -91,12 +98,6 @@ sssh() {
 	while true; do
 		command ssh "$@"
 		[ $? -ne 255 ] && break || sleep 0.5
-	done
-}
-
-code_update_extensions() {
-	for ext in $(code --list-extensions); do
-		code --install-extension "$ext" --force
 	done
 }
 
