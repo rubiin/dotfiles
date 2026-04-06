@@ -108,6 +108,7 @@ hyprpicker
 hyprsunset
 inetutils
 inxi
+iptables
 iwd
 jfsutils
 jq
