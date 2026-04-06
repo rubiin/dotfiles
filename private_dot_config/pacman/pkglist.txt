@@ -108,7 +108,6 @@ hyprpicker
 hyprsunset
 inetutils
 inxi
-iptables-nft
 iwd
 jfsutils
 jq
@@ -187,6 +186,7 @@ playerctl
 plocate
 polkit-gnome
 poppler-glib
+postman-bin
 power-profiles-daemon
 ppp
 pptpclient
@@ -285,6 +285,7 @@ xorg-xrandr
 xsettingsd
 xz
 yay
+yazi
 yt-dlp
 zathura
 zathura-pdf-poppler
