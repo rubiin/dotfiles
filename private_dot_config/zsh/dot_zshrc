@@ -66,12 +66,9 @@ _evalcache fzf --zsh
 _evalcache atuin init zsh
 
 # create some folders if they don't exist
-[ ! -d ~/projects ] && mkdir ~/projects
-[ ! -d ~/personal ] && mkdir ~/personal
-[ ! -d ~/work ] && mkdir ~/work
+create_dir_if_not_exists "$HOME/projects"
+create_dir_if_not_exists "$HOME/personal"
+create_dir_if_not_exists "$HOME/work"
 
 #Display Pokemon
 pokego --no-title --random 1,3,6
-
-
-export PATH=$PATH:/home/devina/.spicetify
