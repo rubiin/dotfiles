@@ -56,9 +56,13 @@ czx() {
 unalias fastfetch 2>/dev/null
 
 fastfetch() {
-	if [ "$TERM" = "foot" ]; then
+	# Use SIXEL when:
+	# - running inside tmux (images need special handling)
+	# - running in foot terminal (native SIXEL support)
+	if [ -n "$TMUX" ] || [[ "$TERM" == foot* ]]; then
 		command fastfetch --logo-type sixel
 	else
+		# Fallback to kitty graphics for other terminals
 		command fastfetch --logo-type kitty
 	fi
 }
