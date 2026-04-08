@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775682982153,
+  "projectRoot": "/home/devina/.local/share/chezmoi",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "cheatsheets": {
+      "path": "cheatsheets",
+      "purpose": null,
+      "fileCount": 10,
+      "lastAccessed": 1775682982149,
+      "keyFiles": [
+        "50-ts.pdf",
+        "CSS Selector Cheat Sheet - Dark.pdf",
+        "Clean%20Code%20By%20Robert%20C%20Martin.pdf",
+        "Nuxtjs-Cheat-Sheet.pdf",
+        "Vue-Essentials-Cheat-Sheet.pdf"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 1,
+      "lastAccessed": 1775682982149,
+      "keyFiles": [
+        "bluetooth.md"
+      ]
+    },
+    "dot_agents": {
+      "path": "dot_agents",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775682982149,
+      "keyFiles": []
+    },
+    "dot_claude": {
+      "path": "dot_claude",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1775682982150,
+      "keyFiles": [
+        "CLAUDE.md",
+        "encrypted_settings.json.age"
+      ]
+    },
+    "dot_local": {
+      "path": "dot_local",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775682982151,
+      "keyFiles": []
+    },
+    "dot_var": {
+      "path": "dot_var",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775682982152,
+      "keyFiles": []
+    },
+    "private_dot_config": {
+      "path": "private_dot_config",
+      "purpose": null,
+      "fileCount": 18,
+      "lastAccessed": 1775682982152,
+      "keyFiles": [
+        "TODO.md",
+        "code-flags.conf",
+        "cspell.json",
+        "dolphinrc",
+        "dot_curlrc"
+      ]
+    },
+    "private_dot_ssh": {
+      "path": "private_dot_ssh",
+      "purpose": null,
+      "fileCount": 7,
+      "lastAccessed": 1775682982152,
+      "keyFiles": [
+        "aur.pub",
+        "encrypted_private_aur.age",
+        "encrypted_private_github.age",
+        "encrypted_private_takeo.age",
+        "github.pub"
+      ]
+    },
+    "dot_var/app": {
+      "path": "dot_var/app",
+      "purpose": "Application code",
+      "fileCount": 0,
+      "lastAccessed": 1775682982153,
+      "keyFiles": []
+    },
+    "private_dot_config/bin": {
+      "path": "private_dot_config/bin",
+      "purpose": "Executable scripts",
+      "fileCount": 37,
+      "lastAccessed": 1775682982153,
+      "keyFiles": [
+        "executable_OpenSubtitlesDownload.py",
+        "executable_base-install.sh",
+        "executable_cb-small"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1775683049424,
+      "type": "file"
+    },
+    {
+      "path": "dot_claude/CLAUDE.md",
+      "accessCount": 1,
+      "lastAccessed": 1775683056148,
+      "type": "file"
+    },
+    {
+      "path": "run_onchange_chores.sh",
+      "accessCount": 1,
+      "lastAccessed": 1775683501664,
+      "type": "file"
+    },
+    {
+      "path": ".chezmoiexternal.toml",
+      "accessCount": 1,
+      "lastAccessed": 1775683535658,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
