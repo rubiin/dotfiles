@@ -54,7 +54,6 @@ alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
 alias update-nvim="nvim --headless "+Lazy! sync" +qa && cd .config/nvim && git sync-this-repo"
 alias icat="kitten icat"
-alias f="$(pay-respects zsh)"
 alias yz="yazi"
 alias gp="gitpick"
 
