@@ -61,7 +61,7 @@ fi
 #source scripts with _evalcache
 _evalcache hydectl completion zsh
 _evalcache zoxide init zsh --hook pwd
-_evalcache pay-respects zsh --alias --nocnf
+_evalcache pay-respects zsh --alias
 
 # Set up fzf key bindings and fuzzy completion
 _evalcache fzf --zsh
