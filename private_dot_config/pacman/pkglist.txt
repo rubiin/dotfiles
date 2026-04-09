@@ -8,6 +8,7 @@ amd-ucode
 archlinux-keyring
 aria2
 ark
+asciiquarium
 atuin
 audacity
 awww
@@ -152,6 +153,7 @@ modemmanager
 mtools
 nbd
 ndisc6
+neovim
 net-tools
 netctl
 network-manager-applet
