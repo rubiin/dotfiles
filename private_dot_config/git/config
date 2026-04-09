@@ -9,6 +9,18 @@
 [credential]
 	helper = cache --timeout=86400
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+
 [pull]
 	rebase = true
 	prune = true
@@ -421,5 +433,3 @@
 	# git git ...
 	git = "!git"
 
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
