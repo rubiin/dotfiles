@@ -26,7 +26,7 @@
 --embed-chapters
 
 # Display progress in console titlebar
---console-title              
+--console-title
 
 # Do not overwrite existing output files
 --no-overwrites
@@ -39,4 +39,6 @@
 --concurrent-fragments 6
 
 --no-write-comments
---geo-bypass 
+--geo-bypass
+
+--js-runtimes deno:$HOME/.local/share/mise/shims/deno
