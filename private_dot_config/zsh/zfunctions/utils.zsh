@@ -11,31 +11,23 @@ prepend_path() {
 
 # create some folders if they don't exist
 create_dir_if_not_exists() {
-  [ ! -d "$1" ] && mkdir -p "$1"
+	[ ! -d "$1" ] && mkdir -p "$1"
 }
 
 # set up git token for CLI tools
 gh-token() {
-	# Capture status output and exit code
-	local auth_status
-	auth_status=$(gh auth status 2>&1)
-	local status_code=$?
+	unset -f gh-token
 
-	if [ $status_code -eq 0 ]; then
-		local token
-		token=$(gh auth token)
-
-		export GH_TOKEN="$token"
-		export GITHUB_TOKEN="$token"
-		export GHORG_GITHUB_TOKEN="$token"
-		export HOMEBREW_GITHUB_API_TOKEN="$token"
-	elif [[ "$auth_status" == *"SAML"* ]]; then
-		echo " GitHub SAML session expired. Run 'gh auth refresh'"
-		return 1
-	else
+	local token
+	token=$(gh auth token 2>/dev/null) || {
 		echo " GitHub not authenticated. Run 'gh auth login'"
 		return 1
-	fi
+	}
+
+	export GH_TOKEN="$token"
+	export GITHUB_TOKEN="$token"
+	export GHORG_GITHUB_TOKEN="$token"
+	export HOMEBREW_GITHUB_API_TOKEN="$token"
 }
 
 # colorized & paginated tree, $1 = level
@@ -44,14 +36,12 @@ function tree {
 	eza --tree --level="$level" --no-quotes --color=always
 }
 
-
 # unmanages the file from chezmoi also deletes it
 czx() {
 	echo "$1"
 	cz forget "$1"
 	rm -rf "$1"
 }
-
 
 unalias fastfetch 2>/dev/null
 
