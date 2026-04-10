@@ -59,6 +59,9 @@ alias gp="gitpick"
 
 alias npx="bunx"
 
+alias skillup="npx skills add -y"
+
+
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 	alias pbcopy='xclip -selection clipboard'
