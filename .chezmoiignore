@@ -45,7 +45,6 @@
 .local/include
 .local/lib/
 .local/pipx/
-.local/state/
 .config/yazi/flavors/
 .config/yazi/plugins/
 .config/git/catppuccin.gitconfig
