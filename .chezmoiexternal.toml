@@ -140,7 +140,7 @@ refreshPeriod = "168h"
 
 [".config/mpv/script-opts/SmartCopyPaste.conf"]
 type = "file"
-url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/scripts/SmartCopyPaste.conf"
+url = "https://raw.githubusercontent.com/Eisa01/mpv-scripts/refs/heads/master/script-opts/SmartCopyPaste.conf"
 refreshPeriod = "168h"
 
 
