@@ -289,7 +289,6 @@ xsettingsd
 xz
 yay
 yazi
-yt-dlp
 zathura
 zathura-pdf-poppler
 zeal
