@@ -57,6 +57,8 @@ alias icat="kitten icat"
 alias yz="yazi"
 alias gp="gitpick"
 
+alias npx="bunx"
+
 # Copy / paste
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 	alias pbcopy='xclip -selection clipboard'
