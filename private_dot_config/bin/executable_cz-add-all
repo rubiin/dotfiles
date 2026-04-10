@@ -73,7 +73,6 @@ file_folder_list=(
    "$config/mpv/menu.conf"
    "$config/mpv/mpv.conf"
    "$config/mpv/profiles.conf"
-   "$config/mpv/script-opts/evafast.conf"
    "$config/mpv/script-opts/confirm_resume.conf"
    "$config/mpv/scripts/confirm_resume.lua"
    "$config/mpv/scripts/misc.lua"
