@@ -30,6 +30,14 @@ gh-token() {
 	export HOMEBREW_GITHUB_API_TOKEN="$token"
 }
 
+gh-token-clear() {
+	unset GH_TOKEN
+	unset GITHUB_TOKEN
+	unset GHORG_GITHUB_TOKEN
+	unset HOMEBREW_GITHUB_API_TOKEN
+	echo "GitHub token cache cleared."
+}
+
 # colorized & paginated tree, $1 = level
 function tree {
 	local level=${1:-3}
