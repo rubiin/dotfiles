@@ -258,6 +258,7 @@ vivaldi
 vlc
 vlc-plugins-all
 vpnc
+vulkan-radeon
 vulkan-tools
 watchexec
 welcome
