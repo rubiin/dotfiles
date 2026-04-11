@@ -8,7 +8,7 @@
       "skillPath": "design-an-interface/SKILL.md",
       "skillFolderHash": "59d5eca0fd23930d3d3821aa9da507f1bdb8a348",
       "installedAt": "2026-04-05T21:22:21.938Z",
-      "updatedAt": "2026-04-08T16:59:59.942Z"
+      "updatedAt": "2026-04-11T08:35:06.907Z"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -17,7 +17,7 @@
       "skillPath": "skills/find-skills/SKILL.md",
       "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
       "installedAt": "2026-04-05T21:22:30.335Z",
-      "updatedAt": "2026-04-08T19:31:22.417Z"
+      "updatedAt": "2026-04-11T08:34:38.244Z"
     },
     "request-refactor-plan": {
       "source": "mattpocock/skills",
@@ -44,7 +44,7 @@
       "skillPath": "improve-codebase-architecture/SKILL.md",
       "skillFolderHash": "78b2029cbf4a74fa798c97ea27bc02bdeb2e3237",
       "installedAt": "2026-04-05T21:23:42.470Z",
-      "updatedAt": "2026-04-08T17:00:58.112Z"
+      "updatedAt": "2026-04-11T08:35:57.896Z"
     },
     "caveman": {
       "source": "JuliusBrussee/caveman",
@@ -90,7 +90,7 @@
       "skillPath": "grill-me/SKILL.md",
       "skillFolderHash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499",
       "installedAt": "2026-04-08T19:44:27.873Z",
-      "updatedAt": "2026-04-08T19:44:27.873Z"
+      "updatedAt": "2026-04-11T08:34:05.355Z"
     },
     "write-a-skill": {
       "source": "mattpocock/skills",
@@ -99,7 +99,7 @@
       "skillPath": "write-a-skill/SKILL.md",
       "skillFolderHash": "2f252b35aa238879afc5a230ac30343708dee0b3",
       "installedAt": "2026-04-08T19:46:46.804Z",
-      "updatedAt": "2026-04-08T19:46:46.804Z"
+      "updatedAt": "2026-04-11T08:35:44.776Z"
     },
     "compress": {
       "source": "JuliusBrussee/caveman",
