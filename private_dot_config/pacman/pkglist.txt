@@ -78,7 +78,6 @@ flatpak
 fontforge
 freetype2
 fwupd
-ghostty
 git
 git-delta
 git-interactive-rebase-tool-git
