@@ -1,22 +1,20 @@
+---
 # paths to stylesheets on the filesystem which should be applied to the application
 #
 # relative paths are resolved relative to the location of the config file
-stylesheets: ["./style.css"]
+stylesheets: [./style.css]
 # default page selected when the picker is opened
 default_page: outputs
-
 window:
   # height of the application window
   height: 500
   # width of the application window
   width: 1000
-
 image:
   # size to which the images should be internally resized to reduce the memory footprint
   resize_size: 500
   # target size of the longer side of the image widget
   widget_size: 150
-
 classes:
   # css classname of the window
   window: window
@@ -38,7 +36,6 @@ classes:
   region_button: region-button
   # css classname of the button containing the session restore checkbox and label
   restore_button: restore-button
-
 windows:
   # minimum amount of image cards per row on the windows page
   min_per_row: 3
@@ -48,7 +45,6 @@ windows:
   clicks: 1
   # spacing in pixels between the window cards
   spacing: 12
-
 outputs:
   # number of clicks needed to select an output
   clicks: 1
@@ -59,12 +55,10 @@ outputs:
   show_label: false
   # size the output cards respectively to their scaling
   respect_output_scaling: true
-
 region:
   # command to run for region selection
   # the output needs to be in the <output>@<x>,<y>,<w>,<h> (e.g. DP-3@2789,436,756,576) format
   command: slurp -f '%o@%x,%y,%w,%h'
-
 # hide the token restore checkbox and use the default value instead
 hide_token_restore: true
 # enable debug logs by default

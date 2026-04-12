@@ -1,5 +1,6 @@
+---
 github.com:
-    git_protocol: ssh
-    users:
-        rubiin:
-    user: rubiin
+  git_protocol: ssh
+  users:
+    rubiin:
+  user: rubiin
