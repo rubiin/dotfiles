@@ -9,4 +9,3 @@ StartupNotify=true
 Categories=GNOME;GTK;Utility;
 MimeType=x-scheme-handler/mongodb;x-scheme-handler/mongodb+srv;
 Terminal=false
-

@@ -30,4 +30,3 @@ then
 		show_window >> /dev/null
 	fi
 fi
-

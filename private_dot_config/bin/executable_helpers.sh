@@ -23,4 +23,3 @@ ask_yes_no_default() {
         * ) return "${default:-0}";;
     esac
 }
-

@@ -8,5 +8,3 @@ else
 fi;
 
 _comp_options+=(globdots) # tab complete hidden files
-
-

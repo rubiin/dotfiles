@@ -18,4 +18,3 @@ if [ "$1" = "false" ]; then
 	hyprctl keyword misc:vfr false
 
 fi
-

@@ -137,4 +137,3 @@ path = "unix:///var/run/docker.sock"
 mode = "Auto"
 detect_width = false
 use_builtin = false
-

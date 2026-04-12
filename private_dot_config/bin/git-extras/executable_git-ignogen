@@ -122,4 +122,3 @@ printf '%s\n' "${ignore_files[@]}" |
     fzf \
       --header="Select a entry to generate ignore…"\
       --select-1  
-

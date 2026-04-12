@@ -71,4 +71,3 @@ config.ignore_files = {
   "%.suo$",         "%.pdb$",       "%.idb$",        "%.class$", "%.psd$", "%.db$",
   "^desktop%.ini$", "^%.DS_Store$", "^%.directory$",
 }
-

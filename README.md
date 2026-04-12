@@ -148,6 +148,3 @@ By using these dotfiles, you acknowledge that you understand these points and ac
 
 # If you use i3wm, check the branch [i3wm](https://github.com/rubiin/dotfiles/tree/i3wm) for my i3 rice
 # If you use kde, check the  [kde](https://github.com/rubiin/dotfiles/tree/kde) branch
-
-
-

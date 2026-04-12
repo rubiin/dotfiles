@@ -8,4 +8,3 @@ _pip_completion()
 }
 complete -o default -F _pip_completion /usr/bin/python -m pip
 # pip bash completion end
-
