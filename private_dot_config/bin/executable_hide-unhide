@@ -16,7 +16,7 @@ show_window(){
 	pid=$(tail -1 $stack_file && sed -i '$d' $stack_file)
 	[ -z $pid ] && exit
 
-	current_workspace=$(hyprctl activeworkspace -j | jq '.id')	
+	current_workspace=$(hyprctl activeworkspace -j | jq '.id')
 	hyprctl dispatch movetoworkspacesilent $current_workspace,pid:$pid
 }
 

@@ -103,7 +103,7 @@ Here are some details about my setup:
 - **`---`**: Placeholder, any app can go here.
 - **`name`**: Application that opens automatically in its designated workspace.
 
-> [!NOTE]  
+> [!NOTE]
 > I move random apps that I spawn to special workspace as well
 
 ## Demo
