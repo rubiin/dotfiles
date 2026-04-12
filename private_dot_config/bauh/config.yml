@@ -1,12 +1,13 @@
+---
 backup:
-  downgrade: null
+  downgrade:
   enabled: true
-  install: null
+  install:
   mode: incremental
   remove_method: self
   type: rsync
-  uninstall: null
-  upgrade: null
+  uninstall:
+  upgrade:
 boot:
   load_apps: true
 disk:
@@ -16,9 +17,9 @@ download:
   check_ssl: true
   icons: true
   multithreaded: false
-  multithreaded_client: null
-gems: null
-locale: null
+  multithreaded_client:
+gems:
+locale:
 memory_cache:
   data_expiration: 3600
   icon_expiration: 300
@@ -39,8 +40,8 @@ ui:
     max_displayed: 50
   theme: darcula
   tray:
-    default_icon: null
-    updates_icon: null
+    default_icon:
+    updates_icon:
 updates:
   ask_for_reboot: true
   check_interval: 5
