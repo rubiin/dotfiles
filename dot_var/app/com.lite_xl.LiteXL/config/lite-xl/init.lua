@@ -2,10 +2,10 @@
 -- this module will be loaded after everything else when the application starts
 -- it will be automatically reloaded when saved
 
-local core = require "core"
-local keymap = require "core.keymap"
-local config = require "core.config"
-local style = require "core.style"
+local core = require("core")
+local keymap = require("core.keymap")
+local config = require("core.config")
+local style = require("core.style")
 
 ------------------------------ Themes ----------------------------------------
 
@@ -62,12 +62,36 @@ local style = require "core.style"
 
 -- modify list of files to ignore when indexing the project:
 config.ignore_files = {
-  -- folders
-  "^%.svn/",        "^%.git/",   "^%.hg/",        "^CVS/", "^%.Trash/", "^%.Trash%-.*/",
-  "^node_modules/", "^%.cache/", "^__pycache__/",
-  -- files
-  "%.pyc$",         "%.pyo$",       "%.exe$",        "%.dll$",   "%.obj$", "%.o$",
-  "%.a$",           "%.lib$",       "%.so$",         "%.dylib$", "%.ncb$", "%.sdf$",
-  "%.suo$",         "%.pdb$",       "%.idb$",        "%.class$", "%.psd$", "%.db$",
-  "^desktop%.ini$", "^%.DS_Store$", "^%.directory$",
+	-- folders
+	"^%.svn/",
+	"^%.git/",
+	"^%.hg/",
+	"^CVS/",
+	"^%.Trash/",
+	"^%.Trash%-.*/",
+	"^node_modules/",
+	"^%.cache/",
+	"^__pycache__/",
+	-- files
+	"%.pyc$",
+	"%.pyo$",
+	"%.exe$",
+	"%.dll$",
+	"%.obj$",
+	"%.o$",
+	"%.a$",
+	"%.lib$",
+	"%.so$",
+	"%.dylib$",
+	"%.ncb$",
+	"%.sdf$",
+	"%.suo$",
+	"%.pdb$",
+	"%.idb$",
+	"%.class$",
+	"%.psd$",
+	"%.db$",
+	"^desktop%.ini$",
+	"^%.DS_Store$",
+	"^%.directory$",
 }
