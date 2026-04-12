@@ -34,12 +34,12 @@ annotation_tool = "satty"
 
 [wallpaper]
 custom_paths = [
-    "$HOME/Pictures/Wallpapers",
+  "$HOME/Pictures/Wallpapers",
 ] # List of paths to search for wallpapers
 
 
 [hyprland]
-browser = "vivaldi"  # Browser.
+browser = "vivaldi"      # Browser.
 editor = "code-insiders" # Editor.
 terminal = "wezterm"     # Terminal.
 quickapps = "wezterm"    # Quick apps.

@@ -116,7 +116,7 @@ only = [
   "yazi",
   "stew",
   "system",
-  "tldr"
+  "tldr",
 ]
 
 # Whether to self update
@@ -290,13 +290,13 @@ max_concurrency = 5
 
 # Additional git repositories to pull
 repos = [
-    "~/.config/tmux/oh-my-tmux",
-    "~/work/cit-be/",
-    "~/personal/typescript/v4",
-    "~/personal/typescript/ultimate-nest",
-    "~/personal/typescript/starter",
-    "~/Documents/obsidian",
-    "~/.config/nvim",
+  "~/.config/tmux/oh-my-tmux",
+  "~/work/cit-be/",
+  "~/personal/typescript/v4",
+  "~/personal/typescript/ultimate-nest",
+  "~/personal/typescript/starter",
+  "~/Documents/obsidian",
+  "~/.config/nvim",
 ]
 
 # Set to `false` to skip pulling/fetching the predefined git repos

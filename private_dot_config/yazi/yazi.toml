@@ -26,65 +26,65 @@ ueberzug_offset = [0, 0, 0, 0]
 
 [opener]
 edit = [
-	{ run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true },
-	{ run = 'code "$@"', orphan = true },
+  { run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true },
+  { run = 'code "$@"', orphan = true },
 ]
 play = [
-	{ run = 'mpv --force-window "$@"', orphan = true },
-	{ run = 'vlc "$@"', orphan = true },
+  { run = 'mpv --force-window "$@"', orphan = true },
+  { run = 'vlc "$@"', orphan = true },
 ]
 extract = [{ run = 'ya pub extract --list "$@"', desc = "Extract here" }]
 open = [{ run = 'xdg-open "$@"', desc = "Open" }]
 reveal = [
-	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
-	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+  { run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
+  { run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 
 [open]
 prepend_rules = [
-	# Folder
-	{ name = "*/", use = [
-		"edit",
-		"open",
-		"reveal",
-	] },
-	# Text
-	{ mime = "text/*", use = [
-		"edit",
-		"reveal",
-	] },
-	# Image
-	{ mime = "image/*", use = [
-		"open",
-		"reveal",
-	] },
-	# Media
-	{ mime = "{audio,video}/*", use = [
-		"play",
-		"reveal",
-	] },
-	# Archive
-	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
-		"extract",
-		"reveal",
-	] },
-	# JSON
-	{ mime = "application/{json,ndjson}", use = [
-		"edit",
-		"reveal",
-	] },
-	{ mime = "*/javascript", use = [
-		"edit",
-		"reveal",
-	] },
-	# Empty file
-	{ mime = "inode/empty", use = [
-		"edit",
-		"reveal",
-	] },
-	# Fallback
-	{ name = "*", use = [
-		"open",
-		"reveal",
-	] },
+  # Folder
+  { name = "*/", use = [
+    "edit",
+    "open",
+    "reveal",
+  ] },
+  # Text
+  { mime = "text/*", use = [
+    "edit",
+    "reveal",
+  ] },
+  # Image
+  { mime = "image/*", use = [
+    "open",
+    "reveal",
+  ] },
+  # Media
+  { mime = "{audio,video}/*", use = [
+    "play",
+    "reveal",
+  ] },
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
+    "extract",
+    "reveal",
+  ] },
+  # JSON
+  { mime = "application/{json,ndjson}", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "*/javascript", use = [
+    "edit",
+    "reveal",
+  ] },
+  # Empty file
+  { mime = "inode/empty", use = [
+    "edit",
+    "reveal",
+  ] },
+  # Fallback
+  { name = "*", use = [
+    "open",
+    "reveal",
+  ] },
 ]
