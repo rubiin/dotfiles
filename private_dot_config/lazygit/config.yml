@@ -1,24 +1,25 @@
+---
 gui:
   authorColors:
-    "Ian Chesal": "green"
-    "*": "#0000ff"
+    Ian Chesal: green
+    '*': '#0000ff'
   branchColors:
-    "production": "red"
+    production: red
   showIcons: true
 git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
 os:
-  editPreset: "nvim"
-notARepository: "quit"
+  editPreset: nvim
+notARepository: quit
 update:
-  method: "never" # brew keeps it up to date
+  method: never  # brew keeps it up to date
 confirmOnQuit: false
 customCommands:
-  - key: "C"
-    command: "git cz"
-    description: "Commit with commitizen"
-    context: "files"
-    loadingText: "Opening commitizen commit tool"
+  - key: C
+    command: git cz
+    description: Commit with commitizen
+    context: files
+    loadingText: Opening commitizen commit tool
     output: terminal

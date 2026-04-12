@@ -1,5 +1,5 @@
+---
 exclude: ^private_dot_config/mpv/shaders/
-
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -9,10 +9,24 @@ repos:
         args: [--fix=lf]
       - id: check-yaml
       - id: check-toml
+      - id: check-json
       - id: check-merge-conflict
-
+      - id: check-added-large-files
   - repo: https://github.com/ComPWA/taplo-pre-commit
     rev: v0.9.3
     hooks:
       - id: taplo-format
       - id: taplo-lint
+  - repo: https://github.com/lyz-code/yamlfix
+    rev: 1.17.0
+    hooks:
+      - id: yamlfix
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.37.0
+    hooks:
+      - id: yamllint
+        args: [-d, '{extends: relaxed}']
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.3
+    hooks:
+      - id: gitleaks
