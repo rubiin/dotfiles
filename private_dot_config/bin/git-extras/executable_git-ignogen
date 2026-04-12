@@ -118,7 +118,7 @@ ignore_files=(
     "zukencr8000"
 )
 
-printf '%s\n' "${ignore_files[@]}" | 
+printf '%s\n' "${ignore_files[@]}" |
     fzf \
       --header="Select a entry to generate ignore…"\
-      --select-1  
+      --select-1
