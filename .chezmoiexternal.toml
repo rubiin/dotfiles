@@ -58,7 +58,6 @@ url = "https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/mai
 refreshPeriod = "168h"
 
 
-
 # Typescript libraries that I maintain, which are all git repositories.
 ["personal/typescript/nestjs-cloudinary"]
 type = "git-repo"
@@ -80,9 +79,9 @@ refreshPeriod = "168h"
 
 # txt dictionaries
 [".config/dictionaries/words.txt"]
-type="file"
-url="https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
-refreshPeriod="168h"
+type = "file"
+url = "https://raw.githubusercontent.com/dwyl/english-words/refs/heads/master/words_alpha.txt"
+refreshPeriod = "168h"
 
 
 # Some mpv scripts that I use, which are all files.
@@ -183,10 +182,6 @@ refreshPeriod = "168h"
 type = "file"
 url = "https://github.com/Samillion/ModernZ/raw/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.conf"
 refreshPeriod = "168h"
-
-
-
-
 
 
 [".config/zsh/zcompletions/_git-extras"]

@@ -10,12 +10,11 @@
 # https://github.com/joshmedeski/sesh
 
 
-
 sort_order = [
-    "tmuxinator", # show first
-    "tmux",
-    "config",
-    "zoxide", # show last
+  "tmuxinator", # show first
+  "tmux",
+  "config",
+  "zoxide",     # show last
 ]
 
 
