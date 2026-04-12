@@ -35,5 +35,5 @@ cyan = '#ebbcba'
 white = '#e0def4'
 
 [colors.hints]
-start = {foreground = '#908caa', background = '#1f1d2e' }
+start = { foreground = '#908caa', background = '#1f1d2e' }
 end = { foreground = '#6e6a86', background = '#1f1d2e' }

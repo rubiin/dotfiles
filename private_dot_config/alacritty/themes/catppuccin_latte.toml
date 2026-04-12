@@ -3,16 +3,16 @@
 background = '#EFF1F5' # base
 foreground = '#4C4F69' # text
 # Bright and dim foreground colors
-dim_foreground = '#4C4F69' # text
+dim_foreground = '#4C4F69'    # text
 bright_foreground = '#4C4F69' # text
 
 # Cursor colors
 [colors.cursor]
-text = '#EFF1F5' # base
+text = '#EFF1F5'   # base
 cursor = '#DC8A78' # rosewater
 
 [colors.vi_mode_cursor]
-text = '#EFF1F5' # base
+text = '#EFF1F5'   # base
 cursor = '#7287FD' # lavender
 
 # Search colors
@@ -39,38 +39,38 @@ background = '#6C6F85' # subtext0
 
 # Selection colors
 [colors.selection]
-text = '#EFF1F5' # base
+text = '#EFF1F5'       # base
 background = '#DC8A78' # rosewater
 
 # Normal colors
 [colors.normal]
-black = '#5C5F77' # subtext1
-red = '#D20F39' # red
-green = '#40A02B' # green
-yellow = '#DF8E1D' # yellow
-blue = '#1E66F5' # blue
+black = '#5C5F77'   # subtext1
+red = '#D20F39'     # red
+green = '#40A02B'   # green
+yellow = '#DF8E1D'  # yellow
+blue = '#1E66F5'    # blue
 magenta = '#EA76CB' # pink
-cyan = '#179299' # teal
-white = '#ACB0BE' # surface2
+cyan = '#179299'    # teal
+white = '#ACB0BE'   # surface2
 
 # Bright colors
 [colors.bright]
-black = '#6C6F85' # subtext0
-red = '#D20F39' # red
-green = '#40A02B' # green
-yellow = '#DF8E1D' # yellow
-blue = '#1E66F5' # blue
+black = '#6C6F85'   # subtext0
+red = '#D20F39'     # red
+green = '#40A02B'   # green
+yellow = '#DF8E1D'  # yellow
+blue = '#1E66F5'    # blue
 magenta = '#EA76CB' # pink
-cyan = '#179299' # teal
-white = '#BCC0CC' # surface1
+cyan = '#179299'    # teal
+white = '#BCC0CC'   # surface1
 
 # Dim colors
 [colors.dim]
-black = '#5C5F77' # subtext1
-red = '#D20F39' # red
-green = '#40A02B' # green
-yellow = '#DF8E1D' # yellow
-blue = '#1E66F5' # blue
+black = '#5C5F77'   # subtext1
+red = '#D20F39'     # red
+green = '#40A02B'   # green
+yellow = '#DF8E1D'  # yellow
+blue = '#1E66F5'    # blue
 magenta = '#EA76CB' # pink
-cyan = '#179299' # teal
-white = '#ACB0BE' # surface2
+cyan = '#179299'    # teal
+white = '#ACB0BE'   # surface2

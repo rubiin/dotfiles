@@ -5,7 +5,14 @@ window_detect_timeout_ms = 5000
 autosave_retain = 5
 
 [filters]
-ignore_classes = ["waybar", "wofi", "mako", "polkit", "nm-applet", "xdg-desktop-portal"]
+ignore_classes = [
+  "waybar",
+  "wofi",
+  "mako",
+  "polkit",
+  "nm-applet",
+  "xdg-desktop-portal",
+]
 
 [apps.kitty]
 binary = "kitty"

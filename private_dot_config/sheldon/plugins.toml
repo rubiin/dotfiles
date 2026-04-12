@@ -18,7 +18,7 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 github = "romkatv/zsh-defer"
 
 [plugins.zsh-vi-mode]
-github="jeffreytse/zsh-vi-mode"
+github = "jeffreytse/zsh-vi-mode"
 apply = ["defer"]
 
 # Powerlevel10k prompt

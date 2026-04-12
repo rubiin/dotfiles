@@ -24,7 +24,6 @@ render_timer = false
 size = 11
 
 
-
 [font.glyph_offset]
 x = 0
 y = 0
@@ -76,7 +75,7 @@ columns = 140
 lines = 40
 
 [window.padding]
-x= 0
+x = 0
 y = 0
 
 [window.class]
@@ -382,7 +381,7 @@ live_config_reload = true
 working_directory = "None"
 import = [
   # uncomment the flavour you want below:
-  "~/.config/alacritty/themes/catppuccin_mocha.toml"
+  "~/.config/alacritty/themes/catppuccin_mocha.toml",
   # "~/.config/alacritty/themes/catppuccin_macchiato.toml"
   # "~/.config/alacritty/themes/catppuccin_frappe.toml"
   # "~/.config/alacritty/themes/catppuccin_latte.toml"
