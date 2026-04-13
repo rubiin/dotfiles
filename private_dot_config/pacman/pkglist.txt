@@ -133,7 +133,6 @@ linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
-linux-lts
 lite-xl
 logrotate
 lsb-release
@@ -170,6 +169,7 @@ ntp
 nvtop
 nwg-displays
 nwg-look
+obsidian
 openconnect
 openvpn
 os-prober
