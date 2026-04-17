@@ -75,4 +75,3 @@ cargo-binstall = "latest"
 prek = "latest"
 "pipx:yt-dlp" = "latest"
 deno = "latest"
-yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
