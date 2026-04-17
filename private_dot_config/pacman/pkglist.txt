@@ -148,6 +148,7 @@ mission-center
 mkinitcpio-nfs-utils
 modemmanager
 mtools
+nano
 nbd
 ndisc6
 neovim
@@ -252,6 +253,7 @@ unzip
 usb_modeswitch
 usbutils
 uwsm
+vim
 visual-studio-code-insiders
 vivaldi
 vlc
