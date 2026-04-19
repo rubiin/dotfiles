@@ -193,6 +193,7 @@ power-profiles-daemon
 ppp
 pptpclient
 procs
+pwgen
 python-capng
 python-jinja
 python-packaging
