@@ -13,7 +13,7 @@ alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
 alias du="du -h" # calculate disk usage for a folder
 alias dc="docker-compose"
-alias htop="btop"`
+alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
 alias ms="mise"
@@ -52,7 +52,7 @@ alias cp="cp -i"               # confirm before overwriting something
 alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
-alias update-nvim="nvim --headless "+Lazy! sync" +qa && cd .config/nvim && git sync-this-repo"
+alias update-nvim='nvim --headless "+Lazy! sync" +qa && cd ~/.config/nvim && git sync-this-repo'
 alias icat="kitten icat"
 alias yz="yazi"
 alias gp="gitpick"
