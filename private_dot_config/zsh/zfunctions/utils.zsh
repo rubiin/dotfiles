@@ -89,7 +89,8 @@ watch_mem_usage() {
 
 clearcache() {
 	yay -Sc --noconfirm
-	sudo pacman -Runs --noconfirm $(pacman -Qttdq)
+	orphans="$(pacman -Qttdq 2>/dev/null || true)"
+	[[ -n "$orphans" ]] && echo "$orphans" | sudo pacman -Runs --noconfirm -
 	paccache -rvk0
 	paccache -rvk0 ~/.cache/yay
 
@@ -196,7 +197,7 @@ function size() {
 function reinstall-nvim() {
 	rm -rf ~/.config/nvim
 	rm -rf ~/.local/share/nvim
-	git clone git@github.com:rubiin/init.lua .config/nvim
+	git clone git@github.com:rubiin/init.lua ~/.config/nvim
 	if [[ ! -d ~/personal/vim ]]; then
 		mkdir ~/personal/vim
 		git clone git@github.com:rubiin/fortune.nvim.git ~/personal/vim/fortune.nvim

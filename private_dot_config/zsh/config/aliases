@@ -12,8 +12,8 @@ alias curl='curl --progress-bar'
 alias dc="docker-compose"
 alias df="df -h"    # disk free, in Gigabytes, not bytes
 alias du="du -h" # calculate disk usage for a folder
-alias dc="docker-com"
-alias htop="btop"
+alias dc="docker-compose"
+alias htop="btop"`
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
 alias ms="mise"
@@ -29,9 +29,9 @@ alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 alias rate-and-update='export TMPFILE="$(mktemp)"; \
     sudo true; \
-    rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+        rate-mirrors --save="$TMPFILE" arch --max-delay=21600 \
       && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
-      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
+            && sudo mv "$TMPFILE" /etc/pacman.d/mirrorlist \
       && ua-drop-caches \
       && yay -Syyu --noconfirm && update-all'
 alias today="aaja"
@@ -41,7 +41,7 @@ alias update-all='yay -Syu --noconfirm; flatpak update -y; mise self-update;mise
 alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
 alias export-pacman="pacman -Qqe > ~/pacman.txt"
 alias ssh='TERM=xterm-256color ssh'
-alias validate-compose="docker-compose config --quiet && printf "OK\n" || printf "ERROR\n""
+alias validate-compose='docker-compose config --quiet && printf "OK\n" || printf "ERROR\n"'
 alias vmc='git diff --name-only --diff-filter=U'
 alias yt="youtube-dl"
 alias ytmp3="yt-dlp -x --audio-format=mp3"
