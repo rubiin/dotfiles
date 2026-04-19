@@ -47,7 +47,7 @@ sudo cp ~/.config/pacman-contrib /etc/conf.d/
 echo "🪝 Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/pacman/hooks/* /etc/pacman.d/hooks/
-
+sudo systemctl enable --now paccache.timer
 
 ask_yes_no_default "🔄 Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
