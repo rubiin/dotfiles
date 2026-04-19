@@ -14,7 +14,8 @@ while true; do
     echo "3) tty-clock"
     echo "4) rain"
     echo "5) syscat"
-    echo "6) Exit"
+    echo "6) donut"
+    echo "7) Exit"
     read -p "Choice: " c
 
     case $c in
@@ -34,6 +35,9 @@ while true; do
             run_cmd syscat
             ;;
         6)
+            run_cmd donut
+            ;;
+        7)
             exit
             ;;
         *)
