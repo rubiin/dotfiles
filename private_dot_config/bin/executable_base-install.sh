@@ -5,7 +5,7 @@
 #  GitHub: https://github.com/rubiin
 #  Twitter: https://twitter.com/RubinCodes
 
-set -uo pipefail
+set -euo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 IFS=$'\n\t'
 
@@ -30,9 +30,9 @@ chezmoi init --apply rubiin
 
 export TMPFILE="$(mktemp)"
 sudo true
-rate-mirrors --save=$TMPFILE arch --max-delay=43200 &&
+rate-mirrors --save="$TMPFILE" arch --max-delay=43200 &&
 	sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup &&
-	sudo mv $TMPFILE /etc/pacman.d/mirrorlist
+	sudo mv "$TMPFILE" /etc/pacman.d/mirrorlist
 
 ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com &&
 	sudo pacman-key --lsign-key 3056513887B78AEB &&
@@ -43,7 +43,7 @@ ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv
 
 ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
-ask_yes_no_default "Do you want to add sudoers file?" 0 && cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
+ask_yes_no_default "Do you want to add sudoers file?" 0 && sudo cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
 
 ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay -s docker docker-compose &&
 	sudo groupadd -f docker &&
@@ -78,7 +78,7 @@ sudo fc-cache -vf
 curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
-echo "export ZDOTDIR=~/.config/zsh" >/etc/zsh/zshenv
+echo "export ZDOTDIR=~/.config/zsh" | sudo tee /etc/zsh/zshenv >/dev/null
 
 echo "Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
@@ -113,7 +113,6 @@ chmod 700 ~/.local/share/gpg
 
 echo "Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
-
 echo "Installing mise"
 curl https://mise.run | sh
 mise install
