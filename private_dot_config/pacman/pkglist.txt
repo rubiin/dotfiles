@@ -35,7 +35,6 @@ chaotic-mirrorlist
 chezmoi
 cinnamon-desktop
 cliphist
-cmatrix
 cryptsetup
 dart-sass
 device-mapper
