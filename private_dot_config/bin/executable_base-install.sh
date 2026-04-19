@@ -24,8 +24,9 @@ ask_yes_no_default() {
 	esac
 }
 
-ask_yes_no_default "Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors
+ask_yes_no_default "📦 Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors
 
+echo "🔧 Initializing chezmoi..."
 chezmoi init --apply rubiin
 
 export TMPFILE="$(mktemp)"
@@ -34,18 +35,25 @@ rate-mirrors --save="$TMPFILE" arch --max-delay=43200 &&
 	sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup &&
 	sudo mv "$TMPFILE" /etc/pacman.d/mirrorlist
 
-ask_yes_no_default "Do you want to add chaotic aur?" 0 && sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com &&
+ask_yes_no_default "🌩️  Do you want to add chaotic aur?" 0 && sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com &&
 	sudo pacman-key --lsign-key 3056513887B78AEB &&
 	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' &&
-	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' &&
-	sudo cp ~/.config/pacman/pacman.conf /etc/pacman.conf &&
-	sudo cp ~/.config/pacman-contrib /etc/conf.d/
+	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-ask_yes_no_default "Do you want to refresh the Arch package database?" 0 && yay -Syyu
+echo "⚙️  Setting up pacman"
+sudo cp ~/.config/pacman/pacman.conf /etc/pacman.conf
+sudo cp ~/.config/pacman-contrib /etc/conf.d/
 
-ask_yes_no_default "Do you want to add sudoers file?" 0 && sudo cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
+echo "🪝 Setting up pacman hooks"
+sudo mkdir -p /etc/pacman.d/hooks
+sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
-ask_yes_no_default "Do you want to install Docker and Docker Compose?" 0 && yay -s docker docker-compose &&
+
+ask_yes_no_default "🔄 Do you want to refresh the Arch package database?" 0 && yay -Syyu
+
+ask_yes_no_default "👤 Do you want to add sudoers file?" 0 && sudo cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
+
+ask_yes_no_default "🐋 Do you want to install Docker and Docker Compose?" 0 && yay -s docker docker-compose &&
 	sudo groupadd -f docker &&
 	sudo usermod -aG docker $USER &&
 	sudo systemctl enable --now docker.service &&
@@ -55,7 +63,7 @@ echo "✅ Docker installed successfully."
 echo "⚠️  You must log out and log back in (or run 'newgrp docker')"
 echo "   for Docker permissions to take effect."
 echo
-echo "👉 Test with: docker run hello-world"
+echo "🧪 Test with: docker run hello-world"
 
 # Prevent Docker from preventing boot for network-online.target
 sudo mkdir -p /etc/systemd/system/docker.service.d
@@ -66,67 +74,71 @@ EOF
 
 sudo systemctl daemon-reload
 
-echo "Setting ssh"
+echo "🔐 Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
 
-ask_yes_no_default "Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pkglist-pacman.txt
-ask_yes_no_default "Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/pkglist-aur.txt
+ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/pkglist-pacman.txt
+ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/pkglist-aur.txt
 
+echo "🔤 Building font cache..."
 sudo fc-cache -vf
 
+echo "🎵 Installing Spicetify marketplace..."
 curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+
+echo "⏱️  Setting up wakatime..."
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
+echo "🐚 Configuring zsh environment..."
 echo "export ZDOTDIR=~/.config/zsh" | sudo tee /etc/zsh/zshenv >/dev/null
 
-echo "Installing sheldon for managing zsh and other plugins?"
+echo "📦 Installing sheldon for managing zsh and other plugins?"
 sudo pacman -S sheldon
 sheldon lock --reinstall
 
-echo "installing flatpaks"
+echo "📱 Installing flatpaks"
 flatpak install flathub org.feichtmeier.Musicpod org.nickvision.tubeconverter io.gitlab.theevilskeleton.Upscaler io.github.flattool.Warehouse
-echo "Installing bat themes"
+
+echo "🎨 Installing bat themes"
 bat cache --build
 
-echo "Installing yazi plugins"
+echo "🚀 Installing yazi plugins"
 ya pkg upgrade
 
-echo "Setting alacritty"
+echo "🎨 Setting alacritty"
 wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info && sudo tic -xe alacritty,alacritty-direct alacritty.info && rm alacritty.info
 
-echo "Setting wezterm"
+echo "🎨 Setting wezterm"
 tempfile=$(mktemp) && curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo && tic -x -o "$TERMINFO" "$tempfile" && rm "$tempfile"
 
-echo "Enabling bluetooth service"
+echo "🔵 Enabling bluetooth service"
 sudo systemctl enable bluetooth.service
 sudo systemctl restart bluetooth.service
 
 # Sets up python and installs python's dependencies
-echo "Setting up python"
+echo "🐍 Setting up python"
 yay -S python-pip python-pipx
 pipx ensurepath
 
-echo "setting gpg"
+echo "🔐 Setting gpg"
 mkdir -p ~/.local/share/gpg
 chmod 700 ~/.local/share/gpg
 
-echo "Removing orphaned dependencies"
+echo "🧹 Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
-echo "Installing mise"
+
+echo "⚡ Installing mise"
 curl https://mise.run | sh
 mise install
 
-echo "Setting tmux"
+echo "🟩 Setting tmux"
 curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(date +%s)" | bash
 
-ask_yes_no_default "Do you want to reapply chezmoi configuration (recommended)?" 0 && chezmoi apply
+ask_yes_no_default "🔄 Do you want to reapply chezmoi configuration (recommended)?" 0 && chezmoi apply
 
-echo "creating XDG directories"
+echo "📁 Creating XDG directories"
 xdg-user-dirs-update
 
-echo "Setting up pacman hooks"
-sudo mkdir -p /etc/pacman.d/hooks
-sudo cp ~/.config/bin/hooks/* /etc/pacman.d/hooks/
 
-echo "Completed setup, run python"
+echo "✅ Completed setup! Please restart your terminal and log out and log back in for all changes to take effect."
