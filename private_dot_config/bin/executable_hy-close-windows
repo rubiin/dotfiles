@@ -4,5 +4,10 @@
 if [[ $# -eq 0 ]]; then
   echo "Adjust Apple Display Brightness by passing +5000 or -5000 (or any range from 0-60000)"
 else
-  sudo asdcontrol $(sudo asdcontrol --detect /dev/usb/hiddev* | grep ^/dev/usb/hiddev | cut -d: -f1) -- "$1"
+  device="$(sudo asdcontrol --detect /dev/usb/hiddev* | grep '^/dev/usb/hiddev' | cut -d: -f1 | head -n 1)"
+  if [[ -z "$device" ]]; then
+    echo "No compatible HID device detected"
+    exit 1
+  fi
+  sudo asdcontrol "$device" -- "$1"
 fi
