@@ -226,7 +226,6 @@ smartmontools
 sof-firmware
 spotify
 spotube-bin
-starship
 sudo
 sysfsutils
 systemd-sysvcompat
