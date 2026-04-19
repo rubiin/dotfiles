@@ -56,7 +56,7 @@ alias update-nvim="nvim --headless "+Lazy! sync" +qa && cd .config/nvim && git s
 alias icat="kitten icat"
 alias yz="yazi"
 alias gp="gitpick"
-
+alias cmatrix="unimatrix"
 alias npx="bunx"
 
 alias skillup="npx skills add -y"
