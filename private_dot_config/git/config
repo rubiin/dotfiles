@@ -20,7 +20,6 @@
 	helper =
 	helper = !/usr/bin/gh auth git-credential
 
-
 [pull]
 	rebase = true
 	prune = true
@@ -35,7 +34,7 @@
 	# Editor is vi of coursea
 	editor = nvim --clean
 	# Include your global excludefile
-	excludefile = .gitignore_global
+	excludefile = ~/.config/git/.gitignore_global
 	# Don't paginate output by default
 	pager = delta
 	# Speed up the status command
@@ -54,9 +53,8 @@
 	hints = false
 
 [branch]
-	sort = -committerdate ; sort by recency, not by name
+	sort = -committerdate # sort by recency, not by name
 	autosetupmerge = true
-
 
 [tag]
 	sort = -committerdate
@@ -66,17 +64,16 @@
 	prune = true ; automatically delete remote tracking branches that have been deleted
 
 [push]
-	autoSetupRemote = true ; create remote branch, if it doesn't exist
-  default = simple
+	autoSetupRemote = true # create remote branch, if it doesn't exist
+	default = simple
 	followTags = true
-
 
 [gpg]
 	format = ssh
 
 [commit]
 	gpgsign = true
-	template = ~/.config/git/template
+	template =  ~/.config/git/template
 	verbose = true           # Include diff comment in commit message template
 
 [http]
@@ -86,7 +83,7 @@
 	editor = interactive-rebase-tool
 
 [protocol]
-    version = 2
+	version = 2
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -97,7 +94,7 @@
 	ui = auto
 
 [maintenance]
-	repo = ~/ultimate-nest
+	repo = ~/personal/typescript/ultimate-nest
 	repo = ~/.config/nvim
 	repo = ~/.local/share/chezmoi
 	repo = ~/.config/tsumiki
@@ -142,12 +139,12 @@
 	newHighlight = green bold 22
 
 [include]
-	path = ./catppuccin.gitconfig
+	path =  ~/.config/git/catppuccin.gitconfig
 
 [delta]
 	features = catppuccin-mocha
 	navigate = true  # use n and N to move between diff sections
-  dark = true      # or light = true, or omit for auto-detection
+	dark = true      # or light = true, or omit for auto-detection
 	side-by-side = false
 	line-numbers = true
 
@@ -157,18 +154,14 @@
 
 [diff]
 	colorMoved = default
-  tool = nvim_difftool
-
-[difftool "nvim_difftool"]
-  cmd = nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\"
-
+	tool = nvim_difftool
 
 [grep]
 	# Consider most regexes to be ERE
 	extendedRegexp = true
 
 [index]
-        threads = true
+	threads = true
 
 [help]
 	# Replace the mistyped command in 0.1 seconds. 20 means two seconds
@@ -215,7 +208,7 @@
 	can = commit --amend --no-edit
 
 	# checkout
-        com = "!f() { git checkout master 2>/dev/null || git checkout main; }; f"
+	com = "!f() { git checkout master 2>/dev/null || git checkout main; }; f"
 	cod = checkout dev
 	co = checkout
 	cob = checkout -b
@@ -224,7 +217,7 @@
 	cp = cherry-pick
 	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
-        cpq = cherry-pick --quit
+	cpq = cherry-pick --quit
 
 	# diff
 	d = diff -c
@@ -235,29 +228,29 @@
 	du = diff --cached -c @{u}
 	dr = "!f() { git diff -c ${1:-HEAD}~..${1:-HEAD}; }; f"
 
-        # GitFlow shortcuts
-        # "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
+	# GitFlow shortcuts
+	# "fcb" alias is a shortcut for getting current branch for GitFlow (without prefix)
 	# and is strictly related to [gitflow "prefix"] config section (cuts everything after first "/")
-        fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
+	fcb = "!f() { git rev-parse --abbrev-ref HEAD | cut -d'/' -f 2-; }; f"
 
 	fid = flow init -d
-   	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1; else echo 'Invalid name'; exit 1; fi; }; f"
-  	fff = !git flow feature finish -F $(git fcb)
-   	ffp = !git flow feature publish $(git fcb)
+	ffs = "!f() { if [ ! -z $1 ] ; then git flow feature start $1; else echo 'Invalid name'; exit 1; fi; }; f"
+	fff = !git flow feature finish -F $(git fcb)
+	ffp = !git flow feature publish $(git fcb)
 
-        fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
-        fbf = !git flow bugfix finish -F $(git fcb)
-        fbp = !git flow bugfix publish $(git fcb)
+	fbs = "!f() { if [ ! -z $1 ] ; then git flow bugfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
+	fbf = !git flow bugfix finish -F $(git fcb)
+	fbp = !git flow bugfix publish $(git fcb)
 
-        fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
-        fhf = !git flow hotfix finish -F $(git fcb)
-        fhp = !git flow hotfix publish $(git fcb)
+	fhs = "!f() { if [ ! -z $1 ] ; then git flow hotfix start $1; else echo 'Invalid name'; exit 1; fi; }; f"
+	fhf = !git flow hotfix finish -F $(git fcb)
+	fhp = !git flow hotfix publish $(git fcb)
 
-        frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1; else echo 'Invalid name'; exit 1; fi; }; f"
-        frf = !git flow release finish -F $(git fcb)
-        frp = !git flow release publish $(git fcb)
+	frs = "!f() { if [ ! -z $1 ] ; then git flow release start $1; else echo 'Invalid name'; exit 1; fi; }; f"
+	frf = !git flow release finish -F $(git fcb)
+	frp = !git flow release publish $(git fcb)
 
-        #cleaning up local branches after merging them
+	#cleaning up local branches after merging them
 	forget = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
 	forgetlist = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}'#
 
@@ -294,7 +287,7 @@
 	mnc = "!f() { git merge --no-commit --no-ff \"$@\"; EC=$?; git merge --abort; exit $EC; }; f"
 
 	# Shorthand for mergetool
-    	mt = mergetool
+	mt = mergetool
 
 	# network (out)
 	pu = push
@@ -312,8 +305,8 @@
 
 	# stash
 	ss = stash                        # stash changes
-  	sa = stash apply                  # apply stash (restore changes)
-  	sd = stash drop                   # drop stashes (destroy changes)
+	sa = stash apply                  # apply stash (restore changes)
+	sd = stash drop                   # drop stashes (destroy changes)
 	ssa = stash -u                    # include untracked files
 
 	# list stashes
@@ -333,16 +326,16 @@
 	s = status
 	si = status --ignored
 
-        # show what I did today
-        day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
+	# show what I did today
+	day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
 
-        # git-extras
-  	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
-    	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release"
-   	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
-   	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened"
+	# git-extras
+	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
+	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release"
+	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
+	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened"
 
-        # tag
+	# tag
 	t = tag
 	tc = tag --contains
 	td = tag --delete
@@ -396,7 +389,7 @@
 	watch = "!f() { watch -ctn 2 git \"${@:-l}\"; }; f"
 
 	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
- 	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
 	# show authors and and commit counts
 	#    git thanks [<git-log-args>...]
@@ -432,3 +425,4 @@
 
 	# git git ...
 	git = "!git"
+
