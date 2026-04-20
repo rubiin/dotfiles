@@ -74,7 +74,7 @@
 [commit]
 	gpgsign = true
 	template =  ~/.config/git/template
-	verbose = true           # Include diff comment in commit message template
+	verbose = true # Include diff comment in commit message template
 
 [http]
 	postBuffer = 157286400
@@ -153,8 +153,11 @@
 	tool = vimdiff
 
 [diff]
-	colorMoved     = dimmed-zebra # default is "no"
+	colorMoved = dimmed-zebra # default is "no"
 	tool = nvim_difftool
+
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [grep]
 	# Consider most regexes to be ERE
