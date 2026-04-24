@@ -42,8 +42,8 @@ npm.package_manager = "pnpm"
 
 [tools]
 go = "latest"
-rust = { version = "latest", profile = "minimal" }
 bun = "latest"
+rust = "latest"
 ruby = "latest"
 uv = "latest"
 node = "24"
