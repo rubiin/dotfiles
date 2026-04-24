@@ -39,3 +39,5 @@ eval "$(zoxide init bash)"
 eval "$(~/.local/bin/mise activate bash)"
 
 pokego --no-title --random 1,3,6
+
+alias claude-mem='bun "/home/devina/.claude/plugins/cache/thedotmack/claude-mem/12.3.2/scripts/worker-service.cjs"'
