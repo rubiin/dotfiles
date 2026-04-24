@@ -83,6 +83,7 @@ git-interactive-rebase-tool-git
 github-cli
 gitlogue
 gnome-bluetooth-3.0
+gnome-disk-utility
 gnome-keyring
 gnu-free-fonts
 gparted
@@ -149,6 +150,7 @@ modemmanager
 mtools
 nano
 nbd
+ncdu
 ndisc6
 neovim
 net-tools
@@ -249,6 +251,7 @@ udiskie
 unrar
 unzip
 usb_modeswitch
+usbimager
 usbutils
 uwsm
 vim
@@ -269,6 +272,7 @@ whois
 wireless-regdb
 wireplumber
 wl-clip-persist
+woeusb-ng
 wpa_supplicant
 wps-office
 xdg-desktop-portal-hyprland
