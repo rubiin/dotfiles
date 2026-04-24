@@ -1,36 +1,36 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "babfd0f"
+rev = "034efd6"
 hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "babfd0f"
+rev = "034efd6"
 hash = "8b1af6b5a69797ee951f2a80ce570818"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "babfd0f"
-hash = "6fa6a05a81c98dd000fbca3cca6e9682"
+rev = "034efd6"
+hash = "eff8ff12fa4e5f035a10d8aeeb4c258d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "babfd0f"
-hash = "26db011a778f261d730d4f5f8bf24b3f"
+rev = "034efd6"
+hash = "6849444b7c2df08eace83f3f86fb55a3"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mactag"
-rev = "babfd0f"
-hash = "9e606c2cc7dd3139868d462e3e2e994c"
+rev = "034efd6"
+hash = "235256b396f4da77ff8f5b8eacd7c113"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "babfd0f"
+rev = "034efd6"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:vcs-files"
-rev = "babfd0f"
+rev = "034efd6"
 hash = "6b141fbed3c74b45558fbc7088c805ee"
 
 [[plugin.deps]]
@@ -40,7 +40,7 @@ hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
-rev = "babfd0f"
+rev = "034efd6"
 hash = "3f8d49413bc8691b4c652eb417a20178"
 
 [[flavor.deps]]
