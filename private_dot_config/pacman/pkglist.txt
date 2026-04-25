@@ -83,10 +83,8 @@ git-interactive-rebase-tool-git
 github-cli
 gitlogue
 gnome-bluetooth-3.0
-gnome-disk-utility
 gnome-keyring
 gnu-free-fonts
-gparted
 gpm
 gptfdisk
 grim
@@ -178,6 +176,7 @@ os-prober
 pacman-contrib
 pamixer
 pantheon-files
+partitionmanager
 pavucontrol
 perl
 persepolis
@@ -251,9 +250,9 @@ udiskie
 unrar
 unzip
 usb_modeswitch
-usbimager
 usbutils
 uwsm
+ventoy-bin
 vim
 visual-studio-code-insiders
 vivaldi
