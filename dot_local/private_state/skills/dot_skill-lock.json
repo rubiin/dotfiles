@@ -26,7 +26,7 @@
       "skillPath": "request-refactor-plan/SKILL.md",
       "skillFolderHash": "b0617c9cf69ac1e73a6b30f78c82ff81372079fd",
       "installedAt": "2026-04-05T21:22:47.612Z",
-      "updatedAt": "2026-04-08T17:01:25.449Z"
+      "updatedAt": "2026-04-26T21:11:21.982Z"
     },
     "tdd": {
       "source": "mattpocock/skills",
@@ -35,16 +35,16 @@
       "skillPath": "tdd/SKILL.md",
       "skillFolderHash": "28d7822c112f22cf499099881856fdec07bc83a8",
       "installedAt": "2026-04-05T21:23:13.343Z",
-      "updatedAt": "2026-04-05T21:23:13.343Z"
+      "updatedAt": "2026-04-26T21:11:39.320Z"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "improve-codebase-architecture/SKILL.md",
-      "skillFolderHash": "78b2029cbf4a74fa798c97ea27bc02bdeb2e3237",
+      "skillFolderHash": "008dfd3cf28adfe7e8e89bdbb8de85a1e70601d7",
       "installedAt": "2026-04-05T21:23:42.470Z",
-      "updatedAt": "2026-04-11T08:35:57.896Z"
+      "updatedAt": "2026-04-26T21:12:07.036Z"
     },
     "caveman": {
       "source": "JuliusBrussee/caveman",
@@ -90,7 +90,7 @@
       "skillPath": "grill-me/SKILL.md",
       "skillFolderHash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499",
       "installedAt": "2026-04-08T19:44:27.873Z",
-      "updatedAt": "2026-04-11T08:34:05.355Z"
+      "updatedAt": "2026-04-26T21:11:06.143Z"
     },
     "write-a-skill": {
       "source": "mattpocock/skills",
