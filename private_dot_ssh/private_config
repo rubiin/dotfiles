@@ -2,6 +2,8 @@
 Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/github
+  AddKeysToAgent yes
+
 
 # Bitbucket
 Host bitbucket.org
@@ -34,6 +36,7 @@ Host *
 	ControlMaster auto
 	ControlPersist 1800
 	ControlPath ~/.ssh/control/%C
+
 
 	# also this stuff
 	Compression yes
