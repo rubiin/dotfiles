@@ -67,6 +67,10 @@ coverage.xml
 *.log
 local_settings.py
 
+# Vim
+*.swp
+*.un~
+
 # Flask stuff:
 instance/
 .webassets-cache
