@@ -159,6 +159,7 @@ networkmanager-openconnect
 networkmanager-openvpn
 nfs-utils
 nilfs-utils
+noctalia-shell
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
