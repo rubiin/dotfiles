@@ -16,17 +16,22 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
+proto = "https"
 
 [plugins.zsh-vi-mode]
 github = "jeffreytse/zsh-vi-mode"
+proto = "https"
 apply = ["defer"]
 
 # Powerlevel10k prompt
 [plugins.powerlevel10k]
 github = "romkatv/powerlevel10k"
+proto = "https"
+
 
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
+proto = "https"
 apply = ["defer"]
 
 [plugins.evalcache]
@@ -34,8 +39,11 @@ github = "mroth/evalcache"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+proto = "https"
 apply = ["defer"]
+
 
 [plugins.zsh-you-should-use]
 github = "MichaelAquilina/zsh-you-should-use"
+proto = "https"
 apply = ["defer"]
