@@ -17,7 +17,7 @@
       "skillPath": "skills/find-skills/SKILL.md",
       "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
       "installedAt": "2026-04-05T21:22:30.335Z",
-      "updatedAt": "2026-04-11T08:34:38.244Z"
+      "updatedAt": "2026-04-26T21:15:50.581Z"
     },
     "request-refactor-plan": {
       "source": "mattpocock/skills",
@@ -47,13 +47,13 @@
       "updatedAt": "2026-04-26T21:12:07.036Z"
     },
     "caveman": {
-      "source": "JuliusBrussee/caveman",
+      "source": "juliusbrussee/caveman",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "sourceUrl": "https://github.com/juliusbrussee/caveman.git",
       "skillPath": "caveman/SKILL.md",
-      "skillFolderHash": "b1f418f4e7cbee5d18c209a48e3475132b49e7b1",
+      "skillFolderHash": "825e13085d1515fe67881b2123f3bf9b34c26154",
       "installedAt": "2026-04-06T02:19:05.534Z",
-      "updatedAt": "2026-04-10T17:47:17.686Z"
+      "updatedAt": "2026-04-26T21:19:28.060Z"
     },
     "caveman-compress": {
       "source": "JuliusBrussee/caveman",
@@ -74,15 +74,6 @@
       "installedAt": "2026-04-08T19:32:21.508Z",
       "updatedAt": "2026-04-08T19:32:21.508Z"
     },
-    "brainstorming": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "f260c775073816860fef8a37c032ac77e2ff5821",
-      "installedAt": "2026-04-08T19:34:11.893Z",
-      "updatedAt": "2026-04-08T19:34:11.893Z"
-    },
     "grill-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -101,14 +92,33 @@
       "installedAt": "2026-04-08T19:46:46.804Z",
       "updatedAt": "2026-04-11T08:35:44.776Z"
     },
-    "compress": {
-      "source": "JuliusBrussee/caveman",
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
-      "skillPath": "caveman-compress/SKILL.md",
-      "skillFolderHash": "6e49c02b7e2b2f656556815df470bdec4d7e9c8b",
-      "installedAt": "2026-04-10T17:47:21.105Z",
-      "updatedAt": "2026-04-10T17:47:21.105Z"
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installedAt": "2026-04-26T21:16:08.196Z",
+      "updatedAt": "2026-04-26T21:16:08.196Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-04-26T21:16:30.386Z",
+      "updatedAt": "2026-04-26T21:16:30.386Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-04-26T21:17:07.689Z",
+      "updatedAt": "2026-04-26T21:17:07.689Z"
     }
   },
   "dismissed": {
