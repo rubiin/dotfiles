@@ -2,7 +2,7 @@
 Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/github
-  ControlPath ~/.ssh/control/%r@%h:%p
+  ControlPath ~/.ssh/control/%C
 
 # Bitbucket
 Host bitbucket.org
