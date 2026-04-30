@@ -103,6 +103,7 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
+hyprquery-git
 hyprsunset
 inetutils
 inxi
