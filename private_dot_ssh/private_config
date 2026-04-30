@@ -2,45 +2,49 @@
 Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/github
-  AddKeysToAgent yes
-
+  ControlPath ~/.ssh/control/%r@%h:%p
 
 # Bitbucket
 Host bitbucket.org
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/takeo
   ControlMaster no
-  WarnWeakCrypto no #bitbucket doesn't use quantum crypto
+  WarnWeakCrypto no # bitbucket doesn't use quantum crypto
 
 # Aur
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
 
-Host "takeo-dev"
-   IdentityFile  ~/cit.pem
-   HostName ec2-18-214-214-20.compute-1.amazonaws.com
-   User ubuntu
-   Port 22
 
 
-## Now set defaults for all if not matched by any hosts ##
 Host *
-	# Always use SSH2.
-	Protocol 2
-	SendEnv LANG LC_*
+	# Security: use modern key exchange algorithms
+	KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512
 
-	# Use a shared channel for all sessions to the same host,
-	# instead of always opening a new one. This leads to much
-	# quicker connection times.
+	# Security: prefer modern ciphers
+	Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+
+	# Security: modern MAC algorithms
+	MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+
+  LogLevel ERROR
+
+	# Use a shared channel for all sessions to the same host
 	ControlMaster auto
-	ControlPersist 1800
-	ControlPath ~/.ssh/control/%C
+	ControlPath ~/.ssh/control/%r@%h:%p
+	ControlPersist 600
 
-
-	# also this stuff
-	Compression yes
+	# Keep connections alive (default for all)
 	TCPKeepAlive yes
-	ServerAliveInterval 20
+	ServerAliveInterval 60
 	ServerAliveCountMax 10
-	ConnectTimeout 20
+
+	# Compression (useful for slow connections)
+	Compression yes
+
+	# Reuse SSH agent socket
+	AddKeysToAgent yes
+
+	# Hash known_hosts for privacy
+	HashKnownHosts yes
