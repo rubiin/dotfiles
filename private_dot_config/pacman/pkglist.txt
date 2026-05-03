@@ -128,10 +128,10 @@ libappindicator
 libdvdcss
 libgsf
 libopenraw
-linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
+linux-lts
 lite-xl
 logrotate
 lsb-release
@@ -274,7 +274,6 @@ whois
 wireless-regdb
 wireplumber
 wl-clip-persist
-woeusb-ng
 wpa_supplicant
 wps-office
 xdg-desktop-portal-hyprland
