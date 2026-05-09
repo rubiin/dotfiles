@@ -488,15 +488,13 @@ enabled = false
 size = 20
 
 [modules.dock]
-enabled = false
+enabled = true
 ignored_apps = []
 icon_size = 40
 behavior = "intellihide"
 tooltip = false
 layer = "top"
 show_when_no_windows = false
-preview_apps = true
-preview_size = [200, 130]
 group_apps = true
 truncation_size = 20
 orientation = "horizontal"
