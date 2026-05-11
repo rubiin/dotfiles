@@ -199,7 +199,6 @@ pptpclient
 procs
 python-cairo
 python-capng
-python-ijson
 python-jinja
 python-loguru
 python-packaging
