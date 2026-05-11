@@ -409,7 +409,12 @@ exec_on_event = true
 [layout]
 left_section = ["workspaces", "window_title"]
 middle_section = ["date_time", "weather"]
-right_section = ["@collapsible:0", "@group:0", "system_tray", "power"]
+right_section = [
+  "@collapsible:0",
+  "@group:0",
+  "system_tray",
+  "power",
+]
 
 [[widget_groups]]
 widgets = ["quick_settings", "updates", "battery"]
@@ -495,6 +500,8 @@ behavior = "intellihide"
 tooltip = false
 layer = "top"
 show_when_no_windows = false
+preview_apps = true
+preview_size = [200, 130]
 group_apps = true
 truncation_size = 20
 orientation = "horizontal"
