@@ -15,10 +15,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/skill-creator/SKILL.md",
-      "skillFolderHash": "98a510d1cfef9f82c3b1eec200229ca68725e613",
-      "pluginName": "example-skills",
+      "skillFolderHash": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
       "installedAt": "2026-04-08T19:32:21.508Z",
-      "updatedAt": "2026-04-08T19:32:21.508Z"
+      "updatedAt": "2026-05-12T14:23:27.395Z"
     },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
@@ -173,10 +172,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/prototype/SKILL.md",
-      "skillFolderHash": "0b1153347deb6369b3070f5de6a712cc1d2087a2",
-      "pluginName": "mattpocock-skills",
+      "skillFolderHash": "c91bdc5d02d42ed88a3082a8fa83338895b55bd4",
       "installedAt": "2026-05-10T04:19:54.027Z",
-      "updatedAt": "2026-05-10T04:19:54.027Z"
+      "updatedAt": "2026-05-12T14:23:31.894Z"
     }
   },
   "dismissed": {
