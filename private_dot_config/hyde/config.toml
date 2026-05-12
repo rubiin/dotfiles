@@ -46,6 +46,9 @@ quickapps = "wezterm"    # Quick apps.
 explorer = "dolphin"
 
 
+[weather]
+location = "kathmandu"
+
 [hyprland-start]
 bar = ''
 apptray_bluetooth = ''
