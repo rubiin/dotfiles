@@ -27,7 +27,7 @@ Traceback (most recent call last):
 (To verify): add a delayed function call
 (To verify): keybinds on powermenu
 
-todo: add a cli
+
 
 
 bug: fix wifi ap client disconnect button
