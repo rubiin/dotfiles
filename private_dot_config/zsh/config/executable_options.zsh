@@ -10,6 +10,8 @@ setopt NO_BANG_HIST         # don't expand `!`
 setopt NO_BEEP              # No bell: Shut up Zsh
 setopt NO_HUP               # don't kill background jobs when the shell exits
 setopt PROMPT_SUBST         # allow prompt to be evaluated as a command
+setopt EXTENDED_GLOB        # enable advanced pattern matching in file name
+setopt NO_NOMATCH
 
 #█▓▒░  HISTORY
 setopt EXTENDED_HISTORY     # write the history file in the ":start:elapsed;command" format.
