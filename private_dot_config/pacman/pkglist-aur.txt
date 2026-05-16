@@ -16,4 +16,5 @@ stacer-bin
 stylua-bin
 ttf-cm-unicode
 ttf-joypixels
+ttf-tabler-icons
 xdg-ninja
