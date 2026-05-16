@@ -477,7 +477,6 @@ auto_dismiss = true
 respect_expire = true
 dnd_on_screencast = true
 ignored = []
-max_count = 200
 transition_type = "slide-left"
 transition_duration = 350
 per_app_limits = {}
@@ -485,7 +484,6 @@ play_sound = false
 max_actions = 3
 dismiss_on_hover = false
 sound_file = "notification4"
-persist = true
 max_lines = 4
 max_expanded_lines = 20
 
@@ -493,6 +491,13 @@ max_expanded_lines = 20
 low = 3000
 normal = 8000
 critical = 15000
+
+[modules.notification.persist]
+enabled = true
+low = true
+normal = true
+critical = true
+max_count = 200
 
 [modules.screen_corners]
 enabled = false
@@ -536,7 +541,7 @@ anchor = "bottom-right"
 layer = "bottom"
 
 [modules.cheatsheet]
-enabled = true
+enabled = false
 layer = "top"
 anchor = "center"
 transition_type = "crossfade"
@@ -546,5 +551,7 @@ transition_duration = 350
 check_updates = false
 debug = false
 monitor_styles = true
-auto_reload = true
+auto_restart = true
+restart_delay = 1500
 multi_monitor = false
+tooltips = true
