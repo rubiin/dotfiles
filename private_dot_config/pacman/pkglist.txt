@@ -75,6 +75,7 @@ firefox-developer-edition
 firewalld
 flatpak
 fontforge
+foot
 freetype2
 fwupd
 git
