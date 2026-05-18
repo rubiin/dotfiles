@@ -408,14 +408,9 @@ on_scroll_down = "pamixer -d 5"
 exec_on_event = true
 
 [layout]
-left_section = ["workspaces", "window_title","network_usage"]
+left_section = ["workspaces", "window_title", "network_usage"]
 middle_section = ["date_time", "weather"]
-right_section = [
-  "@collapsible:0",
-  "@group:0",
-  "system_tray",
-  "power",
-]
+right_section = ["@collapsible:0", "@group:0", "system_tray", "power"]
 
 [[widget_groups]]
 widgets = ["quick_settings", "updates", "battery"]
@@ -457,7 +452,7 @@ icon_size = 28
 play_sound = false
 transition_type = "slide-up"
 transition_duration = 500
-osds = ["brightness", "volume","lockkeys"]
+osds = ["brightness", "volume", "lockkeys"]
 
 [modules.app_launcher]
 enabled = true
