@@ -32,6 +32,6 @@ repos:
     hooks:
       - id: gitleaks
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v2.4.1
+    rev: v2.5.2
     hooks:
       - id: stylua
