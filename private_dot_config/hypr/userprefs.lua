@@ -35,10 +35,7 @@ hl.config({
 		sensitivity = 0,
 		force_no_accel = true,
 	},
-})
-
-
-
+})(
 [[
 #   "1": " ",
 #   "2": " ",
@@ -52,19 +49,19 @@ hl.config({
 #   "10": "10",
 #   "focused": "",
 #   "default": "",
-]]
+]])
 
 ----------------
 -- Custom apps
 ----------------
 hl.on("hyprland.start", function()
-  -- Matches old `exec = ...` behavior (runs on config load/reload).
-  hl.exec_cmd("sleep 5; ~/.config/tsumiki/init.sh -start")
+	-- Matches old `exec = ...` behavior (runs on config load/reload).
+	hl.exec_cmd("sleep 5; ~/.config/tsumiki/init.sh -start")
 
-  -- Matches old `exec-once = ...` startup behavior.
-  hl.on("hyprland.start", function()
-    hl.exec_cmd("sleep 5; safeeyes -e")
-  end)
+	-- Matches old `exec-once = ...` startup behavior.
+	hl.on("hyprland.start", function()
+		hl.exec_cmd("sleep 5; safeeyes -e")
+	end)
 end)
 
 ----------------
@@ -213,7 +210,9 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "browsers-workspace-1",
-	match = { class = "^(.*firefox.*)$|^(vivaldi-stable)$|^(.*opera.*)$|^(.*edge.*)$|^(.*Chromium.*)$|^(.*Google-chrome.*)$|^(.*thorium-browser.*)$|^(.*Brave-browser.*)$|^(.*zen.*)$" },
+	match = {
+		class = "^(.*firefox.*)$|^(vivaldi-stable)$|^(.*opera.*)$|^(.*edge.*)$|^(.*Chromium.*)$|^(.*Google-chrome.*)$|^(.*thorium-browser.*)$|^(.*Brave-browser.*)$|^(.*zen.*)$",
+	},
 	workspace = "1",
 })
 
@@ -225,7 +224,9 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "vscode-workspace-3",
-	match = { class = "^(Code)$|^(code-oss)$|^(code-url-handler)$|^(code-insiders-url-handler)$|^(code-insiders)$|^(Code - Insiders)$" },
+	match = {
+		class = "^(Code)$|^(code-oss)$|^(code-url-handler)$|^(code-insiders-url-handler)$|^(code-insiders)$|^(Code - Insiders)$",
+	},
 	workspace = "3",
 })
 
@@ -246,7 +247,9 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "workspace-6-media",
-	match = { class = "^(.*amarok.*)$|^(.*G4Music.*)$|.*music.*|.*lollypop.*|^(.*elisa.*)$|^(.*vlc.*)$|^(.*easyeffects.*)$|^(.*mpv.*)$|^(.*strawberry.*)$|^(com.github.rafostar.Clapper)$|^(Spotify)$|^(Audacity)$" },
+	match = {
+		class = "^(.*amarok.*)$|^(.*G4Music.*)$|.*music.*|.*lollypop.*|^(.*elisa.*)$|^(.*vlc.*)$|^(.*easyeffects.*)$|^(.*mpv.*)$|^(.*strawberry.*)$|^(com.github.rafostar.Clapper)$|^(Spotify)$|^(Audacity)$",
+	},
 	workspace = "6",
 })
 
