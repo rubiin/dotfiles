@@ -76,6 +76,7 @@ firewalld
 flatpak
 fontforge
 foot
+foot-terminfo
 freetype2
 fwupd
 git
@@ -191,6 +192,7 @@ pipewire-pulse
 pkgfile
 playerctl
 plocate
+pokego-git
 polkit-gnome
 poppler-glib
 postman-bin
