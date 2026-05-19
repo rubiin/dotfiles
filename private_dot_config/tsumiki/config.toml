@@ -211,10 +211,11 @@ unit = "gb"
 [widgets.network_usage]
 tooltip = true
 format = "{upload}   {download} "
-upload_threshold = 100
+upload_threshold = 1_024
 download_threshold = 1_024
 kb_digits = 0
 mb_digits = 2
+interval = 2000
 
 [widgets.microphone]
 label = false
@@ -408,7 +409,7 @@ on_scroll_down = "pamixer -d 5"
 exec_on_event = true
 
 [layout]
-left_section = ["workspaces", "window_title","network_usage"]
+left_section = ["workspaces", "window_title"]
 middle_section = ["date_time", "weather"]
 right_section = [
   "@collapsible:0",
@@ -554,4 +555,4 @@ monitor_styles = true
 auto_restart = true
 restart_delay = 1500
 multi_monitor = false
-tooltips = true
+tooltips = false
