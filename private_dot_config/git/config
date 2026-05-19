@@ -3,6 +3,7 @@
 	name = Rubin Bhandari
 	signingkey = ~/.ssh/github
 
+# keep the override on the folder of the override
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig
 
