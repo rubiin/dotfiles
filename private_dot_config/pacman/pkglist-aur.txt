@@ -7,7 +7,6 @@ matugen-bin
 megabasterd-bin
 mojave-gtk-theme
 mongodb-compass-bin
-pokego-bin
 ps_mem
 python-fabric-git
 python-rlottie-python
@@ -16,5 +15,4 @@ stacer-bin
 stylua-bin
 ttf-cm-unicode
 ttf-joypixels
-ttf-tabler-icons
 xdg-ninja
