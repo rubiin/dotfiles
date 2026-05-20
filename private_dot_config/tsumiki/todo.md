@@ -1,6 +1,9 @@
 
 todo: fix the widget style on widget settings
 
+https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
+
+
 FIX: use pyvips instead of PIL for image thumbnails
 f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
@@ -40,11 +43,10 @@ https://github.com/Alexays/Waybar/issues/2705
 
 
 https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
-https://github.com/Jas-SinghFSU/HyprPanel/issues/859
 https://github.com/Jas-SinghFSU/HyprPanel/issues/770
 https://github.com/Jas-SinghFSU/HyprPanel/issues/833
 https://github.com/Jas-SinghFSU/HyprPanel/issues/805
-https://github.com/Jas-SinghFSU/HyprPanel/issues/614
+https://github.com/Jas-SinghFSU/HyprPanel/i1ssues/614
 
 
 https://github.com/hyprland-community/awesome-hyprland
@@ -111,3 +113,7 @@ https://github.com/tr1xem/flux
 
 INSPIRATIONS:
 https://github.com/MalpenZibo/ashell
+
+
+
+launcher position, view mode(grid)
