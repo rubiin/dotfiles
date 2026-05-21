@@ -49,7 +49,6 @@ file_folder_list=(
    "$config/hyde/config.toml"
    "$config/hypr/hyprsunset.conf"
    "$config/hypr/userprefs.conf"
-   "$config/hypr/xdph.conf"
    "$config/hyprland-preview-share-picker"
    "$config/hyprflow"
 
