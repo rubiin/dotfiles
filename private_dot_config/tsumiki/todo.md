@@ -17,6 +17,7 @@ feat: group notifications appwise
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
+https://lazka.github.io/pgi-docs/
 
 mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
 

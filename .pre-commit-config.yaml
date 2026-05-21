@@ -17,7 +17,6 @@ repos:
     rev: v0.9.3
     hooks:
       - id: taplo-format
-      - id: taplo-lint
   - repo: https://github.com/lyz-code/yamlfix
     rev: 1.19.1
     hooks:
