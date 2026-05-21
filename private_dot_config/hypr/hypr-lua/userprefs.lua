@@ -35,8 +35,7 @@ hl.config({
 		sensitivity = 0,
 		force_no_accel = true,
 	},
-})(
-[[
+})([[
 #   "1": " ",
 #   "2": " ",
 #   "3": " ",
