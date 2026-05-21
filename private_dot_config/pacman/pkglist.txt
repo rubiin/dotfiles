@@ -219,6 +219,7 @@ rate-mirrors
 rebuild-detector
 reflector
 reflector-simple
+resources
 rofi
 rp-pppoe
 rsync
