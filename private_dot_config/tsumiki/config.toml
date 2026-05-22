@@ -1,4 +1,4 @@
-"$schema" = "./tsumiki.schema.json"
+"$schema" = "https://raw.githubusercontent.com/rubiin/tsumiki/refs/heads/dev/tsumiki.schema.json"
 
 [widgets.app_launcher_button]
 icon = "view-app-grid-symbolic"
@@ -356,7 +356,7 @@ timezones = ["America/New_York", "Asia/Tokyo"]
 [widgets.privacy_indicator]
 tooltip = true
 hide_when_inactive = true
-modules = ["camera", "microphone", "screen"]
+modules = ["camera", "microphone","screen"]
 
 [widgets.custom_button_group]
 spacing = 4
@@ -404,7 +404,6 @@ exec_on_event = true
 left_section = ["workspaces", "window_title"]
 middle_section = ["date_time", "weather"]
 right_section = [
-  "privacy_indicator",
   "@collapsible:0",
   "@group:0",
   "system_tray",
@@ -451,7 +450,7 @@ icon_size = 28
 play_sound = false
 transition_type = "slide-up"
 transition_duration = 500
-osds = ["brightness", "volume", "lockkeys"]
+osds = ["brightness", "volume","lockkeys"]
 
 [modules.app_launcher]
 enabled = true
