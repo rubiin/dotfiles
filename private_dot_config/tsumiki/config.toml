@@ -201,7 +201,7 @@ unit = "gb"
 
 [widgets.network_usage]
 tooltip = true
-format = "{upload}   {download} "
+label_format = "{upload}   {download} "
 upload_threshold = 1024
 download_threshold = 1024
 kb_digits = 0
@@ -344,8 +344,9 @@ ignored = [-99]
 reverse_scroll = false
 show_numbered = true
 empty_scroll = false
-default_label_format = "{id}"
+label_format = "{id}"
 icon_map = {}
+
 
 [widgets.world_clock]
 icon = "󰃰"
@@ -392,13 +393,6 @@ transition_type = "crossfade"
 transition_duration = 300
 title = "Keybinds"
 
-[[widgets.custom_module]]
-exec = "pamixer --get-volume"
-format = "󰕾 {}%"
-interval = 1
-on_scroll_up = "pamixer -i 5"
-on_scroll_down = "pamixer -d 5"
-exec_on_event = true
 
 [layout]
 left_section = ["workspaces", "window_title"]
