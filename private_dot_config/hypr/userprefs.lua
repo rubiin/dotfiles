@@ -96,6 +96,7 @@ hl.window_rule({
 	name = "disable-blur-every-window",
 	match = { class = ".*" },
 	no_blur = true,
+	opaque = true,
 })
 
 hl.window_rule({
@@ -181,14 +182,6 @@ hl.window_rule({
 		title = "^(Open an URL - KTorrent)$",
 	},
 	size = { 800, 500 },
-})
-
-hl.window_rule({
-	name = "opaque-windows",
-	match = {
-		class = "^(code-insiders-url-handler)$|^(code-insiders)$|^(vivaldi-stable)$|^(zen)$|^(com.gabm.satty)$|^(vlc)$|^(.*mpv.*)$",
-	},
-	opaque = true,
 })
 
 hl.window_rule({
