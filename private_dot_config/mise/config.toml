@@ -49,28 +49,67 @@ uv = "latest"
 node = "24"
 usage = "latest"
 claude = "latest"
-"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
+deno = "latest"
+ruff = "latest"
+gallery-dl = "latest"
+cargo-binstall = "latest"
+prek = "latest"
+
+
+# npm plugins
+"npm:@nestjs/cli" = "latest"
+"npm:serve" = "latest"
+"npm:neovim" = "latest"
+"npm:taze" = "latest"
+"npm:release-it" = "latest"
+"npm:yarn" = "latest"
+"npm:tree-sitter-cli" = "latest"
+"npm:types-installer" = "latest"
+"npm:asdfui" = "latest"
+"npm:commitizen" = "latest"
+"npm:cz-conventional-changelog" = "latest"
+"npm:nfdl" = "latest"
+"npm:autocannon" = "latest"
+"npm:sass" = "latest"
+"npm:gitpick" = "latest"
+"npm:aaja" = "latest"
+"npm:json-server" = "latest"
+"npm:pnpm" = "latest"
+"npm:oxlint" = "latest"
+"npm:opencode-ai" = "latest"
+"npm:fallow" = "latest"
+"npm:localtunnel" = "latest"
+"npm:npkill" = "latest"
+
+
+# go tools
+"go:github.com/charmbracelet/gum" = "latest"
+"go:github.com/Gelio/go-global-update" = "latest"
+
+
+# cargo plugins
 "cargo:cargo-update" = "latest"
 "cargo:momoisay" = "latest"
+
+# pipx plugins
 "pipx:urlscan" = "latest"
 "pipx:instaloader" = "latest"
 "pipx:konsave" = "latest"
 "pipx:notebook" = "latest"
 "pipx:git-revise" = "latest"
+"pipx:iredis" = "latest"
+"pipx:xxh-xxh" = "latest"
+"pipx:yt-dlp" = "latest"
+"pipx:glances" = "latest"
+
+# github plugins
 "github:adaszko/complgen" = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:max-niederman/ttyper" = "latest"
 "github:joshmedeski/sesh" = "latest"
 "github:boyter/scc" = "latest"
 "github:fcsonline/tmux-thumbs" = "latest"
-"pipx:glances" = "latest"
+"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "pipx:subliminal" = "latest"
-gallery-dl = "latest"
-"pipx:iredis" = "latest"
-"pipx:xxh-xxh" = "latest"
+
 "aqua:iffse/pay-respects" = "latest"
-cargo-binstall = "latest"
-prek = "latest"
-"pipx:yt-dlp" = "latest"
-deno = "latest"
-ruff = "latest"
