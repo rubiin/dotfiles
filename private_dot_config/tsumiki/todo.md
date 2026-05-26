@@ -1,11 +1,11 @@
 
 todo: fix the widget style on widget settings
 
+todo: fix expand issues on stat progress and circular.
+Also check ciruckar progressbar anim issue
+
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
-
-FIX: use pyvips instead of PIL for image thumbnails
-f"vipsthumbnail '{image_path}' --size {size_arg} --output '{thumbnail_path}'"
 
 feat: bubble styled workspace
 
@@ -33,14 +33,25 @@ Traceback (most recent call last):
 
 
 
+WORKSPACE_LABELS = {
+    0: ".",
+    1: "一",
+    2: "二",
+    3: "三",
+    4: "四",
+    5: "五",
+    6: "六",
+    7: "七",
+    8: "八",
+    9: "九",
+    10: "十",
+}
+
 
 bug: fix wifi ap client disconnect button
 
 TODO: add popover animation
 
-
-todo: privacy module
-https://github.com/Alexays/Waybar/issues/2705
 
 
 https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
