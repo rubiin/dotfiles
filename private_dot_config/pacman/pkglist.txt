@@ -36,7 +36,6 @@ chezmoi
 cinnamon-desktop
 cliphist
 cryptsetup
-dart-sass
 device-mapper
 dialog
 diffutils
@@ -237,6 +236,7 @@ sof-firmware
 spotify
 spotube-bin
 sudo
+swaync
 sysfsutils
 systemd-sysvcompat
 tealdeer
