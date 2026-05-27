@@ -121,7 +121,7 @@ round = true
 temperature_unit = "celsius"
 show_unit = true
 sensor = "acpitz"
-mode = "label"
+mode = "graph"
 graph_length = 4
 
 [widgets.gpu]
