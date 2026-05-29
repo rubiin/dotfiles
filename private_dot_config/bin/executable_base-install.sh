@@ -90,6 +90,9 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resource
 echo "⏱️  Setting up wakatime..."
 mkdir "$XDG_CONFIG_HOME/wakatime"
 
+echo "Enabling fstrimer"
+sudo systemctl enable fstrim.timer
+
 echo "🐚 Configuring zsh environment..."
 echo "export ZDOTDIR=~/.config/zsh" | sudo tee /etc/zsh/zshenv >/dev/null
 
@@ -139,6 +142,5 @@ ask_yes_no_default "🔄 Do you want to reapply chezmoi configuration (recommend
 
 echo "📁 Creating XDG directories"
 xdg-user-dirs-update
-
 
 echo "✅ Completed setup! Please restart your terminal and log out and log back in for all changes to take effect."
