@@ -5,6 +5,7 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
+appmanager
 archlinux-keyring
 aria2
 ark
@@ -17,7 +18,6 @@ base
 base-devel
 bash-completion
 bat
-bauh
 bind
 bluez
 bluez-utils
