@@ -1,7 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-todo: fix expand issues on stat progress and circular.
 Also check ciruckar progressbar anim issue
 
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
