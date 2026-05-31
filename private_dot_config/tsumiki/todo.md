@@ -13,7 +13,6 @@ TODO: add weather in the panel
 
 feat: replace notification when it has replace_id
 
-feat: group notifications appwise
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
