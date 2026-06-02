@@ -64,6 +64,7 @@ eos-packagelist
 eos-quickstart
 eos-rankmirrors
 ethtool
+evince
 exfatprogs
 eza
 f2fs-tools
