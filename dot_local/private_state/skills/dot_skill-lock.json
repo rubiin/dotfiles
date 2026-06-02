@@ -82,10 +82,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
-      "skillFolderHash": "2c6aa7079cc705a6e0c319fcf23a0fa39968de29",
-      "pluginName": "mattpocock-skills",
+      "skillFolderHash": "2c3a4e48571bfe42203ed7b49cae85f31ef4b6f2",
       "installedAt": "2026-05-01T18:20:29.220Z",
-      "updatedAt": "2026-05-22T16:43:42.016Z"
+      "updatedAt": "2026-06-02T00:49:41.328Z"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -132,10 +131,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/to-prd/SKILL.md",
-      "skillFolderHash": "d6eff3e99a325d2d9c2acbe31b4d76fa5340a154",
-      "pluginName": "mattpocock-skills",
+      "skillFolderHash": "fb4503f54bc618da08df2fd74109fbe57e4d8150",
       "installedAt": "2026-05-01T18:20:29.225Z",
-      "updatedAt": "2026-05-22T16:43:42.019Z"
+      "updatedAt": "2026-06-02T00:49:44.030Z"
     },
     "triage": {
       "source": "mattpocock/skills",
