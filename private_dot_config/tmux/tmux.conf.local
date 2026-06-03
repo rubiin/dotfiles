@@ -449,8 +449,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'fcsonline/tmux-thumbs'
-set -g @plugin 'schasse/tmux-jump'
+set -g @plugin 'Morantron/tmux-fingers' # copy any thing based on label
+set -g @plugin 'schasse/tmux-jump'  # jump based on label
 
 # options for plugins
 set -g @resurrect-save 'S'                          # Save the session
@@ -459,7 +459,7 @@ set -g @continuum-restore 'off'
 set -g @resurrect-capture-pane-contents 'on'
 
 set -g @jump-key 'S'
-set -g @thumbs-key F
+set -g @fingers-key F
 
 # source your configs
 source-file "$XDG_CONFIG_HOME/tmux/config/keybinds.conf"
