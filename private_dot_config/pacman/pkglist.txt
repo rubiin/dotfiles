@@ -174,7 +174,6 @@ nvtop
 nwg-displays
 nwg-look
 obsidian
-okular
 openconnect
 openvpn
 os-prober
