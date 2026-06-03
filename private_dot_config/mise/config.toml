@@ -109,7 +109,6 @@ prek = "latest"
 "github:max-niederman/ttyper" = "latest"
 "github:joshmedeski/sesh" = "latest"
 "github:boyter/scc" = "latest"
-"github:fcsonline/tmux-thumbs" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "pipx:subliminal" = "latest"
 
