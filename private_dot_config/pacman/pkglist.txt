@@ -261,7 +261,6 @@ unzip
 usb_modeswitch
 usbutils
 uwsm
-ventoy-bin
 vim
 visual-studio-code-insiders
 vivaldi
