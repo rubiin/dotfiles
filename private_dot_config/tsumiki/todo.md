@@ -9,7 +9,7 @@ feat: bubble styled workspace
 TODO: add weather in the panel
 
 feat: replace notification when it has replace_id
-
+[Feature Request] Toggle Darkmode
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
@@ -18,6 +18,7 @@ https://lazka.github.io/pgi-docs/
 mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
 
 
+todo: Option to reveal bar on mouse hover
 
 
 (To verify): add a delayed function call
@@ -46,9 +47,7 @@ TODO: add popover animation
 
 
 
-https://github.com/Jas-SinghFSU/HyprPanel/issues/1038
 https://github.com/Jas-SinghFSU/HyprPanel/issues/770
-https://github.com/Jas-SinghFSU/HyprPanel/issues/833
 https://github.com/Jas-SinghFSU/HyprPanel/issues/805
 https://github.com/Jas-SinghFSU/HyprPanel/i1ssues/614
 
