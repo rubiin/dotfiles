@@ -1,8 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-Also check ciruckar progressbar anim issue
-
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
