@@ -78,7 +78,7 @@ echo "🔐 Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
 
-ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/.config/pacman/pkglist-pacman.txt
+ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/.config/pacman/pkglist.txt
 ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/.config/pacman/pkglist-aur.txt
 
 echo "🔤 Building font cache..."
