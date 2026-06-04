@@ -18,10 +18,6 @@ https://lazka.github.io/pgi-docs/
 mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
 
 
-fix: TypeError: 'NoneType' object is not iterable
-Traceback (most recent call last):
-  File "/home/rubin/.config/tsumiki/shared/media.py", line 520, in on_accent_color
-    css_colors = [rgb_to_css(color) for color in palette]
 
 
 (To verify): add a delayed function call
