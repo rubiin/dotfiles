@@ -1,6 +1,8 @@
 
 todo: fix the widget style on widget settings
 
+todo: validate enums for settings
+
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
