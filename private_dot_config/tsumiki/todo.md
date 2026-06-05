@@ -3,6 +3,10 @@ todo: fix the widget style on widget settings
 
 todo: validate enums for settings
 
+TODO: make it dynamic based on the number of bar
+
+todo: add brightness and volume tooltips
+
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
