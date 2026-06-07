@@ -3,7 +3,7 @@ todo: fix the widget style on widget settings
 
 todo: validate enums for settings
 
-TODO: make it dynamic based on the number of bar
+todo: fix eventbox hover teal highlight
 
 todo: add brightness and volume tooltips
 
