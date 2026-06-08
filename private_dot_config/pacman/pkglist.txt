@@ -5,7 +5,6 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
-appmanager
 archlinux-keyring
 aria2
 ark
@@ -73,6 +72,7 @@ ffmpegthumbs
 firefox-developer-edition
 firewalld
 flatpak
+font-manager
 fontforge
 foot
 foot-terminfo
@@ -235,6 +235,7 @@ socat
 sof-firmware
 spotify
 spotube-bin
+squashfs-tools
 sudo
 sysfsutils
 systemd-sysvcompat
@@ -253,6 +254,8 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
 ttf-opensans
+ttf-roboto-mono
+ttf-twemoji-git
 ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 udiskie
@@ -279,6 +282,7 @@ whois
 wireless-regdb
 wireplumber
 wl-clip-persist
+woff2-font-awesome
 wpa_supplicant
 wps-office
 xdg-desktop-portal-hyprland
