@@ -168,6 +168,11 @@ type = "file"
 url = "https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
 refreshPeriod = "168h"
 
+[".config/mpv/scripts/open-file.lua"]
+type="file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/open-file/open-file.lua"
+refreshPeriod = "168h"
+
 [".config/mpv/script-opts/evafast.conf"]
 type = "file"
 url = "https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.conf"
