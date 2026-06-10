@@ -1,7 +1,7 @@
 
 todo: fix the widget style on widget settings
 
-todo: validate enums for settings
+
 
 todo: fix eventbox hover teal highlight
 

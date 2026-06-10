@@ -587,7 +587,7 @@ widget_style = "default"
 
 [modules.osd.border]
 enabled = false
-radius = "16px"
+radius = "25px"
 width = "1px"
 
 [modules.osd.shadow]
