@@ -128,6 +128,15 @@ echo "🔐 Setting gpg"
 mkdir -p ~/.local/share/gpg
 chmod 700 ~/.local/share/gpg
 
+echo "setting some sys settings"
+sudo sysctl vm.swappiness=10
+sudo swapoff -a
+sudo rm /swapfile
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
 echo "🧹 Removing orphaned dependencies"
 sudo pacman -Qtdq | sudo pacman -Rns -
 
