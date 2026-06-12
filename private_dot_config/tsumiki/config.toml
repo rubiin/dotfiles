@@ -199,11 +199,9 @@ tooltip = true
 show_icon = false
 
 [widgets.window_count]
-icon = ""
-label_format = "[{count}]"
+label_format = " [{count}]"
 hide_when_zero = true
 tooltip = true
-show_icon = false
 
 [widgets.language]
 icon = ""
@@ -321,7 +319,6 @@ step_size = 5
 
 [widgets.weather]
 location = "kathmandu"
-label = true
 label_format = "{temperature} {condition}"
 tooltip = true
 expanded = true
@@ -400,7 +397,7 @@ title = "Keybinds"
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "mpris","brightness","cpu"]
+middle_section = ["date_time", "weather", "mpris","app_launcher_button"]
 right_section = ["@collapsible:0", "@group:1","clipboard", "system_tray", "power"]
 
 [[widget_groups]]
