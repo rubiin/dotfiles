@@ -244,6 +244,14 @@ show_icon = true
 label = false
 confirm = true
 
+[widgets.power.item_shortcuts]
+shutdown = "s"
+reboot = "r"
+hibernate = "h"
+suspend = "u"
+lock = "l"
+logout = "o"
+
 [widgets.power.buttons]
 shutdown = "systemctl poweroff"
 reboot = "systemctl reboot"
@@ -397,7 +405,7 @@ title = "Keybinds"
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "mpris","app_launcher_button"]
+middle_section = ["date_time", "weather", "mpris","power"]
 right_section = ["@collapsible:0", "@group:1","clipboard", "system_tray", "power"]
 
 [[widget_groups]]
@@ -445,12 +453,12 @@ osds = ["brightness", "volume"]
 [modules.app_launcher]
 enabled = true
 tooltip = true
-icon_size = 40
+icon_size = 35
 ignored = []
 anchor = "center"
 width = 280
 height = 320
-layout = "list"
+layout = "grid"
 grid_columns = 3
 
 [modules.notification]
