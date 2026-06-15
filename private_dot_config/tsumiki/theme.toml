@@ -368,7 +368,7 @@ radius = "16px"
 width = "1px"
 
 [bar.widgets.system_tray]
-spacing = "0.125em"
+spacing = "0.3em"
 
 [bar.widgets.system_tray.border]
 enabled = false
