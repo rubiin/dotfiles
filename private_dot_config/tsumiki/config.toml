@@ -405,7 +405,7 @@ title = "Keybinds"
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "mpris","power"]
+middle_section = ["date_time", "weather", "mpris"]
 right_section = ["@collapsible:0", "@group:1","clipboard", "system_tray", "power"]
 
 [[widget_groups]]
