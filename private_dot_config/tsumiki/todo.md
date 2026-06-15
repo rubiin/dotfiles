@@ -1,7 +1,7 @@
 
 todo: fix the widget style on widget settings
 
-
+todo: fix workspace hover pointer show to hand
 
 todo: fix eventbox hover teal highlight
 
