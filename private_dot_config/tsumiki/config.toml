@@ -9,6 +9,8 @@ tooltip = true
 icon = ""
 label = false
 tooltip = true
+item_tooltip = false
+show_images = true
 
 [widgets.emoji_picker]
 icon = ""
