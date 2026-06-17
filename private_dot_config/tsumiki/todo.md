@@ -13,6 +13,8 @@ todo: add brightness and volume tooltips
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
+todo: Option to reveal bar on mouse hover
+
 feat: bubble styled workspace
 
 TODO: add weather in the panel
@@ -24,10 +26,7 @@ feat: replace notification when it has replace_id
 
 https://lazka.github.io/pgi-docs/
 
-mpris:https://github.com/AhmedSaadi0/nibrasshell/blob/quickshell/screenshots/smart-c.gif
-
-
-todo: Option to reveal bar on mouse hover
+mpris:https://raw.githubusercontent.com/AhmedSaadi0/NibrasShell/084752b2e960252edd4b07acf0410a99514572d3/screenshots/smart-c.gif
 
 
 (To verify): add a delayed function call
