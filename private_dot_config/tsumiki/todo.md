@@ -1,8 +1,12 @@
 
 todo: fix the widget style on widget settings
-
+todo: move dock and overview to glace
 
 todo: fix eventbox hover teal highlight
+
+TODO: add popover animation
+
+TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
 
@@ -47,9 +51,6 @@ WORKSPACE_LABELS = {
 
 
 bug: fix wifi ap client disconnect button
-
-TODO: add popover animation
-
 
 
 https://github.com/Jas-SinghFSU/HyprPanel/issues/770
@@ -123,5 +124,3 @@ INSPIRATIONS:
 https://github.com/MalpenZibo/ashell
 
 
-
-launcher position, view mode(grid)
