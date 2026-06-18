@@ -58,6 +58,11 @@ if [[ $- == *i* ]]; then
 fi
 
 
+if ! ssh-add -l >/dev/null 2>&1; then
+    eval "$(ssh-agent -s)"
+fi
+
+
 #source scripts with _evalcache
 _evalcache hydectl completion zsh
 _evalcache zoxide init zsh --hook pwd
