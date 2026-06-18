@@ -35,6 +35,7 @@ chezmoi
 cinnamon-desktop
 cliphist
 cryptsetup
+dart-sass
 device-mapper
 dialog
 diffutils
@@ -130,6 +131,7 @@ libappindicator
 libdvdcss
 libgsf
 libopenraw
+linux
 linux-firmware
 linux-firmware-marvell
 linux-headers
