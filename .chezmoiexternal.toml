@@ -95,7 +95,6 @@ type = "file"
 url = "https://codeberg.org/jouni/mpv_sponsorblock_minimal/raw/branch/master/sponsorblock_minimal.conf"
 refreshPeriod = "168h"
 
-
 [".config/mpv/scripts/pip_lite.lua"]
 type = "file"
 url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/pip-lite/pip_lite.lua"
@@ -168,14 +167,14 @@ type = "file"
 url = "https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.lua"
 refreshPeriod = "168h"
 
-[".config/mpv/scripts/open-file.lua"]
-type="file"
-url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/open-file/open-file.lua"
-refreshPeriod = "168h"
-
 [".config/mpv/script-opts/evafast.conf"]
 type = "file"
 url = "https://raw.githubusercontent.com/po5/evafast/refs/heads/master/evafast.conf"
+refreshPeriod = "168h"
+
+[".config/mpv/scripts/open-file.lua"]
+type="file"
+url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/extras/open-file/open-file.lua"
 refreshPeriod = "168h"
 
 [".config/mpv/scripts/pause_indicator_lite.lua"]
@@ -187,7 +186,6 @@ refreshPeriod = "168h"
 type = "file"
 url = "https://github.com/Samillion/ModernZ/raw/refs/heads/main/extras/pause-indicator-lite/pause_indicator_lite.conf"
 refreshPeriod = "168h"
-
 
 [".config/zsh/zcompletions/_git-extras"]
 type = "file"
