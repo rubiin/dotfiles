@@ -57,10 +57,10 @@ if [[ $- == *i* ]]; then
   gh-token
 fi
 
-
-if ! ssh-add -l >/dev/null 2>&1; then
-    eval "$(ssh-agent -s)"
-fi
+#
+# if ! ssh-add -l >/dev/null 2>&1; then
+#     eval "$(ssh-agent -s)"
+# fi
 
 
 #source scripts with _evalcache
