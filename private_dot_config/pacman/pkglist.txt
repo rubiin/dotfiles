@@ -150,6 +150,7 @@ mesa-utils
 mission-center
 mkinitcpio-nfs-utils
 modemmanager
+mpv-mpris
 mtools
 nano
 nbd
