@@ -287,10 +287,8 @@ max_concurrency = 8
 repos = [
   "~/.config/tmux/oh-my-tmux",
   "~/work/cit-be/",
-  "~/personal/typescript/v4",
   "~/personal/typescript/ultimate-nest",
   "~/personal/typescript/starter",
-  "~/Documents/obsidian",
   "~/.config/nvim",
 ]
 
