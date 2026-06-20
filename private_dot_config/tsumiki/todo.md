@@ -2,6 +2,7 @@
 todo: fix the widget style on widget settings
 todo: move dock and overview to glace
 
+todo: migrate theme files to json or toml for easier parsing and editing
 
 todo: clipboard doesnt sync with latest values, sync on popup open
 
