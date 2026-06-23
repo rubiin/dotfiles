@@ -145,6 +145,7 @@ man-db
 man-pages
 mdadm
 memtest86+-efi
+memtester
 mesa
 mesa-utils
 mission-center
