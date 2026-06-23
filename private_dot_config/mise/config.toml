@@ -42,7 +42,6 @@ npm.package_manager = "pnpm"
 
 [tools]
 go = "latest"
-bun = "latest"
 rust = "latest"
 ruby = "latest"
 uv = "latest"
