@@ -139,6 +139,7 @@ linux-lts
 lite-xl
 logrotate
 lsb-release
+lshw
 lsscsi
 lvm2
 man-db
@@ -230,6 +231,7 @@ rtkit
 s-nail
 safeeyes
 satty
+sbctl
 sddm
 sg3_utils
 sheldon
