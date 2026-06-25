@@ -1,6 +1,7 @@
 
 todo: fix the widget style on widget settings
-todo: move dock and overview to glace
+todo: hide mpris if no media is playing
+
 
 
 todo: clipboard doesnt sync with latest values, sync on popup open
