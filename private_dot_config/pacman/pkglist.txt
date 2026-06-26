@@ -254,7 +254,6 @@ tmux
 topgrade
 ttf-bitstream-vera
 ttf-dejavu
-ttf-dejavu-nerd
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
