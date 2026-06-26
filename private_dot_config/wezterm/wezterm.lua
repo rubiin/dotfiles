@@ -33,9 +33,8 @@ config.line_height = 1.1
 config.font_size = 10
 config.font = wezterm.font_with_fallback({
 	{ family = "MonoLisa Nerd Font", weight = "Regular" },
-	{ family = "DejaVuSansM Nerd Font", weight = "Regular" },
 	"Noto Color Emoji",
-	{ family = "Symbols Nerd Font Mono", scale = 0.75 },
+	"Symbols Nerd Font Mono",
 })
 config.color_scheme = "Catppuccin Mocha"
 config.warn_about_missing_glyphs = false
