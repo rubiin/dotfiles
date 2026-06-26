@@ -255,16 +255,13 @@ topgrade
 ttf-bitstream-vera
 ttf-dejavu
 ttf-dejavu-nerd
-ttf-firacode-nerd
-ttf-hack-nerd
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-ms-fonts
+ttf-nerd-fonts-symbols
 ttf-opensans
 ttf-roboto-mono
 ttf-twemoji-git
-ttf-ubuntu-mono-nerd
-ttf-ubuntu-nerd
 udiskie
 unrar
 unzip
