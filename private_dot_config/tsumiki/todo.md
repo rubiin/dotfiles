@@ -1,8 +1,5 @@
 
 todo: fix the widget style on widget settings
-todo: hide mpris if no media is playing
-
-
 
 todo: clipboard doesnt sync with latest values, sync on popup open
 
