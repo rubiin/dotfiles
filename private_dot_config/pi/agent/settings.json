@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "theme": "catppuccin-mocha",
+  "defaultProvider": "openrouter",
+  "defaultModel": "openrouter/free",
+  "defaultThinkingLevel": "medium",
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "transport": "auto",
+  "enableInstallTelemetry": false,
+  "packages": [
+    "git:github.com/otahontas/pi-coding-agent-catppuccin"
+  ]
+}
