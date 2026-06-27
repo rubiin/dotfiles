@@ -14,7 +14,7 @@ file_folder_list=(
    "$HOME/.profile"
    "$HOME/.ssh/config"
    "$HOME/sudoers.lecture"
-   "$config/pi/agent/settings.json"
+   "$HOME/.pi/agent/settings.json"
 
    "$state/skills"
 
