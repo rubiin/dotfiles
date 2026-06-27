@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "theme": "dark",
+  "defaultProvider": "openrouter",
+  "defaultModel": "openrouter/free",
+  "defaultThinkingLevel": "medium",
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "transport": "auto",
+  "enableInstallTelemetry": false
+}
