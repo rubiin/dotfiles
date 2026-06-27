@@ -52,7 +52,7 @@ ruff = "latest"
 gallery-dl = "latest"
 cargo-binstall = "latest"
 prek = "latest"
-
+pi = "latest"
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -75,7 +75,6 @@ prek = "latest"
 "npm:pnpm" = "latest"
 "npm:oxlint" = "latest"
 "npm:oxfmt" = "latest"
-"npm:@earendil-works/pi-coding-agent" = "latest"
 "npm:fallow" = "latest"
 "npm:localtunnel" = "latest"
 "npm:npkill" = "latest"
