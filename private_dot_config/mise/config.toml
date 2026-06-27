@@ -81,7 +81,6 @@ pi = "latest"
 
 
 # go tools
-"go:github.com/charmbracelet/gum" = "latest"
 "go:github.com/Gelio/go-global-update" = "latest"
 
 
@@ -110,3 +109,4 @@ pi = "latest"
 "pipx:subliminal" = "latest"
 
 "aqua:iffse/pay-respects" = "latest"
+gum = "latest"
