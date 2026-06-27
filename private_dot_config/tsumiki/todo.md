@@ -1,6 +1,7 @@
 
 todo: fix the widget style on widget settings
 
+todo: Option to reveal bar on mouse hover
 
 todo: fix eventbox hover teal highlight
 
@@ -13,7 +14,6 @@ todo: add brightness and volume tooltips
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
-todo: Option to reveal bar on mouse hover
 
 feat: bubble styled workspace
 
