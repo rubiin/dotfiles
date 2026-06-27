@@ -53,6 +53,8 @@ gallery-dl = "latest"
 cargo-binstall = "latest"
 prek = "latest"
 pi = "latest"
+gum = "latest"
+
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -109,4 +111,3 @@ pi = "latest"
 "pipx:subliminal" = "latest"
 
 "aqua:iffse/pay-respects" = "latest"
-gum = "latest"
