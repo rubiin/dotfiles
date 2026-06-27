@@ -148,8 +148,6 @@ export NODE_COMPILE_CACHE="$XDG_CACHE_HOME/node"
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE="sloppy"
 
-export PI_CODING_AGENT_DIR="${XDG_CONFIG_HOME}/pi"
-
 ##█▓▒░  npm config
 export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
