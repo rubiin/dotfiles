@@ -1,7 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-todo: clipboard doesnt sync with latest values, sync on popup open
 
 todo: fix eventbox hover teal highlight
 
