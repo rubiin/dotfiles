@@ -84,7 +84,6 @@ git-delta
 git-interactive-rebase-tool-git
 github-cli
 gitlogue
-glances
 gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
