@@ -13,3 +13,4 @@ fund=false
 allow-git=none
 allow-remote=none
 strict-allow-scripts=true
+min-release-age=0
