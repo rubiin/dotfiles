@@ -160,9 +160,9 @@ tooltip = true
 label = false
 
 [widgets.date_time]
-format = "%b %d %H:%M"
+date_format = "%b %d"
 calendar = true
-clock_format = "24h"
+clock_format = "12h"
 hover_reveal = false
 reveal_duration = 500
 
