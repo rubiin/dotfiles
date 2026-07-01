@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.80.2",
+  "lastChangelogVersion": "0.80.3",
   "theme": "catppuccin-mocha",
-  "defaultProvider": "openrouter",
-  "defaultModel": "openrouter/free",
+  "defaultProvider": "cloudflare-ai-gateway",
+  "defaultModel": "workers-ai/@cf/nvidia/nemotron-3-120b-a12b",
   "defaultThinkingLevel": "medium",
   "terminal": {
     "showTerminalProgress": true
