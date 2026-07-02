@@ -52,7 +52,6 @@ ruff = "latest"
 gallery-dl = "latest"
 cargo-binstall = "latest"
 prek = "latest"
-pi = "latest"
 gum = "latest"
 
 
@@ -101,6 +100,8 @@ gum = "latest"
 "pipx:xxh-xxh" = "latest"
 "pipx:yt-dlp" = "latest"
 "pipx:glances" = "latest"
+"pipx:subliminal" = "latest"
+
 
 # github plugins
 "github:adaszko/complgen" = "latest"
@@ -109,7 +110,6 @@ gum = "latest"
 "github:joshmedeski/sesh" = "latest"
 "github:boyter/scc" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
-"pipx:subliminal" = "latest"
+"github:can1357/oh-my-pi" = "latest"
 
 "aqua:iffse/pay-respects" = "latest"
-nub = "latest"
