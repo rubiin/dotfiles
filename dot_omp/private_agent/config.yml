@@ -1,0 +1,19 @@
+symbolPreset: nerd
+theme:
+  dark: dark-catppuccin
+setupVersion: 1
+colorBlindMode: false
+statusLine:
+  preset: full
+  transparent: false
+  separator: powerline-thin
+  compactThinkingLevel: false
+display:
+  showTokenUsage: true
+defaultThinkingLevel: auto
+memory:
+  backend: local
+github:
+  enabled: true
+modelRoles:
+  default: openrouter/nvidia/nemotron-3-nano-30b-a3b:free
