@@ -1,8 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-done: Option to reveal bar on mouse hover - added hover_reveal config option to bar module
-
 todo: fix eventbox hover teal highlight
 
 TODO: add popover animation
