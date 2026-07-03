@@ -2,6 +2,7 @@
 todo: fix the widget style on widget settings
 
 todo: fix keybind cheatsheet (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png)
+
 todo: pomodoro timer (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/pomodoro/preview.png)
 todo: usb drive manager (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/usb-drive-manager/preview.png)
 
@@ -10,9 +11,6 @@ todo: add graph for upload download(https://github.com/noctalia-dev/legacy-v4-pl
 todo: unicode picker (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/unicode-picker/preview.png)
 
 
-
-
-todo: add pinning on clipboard history https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/clipboard/preview.png
 
 TODO: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/cloudflare-warp/README.md
 
