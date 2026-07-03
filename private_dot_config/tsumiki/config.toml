@@ -10,6 +10,7 @@ icon = ""
 label = false
 tooltip = true
 item_tooltip = false
+enable_pinning = true
 show_images = true
 
 [widgets.emoji_picker]
