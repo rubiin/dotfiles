@@ -430,7 +430,7 @@ style_classes = ["utility-tools"]
 
 [modules.bar]
 layer = "top"
-auto_hide = true
+auto_hide = false
 auto_hide_timeout = 3_000
 location = "top"
 

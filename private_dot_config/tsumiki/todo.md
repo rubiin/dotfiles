@@ -17,7 +17,8 @@ feat: bubble styled workspace
 
 TODO: add weather in the panel
 
-feat: replace notification when it has replace_id
+feat: replace notification when it has replaces_id
+
 [Feature Request] Toggle Darkmode
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
