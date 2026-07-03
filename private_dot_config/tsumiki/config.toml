@@ -10,8 +10,8 @@ icon = ""
 label = false
 tooltip = true
 item_tooltip = false
-enable_pinning = true
 show_images = true
+enable_pinning = true
 
 [widgets.emoji_picker]
 icon = ""
@@ -430,7 +430,7 @@ tooltip = "Utility Tools"
 style_classes = ["utility-tools"]
 
 [modules.bar]
-layer = "top"
+layer = "background"
 auto_hide = false
 auto_hide_timeout = 3_000
 location = "top"
