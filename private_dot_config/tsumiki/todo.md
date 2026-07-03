@@ -38,8 +38,6 @@ feat: bubble styled workspace
 
 TODO: add weather in the panel
 
-[Feature Request] Toggle Darkmode
-
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
 
 https://lazka.github.io/pgi-docs/
