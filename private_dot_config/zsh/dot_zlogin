@@ -134,7 +134,7 @@ fi
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 
 export PI_CONFIG_DIR="$XDG_CONFIG_HOME/omp"
-export PI_CODING_AGENT_DIR="$XDG_CONFIG_HOME/pi"
+export PI_CODING_AGENT_DIR="$XDG_CONFIG_HOME/omp"
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
