@@ -20,6 +20,7 @@ file_folder_list=(
    "$config/.curlrc"
    "$config/.shellcheckrc"
    "$config/.stylua.toml"
+   "$config/omp/agent/config.yml"
 
    "$config/aria2/aria2.conf"
    "$config/atuin"
