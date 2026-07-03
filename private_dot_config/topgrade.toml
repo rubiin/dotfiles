@@ -285,7 +285,6 @@ max_concurrency = 8
 
 # Additional git repositories to pull
 repos = [
-  "~/.config/tmux/oh-my-tmux",
   "~/work/cit-be/",
   "~/personal/typescript/ultimate-nest",
   "~/personal/typescript/starter",
@@ -347,7 +346,7 @@ exclude_encrypted = true
 
 # Number of jobs to run in parallel
 # (default: 4)
-# jobs = 4
+jobs = 8
 
 # Run interactively
 # (default: false)
