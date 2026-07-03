@@ -20,7 +20,7 @@ unplug = 80
 
 
 [battery.notify]
-timer = 120
+timer = 600
 notify = 1140
 interval = 5
 dock = true
@@ -47,7 +47,7 @@ explorer = "dolphin"
 
 
 [weather]
-location = "kathmandu"
+location = "Kathmandu"
 
 [hyprland-start]
 bar = ''
