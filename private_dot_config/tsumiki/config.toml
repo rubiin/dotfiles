@@ -429,8 +429,8 @@ tooltip = "Utility Tools"
 style_classes = ["utility-tools"]
 
 [modules.bar]
-layer = "background"
-auto_hide = false
+layer = "top"
+auto_hide = true
 auto_hide_timeout = 3_000
 location = "top"
 
