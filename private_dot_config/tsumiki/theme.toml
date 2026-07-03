@@ -1,5 +1,6 @@
 border-radius = "10px"
 border-width = "1px"
+mode = "dark"
 name = "catpuccin-mocha"
 padding = "7pt"
 spacing = "12pt"
@@ -487,7 +488,6 @@ weight = 600
 [matugen]
 contrast = 0
 enabled = false
-mode = "dark"
 scheme = "scheme-tonal-spot"
 wallpaper = "~/2.jpg"
 
