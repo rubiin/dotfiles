@@ -22,6 +22,7 @@ file_folder_list=(
    "$config/.stylua.toml"
    "$config/omp/agent/config.yml"
    "$config/vlc/vlcrc"
+   "$config/caveman"
 
    "$config/aria2/aria2.conf"
    "$config/atuin"
