@@ -146,6 +146,13 @@ tooltip = true
 graph_length = 4
 unit = "gb"
 
+[widgets.usb_manager]
+icon = ""
+label = false
+tooltip = true
+auto_refresh = true
+refresh_interval = 5
+
 
 [widgets.memory]
 show_icon = true
@@ -372,6 +379,7 @@ tooltip = true
 hide_when_inactive = true
 modules = ["camera", "microphone", "screen"]
 
+
 [widgets.custom_button_group]
 spacing = 4
 
@@ -393,23 +401,24 @@ show_icon = true
 label = false
 tooltip = true
 
-[widgets.keybinds]
-icon = "󰌌"
-label = false
+[widgets.cheatsheet]
+label = true
+label_text = "Keys"
 tooltip = true
-show_icon = true
-width = 800
-height = 500
-hide_empty_descriptions = true
-anchor = "center"
-transition_type = "crossfade"
-transition_duration = 300
-title = "Keybinds"
+title = "Hyprland Cheatsheet"
+columns = 3
+groups_per_page = 6
+max_entries_per_group = 8
 
+[widgets.pomodoro]
+icon = "🍅"
+label = true
+label_text = "Pomo"
+tooltip = true
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "mpris"]
+middle_section = ["date_time", "weather", "usb_manager"]
 right_section = ["@collapsible:0", "@group:1","clipboard", "system_tray", "power"]
 
 [[widget_groups]]
@@ -535,12 +544,6 @@ enabled = false
 anchor = "bottom-right"
 layer = "bottom"
 
-[modules.cheatsheet]
-enabled = false
-layer = "top"
-anchor = "center"
-transition_type = "crossfade"
-transition_duration = 350
 
 [general]
 check_updates = false
