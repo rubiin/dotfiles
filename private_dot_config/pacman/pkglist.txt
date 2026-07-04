@@ -260,7 +260,6 @@ ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-twemoji-git
-udiskie
 unrar
 unzip
 usb_modeswitch
