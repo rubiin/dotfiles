@@ -123,10 +123,8 @@ enabled = false
 radius = "16px"
 width = "1px"
 
-
-
 [bar.widgets.usb_manager]
-icon_size = "12px"
+icon_size = "14px"
 spacing = "0.125em"
 
 [bar.widgets.usb_manager.border]
