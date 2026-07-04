@@ -101,6 +101,7 @@ file_folder_list=(
    "$config/topgrade.toml"
    "$config/tsumiki/config.toml"
    "$config/tsumiki/theme.toml"
+   "$config/tsumiki/todo.md"
 
    "$config/vivaldi-stable.conf"
 
