@@ -418,8 +418,8 @@ tooltip = true
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "usb_manager"]
-right_section = ["@collapsible:0", "@group:1","clipboard", "system_tray", "power"]
+middle_section = ["date_time", "weather", "mpris"]
+right_section = [ "@group:1","@group:2", "system_tray", "power"]
 
 [[widget_groups]]
 widgets = ["workspaces", "window_title"]
@@ -428,6 +428,11 @@ style_classes = ["compact"]
 
 [[widget_groups]]
 widgets = ["quick_settings", "updates", "battery"]
+spacing = 2
+style_classes = ["compact"]
+
+[[widget_groups]]
+widgets = ["clipboard", "usb_manager"]
 spacing = 2
 style_classes = ["compact"]
 
