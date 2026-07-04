@@ -147,7 +147,7 @@ graph_length = 4
 unit = "gb"
 
 [widgets.usb_manager]
-icon = ""
+icon = "󰕓"
 label = false
 tooltip = true
 auto_refresh = true
