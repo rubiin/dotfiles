@@ -3,7 +3,6 @@ todo: fix the widget style on widget settings
 
 todo: fix keybind cheatsheet (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png)
 
-todo: pomodoro timer (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/pomodoro/preview.png)
 todo: usb drive manager (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/usb-drive-manager/preview.png)
 
 todo: add graph for upload download(https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png)
