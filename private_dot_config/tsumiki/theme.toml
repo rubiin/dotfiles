@@ -133,6 +133,14 @@ radius = "16px"
 width = "1px"
 
 
+[bar.widgets.git_companion]
+icon_size = "12px"
+spacing = "0.125em"
+
+[bar.widgets.git_companion.border]
+enabled = false
+radius = "16px"
+width = "1px"
 
 [bar.widgets.pomodoro]
 icon_size = "12px"
