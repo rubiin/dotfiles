@@ -17,7 +17,7 @@ https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/github-feed/preview.png
 
-todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/ip-monitor/preview.png
+
 
 todo: fix eventbox hover teal highlight
 

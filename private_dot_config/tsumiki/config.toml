@@ -15,6 +15,16 @@ avatar_size = 44
 default_tab = "issues"
 cache_ttl = 300
 
+[widgets.ip_monitor]
+icon = "󰖟"
+label = false
+label_text = "IP"
+tooltip = true
+tooltip_text = "IP Information"
+endpoint = "https://ipapi.co/json/"
+refresh_command = "qs -c noctalia-shell ipc call plugin:ip-monitor refreshIp"
+toggle_command = "qs -c noctalia-shell ipc call plugin:ip-monitor toggle"
+
 [widgets.clipboard]
 icon = ""
 label = false
@@ -428,7 +438,7 @@ tooltip = true
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "pomodoro"]
+middle_section = ["date_time", "weather", "ip_monitor"]
 right_section = [ "@group:1","@group:2", "system_tray", "power"]
 
 [[widget_groups]]
