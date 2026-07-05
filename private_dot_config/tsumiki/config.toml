@@ -5,6 +5,16 @@ icon = "view-app-grid-symbolic"
 icon_size = 20
 tooltip = true
 
+[widgets.git_companion]
+icon = ""
+label = false
+tooltip = true
+username = "rubiin"
+repository = "rubiin/tsumiki"
+avatar_size = 44
+default_tab = "issues"
+cache_ttl = 300
+
 [widgets.clipboard]
 icon = ""
 label = false
@@ -418,7 +428,7 @@ tooltip = true
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "mpris"]
+middle_section = ["date_time", "weather", "pomodoro"]
 right_section = [ "@group:1","@group:2", "system_tray", "power"]
 
 [[widget_groups]]
