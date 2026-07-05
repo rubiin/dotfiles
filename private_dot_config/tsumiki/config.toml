@@ -543,10 +543,22 @@ ignored = []
 
 [modules.desktop_clock]
 enabled = false
+type = "cookie"
 layer = "bottom"
 anchor = "bottom-right"
 date_format = "%A, %d %B %Y"
 time_format = "%H:%M"
+cookie_size = 230
+cookie_sides = 9
+cookie_dial_style = "dots"
+cookie_hour_hand_style = "fill"
+cookie_minute_hand_style = "medium"
+cookie_second_hand_style = "dot"
+cookie_date_style = "bubble"
+cookie_show_seconds = false
+cookie_show_hour_marks = false
+cookie_background_opacity = 1.0
+cookie_widget_scale = 1.0
 
 [modules.desktop_quotes]
 enabled = false
