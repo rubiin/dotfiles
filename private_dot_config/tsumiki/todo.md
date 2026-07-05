@@ -9,11 +9,11 @@ todo: unicode picker (https://github.com/noctalia-dev/legacy-v4-plugins/blob/mai
 
 TODO: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/cloudflare-warp/README.md
 
-todo: https://github.com/noctalia-dev/legacy-v4-plugins/tree/main/cookie-clock
+
 
 todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/dns-switcher/preview.png
 
-todo:https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/git-companion/preview.png
+https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/github-feed/preview.png
 
@@ -27,7 +27,6 @@ TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
 
-https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 
 
