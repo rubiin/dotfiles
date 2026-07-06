@@ -9,15 +9,11 @@ todo: unicode picker (https://github.com/noctalia-dev/legacy-v4-plugins/blob/mai
 
 TODO: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/cloudflare-warp/README.md
 
-
-
 todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/dns-switcher/preview.png
 
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
 todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/github-feed/preview.png
-
-
 
 todo: fix eventbox hover teal highlight
 
@@ -26,8 +22,6 @@ TODO: add popover animation
 TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
-
-
 
 
 feat: bubble styled workspace
