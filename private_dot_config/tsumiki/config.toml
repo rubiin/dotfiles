@@ -8,6 +8,7 @@ tooltip = true
 [widgets.git_companion]
 icon = ""
 label = false
+label_text = "Git"
 tooltip = true
 username = "rubiin"
 repository = "rubiin/tsumiki"
@@ -15,26 +16,11 @@ avatar_size = 44
 default_tab = "issues"
 cache_ttl = 300
 
-[widgets.crypto_market]
-icon = "󰠳"
-label = false
-label_text = "Crypto"
-tooltip = true
-tooltip_text = "Crypto Market"
-refresh_interval = 5
-red_rises = false
-watch_list = ["BTC", "ETH", "BNB", "SOL", "XRP"]
-endpoint = "https://api.coingecko.com/api/v3/simple/price"
-
 [widgets.ip_monitor]
 icon = "󰖟"
 label = false
 label_text = "IP"
 tooltip = true
-tooltip_text = "IP Information"
-endpoint = "https://ipapi.co/json/"
-refresh_command = "qs -c noctalia-shell ipc call plugin:ip-monitor refreshIp"
-toggle_command = "qs -c noctalia-shell ipc call plugin:ip-monitor toggle"
 
 [widgets.clipboard]
 icon = ""
@@ -449,7 +435,7 @@ tooltip = true
 
 [layout]
 left_section = ["@group:0"]
-middle_section = ["date_time", "weather", "crypto_market"]
+middle_section = ["date_time", "weather", "mpris"]
 right_section = [ "@group:1","@group:2", "system_tray", "power"]
 
 [[widget_groups]]
