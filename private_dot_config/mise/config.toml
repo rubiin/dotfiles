@@ -1,6 +1,5 @@
 
 [settings]
-lockfile = true
 # whether to prompt to install plugins and runtimes if they're not already installed
 # missing_runtime_behavior = 'autoinstall' # other options: 'ignore', 'warn', 'prompt', 'autoinstall'
 
@@ -36,7 +35,6 @@ python.compile = false # always download precompiled binaries
 color_theme = "catppuccin"
 pipx.uvx = true
 gpg_verify = true
-npm.package_manager = "pnpm"
 
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
@@ -45,6 +43,7 @@ go = "latest"
 rust = "latest"
 ruby = "latest"
 uv = "latest"
+pnpm = "latest"
 node = "24"
 usage = "latest"
 deno = "latest"
@@ -55,31 +54,6 @@ prek = "latest"
 gum = "latest"
 
 
-# npm plugins
-"npm:@nestjs/cli" = "latest"
-"npm:serve" = "latest"
-"npm:neovim" = "latest"
-"npm:taze" = "latest"
-"npm:release-it" = "latest"
-"npm:yarn" = "latest"
-"npm:tree-sitter-cli" = "latest"
-"npm:types-installer" = "latest"
-"npm:asdfui" = "latest"
-"npm:commitizen" = "latest"
-"npm:cz-conventional-changelog" = "latest"
-"npm:nfdl" = "latest"
-"npm:autocannon" = "latest"
-"npm:omniroute" = "latest"
-"npm:sass" = "latest"
-"npm:gitpick" = "latest"
-"npm:aaja" = "latest"
-"npm:json-server" = "latest"
-"npm:pnpm" = "latest"
-"npm:oxlint" = "latest"
-"npm:oxfmt" = "latest"
-"npm:fallow" = "latest"
-"npm:localtunnel" = "latest"
-"npm:npkill" = "latest"
 
 
 # go tools
