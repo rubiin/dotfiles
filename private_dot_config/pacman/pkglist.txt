@@ -149,6 +149,7 @@ memtest86+-efi
 memtester
 mesa
 mesa-utils
+mise
 mission-center
 mkinitcpio-nfs-utils
 modemmanager
