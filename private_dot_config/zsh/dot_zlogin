@@ -113,10 +113,6 @@ export YSU_MESSAGE_POSITION="after"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
 [ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
 
-##█▓▒░  mise stuffs
-export MISE_GO_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-go-packages"
-export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
-
 ##█▓▒░  ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 
