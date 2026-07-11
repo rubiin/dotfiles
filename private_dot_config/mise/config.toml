@@ -52,6 +52,8 @@ gallery-dl = "latest"
 cargo-binstall = "latest"
 prek = "latest"
 gum = "latest"
+grex = "latest"
+
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -90,7 +92,6 @@ gum = "latest"
 # pipx plugins
 "pipx:urlscan" = "latest"
 "pipx:instaloader" = "latest"
-"pipx:konsave" = "latest"
 "pipx:notebook" = "latest"
 "pipx:git-revise" = "latest"
 "pipx:iredis" = "latest"
@@ -103,9 +104,6 @@ gum = "latest"
 # github plugins
 "github:adaszko/complgen" = "latest"
 "github:loichyan/nerdfix" = "latest"
-"github:max-niederman/ttyper" = "latest"
-"github:joshmedeski/sesh" = "latest"
-"github:boyter/scc" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
 
