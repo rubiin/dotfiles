@@ -233,6 +233,7 @@ s-nail
 safeeyes
 satty
 sbctl
+scc
 sddm
 sg3_utils
 sheldon
@@ -261,6 +262,7 @@ ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-twemoji-git
+ttyper
 unrar
 unzip
 usb_modeswitch
