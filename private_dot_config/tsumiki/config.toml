@@ -153,7 +153,6 @@ tooltip = true
 mode = "circular"
 graph_length = 4
 
-
 [widgets.storage]
 path = "/"
 show_icon = true
