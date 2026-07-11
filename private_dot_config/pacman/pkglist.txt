@@ -35,7 +35,6 @@ chezmoi
 cinnamon-desktop
 cliphist
 cryptsetup
-dart-sass
 device-mapper
 dialog
 diffutils
