@@ -36,6 +36,7 @@ color_theme = "catppuccin"
 pipx.uvx = true
 gpg_verify = true
 
+
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
