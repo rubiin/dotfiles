@@ -12,5 +12,4 @@ init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 fund=false
 allow-git=none
 allow-remote=none
-strict-allow-scripts=true
 min-release-age=0
