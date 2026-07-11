@@ -121,6 +121,7 @@ kernel-install-for-dracut
 kimageformats
 kio-fuse
 kitty
+konsave
 ktorrent
 kvantum
 kvantum-qt5
