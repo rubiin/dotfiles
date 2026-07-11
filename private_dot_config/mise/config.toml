@@ -74,7 +74,6 @@ grex = "latest"
 "npm:gitpick" = "latest"
 "npm:aaja" = "latest"
 "npm:json-server" = "latest"
-"npm:pnpm" = "latest"
 "npm:oxlint" = "latest"
 "npm:oxfmt" = "latest"
 "npm:fallow" = "latest"
@@ -107,5 +106,3 @@ grex = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
-
-"aqua:iffse/pay-respects" = "latest"
