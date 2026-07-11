@@ -53,7 +53,30 @@ cargo-binstall = "latest"
 prek = "latest"
 gum = "latest"
 
-
+# npm plugins
+"npm:@nestjs/cli" = "latest"
+"npm:serve" = "latest"
+"npm:neovim" = "latest"
+"npm:taze" = "latest"
+"npm:release-it" = "latest"
+"npm:yarn" = "latest"
+"npm:tree-sitter-cli" = "latest"
+"npm:types-installer" = "latest"
+"npm:asdfui" = "latest"
+"npm:commitizen" = "latest"
+"npm:cz-conventional-changelog" = "latest"
+"npm:nfdl" = "latest"
+"npm:autocannon" = "latest"
+"npm:sass" = "latest"
+"npm:gitpick" = "latest"
+"npm:aaja" = "latest"
+"npm:json-server" = "latest"
+"npm:pnpm" = "latest"
+"npm:oxlint" = "latest"
+"npm:oxfmt" = "latest"
+"npm:fallow" = "latest"
+"npm:localtunnel" = "latest"
+"npm:npkill" = "latest"
 
 
 # go tools
