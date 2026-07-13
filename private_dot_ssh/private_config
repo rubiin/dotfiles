@@ -28,7 +28,7 @@ Host *
 	# Security: modern MAC algorithms
 	MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
 
-  LogLevel ERROR
+	LogLevel ERROR
 
 	# Use a shared channel for all sessions to the same host
 	ControlMaster auto
