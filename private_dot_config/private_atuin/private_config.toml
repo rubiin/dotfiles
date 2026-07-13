@@ -29,7 +29,7 @@ name = "catppuccin-mocha-muave"
 auto_sync = true
 
 ## enable or disable automatic update checks
-# update_check = true
+update_check = false
 
 ## address of the sync server
 # sync_address = "https://api.atuin.sh"
