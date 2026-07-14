@@ -44,3 +44,4 @@
 --js-runtimes=deno
 
 --remote-components ejs:github
+--compat-options no-live-chat
