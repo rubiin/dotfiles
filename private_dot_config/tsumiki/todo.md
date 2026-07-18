@@ -54,28 +54,6 @@ WORKSPACE_LABELS = {
     10: "十",
 }
 
-202Traceback (most recent call last):__main__:_compile:28 - [Main] CSS applied
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/core/service.py", line 231, in property_do_set
-    prop.fset(self, value) if prop is not None else None
-    ~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/widgets/circularprogressbar.py", line 30, in max_value
-    raise ValueError("max_value cannot be zero")
-ValueError: max_value cannot be zero
-Traceback (most recent call last):
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/core/service.py", line 231, in property_do_set
-    prop.fset(self, value) if prop is not None else None
-    ~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/widgets/circularprogressbar.py", line 30, in max_value
-    raise ValueError("max_value cannot be zero")
-ValueError: max_value cannot be zero
-Traceback (most recent call last):
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/core/service.py", line 231, in property_do_set
-    prop.fset(self, value) if prop is not None else None
-    ~~~~~~~~~^^^^^^^^^^^^^
-  File "/home/devina/.config/tsumiki/.venv/lib/python3.14/site-packages/fabric/widgets/circularprogressbar.py", line 30, in max_value
-    raise ValueError("max_value cannot be zero")
-ValueError: max_value cannot be zero
-
 
 bug: fix wifi ap client disconnect button
 
