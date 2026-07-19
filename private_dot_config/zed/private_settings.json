@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "tabs": {
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_menus": true,
+    "show_branch_status_icon": true
+  },
+  "status_bar": {
+    "show_active_file": true,
+    "line_endings_button": true,
+    "active_encoding_button": "enabled"
+  },
+  "proxy": "",
+  "colorize_brackets": true,
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "project_panel": {
+    "dock": "left",
+    "git_status_indicator": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_size": 13.5,
+    "font_family": "MonoLisa",
+    "font_fallbacks": [
+      "Symbols Nerd Font Mono",
+      "monospace"
+    ]
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_fallbacks": [
+    "Symbols Nerd Font",
+    "monospace"
+  ],
+  "buffer_font_family": "MonoLisa",
+  "base_keymap": "VSCode",
+  "cli_default_open_behavior": "new_window",
+  "ui_font_size": 16,
+  "buffer_font_size": 13.5,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+}
