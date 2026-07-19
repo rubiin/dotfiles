@@ -24,8 +24,6 @@ TODO: fix the sliders on quick settings, vertical layout is broken
 todo: add brightness and volume tooltips
 
 
-feat: bubble styled workspace
-
 TODO: add weather in the panel
 
 [Feature Request] Add keyboard indicator for NumLock, CapsLock & ScrollLock keys
