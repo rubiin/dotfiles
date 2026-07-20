@@ -1,6 +1,11 @@
 {
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
   },
   "title_bar": {
     "show_menus": true,
@@ -9,51 +14,150 @@
   "status_bar": {
     "show_active_file": true,
     "line_endings_button": true,
-    "active_encoding_button": "enabled"
+    "active_encoding_button": "enabled",
   },
+  // Fonts
+  "buffer_font_family": "MonoLisa",
+  "buffer_font_fallbacks": [
+    "Symbols Nerd Font Mono"
+  ],
+  "buffer_font_size": 13.5,
+  "buffer_font_weight": 400,
+  "ui_font_size": 14,
+  "buffer_font_features": {
+    "liga": true,
+    "calt": true
+  },
+  // Editing
+  "tab_size": 2,
+  "hard_tabs": false,
+  "soft_wrap": "none",
+  "show_whitespaces": "selection",
+  "show_wrap_guides": true,
+  "cursor_blink": true,
+  "relative_line_numbers": "disabled",
+  // Save
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "format_on_save": "off",
+  // Completion
+  "show_completions_on_input": true,
+  "show_signature_help_after_edits": true,
+  // Git
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+  // Terminal
+  "terminal": {
+    "font_size": 13.5,
+    "font_family": "MonoLisa",
+    "cursor_shape": "underline",
+    "blinking": "on",
+    "working_directory": "current_project_directory",
+    "font_fallbacks": [
+      "Symbols Nerd Font Mono"
+    ],
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ],
+        "activate_script": "default",
+      },
+    },
+  },
+  // UI
+  "scrollbar": {
+    "show": "auto"
+  },
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "code_lens": "on",
   "proxy": "",
   "colorize_brackets": true,
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": "VSCode Great Icons Theme",
+  "base_keymap": "JetBrains",
   "project_panel": {
     "dock": "left",
-    "git_status_indicator": true
+    "auto_fold_dirs": false,
+    "git_status": true,
+    "git_status_indicator": true,
+  },
+  // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
+  "inlay_hints": {
+    "enabled": true,
   },
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
-    "anthropic_retention": false
+    "anthropic_retention": false,
   },
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
-  "terminal": {
-    "font_size": 13.5,
-    "font_family": "MonoLisa",
-    "font_fallbacks": [
-      "Symbols Nerd Font Mono",
-      "monospace"
-    ]
+  // File syntax highlighting
+  "file_types": {
+    "Dockerfile": [
+      "Dockerfile",
+      "Dockerfile.*"
+    ],
+    "JSON": [
+      "json",
+      "jsonc",
+      "*.code-snippets"
+    ],
   },
-  "minimap": {
-    "show": "never"
-  },
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 1000
-    }
-  },
-  "buffer_font_fallbacks": [
-    "Symbols Nerd Font",
-    "monospace"
+  // Project panel exclusions
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules",
+    "**/.github",
+    "**/.nuxt",
+    "**/.output",
+    "**/.pnpm",
+    "**/.yarn",
+    "**/bower_components",
+    "**/logs",
+    "**/tmp",
+    "**/package-lock.json",
+    "**/pnpm-lock.yaml",
+    "**/yarn.lock",
   ],
-  "buffer_font_family": "MonoLisa",
-  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+  },
   "cli_default_open_behavior": "new_window",
-  "ui_font_size": 16,
-  "buffer_font_size": 13.5,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
-  }
+    "dark": "VSCode Dark Modern",
+  },
 }
