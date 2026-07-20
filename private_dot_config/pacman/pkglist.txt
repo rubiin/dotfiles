@@ -311,6 +311,7 @@ yazi
 zathura
 zathura-pdf-poppler
 zeal
+zed
 zen-browser-bin
 zoxide
 zsh
