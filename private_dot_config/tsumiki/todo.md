@@ -36,8 +36,6 @@ mpris:https://raw.githubusercontent.com/AhmedSaadi0/NibrasShell/084752b2e960252e
 (To verify): add a delayed function call
 
 
-
-
 WORKSPACE_LABELS = {
     0: ".",
     1: "一",
