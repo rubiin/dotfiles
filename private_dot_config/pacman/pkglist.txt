@@ -34,6 +34,7 @@ chaotic-mirrorlist
 chezmoi
 cinnamon-desktop
 cliphist
+cloudflare-warp-bin
 cryptsetup
 device-mapper
 dialog
@@ -136,7 +137,6 @@ linux-firmware
 linux-firmware-marvell
 linux-headers
 linux-lts
-lite-xl
 logrotate
 lsb-release
 lshw
@@ -311,7 +311,6 @@ yazi
 zathura
 zathura-pdf-poppler
 zeal
-zed
 zen-browser-bin
 zoxide
 zsh
