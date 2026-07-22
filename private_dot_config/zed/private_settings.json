@@ -1,4 +1,11 @@
 {
+  "git_panel": {
+    "dock": "left",
+    "button": true
+  },
+  "outline_panel": {
+    "git_status": true,
+  },
   "agent": {
     "dock": "right",
     "favorite_models": [],
@@ -6,15 +13,32 @@
   },
   "tabs": {
     "file_icons": true,
+    "git_status": true,
+    "show_close_button": "hover",
+    "activate_on_close":"neighbour",
+    "show_diagnostics":"all"
   },
   "title_bar": {
-    "show_menus": true,
-    "show_branch_status_icon": true
+      "show_branch_status_icon": true,
+      "show_branch_name": true,
+      "show_project_items": true,
+      "show_onboarding_banner": true,
+      "show_user_picture": true,
+      "show_user_menu": true,
+      "show_sign_in": true,
+      "show_menus": true,
+      "button_layout": "platform_default"
   },
   "status_bar": {
     "show_active_file": true,
     "line_endings_button": true,
     "active_encoding_button": "enabled",
+  },
+
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true,
+    "show_tab_bar_buttons": true
   },
   // Fonts
   "buffer_font_family": "MonoLisa",
@@ -50,7 +74,11 @@
   "show_signature_help_after_edits": true,
   // Git
   "git": {
+    "blame": {
+      "show_avatar": true
+    },
     "inline_blame": {
+      "show_commit_summary": true,
       "enabled": true,
     },
   },
@@ -86,11 +114,15 @@
   "colorize_brackets": true,
   "icon_theme": "VSCode Great Icons Theme",
   "base_keymap": "JetBrains",
+
+  // file panel
   "project_panel": {
     "dock": "left",
     "auto_fold_dirs": false,
     "git_status": true,
     "git_status_indicator": true,
+    "auto_reveal_entries":true,
+    "default_width": 250
   },
   // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
   "inlay_hints": {
