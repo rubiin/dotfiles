@@ -1027,7 +1027,7 @@
 #alsa-audio-channels=6
 
 # Software gain (float)
-#alsa-gain=1.000000
+alsa-gain=0.614125
 
 [jack] # JACK audio output
 
