@@ -137,6 +137,7 @@ linux-firmware
 linux-firmware-marvell
 linux-headers
 linux-lts
+lite-xl
 logrotate
 lsb-release
 lshw
