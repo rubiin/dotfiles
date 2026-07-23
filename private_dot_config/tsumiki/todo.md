@@ -23,6 +23,8 @@ TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
 
+bug: cliphist scroll to load new items doesnt work , also should reload the list when popover is opened
+
 
 TODO: add weather in the panel
 
