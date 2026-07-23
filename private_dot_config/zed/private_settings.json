@@ -88,6 +88,7 @@
   },
   // Terminal
   "terminal": {
+    "dock": "bottom",
     "font_size": 13.5,
     "font_family": "MonoLisa",
     "cursor_shape": "underline",
