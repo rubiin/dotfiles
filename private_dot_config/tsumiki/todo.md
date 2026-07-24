@@ -7,9 +7,7 @@ todo: add graph for upload download(https://github.com/noctalia-dev/legacy-v4-pl
 
 todo: unicode picker (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/unicode-picker/preview.png)
 
-TODO: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/cloudflare-warp/README.md
 
-todo: https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/dns-switcher/preview.png
 
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
@@ -23,8 +21,21 @@ TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
 
-bug: cliphist scroll to load new items doesnt work , also should reload the list when popover is opened
-
+Traceback (most recent call last):
+  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 83, in on_click
+    self.popup.hide_popover()
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hide_popover'
+Traceback (most recent call last):
+  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 83, in on_click
+    self.popup.hide_popover()
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hide_popover'
+Traceback (most recent call last):
+  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 45, in <lambda>
+    self.connect("clicked", lambda *_: popup.hide_popover())
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'hide_popover'
 
 TODO: add weather in the panel
 
