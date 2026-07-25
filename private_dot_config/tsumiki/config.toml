@@ -197,7 +197,7 @@ count = true
 hide_count_on_zero = true
 
 [widgets.divider]
-size = 2
+size = "2px"
 
 [widgets.hypridle]
 enabled_icon = ""
@@ -605,8 +605,8 @@ layer = "bottom"
 
 [layout]
 left_section = ["@group:workspaces-group"]
-middle_section = ["date_time", "weather", "mpris", "@custom_widget:volume","@custom_button:spotify"]
-right_section = [ "@collapsible:utility-tools", "@group:sys-group", "@group:utils-group", "system_tray", "power"]
+middle_section = ["date_time", "weather", "mpris"]
+right_section = ["@group:sys-group", "@group:utils-group", "system_tray", "power"]
 
 
 [general]
