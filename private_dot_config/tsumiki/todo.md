@@ -7,7 +7,7 @@ todo: add graph for upload download(https://github.com/noctalia-dev/legacy-v4-pl
 
 todo: unicode picker (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/unicode-picker/preview.png)
 
-
+todo: multiple sound source support:
 
 https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys
 
@@ -138,3 +138,92 @@ INSPIRATIONS:
 https://github.com/MalpenZibo/ashell
 
 
+
+
+
+
+# QoL Feature Suggestions
+
+## 🟢 Low Effort / Config-Change Only
+
+### 1. Config Validation with User-Friendly Errors
+When the TOML config has a typo or schema violation, show a notification with the exact line and issue instead of crashing silently. Already have `validate_config_enums` and `validate_widgets` — just plumb errors to `send_notification`.
+
+
+
+### 3. Per-Widget Auto-Hide
+Bar has global auto-hide. Add `hide_on_idle: true` per-widget so non-essential widgets (system tray, weather, git companion) hide after inactivity while core ones (workspaces, clock) stay visible.
+
+### 4. Quick Settings Presets (e.g. "Presentation Mode")
+Save/restore groups of toggles: DND on, max brightness, volume mute, idle inhibition. One-click button in quick settings panel.
+
+## 🟡 Medium Effort
+
+### 5. Blue Light Filter Scheduler (Hyprsunset at Sunrise/Sunset)
+Auto-enable hyprsunset at sunset / disable at sunrise using geo-IP or weather service.
+
+### 6. Do Not Disturb Scheduler
+Time-based DND rules: start/end time, allow-critical toggle.
+
+### 7. System Resource History Sparklines
+Inline sparkline graphs for CPU/memory/storage showing last N readings.
+
+### 8. Bluetooth Auto-Connect Profiles
+Auto-connect specific devices when in range. Profile-based configuration.
+
+### 9. Audio Output/Input Device Quick Switcher
+Device selector popup showing available sinks/sources with one-click switching.
+
+### 10. Notification Grouping by App
+Group notifications from the same app with expand/collapse and count badge.
+
+## 🔴 Higher Effort / New Features
+
+### 11. Focus Mode
+Temporarily hides distracting widgets for a configurable duration with timer overlay.
+
+### 12. Workspace-Aware Theming
+Different wallpaper or color scheme per workspace.
+
+### 13. Backup & Restore Config
+Export/import current config (TOML + theme) as a single archive file from Settings GUI.
+
+### 14. Gesture Customization (Touchpad/Touchscreen)
+Configurable gesture bindings (three-finger swipe, four-finger tap, etc.)
+
+### 15. Session Autostart Manager
+UI within settings to manage autostart applications.
+
+### 16. Dynamic Keyboard Shortcut Cheatsheet
+Show current Hyprland keybinds parsed from config, or app-specific shortcuts when a window is focused.
+
+### 17. Battery Charge Limiter Integration
+Toggle charge limit to 60-80% for Lenovo/ASUS/Dell laptops.
+
+### 18. Quick Timer (Separate from Pomodoro)
+Simple countdown timer with presets (1/5/10/15 mins) that fires a notification when done.
+
+### 19. Network Performance Graph
+Rolling throughput graph (last 60s) in network usage tooltip.
+
+### 20. Per-Monitor Widget Placement
+Specify which widgets go on which monitor.
+
+## 🛠️ Settings GUI Improvements
+
+- Lists/arrays not editable — layout strings, ignored apps, timezone lists show as plain text
+- No search — with 40+ widgets, finding a setting is scrolling-heavy
+- No reset-to-default per field — only a full-reset button
+- No visual preview — theme changes require save + reload to see
+- No import/export — share configs
+
+
+
+Implement notification click-to-activate-app (left-click = focus source app, drag = dismiss)
+
+
+Add clear-all button to notification popup
+
+Update config.toml example with new options
+
+Validate syntax and run code review
