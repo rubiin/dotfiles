@@ -109,3 +109,4 @@ grex = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
+nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
