@@ -54,8 +54,8 @@ alias icat="kitten icat"
 alias yz="yazi"
 alias gp="gitpick"
 alias cmatrix="unimatrix"
-alias npx="deno x"
-alias tsx="deno run"
+alias npx="nubx"
+alias tsx="nub"
 
 alias skillup="npx skills add -y"
 
