@@ -18,6 +18,7 @@ base-devel
 bash-completion
 bat
 bind
+blueman
 bluez
 bluez-utils
 breeze-gtk
@@ -69,6 +70,7 @@ f2fs-tools
 fakeroot
 fastfetch
 ffmpegthumbs
+firefox
 firefox-developer-edition
 firewalld
 flatpak
@@ -105,6 +107,7 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
+hyprpolkitagent
 hyprquery-git
 hyprsunset
 inetutils
@@ -263,6 +266,7 @@ ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-twemoji-git
 ttyper
+udiskie
 unrar
 unzip
 usb_modeswitch
@@ -286,6 +290,7 @@ whois
 wireless-regdb
 wireplumber
 wl-clip-persist
+wlogout
 woff2-font-awesome
 wpa_supplicant
 wps-office
