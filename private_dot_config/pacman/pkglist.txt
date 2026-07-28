@@ -18,7 +18,6 @@ base-devel
 bash-completion
 bat
 bind
-blueman
 bluez
 bluez-utils
 breeze-gtk
@@ -70,7 +69,6 @@ f2fs-tools
 fakeroot
 fastfetch
 ffmpegthumbs
-firefox
 firefox-developer-edition
 firewalld
 flatpak
@@ -266,7 +264,6 @@ ttf-nerd-fonts-symbols-mono
 ttf-opensans
 ttf-twemoji-git
 ttyper
-udiskie
 unrar
 unzip
 usb_modeswitch
