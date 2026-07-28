@@ -55,7 +55,7 @@ cargo-binstall = "latest"
 prek = "latest"
 gum = "latest"
 grex = "latest"
-
+nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -109,4 +109,4 @@ grex = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
-nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
+"github:versenilvis/IRIS" = "latest"
