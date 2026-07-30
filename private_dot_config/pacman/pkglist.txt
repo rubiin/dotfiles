@@ -252,6 +252,7 @@ tealdeer
 tesseract
 tesseract-data-eng
 texinfo
+thunderbird
 tmux
 topgrade
 ttf-bitstream-vera
