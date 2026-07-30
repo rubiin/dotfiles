@@ -308,6 +308,7 @@ xorg-xkill
 xorg-xrandr
 xsettingsd
 xz
+yaak
 yay
 yazi
 zathura

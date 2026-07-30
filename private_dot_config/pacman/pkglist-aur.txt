@@ -15,4 +15,5 @@ snixembed-git
 stacer-bin
 stylua-bin
 ttf-cm-unicode
+voiden-appimage
 xdg-ninja
