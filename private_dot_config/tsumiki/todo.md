@@ -5,6 +5,8 @@ todo: mke the seekbar longer
 
 todo: hyprland client
 
+todo: use uv
+
 
 todo: weather highlight color makes  label and icon color less readable
 
