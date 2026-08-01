@@ -6,6 +6,8 @@ todo: mke the seekbar longer
 todo: hyprland client
 
 
+todo: weather highlight color makes  label and icon color less readable
+
 
 todo: fix keybind cheatsheet (https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png)
 
