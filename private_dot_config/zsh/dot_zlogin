@@ -93,10 +93,7 @@ export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
 export GNUPGHOME="$XDG_DATA_HOME"/gpg
 export LITE_USERDIR="$XDG_CONFIG_HOME/lite-xl"
 
-##█▓▒░  custom executable path
-export PATH="$XDG_CONFIG_HOME/bin/git-extras:$XDG_CONFIG_HOME/bin:$PATH"
-
-# lazygit
+##█▓▒░  lazygit
 export LG_CONFIG_FILE="$XDG_CONFIG_HOME/lazygit/config.yml,$XDG_CONFIG_HOME/lazygit/theme.yml"
 
 ##█▓▒░  grep
@@ -127,8 +124,13 @@ if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
+##█▓▒░ custom executable path
+export PATH="$XDG_CONFIG_HOME/bin/git-extras:$XDG_CONFIG_HOME/bin:$PATH"
+
+##█▓▒░  mise
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 
+##█▓▒░  omp and pi directory
 export PI_CONFIG_DIR="$XDG_CONFIG_HOME/omp"
 export PI_CODING_AGENT_DIR="$XDG_CONFIG_HOME/omp"
 
@@ -138,17 +140,15 @@ export LESS_TERMCAP_md="${yellow}"
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER="less -X"
 
+##█▓▒░  npm config
+export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/.node_repl_history"
-
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768'
 export NODE_COMPILE_CACHE="$XDG_CACHE_HOME/node"
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE="sloppy"
-
-##█▓▒░  npm config
-export NPM_CONFIG_GLOBALCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
 ##█▓▒░  pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
