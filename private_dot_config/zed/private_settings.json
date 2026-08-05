@@ -16,6 +16,7 @@
   "toolbar": {
     "code_actions": false
   },
+  "auto_update_extensions": {},
   "auto_signature_help": true,
   "diff_view_style": "split",
   "agent_ui_font_size": 13.0,
