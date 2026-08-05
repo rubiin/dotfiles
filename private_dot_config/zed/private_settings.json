@@ -17,7 +17,7 @@
     "code_actions": false
   },
   "auto_signature_help": true,
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "agent_ui_font_size": 13.0,
   "multi_cursor_modifier": "cmd_or_ctrl",
   "markdown_preview_code_font_family": "MonoLisa",
@@ -142,7 +142,11 @@
   "code_lens": "on",
   "proxy": "",
   "colorize_brackets": true,
-  "icon_theme": "VSCode Great Icons Theme",
+  "icon_theme": {
+    "mode": "light",
+    "light": "VSCode Great Icons Theme",
+    "dark": "Clean VSCode Icon Theme"
+  },
   "base_keymap": "JetBrains",
 
   // file panel
@@ -230,5 +234,9 @@
     "show": "never",
   },
   "cli_default_open_behavior": "existing_window",
-  "theme": "VSCode Dark Modern",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "VSCode Modern Dark"
+  },
 }
