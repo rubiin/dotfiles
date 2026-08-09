@@ -83,7 +83,7 @@ file_folder_list=(
 
    "$config/npm"
 
-   "$config/pacman"
+   "$config/etc"
    "$config/persepolis_download_manager/persepolis.conf"
    "$config/procs"
    "$config/zed"
