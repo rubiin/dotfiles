@@ -41,12 +41,12 @@ ask_yes_no_default "🌩️  Do you want to add chaotic aur?" 0 && sudo pacman-k
 	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 echo "⚙️  Setting up pacman"
-sudo cp ~/.config/pacman/pacman.conf /etc/pacman.conf
-sudo cp ~/.config/pacman-contrib /etc/conf.d/
+sudo cp ~/.config/etc/pacman.conf /etc/pacman.conf
+sudo cp ~/.config/etc/pacman-contrib /etc/conf.d/
 
 echo "🪝 Setting up pacman hooks"
 sudo mkdir -p /etc/pacman.d/hooks
-sudo cp ~/.config/pacman/hooks/* /etc/pacman.d/hooks/
+sudo cp ~/.config/etc/hooks/* /etc/pacman.d/hooks/
 sudo systemctl enable --now paccache.timer
 
 ask_yes_no_default "🔄 Do you want to refresh the Arch package database?" 0 && yay -Syyu
@@ -78,8 +78,8 @@ echo "🔐 Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
 
-ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/.config/pacman/pkglist.txt
-ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/.config/pacman/pkglist-aur.txt
+ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/.config/etc/pkglist.txt
+ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/.config/etc/pkglist-aur.txt
 
 echo "🔤 Building font cache..."
 sudo fc-cache -vf
