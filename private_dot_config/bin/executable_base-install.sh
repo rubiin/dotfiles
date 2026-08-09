@@ -129,7 +129,6 @@ mkdir -p ~/.local/share/gpg
 chmod 700 ~/.local/share/gpg
 
 echo "setting some sys settings"
-sudo sysctl vm.swappiness=10
 sudo swapoff -a
 sudo rm /swapfile
 sudo fallocate -l 4G /swapfile
