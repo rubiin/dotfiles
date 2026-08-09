@@ -111,3 +111,4 @@ nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 "github:can1357/oh-my-pi" = "latest"
 "github:versenilvis/IRIS" = "latest"
 "npm:freebuff" = "latest"
+"pipx:guessit" = "latest"
