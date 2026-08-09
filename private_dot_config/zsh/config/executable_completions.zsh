@@ -4,14 +4,18 @@
 # Should be called before compinit
 zmodload zsh/complist
 
+# Make completion scripts and custom functions autoloadable by compinit
+fpath+=("$ZDOTDIR/zcompletions" "$ZDOTDIR/zfunctions")
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 
-for dump in ~/.zcompdump(N.mh+24); do
+# Aggressive caching: rebuild the dump (slow) only when needed, otherwise take the
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
-done
-
-compinit -C
+else
+  compinit -C
+fi
 
 _comp_options+=(globdots) # tab complete hidden files
 

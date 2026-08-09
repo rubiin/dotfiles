@@ -29,7 +29,8 @@ ask_yes_no_default "📦 Do you want to install base packages?" 0 && yay -S viva
 echo "🔧 Initializing chezmoi..."
 chezmoi init --apply rubiin
 
-export TMPFILE="$(mktemp)"
+TMPFILE="$(mktemp)"
+trap 'rm -f "$TMPFILE" "${tmp_sudoers:-}"' EXIT
 sudo true
 rate-mirrors --save="$TMPFILE" arch --max-delay=43200 &&
 	sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup &&
@@ -51,9 +52,24 @@ sudo systemctl enable --now paccache.timer
 
 ask_yes_no_default "🔄 Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
-ask_yes_no_default "👤 Do you want to add sudoers file?" 0 && sudo cp ~/sudoers.lecture /etc/ && echo -e "Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture" | sudo tee -a /etc/sudoers && sudo -k
+ask_yes_no_default "👤 Do you want to add sudoers file?" 0 && {
+	sudo cp ~/sudoers.lecture /etc/
+	# Validate the merged sudoers BEFORE installing it — a syntax error must
+	# never be written to /etc/sudoers (that would lock the user out of sudo).
+	tmp_sudoers="$(mktemp)"
+	sudo cat /etc/sudoers >"$tmp_sudoers"
+	printf 'Defaults lecture=always\nDefaults lecture_file=/etc/sudoers.lecture\n' >>"$tmp_sudoers"
+	if sudo visudo -cf "$tmp_sudoers" >/dev/null 2>&1; then
+		sudo install -m 440 -o root -g root "$tmp_sudoers" /etc/sudoers
+		rm -f "$tmp_sudoers"
+		sudo -k
+	else
+		rm -f "$tmp_sudoers"
+		echo "⚠️  sudoers validation failed — /etc/sudoers left untouched" >&2
+	fi
+}
 
-ask_yes_no_default "🐋 Do you want to install Docker and Docker Compose?" 0 && yay -s docker docker-compose &&
+ask_yes_no_default "🐋 Do you want to install Docker and Docker Compose?" 0 && yay -S docker docker-compose &&
 	sudo groupadd -f docker &&
 	sudo usermod -aG docker $USER &&
 	sudo systemctl enable --now docker.service &&
@@ -88,7 +104,7 @@ echo "🎵 Installing Spicetify marketplace..."
 curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 
 echo "⏱️  Setting up wakatime..."
-mkdir "$XDG_CONFIG_HOME/wakatime"
+mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/wakatime"
 
 echo "Enabling fstrimer"
 sudo systemctl enable fstrim.timer
@@ -129,15 +145,20 @@ mkdir -p ~/.local/share/gpg
 chmod 700 ~/.local/share/gpg
 
 echo "setting some sys settings"
-sudo swapoff -a
-sudo rm /swapfile
+if swapon --show | grep -q .; then
+	sudo swapoff -a
+fi
+sudo rm -f /swapfile
 sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 
 echo "🧹 Removing orphaned dependencies"
-sudo pacman -Qtdq | sudo pacman -Rns -
+orphans="$(pacman -Qtdq 2>/dev/null || true)"
+if [[ -n "$orphans" ]]; then
+	echo "$orphans" | sudo pacman -Rns -
+fi
 
 echo "⚡ Installing mise"
 curl https://mise.run | sh

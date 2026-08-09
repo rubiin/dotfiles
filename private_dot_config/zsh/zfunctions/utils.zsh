@@ -105,16 +105,29 @@ sssh() {
 }
 
 ffmpeg-convert() {
-	for i in *.mp4; do
+	for i in *.mp4(N); do
+		[[ "$i" == cc* ]] && continue # skip already-converted files
 		ffmpeg -n -i "$i" -vcodec libx264 -v warning -hide_banner -stats -crf 28 -preset faster -tune film "cc${i}"
 	done
 }
 
 convert-dir-vids() {
-	Green=$'\e[1;32m'
-	Blue=$'\e[1;34m'
-	echo "$Blue Started converting videos in dir"
-	for d in ./*/; do (echo "$Green Current directory: $d \n" && cd "$d" && ffmpeg_convert && rm $(ls -I "cc*")); done
+	local Green=$'\e[1;32m'
+	local Blue=$'\e[1;34m'
+	local Reset=$'\e[0m'
+	echo "${Blue}Started converting videos in dir${Reset}"
+	for d in ./*/(N); do
+		(
+			echo "${Green}Current directory: ${d}${Reset}"
+			cd "$d" || exit 1
+			ffmpeg-convert
+			# Delete originals, but only when their cc* output was actually produced
+			for f in *.mp4(N); do
+				[[ "$f" == cc* ]] && continue
+				[[ -f "cc$f" ]] && rm -- "$f"
+			done
+		)
+	done
 	echo "finished converting all videos in directory"
 }
 

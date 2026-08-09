@@ -1,26 +1,24 @@
 
 
+# ===== START Powerlevel10k Instant Prompt =====
+# Must be sourced before p10k initializes (i.e. before `eval "$(sheldon source)"`)
+# and before anything that prints to the terminal.
+if [[ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && [[ -r "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+# ===== END Powerlevel10k Instant Prompt =====
+
 zmodload zsh/zprof
 
-# Initialize Starship or fallback to Powerlevel10k
-
-
-# this cannot be evalcached, because it needs to be run after the prompt is set
+# must run eagerly at startup (can't be evalcached) — it loads the prompt (p10k)
 eval "$(sheldon source)"
 
-if [ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]; then
-    # ===== START Powerlevel10k Instant Prompt =====
-    if [[ -r "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-        source "$XDG_CACHE_HOME/p10k-instant-prompt-${(%):-%n}.zsh"
-    fi
-    # ===== END Powerlevel10k Instant Prompt =====
-
-    # ===== START Initialize Powerlevel10k theme =====
+# ===== START Initialize prompt =====
+# Powerlevel10k: theme is loaded by sheldon (plugins.powerlevel10k); here we only
+# apply the user's config on top of it. Starship is the fallback.
+if [[ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]]; then
     export POWERLEVEL10K_TRANSIENT_PROMPT=same-dir
-    P10K_THEME="${P10K_THEME:-/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme}"
-    [[ -r "$P10K_THEME" ]] && source "$P10K_THEME"
-    [[ -f "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && source "${ZDOTDIR:-$HOME}/.p10k.zsh"
-    # ===== END Initialize Powerlevel10k theme =====
+    source "${ZDOTDIR:-$HOME}/.p10k.zsh"
 
 elif command -v starship &>/dev/null; then
     # ===== START Initialize Starship prompt =====
@@ -28,19 +26,20 @@ elif command -v starship &>/dev/null; then
     export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
     export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
     # ===== END Initialize Starship prompt =====
-
 else
     # ===== START Fallback prompt (optional) =====
     echo "⚠️  Neither Starship nor Powerlevel10k found. Using default Zsh prompt."
     PROMPT='%n@%m:%~ %# '
     # ===== END Fallback prompt =====
 fi
+# ===== END Initialize prompt =====
 
-# Folders to load files from
+# Folders to load files from.
+# Note: zcompletions is NOT sourced here — it is autoloaded by compinit via fpath
+# (set in config/executable_completions.zsh).
 ZSH_SOURCE_DIRS=(
   "$ZDOTDIR/config"
   "$ZDOTDIR/zfunctions"
-  "$ZDOTDIR/zcompletions"
   "$XDG_CONFIG_HOME/fzf"
 )
 
@@ -64,6 +63,7 @@ fi
 
 #source scripts with _evalcache
 _evalcache hydectl completion zsh
+_evalcache mise activate zsh
 _evalcache zoxide init zsh --hook pwd
 
 # Set up fzf key bindings and fuzzy completion
