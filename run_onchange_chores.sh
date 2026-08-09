@@ -24,6 +24,14 @@ parallel ::: \
   "omp completions zsh > $ZSH_COMPLETIONS_DIR/_omp" \
   "hydectl completion zsh > $ZSH_COMPLETIONS_DIR/_hydectl"
 
+echo "Pre-building zsh completion cache ($HOME/.config/zsh/.zcompdump)..."
+zsh -fc '
+  ZDOTDIR="${ZDOTDIR:-$HOME/.config/zsh}"
+  fpath=("$ZDOTDIR/zcompletions" "$ZDOTDIR/zfunctions" $fpath)
+  autoload -Uz compinit
+  compinit -i -d "$ZDOTDIR/.zcompdump"
+' || true
+
 hydectl reload &
 
 notify-send "Chezmoi finished updating dotfiles"

@@ -10,13 +10,17 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/rubiin/fortune.nvim.git"
 refreshPeriod = "168h"
+
 ["personal/vim/highlighturl.nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/highlighturl.nvim.git"
+refreshPeriod = "168h"
+
 ["personal/vim/goodies.nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/goodies.nvim.git"
 refreshPeriod = "168h"
+
 ["personal/vim/vimwordlist.nvim"]
 type = "git-repo"
 url = "https://github.com/rubiin/vimwordlist.nvim.git"
@@ -30,6 +34,7 @@ exact = true
 stripComponents = 2
 refreshPeriod = "168h"
 include = ["*/themes/**"]
+
 [".config/zathura/themes"]
 type = "archive"
 url = "https://github.com/catppuccin/zathura/archive/master.tar.gz"
@@ -37,6 +42,7 @@ exact = true
 stripComponents = 2
 refreshPeriod = "168h"
 include = ["*/themes/**"]
+
 [".config/btop/themes"]
 type = "archive"
 url = "https://github.com/catppuccin/btop/archive/master.tar.gz"
@@ -44,14 +50,17 @@ exact = true
 stripComponents = 2
 refreshPeriod = "168h"
 include = ["*/themes/**"]
+
 [".config/git/catppuccin.gitconfig"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/delta/refs/heads/main/catppuccin.gitconfig"
 refreshPeriod = "168h"
+
 [".config/kitty/theme.conf"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/kitty/refs/heads/main/themes/mocha.conf"
 refreshPeriod = "168h"
+
 [".config/eza/theme.yml"]
 type = "file"
 url = "https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/catppuccin-mocha.yml"
@@ -63,14 +72,17 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/NestCrafts/nestjs-cloudinary.git"
 refreshPeriod = "168h"
+
 ["personal/typescript/nestjs-minio"]
 type = "git-repo"
 url = "https://github.com/NestCrafts/nestjs-minio.git"
 refreshPeriod = "168h"
+
 ["personal/typescript/nestjs-pgpromise"]
 type = "git-repo"
 url = "https://github.com/NestCrafts/nestjs-pgpromise.git"
 refreshPeriod = "168h"
+
 ["personal/typescript/nestjs-easyconfig"]
 type = "git-repo"
 url = "https://github.com/NestCrafts/nestjs-easyconfig.git"

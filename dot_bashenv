@@ -1,7 +1,0 @@
-
-# use the env file of zshenv
-
-
-if [ -f ${ZDOTDIR:-$HOME}/.zprofile ]; then
-      source "${ZDOTDIR:-$HOME}/.zprofile"
-fi
