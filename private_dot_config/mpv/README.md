@@ -48,7 +48,6 @@ All scripts are in the `scripts/` directory. Place them in your mpv `scripts/` f
 - **autoloop.lua**: Automatically loops short files and manages save position for longer ones. [autoloop](https://github.com/zydezu/mpvconfig)
 - **misc.lua**: Simple scripts that are way small for their own file
 - **vlccompat.lua**: Things to make mpv somewhat vlc like
-- **subit.lua**: Download subtitles using [subliminal](https://github.com/Diaoul/subliminal) (Python required).
 - **vlccrop.lua**: Cycle through common aspect ratios with 'c', like VLC. [vlccrop](https://github.com/kism/mpvscripts)
 
 ---
@@ -69,7 +68,6 @@ Script options are in the `script-opts/` directory. Edit these files to customiz
 1. **Install mpv**: [mpv.io](https://mpv.io/installation/)
 2. **Copy files**: Place `mpv.conf`, `input.conf`, and the `scripts/` and `script-opts/` folders into your mpv config directory (usually `~/.config/mpv/`).
 3. **Install dependencies** (optional):
-	- For `subit.lua`: Install Python and `subliminal` (`pip install subliminal`).
 	- For SponsorBlock: Internet connection required.
 4. **Customize**: Edit the `.conf` files in `script-opts/` to adjust script settings.
 5. **Keybindings**: See `input.conf` for custom keys (e.g., volume, seek, crop, subtitle, script triggers).
