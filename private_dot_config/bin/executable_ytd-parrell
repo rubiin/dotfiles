@@ -7,11 +7,11 @@ set -u
 
 PROCS=4
 
-if [ "$#" -eq 0 ]; then
+if [ "$1" == "" ]; then
   echo "usage: ytdl-playlist <youtube-playlist>"
   echo
   echo "purpose: download youtube videos in parallel"
 else
-  yt-dlp -j -o "%(autonumber)s. %(title)s.%(ext)s" "$@" | \
-    xargs -I'{}' -d'\n' -n1 -P$PROCS -- /bin/sh -c 'TMP=`mktemp`; echo '\''{}'\'' >${TMP}; yt-dlp -f best -o "`jq -r ._filename ${TMP}`" --load-info ${TMP} &>/dev/null; rm ${TMP}'
+  youtube-dl -j -o "%(autonumber)s. %(title)s.%(ext)s" "$@" | \
+    xargs -I'{}' -d'\n' -n1 -P$PROCS -- /bin/sh -c 'TMP=`mktemp`; echo '\''{}'\'' >${TMP}; youtube-dl -f best -o "`jq -r ._filename ${TMP}`" --load-info ${TMP} &>/dev/null; rm ${TMP}'
 fi
