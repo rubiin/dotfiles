@@ -8,7 +8,6 @@ state=$XDG_STATE_HOME
 
 file_folder_list=(
    "$HOME/.bash_profile"
-   "$HOME/.bashenv"
    "$HOME/.bashrc"
    "$HOME/.czrc"
    "$HOME/.profile"

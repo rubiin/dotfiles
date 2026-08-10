@@ -26,10 +26,23 @@ ask_yes_no_default() {
 	esac
 }
 
+# Copy a single config file, skipping with a warning when it's missing so a
+# partially-applied chezmoi doesn't abort the whole install.
+copy_etc_file() {
+	local src="$1" dst="$2"
+	if [[ -f "$src" ]]; then
+		sudo mkdir -p "$(dirname "$dst")"
+		sudo cp "$src" "$dst"
+	else
+		echo "⚠️  Skipping $src (not found)"
+	fi
+}
+
+
 ask_yes_no_default "📦 Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors
 
 echo "🔧 Initializing chezmoi..."
-chezmoi init --apply rubiin
+# chezmoi init --apply rubiin
 
 TMPFILE="$(mktemp)"
 trap 'rm -f "$TMPFILE" "${tmp_sudoers:-}"' EXIT
