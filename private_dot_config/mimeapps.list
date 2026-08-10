@@ -36,6 +36,8 @@ x-scheme-handler/mongodb+srv=mongodb-compass.desktop;MongoDB Compass.desktop;
 x-scheme-handler/motrix=motrix.desktop;
 x-scheme-handler/postman=Postman.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+x-scheme-handler/slack=slack.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-0VMVT3.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
@@ -88,3 +90,5 @@ x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 x-scheme-handler/voiden=Voiden.desktop
+x-scheme-handler/slack=slack.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-0VMVT3.desktop
