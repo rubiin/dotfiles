@@ -32,7 +32,7 @@ export HISTFILESIZE=20000
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-[[ -f "${ZDOTDIR:-$HOME/.config/zsh}/config/aliases" ]] && source "${ZDOTDIR:-$HOME/.config/zsh}/config/aliases"
+source "$ZDOTDIR/config/aliases"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
