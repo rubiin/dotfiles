@@ -90,3 +90,57 @@
 - `private_dot_config/zsh/config/aliases` — `$EDITOR`-capture `e*` aliases, orphan/mirror landmines, stale `yt`/`dc`/`ifconfig`
 - `dot_bashenv` — dead file (never sourced)
 - `private_dot_config/zsh/zfunctions/bat.zsh` — global `-h`/`--help` aliases footgun
+
+---
+
+## 🔍 Fresh audit — 2026-08-11
+
+> Third pass after the 11–18 fixes. Verified against the live system (`command -v`, grep,
+> `chezmoi verify`). Nothing was modified during this pass.
+
+### 🔴 New verified bugs
+
+### 19. `bin/executable_ytd-parrell` — broken twice
+- Still invokes `youtube-dl` (not installed; repo migrated to yt-dlp via `ytd`/`ytmp3`) → dies
+  with "command not found" at runtime.
+- `if [ "$1" == "" ]` under `set -u`: with no args `$1` is unbound, so the usage message
+  never prints.
+
+### 20. `zsh/zfunctions/git.zsh` — `gi()` mangles output; `git-redate()` only fixes half the dates
+- `gi()`: `curl -sLw n https://…/gitignore/api/$@` — unquoted `$@` breaks multi-pattern calls,
+  and `-w n` appends a stray literal `n` to the generated `.gitignore`.
+- `git-redate()`: sets `GIT_COMMITTER_DATE` but not `GIT_AUTHOR_DATE` → amend keeps the old
+  author date.
+
+### 21. Aliases pointing at uninstalled binaries
+- `crap`→`fortune`, `typos-all`→`typos`, `nord`→`nordvpn`, `b`→`bun`, `flush-redis`→`redis-cli`
+  — all fail with "command not found" (`command -v` confirmed missing on this machine).
+
+### 22. `dot_zlogin` — `GNUPGHOME` points at a phantom dir
+- Exports `GNUPGHOME="$XDG_DATA_HOME/gnupg"` (`~/.local/share/gnupg` — **does not exist**), while
+  `base-install.sh` creates the keyring in `~/.local/share/gpg`. gpg ends up using a different
+  homedir than where the keys live. (The duplicate export was already removed; the wrong one is
+  the one that remains.)
+
+### 23. `zsh/zfunctions/utils.zsh` — `calcram`/`ram`/`rams` depend on `bc` (not installed)
+
+### 24. Privacy leak: `vlc-qt-interface.conf`
+- Full personal media library paths (incl. Downloads filenames) committed to the public repo;
+  it's runtime state that churns in git. Remove from tracking and gitignore it.
+
+### 25. `dot_local/share/zed/extensions/index.json` — 34 KB runtime cache tracked
+
+### 26. `zsh/config/executable_insulter.zsh` — 9 duplicated messages in the array
+- 130 entries / 121 unique (a block was pasted twice with a leading-space variant).
+
+### 🟡 Still open (carried over, verified)
+- **Bug 1**: catppuccin.gitconfig is both ignored and external (`chezmoi ignored` lists it).
+- **pokego** network call runs in both `dot_bashrc` and `dot_zshrc`.
+- **`run_onchange_chores.sh`** — no `set -e`, orphaned `hydectl reload &`.
+- **Repo 890 MB / `.git` ~800 MB**; `cheatsheets/` PDFs + `fastfetch/logo/` PNGs are the bulk.
+- **`validate-compose`** still uses deprecated `docker-compose`.
+
+### 🟢 Optimizations
+- `wl-ocr`: `$(which grim)` → `command -v` (avoids silent empty on missing binary).
+- `yt-dlp/config`: `--paths $HOME/Videos/youtube-dl` — drop the legacy `youtube-dl` dir name.
+- `gh-delete-runs` (git.zsh): `gh run delete $id` → quote `$id`.
