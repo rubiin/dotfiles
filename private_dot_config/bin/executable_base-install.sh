@@ -42,7 +42,7 @@ copy_etc_file() {
 ask_yes_no_default "📦 Do you want to install base packages?" 0 && yay -S vivaldi chezmoi wezterm rate-mirrors
 
 echo "🔧 Initializing chezmoi..."
-# chezmoi init --apply rubiin
+chezmoi init --apply rubiin
 
 TMPFILE="$(mktemp)"
 trap 'rm -f "$TMPFILE" "${tmp_sudoers:-}"' EXIT
@@ -64,7 +64,9 @@ echo "📂 Copying etc configs to their system locations"
 # section entirely when nothing matches.
 copy_etc_glob() {
 	local src_glob="$1" dst_dir="$2" src prior_nullglob
-	prior_nullglob="$(shopt -p nullglob)"
+	# shopt -p returns non-zero when the option is off, which would trip
+	# `set -e`; guard it so capturing the prior state never aborts the script.
+	prior_nullglob="$(shopt -p nullglob || true)"
 	shopt -s nullglob
 	# Intentional unquoted expansion: re-glob the pattern (SC2086 suppressed).
 	# shellcheck disable=SC2086
