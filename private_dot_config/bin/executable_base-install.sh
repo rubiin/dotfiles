@@ -9,6 +9,8 @@ set -euo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 IFS=$'\n\t'
 
+ETC_SRC="${XDG_CONFIG_HOME:-$HOME/.config}/etc"
+
 # Function to ask yes/no question with a default value
 ask_yes_no_default() {
 	prompt="$1 (Y/n)"
@@ -41,14 +43,44 @@ ask_yes_no_default "🌩️  Do you want to add chaotic aur?" 0 && sudo pacman-k
 	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' &&
 	sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
+
+echo "📂 Copying etc configs to their system locations"
+
+
+# Copy every file matching a glob into a destination directory. Skips the
+# section entirely when nothing matches.
+copy_etc_glob() {
+	local src_glob="$1" dst_dir="$2" src prior_nullglob
+	prior_nullglob="$(shopt -p nullglob)"
+	shopt -s nullglob
+	# Intentional unquoted expansion: re-glob the pattern (SC2086 suppressed).
+	# shellcheck disable=SC2086
+	for src in $src_glob; do
+		sudo mkdir -p "$dst_dir"
+		sudo cp "$src" "$dst_dir/"
+	done
+	eval "$prior_nullglob"
+}
+
 echo "⚙️  Setting up pacman"
-sudo cp ~/.config/etc/pacman.conf /etc/pacman.conf
-sudo cp ~/.config/etc/pacman-contrib /etc/conf.d/
+copy_etc_file "$ETC_SRC/pacman.conf" /etc/pacman.conf
+copy_etc_file "$ETC_SRC/pacman-contrib" /etc/conf.d/pacman-contrib
 
 echo "🪝 Setting up pacman hooks"
-sudo mkdir -p /etc/pacman.d/hooks
-sudo cp ~/.config/etc/hooks/* /etc/pacman.d/hooks/
+copy_etc_glob "$ETC_SRC/hooks/*" /etc/pacman.d/hooks
 sudo systemctl enable --now paccache.timer
+
+echo "🔒 Setting up PAM lockout policy"
+copy_etc_file "$ETC_SRC/faillock.conf" /etc/security/faillock.conf
+
+echo "🐋 Setting up docker"
+copy_etc_file "$ETC_SRC/docker/daemon.json" /etc/docker/daemon.json
+
+echo "🐧 Setting up sysctl tuning"
+copy_etc_glob "$ETC_SRC/sysctl/*.conf" /etc/sysctl.d
+
+echo "🛠️  Setting up systemd manager drop-ins"
+copy_etc_glob "$ETC_SRC/systemd/*.conf" /etc/systemd/system.conf.d
 
 ask_yes_no_default "🔄 Do you want to refresh the Arch package database?" 0 && yay -Syyu
 
@@ -94,8 +126,8 @@ echo "🔐 Setting ssh"
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh/control
 
-ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <~/.config/etc/pkglist.txt
-ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <~/.config/etc/pkglist-aur.txt
+ask_yes_no_default "📥 Do you want to install other packages?" 0 && xargs pacman -S --needed --noconfirm <"$ETC_SRC/pkglist.txt"
+ask_yes_no_default "🔱 Do you want to install other AUR packages?" 0 && xargs yay -S --needed --noconfirm <"$ETC_SRC/pkglist-aur.txt"
 
 echo "🔤 Building font cache..."
 sudo fc-cache -vf

@@ -410,8 +410,8 @@
 	# fetch and checkout a GitHub pull request / a GitLab merge request
 	#    git fetch-pr <remote> <number> [<branchname>]
 	#    git fetch-mr <remote> <number> [<branchname>]
-	fetch-pr = "!f() { [ $# -lt 2 ] && echo 'usage: git pr <remote> <number>' 1>&2 && exit 1; it fetch $1 pull/$2/head:${3:-pr-$1-$2} && git checkout ${3:-pr-$1-$2}; }; f"
-	fetch-mr = "!f() { [ $# -lt 2 ] && echo 'usage: git mr <remote> <number>' 1>&2 && exit 1; it fetch $1 merge-requests/$2/head:${3:-mr-$1-$2} && git checkout ${3:-mr-$1-$2}; }; f"
+	fetch-pr = "!f() { [ $# -lt 2 ] && echo 'usage: git pr <remote> <number>' 1>&2 && exit 1; git fetch $1 pull/$2/head:${3:-pr-$1-$2} && git checkout ${3:-pr-$1-$2}; }; f"
+	fetch-mr = "!f() { [ $# -lt 2 ] && echo 'usage: git mr <remote> <number>' 1>&2 && exit 1; git fetch $1 merge-requests/$2/head:${3:-mr-$1-$2} && git checkout ${3:-mr-$1-$2}; }; f"
 
 	# track all pull-requests / merge-requests
 	#    git setup-fetch [<remote>]

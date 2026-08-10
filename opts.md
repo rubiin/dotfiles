@@ -87,10 +87,6 @@
 > Second pass after the bug 2–9 fixes. Verified against the repo (grep, `chezmoi managed` /
 > `ignored`, live `command -v` checks). Nothing was modified during this pass.
 
-### 10. `private_dot_config/git/config` — `fetch-pr` / `fetch-mr` run `it fetch` instead of `git fetch`
-- Both aliases contain `it fetch $1 pull/...` / `it fetch $1 merge-requests/...` (lines ~413–414)
-  → "command not found" (or runs whatever `it` resolves to).
-- **Fix:** `it fetch` → `git fetch`.
 
 ### 11. `private_dot_config/git/config` — git-extras aliases point at `$HOME/.bin`, scripts live in `~/.config/bin`
 - `cleanup`, `sign-release`, `setup`, `wth` reference `$HOME/.bin/git-extras/...`, but the scripts
@@ -98,10 +94,7 @@
   the correct path). `setup` additionally names `git-setup.sh` while the file is `git-setup`.
 - **Fix:** point all four at `$XDG_CONFIG_HOME/bin/git-extras/…` and fix the `git-setup.sh` name.
 
-### 12. `dot_bashenv` is dead code — never sourced
-- `~/.bashenv` isn't read by bash (login shells read `.bash_profile`/`.profile`); its
-  `.zprofile`-sourcing block never runs, and nothing in the repo references it.
-- **Fix:** move the `.zprofile` line into `dot_bash_profile` if wanted, then delete `dot_bashenv`.
+
 
 ### 13. `zsh/config/aliases` — `e*` edit aliases capture `$EDITOR` at definition time (before it is set)
 - `evim`/`ebin`/`ezsh`/`ehypr`/`edot`/`ewez`/`egit`/`ealias`/`emux`/`emise` expand `$EDITOR`
