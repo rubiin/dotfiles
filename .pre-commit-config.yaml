@@ -13,6 +13,7 @@ repos:
         exclude: private_dot_config/zed/private_settings\.json$
       - id: check-merge-conflict
       - id: check-added-large-files
+        args: [--maxkb=1536]
   - repo: https://github.com/betterleaks/betterleaks
     rev: v1.7.3
     hooks:
