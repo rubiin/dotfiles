@@ -27,7 +27,6 @@
 
 [init]
 	defaultBranch = master
-	hooksPath = ~/.config/git/hooks
 
 [core]
 	# End of lines conversion
@@ -334,10 +333,10 @@
 	day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
 
 	# git-extras
-	cleanup = !ruby "$HOME/.bin/git-extras/git-cleanup.rb"
-	sign-release = !sh "$HOME/.bin/git-extras/git-sign-release"
-	setup = !zsh "$HOME/.bin/git-extras/git-setup.sh"
-	wth = !zsh "$HOME/.bin/git-extras/git-what-the-hell-just-happened"
+	cleanup = !ruby "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-cleanup.rb"
+	sign-release = !sh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-sign-release"
+	setup = !zsh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-setup"
+	wth = !zsh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-what-the-hell-just-happened"
 
 	# tag
 	t = tag
@@ -421,11 +420,9 @@
 	#    git wipe [<commit>]
 	wipe = "!f() { git add --all && git commit --quiet --message='WIPE-SAVEPOINT' && git reset ${1:-HEAD~} --hard && git clean -fd; }; f"
 
-	# generate tags file
-	ctags = "!$HOME/.config/git/hooks/ctags"
 
-	# create/extend gitignore file
-	gitignore = gitignore
+	# create/extend gitignore file (delegates to git-extras' git-ignore)
+	gitignore = ignore
 
 	# git git ...
 	git = "!git"

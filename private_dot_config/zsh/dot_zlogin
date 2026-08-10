@@ -90,7 +90,6 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export GOPATH="$XDG_DATA_HOME/go"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship"
-export GNUPGHOME="$XDG_DATA_HOME"/gpg
 export LITE_USERDIR="$XDG_CONFIG_HOME/lite-xl"
 
 ##█▓▒░  lazygit

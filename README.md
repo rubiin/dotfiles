@@ -55,10 +55,10 @@ Here are some details about my setup:
   - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)       : Fish shell like syntax highlighting for Zsh.
   - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)                        : Fish-like autosuggestions for zsh
 - **Terminal**                     : [wezterm](https://github.com/wez/wezterm)
-  - [lazygit](https://github.com/jonas/tig)         : Text-mode interface for git
+  - [lazygit](https://github.com/jesseduffield/lazygit) : Text-mode interface for git
   - [bat](https://github.com/sharkdp/bat)           : A cat(1) clone with wings
   - [fzf](https://github.com/junegunn/fzf)          : A command-line fuzzy finder
-  - [eza](https://github.com/ogham/exa)             : A modern replacement for ‘ls’
+  - [eza](https://github.com/eza-community/eza)   : A modern replacement for ‘ls’
   - [btop](https://github.com/aristocratos/btop)    : A monitor of resources
   - [atuin](https://atuin.sh)                       : Sync, search and backup shell history
 - **Bar**                          : [Tsumiki](https://github.com/rubiin/Tsumiki) using [nerd fonts](https://github.com/ryanoasis/nerd-fonts)!
