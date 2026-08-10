@@ -86,7 +86,7 @@ print_message() {
         "The degree of your stupidity is enough to boil water."
         "Why did the chicken cross the road? To get the hell away from you."
         "You are not useless since you can still be used as a bad example."
-        "You're so dumb your first words were DUH."\
+        "You're so dumb your first words were DUH."
         "You're the reason Santa says ho, ho, ho, on Christmas!"
         "You look smarter in pictures."
         "Honestly, I'm just impressed you could read this."
@@ -147,10 +147,10 @@ print_message() {
 
     # Print a randomly selected message, but only about half the time to annoy the user a
     # little bit less.
-    # if [[ $((${RANDOM} % 2)) -lt 1 ]]; then
+    if [[ $((${RANDOM} % 2)) -lt 1 ]]; then
         message=${messages[${RANDOM} % ${#messages[@]}]}
         printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf 1)${message}$(tput sgr0)" >&2
-    # fi
+    fi
 }
 
 function_exists() {

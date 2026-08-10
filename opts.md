@@ -23,16 +23,6 @@
 
 ## 🟡 Bad practices
 
-- **`[git] autocommit = true, autoPush = true`** (`.chezmoi.toml.tmpl`) — every `chezmoi apply`
-  commits and force-pushes to public GitHub with no review. Consider `autoPush = false` +
-  periodic manual pushes.
-- **Supply-chain risk**: README `curl | sh` bootstrap, `curl https://mise.run | sh`,
-  spicetify `curl -fsSL ... | sh`, gpakosz tmux installer — unauthenticated remote scripts with
-  sudo-level effect. Pin SHAs / verify before install.
-- **`zmodload zsh/zprof`** in `zsh/dot_zshrc` loads the profiler on every interactive shell
-  (only needed when actively profiling).
-- **`pokego` runs in both `dot_bashrc` and `zsh/dot_zshrc`** → duplicate network call + startup
-  latency on every shell.
 - **Repo is 890MB**:
   - `.git` alone is **799MB** (3366 commits of accumulated binaries).
   - `private_dot_config/fastfetch/logo/` — **228 PNG logos, 64MB**.
@@ -44,9 +34,6 @@
   generator tools are installed; fragile on fresh machines.
 - **SSH config** (`private_dot_ssh/private_config`): `Compression yes` (negligible on modern
   links), stale `WarnWeakCrypto no` comment.
-- **Docs drift**: `TODO.md` contains the literal placeholder `[FILE_DOES_NOT_EXIST]`; README
-  links lazygit→tig and eza→exa, and mentions a Tsumiki bar while hyprpanel configs are in the
-  repo.
 - **Age passphrase mode** (`[age] passphrase = true`) prompts on every apply of the 4 encrypted
   files — fine for personal use; recipient-based keys are more automation/CI-friendly.
 - **`.chezmoi.toml.tmpl` merge escaping** — renders correctly (verified) but the
@@ -82,67 +69,6 @@
 
 ---
 
-## 🔍 Follow-up audit — new findings (2026-08-10)
-
-> Second pass after the bug 2–9 fixes. Verified against the repo (grep, `chezmoi managed` /
-> `ignored`, live `command -v` checks). Nothing was modified during this pass.
-
-
-### 11. `private_dot_config/git/config` — git-extras aliases point at `$HOME/.bin`, scripts live in `~/.config/bin`
-- `cleanup`, `sign-release`, `setup`, `wth` reference `$HOME/.bin/git-extras/...`, but the scripts
-  ship in `private_dot_config/bin/git-extras/` → `~/.config/bin/git-extras/` (`bdi` already uses
-  the correct path). `setup` additionally names `git-setup.sh` while the file is `git-setup`.
-- **Fix:** point all four at `$XDG_CONFIG_HOME/bin/git-extras/…` and fix the `git-setup.sh` name.
-
-
-
-### 13. `zsh/config/aliases` — `e*` edit aliases capture `$EDITOR` at definition time (before it is set)
-- `evim`/`ebin`/`ezsh`/`ehypr`/`edot`/`ewez`/`egit`/`ealias`/`emux`/`emise` expand `$EDITOR`
-  when the aliases file is sourced from `.zshrc`. `EDITOR` is exported in `dot_zlogin` (line 24),
-  which runs **after** `.zshrc` → the aliases are defined with an empty editor on stock setups
-  (they only work when `EDITOR` happens to be inherited from the environment).
-- **Fix:** define them as functions, or single-quote the aliases (`alias evim='$EDITOR ~/.config/nvim'`)
-  so expansion is deferred.
-
-### 14. `zsh/config/aliases` — `clear-orphan-packages` / `rate-and-update` repeat fixed landmines
-- `clear-orphan-packages='sudo pacman -Qtdq | sudo pacman -Rns -'` errors ("no targets
-  specified") with no orphans (zsh sets `PIPE_FAIL` in `executable_options.zsh`) — same class as
-  the now-fixed bug 4.
-- `rate-and-update` leaks its `mktemp` file if `rate-mirrors` fails (same as the fixed
-  `base-install.sh` bug).
-- **Fix:** port the `[[ -n $(pacman -Qtdq) ]]` and `trap 'rm -f "$TMPFILE"' EXIT` guards.
-
-### 15. `zsh/config/executable_insulter.zsh` — stray `\` merges two messages; "half the time" gate disabled
-- Line 89 ends `"...DUH."\` → the next message is concatenated onto the same string (no space).
-- The `# if [[ $((${RANDOM} % 2)) -lt 1 ]]` / `# fi` "annoy the user a little bit less" gate is
-  commented out → every failed command now prints an insult.
-
-
-### 17. `zsh/zfunctions/bat.zsh` — global `-h` / `--help` aliases hijack every occurrence
-- `alias -g -- -h='-h 2>&1 | bat ...'` rewrites **every** `-h` token on the command line, e.g.
-  `grep -h pattern file` (suppress filename headers) becomes `grep -h pattern file 2>&1 | bat`
-  and the flag silently disappears. High footgun for a global alias.
-- **Fix:** drop the global aliases or scope them to specific commands.
-
-### 18. `dot_bashrc` sources `$ZDOTDIR/config/aliases` — `ZDOTDIR` is a zsh-ism
-- In plain bash (login from TTY/DM), `ZDOTDIR` is unset → `source /config/aliases` fails on
-  every start; it only works when bash is spawned from a zsh that exported `ZDOTDIR`. (The
-  earlier "checked and rejected" row verified the *file* is managed — this is about the var.)
-- **Fix:** `${ZDOTDIR:-$HOME/.config}/config/aliases` (or source `~/.config/zsh/config/aliases`).
-
-
-## 🟢 Follow-up optimizations
-
-1. **`git/config`** — `[core] hooksPath = ~/.config/git/hooks` points at a dir with no shipped
-   hooks; either ship some or drop the setting.
-2. **`zsh/config/aliases`** — stale tools: `yt="youtube-dl"` (not installed; `ytd="yt-dlp"`
-   exists) and `dc="docker-compose"` (deprecated → `docker compose`); `localip`/`ips` use the
-   deprecated `ifconfig` (net-tools) — switch to `ip -4 addr`/`ip -6 addr`.
-3. **`dot_zlogin`** — `GNUPGHOME` is exported twice (`$XDG_DATA_HOME/gnupg` then
-   `$XDG_DATA_HOME/gpg`); keep the one matching `base-install.sh` (`~/.local/share/gpg`).
-4. **`chezmoi doctor`** — warns about a dirty source working tree; expected mid-work, but with
-   `autoPush = true` (see bad practices) every `chezmoi apply` pushes these findings
-   automatically — review before committing.
 
 ---
 

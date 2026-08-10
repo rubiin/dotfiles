@@ -8,7 +8,11 @@ if [[ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && [[ -r "$XDG_CACHE_HOME/p10k-instant
 fi
 # ===== END Powerlevel10k Instant Prompt =====
 
-zmodload zsh/zprof
+# Load the zsh profiler only on request (e.g. ZPROF=1 zsh) — it otherwise
+# slows every interactive shell startup for nothing.
+if [[ -n "${ZPROF:-}" ]]; then
+    zmodload zsh/zprof
+fi
 
 # must run eagerly at startup (can't be evalcached) — it loads the prompt (p10k)
 eval "$(sheldon source)"

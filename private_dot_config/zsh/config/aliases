@@ -3,13 +3,14 @@ alias ariadwn="aria2c -x 16"
 alias clr="clear"
 alias cloc="echo use scc command instead"
 alias clear-npm="rm -rf node_modules;rm -rf pnpm-lock.yaml package-lock.json yarn.lock"
-alias clear-orphan-packages="sudo pacman -Qtdq | sudo pacman -Rns -"
+
+alias clear-orphan-packages='(orphans="$(pacman -Qtdq 2>/dev/null || true)"; [[ -n "$orphans" ]] && echo "$orphans" | sudo pacman -Rns -)'
 alias clear-store-npm="npm cache clear --force;yarn cache clean;pnpm store prune;deno clean"
 alias code="code-insiders"
 alias crap="fortune" # This will keep you sane when you're about to smash the keyboard again.
 alias cz="chezmoi"
 alias curl='curl --progress-bar'
-alias dc="docker-compose"
+alias dc="docker compose"
 alias htop="btop"
 alias fixvlc='mkdir ~/.cache/vlc'
 alias g="git"
@@ -24,13 +25,18 @@ alias make='make --silent --warn-undefined-variables'
 alias nord="nordvpn"
 alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
-alias rate-and-update='export TMPFILE="$(mktemp)"; \
+
+# Run in a subshell so the EXIT trap that cleans up $TMPFILE is scoped here
+# instead of lingering in the interactive shell (and doesn't leak if
+# rate-mirrors fails before the mirrorlist swap).
+alias rate-and-update='(TMPFILE="$(mktemp)"; trap '\''rm -f "$TMPFILE"'\'' EXIT; \
     sudo true; \
-        rate-mirrors --save="$TMPFILE" arch --max-delay=21600 \
+    rate-mirrors --save="$TMPFILE" arch --max-delay=21600 \
       && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
-            && sudo mv "$TMPFILE" /etc/pacman.d/mirrorlist \
+      && sudo mv "$TMPFILE" /etc/pacman.d/mirrorlist \
       && ua-drop-caches \
-      && yay -Syyu --noconfirm && update-all'
+      && yay -Syyu --noconfirm && update-all)'
+
 alias today="aaja"
 alias tz="taze"
 alias ua-drop-caches='sudo paccache -rk2; yay -Sc --aur --noconfirm'
@@ -40,7 +46,6 @@ alias export-pacman="pacman -Qqe > ~/pacman.txt"
 alias ssh='TERM=xterm-256color ssh'
 alias validate-compose='docker-compose config --quiet && printf "OK\n" || printf "ERROR\n"'
 alias vmc='git diff --name-only --diff-filter=U'
-alias yt="youtube-dl"
 alias ytmp3="yt-dlp -x --audio-format=mp3"
 alias ytd="yt-dlp"
 alias q=" exit" # INFO leading space to ignore it in history due to HIST_IGNORE_SPACE
@@ -77,16 +82,18 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Edit config files
-alias evim="$EDITOR ~/.config/nvim"
-alias ebin="$EDITOR ~/.config/bin"
-alias ezsh="$EDITOR $ZDOTDIR"
-alias ehypr="$EDITOR ~/.config/hypr/"
-alias edot="$EDITOR ~/.local/share/chezmoi/"
-alias ewez="$EDITOR ~/.config/wezterm/"
-alias egit="$EDITOR ~/.config/git/"
-alias ealias="$EDITOR ~/.config/zsh/config/aliases"
-alias emux="$EDITOR ~/.config/tmux/"
-alias emise="$EDITOR ~/.config/mise/"
+# Single-quoted so $EDITOR (and $ZDOTDIR in ezsh) expand at use time, not at
+# definition time — EDITOR is only exported later in dot_zlogin.
+alias evim='$EDITOR ~/.config/nvim'
+alias ebin='$EDITOR ~/.config/bin'
+alias ezsh='$EDITOR $ZDOTDIR'
+alias ehypr='$EDITOR ~/.config/hypr/'
+alias edot='$EDITOR ~/.local/share/chezmoi/'
+alias ewez='$EDITOR ~/.config/wezterm/'
+alias egit='$EDITOR ~/.config/git/'
+alias ealias='$EDITOR ~/.config/zsh/config/aliases'
+alias emux='$EDITOR ~/.config/tmux/'
+alias emise='$EDITOR ~/.config/mise/'
 alias ruffs="ruff check --fix;ruff format"
 alias sendnotifications='for i in {1..40}; do notify-send "Notification $i" "This is notification number $i"; done'
 alias wget='wget --hsts-file="$XDG_DATA_HOME/.wget-hsts"'
@@ -104,8 +111,8 @@ fi
 # IP addresses
 alias myip="curl icanhazip.com"
 alias pubip="myip"
-alias localip="sudo ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'"
-alias ips="sudo ifconfig -a | grep -o 'inet6\\? \\(addr:\\)\\?\\s\\?\\(\\(\\([0-9]\\+\\.\\)\\{3\\}[0-9]\\+\\)\\|[a-fA-F0-9:]\\+\\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias localip='ip -4 addr show scope global | grep -oE "inet [0-9.]+" | cut -d" " -f2'
+alias ips='ip -6 addr show scope global | grep -oE "inet6 [0-9a-f:]+" | cut -d" " -f2'
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
