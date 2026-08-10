@@ -4,7 +4,7 @@
 
 
 # Save all videos here
---paths $HOME/Videos/youtube-dl
+--paths $HOME/Videos
 --output %(title)s.%(upload_date)s.%(vcodec)s.%(acodec)s.%(autonumber)02d.%(ext)s
 
 # Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames
