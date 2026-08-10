@@ -28,6 +28,7 @@ cantarell-fonts
 capitaine-cursors
 cargo-cache
 cava
+celluloid
 chafa
 chaotic-keyring
 chaotic-mirrorlist
@@ -96,6 +97,7 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
 gvfs
+haruna
 haveged
 hwdetect
 hwinfo
@@ -238,6 +240,7 @@ scc
 sddm
 sg3_utils
 sheldon
+slack-desktop
 slurp
 smartmontools
 socat
@@ -252,7 +255,6 @@ tealdeer
 tesseract
 tesseract-data-eng
 texinfo
-thunderbird
 tmux
 topgrade
 ttf-bitstream-vera
