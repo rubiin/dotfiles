@@ -100,24 +100,13 @@
 
 ### 🔴 New verified bugs
 
-### 19. `bin/executable_ytd-parrell` — broken twice
-- Still invokes `youtube-dl` (not installed; repo migrated to yt-dlp via `ytd`/`ytmp3`) → dies
-  with "command not found" at runtime.
-- `if [ "$1" == "" ]` under `set -u`: with no args `$1` is unbound, so the usage message
-  never prints.
+
 
 ### 20. `zsh/zfunctions/git.zsh` — `gi()` mangles output; `git-redate()` only fixes half the dates
-- `gi()`: `curl -sLw n https://…/gitignore/api/$@` — unquoted `$@` breaks multi-pattern calls,
-  and `-w n` appends a stray literal `n` to the generated `.gitignore`.
 - `git-redate()`: sets `GIT_COMMITTER_DATE` but not `GIT_AUTHOR_DATE` → amend keeps the old
   author date.
 
-### 21. Aliases pointing at uninstalled binaries
-- `crap`→`fortune`, `nord`→`nordvpn`, `b`→`bun`, `flush-redis`→`redis-cli`
-  — all fail with "command not found" (`command -v` confirmed missing on this machine).
 
-
-### 23. `zsh/zfunctions/utils.zsh` — `calcram`/`ram`/`rams` depend on `bc` (not installed)
 
 ### 24. Privacy leak: `vlc-qt-interface.conf`
 - Full personal media library paths (incl. Downloads filenames) committed to the public repo;
@@ -128,11 +117,8 @@
 ### 🟡 Still open (carried over, verified)
 - **Bug 1**: catppuccin.gitconfig is both ignored and external (`chezmoi ignored` lists it).
 - **pokego** network call runs in both `dot_bashrc` and `dot_zshrc`.
-- **`run_onchange_chores.sh`** — no `set -e`, orphaned `hydectl reload &`.
 - **Repo 890 MB / `.git` ~800 MB**; `cheatsheets/` PDFs + `fastfetch/logo/` PNGs are the bulk.
-- **`validate-compose`** still uses deprecated `docker-compose`.
 
 ### 🟢 Optimizations
 - `wl-ocr`: `$(which grim)` → `command -v` (avoids silent empty on missing binary).
-- `yt-dlp/config`: `--paths $HOME/Videos/youtube-dl` — drop the legacy `youtube-dl` dir name.
-- `gh-delete-runs` (git.zsh): `gh run delete $id` → quote `$id`.
+
