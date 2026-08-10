@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # Ensure directory exists
 CONFIG_DIR="${HOME}/.config"
 ZSH_COMPLETIONS_DIR="$CONFIG_DIR/zsh/zcompletions"
@@ -32,6 +34,6 @@ zsh -fc '
   compinit -i -d "$ZDOTDIR/.zcompdump"
 ' || true
 
-hydectl reload &
+hydectl reload
 
 notify-send "Chezmoi finished updating dotfiles"

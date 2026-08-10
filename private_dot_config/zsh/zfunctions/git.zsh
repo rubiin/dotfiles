@@ -6,14 +6,14 @@ gh-delete-runs() {
 
 	# Loop over the IDs and delete each run
 	for id in $ids; do
-		gh run delete $id
+		gh run delete "$id"
 	done
 }
 
 
 # Generate .gitignore file using Toptal's gitignore API
 gi() {
-	curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ >.gitignore
+	curl -sfL "https://www.toptal.com/developers/gitignore/api/${(j:,:)@}" >.gitignore
 }
 
 

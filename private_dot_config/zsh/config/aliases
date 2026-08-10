@@ -22,7 +22,6 @@ alias lzd="lazydocker"
 alias lzg="lazygit"
 alias myzsh='source $ZDOTDIR/.zshrc'
 alias make='make --silent --warn-undefined-variables'
-alias nord="nordvpn"
 alias neofetch="fastfetch"
 alias practice-vim="docker run -it --rm brandoncc/vim-be-good:stable"
 
@@ -44,7 +43,7 @@ alias update-all='yay -Syu --noconfirm; flatpak update -y; mise self-update -y;m
 alias restore-pacman="xargs sudo pacman -S --needed --noconfirm < ~/pacman.txt"
 alias export-pacman="pacman -Qqe > ~/pacman.txt"
 alias ssh='TERM=xterm-256color ssh'
-alias validate-compose='docker-compose config --quiet && printf "OK\n" || printf "ERROR\n"'
+alias validate-compose='docker compose config --quiet && printf "OK\n" || printf "ERROR\n"'
 alias vmc='git diff --name-only --diff-filter=U'
 alias ytmp3="yt-dlp -x --audio-format=mp3"
 alias ytd="yt-dlp"
@@ -171,7 +170,7 @@ alias net="ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'"
 
 # Redis
 alias start-redis="docker rm -f some-redis;docker run --name some-redis -p 6379:6379 -d --restart=always redis:alpine redis-server --appendonly yes --requirepass 'secret'"
-alias flush-redis="redis-cli FLUSHALL"
+alias flush-redis="iredis FLUSHALL"
 
 # Postgres
 alias start-postgres="docker rm -f some-postgres;docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:alpine"

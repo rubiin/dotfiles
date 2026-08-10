@@ -113,14 +113,9 @@
   author date.
 
 ### 21. Aliases pointing at uninstalled binaries
-- `crap`→`fortune`, `typos-all`→`typos`, `nord`→`nordvpn`, `b`→`bun`, `flush-redis`→`redis-cli`
+- `crap`→`fortune`, `nord`→`nordvpn`, `b`→`bun`, `flush-redis`→`redis-cli`
   — all fail with "command not found" (`command -v` confirmed missing on this machine).
 
-### 22. `dot_zlogin` — `GNUPGHOME` points at a phantom dir
-- Exports `GNUPGHOME="$XDG_DATA_HOME/gnupg"` (`~/.local/share/gnupg` — **does not exist**), while
-  `base-install.sh` creates the keyring in `~/.local/share/gpg`. gpg ends up using a different
-  homedir than where the keys live. (The duplicate export was already removed; the wrong one is
-  the one that remains.)
 
 ### 23. `zsh/zfunctions/utils.zsh` — `calcram`/`ram`/`rams` depend on `bc` (not installed)
 
@@ -129,9 +124,6 @@
   it's runtime state that churns in git. Remove from tracking and gitignore it.
 
 ### 25. `dot_local/share/zed/extensions/index.json` — 34 KB runtime cache tracked
-
-### 26. `zsh/config/executable_insulter.zsh` — 9 duplicated messages in the array
-- 130 entries / 121 unique (a block was pasted twice with a leading-space variant).
 
 ### 🟡 Still open (carried over, verified)
 - **Bug 1**: catppuccin.gitconfig is both ignored and external (`chezmoi ignored` lists it).
