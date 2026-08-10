@@ -15,4 +15,5 @@ snixembed-git
 stacer-bin
 stylua-bin
 ttf-cm-unicode
+vlsub-opensubtitles-com-git
 xdg-ninja
