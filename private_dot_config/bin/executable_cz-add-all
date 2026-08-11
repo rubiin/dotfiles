@@ -46,7 +46,6 @@ file_folder_list=(
    "$config/gh"
    "$config/gnupg"
    "$config/ghostty"
-   "$config/gpg"
 
    "$config/hyde/config.toml"
    "$config/hypr/hyprsunset.conf"
