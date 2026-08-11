@@ -46,7 +46,6 @@ alias ytd="yt-dlp"
 alias q=" exit" # INFO leading space to ignore it in history due to HIST_IGNORE_SPACE
 alias hg='history | fzf'
 alias cp="cp -i"               # confirm before overwriting something
-alias grep='grep --color=auto' #enables case-insensitive text searching with colorized output.
 alias mv='mv -i'               # confirm before overwriting something
 alias reload-ags="pkill agsv1;agsv1&"
 alias update-nvim='nvim --headless "+Lazy! sync" +qa && cd ~/.config/nvim && git sync-this-repo'
