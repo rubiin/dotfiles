@@ -22,7 +22,7 @@ parallel ::: \
   "gh completion -s zsh > $ZSH_COMPLETIONS_DIR/_gh" \
   "docker completion zsh > $ZSH_COMPLETIONS_DIR/_docker" \
   "mise completion zsh > $ZSH_COMPLETIONS_DIR/_mise" \
-  "delta completion zsh > $ZSH_COMPLETIONS_DIR/_delta" \
+  "delta --generate-completion zsh > $ZSH_COMPLETIONS_DIR/_delta" \
   "omp completions zsh > $ZSH_COMPLETIONS_DIR/_omp" \
   "hydectl completion zsh > $ZSH_COMPLETIONS_DIR/_hydectl"
 
