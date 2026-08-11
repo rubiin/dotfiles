@@ -65,7 +65,7 @@
 | `source "$ZDOTDIR/config/aliases"` in `dot_bashrc` | File **is** chezmoi-managed (`chezmoi managed` finds it; glob missed it — no "zsh" in the name) |
 | `chezmoi doctor` errors | Environmental only: cross-device hardlink test, distro-built version (`-tags=noupgrade`) |
 | `omp` / `hydectl` completions in `run_onchange_chores.sh` | Both binaries are installed on this machine |
-| `pacman -Qtdq` hook writes | Hook now guards `${XDG_CONFIG_HOME:-$HOME/.config}` and writes to `etc/` (bug 5 fixed) |
+| `pacman -Qtdq` hook writes | Hook now guards `${XDG_CONFIG_HOME:-$HOME/.config}` and writes to `etc/` — **still broken**: hooks run as root, so the guard resolves to `/root/.config` → `/root/.config/etc/pkglist.txt: No such file or directory` on every pacman op. Fixed 2026-08-11: resolve the real user via `SUDO_USER`/`logname` → `getent passwd`, `mkdir -p`, and `chown` back to the user. |
 
 ---
 
