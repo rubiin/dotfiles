@@ -5,6 +5,7 @@ set -u
 
 config=$XDG_CONFIG_HOME
 state=$XDG_STATE_HOME
+share=$XDG_DATA_HOME
 
 file_folder_list=(
    "$HOME/.bash_profile"
@@ -44,7 +45,8 @@ file_folder_list=(
 
    "$config/git"
    "$config/gh"
-   "$config/gnupg"
+   "$share/gpg/dirmngr.conf"
+   "$share/gpg/gpg-agent.conf"
    "$config/ghostty"
 
    "$config/hyde/config.toml"
