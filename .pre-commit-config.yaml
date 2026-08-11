@@ -18,6 +18,10 @@ repos:
     rev: v1.7.4
     hooks:
       - id: betterleaks
+  - repo: https://github.com/Mergifyio/mergify-pre-commit
+    rev: 1.0.0
+    hooks:
+      - id: validate-mergify-config
   - repo: https://github.com/JohnnyMorganz/StyLua
     rev: v2.5.2
     hooks:
