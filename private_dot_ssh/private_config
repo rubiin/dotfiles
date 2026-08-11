@@ -39,6 +39,7 @@ Host *
 	TCPKeepAlive yes
 	ServerAliveInterval 60
 	ServerAliveCountMax 10
+	ConnectTimeout 10
 
 	# Compression (useful for slow connections)
 	Compression yes
