@@ -1,5 +1,8 @@
 # ~/dotfiles
 
+<img width="1365" height="440" alt="main" src="https://github.com/user-attachments/assets/d8265dbb-01b6-4abf-8c86-0af675ee9625" />
+
+## Preview
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/10cfe6e5-5d9a-41cd-8ac4-c1b0f1c17286" />
 
 
