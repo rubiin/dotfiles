@@ -8,4 +8,4 @@ Target = *
 [Action]
 Description = Create a backup list of all installed packages
 When = PreTransaction
-Exec = /bin/sh -c 'pacman -Qqen > "${XDG_CONFIG_HOME:-$HOME/.config}/etc/pkglist.txt"; pacman -Qqem > "${XDG_CONFIG_HOME:-$HOME/.config}/etc/pkglist-aur.txt" 2>/dev/null'
+Exec = /bin/sh -c 'u="${SUDO_USER:-$(logname 2>/dev/null || echo root)}"; h="$(getent passwd "$u" | cut -d: -f6)"; d="$h/.config/etc"; mkdir -p "$d"; pacman -Qqen > "$d/pkglist.txt"; pacman -Qqem > "$d/pkglist-aur.txt" 2>/dev/null; chown "$u" "$d/pkglist.txt" "$d/pkglist-aur.txt"'
