@@ -1,7 +1,6 @@
 
 if command -v "bat" &>/dev/null; then
-    # NOTE: global `-h`/`--help` aliases were removed — they rewrote *every*
-    # occurrence of those tokens on the command line (e.g. `grep -h pattern`
-    # lost its "suppress filename headers" meaning).
+    alias -g -- -h='-h 2>&1 | bat --language=help --style=plain --paging=never --color always'
+    alias -g -- --help='--help 2>&1 | bat --language=help --style=plain --paging=never --color always'
     alias cat='bat --style=plain --paging=never --color always'
 fi
