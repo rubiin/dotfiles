@@ -114,3 +114,4 @@ nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
 typos = "latest"
+bun = "latest"
