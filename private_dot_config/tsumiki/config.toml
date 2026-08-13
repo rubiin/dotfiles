@@ -1,6 +1,6 @@
 "$schema" = "https://raw.githubusercontent.com/rubiin/tsumiki/refs/heads/dev/tsumiki.schema.json"
 
-[widgets.app_launcher_button]
+[widgets.launcher_button]
 icon = "view-app-grid-symbolic"
 icon_size = 20
 tooltip = true
@@ -515,7 +515,7 @@ transition_type = "slide-up"
 transition_duration = 500
 osds = ["brightness", "volume"]
 
-[modules.app_launcher]
+[modules.launcher]
 enabled = true
 tooltip = true
 icon_size = 35
@@ -523,8 +523,20 @@ ignored = []
 anchor = "center"
 width = 280
 height = 320
-layout = "grid"
+layout = "list"
 grid_columns = 3
+plugins = [
+    "calc",
+    "clipboard-history",
+    "currency",
+    "define",
+    "emoji",
+    "history",
+    "kill",
+    "search",
+    "shorten",
+    "translate",
+]
 
 [modules.notification]
 enabled = true
@@ -610,12 +622,12 @@ layer = "bottom"
 
 [layout]
 left_section = ["@group:workspaces-group"]
-middle_section = ["date_time", "weather", "mpris"]
+middle_section = ["date_time", "weather", "mpris","launcher_button"]
 right_section = ["@group:sys-group", "@group:utils-group", "system_tray", "power"]
 
 [general]
 check_updates = false
-debug = 1
+debug = true
 monitor_styles = true
 auto_restart = true
 restart_delay = 1500
@@ -863,6 +875,35 @@ icon_size = "12px"
 spacing = "0.125em"
 
 [styling.bar.widgets.clipboard.border]
+enabled = false
+radius = "16px"
+width = "1px"
+
+
+[styling.bar.widgets.launcher_button]
+icon_size = "12px"
+spacing = "0.125em"
+
+[styling.bar.widgets.launcher_button.border]
+enabled = false
+radius = "16px"
+width = "1px"
+
+
+[styling.bar.widgets.overview_button]
+icon_size = "12px"
+spacing = "0.125em"
+
+[styling.bar.widgets.overview_button.border]
+enabled = false
+radius = "16px"
+width = "1px"
+
+[styling.bar.widgets.theme_switcher]
+icon_size = "12px"
+spacing = "0.125em"
+
+[styling.bar.widgets.theme_switcher.border]
 enabled = false
 radius = "16px"
 width = "1px"
@@ -1201,7 +1242,7 @@ enabled = false
 radius = "16px"
 width = "1px"
 
-[styling.modules.app_launcher]
+[styling.modules.launcher]
 margin_x = "8px"
 margin_y = "8px"
 opacity = 50
@@ -1209,12 +1250,12 @@ padding_x = "8px"
 padding_y = "8px"
 scaling = 100
 
-[styling.modules.app_launcher.border]
+[styling.modules.launcher.border]
 enabled = false
 radius = "1.5rem"
 width = "1px"
 
-[styling.modules.app_launcher.shadow]
+[styling.modules.launcher.shadow]
 blur = 0
 enabled = false
 offset = 0
