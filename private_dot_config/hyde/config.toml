@@ -50,5 +50,5 @@ explorer = "dolphin"
 location = "Kathmandu"
 
 [desktop.start]
-bar = 'tsu -start'
+bar = ''
 apptray_bluetooth = ''
