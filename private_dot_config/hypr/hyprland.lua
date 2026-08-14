@@ -274,6 +274,7 @@ hl.window_rule({
 	name = "workspace-5-filemanagers",
 	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
 	workspace = "5",
+	fullscreen = true,
 })
 
 hl.window_rule({
@@ -308,7 +309,7 @@ hl.window_rule({
 
 hl.config({
 	misc = {
-		swallow_regex = "(foot|kitty|alacritty|Alacritty|ghostty|Ghostty)",
+		-- swallow_regex = "(foot|kitty|alacritty|Alacritty|ghostty|Ghostty)",
 	},
 	ecosystem = {
 		no_update_news = true,
