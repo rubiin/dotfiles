@@ -115,3 +115,4 @@ nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 "pipx:git-filter-repo" = "latest"
 typos = "latest"
 bun = "latest"
+claude = "latest"
