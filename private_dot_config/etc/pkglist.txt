@@ -17,6 +17,7 @@ base
 base-devel
 bash-completion
 bat
+bc
 bind
 bluez
 bluez-utils
@@ -28,7 +29,6 @@ cantarell-fonts
 capitaine-cursors
 cargo-cache
 cava
-celluloid
 chafa
 chaotic-keyring
 chaotic-mirrorlist
@@ -64,6 +64,7 @@ eos-packagelist
 eos-quickstart
 eos-rankmirrors
 ethtool
+evtest
 exfatprogs
 eza
 f2fs-tools
@@ -97,7 +98,6 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
 gvfs
-haruna
 haveged
 hwdetect
 hwinfo
@@ -171,7 +171,7 @@ networkmanager-openconnect
 networkmanager-openvpn
 nfs-utils
 nilfs-utils
-noctalia-shell
+noctalia
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -237,6 +237,7 @@ safeeyes
 satty
 sbctl
 scc
+sdcv
 sddm
 sg3_utils
 sheldon
@@ -255,6 +256,7 @@ tealdeer
 tesseract
 tesseract-data-eng
 texinfo
+thunderbird
 tmux
 topgrade
 ttf-bitstream-vera
@@ -311,7 +313,6 @@ xorg-xkill
 xorg-xrandr
 xsettingsd
 xz
-yaak
 yay
 yazi
 zathura
