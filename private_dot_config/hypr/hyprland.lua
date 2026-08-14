@@ -87,13 +87,20 @@ hl.config({
 ----------------
 hl.on("hyprland.start", function()
 	-- Matches old `exec = ...` behavior (runs on config load/reload).
-	hl.exec_cmd("sleep 5; ~/.config/tsumiki/init.sh -start")
+	hl.exec_cmd("sleep 5; tsu -start")
 
 	-- Matches old `exec-once = ...` startup behavior.
 	hl.on("hyprland.start", function()
 		hl.exec_cmd("sleep 5; safeeyes -e")
 	end)
 end)
+
+hl.window_rule({
+	name = "filemanagers-fullscreen",
+	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
+	opaque = true,
+	float = false,
+})
 
 ----------------
 -- Window rules
@@ -274,7 +281,6 @@ hl.window_rule({
 	name = "workspace-5-filemanagers",
 	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
 	workspace = "5",
-	fullscreen = true,
 })
 
 hl.window_rule({
@@ -320,10 +326,10 @@ hl.config({
 -- Keybindings
 -----------------
 
-hl.bind("ALT + Tab", function()
-	hl.dispatch(hl.dsp.window.cycle_next())
-	hl.dispatch(hl.dsp.window.bring_to_top())
-end)
+-- hl.bind("ALT + Tab", function()
+-- 	hl.dispatch(hl.dsp.window.cycle_next())
+-- 	hl.dispatch(hl.dsp.window.bring_to_top())
+-- end)
 
 ---------------
 -- Layer rules
