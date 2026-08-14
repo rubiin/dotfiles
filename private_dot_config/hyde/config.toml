@@ -38,7 +38,7 @@ custom_paths = [
 ] # List of paths to search for wallpapers
 
 
-[hyprland]
+[desktop.app]
 browser = "vivaldi"      # Browser.
 editor = "code-insiders" # Editor.
 terminal = "wezterm"     # Terminal.
@@ -49,6 +49,6 @@ explorer = "dolphin"
 [weather]
 location = "Kathmandu"
 
-[hyprland-start]
-bar = ''
+[desktop.start]
+bar = 'tsu -start'
 apptray_bluetooth = ''
