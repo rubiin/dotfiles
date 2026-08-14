@@ -48,6 +48,7 @@
 .config/yazi/flavors/
 .config/yazi/plugins/
 .config/git/catppuccin.gitconfig
+.config/etc/hooks
 # .m2/
 # .macports/
 # .mcfly/
