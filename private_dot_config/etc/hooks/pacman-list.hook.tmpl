@@ -8,4 +8,4 @@ Target = *
 [Action]
 Description = Create a backup list of all installed packages
 When = PreTransaction
-Exec = /bin/sh -c 'pacman -Qqen  > "/home/{{ .chezmoi.username }}/etc/pkglist.txt"; pacman -Qqem > "/home/{{ .chezmoi.username }}/etc/pkglist-aur.txt" 2> /dev/null; exit'
+Exec = /bin/sh -c 'pacman -Qqen  > "/home/{{ .chezmoi.username }}/.config/etc/pkglist.txt"; pacman -Qqem > "/home/{{ .chezmoi.username }}/.config/etc/pkglist-aur.txt" 2> /dev/null; exit'
