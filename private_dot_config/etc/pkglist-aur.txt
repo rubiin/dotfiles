@@ -16,4 +16,5 @@ stacer-bin
 stylua-bin
 ttf-cm-unicode
 vlsub-opensubtitles-com-git
+whitesur-gtk-theme
 xdg-ninja
