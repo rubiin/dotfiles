@@ -105,35 +105,6 @@ Throttle frequent signals: If you're connecting to things like "changed" or "mot
 
 <https://github.com/tr1xem/flux>
 
-    def toggle_flight_mode(self, *_):
-        try:
-            self.flight_mode = not self.flight_mode
-
-            if self.flight_mode:
-                # Turn off WiFi and Bluetooth
-                if self.wifi_service:
-                    self.wifi_service.wireless_enabled = False
-                if hasattr(self, "bluetooth_man") and hasattr(
-                    self.bluetooth_man, "client"
-                ):
-                    self.bluetooth_man.client.set_enabled(False)
-            else:
-                # Turn on WiFi and Bluetooth
-                if self.wifi_service:
-                    self.wifi_service.wireless_enabled = True
-                if hasattr(self, "bluetooth_man") and hasattr(
-                    self.bluetooth_man, "client"
-                ):
-                    self.bluetooth_man.client.set_enabled(True)
-
-            # Update icon
-            self.flight_icon.set_from_file(
-                get_relative_path(
-                    "../../config/assets/icons/applets/flight-on.svg"
-                    if self.flight_mode
-                    else "../../config/assets/icons/applets/flight-off.svg"
-                )
-            )
 
 INSPIRATIONS:
 <https://github.com/MalpenZibo/ashell>
