@@ -95,16 +95,124 @@ hl.on("hyprland.start", function()
 	end)
 end)
 
-hl.window_rule({
-	name = "filemanagers-fullscreen",
-	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
-	opaque = true,
-	float = false,
-})
-
 ----------------
 -- Window rules
 ----------------
+
+-- Regexes are grouped into lists and compiled once, the same pattern as HyDE's
+-- window_rules.lua (regex_compile lives in hyde/utils.lua). Only the longer
+-- alternations (4+ entries) are grouped; short rules keep inline regexes.
+local util = _G.hyde.utils
+
+local filemanagers = util.regex_compile({
+	class = {
+		".*dolphin.*",
+		".*pcmanfm-qt.*",
+		".*nemo.*",
+		".*ark.*",
+		".*Nautilus.*",
+	},
+})
+
+local opaque = util.regex_compile({
+	class = {
+		"code-insiders-url-handler",
+		"code-insiders",
+		"vivaldi-stable",
+		"zen",
+		"com\\.gabm\\.satty",
+		"vlc",
+		".*mpv.*",
+	},
+})
+
+local workspace_1 = util.regex_compile({
+	class = {
+		".*firefox.*",
+		"vivaldi-stable",
+		".*opera.*",
+		".*edge.*",
+		".*Chromium.*",
+		".*Google-chrome.*",
+		".*thorium-browser.*",
+		".*Brave-browser.*",
+		".*zen.*",
+	},
+})
+
+local workspace_2 = util.regex_compile({
+	class = {
+		".*konsole.*",
+		".*kitty.*",
+		".*systemsettings.*",
+		".*gnome-terminal.*",
+	},
+})
+
+local workspace_3 = util.regex_compile({
+	class = {
+		"Code",
+		"code-oss",
+		"code-url-handler",
+		"code-insiders-url-handler",
+		"code-insiders",
+		"Code - Insiders",
+	},
+})
+
+local workspace_4 = util.regex_compile({
+	class = {
+		".*studio.*",
+		".*jetbrains-studio.*",
+		".*DBeaver.*",
+		"Postman",
+		"obsidian",
+		"MongoDB Compass",
+	},
+})
+
+local workspace_6 = util.regex_compile({
+	class = {
+		".*amarok.*",
+		".*G4Music.*",
+		".*music.*",
+		".*lollypop.*",
+		".*elisa.*",
+		".*vlc.*",
+		".*easyeffects.*",
+		".*mpv.*",
+		".*strawberry.*",
+		"com\\.github\\.rafostar\\.Clapper",
+		"Spotify",
+		"Audacity",
+	},
+})
+
+local workspace_7 = util.regex_compile({
+	class = {
+		"ferdium",
+		"Station",
+		".*discord.*",
+		".*thunderbird.*",
+	},
+})
+
+local workspace_8 = util.regex_compile({
+	class = {
+		".*org\\.libretro\\.RetroArch.*",
+		".*pcsx2-qt.*",
+		".*PCSX2.*",
+		".*PPSSPPQt.*",
+		".*steam.*",
+	},
+})
+
+hl.window_rule({
+	name = "filemanagers-fullscreen",
+	match = { class = filemanagers.class },
+	opaque = true,
+	float = false,
+})
 
 hl.window_rule({
 	name = "suppress-maximize-events",
@@ -224,9 +332,7 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "opaque-windows",
-	match = {
-		class = "^(code-insiders-url-handler)$|^(code-insiders)$|^(vivaldi-stable)$|^(zen)$|^(com.gabm.satty)$|^(vlc)$|^(.*mpv.*)$",
-	},
+	match = { class = opaque.class },
 	opaque = true,
 })
 
@@ -248,30 +354,26 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "browsers-workspace-1",
-	match = {
-		class = "^(.*firefox.*)$|^(vivaldi-stable)$|^(.*opera.*)$|^(.*edge.*)$|^(.*Chromium.*)$|^(.*Google-chrome.*)$|^(.*thorium-browser.*)$|^(.*Brave-browser.*)$|^(.*zen.*)$",
-	},
+	match = { class = workspace_1.class },
 	workspace = "1",
 })
 
 hl.window_rule({
 	name = "terminal-systemsettings-workspace-2",
-	match = { class = ".*konsole.*|.*kitty.*|.*systemsettings.*|.*gnome-terminal.*" },
+	match = { class = workspace_2.class },
 	workspace = "2",
 })
 
 hl.window_rule({
 	name = "vscode-workspace-3",
-	match = {
-		class = "^(Code)$|^(code-oss)$|^(code-url-handler)$|^(code-insiders-url-handler)$|^(code-insiders)$|^(Code - Insiders)$",
-	},
+	match = { class = workspace_3.class },
 	workspace = "3",
 })
 
 hl.window_rule({
 	name = "workspace-4-tools",
 	match = {
-		class = "^(.*studio.*)$|^(.*jetbrains-studio.*)$|^(.*DBeaver.*)$|^(Postman)$|^(obsidian)$|^(MongoDB Compass)$",
+		class = workspace_4.class,
 		title = "^(.*LibreOffice.*)$|^(.*pgadmin4.*)$",
 	},
 	workspace = "4",
@@ -279,22 +381,20 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "workspace-5-filemanagers",
-	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
+	match = { class = filemanagers.class },
 	workspace = "5",
 })
 
 hl.window_rule({
 	name = "workspace-6-media",
-	match = {
-		class = "^(.*amarok.*)$|^(.*G4Music.*)$|.*music.*|.*lollypop.*|^(.*elisa.*)$|^(.*vlc.*)$|^(.*easyeffects.*)$|^(.*mpv.*)$|^(.*strawberry.*)$|^(com.github.rafostar.Clapper)$|^(Spotify)$|^(Audacity)$",
-	},
+	match = { class = workspace_6.class },
 	workspace = "6",
 })
 
 hl.window_rule({
 	name = "workspace-7-communication",
 	match = {
-		class = "^(ferdium)$|^(Station)$|^(.*discord.*)$|^(.*thunderbird.*)$",
+		class = workspace_7.class,
 		title = "^(.*Telegram.*)$|^(.*Messages for web.*)$",
 	},
 	workspace = "7",
@@ -303,7 +403,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "workspace-8-gaming",
 	match = {
-		class = "^(.*org.libretro.RetroArch.*)$|^(.*pcsx2-qt.*)$|.*PCSX2.*|^(.*PPSSPPQt.*)$|^(.*steam.*)$",
+		class = workspace_8.class,
 		title = "^(.*Winetricks.*)$|^(Waydroid)$",
 	},
 	workspace = "8",
