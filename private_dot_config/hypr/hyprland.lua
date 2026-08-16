@@ -446,15 +446,6 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
-	name = "fabric-layer",
-	match = { namespace = "fabric" },
-	blur = true,
-	ignore_alpha = 0,
-	xray = true,
-	blur_popups = true,
-})
-
-hl.layer_rule({
 	name = "tsumiki-layer",
 	match = { namespace = "tsumiki" },
 	blur = true,
