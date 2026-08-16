@@ -7,8 +7,6 @@ todo: mke the seekbar longer
 
 todo: hyprland client
 
-todo: use uv
-
 todo: weather highlight color makes  label and icon color less readable
 
 todo: fix keybind cheatsheet (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png>)
@@ -16,8 +14,6 @@ todo: fix keybind cheatsheet (<https://github.com/noctalia-dev/legacy-v4-plugins
 todo: add graph for upload download(<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png>)
 
 todo: unicode picker (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/unicode-picker/preview.png>)
-
-todo: multiple sound source support:
 
 <https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys>
 
@@ -104,7 +100,6 @@ Throttle frequent signals: If you're connecting to things like "changed" or "mot
 <https://github.com/Neurarian/matshell>
 
 <https://github.com/tr1xem/flux>
-
 
 INSPIRATIONS:
 <https://github.com/MalpenZibo/ashell>
