@@ -100,8 +100,7 @@ end)
 ----------------
 
 -- Regexes are grouped into lists and compiled once, the same pattern as HyDE's
--- window_rules.lua (regex_compile lives in hyde/utils.lua). Only the longer
--- alternations (4+ entries) are grouped; short rules keep inline regexes.
+-- window_rules.lua (regex_compile lives in hyde/utils.lua).
 local util = _G.hyde.utils
 
 local filemanagers = util.regex_compile({
@@ -123,6 +122,24 @@ local opaque = util.regex_compile({
 		"com\\.gabm\\.satty",
 		"vlc",
 		".*mpv.*",
+	},
+})
+
+local subtle_opacity = util.regex_compile({
+	class = {
+		"kitty",
+		"io\\.missioncenter\\.MissionCenter",
+		"org\\.wezfurlong\\.wezterm",
+	},
+})
+
+local dolphin_dialogs = util.regex_compile({
+	class = {
+		"org\\.kde\\.dolphin",
+	},
+	title = {
+		"Copying - Dolphin",
+		"Progress Dialog - Dolphin",
 	},
 })
 
@@ -169,6 +186,10 @@ local workspace_4 = util.regex_compile({
 		"obsidian",
 		"MongoDB Compass",
 	},
+	title = {
+		".*LibreOffice.*",
+		".*pgadmin4.*",
+	},
 })
 
 local workspace_6 = util.regex_compile({
@@ -195,6 +216,10 @@ local workspace_7 = util.regex_compile({
 		".*discord.*",
 		".*thunderbird.*",
 	},
+	title = {
+		".*Telegram.*",
+		".*Messages for web.*",
+	},
 })
 
 local workspace_8 = util.regex_compile({
@@ -204,6 +229,10 @@ local workspace_8 = util.regex_compile({
 		".*PCSX2.*",
 		".*PPSSPPQt.*",
 		".*steam.*",
+	},
+	title = {
+		".*Winetricks.*",
+		"Waydroid",
 	},
 })
 
@@ -256,8 +285,8 @@ hl.window_rule({
 hl.window_rule({
 	name = "dolphin-dialogs",
 	match = {
-		class = "^(org.kde.dolphin)$",
-		title = "^(Copying - Dolphin)$|^(Progress Dialog - Dolphin)$",
+		class = dolphin_dialogs.class,
+		title = dolphin_dialogs.title,
 	},
 	size = { 600, 250 },
 })
@@ -338,7 +367,7 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "subtle-opacity-terminals",
-	match = { class = "^(kitty)$|^(io.missioncenter.MissionCenter)$|^(org.wezfurlong.wezterm)$" },
+	match = { class = subtle_opacity.class },
 	opacity = "0.98 1",
 })
 
@@ -374,7 +403,7 @@ hl.window_rule({
 	name = "workspace-4-tools",
 	match = {
 		class = workspace_4.class,
-		title = "^(.*LibreOffice.*)$|^(.*pgadmin4.*)$",
+		title = workspace_4.title,
 	},
 	workspace = "4",
 })
@@ -395,7 +424,7 @@ hl.window_rule({
 	name = "workspace-7-communication",
 	match = {
 		class = workspace_7.class,
-		title = "^(.*Telegram.*)$|^(.*Messages for web.*)$",
+		title = workspace_7.title,
 	},
 	workspace = "7",
 })
@@ -404,7 +433,7 @@ hl.window_rule({
 	name = "workspace-8-gaming",
 	match = {
 		class = workspace_8.class,
-		title = "^(.*Winetricks.*)$|^(Waydroid)$",
+		title = workspace_8.title,
 	},
 	workspace = "8",
 })
