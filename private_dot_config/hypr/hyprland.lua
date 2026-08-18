@@ -215,6 +215,7 @@ local workspace_7 = util.regex_compile({
 		"Station",
 		".*discord.*",
 		".*thunderbird.*",
+		"slack",
 	},
 	title = {
 		".*Telegram.*",
