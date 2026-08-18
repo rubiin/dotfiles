@@ -26,3 +26,4 @@ repos:
     rev: v2.5.2
     hooks:
       - id: stylua
+        args: []
