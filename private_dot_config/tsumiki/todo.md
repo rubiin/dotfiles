@@ -3,7 +3,7 @@ todo: fix the widget style on widget settings
 
 todo: add battery notifications
 
-todo: add color and background for widgets
+todo: add color and background for widgets, should be able to set a color for each widget
 
 todo: mke the seekbar longer
 
