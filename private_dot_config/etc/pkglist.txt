@@ -36,6 +36,7 @@ chezmoi
 cinnamon-desktop
 cliphist
 cryptsetup
+dart-sass
 device-mapper
 dialog
 diffutils
@@ -276,6 +277,7 @@ unrar
 unzip
 usb_modeswitch
 usbutils
+uv
 uwsm
 vim
 visual-studio-code-insiders
