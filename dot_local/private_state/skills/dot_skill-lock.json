@@ -378,6 +378,33 @@
       "skillFolderHash": "904db2759aaf1bd0e30eadedcd00efbd6367cc9f",
       "installedAt": "2026-08-03T15:00:55.159Z",
       "updatedAt": "2026-08-03T15:00:55.159Z"
+    },
+    "deslop": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "cursor-team-kit/skills/deslop/SKILL.md",
+      "skillFolderHash": "ac9ba043f9dd3b3a8850de6624ec5bc12e375599",
+      "installedAt": "2026-08-19T18:50:45.306Z",
+      "updatedAt": "2026-08-19T18:50:45.306Z"
+    },
+    "bro": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/bro/SKILL.md",
+      "skillFolderHash": "53c3b2c5dc11fe0ee4156468da27505df9239dc6",
+      "installedAt": "2026-08-19T18:50:45.308Z",
+      "updatedAt": "2026-08-19T18:50:45.308Z"
+    },
+    "unslop": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/unslop/SKILL.md",
+      "skillFolderHash": "6161508c5c7959b156ff0e4e10b510863b51f9cc",
+      "installedAt": "2026-08-19T18:50:45.316Z",
+      "updatedAt": "2026-08-19T18:50:45.316Z"
     }
   },
   "dismissed": {
