@@ -109,7 +109,6 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
-hyprpolkitagent
 hyprquery-git
 hyprsunset
 inetutils
@@ -205,6 +204,7 @@ playerctl
 plocate
 pokego-git
 polkit-gnome
+polkit-kde-agent
 poppler-glib
 postman-bin
 power-profiles-daemon
@@ -288,6 +288,7 @@ vpnc
 vulkan-radeon
 vulkan-tools
 watchexec
+waybar
 welcome
 wezterm-git
 wf-recorder
