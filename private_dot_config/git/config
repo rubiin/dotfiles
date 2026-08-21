@@ -334,6 +334,7 @@
 
 	# git-extras
 	cleanup = !ruby "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-cleanup.rb"
+	clean = !sh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-clean"
 	sign-release = !sh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-sign-release"
 	setup = !zsh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-setup"
 	wth = !zsh "${XDG_CONFIG_HOME:-$HOME/.config}/bin/git-extras/git-what-the-hell-just-happened"
