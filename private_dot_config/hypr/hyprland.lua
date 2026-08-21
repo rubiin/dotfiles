@@ -238,13 +238,6 @@ local workspace_8 = util.regex_compile({
 })
 
 hl.window_rule({
-	name = "filemanagers-fullscreen",
-	match = { class = filemanagers.class },
-	opaque = true,
-	float = false,
-})
-
-hl.window_rule({
 	name = "suppress-maximize-events",
 	match = { class = ".*" },
 	suppress_event = "maximize",
