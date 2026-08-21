@@ -54,11 +54,23 @@ label_format = "{icon} {percent}"
 
 
 [widgets.battery.notifications]
-low_threshold = 10
-full_battery = false
-low_battery = false
-charging = false
 
+[widgets.battery.notifications.low_battery]
+enabled = false
+threshold = 10
+message = ""
+
+[widgets.battery.notifications.full_battery]
+enabled = false
+message = ""
+
+[widgets.battery.notifications.charging]
+enabled = false
+message = ""
+
+[widgets.battery.notifications.unplugged]
+enabled = false
+message = ""
 [widgets.quick_settings]
 hover_reveal = false
 toggles = ["wifi", "bluetooth", "power_profiles", "hyprsunset", "hypridle", "notification"]
@@ -329,6 +341,7 @@ hide_when_empty = false
 icon_size = 22
 ignored = []
 tooltip = true
+show_current_workspace_only = false
 
 [widgets.theme_switcher]
 icon = ""
