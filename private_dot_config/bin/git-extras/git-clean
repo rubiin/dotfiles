@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "What do you want to remove from Git history?"
+echo
+echo "1) Images"
+echo "2) Fonts"
+echo "3) Videos"
+echo "4) ZIPs"
+echo "5) All"
+echo
+
+read -rp "Select an option [1-5]: " choice
+
+case "$choice" in
+1)
+  PATTERNS=(
+    '*.png' '*.PNG'
+    '*.jpg' '*.JPG'
+    '*.jpeg' '*.JPEG'
+    '*.gif' '*.GIF'
+    '*.webp' '*.WEBP'
+    '*.svg' '*.SVG'
+    '*.ico' '*.ICO'
+  )
+  ;;
+
+2)
+  PATTERNS=(
+    '*.ttf' '*.TTF'
+    '*.otf' '*.OTF'
+    '*.woff' '*.WOFF'
+    '*.woff2' '*.WOFF2'
+    '*.eot' '*.EOT'
+  )
+  ;;
+
+3)
+  PATTERNS=(
+    '*.mp4' '*.MP4'
+    '*.mov' '*.MOV'
+    '*.avi' '*.AVI'
+    '*.mkv' '*.MKV'
+    '*.webm' '*.WEBM'
+    '*.flv' '*.FLV'
+  )
+  ;;
+
+4)
+  PATTERNS=(
+    '*.zip' '*.ZIP'
+  )
+  ;;
+
+5)
+  PATTERNS=(
+    # Images
+    '*.png' '*.PNG'
+    '*.jpg' '*.JPG'
+    '*.jpeg' '*.JPEG'
+    '*.gif' '*.GIF'
+    '*.webp' '*.WEBP'
+    '*.svg' '*.SVG'
+    '*.ico' '*.ICO'
+
+    # Fonts
+    '*.ttf' '*.TTF'
+    '*.otf' '*.OTF'
+    '*.woff' '*.WOFF'
+    '*.woff2' '*.WOFF2'
+    '*.eot' '*.EOT'
+
+    # Videos
+    '*.mp4' '*.MP4'
+    '*.mov' '*.MOV'
+    '*.avi' '*.AVI'
+    '*.mkv' '*.MKV'
+    '*.webm' '*.WEBM'
+    '*.flv' '*.FLV'
+
+    # ZIPs
+    '*.zip' '*.ZIP'
+  )
+  ;;
+
+*)
+  echo "Invalid option."
+  exit 1
+  ;;
+esac
+
+echo
+echo "Cleaning Git history..."
+echo
+
+ARGS=()
+
+for pattern in "${PATTERNS[@]}"; do
+  ARGS+=(--path-glob "$pattern")
+done
+
+git filter-repo \
+  --invert-paths \
+  "${ARGS[@]}" --force
+
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+echo
+echo "Git history cleaned successfully."
+echo
+echo "Next steps:"
+echo "  git remote add origin <REMOTE_URL>"
+echo "  git push origin --force --all"
+echo "  git push origin --force --tags"
