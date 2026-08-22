@@ -56,6 +56,8 @@ prek = "latest"
 gum = "latest"
 grex = "latest"
 nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
+typos = "latest"
+claude = "latest"
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -113,6 +115,4 @@ nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 "npm:freebuff" = "latest"
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
-typos = "latest"
-bun = "latest"
-claude = "latest"
+
