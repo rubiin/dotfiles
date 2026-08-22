@@ -405,6 +405,15 @@
       "skillFolderHash": "6161508c5c7959b156ff0e4e10b510863b51f9cc",
       "installedAt": "2026-08-19T18:50:45.316Z",
       "updatedAt": "2026-08-19T18:50:45.316Z"
+    },
+    "install-anti-slop": {
+      "source": "dmmulroy/anti-slop",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dmmulroy/anti-slop.git",
+      "skillPath": "skills/install-anti-slop/SKILL.md",
+      "skillFolderHash": "31c294c983ea89bc585041cb43ec651b2df684a1",
+      "installedAt": "2026-08-22T17:04:03.635Z",
+      "updatedAt": "2026-08-22T17:04:03.635Z"
     }
   },
   "dismissed": {
