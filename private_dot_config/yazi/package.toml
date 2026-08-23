@@ -43,6 +43,16 @@ use = "yazi-rs/plugins:smart-paste"
 rev = "9014ed2"
 hash = "3f8d49413bc8691b4c652eb417a20178"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "044c3cc"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "044c3cc"
+hash = "3bcc00df11efc3ae5d15f2dba860be7"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "1a5f787"
