@@ -219,6 +219,7 @@ python-packaging
 python-pip
 python-pipx
 python-pyqt5
+qbittorrent
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
