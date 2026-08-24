@@ -28,7 +28,6 @@ idiomatic_version_file_enable_tools = [
   "npm",
   "bun",
   "deno",
-  "go",
   "yarn",
 ]
 python.compile = false # always download precompiled binaries
