@@ -109,6 +109,7 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
+hyprpolkitagent
 hyprquery-git
 hyprsunset
 inetutils
@@ -219,7 +220,6 @@ python-packaging
 python-pip
 python-pipx
 python-pyqt5
-qbittorrent
 qt5-graphicaleffects
 qt5-imageformats
 qt5-quickcontrols
@@ -283,13 +283,13 @@ uwsm
 vim
 visual-studio-code-insiders
 vivaldi
+vivaldi-ffmpeg-codecs
 vlc
 vlc-plugins-all
 vpnc
 vulkan-radeon
 vulkan-tools
 watchexec
-waybar
 welcome
 wezterm-git
 wf-recorder
