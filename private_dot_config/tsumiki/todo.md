@@ -9,6 +9,8 @@ todo: mke the seekbar longer
 
 todo: hyprland client
 
+todo: check how  waybar handles special workspace in workspace module
+
 
 todo: check for areas where listbox can be used instead of buttons, for better accessibility
 
@@ -29,22 +31,6 @@ TODO: add popover animation
 TODO: fix the sliders on quick settings, vertical layout is broken
 
 todo: add brightness and volume tooltips
-
-Traceback (most recent call last):
-  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 83, in on_click
-    self.popup.hide_popover()
-    ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'hide_popover'
-Traceback (most recent call last):
-  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 83, in on_click
-    self.popup.hide_popover()
-    ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'hide_popover'
-Traceback (most recent call last):
-  File "/home/devina/.config/tsumiki/widgets/quick_settings/togglers.py", line 45, in <lambda>
-    self.connect("clicked", lambda *_: popup.hide_popover())
-                                       ^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'hide_popover'
 
 TODO: add weather in the panel
 
