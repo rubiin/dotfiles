@@ -9,8 +9,8 @@ todo: mke the seekbar longer
 
 todo: hyprland client
 
-todo: check how  waybar handles special workspace in workspace module
 
+todo: add more workspace config , check wayle or waybar
 
 todo: check for areas where listbox can be used instead of buttons, for better accessibility
 
