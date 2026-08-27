@@ -10,6 +10,8 @@ todo: mke the seekbar longer
 todo: hyprland client
 
 
+todo: check for areas where listbox can be used instead of buttons, for better accessibility
+
 todo: fix keybind cheatsheet (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png>)
 
 todo: add graph for upload download(<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png>)
