@@ -114,4 +114,5 @@ claude = "latest"
 "npm:freebuff" = "latest"
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
+bun = "latest"
 
