@@ -8,8 +8,6 @@ mojave-gtk-theme
 mongodb-compass-bin
 pay-respects-bin
 ps_mem
-python-fabric-git
-python-rlottie-python
 sesh-bin
 snixembed-git
 stacer-bin

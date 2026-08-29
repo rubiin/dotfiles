@@ -91,6 +91,7 @@ gnome-bluetooth-3.0
 gnome-keyring
 gnu-free-fonts
 gobject-introspection
+goreleaser
 gpm
 gptfdisk
 grim
@@ -142,6 +143,7 @@ linux-firmware-marvell
 linux-headers
 linux-lts
 lite-xl
+llmfit
 logrotate
 lsb-release
 lshw
@@ -212,10 +214,8 @@ power-profiles-daemon
 ppp
 pptpclient
 procs
-python-cairo
 python-capng
 python-jinja
-python-loguru
 python-packaging
 python-pip
 python-pipx
