@@ -1,4 +1,8 @@
 {
+  "edit_predictions": {
+    "disabled_globs": [],
+    "provider": "copilot"
+  },
   "instrumentation": {
     "performance_profiler": {
       "enabled": true
