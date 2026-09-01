@@ -45,6 +45,6 @@ fi
 
 # add-commit-pull-push
 git add --all
-git commit --message="$commit_msg" --author="🤖 automated<cron@job>" || return 1 # fail with pre-commit check
+git commit --message="$commit_msg" --author="🤖 automated<cron@bot.org>" || return 1 # fail with pre-commit check
 git pull --no-progress && git push --no-progress
 return $?
