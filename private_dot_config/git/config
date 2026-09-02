@@ -398,6 +398,9 @@
 	#    git thanks [<git-log-args>...]
 	thanks = "!f() { git log --pretty=tformat:'%aN <%aE>' \"$@\" | sort | uniq -c | sort -rn; }; f"
 
+
+	local-commit = "!f() { git log "@{upstream}..@" "$@" }; f"
+
 	# open GitHub repository in browser
 	#    git open [<remote>]
 	open = "!f() { URL=$(git config remote.${1:-origin}.url); xdg-open \"${URL%%.git}\"; }; f"
