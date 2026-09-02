@@ -421,6 +421,8 @@
 	wipe = "!f() { git add --all && git commit --quiet --message='WIPE-SAVEPOINT' && git reset ${1:-HEAD~} --hard && git clean -fd; }; f"
 
 
+	show-merged-branches = "!f() { git branch --no-color --merged | grep -v '^\\*'; | | xargs -n 1 git branch -d; }; f"
+
 	# create/extend gitignore file (delegates to git-extras' git-ignore)
 	gitignore = ignore
 
