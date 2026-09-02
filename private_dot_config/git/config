@@ -374,7 +374,6 @@
 	rva = revert --abort
 	rvc = revert --continue
 	rvq = revert --quit
-	undo = reset --soft HEAD~1
 
 	# reset
 	re = reset
