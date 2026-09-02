@@ -8,12 +8,20 @@ if [[ -z "$repo" ]]; then
   exit
 fi
 
-mkdir -p "$dev/$repo" && \
-  cd "$dev/$repo" && \
-  git init && \
-  touch 'README.md' 'CHANGELOG.md' && \
-  cp "$HOME/.gitignore" '.gitignore' && \
-  git add "*" && git add '.gitignore' && \
-  git commit -m 'Initial commit.' && \
-  git remote add origin "git@github.com:$repo" && \
+gitdirexists() {
+  if [ -d ".git" ]; then
+    echo ".git directory already exists, aborting"
+    exit 1
+  fi
+}
+
+mkdir -p "$dev/$repo" &&
+  cd "$dev/$repo" &&
+  gitdirexists &&
+  git init &&
+  touch 'README.md' 'CHANGELOG.md' &&
+  cp "$HOME/.gitignore" '.gitignore' &&
+  git add "*" && git add '.gitignore' &&
+  git commit -m 'Initial commit.' &&
+  git remote add origin "git@github.com:$repo" &&
   git push -u origin master
