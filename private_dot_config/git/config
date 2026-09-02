@@ -398,6 +398,7 @@
 	#    git thanks [<git-log-args>...]
 	thanks = "!f() { git log --pretty=tformat:'%aN <%aE>' \"$@\" | sort | uniq -c | sort -rn; }; f"
 
+	wip = "!f() { git add --all && git commit --all --message='WIP'; }; f"
 
 	local-commit = "!f() { git log "@{upstream}..@" "$@" }; f"
 
