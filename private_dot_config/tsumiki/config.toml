@@ -24,7 +24,7 @@ sort_order = "desc"
 cache_ttl = 3600
 notification_interval = 60
 workflow_runs_max = 10
-show_notifications = true
+show_notifications = false
 # Editor used to open locally-mapped repositories.
 local_editor = "code"
 # Map owner/repository to an absolute local path (opened in the editor).
