@@ -122,6 +122,7 @@ jq
 just
 kcalc
 kde-cli-tools
+kdialog
 kernel-install-for-dracut
 kimageformats
 kio-fuse
