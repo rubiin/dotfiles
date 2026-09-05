@@ -174,6 +174,8 @@ local workspace_3 = util.regex_compile({
 		"code-insiders-url-handler",
 		"code-insiders",
 		"Code - Insiders",
+		"*.zed.*",
+		"*.lite_xl.*",
 	},
 })
 
