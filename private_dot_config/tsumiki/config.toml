@@ -20,6 +20,8 @@ default_tab = "inbox"
 max_repos = 10
 sort_by = "updated"
 sort_order = "desc"
+# Only show repositories owned by your account (hides org/collaborator repos).
+own_repos_only = true
 # Seconds profile and repository data stay cached before a refetch (0 disables caching).
 cache_ttl = 3600
 notification_interval = 60
@@ -439,11 +441,6 @@ icon = "󰃰"
 use_24hr = true
 show_icon = true
 timezones = ["America/New_York", "Asia/Tokyo"]
-
-[widgets.privacy_indicator]
-tooltip = true
-hide_when_inactive = true
-modules = ["camera", "microphone", "screen"]
 
 [widgets.custom_button_group]
 spacing = 4
@@ -1256,14 +1253,6 @@ enabled = false
 radius = "16px"
 width = "1px"
 
-[styling.bar.widgets.privacy_indicator]
-icon_size = "12px"
-spacing = "0.125em"
-
-[styling.bar.widgets.privacy_indicator.border]
-enabled = false
-radius = "16px"
-width = "1px"
 
 [styling.bar.widgets.workspaces]
 icon_size = "12px"
