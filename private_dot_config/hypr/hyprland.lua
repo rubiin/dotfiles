@@ -87,7 +87,7 @@ hl.config({
 ----------------
 hl.on("hyprland.start", function()
 	-- Matches old `exec = ...` behavior (runs on config load/reload).
-	hl.exec_cmd("sleep 5; tsu -start")
+	hl.exec_cmd("sleep 5; ~/.config/tsumiki/init.sh -start")
 
 	-- Matches old `exec-once = ...` startup behavior.
 	hl.on("hyprland.start", function()
@@ -98,146 +98,6 @@ end)
 ----------------
 -- Window rules
 ----------------
-
--- Regexes are grouped into lists and compiled once, the same pattern as HyDE's
--- window_rules.lua (regex_compile lives in hyde/utils.lua).
-local util = _G.hyde.utils
-
-local filemanagers = util.regex_compile({
-	class = {
-		".*dolphin.*",
-		".*pcmanfm-qt.*",
-		".*nemo.*",
-		".*ark.*",
-		".*Nautilus.*",
-	},
-})
-
-local opaque = util.regex_compile({
-	class = {
-		"code-insiders-url-handler",
-		"code-insiders",
-		"vivaldi-stable",
-		"zen",
-		"com\\.gabm\\.satty",
-		"vlc",
-		".*mpv.*",
-	},
-})
-
-local subtle_opacity = util.regex_compile({
-	class = {
-		"kitty",
-		"io\\.missioncenter\\.MissionCenter",
-		"org\\.wezfurlong\\.wezterm",
-	},
-})
-
-local dolphin_dialogs = util.regex_compile({
-	class = {
-		"org\\.kde\\.dolphin",
-	},
-	title = {
-		"Copying - Dolphin",
-		"Progress Dialog - Dolphin",
-	},
-})
-
-local workspace_1 = util.regex_compile({
-	class = {
-		".*firefox.*",
-		"vivaldi-stable",
-		".*opera.*",
-		".*edge.*",
-		".*Chromium.*",
-		".*Google-chrome.*",
-		".*thorium-browser.*",
-		".*Brave-browser.*",
-		".*zen.*",
-	},
-})
-
-local workspace_2 = util.regex_compile({
-	class = {
-		".*konsole.*",
-		".*kitty.*",
-		".*systemsettings.*",
-		".*gnome-terminal.*",
-	},
-})
-
-local workspace_3 = util.regex_compile({
-	class = {
-		"Code",
-		"code-oss",
-		"code-url-handler",
-		"code-insiders-url-handler",
-		"code-insiders",
-		"Code - Insiders",
-		"*.zed.*",
-		"*.lite_xl.*",
-	},
-})
-
-local workspace_4 = util.regex_compile({
-	class = {
-		".*studio.*",
-		".*jetbrains-studio.*",
-		".*DBeaver.*",
-		"Postman",
-		"obsidian",
-		"MongoDB Compass",
-	},
-	title = {
-		".*LibreOffice.*",
-		".*pgadmin4.*",
-	},
-})
-
-local workspace_6 = util.regex_compile({
-	class = {
-		".*amarok.*",
-		".*G4Music.*",
-		".*music.*",
-		".*lollypop.*",
-		".*elisa.*",
-		".*vlc.*",
-		".*easyeffects.*",
-		".*mpv.*",
-		".*strawberry.*",
-		"com\\.github\\.rafostar\\.Clapper",
-		"Spotify",
-		"Audacity",
-	},
-})
-
-local workspace_7 = util.regex_compile({
-	class = {
-		"ferdium",
-		"Station",
-		".*discord.*",
-		".*thunderbird.*",
-		"slack",
-	},
-	title = {
-		".*Telegram.*",
-		".*Messages for web.*",
-	},
-})
-
-local workspace_8 = util.regex_compile({
-	class = {
-		".*org\\.libretro\\.RetroArch.*",
-		".*pcsx2-qt.*",
-		".*PCSX2.*",
-		".*PPSSPPQt.*",
-		".*steam.*",
-	},
-	title = {
-		".*Winetricks.*",
-		"Waydroid",
-	},
-})
 
 hl.window_rule({
 	name = "suppress-maximize-events",
@@ -281,8 +141,8 @@ hl.window_rule({
 hl.window_rule({
 	name = "dolphin-dialogs",
 	match = {
-		class = dolphin_dialogs.class,
-		title = dolphin_dialogs.title,
+		class = "^(org.kde.dolphin)$",
+		title = "^(Copying - Dolphin)$|^(Progress Dialog - Dolphin)$",
 	},
 	size = { 600, 250 },
 })
@@ -357,13 +217,15 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "opaque-windows",
-	match = { class = opaque.class },
+	match = {
+		class = "^(code-insiders-url-handler)$|^(code-insiders)$|^(vivaldi-stable)$|^(zen)$|^(com.gabm.satty)$|^(vlc)$|^(.*mpv.*)$",
+	},
 	opaque = true,
 })
 
 hl.window_rule({
 	name = "subtle-opacity-terminals",
-	match = { class = subtle_opacity.class },
+	match = { class = "^(kitty)$|^(io.missioncenter.MissionCenter)$|^(org.wezfurlong.wezterm)$" },
 	opacity = "0.98 1",
 })
 
@@ -379,48 +241,54 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "browsers-workspace-1",
-	match = { class = workspace_1.class },
+	match = {
+		class = "^(.*firefox.*)$|^(vivaldi-stable)$|^(.*opera.*)$|^(.*edge.*)$|^(.*Chromium.*)$|^(.*Google-chrome.*)$|^(.*thorium-browser.*)$|^(.*Brave-browser.*)$|^(.*zen.*)$",
+	},
 	workspace = "1",
 })
 
 hl.window_rule({
 	name = "terminal-systemsettings-workspace-2",
-	match = { class = workspace_2.class },
+	match = { class = ".*konsole.*|.*kitty.*|.*systemsettings.*|.*gnome-terminal.*" },
 	workspace = "2",
 })
 
 hl.window_rule({
 	name = "vscode-workspace-3",
-	match = { class = workspace_3.class },
+	match = {
+		class = "^(Code)$|^(code-oss)$|^(code-url-handler)$|^(code-insiders-url-handler)$|^(code-insiders)$|^(Code - Insiders)$",
+	},
 	workspace = "3",
 })
 
 hl.window_rule({
 	name = "workspace-4-tools",
 	match = {
-		class = workspace_4.class,
-		title = workspace_4.title,
+		class = "^(.*studio.*)$|^(.*jetbrains-studio.*)$|^(.*DBeaver.*)$|^(Postman)$|^(obsidian)$|^(MongoDB Compass)$",
+		title = "^(.*LibreOffice.*)$|^(.*pgadmin4.*)$",
 	},
 	workspace = "4",
 })
 
 hl.window_rule({
 	name = "workspace-5-filemanagers",
-	match = { class = filemanagers.class },
+	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
 	workspace = "5",
 })
 
 hl.window_rule({
 	name = "workspace-6-media",
-	match = { class = workspace_6.class },
+	match = {
+		class = "^(.*amarok.*)$|^(.*G4Music.*)$|.*music.*|.*lollypop.*|^(.*elisa.*)$|^(.*vlc.*)$|^(.*easyeffects.*)$|^(.*mpv.*)$|^(.*strawberry.*)$|^(com.github.rafostar.Clapper)$|^(Spotify)$|^(Audacity)$",
+	},
 	workspace = "6",
 })
 
 hl.window_rule({
 	name = "workspace-7-communication",
 	match = {
-		class = workspace_7.class,
-		title = workspace_7.title,
+		class = "^(ferdium)$|^(Station)$|^(.*discord.*)$|^(.*thunderbird.*)$",
+		title = "^(.*Telegram.*)$|^(.*Messages for web.*)$",
 	},
 	workspace = "7",
 })
@@ -428,8 +296,8 @@ hl.window_rule({
 hl.window_rule({
 	name = "workspace-8-gaming",
 	match = {
-		class = workspace_8.class,
-		title = workspace_8.title,
+		class = "^(.*org.libretro.RetroArch.*)$|^(.*pcsx2-qt.*)$|.*PCSX2.*|^(.*PPSSPPQt.*)$|^(.*steam.*)$",
+		title = "^(.*Winetricks.*)$|^(Waydroid)$",
 	},
 	workspace = "8",
 })
@@ -440,7 +308,7 @@ hl.window_rule({
 
 hl.config({
 	misc = {
-		-- swallow_regex = "(foot|kitty|alacritty|Alacritty|ghostty|Ghostty)",
+		swallow_regex = "(foot|kitty|alacritty|Alacritty|ghostty|Ghostty)",
 	},
 	ecosystem = {
 		no_update_news = true,
@@ -451,10 +319,10 @@ hl.config({
 -- Keybindings
 -----------------
 
--- hl.bind("ALT + Tab", function()
--- 	hl.dispatch(hl.dsp.window.cycle_next())
--- 	hl.dispatch(hl.dsp.window.bring_to_top())
--- end)
+hl.bind("ALT + Tab", function()
+	hl.dispatch(hl.dsp.window.cycle_next())
+	hl.dispatch(hl.dsp.window.bring_to_top())
+end)
 
 ---------------
 -- Layer rules
