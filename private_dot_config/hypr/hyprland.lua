@@ -87,7 +87,7 @@ hl.config({
 ----------------
 hl.on("hyprland.start", function()
 	-- Matches old `exec = ...` behavior (runs on config load/reload).
-	hl.exec_cmd("sleep 5; ~/.config/tsumiki/init.sh -start")
+	hl.exec_cmd("sleep 5; tsu -start")
 
 	-- Matches old `exec-once = ...` startup behavior.
 	hl.on("hyprland.start", function()
