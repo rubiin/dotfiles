@@ -7,6 +7,8 @@ todo: add color and background for widgets, should be able to set a color for ea
 
 todo: mke the seekbar longer
 
+todo: add media icon on player
+
 todo: hyprland client
 
 todo: fix keybind cheatsheet (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png>)
