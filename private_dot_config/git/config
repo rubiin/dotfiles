@@ -401,6 +401,7 @@
 	wip = "!f() { git add --all && git commit --all --message='WIP'; }; f"
 
 	local-commit = "!f() { git log "@{upstream}..@" "$@" }; f"
+  release-as = '!f() { git commit --allow-empty -m "chore: release $1" -m "Release-As: $1"; }; f'
 
 	# open GitHub repository in browser
 	#    git open [<remote>]
