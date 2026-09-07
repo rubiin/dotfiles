@@ -3,6 +3,8 @@ todo: fix the widget style on widget settings
 
 todo: add battery notifications
 
+todo: make the nepali format part of datemenu
+
 todo: add color and background for widgets, should be able to set a color for each widget
 
 todo: mke the seekbar longer
