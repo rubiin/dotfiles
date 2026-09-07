@@ -114,6 +114,4 @@ claude = "latest"
 "npm:freebuff" = "latest"
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
-bun = "latest"
-"github:lite-xl/lite-xl-plugin-manager" = "latest"
 
