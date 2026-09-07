@@ -309,6 +309,7 @@ tealdeer
 tesseract
 tesseract-data-eng
 texinfo
+thunderbird
 tmux
 topgrade
 ttf-bitstream-vera
@@ -332,6 +333,7 @@ visual-studio-code-insiders
 vivaldi
 vivaldi-ffmpeg-codecs
 vlc
+vlc-plugins-all
 vpnc
 vulkan-radeon
 vulkan-tools
