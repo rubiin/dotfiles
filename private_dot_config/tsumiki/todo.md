@@ -9,6 +9,8 @@ todo: mke the seekbar longer
 
 todo: add media icon on player
 
+todo: player seekbar starts in middle and takes position on first load
+
 todo: hyprland client
 
 todo: fix keybind cheatsheet (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/keybind-cheatsheet/preview.png>)
