@@ -102,7 +102,6 @@ claude = "latest"
 "pipx:xxh-xxh" = "latest"
 "pipx:yt-dlp" = "latest"
 "pipx:glances" = "latest"
-"pipx:subliminal" = "latest"
 
 
 # github plugins
