@@ -7,6 +7,10 @@ todo: make the nepali format part of datemenu
 
 todo: add color and background for widgets, should be able to set a color for each widget
 
+(main.py:22148): playerctl-ERROR **: 20:44:47.972: could not get metadata: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+/home/devina/.local/bin/tsu: line 100: 22148 Aborted                    (core dumped) "$venv_python" main.py
+❌ Failed to start Tsumiki Bar
+
 todo: mke the seekbar longer
 
 todo: add media icon on player
