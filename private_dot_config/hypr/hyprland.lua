@@ -233,6 +233,7 @@ hl.window_rule({
 	name = "picture-in-picture",
 	match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" },
 	float = true,
+	opaque = true,
 	pin = true,
 	keep_aspect_ratio = true,
 	move = { "monitor_w*0.73", "monitor_h*0.72" },
