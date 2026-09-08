@@ -97,6 +97,7 @@ git-delta
 git-interactive-rebase-tool-git
 github-cli
 gitlogue
+glances
 glew
 glm
 gnome-bluetooth-3.0
