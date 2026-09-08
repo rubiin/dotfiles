@@ -122,7 +122,6 @@ hyprland
 hyprland-qt-support
 hyprlock
 hyprpicker
-hyprpolkitagent
 hyprquery-git
 hyprsunset
 imagemagick
