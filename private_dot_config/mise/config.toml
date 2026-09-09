@@ -82,12 +82,11 @@ claude = "latest"
 "npm:fallow" = "latest"
 "npm:localtunnel" = "latest"
 "npm:npkill" = "latest"
-
+"npm:freebuff" = "latest"
 
 # go tools
 "go:github.com/Gelio/go-global-update" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
-
 
 # cargo plugins
 "cargo:cargo-update" = "latest"
@@ -101,7 +100,10 @@ claude = "latest"
 "pipx:iredis" = "latest"
 "pipx:xxh-xxh" = "latest"
 "pipx:yt-dlp" = "latest"
-
+"pipx:guessit" = "latest"
+"pipx:git-filter-repo" = "latest"
+"pipx:glances" = "latest"
+"pipx:subliminal" = "latest"
 
 # github plugins
 "github:adaszko/complgen" = "latest"
@@ -109,8 +111,4 @@ claude = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
 "github:versenilvis/IRIS" = "latest"
-"npm:freebuff" = "latest"
-"pipx:guessit" = "latest"
-"pipx:git-filter-repo" = "latest"
-"pipx:glances" = "latest"
 
