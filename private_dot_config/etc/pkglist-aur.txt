@@ -1,6 +1,7 @@
 fabric-cli-git
 gitflow-cjs
 glace-git
+goose-desktop-bin
 jetbrains-toolbox
 matugen-bin
 megabasterd-bin
