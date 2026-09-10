@@ -10,12 +10,11 @@ legacy_version_file = true # enabled by default (different than asdf)
 # configure `mise install` to always keep the downloaded archive
 always_keep_download = false # deleted after install by default
 always_keep_install = false  # deleted on failure by default
-
+all_compile = false # use precompiled binaries if available, otherwise compile from source. This is the default behavior.
 # configure how frequently (in minutes) to fetch updated plugin repository changes
 # this is updated whenever a new runtime is installed
 # (note: this isn't currently implemented but there are plans to add it: https://github.com/jdxcode/rtx/issues/128)
 plugin_autoupdate_last_check_duration = '1 week' # set to 0 to disable updates
-minimum_release_age = "0s"
 verbose = false # set to true to see full installation output, see `RTX_VERBOSE`
 asdf_compat = false # set to true to ensure .tool-versions will be compatible with asdf, see `RTX_ASDF_COMPAT`
 jobs = 8 # number of plugins or runtimes to install in parallel. The default is `8`.
@@ -35,8 +34,9 @@ color_theme = "catppuccin"
 pipx.uvx = true
 gpg_verify = true
 npm.package_manager = "pnpm"
-
-
+http_retries = 5
+locked = true
+minimum_release_age = "2d"  # override for this tool only
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
