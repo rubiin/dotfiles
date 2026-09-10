@@ -62,7 +62,6 @@ fi
 # fi
 
 #source scripts with _evalcache
-_evalcache hydectl completion zsh
 _evalcache mise activate zsh
 _evalcache zoxide init zsh --hook pwd
 
@@ -77,3 +76,4 @@ create_dir_if_not_exists "$HOME/work"
 
 #Display Pokemon
 pokego --no-title --random 1,3,6
+
