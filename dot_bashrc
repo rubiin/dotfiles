@@ -41,6 +41,3 @@ eval "$(~/.local/bin/mise activate bash)"
 pokego --no-title --random 1,3,6
 
 export PATH="$HOME/.local/bin:$PATH"
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.config/vite-plus/env"
