@@ -8,3 +8,6 @@ _pip_completion()
 }
 complete -o default -F _pip_completion /usr/bin/python -m pip
 # pip bash completion end
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.config/vite-plus/env"
