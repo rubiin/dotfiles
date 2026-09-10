@@ -47,16 +47,17 @@ uv = "latest"
 pnpm = "latest"
 node = ["lts", "latest"]
 usage = "latest"
-deno = "latest"
+deno = {version = "latest", lazy=true}
 ruff = "latest"
-gallery-dl = "latest"
+gallery-dl = {version = "latest", lazy=true}
 cargo-binstall = "latest"
 prek = "latest"
-gum = "latest"
-grex = "latest"
+gum = {version = "latest", lazy=true} #  is installed only when one of its commands is first called
+grex = {version = "latest", lazy=true}
 nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 typos = "latest"
-claude = "latest"
+claude = {version = "latest", lazy=true}
+
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
