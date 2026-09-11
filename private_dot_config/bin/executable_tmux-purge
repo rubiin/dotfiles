@@ -1,10 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-set -e
-set -u
+# List detached sessions via tmux's structured output, avoiding fragile
+# parsing of `tmux ls` text format.
+detached=$(tmux list-sessions -F '#{session_name}:#{session_attached}' 2>/dev/null | awk -F: '$2 == 0 { print $1 }' || true)
 
-detached=`tmux ls | grep -E -v "attached" | awk '{gsub(/:/,"");print $1}'`
+if [[ -z "$detached" ]]; then
+  echo "No detached sessions to purge."
+  exit 0
+fi
 
 for session in $detached; do
-	tmux kill-session -t $session
+  tmux kill-session -t "$session"
 done

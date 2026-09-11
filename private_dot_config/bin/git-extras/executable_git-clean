@@ -100,8 +100,18 @@ printf '%s\n' "${PATTERNS[@]}" > "$path_file"
 
 git filter-repo --invert-paths --path-file "$path_file" --force
 
-git reflog expire --expire=now --all
-git gc --prune=now --aggressive
+echo
+echo "Rewriting history is irreversible. The reflog and aggressive gc will"
+echo "also be cleaned up, reducing the recovery window for the NEW history."
+echo
+read -rp "Proceed with reflog expire + aggressive gc? [y/N]: " gc_ans
+if [[ "$gc_ans" == [Yy]* ]]; then
+  git reflog expire --expire=now --all
+  git gc --prune=now --aggressive
+  echo "Reflog and gc cleaned."
+else
+  echo "Skipping reflog/gc cleanup. You can run them manually later if desired."
+fi
 
 echo
 echo "Git history cleaned successfully."

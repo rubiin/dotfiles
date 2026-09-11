@@ -1,17 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-
-set -e
-set -u
-
+set -euo pipefail
 
 PROCS=4
 
-if [ "$1" == "" ]; then
+if [[ $# -eq 0 ]]; then
   echo "usage: ytdl-playlist <youtube-playlist>"
   echo
   echo "purpose: download youtube videos in parallel"
-else
-  youtube-dl -j -o "%(autonumber)s. %(title)s.%(ext)s" "$@" | \
-    xargs -I'{}' -d'\n' -n1 -P$PROCS -- /bin/sh -c 'TMP=`mktemp`; echo '\''{}'\'' >${TMP}; youtube-dl -f best -o "`jq -r ._filename ${TMP}`" --load-info ${TMP} &>/dev/null; rm ${TMP}'
+  exit 1
 fi
+
+if ! command -v yt-dlp >/dev/null 2>&1; then
+  echo "Error: yt-dlp not found. Install it (e.g. pip install yt-dlp)." >&2
+  exit 1
+fi
+
+yt-dlp -j -o "%(autonumber)s. %(title)s.%(ext)s" "$@" |
+  xargs -I'{}' -d'\n' -n1 -P"$PROCS" -- /bin/sh -c '
+    TMP=$(mktemp)
+    printf "%s" "$1" > "$TMP"
+    yt-dlp -f best -o "$(jq -r ._filename "$TMP")" --load-info "$TMP" &>/dev/null
+    rm "$TMP"
+  ' _ {}

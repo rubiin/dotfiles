@@ -80,7 +80,7 @@ def cleanup
   proceed = STDIN.gets.downcase.chomp
 
   if proceed == 'y'
-    `git push origin #{remote_branches.map { |branch | ':' << branch }.join ' '}`
+    `git push origin --delete #{remote_branches.join ' '}`
     `git branch -d #{local_branches.join ' '}`
     puts 'Done.'
   else

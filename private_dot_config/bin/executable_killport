@@ -8,4 +8,18 @@ fi
 
 # Kill the process that is currently listening on the provided port
 
-portwtf "$1" | xargs kill -9
+pids=$(portwtf "$1")
+
+if [[ -z "$pids" ]]; then
+  echo "Nothing listening on port $1." >&2
+  exit 0
+fi
+
+# Try SIGTERM first; fall back to SIGKILL only if the process is still alive.
+printf '%s\n' "$pids" | xargs kill -15 || true
+sleep 0.5
+for pid in $pids; do
+  if kill -0 "$pid" 2>/dev/null; then
+    kill -9 "$pid" || true
+  fi
+done
