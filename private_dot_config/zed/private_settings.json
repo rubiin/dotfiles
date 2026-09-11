@@ -34,7 +34,7 @@
   "git_panel": {
     "show_count_badge": true,
     "file_icons": false,
-    "fallback_branch_name": "main",
+    "fallback_branch_name": "master",
     "status_style": "icon",
     "dock": "left",
     "button": true,

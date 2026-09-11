@@ -1,24 +1,49 @@
-#!/bin/bash
-set -o errexit
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Author: David Underhill
-# Script to permanently delete files/folders from your git repository.  To use
-# it, cd to your repository's root and then run the script with a list of paths
-# you want to delete, e.g., git-delete-history path1 path2
+# Permanently delete files/folders from your git repository's history.
+# Usage: cd to the repository root, then run:
+#   git-rewrite-history path1 path2 ...
 
-if [ $# -eq 0 ]; then
-  exit 0
-fi
-
-# make sure we're at the root of git repo
-if [ ! -d .git ]; then
-  echo "Error: must run this script from the root of a git repository"
+if [[ $# -eq 0 ]]; then
+  echo "Usage: git-rewrite-history <path...>" >&2
   exit 1
 fi
 
-# remove all paths passed as arguments from the history of the repo
-files=$@
-git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch $files" HEAD
+if [[ ! -d .git ]]; then
+  echo "Error: must run this script from the root of a git repository" >&2
+  exit 1
+fi
 
-# remove the temporary history git-filter-branch otherwise leaves behind for a long time
-rm -rf .git/refs/original/ && git reflog expire --all &&  git gc --aggressive --prune
+# Confirm before rewriting history.
+echo "This will permanently remove the following paths from all history:" >&2
+printf '  %s\n' "$@" >&2
+echo >&2
+read -rp "Proceed? [y/N]: " ans
+if [[ "$ans" != [Yy]* ]]; then
+  echo "Aborted." >&2
+  exit 0
+fi
+
+# Build a path list file for git-filter-repo (one path per line).
+path_file="$(mktemp)"
+trap 'rm -f "$path_file"' EXIT
+
+# Quote-safe: print each argument on its own line.
+printf '%s\n' "$@" > "$path_file"
+
+# Use git-filter-repo instead of the deprecated git-filter-branch.
+# --invert-paths removes the matched paths; --force is required for
+# non-interactive/bare use.
+if ! command -v git-filter-repo >/dev/null 2>&1; then
+  echo "Error: git-filter-repo not found. Install it (e.g. pip install git-filter-repo)." >&2
+  exit 1
+fi
+
+git filter-repo --invert-paths --path{Cat} "$path_file" --force
+
+# Clean up the backup refs that filter-repo leaves behind, then expire
+# reflogs and gc. This is irreversible, which is why we prompted above.
+rm -rf .git/refs/original/ 2>/dev/null || true
+git reflog expire --all
+git gc --aggressive --prune=now

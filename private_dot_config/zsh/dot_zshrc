@@ -8,7 +8,7 @@ if [[ -r "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] && [[ -r "$XDG_CACHE_HOME/p10k-instant
 fi
 # ===== END Powerlevel10k Instant Prompt =====
 
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # must run eagerly at startup (can't be evalcached) — it loads the prompt (p10k)
 eval "$(sheldon source)"

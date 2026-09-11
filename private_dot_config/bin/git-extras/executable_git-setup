@@ -1,16 +1,25 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+set -euo pipefail
 
 repo="$1"
 
 if [[ -z "$repo" ]]; then
   echo "Syntax: git setup user/project"
   echo "Example: git setup rubiin/.github"
-  exit
+  exit 1
+fi
+
+# Where to create the repo; override with $GIT_SETUP_DIR if desired.
+dev="${GIT_SETUP_DIR:-$HOME/projects}"
+
+if [[ ! -d "$dev" ]]; then
+  echo "Creating $dev"
+  mkdir -p "$dev"
 fi
 
 gitdirexists() {
-  if [ -d ".git" ]; then
-    echo ".git directory already exists, aborting"
+  if [[ -d .git ]]; then
+    echo ".git directory already exists, aborting" >&2
     exit 1
   fi
 }
@@ -19,9 +28,18 @@ mkdir -p "$dev/$repo" &&
   cd "$dev/$repo" &&
   gitdirexists &&
   git init &&
-  touch 'README.md' 'CHANGELOG.md' &&
-  cp "$HOME/.gitignore" '.gitignore' &&
-  git add "*" && git add '.gitignore' &&
-  git commit -m 'Initial commit.' &&
-  git remote add origin "git@github.com:$repo" &&
-  git push -u origin master
+  touch README.md CHANGELOG.md
+
+if [[ -f "$HOME/.gitignore" ]]; then
+  cp "$HOME/.gitignore" .gitignore
+fi
+
+git add '*' .gitignore 2>/dev/null || git add .
+
+git commit -m 'Initial commit.' ||
+  echo "Nothing to commit (empty repo)."
+
+git remote add origin "git@github.com:$repo" 2>/dev/null ||
+  echo "Remote origin may already exist; skipping."
+
+git push -u origin master
