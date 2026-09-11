@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-set -e
+if ! command -v git-filter-repo >/dev/null 2>&1; then
+  echo "Error: git-filter-repo not found. Install it (e.g. pip install git-filter-repo)." >&2
+  exit 1
+fi
 
 echo "What do you want to remove from Git history?"
 echo
@@ -55,7 +59,6 @@ case "$choice" in
 
 5)
   PATTERNS=(
-    # Images
     '*.png' '*.PNG'
     '*.jpg' '*.JPG'
     '*.jpeg' '*.JPEG'
@@ -63,29 +66,23 @@ case "$choice" in
     '*.webp' '*.WEBP'
     '*.svg' '*.SVG'
     '*.ico' '*.ICO'
-
-    # Fonts
     '*.ttf' '*.TTF'
     '*.otf' '*.OTF'
     '*.woff' '*.WOFF'
     '*.woff2' '*.WOFF2'
     '*.eot' '*.EOT'
-
-    # Videos
     '*.mp4' '*.MP4'
     '*.mov' '*.MOV'
     '*.avi' '*.AVI'
     '*.mkv' '*.MKV'
     '*.webm' '*.WEBM'
     '*.flv' '*.FLV'
-
-    # ZIPs
     '*.zip' '*.ZIP'
   )
   ;;
 
 *)
-  echo "Invalid option."
+  echo "Invalid option." >&2
   exit 1
   ;;
 esac
@@ -94,18 +91,18 @@ echo
 echo "Cleaning Git history..."
 echo
 
-ARGS=()
+# Build a path list file for git-filter-repo (one glob per line).
+# Using --path-file is more reliable than repeated --path-glob args.
+path_file="$(mktemp)"
+trap 'rm -f "$path_file"' EXIT
 
-for pattern in "${PATTERNS[@]}"; do
-  ARGS+=(--path-glob "$pattern")
-done
+printf '%s\n' "${PATTERNS[@]}" > "$path_file"
 
-git filter-repo \
-  --invert-paths \
-  "${ARGS[@]}" --force
+git filter-repo --invert-paths --path-file "$path_file" --force
 
 git reflog expire --expire=now --all
 git gc --prune=now --aggressive
+
 echo
 echo "Git history cleaned successfully."
 echo

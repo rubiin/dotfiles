@@ -15,8 +15,10 @@ get_ahead_behind ()
   local from_branch=$2
   local to_branch=$3
 
-  local ahead=$(git rev-list $to_branch..$from_branch | wc -l | tr -d ' ')
-  local behind=$(git rev-list $from_branch..$to_branch | wc -l | tr -d ' ')
+  local ahead
+  local behind
+  ahead=$(git rev-list --count "$to_branch..$from_branch" 2>/dev/null || echo 0)
+  behind=$(git rev-list --count "$from_branch..$to_branch" 2>/dev/null || echo 0)
 
   if [ $behind = 0 ]; then
     if [ $ahead = 0 ]; then

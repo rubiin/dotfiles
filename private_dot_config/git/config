@@ -14,11 +14,9 @@
 	insteadOf = https://github.com/
 
 [credential "https://github.com"]
-	helper =
 	helper = !/usr/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
-	helper =
 	helper = !/usr/bin/gh auth git-credential
 
 [pull]
@@ -40,7 +38,7 @@
 	# Speed up the status command
 	untrackedCache = true
 	# Don't consider trailing space change as a cause for merge conflicts
- 	whitespace=trailing-space,cr-at-eol,tabwidth=4
+	whitespace=trailing-space,cr-at-eol,tabwidth=4
 	packedGitLimit = 512m
 	packedGitWindowSize = 512m
 

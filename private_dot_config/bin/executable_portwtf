@@ -1,16 +1,26 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-# List out the pid for the process that is currently listening on the provided port
+if [[ $# -ne 1 ]]; then
+  echo "Usage: portwtf <port>" >&2
+  exit 1
+fi
 
-line="$(lsof -i -P -n | grep LISTEN | grep ":$1")"
-pid=$(echo "$line" | awk '{print $2}')
-pid_name=$(echo "$line" | awk '{print $1}')
+port="$1"
 
-# If there's nothing running, exit
-[[ -z "$pid" ]] && exit 0
+# Get PIDs listening on the given port. lsof -ti returns one PID per line.
+pids=$(lsof -ti tcp:"$port" 2>/dev/null || true)
 
-# output the process name to stderr so it won't be piped along
-echo >&2 -e "$pid_name"
+if [[ -z "$pids" ]]; then
+  exit 0
+fi
 
-# print the process id. It can be piped, for example to pbcopy
-echo -e "$pid"
+# Output the process name(s) to stderr so they aren't piped along.
+while IFS= read -r pid; do
+  pid_name=$(ps -o comm= -p "$pid" 2>/dev/null || echo "unknown")
+  echo >&2 -n "$pid_name "
+done <<< "$pids"
+echo >&2
+
+# Print PIDs (one per line) so the output can be piped, e.g. to pbcopy/xargs.
+echo "$pids"

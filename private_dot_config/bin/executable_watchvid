@@ -1,11 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-files=$(fd . ~/Downloads/ -e .mkv -e .mp4)
-selected_file=$(echo "$files" | rofi -dmenu -theme simple -i -p "Select a file:")
-
-if [ -n "$selected_file" ]; then
-	mpv "$selected_file"
-else
-	notify-send "No file selected."
+files=$(fd . ~/Downloads/ -e .mkv -e .mp4 2>/dev/null || true)
+if [[ -z "$files" ]]; then
+  notify-send "No video files found in ~/Downloads."
+  exit 0
 fi
-pkill watchvid
+
+selected_file=$(echo "$files" | rofi -dmenu -theme simple -i -p "Select a file:" || true)
+
+if [[ -n "$selected_file" ]]; then
+  mpv "$selected_file"
+else
+  notify-send "No file selected."
+fi

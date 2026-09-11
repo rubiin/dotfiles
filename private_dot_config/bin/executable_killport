@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: killport <port>" >&2
+  exit 1
+fi
 
 # Kill the process that is currently listening on the provided port
 
-wtfport "$1" | xargs kill -9
+portwtf "$1" | xargs kill -9

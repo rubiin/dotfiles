@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-git branch | fzf -m | xargs git branch -D
+set -euo pipefail
+
+branches=$(git branch --format='%(refname:short)' | fzf -m || true)
+
+if [[ -z "$branches" ]]; then
+  echo "No branches selected."
+  exit 0
+fi
+
+printf '%s\n' "$branches" | xargs -r git branch -D
