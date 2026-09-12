@@ -56,9 +56,10 @@ cargo-binstall = "latest"
 prek = "latest"
 gum = {version = "latest", lazy=true} #  is installed only when one of its commands is first called
 grex = {version = "latest", lazy=true}
-nub = { version = "latest", allow_builds = ["@nubjs/nub"] }
 typos = "latest"
 claude = {version = "latest", lazy=true}
+golangci-lint = "latest"
+
 
 
 # npm plugins
