@@ -135,7 +135,6 @@ sudo tee /etc/systemd/system/docker.service.d/no-block-boot.conf <<'EOF'
 DefaultDependencies=no
 EOF
 
-sudo systemctl daemon-reload
 
 echo "🔐 Setting ssh"
 mkdir -p ~/.ssh/control
@@ -211,6 +210,10 @@ echo "⚡ Installing mise"
 curl https://mise.run | sh
 mise install
 
+echo "🎨 Setting up bar"
+curl -fsSL https://raw.githubusercontent.com/rubiin/tsumiki/master/install.sh | bash
+
+
 echo "🟩 Setting tmux"
 curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(date +%s)" | bash
 
@@ -218,5 +221,10 @@ ask_yes_no_default "🔄 Do you want to reapply chezmoi configuration (recommend
 
 echo "📁 Creating XDG directories"
 xdg-user-dirs-update
+
+
+echo "🔄 Reloading systemd daemon"
+
+sudo systemctl daemon-reload
 
 echo "✅ Completed setup! Please restart your terminal and log out and log back in for all changes to take effect."
