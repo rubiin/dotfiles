@@ -35,8 +35,10 @@ pipx.uvx = true
 gpg_verify = true
 npm.package_manager = "pnpm"
 http_retries = 5
-locked = true
 minimum_release_age = "2d"  # override for this tool only
+
+[settings.upgrade]
+auto_prune = false
 # shims_dir = '~/.local/share/rtx/shims' # [experimental] directory where shims are stored
 
 [tools]
