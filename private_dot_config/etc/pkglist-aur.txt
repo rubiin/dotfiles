@@ -9,6 +9,7 @@ mojave-gtk-theme
 mongodb-compass-bin
 nvimpager
 pay-respects-bin
+projecto-bin
 ps_mem
 sesh-bin
 snixembed-git
