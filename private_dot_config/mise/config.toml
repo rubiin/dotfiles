@@ -115,4 +115,3 @@ golangci-lint = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:can1357/oh-my-pi" = "latest"
 "github:versenilvis/IRIS" = "latest"
-
