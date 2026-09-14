@@ -1,0 +1,38 @@
+{
+	"commandToOpen": "code-insiders",
+	"projects": [
+		{
+			"name": "pokego",
+			"path": "/home/devina/personal/golang/pokego"
+		},
+		{
+			"name": "projecto",
+			"path": "/home/devina/personal/golang/projecto",
+			"lastOpened": "2026-09-13T20:00:36Z"
+		},
+		{
+			"name": "unprofane",
+			"path": "/home/devina/personal/typescript/unprofane"
+		},
+		{
+			"name": "sample-env",
+			"path": "/home/devina/personal/typescript/sample-env"
+		},
+		{
+			"name": "starter-ts",
+			"path": "/home/devina/personal/typescript/starter-ts"
+		},
+		{
+			"name": "helper-fns",
+			"path": "/home/devina/personal/typescript/helper-fns"
+		},
+		{
+			"name": "vitely",
+			"path": "/home/devina/personal/typescript/vitely"
+		},
+		{
+			"name": "rubiin.github.io",
+			"path": "/home/devina/personal/typescript/rubiin.github.io"
+		}
+	]
+}
