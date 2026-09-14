@@ -48,6 +48,7 @@ file_folder_list=(
    "$share/gpg/dirmngr.conf"
    "$share/gpg/gpg-agent.conf"
    "$config/ghostty"
+   "$config/projecto"
 
    "$config/hyde/config.toml"
    "$config/hypr/hyprsunset.conf"
