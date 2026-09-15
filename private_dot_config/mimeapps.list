@@ -93,6 +93,7 @@ x-scheme-handler/net.thunderbird=userapp-Thunderbird-0VMVT3.desktop
 x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/slack=slack.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+text/x-csrc=code-insiders.desktop
 
 [Removed Associations]
 application/x-bittorrent=tixati.desktop;
