@@ -4,6 +4,7 @@ glace-git
 goose-desktop-bin
 ignit-bin
 jetbrains-toolbox
+linkrot-bin
 matugen-bin
 megabasterd-bin
 mojave-gtk-theme
