@@ -3,16 +3,18 @@
 	"projects": [
 		{
 			"name": "pokego",
-			"path": "/home/devina/personal/golang/pokego"
+			"path": "/home/devina/personal/golang/pokego",
+			"lastOpened": "2026-09-16T14:06:26Z"
 		},
 		{
 			"name": "projecto",
 			"path": "/home/devina/personal/golang/projecto",
-			"lastOpened": "2026-09-14T07:08:45Z"
+			"lastOpened": "2026-09-15T16:54:25Z"
 		},
 		{
 			"name": "unprofane",
-			"path": "/home/devina/personal/typescript/unprofane"
+			"path": "/home/devina/personal/typescript/unprofane",
+			"lastOpened": "2026-09-15T16:57:19Z"
 		},
 		{
 			"name": "sample-env",
@@ -32,12 +34,17 @@
 		},
 		{
 			"name": "rubiin.github.io",
-			"path": "/home/devina/personal/typescript/rubiin.github.io"
+			"path": "/home/devina/personal/typescript/rubiin.github.io",
+			"lastOpened": "2026-09-15T16:54:33Z"
 		},
 		{
 			"name": "gitignorer",
 			"path": "/home/devina/personal/golang/gitignorer",
 			"lastOpened": "2026-09-15T11:48:47Z"
+		},
+		{
+			"name": "linklint",
+			"path": "/home/devina/linklint"
 		}
 	]
 }
