@@ -401,6 +401,8 @@
 	local-commit = "!f() { git log "@{upstream}..@" "$@" }; f"
   release-as = '!f() { git commit --allow-empty -m "chore: release $1" -m "Release-As: $1"; }; f'
 
+	tag-delete = "!f() { git tag | fzf -m | while IFS= read -r tag; do git tag -d \"$tag\"; done; }; f"
+
 	# open GitHub repository in browser
 	#    git open [<remote>]
 	open = "!f() { URL=$(git config remote.${1:-origin}.url); xdg-open \"${URL%%.git}\"; }; f"
