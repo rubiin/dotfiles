@@ -154,7 +154,7 @@ only = [
 [commands]
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 # "Custom command using interactive shell (unix)" = "-i vim_upgrade"
-
+"Zed" = "curl -f https://zed.dev/install.sh | ZED_CHANNEL=preview sh"
 
 [python]
 # enable_pip_review = true                         ###disabled by default
