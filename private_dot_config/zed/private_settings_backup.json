@@ -1,8 +1,4 @@
 {
-  "markdown_preview": {
-    "font_family": "MonoLisa",
-    "code_font_family": "MonoLisa"
-  },
   "edit_predictions": {
     "disabled_globs": [],
     "provider": "copilot"
@@ -29,6 +25,8 @@
   "diff_view_style": "split",
   "agent_ui_font_size": 13.0,
   "multi_cursor_modifier": "cmd_or_ctrl",
+  "markdown_preview_code_font_family": "MonoLisa",
+  "markdown_preview_font_family": "MonoLisa",
   "ui_font_family": "MonoLisa",
   "sticky_scroll": {
     "enabled": true,
