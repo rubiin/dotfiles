@@ -39,6 +39,7 @@ chaotic-mirrorlist
 chezmoi
 chromaprint
 cinnamon-desktop
+claude-desktop
 cliphist
 confuse
 cryptsetup
