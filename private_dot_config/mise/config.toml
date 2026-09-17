@@ -57,7 +57,6 @@ prek = "latest"
 gum = {version = "latest", lazy=true} #  is installed only when one of its commands is first called
 grex = {version = "latest", lazy=true}
 typos = "latest"
-claude = {version = "latest", lazy=true}
 golangci-lint = "latest"
 
 
