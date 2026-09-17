@@ -94,6 +94,7 @@ x-scheme-handler/postman=Postman.desktop
 x-scheme-handler/slack=slack.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 text/x-csrc=code-insiders.desktop
+x-scheme-handler/claude=com.anthropic.Claude.desktop
 
 [Removed Associations]
 application/x-bittorrent=tixati.desktop;
