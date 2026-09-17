@@ -245,7 +245,6 @@ pipewire-pulse
 pkgfile
 playerctl
 plocate
-pokego-git
 polkit-gnome
 polkit-kde-agent
 poppler-glib
