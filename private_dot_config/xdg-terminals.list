@@ -1,5 +1,5 @@
 # See https://github.com/Vladimir-csp/xdg-terminal-exec?tab=readme-ov-file#configuration
-wezterm.desktop
+org.wezfurlong.wezterm.desktop
 kitty.desktop
 Alacritty.desktop
 foot.desktop
