@@ -1,6 +1,7 @@
 
 todo: fix the widget style on widget settings
-
+todo: drag on the media player seekbar not working
+todo: make the media player texts visible currently static color
 todo: add battery notifications
 
 todo: make the nepali format part of datemenu
@@ -15,7 +16,6 @@ todo: mke the seekbar longer
 
 todo: add media icon on player
 
-todo: player seekbar starts in middle and takes position on first load
 
 todo: hyprland client
 
