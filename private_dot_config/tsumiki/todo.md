@@ -2,8 +2,8 @@
 todo: fix the widget style on widget settings
 
 todo: drag on the media player seekbar not working
-todo: make the media player texts visible currently static color
-todo: add media icon on player
+todo: make the media player texts color dynamic currently static color so sometimes looks barely readable due to the background
+
 
 todo: add battery notifications
 
