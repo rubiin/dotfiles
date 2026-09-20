@@ -1,9 +1,8 @@
 
 todo: fix the widget style on widget settings
 
-todo: drag on the media player seekbar not working
-todo: make the media player texts color dynamic currently static color so sometimes looks barely readable due to the background
 
+todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
 
 todo: add battery notifications
 
