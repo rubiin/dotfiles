@@ -325,7 +325,6 @@ unrar
 unzip
 usb_modeswitch
 usbutils
-uv
 uwsm
 vim
 visual-studio-code-insiders
@@ -338,7 +337,7 @@ vulkan-radeon
 vulkan-tools
 watchexec
 welcome
-wezterm-git
+wezterm
 wf-recorder
 wget
 which
