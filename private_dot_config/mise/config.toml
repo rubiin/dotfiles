@@ -58,7 +58,7 @@ gum = {version = "latest", lazy=true} #  is installed only when one of its comma
 grex = {version = "latest", lazy=true}
 typos = "latest"
 golangci-lint = "latest"
-
+goreleaser = "latest"
 
 
 # npm plugins
@@ -86,6 +86,7 @@ golangci-lint = "latest"
 "npm:localtunnel" = "latest"
 "npm:npkill" = "latest"
 "npm:freebuff" = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"
 
 # go tools
 "go:github.com/Gelio/go-global-update" = "latest"
@@ -112,6 +113,4 @@ golangci-lint = "latest"
 "github:adaszko/complgen" = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
-"github:can1357/oh-my-pi" = "latest"
 "github:versenilvis/IRIS" = "latest"
-goreleaser = "latest"
