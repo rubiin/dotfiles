@@ -1,10 +1,13 @@
 
 todo: fix the widget style on widget settings
 
+todo: remove the media from quicksettings on player disappear similar to mpris
 
 todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
 
 todo: add battery notifications
+
+todo: rightclick to switch between english and nepali dates
 
 todo: make the nepali format part of datemenu
 
