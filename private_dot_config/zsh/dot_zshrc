@@ -11,7 +11,7 @@ fi
 # zmodload zsh/zprof
 
 # must run eagerly at startup (can't be evalcached) — it loads the prompt (p10k)
-eval "$(sheldon source)"
+eval "$(shelf source)"
 
 # ===== START Initialize prompt =====
 # Powerlevel10k: theme is loaded by sheldon (plugins.powerlevel10k); here we only
