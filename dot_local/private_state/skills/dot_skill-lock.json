@@ -414,6 +414,15 @@
       "skillFolderHash": "31c294c983ea89bc585041cb43ec651b2df684a1",
       "installedAt": "2026-08-22T17:04:03.635Z",
       "updatedAt": "2026-08-22T17:04:03.635Z"
+    },
+    "brag": {
+      "source": "latent-spaces/brag",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/latent-spaces/brag.git",
+      "skillPath": "skills/brag/SKILL.md",
+      "skillFolderHash": "555a5266056e68f0660c34852d691c0f3a37590e",
+      "installedAt": "2026-09-18T15:11:41.036Z",
+      "updatedAt": "2026-09-18T15:11:41.036Z"
     }
   },
   "dismissed": {
@@ -421,14 +430,13 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",
