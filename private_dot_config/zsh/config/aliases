@@ -58,7 +58,6 @@ alias npx="pnpx"
 alias tsx="deno"
 alias pj="projecto"
 alias buff="freebuff"
-
 alias skillup="npx skills add -y"
 
 
@@ -143,7 +142,6 @@ alias y="yarn"
 
 #pnpm aliases
 alias p="pnpm"
-alias pi="pnpm i"
 alias pih="pnpm i --shamefully-hoist=true"
 
 alias js="just"
