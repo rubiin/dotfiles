@@ -330,6 +330,46 @@ checksum = "sha256:0468e7b543ab5af81727e484917c9bb860f9f92c27b789ace82b2521665ff
 url = "https://github.com/rubiin/projecto/releases/download/v1.1.0/projecto_Windows_x86_64.zip"
 url_api = "https://api.github.com/repos/rubiin/projecto/releases/assets/561102232"
 
+[[tools."github:rubiin/shelf"]]
+version = "0.2.5"
+backend = "github:rubiin/shelf"
+specifiers = ["latest"]
+
+[tools."github:rubiin/shelf"."platforms.linux-arm64"]
+checksum = "sha256:7fb60ab7cdb644e69be3dee109c9fcf259e3df047d9102b91523b9f5927dc658"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894831"
+
+[tools."github:rubiin/shelf"."platforms.linux-arm64-musl"]
+checksum = "sha256:7fb60ab7cdb644e69be3dee109c9fcf259e3df047d9102b91523b9f5927dc658"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894831"
+
+[tools."github:rubiin/shelf"."platforms.linux-x64"]
+checksum = "sha256:bddab226769b60928b25b298a85ff302531889b31d399ea0fe4d2f18cdc292ee"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894826"
+
+[tools."github:rubiin/shelf"."platforms.linux-x64-musl"]
+checksum = "sha256:bddab226769b60928b25b298a85ff302531889b31d399ea0fe4d2f18cdc292ee"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894826"
+
+[tools."github:rubiin/shelf"."platforms.macos-arm64"]
+checksum = "sha256:c1eb270126a4f5e21005716f1dad68d78fb7912c24b7969dc6756b582f5ce5bd"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894777"
+
+[tools."github:rubiin/shelf"."platforms.macos-x64"]
+checksum = "sha256:f22feaca51ba5d63608241ddb47d8644d2618a4f0583d45ffb4e3888106395cd"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894776"
+
+[tools."github:rubiin/shelf"."platforms.windows-x64"]
+checksum = "sha256:59daee9f7b3ec484b11a4a4210ecb7502f100e8e259cdc3d78d5a7de8636f988"
+url = "https://github.com/rubiin/shelf/releases/download/v0.2.5/shelf_Windows_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/rubiin/shelf/releases/assets/576894775"
+
 [[tools."github:versenilvis/IRIS"]]
 version = "0.7.0"
 backend = "github:versenilvis/IRIS"
@@ -651,7 +691,7 @@ checksum = "sha256:c8af870b5b3e9789a6cbdb30270e7c212e12d76a7afa7fc7f21b6b21cc22a
 url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-win-x64.zip"
 
 [[tools."npm:@earendil-works/pi-coding-agent"]]
-version = "0.86.0"
+version = "0.86.1"
 backend = "npm:@earendil-works/pi-coding-agent"
 specifiers = ["latest"]
 
