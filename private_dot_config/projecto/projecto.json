@@ -35,7 +35,7 @@
 		{
 			"name": "rubiin.github.io",
 			"path": "/home/devina/personal/typescript/rubiin.github.io",
-			"lastOpened": "2026-09-15T16:54:33Z"
+			"lastOpened": "2026-09-19T06:35:10Z"
 		},
 		{
 			"name": "gitignorer",
@@ -45,6 +45,10 @@
 		{
 			"name": "linklint",
 			"path": "/home/devina/linklint"
+		},
+		{
+			"name": "tsumiki",
+			"path": "/home/devina/.config/tsumiki"
 		}
 	]
 }
