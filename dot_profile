@@ -2,3 +2,6 @@
 if command -v pip >/dev/null 2>&1; then
   eval "$(pip completion --bash 2>/dev/null)" || true
 fi
+
+# supercode
+export PATH="$HOME/.supercode/bin:$PATH"
