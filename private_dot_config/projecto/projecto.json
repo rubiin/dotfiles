@@ -4,7 +4,7 @@
 		{
 			"name": "pokego",
 			"path": "/home/devina/personal/golang/pokego",
-			"lastOpened": "2026-09-16T14:06:26Z"
+			"lastOpened": "2026-09-21T14:45:54Z"
 		},
 		{
 			"name": "projecto",
@@ -49,6 +49,11 @@
 		{
 			"name": "tsumiki",
 			"path": "/home/devina/.config/tsumiki"
+		},
+		{
+			"name": "cit-be",
+			"path": "/home/devina/work/cit-be",
+			"lastOpened": "2026-09-21T10:16:54Z"
 		}
 	]
 }
