@@ -16,6 +16,7 @@ pokego-bin
 projecto-bin
 ps_mem
 sesh-bin
+shelf-sh-bin
 snixembed-git
 stacer-bin
 stylua-bin
