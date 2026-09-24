@@ -9,35 +9,10 @@
 # - `sheldon remove` to remove a plugin from the config file
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
-shell = "zsh"
 
-[templates]
-defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+[plugins]
 
-[plugins.zsh-defer]
-github = "romkatv/zsh-defer"
-
-[plugins.zsh-vi-mode]
-github = "jeffreytse/zsh-vi-mode"
-apply = ["defer"]
-
-# Powerlevel10k prompt
-[plugins.powerlevel10k]
-github = "romkatv/powerlevel10k"
-
-
-[plugins.fast-syntax-highlighting]
-github = "zdharma-continuum/fast-syntax-highlighting"
-apply = ["defer"]
-
-[plugins.evalcache]
-github = "mroth/evalcache"
-
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
-apply = ["defer"]
-
-
-[plugins.zsh-you-should-use]
-github = "MichaelAquilina/zsh-you-should-use"
-apply = ["defer"]
+# For example:
+#
+# [plugins.base16]
+# github = "chriskempson/base16-shell"
