@@ -229,6 +229,7 @@ nvtop
 nwg-displays
 nwg-look
 obsidian
+opencode
 openconnect
 openvpn
 os-prober
@@ -373,6 +374,7 @@ zathura
 zathura-pdf-poppler
 zbar
 zeal
+zen-browser-bin
 zint
 zoxide
 zsh
