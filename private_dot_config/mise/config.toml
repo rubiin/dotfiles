@@ -94,7 +94,6 @@ goreleaser = "latest"
 
 # cargo plugins
 "cargo:cargo-update" = "latest"
-"cargo:momoisay" = "latest"
 
 # pipx plugins
 "pipx:urlscan" = "latest"
@@ -114,3 +113,4 @@ goreleaser = "latest"
 "github:loichyan/nerdfix" = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:versenilvis/IRIS" = "latest"
+"github:haruki-nikaidou/momoisay-rs" = "latest"
