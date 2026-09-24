@@ -1,6 +1,8 @@
 
 todo: fix the widget style on widget settings
 
+todo: notification on date menu removes icon on header (check how swaync builds he notifocaton and copy)
+
 todo: remove the media from quicksettings on player disappear similar to mpris
 
 todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
