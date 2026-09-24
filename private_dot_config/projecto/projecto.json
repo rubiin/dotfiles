@@ -48,12 +48,18 @@
 		},
 		{
 			"name": "tsumiki",
-			"path": "/home/devina/.config/tsumiki"
+			"path": "/home/devina/.config/tsumiki",
+			"lastOpened": "2026-09-24T16:24:31Z"
 		},
 		{
 			"name": "cit-be",
 			"path": "/home/devina/work/cit-be",
-			"lastOpened": "2026-09-21T10:16:54Z"
+			"lastOpened": "2026-09-23T16:23:26Z"
+		},
+		{
+			"name": "shelf",
+			"path": "/home/devina/personal/golang/shelf",
+			"lastOpened": "2026-09-23T16:22:27Z"
 		}
 	]
 }
