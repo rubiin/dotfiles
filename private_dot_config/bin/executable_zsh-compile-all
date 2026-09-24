@@ -1,0 +1,54 @@
+#!/usr/bin/env zsh
+
+setopt null_glob
+
+ZSH_DIR="${ZDOTDIR:-$HOME/.config/zsh}"
+COMPLETIONS_DIR="$ZSH_DIR/zcompletions"
+
+# Compile all *.zsh files recursively
+for file in "$ZSH_DIR"/**/*.zsh "$ZSH_DIR"/*.zsh; do
+  [[ -f "$file" && ! -L "$file" ]] || continue
+
+  zwc="${file}.zwc"
+
+  if [[ ! -e "$zwc" || "$file" -nt "$zwc" ]]; then
+    print "Compiling: ${file#$ZSH_DIR/}"
+
+    zcompile -R "$file" || {
+      print -u2 "Failed: ${file#$ZSH_DIR/}"
+      exit 1
+    }
+  fi
+done
+
+# Compile completion functions into a single digest
+if [[ -d "$COMPLETIONS_DIR" ]]; then
+  completion_files=(
+    "$COMPLETIONS_DIR"/_*
+  )
+
+  if ((${#completion_files})); then
+    zwc="$COMPLETIONS_DIR.zwc"
+    needs_compile=false
+
+    if [[ ! -e "$zwc" ]]; then
+      needs_compile=true
+    else
+      for file in "${completion_files[@]}"; do
+        if [[ -f "$file" && "$file" -nt "$zwc" ]]; then
+          needs_compile=true
+          break
+        fi
+      done
+    fi
+
+    if $needs_compile; then
+      print "Compiling: completions/"
+
+      zcompile "$zwc" "${completion_files[@]}" || {
+        print -u2 "Failed: completions/"
+        exit 1
+      }
+    fi
+  fi
+fi
