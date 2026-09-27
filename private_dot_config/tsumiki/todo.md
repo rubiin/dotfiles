@@ -1,7 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-todo: notification on date menu removes icon on header (check how swaync builds he notifocaton and copy)
 
 todo: remove the media from quicksettings on player disappear similar to mpris
 
