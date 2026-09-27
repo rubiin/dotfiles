@@ -18,9 +18,7 @@ todo: add color and background for widgets, should be able to set a color for ea
 /home/devina/.local/bin/tsu: line 100: 22148 Aborted                    (core dumped) "$venv_python" main.py
 ❌ Failed to start Tsumiki Bar
 
-todo: mke the seekbar longer
-
-
+todo: make the seekbar longer
 
 todo: hyprland client
 
