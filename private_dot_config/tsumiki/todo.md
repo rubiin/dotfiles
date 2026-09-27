@@ -2,6 +2,9 @@
 todo: fix the widget style on widget settings
 
 
+todo: check the release 4.8.3 for features that were removed and can be implemented back
+
+
 todo: remove the media from quicksettings on player disappear similar to mpris
 
 todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
