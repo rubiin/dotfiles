@@ -109,6 +109,7 @@ only = [
   "vscode",
   "vscode_insiders",
   "skills",
+  "zed",
   "yazi",
   "stew",
   "system",
@@ -148,7 +149,6 @@ only = [
 # "Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
 "Backup config" = "cz-add-all"
 
-
 # Custom commands
 [commands]
 # "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
@@ -167,7 +167,6 @@ only = [
 #
 # (default: false)
 # poetry_force_self_update = true
-
 
 [conda]
 # Additional named conda environments to update (`conda env update -n env_name`)
