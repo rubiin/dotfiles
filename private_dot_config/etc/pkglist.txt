@@ -347,7 +347,6 @@ wildmidi
 wireless-regdb
 wireplumber
 wl-clip-persist
-wlogout
 woff2-font-awesome
 wpa_supplicant
 wps-office
