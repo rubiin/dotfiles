@@ -1,0 +1,5 @@
+[project]
+name = "mise-pypi-tool-environment"
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = ["yt-dlp==2026.8.19"]

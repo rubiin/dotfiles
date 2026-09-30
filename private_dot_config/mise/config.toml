@@ -106,7 +106,6 @@ goreleaser = "latest"
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
 "pipx:glances" = "latest"
-"pipx:subliminal" = "latest"
 
 # github plugins
 "github:adaszko/complgen" = "latest"
