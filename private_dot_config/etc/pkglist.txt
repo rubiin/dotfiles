@@ -196,6 +196,7 @@ memtest86+-efi
 memtester
 mesa
 mesa-utils
+mise
 mission-center
 mjpegtools
 mkinitcpio-nfs-utils
