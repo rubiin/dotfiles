@@ -63,6 +63,7 @@ e2fsprogs
 efibootmgr
 efitools
 electron
+elisa
 endeavouros-branding
 endeavouros-keyring
 endeavouros-mirrorlist
