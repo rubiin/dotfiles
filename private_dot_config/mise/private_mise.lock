@@ -607,7 +607,7 @@ backend = "npm:gitpick"
 specifiers = ["latest"]
 
 [[tools."npm:json-server"]]
-version = "0.17.4"
+version = "1.0.0-beta.15"
 backend = "npm:json-server"
 specifiers = ["latest"]
 
