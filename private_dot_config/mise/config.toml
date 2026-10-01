@@ -62,22 +62,22 @@ goreleaser = "latest"
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
-"npm:serve" =  {version = "latest", lazy=true}
+"npm:serve" = "latest"
 "npm:neovim" = "latest"
 "npm:taze" = "latest"
-"npm:release-it" =  {version = "latest", lazy=true}
+"npm:release-it" = "latest"
 "npm:yarn" = "latest"
 "npm:tree-sitter-cli" = "latest"
-"npm:types-installer" =  {version = "latest", lazy=true}
+"npm:types-installer" = "latest"
 "npm:asdfui" = "latest"
 "npm:commitizen" = "latest"
-"npm:cz-conventional-changelog" = {version = "latest", lazy=true}
-"npm:nfdl" =  {version = "latest", lazy=true}
-"npm:autocannon" =  {version = "latest", lazy=true}
+"npm:cz-conventional-changelog" = "latest"
+"npm:nfdl" = "latest"
+"npm:autocannon" = "latest"
 "npm:sass" = "latest"
 "npm:gitpick" = "latest"
 "npm:aaja" = "latest"
-"npm:json-server" =  {version = "latest", lazy=true}
+"npm:json-server" = "latest"
 "npm:oxlint" = "latest"
 "npm:oxfmt" = "latest"
 "npm:omniroute" = "latest"
@@ -98,16 +98,16 @@ goreleaser = "latest"
 "pipx:instaloader" = "latest"
 "pipx:notebook" = "latest"
 "pipx:git-revise" = "latest"
-"pipx:iredis" =  {version = "latest", lazy=true}
-"pipx:xxh-xxh" =  {version = "latest", lazy=true}
+"pipx:iredis" = "latest"
+"pipx:xxh-xxh" = "latest"
 "pipx:yt-dlp" = "latest"
-"pipx:guessit" =  {version = "latest", lazy=true}
+"pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
 "pipx:glances" = "latest"
 
 # github plugins
-"github:adaszko/complgen" =  {version = "latest", lazy=true}
-"github:loichyan/nerdfix" =  {version = "latest", lazy=true}
-"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow", lazy=true }
-"github:versenilvis/IRIS" =  {version = "latest", lazy=true}
+"github:adaszko/complgen" = "latest"
+"github:loichyan/nerdfix" = "latest"
+"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
+"github:versenilvis/IRIS" = "latest"
 "github:haruki-nikaidou/momoisay-rs" = "latest"
