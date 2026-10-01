@@ -62,22 +62,22 @@ goreleaser = "latest"
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
-"npm:serve" = "latest"
+"npm:serve" =  {version = "latest", lazy=true}
 "npm:neovim" = "latest"
 "npm:taze" = "latest"
-"npm:release-it" = "latest"
+"npm:release-it" =  {version = "latest", lazy=true}
 "npm:yarn" = "latest"
 "npm:tree-sitter-cli" = "latest"
-"npm:types-installer" = "latest"
+"npm:types-installer" =  {version = "latest", lazy=true}
 "npm:asdfui" = "latest"
 "npm:commitizen" = "latest"
-"npm:cz-conventional-changelog" = "latest"
-"npm:nfdl" = "latest"
-"npm:autocannon" = "latest"
+"npm:cz-conventional-changelog" = {version = "latest", lazy=true}
+"npm:nfdl" =  {version = "latest", lazy=true}
+"npm:autocannon" =  {version = "latest", lazy=true}
 "npm:sass" = "latest"
 "npm:gitpick" = "latest"
 "npm:aaja" = "latest"
-"npm:json-server" = "latest"
+"npm:json-server" =  {version = "latest", lazy=true}
 "npm:oxlint" = "latest"
 "npm:oxfmt" = "latest"
 "npm:omniroute" = "latest"
@@ -85,7 +85,6 @@ goreleaser = "latest"
 "npm:localtunnel" = "latest"
 "npm:npkill" = "latest"
 "npm:freebuff" = "latest"
-"npm:@earendil-works/pi-coding-agent" = "latest"
 
 # go tools
 "go:github.com/Gelio/go-global-update" = "latest"
@@ -99,16 +98,16 @@ goreleaser = "latest"
 "pipx:instaloader" = "latest"
 "pipx:notebook" = "latest"
 "pipx:git-revise" = "latest"
-"pipx:iredis" = "latest"
-"pipx:xxh-xxh" = "latest"
+"pipx:iredis" =  {version = "latest", lazy=true}
+"pipx:xxh-xxh" =  {version = "latest", lazy=true}
 "pipx:yt-dlp" = "latest"
-"pipx:guessit" = "latest"
+"pipx:guessit" =  {version = "latest", lazy=true}
 "pipx:git-filter-repo" = "latest"
 "pipx:glances" = "latest"
 
 # github plugins
-"github:adaszko/complgen" = "latest"
-"github:loichyan/nerdfix" = "latest"
-"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
-"github:versenilvis/IRIS" = "latest"
+"github:adaszko/complgen" =  {version = "latest", lazy=true}
+"github:loichyan/nerdfix" =  {version = "latest", lazy=true}
+"github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow", lazy=true }
+"github:versenilvis/IRIS" =  {version = "latest", lazy=true}
 "github:haruki-nikaidou/momoisay-rs" = "latest"
