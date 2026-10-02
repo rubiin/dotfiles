@@ -10,6 +10,8 @@ todo: check the release 4.8.3 for features that were removed and can be implemen
 todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
 
 
+todo: properly implement the cheatsheet
+
 todo: remove the media from quicksettings on player disappear similar to mpris
 
 todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
