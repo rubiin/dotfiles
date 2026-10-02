@@ -3,8 +3,11 @@ todo: fix the widget style on widget settings
 
 todo: workspace shows epmpty bubble and also the tooltip when the workspace has no windows
 
+todo: move all widgets from icons and labels separation to format style like `{icon} {label}`
 
 todo: check the release 4.8.3 for features that were removed and can be implemented back
+
+todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
 
 
 todo: remove the media from quicksettings on player disappear similar to mpris

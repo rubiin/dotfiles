@@ -83,7 +83,6 @@ hide_when_missing = false
 hide_percent_when_full = true
 label = true
 tooltip = true
-icon_size = 14
 label_format = "{icon} {percent}"
 
 
@@ -184,7 +183,6 @@ label = false
 count = 0
 
 [widgets.cpu]
-show_icon = true
 icon = ""
 tooltip = true
 round = true
@@ -194,7 +192,6 @@ mode = "graph"
 graph_length = 4
 
 [widgets.gpu]
-show_icon = true
 icon = ""
 tooltip = true
 mode = "circular"
@@ -203,7 +200,6 @@ graph_length = 4
 
 [widgets.storage]
 path = "/"
-show_icon = true
 icon = "󰋊"
 mode = "label"
 tooltip = true
@@ -217,7 +213,6 @@ tooltip = true
 
 
 [widgets.memory]
-show_icon = true
 icon = ""
 tooltip = true
 mode = "label"
@@ -293,7 +288,6 @@ interval = 2000
 [widgets.microphone]
 label = false
 tooltip = true
-show_icon = true
 
 [widgets.mpris]
 truncation_size = 10
@@ -605,7 +599,6 @@ size = 20
 
 [modules.dock]
 enabled = true
-ignored_apps = []
 icon_size = 40
 behavior = "intellihide"
 tooltip = false
@@ -949,8 +942,8 @@ radius = "16px"
 width = "1px"
 
 [styling.bar.widgets.date_time]
-icon_size = "12px"  # TODO: add this
-spacing = "0.125em"
+icon_size = "12px"
+spacing = "1em"
 
 [styling.bar.widgets.date_time.border]
 enabled = false
@@ -1098,18 +1091,9 @@ radius = "16px"
 width = "1px"
 
 [styling.bar.widgets.quick_settings.sliders]
-height = "7px"
+height = "5px"
 knob = true
 knob_height = "8px"
-
-[styling.bar.widgets.radio_player]
-icon_size = "12px"
-spacing = "0.125em"
-
-[styling.bar.widgets.radio_player.border]
-enabled = false
-radius = "16px"
-width = "1px"
 
 [styling.bar.widgets.recorder]
 icon_size = "14px"
