@@ -3,7 +3,7 @@ todo: fix the widget style on widget settings
 
 todo: workspace shows epmpty bubble and also the tooltip when the workspace has no windows
 
-todo: move all widgets from icons and labels separation to format style like `{icon} {label}`
+
 
 todo: check the release 4.8.3 for features that were removed and can be implemented back
 
