@@ -1,10 +1,6 @@
 
 todo: fix the widget style on widget settings
 
-todo: active window shows empty bubble and also the tooltip when the workspace has no windows
-
-
-
 todo: check the release 4.8.3 for features that were removed and can be implemented back
 
 todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
@@ -18,7 +14,7 @@ todo: bar is started , spotify is there but nothing is playing. Now i play a med
 
 todo: add battery notifications
 
-todo: rightclick to switch between english and nepali dates
+todo: rightclick on date_menu (`widgets.datetime_menu`) to switch between english and nepali dates
 
 todo: make the nepali format part of datemenu
 
