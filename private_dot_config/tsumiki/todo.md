@@ -6,7 +6,9 @@ todo: check the release 4.8.3 for features that were removed and can be implemen
 todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
 
 
-todo: properly implement the cheatsheet
+todo: implement bezels/curves on dock
+
+todo: check the cheatsheet
 
 todo: remove the media from quicksettings on player disappear similar to mpris
 
@@ -14,9 +16,7 @@ todo: bar is started , spotify is there but nothing is playing. Now i play a med
 
 todo: add battery notifications
 
-todo: rightclick on date_menu (`widgets.datetime_menu`) to switch between english and nepali dates
-
-todo: make the nepali format part of datemenu
+todo: make the nepali format part of datemenu (the popover's `Gtk.Calendar` is still Gregorian)
 
 todo: add color and background for widgets, should be able to set a color for each widget
 
