@@ -16,8 +16,6 @@ todo: bar is started , spotify is there but nothing is playing. Now i play a med
 
 todo: add battery notifications
 
-todo: make the nepali format part of datemenu (the popover's `Gtk.Calendar` is still Gregorian)
-
 todo: add color and background for widgets, should be able to set a color for each widget
 
 (main.py:22148): playerctl-ERROR **: 20:44:47.972: could not get metadata: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
