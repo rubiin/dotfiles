@@ -1,7 +1,7 @@
 
 todo: fix the widget style on widget settings
 
-todo: workspace shows epmpty bubble and also the tooltip when the workspace has no windows
+todo: active window shows empty bubble and also the tooltip when the workspace has no windows
 
 
 
