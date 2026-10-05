@@ -60,6 +60,10 @@ item_tooltip = false
 show_images = true
 enable_pinning = true
 
+[widgets.breathe]
+icon = ""
+tooltip = true
+
 [widgets.emoji_picker]
 icon = ""
 label_format = "{icon}"
@@ -237,7 +241,7 @@ notification_grouping = true   # Group notification history by app in the date m
 
 [widgets.hypridle]
 enabled_icon = ""
-label_format = "{icon}"
+label_format = "{icon} {state}"
 disabled_icon = ""
 tooltip = true
 
@@ -250,14 +254,14 @@ label_format = "{icon}"
 [widgets.hyprsunset]
 temperature = "2800k"
 enabled_icon = "󱩌"
-label_format = "{icon}"
+label_format = "{icon} {state}"
 disabled_icon = "󰛨"
 tooltip = true
 
 [widgets.keyboard]
 icon = "󰌌"
 tooltip = true
-label_format = "{icon}"
+label_format = "{icon} {layout}"
 
 [widgets.window_count]
 label_format = " [{count}]"
@@ -268,11 +272,13 @@ tooltip = true
 icon = ""
 tooltip = true
 truncation_size = 2
-label_format = "{icon}"
+label_format = "{icon} {language}"
 
 
 [widgets.network_usage]
 tooltip = true
+upload = true
+download = true
 label_format = "{upload}   {download} "
 upload_threshold = 1024
 download_threshold = 1024
@@ -285,7 +291,7 @@ tooltip = true
 label_format = "{icon}"
 
 [widgets.mpris]
-truncation_size = 10
+truncation_size = 15
 tooltip = false
 hide_when_no_player = true
 label_format = "{title} - {artist}"
@@ -346,7 +352,7 @@ running_icon = "󱫠"
 [widgets.submap]
 icon = "󰌌"
 tooltip = true
-label_format = "{icon}"
+label_format = "{icon} {submap}"
 hide_on_default = false
 
 [widgets.system_tray]
@@ -354,6 +360,7 @@ icon_size = 16
 ignored = []
 hidden = []
 hide_when_empty = false
+tooltip = true
 
 [widgets.taskbar]
 icon_size = 22
@@ -366,7 +373,8 @@ icon = ""
 notify = false
 
 [widgets.updates]
-label_format = "{icon}"
+label_format = "{icon} {total}"
+pad_zero = true
 available_icon = "󰏗"
 no_updates_icon = "󰏖"
 os = "arch"
@@ -428,6 +436,7 @@ icon = ""
 tooltip_text = "Open Spotify"
 label_format = "{icon}"
 tooltip = true
+style_classes = []
 
 [widgets.cheatsheet]
 icon = "󰌌"
@@ -453,11 +462,23 @@ tooltip = true
 [[widgets.custom_widget]]
 id = "volume"
 exec = "pamixer --get-volume"
-label_format = "󰕾 {}%"
+exec_on_event = true
 interval = 1
+return_type = "plain"                # "plain" | "json" (Waybar JSON protocol)
+label_format = "󰕾 {}%"
+max_length = 0                       # 0 = no limit
+min_length = 0                       # Pads the output with spaces
+rotate = 0                           # Degrees to rotate the text
+tooltip = true
+tooltip_format = ""                  # {} is replaced with the output
+on_click = ""
+on_click_right = ""
+on_click_middle = ""
 on_scroll_up = "pamixer -i 5"
 on_scroll_down = "pamixer -d 5"
-exec_on_event = true
+# signal = 1                         # SIGRTMIN+N (1-30) used to trigger a refresh
+restart_interval = 0                 # Restart a continuous command after N seconds
+format_icons = {}                    # Percentage/state to icon map, e.g. { "50" = "󰕾" }
 
 [[widget_groups]]
 id = "workspaces-group"
@@ -488,6 +509,7 @@ id = "utility-tools"
 widgets = ["ocr", "screenshot", "recorder"]
 spacing = 4
 icon = "󰒓"
+label_format = "{icon}"      # the toggle button's whole label; "{icon}" is the only field
 tooltip = "Utility Tools"
 style_classes = ["utility-tools"]
 
@@ -512,11 +534,16 @@ enabled = true
 layer = "overlay"
 anchor = "center"
 title = "Hyprland Keymap"
+icon = ""
+refresh_icon = ""
+close_icon = ""
 columns = 4
 groups_per_page = 8   # Sections per page; extra sections spill onto the next page
 column_width = 300   # Fixed column width in px
 key_width = 190       # Key badge column width in px, so descriptions line up
 accent_keys = ["super"]
+transition_type = "crossfade"
+transition_duration = 200
 
 [[modules.cheatsheet.sections]]
 title = "WINDOW MANAGEMENT"
@@ -827,6 +854,8 @@ height = 320
 layout = "list"
 grid_columns = 3
 grid_spacing = 12
+plugins_enabled = true
+plugins_dir = ""
 plugins = [
     "calc",
     "clipboard-history",
@@ -845,7 +874,6 @@ enabled = true
 anchor = "top-right"
 auto_dismiss = true
 respect_expire = true
-dnd_on_screencast = true
 ignored = []
 transition_type = "slide-left"
 transition_duration = 350
@@ -937,6 +965,7 @@ auto_restart = true
 restart_delay = 1500
 multi_monitor = false
 tooltips = true
+language = "en"
 
 [styling]
 border-radius = "10px"
