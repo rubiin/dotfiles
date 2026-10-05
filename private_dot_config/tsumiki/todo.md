@@ -5,6 +5,9 @@ todo: check the release 4.8.3 for features that were removed and can be implemen
 
 todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
 
+todo: add onlick on custom widget and other props(see waybar custom)
+
+todo: fix the weird image crop on notification
 
 todo: update widget removed the hover reveal , restore it
 
