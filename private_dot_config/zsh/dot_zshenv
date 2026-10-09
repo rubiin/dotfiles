@@ -8,3 +8,8 @@ fi
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.config/vite-plus/env"
+
+# Force sharp to use its prebuilt @img/sharp-* binaries.
+# Without this, sharp's install script detects the system libvips (>= its minimum)
+# and tries to compile from source, which fails when node-gyp isn't available.
+export SHARP_IGNORE_GLOBAL_LIBVIPS=1
