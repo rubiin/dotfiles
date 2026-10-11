@@ -107,3 +107,4 @@ goreleaser = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:versenilvis/IRIS" = "latest"
 "github:haruki-nikaidou/momoisay-rs" = "latest"
+claude = "latest"
