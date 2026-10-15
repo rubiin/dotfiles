@@ -65,11 +65,16 @@
 		{
 			"name": "ultimate-nest",
 			"path": "/home/devina/personal/typescript/ultimate-nest",
-			"lastOpened": "2026-10-09T10:26:43Z"
+			"lastOpened": "2026-10-12T12:35:23Z"
 		},
 		{
 			"name": "tsconfig",
 			"path": "/home/devina/personal/typescript/tsconfig"
+		},
+		{
+			"name": "faux",
+			"path": "/home/devina/personal/typescript/faux",
+			"lastOpened": "2026-10-12T15:57:47Z"
 		}
 	]
 }
