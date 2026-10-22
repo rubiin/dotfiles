@@ -43,7 +43,7 @@ rust = "latest"
 ruby = "latest"
 uv = "latest"
 pnpm = "latest"
-node = ["lts", "latest"]
+node = "lts"
 usage = "latest"
 deno = {version = "latest", lazy=true}
 ruff = "latest"
