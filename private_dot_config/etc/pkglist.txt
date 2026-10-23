@@ -248,7 +248,6 @@ pkgfile
 playerctl
 plocate
 polkit-gnome
-polkit-kde-agent
 poppler-glib
 postman-bin
 power-profiles-daemon
