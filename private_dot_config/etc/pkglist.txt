@@ -217,7 +217,6 @@ networkmanager-openconnect
 networkmanager-openvpn
 nfs-utils
 nilfs-utils
-noctalia
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -238,6 +237,7 @@ pamixer
 pantheon-files
 partitionmanager
 pavucontrol
+pdfarranger
 perl
 persepolis
 pipewire-alsa

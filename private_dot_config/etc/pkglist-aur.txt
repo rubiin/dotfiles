@@ -2,7 +2,6 @@ apiark-bin
 fabric-cli-git
 gitflow-cjs
 glace-git
-goose-desktop-bin
 hyprland-preview-share-picker-git
 ignit-bin
 jetbrains-toolbox
