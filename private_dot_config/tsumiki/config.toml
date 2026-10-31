@@ -50,6 +50,7 @@ workflow_cancelled = true
 label_format = "󰖟"
 tooltip = true
 
+# {count}
 [widgets.clipboard]
 label_format = ""
 tooltip = true
@@ -67,6 +68,7 @@ tooltip = true
 per_row = 9
 per_column = 4
 
+# {count}
 [widgets.kanban]
 label_format = "󱞁"
 tooltip = true
