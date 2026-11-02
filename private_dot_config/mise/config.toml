@@ -55,6 +55,8 @@ grex = {version = "latest", lazy=true}
 typos = "latest"
 golangci-lint = "latest"
 goreleaser = "latest"
+claude = "latest"
+
 
 # npm plugins
 "npm:@nestjs/cli" = "latest"
@@ -81,6 +83,7 @@ goreleaser = "latest"
 "npm:localtunnel" = "latest"
 "npm:npkill" = "latest"
 "npm:freebuff" = "latest"
+"npm:wrangler" = "latest"
 
 # go tools
 "go:github.com/Gelio/go-global-update" = "latest"
@@ -107,5 +110,3 @@ goreleaser = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:versenilvis/IRIS" = "latest"
 "github:haruki-nikaidou/momoisay-rs" = "latest"
-claude = "latest"
-"npm:wrangler" = "latest"
