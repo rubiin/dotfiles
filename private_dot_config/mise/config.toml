@@ -8,7 +8,6 @@
 legacy_version_file = true # enabled by default (different than asdf)
 
 # configure `mise install` to always keep the downloaded archive
-always_keep_download = false # deleted after install by default
 always_keep_install = false  # deleted on failure by default
 all_compile = false # use precompiled binaries if available, otherwise compile from source. This is the default behavior.
 verbose = false # set to true to see full installation output, see `RTX_VERBOSE`
