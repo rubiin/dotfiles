@@ -1,0 +1,11 @@
+[bash]
+allow = [
+    "cargo *",
+    "python3 *",
+
+]
+
+[webfetch]
+allow = [
+    "*",
+]

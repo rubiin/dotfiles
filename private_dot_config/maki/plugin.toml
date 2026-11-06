@@ -1,0 +1,5 @@
+[permissions]
+env = true
+run = true
+net = true
+fs_read = true
