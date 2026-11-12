@@ -6,8 +6,6 @@ todo: implement bezels/curves on dock
 
 todo: check the cheatsheet
 
-todo: test to check whether there are known keys in config from schema
-
 todo: remove the media from quicksettings on player disappear similar to mpris
 
 todo: bar is started , spotify is there but nothing is playing. Now I play a media, the mpris still wont show
