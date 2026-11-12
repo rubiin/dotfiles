@@ -76,7 +76,6 @@ full_battery_level = 100
 hide_when_missing = false
 hide_percent_when_full = true
 tooltip = true
-icon_size = 14
 # variables: {percent} {time_remaining} {capacity} {temperature} {state}
 label_format = "{percent}"
 
@@ -217,7 +216,7 @@ graph_length = 4
 unit = "gb"
 
 [widgets.settings]
-icon = "󰒓"
+label_format = "󰒓"
 tooltip = true
 
 [widgets.date_time]
@@ -278,6 +277,7 @@ download_threshold = 1024
 kb_digits = 0
 mb_digits = 2
 interval = 2000
+compact_mode = false
 
 [widgets.microphone]
 tooltip = true
@@ -368,6 +368,8 @@ pad_zero = true
 available_icon = "󰏗"
 no_updates_icon = "󰏖"
 os = "arch"
+hover_reveal = false
+reveal_duration = 500
 interval = 3600
 tooltip = true
 terminal = "kitty"
@@ -826,6 +828,7 @@ enabled = true
 timeout = 3_000
 anchor = "bottom-center"
 orientation = "horizontal"
+style = "default"
 percentage = true
 icon_size = 25
 transition_type = "slide-up"
@@ -836,6 +839,7 @@ osds = ["brightness", "volume"]
 enabled = true
 tooltip = true
 icon_size = 35
+ignored = []
 anchor = "center"
 width = 280
 height = 320
@@ -893,12 +897,12 @@ size = 20
 
 [modules.dock]
 enabled = true
-ignored_apps = []
 icon_size = 40
 behavior = "intellihide"
 tooltip = false
 layer = "top"
 show_when_no_windows = false
+hide_special_workspace_apps = false
 group_apps = true
 truncation_size = 20
 orientation = "horizontal"
@@ -1070,6 +1074,16 @@ gap = "2px"
 [styling.bar.widgets.battery]
 icon_size = "14px"
 spacing = "0.125em"
+# Per-widget colors (optional). Values: theme token names or literal colors (#hex/rgb(a)/hsl(a)).
+# [styling.bar.widgets.battery.colors]
+# background = "surface-neutral"
+# foreground = "text-main"
+# [styling.bar.widgets.battery.colors.hover]
+# background = "surface-highlight"
+# foreground = "text-main"
+# [styling.bar.widgets.battery.colors.active]
+# background = "accent-blue"
+# foreground = "background-dark"
 
 [styling.bar.widgets.battery.border]
 enabled = false
@@ -1153,6 +1167,10 @@ width = "1px"
 [styling.bar.widgets.custom_widget]
 icon_size = "12px"
 spacing = "0.125em"
+# Per-instance color overrides by widget id (e.g. [[widgets.custom_widget]] id = "volume").
+# [styling.bar.widgets.custom_widget.overrides."volume".colors]
+# background = "#1e66f5"
+# foreground = "#ffffff"
 
 [styling.bar.widgets.custom_widget.border]
 enabled = false
@@ -1471,6 +1489,15 @@ width = "1px"
 [styling.bar.widgets.updates]
 icon_size = "14px"
 spacing = "0.125em"
+# [styling.bar.widgets.updates.colors]
+# background = "widgets-updates-background"   # theme token (defined per theme) or literal "#hex"/"rgb(a,...)"
+# foreground = "widgets-updates-foreground"
+# [styling.bar.widgets.updates.colors.hover]
+# background = "widgets-updates-hover-background"
+# foreground = "widgets-updates-hover-foreground"
+# [styling.bar.widgets.updates.colors.active]
+# background = "widgets-updates-active-background"
+# foreground = "widgets-updates-active-foreground"
 
 [styling.bar.widgets.updates.border]
 enabled = false

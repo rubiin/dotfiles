@@ -1,12 +1,7 @@
 
 todo: fix the widget style on widget settings
 
-todo: check the release 4.8.3 for features that were removed and can be implemented back
-
-todo: | `modules.notification.dnd_on_screencast`| No reader; the "DND while screencasting" behaviour is unimplemented. |
-
-
-todo: update widget removed the hover reveal , restore it
+todo: `modules.notification.dnd_on_screencast` No reader; the "DND while screencasting" behaviour is unimplemented. |
 
 todo: implement bezels/curves on dock
 
@@ -20,16 +15,13 @@ todo: bar is started , spotify is there but nothing is playing. Now i play a med
 
 todo: add battery notifications
 
-todo: add color and background for widgets, should be able to set a color for each widget
-
 (main.py:22148): playerctl-ERROR **: 20:44:47.972: could not get metadata: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
-/home/devina/.local/bin/tsu: line 100: 22148 Aborted                    (core dumped) "$venv_python" main.py
+/home/devina/.local/bin/tsu: line 100: 22148 Aborted       (core dumped) "$venv_python" main.py
 ❌ Failed to start Tsumiki Bar
 
 todo: make the seekbar longer
 
 todo: hyprland client
-
 
 todo: add graph for upload download(<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png>)
 
