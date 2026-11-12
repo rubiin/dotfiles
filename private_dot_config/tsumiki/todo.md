@@ -22,7 +22,7 @@ todo: make the seekbar longer
 
 todo: hyprland client
 
-todo: add graph for upload download(<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png>)
+todo: add graph for upload download (<https://github.com/noctalia-dev/legacy-v4-plugins/blob/main/network-indicator/preview.png>)
 
 <https://github.com/noctalia-dev/noctalia-plugins/tree/main/show-keys>
 
