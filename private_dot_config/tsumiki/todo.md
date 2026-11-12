@@ -10,8 +10,7 @@ todo: test to check whether there are known keys in config from schema
 
 todo: remove the media from quicksettings on player disappear similar to mpris
 
-todo: bar is started , spotify is there but nothing is playing. Now i play a media, the mpris still wont show
-
+todo: bar is started , spotify is there but nothing is playing. Now I play a media, the mpris still wont show
 todo: add battery notifications
 
 (main.py:22148): playerctl-ERROR **: 20:44:47.972: could not get metadata: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
