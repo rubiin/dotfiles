@@ -1,6 +1,6 @@
 todo: fix the widget style on widget settings
 
-todo: `modules.notification.dnd_on_screencast` No reader; the "DND while screencasting" behaviour is unimplemented. |
+todo: `modules.notification.dnd_on_screencast` No reader; the "DND while screencasting" behaviour is unimplemented.
 
 todo: implement bezels/curves on dock
 
