@@ -102,6 +102,8 @@ claude = "latest"
 "pipx:guessit" = "latest"
 "pipx:git-filter-repo" = "latest"
 "pipx:glances" = "latest"
+"aqua:tontinton/maki" = "latest"
+
 
 # github plugins
 "github:adaszko/complgen" = "latest"
@@ -109,4 +111,3 @@ claude = "latest"
 "github:isorensen/hyprflow" = { version = "latest", asset_pattern = "hyprflow" }
 "github:versenilvis/IRIS" = "latest"
 "github:haruki-nikaidou/momoisay-rs" = "latest"
-"aqua:tontinton/maki" = "latest"
