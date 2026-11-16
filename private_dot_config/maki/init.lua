@@ -1,4 +1,13 @@
 -- ~/.config/maki/init.lua
+local scroll = require("maki.scroll")
+
+maki.keymap.set({ "i", "n" }, "<C-e>", function()
+	scroll(1)
+end, { desc = "Scroll down one line" })
+
+maki.keymap.set({ "i", "n" }, "<C-y>", function()
+	scroll(-1)
+end, { desc = "Scroll up one line" })
 
 maki.setup({
 	-- UI
